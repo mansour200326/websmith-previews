@@ -1,283 +1,530 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>AB Building Contracting Co. L.L.C.</title>
-<meta name="description" content="AB Building Contracting Co. L.L.C. — building construction in the UAE since 1977.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>AB Building Contracting Co. L.L.C. | Building contractor in Dubai since 1977</title>
+<meta name="description" content="Main contractor in Dubai since 1977. Towers, residential and commercial buildings, villas, mosques and sheds across the UAE. Tel +971 4 331 2545.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Archivo+Narrow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#16190f;
-  --paper:#f3f1ea;
-  --paper2:#e8e4d6;
-  --stone:#938d7b;
-  --line:#d3cdba;
-  --green:#3c6b22;
-  --green-d:#2a4b18;
-  --hf:'Space Grotesk',system-ui,sans-serif;
-  --bf:'Inter Tight',system-ui,sans-serif;
+  --ink:#121512;
+  --ink-2:#3d433d;
+  --mute:#6b726a;
+  --line:#dfe2dc;
+  --wash:#f1f3ef;
+  --green:#18740f;      /* logo green, darkened for text on white */
+  --green-deep:#0f4f0a;
+  --stone:#c9c3b4;
+  --w:1320px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--bf);background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--hf);font-weight:700;line-height:1.05;letter-spacing:-.01em}
-h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:10px}
-h3{font-size:1.08rem}
-.kicker{font-family:var(--bf);font-weight:600;font-size:.82rem;color:var(--green-d);margin-bottom:6px}
-.intro{max-width:640px;color:#4b4a3f;margin-bottom:38px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;color:var(--ink);background:#fff;line-height:1.55;font-size:17px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.n{font-family:"Archivo Narrow","Archivo",sans-serif}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
+.x{font-variation-settings:"wdth" 118}
 
-/* header: corner wordmark, no centred nav bar */
-header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--hf);font-weight:700;font-size:1.05rem}
-.brand img{height:30px;width:auto}
-.navlinks{display:none;gap:26px;font-size:.92rem;color:#565346}
-.navlinks a:hover{color:var(--green-d)}
-.callbtn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:10px 18px;border-radius:2px;font-weight:600;font-size:.88rem}
-.callbtn:hover{background:var(--green-d)}
-@media(min-width:800px){.navlinks{display:flex}}
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand img{height:34px;width:auto}
+.brand span{font-size:13px;line-height:1.25;color:var(--ink-2)}
+.brand b{display:block;color:var(--ink);font-weight:650;font-size:14px}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.nav a{text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--green)}
+.tel{font-weight:650;text-decoration:none;font-size:15px;white-space:nowrap;font-feature-settings:"tnum"}
+.util{font-size:13px;color:var(--mute);text-decoration:none;border-left:1px solid var(--line);padding-left:20px;white-space:nowrap}
+.util:hover{color:var(--green)}
+.mnav{display:none}
 
-/* hero: asymmetric type-led, real photo on the right, no slogan-on-photo */
-.hero{padding:56px 0 0}
-.herogrid{display:grid;gap:36px}
-.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);margin-bottom:20px}
-.hero p.lead{color:#4b4a3f;font-size:1.08rem;max-width:480px;margin-bottom:28px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:8px}
-.ctas a.primary{background:var(--ink);color:var(--paper);padding:13px 22px;border-radius:2px;font-weight:600;font-size:.94rem}
-.ctas a.primary:hover{background:var(--green-d)}
-.ctas a.secondary{padding:13px 4px;font-weight:600;font-size:.94rem;border-bottom:2px solid var(--ink)}
-.heroPhoto{display:grid;gap:12px}
-.heroPhoto .wide img{width:100%;height:auto;border:1px solid var(--line);display:block}
-.heroPhoto .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.heroPhoto .pair img{width:100%;max-width:220px;height:auto;border:1px solid var(--line);margin:0 auto}
-.heroPhoto .cap{font-size:.78rem;color:#6b6858;margin-top:6px;display:flex;justify-content:space-between;gap:10px}
-.heroPhoto .cap b{color:var(--ink)}
-@media(min-width:900px){.herogrid{grid-template-columns:1.1fr 1fr;align-items:start}}
+/* ---------- hero ---------- */
+.hero{padding:44px 0 0}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:end}
+.hero h1{font-size:clamp(38px,4.8vw,72px);line-height:1.02;letter-spacing:-.025em;font-weight:300;font-variation-settings:"wdth" 112}
+.hero h1 strong{font-weight:800}
+.hero .ar{font-size:20px;color:var(--mute);margin-top:22px;direction:rtl;text-align:left;unicode-bidi:plaintext}
+.lede{max-width:560px;margin-top:22px;font-size:19px;color:var(--ink-2)}
+.act{display:flex;align-items:center;gap:26px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:15px 22px;font-weight:600;font-size:16px;border-radius:2px}
+.btn:hover{background:var(--green-deep)}
+.act a.plain{font-weight:550;text-decoration-thickness:1px;text-underline-offset:4px}
+figure.lead img{width:100%;aspect-ratio:517/532;object-fit:cover;background:var(--wash)}
+figure.lead figcaption{margin-top:12px;font-size:14px;color:var(--ink-2)}
+figcaption b{color:var(--ink);font-family:"Archivo",sans-serif;font-weight:650;font-size:15px}
+.labels{margin-top:40px;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(3,1fr);font-size:14px;padding:12px 0 14px}
+.labels > *:nth-child(2){text-align:center}
+.labels > *:nth-child(3){text-align:right}
+.labels a{text-decoration:none;font-weight:600}
 
-/* filmstrip: native-resolution real site photography, not blown up */
-.filmstrip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:54px;background:var(--ink)}
-.filmrow{display:grid;grid-template-columns:repeat(2,1fr)}
-.filmrow figure{position:relative;overflow:hidden;aspect-ratio:960/215}
-.filmrow img{width:100%;height:100%;object-fit:cover;filter:saturate(.96)}
-.filmrow figcaption{position:absolute;left:10px;bottom:8px;color:#fff;font-size:.68rem;letter-spacing:.02em;text-shadow:0 1px 3px rgba(0,0,0,.7);max-width:92%}
-@media(min-width:760px){.filmrow{grid-template-columns:repeat(4,1fr)}}
+/* ---------- section heads ---------- */
+section{padding:104px 0 0}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:end;margin-bottom:44px}
+.head h2{font-size:clamp(34px,4.2vw,58px);line-height:1;letter-spacing:-.02em;font-weight:800;font-variation-settings:"wdth" 118}
+.head p{color:var(--ink-2);max-width:620px}
 
-section{padding:70px 0}
-section.alt{background:var(--paper2)}
+/* ---------- projects ---------- */
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 36px}
+.pcol{display:flex;flex-direction:column;gap:48px}
+.pcol:nth-child(2){padding-top:110px}
+.pcol:nth-child(3){padding-top:40px}
+.proj img{width:100%;background:var(--wash)}
+.proj .meta{display:grid;grid-template-columns:34px 1fr;margin-top:14px;column-gap:8px}
+.proj .no{font-size:14px;color:var(--mute);font-feature-settings:"tnum";padding-top:3px}
+.proj h3{font-size:21px;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.proj .where{font-size:15px;color:var(--ink-2);margin-top:2px}
+.proj dl{grid-column:2;margin-top:10px;font-size:14px;display:grid;grid-template-columns:auto 1fr;gap:3px 14px;border-top:1px solid var(--line);padding-top:10px}
+.proj dt{color:var(--mute)}
+.proj dd{font-feature-settings:"tnum"}
+.key{margin-top:40px;font-size:14px;color:var(--mute)}
 
-/* projects: numbered index table with CSS-only hover photo reveal */
-.projindex{border-top:1px solid var(--line)}
-.prow{position:relative;display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line);cursor:default}
-.prow .n{font-family:var(--hf);font-weight:600;color:var(--stone);font-size:.95rem}
-.prow .name{font-family:var(--hf);font-weight:600;font-size:1.15rem}
-.prow .meta{font-size:.88rem;color:#6b6858;text-align:right}
-.prow .peek{position:absolute;right:0;top:50%;transform:translateY(-50%) scale(.96);width:220px;aspect-ratio:16/10;opacity:0;pointer-events:none;transition:.22s ease;box-shadow:0 18px 40px rgba(0,0,0,.25);border:1px solid var(--line);background-size:cover;background-position:center;z-index:5}
-.prow:hover .peek{opacity:1;transform:translateY(-50%) scale(1)}
-.prow:hover .name{color:var(--green-d)}
-@media(max-width:700px){.prow .peek{display:none}.prow{grid-template-columns:28px 1fr}.prow .meta{grid-column:2;text-align:left;margin-top:2px}}
+/* ---------- what we build: side-scrolling panels ---------- */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(290px,31vw,420px);gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(28px,calc((100vw - var(--w))/2 + 28px)) 18px;scrollbar-width:thin}
+.panel{scroll-snap-align:start;display:flex;flex-direction:column;min-height:640px;color:#fff;background:var(--ink)}
+.panel .ph{height:250px;overflow:hidden;flex:none;background:#000}
+.panel .ph img{width:100%;height:100%;object-fit:cover}
+.panel .body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.panel ul{list-style:none;font-size:15px}
+.panel li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.28);padding:9px 0}
+.panel li span:last-child{opacity:.72;text-align:right;white-space:nowrap}
+.panel .name{margin-top:auto;padding-top:30px;display:flex;justify-content:space-between;align-items:end;gap:12px}
+.panel h3{font-size:clamp(34px,3.4vw,48px);line-height:.98;font-weight:750;letter-spacing:-.02em;font-variation-settings:"wdth" 116}
+.panel .cnt{font-size:14px;opacity:.75;font-feature-settings:"tnum";white-space:nowrap}
+.panel.g{background:var(--green-deep)}
+.panel.s{background:var(--stone);color:var(--ink)}
+.panel.s li{border-color:rgba(0,0,0,.22)}
+.panel.w{background:var(--wash);color:var(--ink)}
+.panel.w li{border-color:rgba(0,0,0,.16)}
+.panel.big .body{padding-top:30px}
+.panel.big h3{font-size:clamp(44px,4.6vw,66px)}
+.railnote{margin-top:14px;font-size:14px;color:var(--mute)}
 
-/* services: dense list, not icon cards */
-.servicelist{display:grid;gap:0;border-top:1px solid var(--line);margin-top:10px}
-.servicelist div{display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
-.servicelist span.i{font-family:var(--hf);color:var(--stone);font-size:.82rem;min-width:22px}
-@media(min-width:800px){.servicelist{grid-template-columns:1fr 1fr;column-gap:40px}}
+/* ---------- trades + plant ---------- */
+.trades{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}
+.trades .say p{color:var(--ink-2);margin-bottom:16px;max-width:470px}
+.trades .say h2{font-size:clamp(34px,4.2vw,58px);line-height:1;letter-spacing:-.02em;font-weight:800;font-variation-settings:"wdth" 118;margin-bottom:26px}
+ol.svc{list-style:none;columns:2;column-gap:36px;counter-reset:s;border-top:1px solid var(--ink)}
+ol.svc li{counter-increment:s;break-inside:avoid;display:grid;grid-template-columns:38px 1fr;padding:13px 0;border-bottom:1px solid var(--line);font-size:18px;font-weight:550}
+ol.svc li::before{content:counter(s,decimal-leading-zero);font-family:"Archivo Narrow",sans-serif;color:var(--mute);font-size:14px;font-weight:400;padding-top:3px}
+.plant{margin-top:56px}
+.plant h3{font-size:15px;font-weight:650;margin-bottom:10px}
+.plant table{width:100%;border-collapse:collapse;font-size:15px}
+.plant td{padding:8px 0;border-bottom:1px solid var(--line)}
+.plant td:nth-child(2n){text-align:right;font-feature-settings:"tnum";font-weight:650;padding-right:28px}
+.plant td:last-child{padding-right:0}
+.plant .src{font-size:13px;color:var(--mute);margin-top:10px}
 
-/* about split */
-.about{display:grid;gap:36px}
-.about .ph img{border:1px solid var(--line)}
-.about .cap{font-size:.8rem;color:#6b6858;margin-top:8px}
-.about p{color:#39392f;margin-bottom:14px}
-.about p.big{font-size:1.14rem;color:var(--ink);line-height:1.5}
-.bylines{margin-top:22px;display:grid;gap:10px;font-size:.92rem}
-.bylines div{display:flex;gap:10px;border-top:1px solid var(--line);padding-top:10px}
-.bylines b{min-width:150px;color:#6b6858;font-weight:600}
-@media(min-width:880px){.about{grid-template-columns:1fr 1.25fr}}
+/* ---------- safety / directory ---------- */
+.band{background:var(--wash);margin-top:104px;padding:88px 0}
+.band .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}
+.band h2{font-size:clamp(30px,3.2vw,44px);line-height:1.05;font-weight:800;letter-spacing:-.02em;font-variation-settings:"wdth" 116;margin-bottom:18px}
+.band p{color:var(--ink-2);margin-bottom:14px;max-width:470px}
+.dir{border-top:1px solid var(--ink)}
+.dir a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:14px 0;border-bottom:1px solid #cfd3cb;text-decoration:none;font-size:16px}
+.dir a span:first-child{color:var(--ink-2)}
+.dir a span:last-child{font-weight:600}
+.dir a:hover span:last-child{color:var(--green)}
 
-/* sectors chips as plain inline list, not pill UI */
-.sectors{margin-top:10px;font-size:1.02rem;color:#39392f}
-.sectors b{color:var(--ink)}
+/* ---------- areas ---------- */
+.areas p.list{font-size:clamp(24px,2.9vw,40px);line-height:1.32;font-weight:300;letter-spacing:-.01em;font-variation-settings:"wdth" 108;max-width:1180px}
+.areas p.list b{font-weight:700}
+.areas p.list span{white-space:nowrap}
+.areas p.list i{font-style:normal;color:#b9beb6}
 
-/* contact */
-.contact{background:var(--ink);color:var(--paper)}
-.contact .kicker{color:#9fcf84}
-.contact h2{color:var(--paper)}
-.cgrid{display:grid;gap:28px;margin-top:30px}
-.cbox h3{color:var(--paper);margin-bottom:10px;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;font-family:var(--bf);font-weight:600;color:#c9c5b4}
-.cbox p,.cbox a{color:#d8d5c8;font-size:.98rem}
-.cbox .big{font-family:var(--hf);font-size:1.3rem;color:var(--paper);font-weight:600;display:block;margin-bottom:4px}
-.deptlist{display:grid;gap:8px;margin-top:6px}
-.deptlist div{display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.12);padding-top:8px;font-size:.92rem}
-.deptlist span{color:#9f9c8e}
-.deptlist a{color:#d8d5c8}
-.deptlist a:hover{color:#fff}
-@media(min-width:800px){.cgrid{grid-template-columns:1fr 1fr 1fr}}
-.profilelink{display:inline-flex;align-items:center;gap:8px;margin-top:26px;color:#9fcf84;font-weight:600;font-size:.94rem;border-bottom:1px solid #9fcf84;padding-bottom:2px}
+/* ---------- contact ---------- */
+.contact{padding-bottom:104px}
+.cgrid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;border-top:1px solid var(--ink);padding-top:28px}
+.bigtel{font-size:clamp(40px,6.6vw,96px);font-weight:800;letter-spacing:-.03em;line-height:1;text-decoration:none;font-variation-settings:"wdth" 112;font-feature-settings:"tnum";display:inline-block}
+.bigtel:hover{color:var(--green)}
+.cgrid .sub{margin-top:18px;color:var(--ink-2);max-width:520px}
+.cgrid dl{display:grid;grid-template-columns:110px 1fr;gap:12px 18px;font-size:16px}
+.cgrid dt{color:var(--mute)}
+.cgrid dd a{font-weight:600;text-decoration-thickness:1px;text-underline-offset:3px}
 
-footer{padding:26px 0 90px;font-size:.84rem;color:#6b6858;background:var(--paper2)}
-.note{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#111007;color:#cfcbbb;font:500 11.5px/1.4 var(--bf);text-align:center;padding:9px 14px}
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#d9ddd6;padding:64px 0 90px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:2fr 1.3fr 1fr 1.3fr;gap:36px}
+footer h4{color:#fff;font-size:14px;font-weight:650;margin-bottom:12px}
+footer p,footer li{margin-bottom:6px;color:#b4bab1}
+footer ul{list-style:none}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .ar{font-size:17px;color:#fff;margin-top:8px}
+footer .fname{color:#fff;font-size:20px;font-weight:700;font-variation-settings:"wdth" 112}
+footer .bottom{grid-column:1/-1;border-top:1px solid #333a33;padding-top:20px;margin-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8d948a}
+.concept{position:fixed;right:12px;bottom:12px;z-index:30;background:rgba(18,21,18,.86);color:#e8ebe5;font-size:11.5px;padding:6px 10px;border-radius:2px;max-width:calc(100vw - 24px)}
+
+/* ---------- small screens ---------- */
+@media (max-width:1060px){
+  .nav,.util{display:none}
+  .top .wrap{height:64px;gap:14px}
+  .tel{margin-left:auto}
+  .mnav{display:flex;gap:20px;overflow-x:auto;padding:0 20px 12px;font-size:15px;white-space:nowrap;scrollbar-width:none}
+  .mnav a{text-decoration:none;color:var(--ink-2)}
+  .mnav::-webkit-scrollbar{display:none}
+}
+@media (max-width:900px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .hero{padding-top:36px}
+  .hero .wrap,.head,.trades,.band .wrap,.cgrid{grid-template-columns:1fr;gap:28px}
+  .labels{grid-template-columns:1fr;gap:6px;margin-top:34px}
+  .labels > *{text-align:left!important}
+  section{padding-top:76px}
+  .pgrid{grid-template-columns:1fr 1fr;gap:34px 18px}
+  .pcol{gap:34px}
+  .pcol:nth-child(n){padding-top:0}
+  .pcol{display:contents}
+  .proj{order:var(--o)}
+  .rail{padding:0 20px 14px;grid-auto-columns:84vw}
+  .panel{min-height:600px}
+  ol.svc{columns:1}
+  .band{margin-top:76px;padding:64px 0}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .brand span{display:none}
+  .pgrid{grid-template-columns:1fr}
+  .proj .meta{grid-template-columns:28px 1fr}
+  .plant td{font-size:14px}
+  .plant td:nth-child(2n){padding-right:12px}
+  footer .wrap{grid-template-columns:1fr}
+  .lede{font-size:17px}
+  .concept{font-size:10px;padding:4px 8px;left:8px;right:8px;bottom:8px;text-align:center}
+}
 </style>
 </head>
 <body>
 
 <header class="top">
-<div class="wrap nav">
-  <a class="brand" href="#top"><img src="http://www.abbc-uae.com/images/logo.png" alt="ABBC logo"> AB Building Contracting</a>
-  <nav class="navlinks">
-    <a href="#projects">Projects</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#visit">Visit</a>
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="https://www.abbc-uae.com/images/logo.png" alt="abc logo" width="218" height="87">
+      <span><b>AB Building Contracting Co. L.L.C.</b>Building contractors, Dubai</span>
+    </a>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#build">What we build</a>
+      <a href="#trades">Trades</a>
+      <a href="#safety">Safety &amp; quality</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel" href="tel:+97143312545">+971 4 331 2545</a>
+    <a class="util" href="https://www.abbc-uae.com/ABC_PROFILE.pdf">Company profile, PDF</a>
+  </div>
+  <nav class="mnav" aria-label="Sections">
+    <a href="#projects">Projects</a><a href="#build">What we build</a><a href="#trades">Trades</a><a href="#safety">Safety</a><a href="#contact">Contact</a><a href="https://www.abbc-uae.com/ABC_PROFILE.pdf">Profile (PDF)</a>
   </nav>
-  <a class="callbtn" href="tel:+97143312545">+971 4 331 2545</a>
-</div>
 </header>
 
-<main id="top">
-
-<div class="hero wrap">
-  <div class="herogrid">
-    <div class="heroType">
-      <h1>AB Building Contracting Co. L.L.C.</h1>
-      <p class="lead">Building in the UAE since 1977 — towers, residential and commercial buildings, villas, mosques, sheds, showrooms and warehouses, led by General Manager Eng. Kasem M. Sayed.</p>
-      <div class="ctas">
-        <a class="primary" href="tel:+97143312545">Call the office</a>
-        <a class="secondary" href="#projects">See the projects</a>
-      </div>
-    </div>
-    <div class="heroPhoto">
-      <div class="wide">
-        <img src="http://www.abbc-uae.com/uimages/bnr_7.jpg" alt="Tower projects built by AB Building Contracting">
-        <div class="cap"><span>Tower projects, Dubai</span></div>
-      </div>
-      <div class="pair">
-        <div><img src="http://www.abbc-uae.com/uimages/thumb_1_0.jpg" alt="The Palacio tower"><div class="cap"><b>The Palacio</b></div></div>
-        <div><img src="http://www.abbc-uae.com/uimages/thumb_8_0.jpg" alt="Al Barsha tower"><div class="cap"><b>Al Barsha</b></div></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="filmstrip">
-  <div class="filmrow">
-    <figure><img src="http://www.abbc-uae.com/uimages/bnr_1.jpg" alt="Villa at Hor Al Anz"><figcaption>(G+1) 17 Nos. Villa at Hor Al Anz</figcaption></figure>
-    <figure><img src="http://www.abbc-uae.com/uimages/bnr_2.jpg" alt="Buildings at Al Barsha and Deira"><figcaption>(G+7F+R) Al Barsha / (G+5F+R) Deira</figcaption></figure>
-    <figure><img src="http://www.abbc-uae.com/uimages/bnr_3.jpg" alt="Villa at Al Awir and building at Al Karama"><figcaption>Villa at Al Awir / (G+3F+R) Al Karama</figcaption></figure>
-    <figure><img src="http://www.abbc-uae.com/uimages/bnr_7.jpg" alt="Tower projects"><figcaption>Tower projects, Dubai</figcaption></figure>
-  </div>
-</div>
-
-<section id="projects"><div class="wrap">
-  <span class="kicker">Projects</span>
-  <h2>A sample of what's been built.</h2>
-  <p class="intro">Six jobs from the company's own project photos — towers, villas and multi-storey buildings across Dubai. Hover a row on desktop to see the project.</p>
-  <div class="projindex">
-    <div class="prow">
-      <span class="n">01</span><span class="name">The Palacio</span><span class="meta">Tower · Dubai</span>
-      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/thumb_1_0.jpg')"></div>
-    </div>
-    <div class="prow">
-      <span class="n">02</span><span class="name">Al Barsha</span><span class="meta">Tower · Dubai</span>
-      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/thumb_8_0.jpg')"></div>
-    </div>
-    <div class="prow">
-      <span class="n">03</span><span class="name">17 No. villas, Hor Al Anz</span><span class="meta">G+1 · Dubai</span>
-      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_1.jpg')"></div>
-    </div>
-    <div class="prow">
-      <span class="n">04</span><span class="name">Building, Al Barsha &amp; Deira</span><span class="meta">G+7F+R / G+5F+R</span>
-      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_2.jpg')"></div>
-    </div>
-    <div class="prow">
-      <span class="n">05</span><span class="name">Villa for Sheikh Hasher Juma Al Maktoum</span><span class="meta">Al Awir · Dubai</span>
-      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_3.jpg')"></div>
-    </div>
-    <div class="prow">
-      <span class="n">06</span><span class="name">Building, Al Karama</span><span class="meta">G+3F+R · Dubai</span>
-      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_3.jpg')"></div>
-    </div>
-  </div>
-</div></section>
-
-<section id="services" class="alt"><div class="wrap">
-  <span class="kicker">Services</span>
-  <h2>What the company does on site.</h2>
-  <p class="intro">Specialised in villas, hospitals, residential buildings and towers, with the trades to run a job start to finish.</p>
-  <div class="servicelist">
-    <div><span class="i">01</span>Precast concrete works</div>
-    <div><span class="i">02</span>G.R.P moulds</div>
-    <div><span class="i">03</span>Shuttering &amp; rebar works</div>
-    <div><span class="i">04</span>Structural steel works</div>
-    <div><span class="i">05</span>Demolishing works</div>
-    <div><span class="i">06</span>Marine steel works</div>
-    <div><span class="i">07</span>Scaffolding</div>
-    <div><span class="i">08</span>Internal finishes</div>
-    <div><span class="i">09</span>Pile cutting</div>
-    <div><span class="i">10</span>Companies representation</div>
-    <div><span class="i">11</span>Turn-key infrastructure works</div>
-    <div><span class="i">12</span>Other construction works</div>
-  </div>
-  <p class="sectors"><b>Builds for:</b> towers, multi-storey residential &amp; commercial buildings, villas, mosques, sheds, showrooms and warehouses, spread across the United Arab Emirates.</p>
-</div></section>
-
-<section id="about"><div class="wrap">
-  <span class="kicker">About</span>
-  <h2>Active in building construction since 1977.</h2>
-  <div class="about">
+<main>
+<div class="hero">
+  <div class="wrap">
     <div>
-      <p class="big">AB Building Contracting Co. L.L.C. has been executing projects — towers, multi-storey residential and commercial buildings, villas, mosques, sheds, showrooms and warehouses — across the United Arab Emirates since 1977.</p>
-      <p>The confidence clients and consultants have placed in the company helped it complete more than 310 projects by the year ending 2009.</p>
-      <p>A team of experts headed by General Manager Eng. Kasem M. Sayed is available to execute and complete projects on time. Should a project need more manpower, the company can draw on its group's resources to supplement the work force.</p>
-      <a class="profilelink" style="color:var(--green-d);border-color:var(--green-d)" href="http://www.abbc-uae.com/ABC_PROFILE.pdf" target="_blank" rel="noopener">Download the company profile (PDF) ↗</a>
-      <div class="bylines">
-        <div><b>General Manager</b><span>Eng. Kasem M. Sayed</span></div>
-        <div><b>Active since</b><span>1977</span></div>
-        <div><b>Projects completed</b><span>310+ by year ending 2009</span></div>
+      <h1><strong>Towers, villas and mosques</strong> across the UAE, built by us <strong>since 1977.</strong></h1>
+      <p class="ar" lang="ar">شركة الف باء لمقاولات البناء ذ.م.م</p>
+      <p class="lede">We are a main contractor based in Dubai. More than 400 projects so far, from the Palacio in Silicon Oasis and Ontario Tower in Business Bay to villas in Hor Al Anz and mosques in Hatta and Buraimi. Send us the drawings and we will price the job.</p>
+      <div class="act">
+        <a class="btn" href="tel:+97143312545">Call the office</a>
+        <a class="plain" href="mailto:info@abbc-uae.com?subject=Tender%20enquiry">Email drawings to info@abbc-uae.com</a>
       </div>
     </div>
-    <div class="ph">
-      <img src="http://www.abbc-uae.com/uploads/img121202040721.jpg" alt="Tower project by AB Building Contracting" style="max-width:200px">
-      <div class="cap">From the company's project archive</div>
+    <figure class="lead">
+      <img src="https://www.abbc-uae.com/uimages/pro_1_0.jpg" alt="The Palacio tower, Dubai Silicon Oasis" width="517" height="532">
+      <figcaption class="n"><b>The Palacio</b>, Dubai Silicon Oasis, plot 20-041. 3B + G + 14 floors + roof, commercial and residential. Consultant: ARC International.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="labels n">
+      <span>Main contractor, Dubai</span>
+      <span>DED commercial licence 216484</span>
+      <a href="tel:+97143312545">Tel +971 4 331 2545 &rarr;</a>
     </div>
   </div>
-</div></section>
+</div>
 
-<section id="visit" class="contact"><div class="wrap">
-  <span class="kicker">Visit</span>
-  <h2>Have a project to build?</h2>
-  <p style="max-width:520px;color:#d8d5c8">Call the office, or email the department that fits the job — the projects team will follow up on briefs.</p>
-  <div class="cgrid">
-    <div class="cbox">
-      <h3>Office</h3>
-      <span class="big">AB Building Contracting Co. L.L.C.</span>
-      <p>P.O. Box 24882<br>Dubai, U.A.E</p>
+<section id="projects">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="x">Projects</h2>
+      <p>A few of the buildings we have put up in Dubai. Towers for private owners and developers, built to the consultant's drawings, from the basement slab to handover.</p>
     </div>
-    <div class="cbox">
-      <h3>Phone &amp; fax</h3>
-      <p><a href="tel:+97143312545">+971 4 331 2545</a><br><a href="tel:+97143312371">+971 4 331 2371</a><br>Fax +971 4 331 2255</p>
+
+    <div class="pgrid">
+      <div class="pcol">
+        <article class="proj" style="--o:1">
+          <img src="https://www.abbc-uae.com/uimages/pro_2_0.jpg" alt="Sport One Business, Axon Tower" width="485" height="583" loading="lazy">
+          <div class="meta"><span class="no n">01</span><div>
+            <h3>Sport One Business, Axon Tower</h3>
+            <p class="where n">Dubai Sports City, plot 682-136</p></div>
+            <dl class="n"><dt>Floors</dt><dd>B + G + 4 podium + 25</dd><dt>Use</dt><dd>Business tower</dd><dt>Consultant</dt><dd>National Engineering Bureau</dd></dl>
+          </div>
+        </article>
+        <article class="proj" style="--o:4">
+          <img src="https://www.abbc-uae.com/uimages/pro_7_0.jpg" alt="Sports City buildings R8-6 and R8-7" width="614" height="780" loading="lazy">
+          <div class="meta"><span class="no n">04</span><div>
+            <h3>R8-6 &amp; R8-7, two buildings</h3>
+            <p class="where n">Dubai Sports City</p></div>
+            <dl class="n"><dt>Floors</dt><dd>B + G + 11, each</dd><dt>Use</dt><dd>Residential</dd><dt>Consultant</dt><dd>Image Arch. Eng. Consultant</dd></dl>
+          </div>
+        </article>
+      </div>
+
+      <div class="pcol">
+        <article class="proj" style="--o:2">
+          <img src="https://www.abbc-uae.com/uimages/pro_3_0.jpg" alt="Ontario Tower, Business Bay" width="331" height="490" loading="lazy">
+          <div class="meta"><span class="no n">02</span><div>
+            <h3>Ontario Tower</h3>
+            <p class="where n">Business Bay, near Burj Khalifa, plot BB-A02-011</p></div>
+            <dl class="n"><dt>Floors</dt><dd>2B + G + 3 podium + 25 + 2 roofs</dd><dt>Use</dt><dd>Commercial &amp; residential</dd><dt>Consultant</dt><dd>Dartin Engineers</dd></dl>
+          </div>
+        </article>
+        <article class="proj" style="--o:5">
+          <img src="https://www.abbc-uae.com/uimages/pro_9_0.jpg" alt="Business Atrium building, Oud Metha" width="600" height="503" loading="lazy">
+          <div class="meta"><span class="no n">05</span><div>
+            <h3>Business Atrium Building</h3>
+            <p class="where n">Oud Metha, plot 319-304</p></div>
+            <dl class="n"><dt>Floors</dt><dd>3B + G + M + 5 + roof</dd><dt>Use</dt><dd>Offices</dd><dt>Consultant</dt><dd>Erga Progress Engineering</dd></dl>
+          </div>
+        </article>
+      </div>
+
+      <div class="pcol">
+        <article class="proj" style="--o:3">
+          <img src="https://www.abbc-uae.com/uimages/pro_5_0.jpg" alt="Sports City buildings R4-5 and R4-6" width="584" height="800" loading="lazy">
+          <div class="meta"><span class="no n">03</span><div>
+            <h3>R4-5 &amp; R4-6, two buildings</h3>
+            <p class="where n">Dubai Sports City</p></div>
+            <dl class="n"><dt>Floors</dt><dd>B + G + 14, each</dd><dt>Use</dt><dd>Residential</dd><dt>Consultant</dt><dd>National Engineering Bureau</dd></dl>
+          </div>
+        </article>
+        <article class="proj" style="--o:6">
+          <img src="https://www.abbc-uae.com/uimages/pro_8_0.jpg" alt="Building in Al Barsha" width="613" height="780" loading="lazy">
+          <div class="meta"><span class="no n">06</span><div>
+            <h3>Al Barsha</h3>
+            <p class="where n">Al Barsha, Dubai</p></div>
+            <dl class="n"><dt>Use</dt><dd>Commercial &amp; residential</dd></dl>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="cbox">
-      <h3>Departments</h3>
-      <div class="deptlist">
-        <div><span>General enquiries</span><a href="mailto:info@abbc-uae.com">info@abbc-uae.com</a></div>
-        <div><span>General Manager</span><a href="mailto:kasem@abbc-uae.com">kasem@abbc-uae.com</a></div>
-        <div><span>Projects</span><a href="mailto:projects@abbc-uae.com">projects@abbc-uae.com</a></div>
-        <div><span>Purchasing</span><a href="mailto:purchasing@abbc-uae.com">purchasing@abbc-uae.com</a></div>
-        <div><span>HR</span><a href="mailto:hr@abbc-uae.com">hr@abbc-uae.com</a></div>
-        <div><span>Accounts</span><a href="mailto:accounts@abbc-uae.com">accounts@abbc-uae.com</a></div>
+    <p class="key n">B = basement, G = ground, M = mezzanine. Floor counts as on the approved drawings.</p>
+  </div>
+</section>
+
+<section id="build">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="x">What we build</h2>
+      <p>Since 1977 the work has been mostly six kinds of building. A few jobs from each, by area.</p>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Building types, scroll sideways">
+    <article class="panel g">
+      <div class="ph"><img src="https://www.abbc-uae.com/uimages/bnr_7.jpg" alt="Towers built by AB Building" style="object-position:48% 50%"></div>
+      <div class="body">
+        <ul class="n">
+          <li><span>Ontario Tower</span><span>Business Bay</span></li>
+          <li><span>Axon Tower, B+G+4P+25</span><span>Sports City</span></li>
+          <li><span>Neo Solutions, 2B+G+20</span><span>Sports City</span></li>
+          <li><span>C008-028, 2B+G+24</span><span>TECOM</span></li>
+          <li><span>The Palacio</span><span>Silicon Oasis</span></li>
+        </ul>
+        <div class="name"><h3>Towers</h3><span class="cnt n">1 / 6</span></div>
+      </div>
+    </article>
+    <article class="panel">
+      <div class="ph"><img src="https://www.abbc-uae.com/uimages/bnr_2.jpg" alt="Residential buildings in Al Barsha and Deira" style="object-position:72% 50%"></div>
+      <div class="body">
+        <ul class="n">
+          <li><span>B+G+12 residential</span><span>Al Nahda</span></li>
+          <li><span>G+5+R building</span><span>Deira</span></li>
+          <li><span>G+7+R buildings</span><span>Bur Dubai</span></li>
+          <li><span>G+3+R building</span><span>Al Karama</span></li>
+          <li><span>2B+G+7 building</span><span>Tawi Us Saigh</span></li>
+          <li><span>G+M+3 building</span><span>Souk Al Kabir</span></li>
+        </ul>
+        <div class="name"><h3>Buildings</h3><span class="cnt n">2 / 6</span></div>
+      </div>
+    </article>
+    <article class="panel s">
+      <div class="ph"><img src="https://www.abbc-uae.com/uimages/bnr_1.jpg" alt="17 villas at Hor Al Anz" style="object-position:20% 50%"></div>
+      <div class="body">
+        <ul class="n">
+          <li><span>17 villas, G+1</span><span>Hor Al Anz</span></li>
+          <li><span>18 villas, gym &amp; pool</span><span>Hor Al Anz</span></li>
+          <li><span>20 villas, G+1</span><span>Al Badaa</span></li>
+          <li><span>8 villas, G+1</span><span>Umm Suqeim</span></li>
+          <li><span>Villa complex</span><span>Zabeel</span></li>
+          <li><span>Villa, majlis &amp; mosque</span><span>Nad Al Sheba</span></li>
+        </ul>
+        <div class="name"><h3>Villas</h3><span class="cnt n">3 / 6</span></div>
+      </div>
+    </article>
+    <article class="panel g big">
+      <div class="body">
+        <ul class="n">
+          <li><span>Mosque for 600 people</span><span>Al Karama</span></li>
+          <li><span>Mosque</span><span>Al Rafaa</span></li>
+          <li><span>Mosque</span><span>Jumeirah</span></li>
+          <li><span>Mosque</span><span>Al Safaa</span></li>
+          <li><span>Mosque</span><span>Hatta</span></li>
+          <li><span>Mosque</span><span>Masfoot</span></li>
+          <li><span>Mosque and additions</span><span>Buraimi, Oman</span></li>
+        </ul>
+        <div class="name"><h3>Mosques</h3><span class="cnt n">4 / 6</span></div>
+      </div>
+    </article>
+    <article class="panel w big">
+      <div class="body">
+        <ul class="n">
+          <li><span>Layia Plaza Hotel, G+4</span><span>Al Qusais</span></li>
+          <li><span>Rest house</span><span>Hatta</span></li>
+          <li><span>Out house &amp; pool</span><span>Hatta</span></li>
+          <li><span>Rest house extension</span><span>Al Awir</span></li>
+          <li><span>Rest house</span><span>Buraimi, Oman</span></li>
+        </ul>
+        <div class="name"><h3>Hotels &amp; rest houses</h3><span class="cnt n">5 / 6</span></div>
+      </div>
+    </article>
+    <article class="panel big">
+      <div class="body">
+        <ul class="n">
+          <li><span>55 sheds</span><span>Al Ramool</span></li>
+          <li><span>38 sheds</span><span>Al Ramool</span></li>
+          <li><span>Storage sheds</span><span>Awir Road</span></li>
+          <li><span>6 power houses for DEWA</span><span>Habab</span></li>
+          <li><span>School classrooms</span><span>Omer Bin Khattab</span></li>
+          <li><span>Compound wall</span><span>Al Ain</span></li>
+        </ul>
+        <div class="name"><h3>Sheds &amp; utilities</h3><span class="cnt n">6 / 6</span></div>
+      </div>
+    </article>
+  </div>
+  <div class="wrap"><p class="railnote n">Scroll sideways for all six &rarr;</p></div>
+</section>
+
+<section id="trades">
+  <div class="wrap trades">
+    <div class="say">
+      <h2 class="x">Trades we carry</h2>
+      <p>Most of the structure and finishing work on our sites is done by our own people. Our General Manager, Eng. Kasem M. Sayed, leads the team of engineers and foremen on every job.</p>
+      <p>When a job needs more hands, we can draw on the group's manpower so the programme doesn't slip.</p>
+    </div>
+    <div>
+      <ol class="svc">
+        <li>Precast concrete works</li>
+        <li>GRP moulds</li>
+        <li>Shuttering &amp; rebar</li>
+        <li>Structural steel</li>
+        <li>Marine steel works</li>
+        <li>Scaffolding</li>
+        <li>Demolition</li>
+        <li>Pile cutting</li>
+        <li>Internal finishes</li>
+        <li>Infrastructure works</li>
+        <li>Turnkey projects</li>
+        <li>Company representation</li>
+      </ol>
+      <div class="plant">
+        <h3>Plant and equipment on our books</h3>
+        <table class="n">
+          <tr><td>Tower cranes</td><td>8</td><td>Generators</td><td>15</td></tr>
+          <tr><td>Electric hoists</td><td>8</td><td>Concrete mixers</td><td>7</td></tr>
+          <tr><td>Diesel hoists</td><td>8</td><td>Hydraulic dumpers</td><td>7</td></tr>
+          <tr><td>Forklifts</td><td>8</td><td>Concrete vibrators</td><td>25</td></tr>
+        </table>
+        <p class="src n">From our company profile. Ask us for the current list with your tender.</p>
       </div>
     </div>
   </div>
-</div></section>
+</section>
 
+<div class="band" id="safety">
+  <div class="wrap">
+    <div>
+      <h2>Safety and quality</h2>
+      <p>Our safety officers inspect every site regularly and hold safety meetings with the crews, then sit with management to plan what to improve next.</p>
+      <p>On quality, we work to the owner's and the consultant's requirements at every stage. What we aim for is simple: a building that satisfies the owner, at a quality and a time that match the price.</p>
+    </div>
+    <div>
+      <div class="dir n">
+        <a href="mailto:info@abbc-uae.com"><span>Enquiries and tenders</span><span>info@abbc-uae.com</span></a>
+        <a href="mailto:kasem@abbc-uae.com"><span>General Manager</span><span>kasem@abbc-uae.com</span></a>
+        <a href="mailto:projects@abbc-uae.com"><span>Projects management</span><span>projects@abbc-uae.com</span></a>
+        <a href="mailto:safety@abbc-uae.com"><span>Safety department</span><span>safety@abbc-uae.com</span></a>
+        <a href="mailto:purchasing@abbc-uae.com"><span>Suppliers and purchasing</span><span>purchasing@abbc-uae.com</span></a>
+        <a href="mailto:hr@abbc-uae.com"><span>Jobs and HR</span><span>hr@abbc-uae.com</span></a>
+        <a href="mailto:accounts@abbc-uae.com"><span>Accounts</span><span>accounts@abbc-uae.com</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="areas">
+  <div class="wrap">
+    <div class="head"><h2 class="x">Where we've built</h2><p></p></div>
+    <p class="list"><span><b>Dubai</b> Sports City</span> <i>/</i> <span>Silicon Oasis</span> <i>/</i> <span>Business Bay</span> <i>/</i> <span>TECOM</span> <i>/</i> <span>Al Barsha</span> <i>/</i> <span>Al Nahda</span> <i>/</i> <span>Oud Metha</span> <i>/</i> <span>Al Qusais</span> <i>/</i> <span>Deira</span> <i>/</i> <span>Bur Dubai</span> <i>/</i> <span>Al Karama</span> <i>/</i> <span>Satwa</span> <i>/</i> <span>Jumeirah</span> <i>/</i> <span>Umm Suqeim</span> <i>/</i> <span>Garhoud</span> <i>/</i> <span>Zabeel</span> <i>/</i> <span>Nad Al Sheba</span> <i>/</i> <span>Hor Al Anz</span> <i>/</i> <span>Al Awir</span> <i>/</i> <span>Hatta <b>&nbsp;Al Ain&nbsp;</b> <b>&nbsp;Buraimi, Oman</b></span></p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="head"><h2 class="x">Contact</h2><p></p></div>
+    <div class="cgrid">
+      <div>
+        <a class="bigtel" href="tel:+97143312545">04 331 2545</a>
+        <p class="sub">For a tender or a site visit, call the office or email the drawings and BOQ to info@abbc-uae.com. Tell us the plot number and the consultant and we'll come back to you.</p>
+      </div>
+      <dl class="n">
+        <dt>Office</dt><dd><a href="tel:+97143312545">+971 4 331 2545</a><br><a href="tel:+97143312371">+971 4 331 2371</a></dd>
+        <dt>Fax</dt><dd>+971 4 331 2255</dd>
+        <dt>Email</dt><dd><a href="mailto:info@abbc-uae.com">info@abbc-uae.com</a></dd>
+        <dt>Post</dt><dd>P.O. Box 24882, Dubai, U.A.E.</dd>
+        <dt>Profile</dt><dd><a href="https://www.abbc-uae.com/ABC_PROFILE.pdf">Download company profile (PDF)</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer><div class="wrap">AB Building Contracting Co. L.L.C. · P.O. Box 24882, Dubai, U.A.E. · All trademarks and business details belong to the business.</div></footer>
-<div class="note">Design concept by Websmith for AB Building Contracting Co. LLC. Not the official site.</div>
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="fname">AB Building Contracting Co. L.L.C.</p>
+      <p class="ar" lang="ar" dir="rtl" style="text-align:left">شركة الف باء لمقاولات البناء ذ.م.م</p>
+      <p style="margin-top:14px">Building contractors in Dubai since 1977.</p>
+    </div>
+    <div>
+      <h4>Registered</h4>
+      <p>Commercial Licence 216484, Department of Economic Development, Dubai</p>
+      <p>Commercial Register 41729</p>
+      <p>Member, Dubai Chamber of Commerce</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul><li><a href="#projects">Projects</a></li><li><a href="#build">What we build</a></li><li><a href="#trades">Trades</a></li><li><a href="#safety">Safety &amp; quality</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Office</h4>
+      <p>P.O. Box 24882, Dubai, U.A.E.</p>
+      <p><a href="tel:+97143312545">Tel +971 4 331 2545</a></p>
+      <p>Fax +971 4 331 2255</p>
+      <p><a href="mailto:info@abbc-uae.com">info@abbc-uae.com</a></p>
+    </div>
+    <div class="bottom">
+      <span>&copy; AB Building Contracting Co. L.L.C.</span>
+      <span>Design concept by Websmith for AB Building Contracting Co. L.L.C. Not the official site.</span>
+    </div>
+  </div>
+</footer>
+<div class="concept">Design concept by Websmith for AB Building Contracting Co. L.L.C. Not the official site.</div>
 </body>
 </html>
