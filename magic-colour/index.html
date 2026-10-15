@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Magic Colour Technical Services LLC — Interiors, Exhibitions &amp; Events, Dubai</title>
+<meta name="description" content="Interior fit-out, exhibition stands, national pavilions, kiosks and event production. Al Quoz, Dubai, since 2003.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17152a;--mute:#5a5768;--line:#e2e0e6;
+  --bg:#f6f5f2;--card:#ffffff;
+  --acc:#332e72;--acc2:#211c54;
+  --hf:'Archivo',Arial,sans-serif;--bf:'IBM Plex Sans',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--bf);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--hf);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(2.1rem,5.2vw,3.5rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700}
+h3{font-size:1.02rem;font-weight:600}
+.lbl{font:600 .72rem/1 var(--bf);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* utility bar */
+.utility{background:var(--ink);color:#cfcde0;font-size:.78rem}
+.utility .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:16px;overflow:hidden;white-space:nowrap}
+.utility a{color:#cfcde0}
+.utility a:hover{color:#fff}
+.utility .u2{display:none}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:40px;width:auto}
+.nav ul{display:none;list-style:none;gap:26px;font-size:.92rem}
+.nav ul a:hover{color:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;font-weight:600;font-size:.88rem;border:1.5px solid var(--ink);border-radius:3px;white-space:nowrap}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.p:hover{background:var(--acc2);border-color:var(--acc2)}
+.btn.g{border-color:var(--line);color:var(--ink)}
+.btn.g:hover{border-color:var(--ink)}
+
+section{padding:76px 0}
+section.tight{padding-top:0}
+.alt{background:#fff}
+
+/* hero */
+.hero{padding:56px 0 76px}
+.hero-grid{display:grid;gap:40px;grid-template-columns:1fr}
+.hero h1{margin-bottom:20px}
+.hero p.lead{color:var(--mute);font-size:1.08rem;max-width:520px;margin-bottom:28px}
+.hero .meta{display:flex;flex-wrap:wrap;gap-column:24px;gap:6px 24px;font-size:.88rem;color:var(--mute);margin-bottom:30px;border-top:1px solid var(--line);padding-top:18px}
+.hero .meta b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.feature{border:1px solid var(--line);background:#fff;padding:10px;max-width:460px}
+.feature img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.feature figcaption{padding:12px 6px 4px;font-size:.84rem;color:var(--mute);display:flex;justify-content:space-between;gap:10px}
+.feature figcaption b{color:var(--ink);font-weight:600}
+
+/* projects */
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:36px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.sec-head p{color:var(--mute);max-width:460px;font-size:.95rem}
+.pgrid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.pcard{background:#fff;padding:0}
+.pcard img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.pcard .pc-body{padding:16px 18px 20px}
+.pcard h3{margin-bottom:4px}
+.pcard span{font-size:.82rem;color:var(--mute)}
+
+/* services */
+.svc-grid{display:grid;gap:40px;grid-template-columns:1fr}
+.svc-intro p{color:var(--mute);margin-bottom:14px;font-size:.98rem}
+.svc-intro .part{margin-top:22px;font-size:.88rem;color:var(--mute);border-top:1px solid var(--line);padding-top:18px}
+.svc-intro .part a{color:var(--acc);font-weight:600}
+.slist{border-top:1px solid var(--line)}
+.slist>div{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.slist span.n{font:600 .85rem var(--hf);color:var(--acc)}
+.slist h3{margin-bottom:4px}
+.slist p{color:var(--mute);font-size:.9rem}
+
+/* about */
+.about-grid{display:grid;gap:40px;grid-template-columns:1fr}
+.about-grid figure{border:1px solid var(--line);padding:10px;background:#fff}
+.about-grid img{width:100%;object-fit:cover;aspect-ratio:4/3}
+.about-grid figcaption{padding:10px 4px 0;font-size:.8rem;color:var(--mute)}
+.about-text p{color:var(--mute);margin-bottom:14px}
+.about-text p:first-child{color:var(--ink);font-size:1.05rem}
+.about-text .credit{margin-top:20px;font-size:.88rem;color:var(--mute)}
+.about-text .credit a{color:var(--acc);font-weight:600}
+
+/* visit */
+.visit-grid{display:grid;gap:36px;grid-template-columns:1fr}
+.vbox{border:1px solid var(--line);background:#fff;padding:26px}
+.vbox h3{margin-bottom:14px}
+.vbox .row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.vbox .row:last-child{border:0}
+.vbox .row span{color:var(--mute)}
+.vbox .row b{font-weight:600;text-align:right}
+.vbox .row a{color:var(--acc);font-weight:600}
+.mapbox{border:1px solid var(--line);background:#fff;padding:10px}
+.mapbox iframe{width:100%;height:280px;border:0;display:block}
+.social{margin-top:16px;display:flex;gap:14px;font-size:.88rem}
+.social a{color:var(--acc);font-weight:600}
+
+/* contact band */
+.band{background:var(--ink);color:#e6e5ef}
+.band h2{color:#fff;margin-bottom:14px}
+.band p{color:#b9b7c9;max-width:520px;margin-bottom:28px}
+.band .btn.g{border-color:#504b75;color:#fff}
+.band .btn.g:hover{border-color:#fff}
+
+/* footer */
+footer{background:#fff;border-top:1px solid var(--line);padding:48px 0 0}
+.fgrid{display:grid;gap:28px;grid-template-columns:1fr;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.fgrid h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;color:var(--mute)}
+.fgrid p,.fgrid a{display:block;font-size:.88rem;color:var(--mute);margin-bottom:6px}
+.fgrid a:hover{color:var(--acc)}
+.fbottom{display:flex;flex-direction:column;gap:6px;padding:18px 0 28px;font-size:.78rem;color:#8e8b9e}
+
+@media(min-width:760px){
+  .utility .u2{display:inline}
+  .nav ul{display:flex}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center}
+  .pgrid{grid-template-columns:repeat(3,1fr)}
+  .svc-grid{grid-template-columns:.8fr 1.2fr;gap:60px}
+  .about-grid{grid-template-columns:.85fr 1.15fr;gap:60px}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:repeat(4,1fr)}
+  .fbottom{flex-direction:row;justify-content:space-between;align-items:center}
+}
+@media(min-width:1000px){
+  .hero{padding:76px 0 96px}
+}
+</style>
+</head>
+<body>
+
+<div class="utility"><div class="wrap">
+  <span>Al Quoz Industrial Area 4, behind Emirates Glass, Dubai &middot; <span class="u2">Sat&ndash;Thu 9am&ndash;7pm, Fri 9am&ndash;2pm</span></span>
+  <span><a href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a> &middot; <a href="tel:+97143410060">+971 4 341 0060</a></span>
+</div></div>
+
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="#top"><img src="http://www.magiccolourdubai.com/images/logo.png" alt="Magic Colour Technical Services LLC"></a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#visit">Visit</a></li></ul>
+  <a class="btn p" href="tel:+97143410060">Call us</a>
+</div></header>
+
+<main id="top">
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <h1>Interior fit-out, exhibition stands and event production in Dubai.</h1>
+    <p class="lead">Magic Colour Technical Services LLC designs and builds home and office interiors, exhibition stands, national pavilions, promotional kiosks and event environments &mdash; from our own workshop in Al Quoz.</p>
+    <div class="cta">
+      <a class="btn p" href="tel:+97143410060">Call +971 4 341 0060</a>
+      <a class="btn g" href="#projects">See our projects</a>
+    </div>
+    <div class="meta">
+      <span><b>Established</b> Dubai, 2003</span>
+      <span><b>Based</b> Al Quoz Industrial Area 4</span>
+      <span><b>Hours</b> Sat&ndash;Thu 9am&ndash;7pm</span>
+    </div>
+  </div>
+  <figure class="feature">
+    <img src="http://www.magiccolourdubai.com/admin/images/productimg/2_1873453f.jpg" alt="Reception build for the Abu Dhabi Golf Championship, produced by Magic Colour">
+    <figcaption><b>Abu Dhabi Golf Championship</b><span>Reception build, 2015</span></figcaption>
+  </figure>
+</div></section>
+
+<section class="tight" id="projects"><div class="wrap">
+  <div class="sec-head">
+    <div><h2>Recent projects</h2></div>
+    <p>A short list of what the workshop has produced &mdash; exhibition stands, retail kiosks, event builds and outdoor fit-out.</p>
+  </div>
+  <div class="pgrid">
+    <div class="pcard"><img src="http://www.magiccolourdubai.com/admin/images/productimg/3_0c1afd3c.JPG" alt="Meydan Beach daybeds and outdoor furniture built by Magic Colour"><div class="pc-body"><h3>Meydan Beach</h3><span>Outdoor furniture &amp; fit-out, 2014</span></div></div>
+    <div class="pcard"><img src="http://www.magiccolourdubai.com/admin/images/productimg/1_9a1c6eef.jpg" alt="Armani exhibition production by Magic Colour"><div class="pc-body"><h3>Armani</h3><span>Exhibition production, 2014</span></div></div>
+    <div class="pcard"><img src="http://www.magiccolourdubai.com/admin/images/productimg/4_7e6df54e.jpg" alt="Reese's retail kiosk at Dubai Mall built by Magic Colour"><div class="pc-body"><h3>Reese&rsquo;s, Dubai Mall</h3><span>Retail kiosk, 2014</span></div></div>
+    <div class="pcard"><img src="http://www.magiccolourdubai.com/admin/images/productimg/5_b50044bb.JPG" alt="Fragrance Station exhibition stand built by Magic Colour"><div class="pc-body"><h3>Fragrance Station</h3><span>Exhibition stand, 2015</span></div></div>
+    <div class="pcard"><img src="http://www.magiccolourdubai.com/admin/images/productimg/7_97129729.jpg" alt="Wedding event furniture and console built by Magic Colour"><div class="pc-body"><h3>Wedding Event</h3><span>Event styling &amp; furniture, 2015</span></div></div>
+    <div class="pcard"><img src="http://www.magiccolourdubai.com/admin/images/productimg/2_1873453f.jpg" alt="Abu Dhabi Golf Championship reception build by Magic Colour"><div class="pc-body"><h3>Abu Dhabi Golf Championship</h3><span>Reception build, 2015</span></div></div>
+  </div>
+</div></section>
+
+<section class="alt" id="services"><div class="wrap svc-grid">
+  <div class="svc-intro">
+    <h2>What we do</h2>
+    <p>We&rsquo;re one of the respected residential and commercial interior fitting companies in the UAE, and we&rsquo;re proud of the customers who keep coming back.</p>
+    <p>We&rsquo;ve worked on home and office interiors, exhibition stands, national pavilions, promotional kiosks and indoor and outdoor fit-out. Magic Colour is an end-to-end provider &mdash; design through production through installation.</p>
+    <div class="part">Part of a group that also includes Magic Colour Interior Decoration LLC and <a href="http://royalzoneexhibition.com/" target="_blank" rel="noopener">Royal Zone Technical Services LLC</a>.</div>
+  </div>
+  <div class="slist">
+    <div><span class="n">01</span><div><h3>Home interiors</h3><p>Residential interior design, fitting and decor.</p></div></div>
+    <div><span class="n">02</span><div><h3>Office &amp; commercial interiors</h3><p>Indoor and outdoor interior fit-out for business spaces.</p></div></div>
+    <div><span class="n">03</span><div><h3>Exhibition stands &amp; booths</h3><p>Corporate stands and trade show display booths, produced and installed.</p></div></div>
+    <div><span class="n">04</span><div><h3>National pavilions</h3><p>Exhibition builds for national pavilions.</p></div></div>
+    <div><span class="n">05</span><div><h3>Promotional kiosks</h3><p>Design and production of retail and promotional kiosks.</p></div></div>
+    <div><span class="n">06</span><div><h3>Events</h3><p>Event environments, furniture and styling, including weddings.</p></div></div>
+    <div><span class="n">07</span><div><h3>Indoor &amp; outdoor fit-out</h3><p>Full fit-out from drawings to handover.</p></div></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about-grid">
+  <figure>
+    <img src="http://www.magiccolourdubai.com/images/slider-05.jpg" alt="Furniture and interior pieces produced at the Magic Colour design desk">
+    <figcaption>From the Magic Colour design desk</figcaption>
+  </figure>
+  <div class="about-text">
+    <p>Magic Colour Technical Services LLC is an interior, exterior, exhibition, event and kiosk production and fit-out company, with our head office in Dubai, UAE, since 2003. The zeal to excel hasn&rsquo;t changed &mdash; we keep pursuing newer and better goals, aiming to be one of the best exhibition stand fabricators and interior fit-out contractors in the market. We&rsquo;re among Dubai&rsquo;s premium exhibition stand producers, offering business-to-business solutions for a complete job.</p>
+    <p>At the Magic Colour design desk, ideas turn into design concepts, then move to a crew of carpenters, electricians, painters and other skilled workers &mdash; backed by marketing, technical and management staff, all working from the same desk.</p>
+    <p>Magic Colour Technical Services is committed to delivering high-end production that meets client expectations through collaboration and exceptional service. We aim for perfection, and the client&rsquo;s satisfaction is how we measure the job.</p>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>Planning an interior, a stand, or an event build?</h2>
+  <p>Call the workshop or send an email with what you&rsquo;re building &mdash; the design desk will come back with ideas and a quote.</p>
+  <div class="cta">
+    <a class="btn p" href="tel:+97143410060">Call +971 4 341 0060</a>
+    <a class="btn g" href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a>
+  </div>
+</div></section>
+
+<section class="alt" id="visit"><div class="wrap visit-grid">
+  <div>
+    <div class="vbox">
+      <h3>Visit the workshop</h3>
+      <div class="row"><span>Address</span><b>Al Quoz Industrial Area 4, behind Emirates Glass, Block 38, Warehouse 1, Dubai, UAE</b></div>
+      <div class="row"><span>Hours</span><b>Sat&ndash;Thu 9am&ndash;7pm, Fri 9am&ndash;2pm</b></div>
+      <div class="row"><span>Phone</span><a href="tel:+97143410060">+971 4 341 0060</a></div>
+      <div class="row"><span>Mobile</span><a href="tel:+971556611304">+971 55 661 1304</a></div>
+      <div class="row"><span>Fax</span><b>+971 4 341 0070</b></div>
+      <div class="row"><span>Email</span><a href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a></div>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/magiccolourdubai" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://twitter.com/magiccolour" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </div>
+  <div class="mapbox">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3612.6789485092527!2d55.220645999999995!3d25.112727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5e4b4555555f%3A0x713957257ee48117!2sMagic+Colour+Technical+Services+LLC.+Dubai!5e0!3m2!1sen!2sin!4v1423123996682" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h3>Magic Colour</h3>
+        <p>Interior, exhibition &amp; event production. Dubai, since 2003.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+97143410060">+971 4 341 0060</a>
+        <a href="tel:+971556611304">+971 55 661 1304</a>
+        <a href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a>
+      </div>
+      <div>
+        <h3>Workshop</h3>
+        <p>Al Quoz Industrial Area 4</p>
+        <p>Behind Emirates Glass, Block 38</p>
+        <p>Warehouse 1, Dubai, UAE</p>
+      </div>
+      <div>
+        <h3>Group</h3>
+        <p>Magic Colour Interior Decoration LLC</p>
+        <a href="http://royalzoneexhibition.com/" target="_blank" rel="noopener">Royal Zone Technical Services LLC</a>
+        <a href="https://www.facebook.com/magiccolourdubai" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>&copy; Magic Colour Technical Services LLC. All trademarks and business details belong to the business.</span>
+      <span>Design concept by Websmith for Magic Colour Technical Services LLC. Not the official site.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

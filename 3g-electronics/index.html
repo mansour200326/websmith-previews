@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>3G Electronics General Trading LLC — Deira, Dubai</title>
+<meta name="description" content="3G Electronics General Trading LLC. Video game software and hardware supplier, Deira, Dubai, since 1984.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f2;
+  --paper:#ffffff;
+  --ink:#171c1f;
+  --mute:#565f63;
+  --line:#d8d6cd;
+  --blue:#1c6fa0;
+  --green:#2f9e78;
+  --gold:#d9a53a;
+  --hf:'Work Sans',system-ui,sans-serif;
+  --mf:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--hf);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.5;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:40px;
+}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mf)}
+img{max-width:100%;display:block}
+
+/* ---------- header ---------- */
+header.top{border-bottom:1px solid var(--line);background:var(--paper)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brandbox{display:flex;align-items:center;gap:10px}
+.brandbox img{height:34px;width:auto}
+.brandbox span{font-family:var(--mf);font-size:.72rem;letter-spacing:.06em;color:var(--mute)}
+.nav nav{display:none}
+.nav nav ul{list-style:none;display:flex;gap:26px;font-size:.92rem}
+.nav nav a:hover{color:var(--blue)}
+.nav a.tel{font-family:var(--mf);font-size:.85rem;border-left:1px solid var(--line);padding-left:16px;white-space:nowrap}
+@media(min-width:800px){.nav nav{display:block}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--paper);border-bottom:1px solid var(--line);padding:40px 0 0;overflow:hidden}
+.hero-head{position:relative}
+.hero h1{
+  font-family:var(--hf);
+  font-weight:800;
+  letter-spacing:-.025em;
+  line-height:.88;
+  font-size:clamp(2.6rem,15vw,9.5rem);
+}
+@media(min-width:860px){
+  .hero h1{white-space:nowrap;font-size:clamp(3.4rem,9.2vw,9.5rem);margin-left:-4px}
+}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:26px;padding:26px 0 36px;border-top:1px solid var(--line);margin-top:18px}
+.plate{
+  font-family:var(--mf);
+  font-size:.74rem;
+  letter-spacing:.03em;
+  color:var(--mute);
+  border:1px solid var(--line);
+  background:var(--bg);
+  padding:14px 16px;
+  display:grid;
+  gap:6px;
+  align-self:start;
+}
+.plate b{color:var(--ink);font-weight:500}
+.plate .row{display:flex;justify-content:space-between;gap:12px}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--ink);max-width:620px}
+.hero p.lead + p{color:var(--mute);max-width:600px;margin-top:14px;font-size:.98rem}
+@media(min-width:860px){
+  .hero-grid{grid-template-columns:260px 1fr;gap:48px;align-items:start}
+}
+
+/* ---------- section basics ---------- */
+section{padding:66px 0}
+.kicker{font-family:var(--mf);font-size:.72rem;letter-spacing:.08em;color:var(--blue);display:block;margin-bottom:10px}
+h2{font-family:var(--hf);font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.01em;margin-bottom:8px}
+.section-intro{color:var(--mute);max-width:560px;margin-bottom:36px;font-size:1rem}
+section.alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* ---------- supply index ---------- */
+.supply-list{border-top:1px solid var(--ink)}
+.supply-row{
+  display:grid;
+  grid-template-columns:50px 1fr;
+  gap:18px;
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.supply-row .num{font-family:var(--mf);color:var(--blue);font-size:.85rem;padding-top:4px}
+.supply-row h3{font-size:1.2rem;font-weight:600;margin-bottom:6px}
+.supply-row p{color:var(--mute);font-size:.96rem;max-width:560px}
+@media(min-width:700px){
+  .supply-row{grid-template-columns:70px 220px 1fr}
+}
+
+/* ---------- history ledger ---------- */
+.ledger{margin-top:8px}
+.ledger-row{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:6px;
+  padding:20px 0;
+  position:relative;
+}
+.ledger-row:not(:last-child){
+  border-bottom:1px dashed #b9b6aa;
+}
+.ledger-row:not(:last-child):before,
+.ledger-row:not(:last-child):after{
+  content:"+";
+  font-family:var(--mf);
+  color:#b9b6aa;
+  position:absolute;
+  bottom:-9px;
+  font-size:.8rem;
+}
+.ledger-row:not(:last-child):before{left:0}
+.ledger-row:not(:last-child):after{right:0}
+.ledger-row .yr{font-family:var(--mf);font-size:.82rem;color:var(--blue);letter-spacing:.04em}
+.ledger-row p{font-size:1.02rem;max-width:640px}
+@media(min-width:760px){
+  .ledger-row{grid-template-columns:160px 1fr;align-items:baseline;gap:20px}
+}
+
+/* ---------- visit ---------- */
+.visit-grid{display:grid;gap:28px;grid-template-columns:1fr}
+.visit-box{border:1px solid var(--line);background:var(--paper);padding:26px}
+.visit-box h3{font-size:1.05rem;margin-bottom:14px;font-weight:600}
+.visit-box p{color:var(--mute);font-size:.98rem;margin-bottom:4px}
+.visit-box ul{list-style:none;display:grid;gap:10px;margin-top:4px}
+.visit-box li{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding-bottom:9px;font-size:.96rem}
+.visit-box li span{color:var(--mute);font-family:var(--mf);font-size:.78rem;align-self:center}
+.visit-box li a,.visit-box li b{font-weight:500}
+.btn{
+  display:inline-block;
+  font-family:var(--hf);
+  font-weight:600;
+  font-size:.96rem;
+  padding:13px 24px;
+  background:var(--ink);
+  color:var(--bg);
+  border-radius:3px;
+  margin-top:18px;
+}
+.btn:hover{background:var(--blue)}
+@media(min-width:820px){.visit-grid{grid-template-columns:1.1fr .9fr 1fr}}
+
+/* ---------- footer ---------- */
+footer.site{padding:36px 0 56px;border-top:1px solid var(--line);background:var(--paper)}
+footer.site .wrap{display:flex;flex-direction:column;gap:6px;font-size:.84rem;color:var(--mute)}
+.note{
+  position:fixed;left:0;right:0;bottom:0;z-index:25;
+  background:#111;color:#d6d6d6;font:500 11.5px/1.4 var(--mf);
+  text-align:center;padding:9px 14px;
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <div class="brandbox">
+      <img src="http://www.3gelectronics.ae/images/3glogo-2-edit.jpg" alt="3G Electronics logo" width="178" height="88">
+      <span>GENERAL TRADING LLC &middot; DEIRA</span>
+    </div>
+    <nav><ul>
+      <li><a href="#supply">What we supply</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul></nav>
+    <a class="tel mono" href="tel:+97142221797">+971 4 222 1797</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap hero-head">
+      <h1>3G ELECTRONICS</h1>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="plate">
+        <div class="row"><span>TRADING AS</span><b>3G Electronics</b></div>
+        <div class="row"><span>LICENCE</span><b>General Trading LLC</b></div>
+        <div class="row"><span>IN BUSINESS SINCE</span><b>1984</b></div>
+        <div class="row"><span>BASED IN</span><b>Deira, Dubai</b></div>
+        <div class="row"><span>P.O. BOX</span><b>33481</b></div>
+      </div>
+      <div>
+        <p class="lead">Video game software and hardware supplier, trading out of Deira since 1984.</p>
+        <p>In the gaming business since 1984. From 1994 to 1999 the company was the sole distributor for SNK Corporation &mdash; now known as Playmore &mdash; supplying SNK games across Asia. Branches followed in the UAE in 1999 and in Saudi Arabia in 2010. Today 3G Electronics supplies video game software and hardware to a wide range of customers across the Middle East.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="supply">
+    <div class="wrap">
+      <span class="kicker">WHAT WE SUPPLY</span>
+      <h2>Software, hardware, distribution.</h2>
+      <p class="section-intro">The three parts of the business, in order of how long they've run.</p>
+      <div class="supply-list">
+        <div class="supply-row">
+          <div class="num">01</div>
+          <h3>Video game software</h3>
+          <p>Supplied to a wide range of customers across the Middle East.</p>
+        </div>
+        <div class="supply-row">
+          <div class="num">02</div>
+          <h3>Video game hardware</h3>
+          <p>Supplied alongside the software side of the business, to the same customer base across the region.</p>
+        </div>
+        <div class="supply-row">
+          <div class="num">03</div>
+          <h3>Distribution</h3>
+          <p>Sole distributor for SNK Corporation (now Playmore) from 1994 to 1999, supplying SNK games to the whole of Asia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="history" class="alt">
+    <div class="wrap">
+      <span class="kicker">HISTORY</span>
+      <h2>Four decades in the trade.</h2>
+      <p class="section-intro">The company's own record, Deira to the wider region.</p>
+      <div class="ledger">
+        <div class="ledger-row">
+          <div class="yr">1984</div>
+          <p>3G Electronics starts trading in the gaming business.</p>
+        </div>
+        <div class="ledger-row">
+          <div class="yr">1994&ndash;1999</div>
+          <p>Sole distributor for SNK Corporation, now known as Playmore, supplying SNK games to the whole of Asia.</p>
+        </div>
+        <div class="ledger-row">
+          <div class="yr">1999</div>
+          <p>Further branches established in the UAE.</p>
+        </div>
+        <div class="ledger-row">
+          <div class="yr">2010</div>
+          <p>A branch opens in Saudi Arabia.</p>
+        </div>
+        <div class="ledger-row">
+          <div class="yr">Today</div>
+          <p>A major supplier of video game software and hardware in the Middle East, with a wide range of customers across the region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <span class="kicker">VISIT</span>
+      <h2>Find us in Deira.</h2>
+      <div class="visit-grid">
+        <div class="visit-box">
+          <h3>Address</h3>
+          <p>3G Electronics General Trading LLC</p>
+          <p>Al Sabkha Building, Al Sabkha Road</p>
+          <p>Deira, Dubai, UAE</p>
+          <p>P.O. Box 33481</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Al+Sabkha+Road%2C+Deira%2C+Dubai">Open in Google Maps</a>
+        </div>
+        <div class="visit-box">
+          <h3>Contact</h3>
+          <ul>
+            <li><span>TEL</span><a href="tel:+97142221797"><b>+971 4 222 1797</b></a></li>
+            <li><span>FAX</span><b>+971 4 224 7557</b></li>
+            <li><span>EMAIL</span><a href="mailto:info@3gelectronics.ae"><b>info@3gelectronics.ae</b></a></li>
+          </ul>
+          <a class="btn" href="mailto:info@3gelectronics.ae">Email the Deira office</a>
+        </div>
+        <div class="visit-box">
+          <h3>Area</h3>
+          <p>Al Sabkha Road runs through the old trading district of Deira, close to the Dubai Creek.</p>
+          <p style="margin-top:14px">3G Electronics General Trading LLC &mdash; trading in the UAE since 1984, with a branch in Saudi Arabia since 2010.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>3G Electronics General Trading LLC &middot; Al Sabkha Building, Al Sabkha Road, Deira, Dubai, UAE &middot; P.O. Box 33481</span>
+    <span>Tel +971 4 222 1797 &middot; Fax +971 4 224 7557 &middot; info@3gelectronics.ae</span>
+  </div>
+</footer>
+
+<div class="note">Design concept by Websmith for 3G Electronics General Trading LLC. Not the official site.</div>
+
+</body>
+</html>

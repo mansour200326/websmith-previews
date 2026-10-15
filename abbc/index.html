@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AB Building Contracting Co. L.L.C.</title>
+<meta name="description" content="AB Building Contracting Co. L.L.C. — building construction in the UAE since 1977.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16190f;
+  --paper:#f3f1ea;
+  --paper2:#e8e4d6;
+  --stone:#938d7b;
+  --line:#d3cdba;
+  --green:#3c6b22;
+  --green-d:#2a4b18;
+  --hf:'Space Grotesk',system-ui,sans-serif;
+  --bf:'Inter Tight',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--bf);background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--hf);font-weight:700;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:10px}
+h3{font-size:1.08rem}
+.kicker{font-family:var(--bf);font-weight:600;font-size:.82rem;color:var(--green-d);margin-bottom:6px}
+.intro{max-width:640px;color:#4b4a3f;margin-bottom:38px}
+
+/* header: corner wordmark, no centred nav bar */
+header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--hf);font-weight:700;font-size:1.05rem}
+.brand img{height:30px;width:auto}
+.navlinks{display:none;gap:26px;font-size:.92rem;color:#565346}
+.navlinks a:hover{color:var(--green-d)}
+.callbtn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:10px 18px;border-radius:2px;font-weight:600;font-size:.88rem}
+.callbtn:hover{background:var(--green-d)}
+@media(min-width:800px){.navlinks{display:flex}}
+
+/* hero: asymmetric type-led, real photo on the right, no slogan-on-photo */
+.hero{padding:56px 0 0}
+.herogrid{display:grid;gap:36px}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);margin-bottom:20px}
+.hero p.lead{color:#4b4a3f;font-size:1.08rem;max-width:480px;margin-bottom:28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:8px}
+.ctas a.primary{background:var(--ink);color:var(--paper);padding:13px 22px;border-radius:2px;font-weight:600;font-size:.94rem}
+.ctas a.primary:hover{background:var(--green-d)}
+.ctas a.secondary{padding:13px 4px;font-weight:600;font-size:.94rem;border-bottom:2px solid var(--ink)}
+.heroPhoto{display:grid;gap:12px}
+.heroPhoto .wide img{width:100%;height:auto;border:1px solid var(--line);display:block}
+.heroPhoto .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.heroPhoto .pair img{width:100%;max-width:220px;height:auto;border:1px solid var(--line);margin:0 auto}
+.heroPhoto .cap{font-size:.78rem;color:#6b6858;margin-top:6px;display:flex;justify-content:space-between;gap:10px}
+.heroPhoto .cap b{color:var(--ink)}
+@media(min-width:900px){.herogrid{grid-template-columns:1.1fr 1fr;align-items:start}}
+
+/* filmstrip: native-resolution real site photography, not blown up */
+.filmstrip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:54px;background:var(--ink)}
+.filmrow{display:grid;grid-template-columns:repeat(2,1fr)}
+.filmrow figure{position:relative;overflow:hidden;aspect-ratio:960/215}
+.filmrow img{width:100%;height:100%;object-fit:cover;filter:saturate(.96)}
+.filmrow figcaption{position:absolute;left:10px;bottom:8px;color:#fff;font-size:.68rem;letter-spacing:.02em;text-shadow:0 1px 3px rgba(0,0,0,.7);max-width:92%}
+@media(min-width:760px){.filmrow{grid-template-columns:repeat(4,1fr)}}
+
+section{padding:70px 0}
+section.alt{background:var(--paper2)}
+
+/* projects: numbered index table with CSS-only hover photo reveal */
+.projindex{border-top:1px solid var(--line)}
+.prow{position:relative;display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line);cursor:default}
+.prow .n{font-family:var(--hf);font-weight:600;color:var(--stone);font-size:.95rem}
+.prow .name{font-family:var(--hf);font-weight:600;font-size:1.15rem}
+.prow .meta{font-size:.88rem;color:#6b6858;text-align:right}
+.prow .peek{position:absolute;right:0;top:50%;transform:translateY(-50%) scale(.96);width:220px;aspect-ratio:16/10;opacity:0;pointer-events:none;transition:.22s ease;box-shadow:0 18px 40px rgba(0,0,0,.25);border:1px solid var(--line);background-size:cover;background-position:center;z-index:5}
+.prow:hover .peek{opacity:1;transform:translateY(-50%) scale(1)}
+.prow:hover .name{color:var(--green-d)}
+@media(max-width:700px){.prow .peek{display:none}.prow{grid-template-columns:28px 1fr}.prow .meta{grid-column:2;text-align:left;margin-top:2px}}
+
+/* services: dense list, not icon cards */
+.servicelist{display:grid;gap:0;border-top:1px solid var(--line);margin-top:10px}
+.servicelist div{display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
+.servicelist span.i{font-family:var(--hf);color:var(--stone);font-size:.82rem;min-width:22px}
+@media(min-width:800px){.servicelist{grid-template-columns:1fr 1fr;column-gap:40px}}
+
+/* about split */
+.about{display:grid;gap:36px}
+.about .ph img{border:1px solid var(--line)}
+.about .cap{font-size:.8rem;color:#6b6858;margin-top:8px}
+.about p{color:#39392f;margin-bottom:14px}
+.about p.big{font-size:1.14rem;color:var(--ink);line-height:1.5}
+.bylines{margin-top:22px;display:grid;gap:10px;font-size:.92rem}
+.bylines div{display:flex;gap:10px;border-top:1px solid var(--line);padding-top:10px}
+.bylines b{min-width:150px;color:#6b6858;font-weight:600}
+@media(min-width:880px){.about{grid-template-columns:1fr 1.25fr}}
+
+/* sectors chips as plain inline list, not pill UI */
+.sectors{margin-top:10px;font-size:1.02rem;color:#39392f}
+.sectors b{color:var(--ink)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .kicker{color:#9fcf84}
+.contact h2{color:var(--paper)}
+.cgrid{display:grid;gap:28px;margin-top:30px}
+.cbox h3{color:var(--paper);margin-bottom:10px;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;font-family:var(--bf);font-weight:600;color:#c9c5b4}
+.cbox p,.cbox a{color:#d8d5c8;font-size:.98rem}
+.cbox .big{font-family:var(--hf);font-size:1.3rem;color:var(--paper);font-weight:600;display:block;margin-bottom:4px}
+.deptlist{display:grid;gap:8px;margin-top:6px}
+.deptlist div{display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.12);padding-top:8px;font-size:.92rem}
+.deptlist span{color:#9f9c8e}
+.deptlist a{color:#d8d5c8}
+.deptlist a:hover{color:#fff}
+@media(min-width:800px){.cgrid{grid-template-columns:1fr 1fr 1fr}}
+.profilelink{display:inline-flex;align-items:center;gap:8px;margin-top:26px;color:#9fcf84;font-weight:600;font-size:.94rem;border-bottom:1px solid #9fcf84;padding-bottom:2px}
+
+footer{padding:26px 0 90px;font-size:.84rem;color:#6b6858;background:var(--paper2)}
+.note{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#111007;color:#cfcbbb;font:500 11.5px/1.4 var(--bf);text-align:center;padding:9px 14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+<div class="wrap nav">
+  <a class="brand" href="#top"><img src="http://www.abbc-uae.com/images/logo.png" alt="ABBC logo"> AB Building Contracting</a>
+  <nav class="navlinks">
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="callbtn" href="tel:+97143312545">+971 4 331 2545</a>
+</div>
+</header>
+
+<main id="top">
+
+<div class="hero wrap">
+  <div class="herogrid">
+    <div class="heroType">
+      <h1>AB Building Contracting Co. L.L.C.</h1>
+      <p class="lead">Building in the UAE since 1977 — towers, residential and commercial buildings, villas, mosques, sheds, showrooms and warehouses, led by General Manager Eng. Kasem M. Sayed.</p>
+      <div class="ctas">
+        <a class="primary" href="tel:+97143312545">Call the office</a>
+        <a class="secondary" href="#projects">See the projects</a>
+      </div>
+    </div>
+    <div class="heroPhoto">
+      <div class="wide">
+        <img src="http://www.abbc-uae.com/uimages/bnr_7.jpg" alt="Tower projects built by AB Building Contracting">
+        <div class="cap"><span>Tower projects, Dubai</span></div>
+      </div>
+      <div class="pair">
+        <div><img src="http://www.abbc-uae.com/uimages/thumb_1_0.jpg" alt="The Palacio tower"><div class="cap"><b>The Palacio</b></div></div>
+        <div><img src="http://www.abbc-uae.com/uimages/thumb_8_0.jpg" alt="Al Barsha tower"><div class="cap"><b>Al Barsha</b></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filmstrip">
+  <div class="filmrow">
+    <figure><img src="http://www.abbc-uae.com/uimages/bnr_1.jpg" alt="Villa at Hor Al Anz"><figcaption>(G+1) 17 Nos. Villa at Hor Al Anz</figcaption></figure>
+    <figure><img src="http://www.abbc-uae.com/uimages/bnr_2.jpg" alt="Buildings at Al Barsha and Deira"><figcaption>(G+7F+R) Al Barsha / (G+5F+R) Deira</figcaption></figure>
+    <figure><img src="http://www.abbc-uae.com/uimages/bnr_3.jpg" alt="Villa at Al Awir and building at Al Karama"><figcaption>Villa at Al Awir / (G+3F+R) Al Karama</figcaption></figure>
+    <figure><img src="http://www.abbc-uae.com/uimages/bnr_7.jpg" alt="Tower projects"><figcaption>Tower projects, Dubai</figcaption></figure>
+  </div>
+</div>
+
+<section id="projects"><div class="wrap">
+  <span class="kicker">Projects</span>
+  <h2>A sample of what's been built.</h2>
+  <p class="intro">Six jobs from the company's own project photos — towers, villas and multi-storey buildings across Dubai. Hover a row on desktop to see the project.</p>
+  <div class="projindex">
+    <div class="prow">
+      <span class="n">01</span><span class="name">The Palacio</span><span class="meta">Tower · Dubai</span>
+      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/thumb_1_0.jpg')"></div>
+    </div>
+    <div class="prow">
+      <span class="n">02</span><span class="name">Al Barsha</span><span class="meta">Tower · Dubai</span>
+      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/thumb_8_0.jpg')"></div>
+    </div>
+    <div class="prow">
+      <span class="n">03</span><span class="name">17 No. villas, Hor Al Anz</span><span class="meta">G+1 · Dubai</span>
+      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_1.jpg')"></div>
+    </div>
+    <div class="prow">
+      <span class="n">04</span><span class="name">Building, Al Barsha &amp; Deira</span><span class="meta">G+7F+R / G+5F+R</span>
+      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_2.jpg')"></div>
+    </div>
+    <div class="prow">
+      <span class="n">05</span><span class="name">Villa for Sheikh Hasher Juma Al Maktoum</span><span class="meta">Al Awir · Dubai</span>
+      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_3.jpg')"></div>
+    </div>
+    <div class="prow">
+      <span class="n">06</span><span class="name">Building, Al Karama</span><span class="meta">G+3F+R · Dubai</span>
+      <div class="peek" style="background-image:url('http://www.abbc-uae.com/uimages/bnr_3.jpg')"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="alt"><div class="wrap">
+  <span class="kicker">Services</span>
+  <h2>What the company does on site.</h2>
+  <p class="intro">Specialised in villas, hospitals, residential buildings and towers, with the trades to run a job start to finish.</p>
+  <div class="servicelist">
+    <div><span class="i">01</span>Precast concrete works</div>
+    <div><span class="i">02</span>G.R.P moulds</div>
+    <div><span class="i">03</span>Shuttering &amp; rebar works</div>
+    <div><span class="i">04</span>Structural steel works</div>
+    <div><span class="i">05</span>Demolishing works</div>
+    <div><span class="i">06</span>Marine steel works</div>
+    <div><span class="i">07</span>Scaffolding</div>
+    <div><span class="i">08</span>Internal finishes</div>
+    <div><span class="i">09</span>Pile cutting</div>
+    <div><span class="i">10</span>Companies representation</div>
+    <div><span class="i">11</span>Turn-key infrastructure works</div>
+    <div><span class="i">12</span>Other construction works</div>
+  </div>
+  <p class="sectors"><b>Builds for:</b> towers, multi-storey residential &amp; commercial buildings, villas, mosques, sheds, showrooms and warehouses, spread across the United Arab Emirates.</p>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <span class="kicker">About</span>
+  <h2>Active in building construction since 1977.</h2>
+  <div class="about">
+    <div>
+      <p class="big">AB Building Contracting Co. L.L.C. has been executing projects — towers, multi-storey residential and commercial buildings, villas, mosques, sheds, showrooms and warehouses — across the United Arab Emirates since 1977.</p>
+      <p>The confidence clients and consultants have placed in the company helped it complete more than 310 projects by the year ending 2009.</p>
+      <p>A team of experts headed by General Manager Eng. Kasem M. Sayed is available to execute and complete projects on time. Should a project need more manpower, the company can draw on its group's resources to supplement the work force.</p>
+      <a class="profilelink" style="color:var(--green-d);border-color:var(--green-d)" href="http://www.abbc-uae.com/ABC_PROFILE.pdf" target="_blank" rel="noopener">Download the company profile (PDF) ↗</a>
+      <div class="bylines">
+        <div><b>General Manager</b><span>Eng. Kasem M. Sayed</span></div>
+        <div><b>Active since</b><span>1977</span></div>
+        <div><b>Projects completed</b><span>310+ by year ending 2009</span></div>
+      </div>
+    </div>
+    <div class="ph">
+      <img src="http://www.abbc-uae.com/uploads/img121202040721.jpg" alt="Tower project by AB Building Contracting" style="max-width:200px">
+      <div class="cap">From the company's project archive</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="visit" class="contact"><div class="wrap">
+  <span class="kicker">Visit</span>
+  <h2>Have a project to build?</h2>
+  <p style="max-width:520px;color:#d8d5c8">Call the office, or email the department that fits the job — the projects team will follow up on briefs.</p>
+  <div class="cgrid">
+    <div class="cbox">
+      <h3>Office</h3>
+      <span class="big">AB Building Contracting Co. L.L.C.</span>
+      <p>P.O. Box 24882<br>Dubai, U.A.E</p>
+    </div>
+    <div class="cbox">
+      <h3>Phone &amp; fax</h3>
+      <p><a href="tel:+97143312545">+971 4 331 2545</a><br><a href="tel:+97143312371">+971 4 331 2371</a><br>Fax +971 4 331 2255</p>
+    </div>
+    <div class="cbox">
+      <h3>Departments</h3>
+      <div class="deptlist">
+        <div><span>General enquiries</span><a href="mailto:info@abbc-uae.com">info@abbc-uae.com</a></div>
+        <div><span>General Manager</span><a href="mailto:kasem@abbc-uae.com">kasem@abbc-uae.com</a></div>
+        <div><span>Projects</span><a href="mailto:projects@abbc-uae.com">projects@abbc-uae.com</a></div>
+        <div><span>Purchasing</span><a href="mailto:purchasing@abbc-uae.com">purchasing@abbc-uae.com</a></div>
+        <div><span>HR</span><a href="mailto:hr@abbc-uae.com">hr@abbc-uae.com</a></div>
+        <div><span>Accounts</span><a href="mailto:accounts@abbc-uae.com">accounts@abbc-uae.com</a></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">AB Building Contracting Co. L.L.C. · P.O. Box 24882, Dubai, U.A.E. · All trademarks and business details belong to the business.</div></footer>
+<div class="note">Design concept by Websmith for AB Building Contracting Co. LLC. Not the official site.</div>
+</body>
+</html>

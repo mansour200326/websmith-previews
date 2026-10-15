@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vinayak Interiors L.L.C. — fit-out &amp; joinery, Al Quoz, Dubai</title>
+<meta name="description" content="Interior design, complete fit-out, custom joinery and MEP contractor based in Al Quoz, Dubai. Concept site, not the official site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1712; --bg:#faf8f4; --panel:#efe9df; --mute:#6c6355;
+  --acc:#c0401f; --acc-dark:#8f2c14; --line:#ded6c7; --cream:#f3eee4;
+  --hf:'Fraunces',Georgia,serif; --bf:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--bf);background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;padding-bottom:46px}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--hf);font-weight:500;line-height:1.08;letter-spacing:-0.01em}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:24px;width:auto}
+.nav nav{display:none}
+.nav nav ul{display:flex;list-style:none;gap:28px;font-size:.92rem;color:var(--mute)}
+.nav nav a:hover{color:var(--acc)}
+.nav .call{font-weight:700;font-size:.92rem;white-space:nowrap;border-bottom:1px solid var(--acc);padding-bottom:2px}
+@media(min-width:860px){.nav nav{display:block}}
+
+/* hero */
+.hero{position:relative;min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
+.hero img.bgphoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;z-index:0}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,6,.86) 0%,rgba(10,8,6,.45) 42%,rgba(10,8,6,.08) 72%,rgba(10,8,6,0) 100%);z-index:1}
+.hero .credit{position:absolute;top:22px;left:28px;right:90px;z-index:2;font-size:.74rem;letter-spacing:.03em;color:rgba(255,255,255,.78)}
+.hero .pager{position:absolute;top:22px;right:28px;z-index:2;font-size:.78rem;color:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;background:rgba(10,8,6,.35);padding:2px 6px}
+.hero .inner{position:relative;z-index:2;padding:0 28px 54px;max-width:1180px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.15rem);font-weight:500;max-width:840px}
+.hero p.sub{margin-top:16px;font-size:clamp(1rem,1.6vw,1.12rem);color:rgba(255,255,255,.85);max-width:560px}
+.hero .actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;font-size:.95rem}
+.hero .actions a.primary{border-bottom:1px solid #fff;padding-bottom:3px;font-weight:600}
+.hero .actions a.secondary{color:rgba(255,255,255,.78)}
+
+section{padding:76px 0}
+section.panel{background:var(--panel)}
+h2{font-size:clamp(1.65rem,3.6vw,2.3rem);margin-bottom:10px}
+.kicker{color:var(--acc);font-weight:600;font-size:.85rem;margin-bottom:6px;font-family:var(--bf)}
+.lede{color:var(--mute);max-width:620px;margin-bottom:40px;font-size:1.02rem}
+
+/* intro two-col */
+.intro-grid{display:grid;gap:40px;grid-template-columns:1fr}
+.intro-grid .text p{margin-bottom:16px;color:#3a3530;max-width:520px}
+.intro-grid .shot{position:relative;border-radius:2px;overflow:hidden;max-height:460px}
+.intro-grid .shot img{width:100%;height:100%;object-fit:cover}
+@media(min-width:880px){.intro-grid{grid-template-columns:1.1fr 0.9fr;align-items:stretch}}
+
+/* services list */
+.svc{border-top:1px solid var(--line)}
+.svc-row{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
+.svc-row .num{font-family:var(--hf);color:var(--acc);font-size:1rem;padding-top:2px}
+.svc-row .body{min-width:0}
+.svc-row h3{font-weight:500;font-size:1.18rem;margin-bottom:6px}
+.svc-row p{color:var(--mute);max-width:600px;font-size:.98rem}
+@media(min-width:720px){.svc-row{grid-template-columns:80px 1fr 1.6fr}.svc-row .body{display:contents}}
+
+/* projects grid */
+.pgrid{display:grid;grid-template-columns:1fr;gap:4px;margin-top:8px}
+@media(min-width:680px){.pgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.pgrid{grid-template-columns:1fr 1fr 1fr}}
+.pcard{position:relative;aspect-ratio:4/3;overflow:hidden;background:#111}
+.pcard img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.pcard:hover img{transform:scale(1.045)}
+.pcard .pscrim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,6,.88) 0%,rgba(10,8,6,.1) 55%,rgba(10,8,6,0) 100%)}
+.pcard .pnum{position:absolute;top:12px;left:14px;color:rgba(255,255,255,.85);font-size:.78rem;font-variant-numeric:tabular-nums}
+.pcard .pmeta{position:absolute;left:14px;right:14px;bottom:12px;color:#fff}
+.pcard .pmeta .cat{font-size:.72rem;letter-spacing:.03em;color:rgba(255,255,255,.78);text-transform:uppercase}
+.pcard .pmeta h3{font-size:1.08rem;font-weight:500;margin:3px 0 2px}
+.pcard .pmeta .loc{font-size:.82rem;color:rgba(255,255,255,.82)}
+.also{margin-top:26px;color:var(--mute);font-size:.95rem;border-top:1px solid var(--line);padding-top:22px}
+.also b{color:var(--ink)}
+
+/* sectors */
+.sectors p{font-family:var(--hf);font-weight:400;font-size:clamp(1.25rem,2.6vw,1.75rem);line-height:1.4;max-width:900px}
+.sectors p span{color:var(--acc);font-style:italic}
+
+/* team */
+.team-list{list-style:none;border-top:1px solid var(--line)}
+.team-list li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:18px 0;border-bottom:1px solid var(--line)}
+.team-list .nm{font-family:var(--hf);font-size:1.05rem}
+.team-list .ti{color:var(--mute);font-size:.92rem}
+
+/* contact */
+.contact{background:var(--ink);color:#f1ece2}
+.contact h2{color:#fff}
+.cwrap{display:grid;gap:44px;grid-template-columns:1fr}
+@media(min-width:880px){.cwrap{grid-template-columns:1fr 1fr}}
+.cblock b{display:block;font-family:var(--hf);font-size:1.3rem;font-weight:500;margin-bottom:14px;color:#fff}
+.cblock p{margin-bottom:10px;color:rgba(241,236,226,.82);font-size:.98rem}
+.cblock a.linklike{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
+.mapbox{border:1px solid rgba(255,255,255,.18);filter:grayscale(.3) contrast(1.05);overflow:hidden}
+.mapbox iframe{width:100%;height:320px;border:0;display:block}
+
+footer.note{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);color:rgba(241,236,226,.85);font-size:.76rem;text-align:center;padding:12px 16px}
+footer.note a{text-decoration:underline}
+.foot2{background:var(--ink);color:rgba(241,236,226,.55);font-size:.82rem;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.1)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <a href="#" class="brand"><img src="http://www.vinayakme.com/images/logo-new.png" alt="Vinayak Interiors"></a>
+    <nav><ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="call" href="tel:+97143393270">+971 4 339 3270</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="bgphoto" src="http://www.vinayakme.com/slideshow_images/47.jpg" alt="Rolls-Royce Motor Cars showroom joinery by Vinayak Interiors">
+  <div class="scrim"></div>
+  <div class="credit">Rolls-Royce Motor Cars — showroom joinery, Dubai</div>
+  <div class="pager">14 fit-outs completed</div>
+  <div class="inner">
+    <h1>Vinayak Interiors designs and builds fit-outs across Dubai — shops, restaurants, showrooms and offices, from drawings to handover.</h1>
+    <p class="sub">Our own joinery workshop is in Al Quoz. Interior design, complete fit-out, custom joinery, MEP, project management and authority approvals, under one roof.</p>
+    <div class="actions">
+      <a class="primary" href="tel:+97143393270">Call +971 4 339 3270</a>
+      <a class="secondary" href="#work">See the work ↓</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap intro-grid">
+    <div class="text">
+      <div class="kicker">Who we are</div>
+      <h2>A fit-out and joinery contractor, built from the workshop up.</h2>
+      <p>Vinayak Interiors is based in Al Quoz, Dubai. We design and build interiors for shops, restaurants, showrooms, offices and private homes — our in-house designers draw the space, our own joinery shop builds the counters, panelling and fixed furniture, and our site teams run the civil, MEP and finishes through to handover.</p>
+      <p>We've carried out projects across Dubai and the northern Emirates, for clients who come back for the next fit-out once the first one is running. Small renovation or full store build, the approach is the same: draw it properly, price it straight, and stay on site until it's done.</p>
+    </div>
+    <div class="shot"><img src="http://www.vinayakme.com/product_images/13.jpg" alt="Custom ceiling joinery and gallery fit-out by Vinayak Interiors"></div>
+  </div>
+</section>
+
+<section id="services" class="panel">
+  <div class="wrap">
+    <div class="kicker">What we do</div>
+    <h2>Services</h2>
+    <p class="lede">Six services, run by one team, so the drawing, the joinery and the site work don't belong to three different contractors.</p>
+    <div class="svc">
+      <div class="svc-row"><div class="num">01</div><div class="body"><h3>Interior Design</h3><p>We draw the space before anyone builds anything — layout, finishes, lighting and material boards, signed off before work starts on site.</p></div></div>
+      <div class="svc-row"><div class="num">02</div><div class="body"><h3>Complete Fit-out Works</h3><p>Partitions, flooring, ceilings, paint and signage — we run the whole site from shell handover to opening day.</p></div></div>
+      <div class="svc-row"><div class="num">03</div><div class="body"><h3>Custom Joinery Work</h3><p>Our own joinery workshop in Al Quoz builds counters, shelving, reception desks and panelling to the drawing, not off a catalogue.</p></div></div>
+      <div class="svc-row"><div class="num">04</div><div class="body"><h3>MEP Works</h3><p>Electrical, air conditioning, plumbing and fire fighting, coordinated with the fit-out so nothing gets opened up again after painting.</p></div></div>
+      <div class="svc-row"><div class="num">05</div><div class="body"><h3>Project Management Consultancy</h3><p>One team tracking programme, budget and subcontractors from kick-off to handover.</p></div></div>
+      <div class="svc-row"><div class="num">06</div><div class="body"><h3>Authority Approval</h3><p>Drawings and permits through the relevant municipality, civil defence and mall or free zone authority, so the site isn't waiting on paperwork.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="kicker">Projects</div>
+    <h2>14 fit-outs, a few of them below</h2>
+    <p class="lede">Retail stores, a restaurant, a car showroom, a beauty bar and a private villa — photographed on our own sites.</p>
+    <div class="pgrid">
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/1.jpg" alt="Al Jaber Gallery retail fit-out">
+        <div class="pscrim"></div><div class="pnum">01</div>
+        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Al Jaber Gallery</h3><div class="loc">Dubai</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/13.jpg" alt="Art and Frames gallery fit-out with custom ceiling joinery">
+        <div class="pscrim"></div><div class="pnum">02</div>
+        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Art &amp; Frames</h3><div class="loc">Dubai — custom ceiling joinery</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/58.jpg" alt="Gazebo Restaurant interior fit-out">
+        <div class="pscrim"></div><div class="pnum">03</div>
+        <div class="pmeta"><div class="cat">F&amp;B fit-out</div><h3>Gazebo Restaurant</h3><div class="loc">Al Tawar, Dubai — 200 m²</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/40.jpg" alt="N Bar beauty salon fit-out">
+        <div class="pscrim"></div><div class="pnum">04</div>
+        <div class="pmeta"><div class="cat">Beauty &amp; wellness fit-out</div><h3>N Bar</h3><div class="loc">Dubai</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/slideshow_images/49.jpg" alt="Rolls-Royce Motor Cars office fit-out">
+        <div class="pscrim"></div><div class="pnum">05</div>
+        <div class="pmeta"><div class="cat">Corporate fit-out</div><h3>Rolls-Royce Motor Cars</h3><div class="loc">Dubai</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/66.jpg" alt="Discover Dubai retail kiosk fit-out">
+        <div class="pscrim"></div><div class="pnum">06</div>
+        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Discover Dubai</h3><div class="loc">Dubai Mall — 60 m²</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/80.jpg" alt="Perfume boutique luxury retail fit-out">
+        <div class="pscrim"></div><div class="pnum">07</div>
+        <div class="pmeta"><div class="cat">Luxury retail fit-out</div><h3>Perfume boutique</h3><div class="loc">Dubai</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/88.jpg" alt="Organique natural beauty retail fit-out">
+        <div class="pscrim"></div><div class="pnum">08</div>
+        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Organique</h3><div class="loc">Dubai</div></div>
+      </div>
+
+      <div class="pcard">
+        <img src="http://www.vinayakme.com/product_images/33.jpg" alt="Private villa pergola and pool deck joinery">
+        <div class="pscrim"></div><div class="pnum">09</div>
+        <div class="pmeta"><div class="cat">Residential — outdoor joinery</div><h3>Private villa</h3><div class="loc">Dubai — pergola &amp; pool deck</div></div>
+      </div>
+
+    </div>
+    <p class="also"><b>Also in the portfolio:</b> I Love Dubai, Umm Al Quwain, Rashid Port, Aquarium Al Jaber, Transguard.</p>
+  </div>
+</section>
+
+<section class="panel sectors">
+  <div class="wrap">
+    <div class="kicker">Who we build for</div>
+    <p><span>Retail</span> stores and mall kiosks, <span>restaurants</span> and cafés, <span>corporate</span> showrooms and offices, <span>beauty &amp; wellness</span> retail, and <span>private villas</span> — the mix our site photos are drawn from.</p>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="kicker">Who you'll work with</div>
+    <h2>Team</h2>
+    <ul class="team-list">
+      <li><span class="nm">Daulat Suthar</span><span class="ti">Managing Director</span></li>
+      <li><span class="nm">Alfredo Panganiban</span><span class="ti">Project Manager</span></li>
+      <li><span class="nm">Umesh Bhadrecha</span><span class="ti">Production Manager</span></li>
+      <li><span class="nm">Mohammed Majid</span><span class="ti">Design Engineer</span></li>
+      <li><span class="nm">Mohan Suthar</span><span class="ti">HR &amp; Finance Manager</span></li>
+      <li><span class="nm">Sahdev Bhadrecha</span><span class="ti">Site Engineer</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="kicker" style="color:#e2906f">Get in touch</div>
+    <h2>Contact</h2>
+    <div class="cwrap">
+      <div class="cblock">
+        <b>Vinayak Interiors L.L.C.</b>
+        <p>Warehouse No.8, Building 22, Industrial Area 1, Al Quoz<br>P.O. Box 283927, Dubai, United Arab Emirates</p>
+        <p>Tel: <a class="linklike" href="tel:+97143393270">+971 4 339 3270</a> / <a class="linklike" href="tel:+97143393271">+971 4 339 3271</a></p>
+        <p>Email: <a class="linklike" href="mailto:info@vinayakme.com">info@vinayakme.com</a></p>
+      </div>
+      <div class="mapbox">
+        <iframe src="https://www.google.com/maps?q=Industrial+Area+1,+Al+Quoz,+Dubai&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vinayak Interiors location, Al Quoz Industrial Area 1"></iframe>
+      </div>
+    </div>
+    <div class="wrap foot2">
+      <p>© Vinayak Interiors L.L.C. — Al Quoz Industrial Area 1, Dubai, UAE.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="note">Design concept by Websmith for Vinayak Interiors LLC. Not the official site. Their site is <a href="http://www.vinayakme.com">www.vinayakme.com</a>.</footer>
+
+</body>
+</html>
