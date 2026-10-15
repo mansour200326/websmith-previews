@@ -1,136 +1,406 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Al Salik Interiors — joinery and fit-out, Dubai</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;800&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Al Salik Interiors · Interior fit-out and joinery, Dubai</title>
+<meta name="description" content="Al Salik Interiors, Dubai, since 2003. Offices, showrooms, villas, restaurants and exhibition stands, with our own joinery in wood, metal, glass and acrylic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://www.alsalikinteriors.com/projectphotos/252s.jpg">
 <style>
-:root{--bg:#17110e;--bg2:#211813;--ink:#f1e8da;--mute:#a99a88;--line:#3a2d25;--wood:#b5532e;--gold:#d3a85f}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Spectral,Georgia,serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-h1,h2,h3,.sans,header,.idx,footer,.rail{font-family:"Libre Franklin",Arial,sans-serif}
-header{position:absolute;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,56px);font-size:15px}
-.mark{font-weight:800;font-size:19px;letter-spacing:-.01em;text-decoration:none}
-header nav{display:flex;gap:22px;align-items:center}
-header nav a{text-decoration:none;font-weight:500}
-header nav a.t{border-bottom:1px solid var(--gold)}
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:#000}
-.hero>img{z-index:0;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero:before{content:"";z-index:1;position:absolute;inset:0;background:linear-gradient(0deg,rgba(23,17,14,.97) 0%,rgba(23,17,14,.82) 38%,rgba(23,17,14,.3) 75%,rgba(23,17,14,.45) 100%)}
-.hero .in{position:relative;z-index:2;padding:0 clamp(18px,4vw,56px) calc(clamp(28px,6vw,64px) + 36px);max-width:1100px}
-h1{font-weight:800;font-size:clamp(40px,7.5vw,112px);line-height:1;letter-spacing:-.03em}
-.hero p{margin-top:18px;max-width:560px;font-size:19px;color:#e6dac8}
-.cap{font:500 13px "Libre Franklin",sans-serif;color:var(--mute);margin-top:22px}
-.wrap{padding:0 clamp(18px,4vw,56px)}
-.sec{padding:clamp(56px,9vw,120px) 0 0}
-h2{font-weight:800;font-size:clamp(26px,3.4vw,44px);letter-spacing:-.02em;line-height:1.05}
-.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px)}
-.about .txt p+p{margin-top:1em}
-.about .pic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.about img{width:100%;display:block;object-fit:cover}
-.about .door{grid-row:span 2;height:100%}
-.work{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0 clamp(24px,4vw,64px)}
-.rail{position:sticky;top:20px;align-self:start;font-size:14px}
-.rail a{display:block;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--mute)}
-.rail a:hover{color:var(--gold)}
-.cat{padding:0 0 clamp(36px,5vw,64px)}
-.catHead{display:flex;gap:20px;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:12px}
-.num{font:800 clamp(56px,9vw,120px)/.8 "Libre Franklin",sans-serif;color:var(--wood);letter-spacing:-.05em}
-.catHead h3{font-size:clamp(22px,2.6vw,34px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
-.catHead p{color:var(--mute);font-size:16px;margin-top:4px}
-.idx{list-style:none;padding:0}
-.idx li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2.2fr) minmax(0,2.4fr) 96px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
-.pn{font-weight:700;font-size:17px}
-.pl,.pw{color:var(--mute)}
-.idx img{width:96px;height:72px;object-fit:cover;display:block;filter:saturate(.9)}
-.big{display:grid;grid-template-columns:7fr 5fr;gap:12px;margin-top:clamp(56px,9vw,110px)}
-.big img{width:100%;height:100%;object-fit:cover;display:block;max-height:640px}
-.what{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px)}
-.what ol{list-style:none;padding:0;counter-item:0;font-family:"Libre Franklin",sans-serif}
-.what li{padding:16px 0;border-bottom:1px solid var(--line);font-size:clamp(18px,2vw,24px);font-weight:600;letter-spacing:-.01em}
-.what li small{display:block;font:400 15px Spectral,serif;color:var(--mute);margin-top:2px}
-.contact{margin-top:clamp(64px,10vw,130px);background:var(--wood);color:#fff7ee;padding:clamp(36px,6vw,80px) clamp(18px,4vw,56px)}
-.contact .g{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,5vw,80px)}
-.contact h2{font-size:clamp(30px,4.6vw,64px)}
-.contact a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
-.contact dl{font-family:"Libre Franklin",sans-serif;font-size:16px}
-.contact dt{font-size:13px;opacity:.8;margin-top:14px}
-.contact dd{margin:0;font-weight:600;font-size:19px}
-footer{padding:36px clamp(18px,4vw,56px) 90px;font-size:14px;color:var(--mute);display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
-.note{position:fixed;left:0;right:0;bottom:0;z-index:9;background:#000;color:#cbbba5;font:12px "Libre Franklin",sans-serif;padding:8px 14px;text-align:center}
-@media(max-width:820px){
-header nav a:not(.t){display:none}
-.about,.what,.contact .g,.big{grid-template-columns:1fr}
-.work{grid-template-columns:1fr}
-.rail{display:none}
-.idx li{grid-template-columns:1fr 84px;gap:2px 12px}
-.idx img{grid-column:2;grid-row:1/4;width:84px;height:84px}
-.pl,.pw{font-size:14px}
+:root{
+  --paper:#fbfaf8; --ink:#1c1a17; --mute:#6b655d; --rule:#dcd7cf;
+  --brand:#b5401a;
+  --sans:"Instrument Sans",system-ui,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+  --side:clamp(16px,4vw,48px);
 }
-</style></head><body>
-<header>
-<a class="mark" href="#">Al Salik Interiors</a>
-<nav><a href="#projects">Projects</a><a href="#what">What we do</a><a href="#contact">Contact</a><a class="t" href="tel:+97142844530">+971 4 284 4530</a><a href="https://wa.me/971502432862" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.200 8.200 0 0 1-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.100-.6.800-.8 1-.3.200-.6.100a6.700 6.700 0 0 1-3.300-2.900c-.2-.4.200-.4.700-1.300.1-.1 0-.3 0-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.300 3 3 0 0 0-.9 2.200 5.200 5.200 0 0 0 1.100 2.800 11.900 11.900 0 0 0 4.600 4c1.700.7 2.400.8 3.200.7a2.700 2.700 0 0 0 1.800-1.300 2.200 2.200 0 0 0 .2-1.300c-.1-.1-.3-.2-.6-.3z"/></svg></a></nav>
-</header>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.55 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.sans{font-family:var(--sans)}
 
-<div class="hero"><img src="https://www.alsalikinteriors.com/projectphotos/252s.jpg" alt="Timber dome ceiling, Sealand Restaurant, Ras Al Khaimah" fetchpriority="high"><div class="in">
-<h1>Joinery and interior fit-out, Dubai.</h1>
-<p>We make it in wood, metal, glass and acrylic, for offices, showrooms, villas, restaurants and exhibition stands. Doing this in the UAE since 2003.</p>
-<div class="cap">Above: timber dome ceiling, Sealand Restaurant, Ras Al Khaimah</div>
-</div></div>
+/* ---------- Hero with ruled grid (Hays) ---------- */
+.hero{position:relative;min-height:min(100svh,880px);height:100svh;max-height:880px;color:#fff;overflow:hidden;background:#2a1a12}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,9,5,.78) 0%,rgba(15,9,5,.25) 42%,rgba(15,9,5,0) 60%),linear-gradient(to bottom,rgba(15,9,5,.45),rgba(15,9,5,0) 22%)}
+.lines{position:absolute;inset:0;z-index:1;pointer-events:none;display:grid;grid-template-columns:240px 1fr 1fr 1fr}
+.lines span{border-right:1px solid rgba(255,255,255,.28)}
+.lines span:last-child{border:0}
+.lines::after{content:"";position:absolute;left:0;right:0;top:148px;border-top:1px solid rgba(255,255,255,.28)}
 
-<div class="wrap">
-<section class="sec about">
-<div class="txt">
-<h2>Who we are</h2>
-<p style="margin-top:18px">Al Salik Interiors is an interior decoration and exhibition contracting company based in Dubai. We started in 2003 and we make high quality products from wood, metal, glass and acrylic.</p>
-<p>A good part of what we do is hospitality and leisure: restaurants, cafés, kiosks and showrooms. We also fit out offices, flats and villas, and build stands for exhibitions.</p>
+header.bar{position:absolute;z-index:3;top:0;left:0;right:0;display:grid;grid-template-columns:240px 1fr auto;align-items:stretch;font-family:var(--sans)}
+.logo{background:#fff;color:var(--ink);height:148px;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none}
+.logo b{font-weight:700;font-size:25px;line-height:1.02;letter-spacing:-.01em;color:var(--brand);font-stretch:92%}
+.logo small{font-size:13px;line-height:1.35;color:var(--mute)}
+nav.main{display:flex;justify-content:flex-end;border-bottom:1px solid rgba(255,255,255,.28);height:52px}
+nav.main a{display:flex;align-items:center;padding:0 22px;font-size:15px;text-decoration:none;border-left:1px solid rgba(255,255,255,.28)}
+nav.main a:hover{background:rgba(255,255,255,.12)}
+.callcell{display:flex;flex-direction:column;justify-content:center;height:52px;padding:0 24px;background:var(--brand);text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}
+.callcell:hover{background:#9c3714}
+
+.hero-foot{position:absolute;z-index:2;left:240px;right:0;bottom:0;display:grid;grid-template-columns:2fr 1fr;align-items:end;gap:32px;padding:0 var(--side) 44px 28px}
+.hero h1{font:600 clamp(36px,4.6vw,68px)/1.02 var(--sans);letter-spacing:-.025em;font-stretch:90%;max-width:15em}
+.hero-note{font-size:16px;line-height:1.5;max-width:23em;justify-self:end}
+.hero-note a{display:inline-block;margin-top:14px;font:600 15px var(--sans);text-underline-offset:5px}
+
+/* ---------- Generic section ---------- */
+section{padding:clamp(64px,9vw,128px) var(--side)}
+.head{display:grid;grid-template-columns:240px 1fr;gap:0 28px;align-items:baseline;margin-bottom:clamp(32px,4vw,56px)}
+.head h2{font:600 clamp(30px,3.4vw,46px)/1.05 var(--sans);letter-spacing:-.02em;font-stretch:92%}
+.head p{grid-column:2;max-width:36em;color:var(--mute);margin-top:12px}
+.head .count{font:500 15px var(--sans);color:var(--mute)}
+
+/* ---------- Work spread ---------- */
+.spread{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,1.6vw,22px);align-items:start}
+.spread figure{margin:0}
+.spread img{width:100%;height:100%;object-fit:cover;background:#e7e2da}
+figcaption{font:400 14px/1.4 var(--sans);color:var(--mute);margin-top:10px}
+figcaption b{color:var(--ink);font-weight:600}
+.s1{grid-column:1/6;grid-row:1/3}.s1 img{aspect-ratio:3/4}
+.s2{grid-column:6/13}.s2 img{aspect-ratio:16/9}
+.s3{grid-column:6/9}.s3 img{aspect-ratio:1}
+.s4{grid-column:9/13}.s4 img{aspect-ratio:4/3}
+.s5{grid-column:1/9;margin-top:clamp(12px,3vw,40px)!important}.s5 img{aspect-ratio:16/10}
+.s6{grid-column:9/13;align-self:end}.s6 img{aspect-ratio:3/4}
+
+/* ---------- Project index (Abvtek hover reveal) ---------- */
+#projects{border-top:1px solid var(--rule)}
+.index{display:grid;grid-template-columns:1fr minmax(320px,38%);gap:clamp(24px,4vw,64px)}
+.cat{display:grid;grid-template-columns:240px 1fr;gap:0 28px;border-top:1px solid var(--ink);padding-top:14px;margin-bottom:44px}
+.cat h3{font:600 20px/1.2 var(--sans);letter-spacing:-.01em}
+.cat h3 span{display:block;font-weight:400;font-size:14px;color:var(--mute);margin-top:4px}
+.rows{list-style:none}
+.rows li{border-bottom:1px solid var(--rule)}
+.rows a{display:grid;grid-template-columns:2.2em 1.3fr 1fr;gap:12px;padding:12px 0;text-decoration:none;font:400 16px/1.35 var(--sans);align-items:baseline;transition:padding .2s}
+.rows a .n{color:var(--mute);font-size:13px;font-variant-numeric:tabular-nums}
+.rows a .w{color:var(--mute);font-size:14.5px}
+.rows a .t{font-weight:500}
+.rows a img{display:none}
+.rows a:hover,.rows a:focus-visible,.rows a.on{padding-left:8px}
+.rows a:hover .t,.rows a.on .t{color:var(--brand)}
+.preview{position:sticky;top:24px;align-self:start}
+.preview .frame{aspect-ratio:4/3;background:#e7e2da;overflow:hidden}
+.preview img{width:100%;height:100%;object-fit:cover;transition:opacity .25s}
+.preview p{font:400 14px/1.45 var(--sans);color:var(--mute);margin-top:10px;min-height:3em}
+.preview p b{color:var(--ink);font-weight:600}
+
+/* ---------- Services ---------- */
+#services{background:#f1eee9}
+.svc{display:grid;grid-template-columns:240px 1fr;gap:0 28px}
+.svc ol{grid-column:2;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,64px);counter-reset:s}
+.svc li{border-top:1px solid var(--ink);padding:16px 0 34px;counter-increment:s}
+.svc li h3{font:600 21px/1.2 var(--sans);letter-spacing:-.01em;display:flex;gap:12px}
+.svc li h3::before{content:counter(s,decimal-leading-zero);color:var(--brand);font-weight:500;font-size:15px;padding-top:4px}
+.svc li p{margin-top:8px;font-size:17px;max-width:30em}
+.svc li p em{color:var(--mute)}
+
+/* ---------- Split name band (Abvtek) ---------- */
+.split{padding:clamp(56px,8vw,110px) var(--side) 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(12px,2vw,32px);font:600 clamp(48px,10.5vw,170px)/.9 var(--sans);letter-spacing:-.045em;font-stretch:84%}
+.split span:last-child{text-align:right}
+.split figure{margin:0;width:clamp(110px,15vw,230px)}
+.split figure img{aspect-ratio:3/4;object-fit:cover;width:100%;height:auto}
+.split figcaption{font-size:12px;letter-spacing:0}
+.about{display:grid;grid-template-columns:240px 1fr 1fr;gap:28px;padding-top:clamp(48px,6vw,80px)}
+.about .lede{font-size:clamp(22px,2.1vw,28px);line-height:1.35;grid-column:2}
+.about .side{font-size:17px;color:#3b3631}
+.about .side p+p{margin-top:14px}
+.mats{grid-column:2/4;display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule);margin-top:20px}
+.mats div{flex:1 1 160px;padding:16px 16px 0 0;font:400 15px/1.4 var(--sans);color:var(--mute)}
+.mats b{display:block;font-size:20px;color:var(--ink);font-weight:600}
+
+/* ---------- Contact ---------- */
+#contact{background:var(--ink);color:#f3efe9}
+#contact .head p{color:#b3aca3}
+.ct{display:grid;grid-template-columns:240px 1fr 1fr;gap:28px}
+.big{grid-column:2;font:600 clamp(28px,3.4vw,48px)/1.1 var(--sans);letter-spacing:-.02em;font-stretch:92%}
+.big a{text-decoration:none;display:inline-block;border-bottom:2px solid var(--brand);padding-bottom:2px}
+.big a:hover{color:#ffb79a}
+.big small{display:block;font:400 15px var(--sans);color:#b3aca3;letter-spacing:0;margin:22px 0 6px}
+dl.lines2{font:400 16px/1.5 var(--sans);display:grid;grid-template-columns:7.5em 1fr;border-top:1px solid #3a352f}
+dl.lines2 dt,dl.lines2 dd{padding:11px 0;border-bottom:1px solid #3a352f}
+dl.lines2 dt{color:#b3aca3}
+dl.lines2 a{text-underline-offset:4px}
+.wa{display:inline-flex;align-items:center;gap:8px}
+.wa svg{width:17px;height:17px;fill:currentColor}
+.brief{grid-column:2/4;margin-top:20px;font-size:17px;color:#d7d1c8;max-width:40em;border-left:2px solid var(--brand);padding-left:18px}
+
+/* ---------- Footer ---------- */
+footer{padding:48px var(--side) 84px;font:400 14px/1.6 var(--sans);color:var(--mute);display:grid;grid-template-columns:240px 1fr 1fr 1fr;gap:28px;border-top:1px solid var(--rule)}
+footer h4{font-weight:600;color:var(--ink);font-size:14px;margin-bottom:6px}
+footer ul{list-style:none}
+footer a{text-decoration:none}
+footer a:hover{color:var(--brand)}
+.fname{font-weight:700;font-size:18px;color:var(--brand);line-height:1.1}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(251,250,248,.96);border-top:1px solid var(--rule);font:400 12px/1 var(--sans);color:var(--mute);padding:9px var(--side);text-align:center}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .lines{grid-template-columns:180px 1fr 1fr}
+  .lines span:nth-child(4){display:none}
+  header.bar{grid-template-columns:180px 1fr auto}
+  .hero-foot{left:180px}
+  nav.main a{padding:0 14px}
+  .head,.cat,.svc,.ct,.about{grid-template-columns:180px 1fr}
+  .about .lede,.about .side{grid-column:2}
+  .mats{grid-column:2}
+  .ct .big,.ct dl,.brief{grid-column:2}
+  dl.lines2{margin-top:24px}
+  footer{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .hero{height:auto;min-height:0;max-height:none;display:flex;flex-direction:column}
+  .hero>img{position:relative;height:300px;order:2}
+  .hero h1{font-size:31px;line-height:1.06}
+  .hero::after{display:none}
+  .lines{display:none}
+  header.bar{position:relative;grid-template-columns:1fr auto;order:1;background:#fff;color:var(--ink);border-bottom:1px solid var(--rule)}
+  .logo{height:auto;padding:16px var(--side)}
+  .logo b{font-size:21px}
+  .logo small{display:none}
+  nav.main{grid-column:1/3;grid-row:2;height:44px;justify-content:flex-start;overflow-x:auto;border-top:1px solid var(--rule);border-bottom:0}
+  nav.main a{border-left:0;border-right:1px solid var(--rule);padding:0 var(--side);white-space:nowrap}
+  .callcell{grid-column:2;grid-row:1;height:auto;color:#fff;padding:0 18px}
+  .hero-foot{position:relative;left:0;order:3;grid-template-columns:1fr;gap:14px;padding:26px var(--side) 34px;background:#22150e}
+  .hero-note{justify-self:start}
+  .head,.cat,.svc,.ct,.about{grid-template-columns:1fr}
+  .head p,.svc ol,.about .lede,.about .side,.mats,.ct .big,.ct dl,.brief{grid-column:1}
+  .cat h3{margin-bottom:10px}
+  .spread{grid-template-columns:1fr 1fr}
+  .s1,.s2,.s5{grid-column:1/3;grid-row:auto}.s3,.s4,.s6{grid-column:auto}
+  .s5{margin-top:0!important}
+  .s2 img{aspect-ratio:4/3}
+  .s3 img,.s4 img,.s6 img{aspect-ratio:1}
+  .index{grid-template-columns:1fr}
+  .preview{display:none}
+  .rows a{grid-template-columns:72px 1fr;grid-template-rows:auto auto;column-gap:14px;row-gap:2px;padding:12px 0;align-content:center;align-items:start}
+  .rows a .t{align-self:end}
+  .rows a img{display:block;grid-row:1/3;width:72px;height:54px;object-fit:cover;background:#e7e2da}
+  .rows a .n{display:none}
+  .rows a .t{grid-column:2}
+  .rows a .w{grid-column:2}
+  .svc ol{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr auto;grid-template-rows:auto auto}
+  .split figure{grid-row:1/3;grid-column:2}
+  .split span:last-child{text-align:left}
+  footer{grid-template-columns:1fr}
+  .concept{font-size:11px;line-height:1.3}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="https://www.alsalikinteriors.com/projectphotos/252s.jpg" alt="Carved timber ceiling with radiating ribs and inset lights at Sealand Restaurant, Ras Al Khaimah" fetchpriority="high">
+  <div class="lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <header class="bar">
+    <a class="logo" href="#top" aria-label="Al Salik Interiors, home">
+      <b>Al Salik<br>Interiors</b>
+      <small>Interior fit-out &amp; joinery<br>Dubai, since 2003</small>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#services">What we do</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="callcell" href="tel:+97142844530">04 284 4530</a>
+  </header>
+  <div class="hero-foot">
+    <h1>Offices, showrooms, villas and restaurants, fitted out in Dubai since 2003.</h1>
+    <p class="hero-note">Our own joinery in wood, metal, glass and acrylic, from the first drawing to handover. Above: the timber ceiling we made for Sealand Restaurant in Ras Al Khaimah.<br>
+      <a href="#projects">See 28 of our projects</a></p>
+  </div>
 </div>
-<div class="pic">
-<img class="door" src="https://www.alsalikinteriors.com/projectphotos/264s.jpg" alt="Carved wooden double doors and parquet floor, villa in Jumeirah" style="aspect-ratio:3/4">
-<img src="https://www.alsalikinteriors.com/projectphotos/296s.jpg" alt="Glass display columns, STAR FOOD office, Sharjah" style="aspect-ratio:1/1">
-<img src="https://www.alsalikinteriors.com/projectphotos/274s.jpg" alt="D Café kiosk counter, Dubai" style="aspect-ratio:1/1">
-</div>
+
+<main id="top">
+
+<section id="work" aria-labelledby="work-h">
+  <div class="head">
+    <span class="count">Recent work</span>
+    <div>
+      <h2 id="work-h">Mostly wood, all made to measure</h2>
+    </div>
+  </div>
+  <div class="spread">
+    <figure class="s1"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/260s.jpg" alt="Solid timber staircase with turned balusters"><figcaption><b>Kanoo Group villa, Jumeirah.</b> Staircases, handrails and doors in solid timber.</figcaption></figure>
+    <figure class="s2"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/205b.jpg" alt="Wall of lit display niches in a Dubai Marina flat"><figcaption><b>Flat in Dubai Marina.</b> A wall of lit display niches for the owner's collection.</figcaption></figure>
+    <figure class="s3"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/196b.jpg" alt="Perfume showroom with timber shelving and brand fascias"><figcaption><b>Perfume showroom.</b> Timber shelving and lit brand fascias around the whole shop.</figcaption></figure>
+    <figure class="s4"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/113b.jpg" alt="Curved reception desk in timber and white at Crowne Plaza Dubai"><figcaption><b>Crowne Plaza Dubai.</b> Reception, lobby, LCD unit, parquet flooring and passages.</figcaption></figure>
+    <figure class="s5"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/274s.jpg" alt="D Cafe counter with lit display cases"><figcaption><b>D Cafe, Dubai.</b> The counter, display cases and lighting.</figcaption></figure>
+    <figure class="s6"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/178b.jpg" alt="Home theatre with acoustic wall panelling and lit niches"><figcaption><b>Al Barari.</b> Home theatre with acoustic panelling.</figcaption></figure>
+  </div>
 </section>
 
-<section class="sec" id="projects">
-<h2 style="margin-bottom:34px">Projects</h2>
-<div class="work">
-<nav class="rail" aria-label="Project types"><a href="#c1">01 Offices</a><a href="#c2">02 Showrooms</a><a href="#c3">03 Flats &amp; villas</a><a href="#c4">04 Restaurants</a><a href="#c5">05 Exhibitions</a></nav>
-<div>
-<section class="cat" id="c1"><div class="catHead"><span class="num" aria-hidden="true">01</span><div><h3>Offices</h3><p>Reception desks, partitions, glass and wall finishes for working offices.</p></div></div><ul class="idx"><li><span class="pn">Crown Plaza</span><span class="pl">Dubai</span><span class="pw">Office reception</span><img src="https://www.alsalikinteriors.com/projectphotos/116s.jpg" alt="Crown Plaza, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Office, Business Bay</span><span class="pl">Dubai</span><span class="pw">Fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/135s.jpg" alt="Office, Business Bay, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Veekshanam Office</span><span class="pl">Dubai</span><span class="pw">Wall texture work</span><img src="https://www.alsalikinteriors.com/projectphotos/151s.jpg" alt="Veekshanam Office, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Whiz Media Studio</span><span class="pl">Dubai</span><span class="pw">Studio fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/166s.jpg" alt="Whiz Media Studio, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">STAR FOOD</span><span class="pl">Sharjah Free Zone</span><span class="pw">Office fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/296s.jpg" alt="STAR FOOD, Sharjah Free Zone" loading="lazy" width="96" height="96"></li><li><span class="pn">Dubai Police Club</span><span class="pl">Dubai</span><span class="pw">Wood panelled doors</span><img src="https://www.alsalikinteriors.com/projectphotos/256s.jpg" alt="Dubai Police Club, Dubai" loading="lazy" width="96" height="96"></li></ul></section>
-<section class="cat" id="c2"><div class="catHead"><span class="num" aria-hidden="true">02</span><div><h3>Showrooms</h3><p>Counters, display units and lighting for shops and outlets.</p></div></div><ul class="idx"><li><span class="pn">Artistique</span><span class="pl">Greens, Dubai</span><span class="pw">Showroom</span><img src="https://www.alsalikinteriors.com/projectphotos/192s.jpg" alt="Artistique, Greens, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Carpet Showroom</span><span class="pl">Dubai</span><span class="pw">Showroom</span><img src="https://www.alsalikinteriors.com/projectphotos/185s.jpg" alt="Carpet Showroom, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Hitachi Showroom</span><span class="pl">Dubai</span><span class="pw">Showroom</span><img src="https://www.alsalikinteriors.com/projectphotos/201s.jpg" alt="Hitachi Showroom, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Salt Crystal</span><span class="pl">Outlet Mall</span><span class="pw">Outlet fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/224s.jpg" alt="Salt Crystal, Outlet Mall" loading="lazy" width="96" height="96"></li><li><span class="pn">Perfume Showroom</span><span class="pl">Dubai</span><span class="pw">Showroom</span><img src="https://www.alsalikinteriors.com/projectphotos/198s.jpg" alt="Perfume Showroom, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Saloon</span><span class="pl">Dubai</span><span class="pw">Salon fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/194s.jpg" alt="Saloon, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Optical Showroom</span><span class="pl">Ras Al Khaimah</span><span class="pw">Showroom</span><img src="https://www.alsalikinteriors.com/projectphotos/249s.jpg" alt="Optical Showroom, Ras Al Khaimah" loading="lazy" width="96" height="96"></li></ul></section>
-<section class="cat" id="c3"><div class="catHead"><span class="num" aria-hidden="true">03</span><div><h3>Flats &amp; villas</h3><p>Doors, floors, wardrobes, theatre rooms and ceilings for homes.</p></div></div><ul class="idx"><li><span class="pn">Villa, Jumeirah</span><span class="pl">Dubai (Kanoo Group)</span><span class="pw">Carved doors, parquet floor</span><img src="https://www.alsalikinteriors.com/projectphotos/264s.jpg" alt="Villa, Jumeirah, Dubai (Kanoo Group)" loading="lazy" width="96" height="96"></li><li><span class="pn">Flat, Dubai Marina</span><span class="pl">Dubai</span><span class="pw">Living room fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/111s.jpg" alt="Flat, Dubai Marina, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Al Reem Bridge</span><span class="pl">Arabian Ranches (Emaar)</span><span class="pw">Residential fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/169s.jpg" alt="Al Reem Bridge, Arabian Ranches (Emaar)" loading="lazy" width="96" height="96"></li><li><span class="pn">Al Barari Home Theatre</span><span class="pl">Dubai</span><span class="pw">Acoustic panelling</span><img src="https://www.alsalikinteriors.com/projectphotos/179s.jpg" alt="Al Barari Home Theatre, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">Paragola</span><span class="pl">Dubai</span><span class="pw">Residential fit-out</span><img src="https://www.alsalikinteriors.com/projectphotos/211s.jpg" alt="Paragola, Dubai" loading="lazy" width="96" height="96"></li></ul></section>
-<section class="cat" id="c4"><div class="catHead"><span class="num" aria-hidden="true">04</span><div><h3>Restaurants &amp; cafés</h3><p>Booths, counters, kiosks and timber ceilings for places that serve food.</p></div></div><ul class="idx"><li><span class="pn">Sealand Restaurant</span><span class="pl">Ras Al Khaimah</span><span class="pw">Timber dome ceiling</span><img src="https://www.alsalikinteriors.com/projectphotos/252s.jpg" alt="Sealand Restaurant, Ras Al Khaimah" loading="lazy" width="96" height="96"></li><li><span class="pn">Bangkok Town</span><span class="pl">Dubai</span><span class="pw">Dining room, booths, terrace</span><img src="https://www.alsalikinteriors.com/projectphotos/307s.jpg" alt="Bangkok Town, Dubai" loading="lazy" width="96" height="96"></li><li><span class="pn">D Café</span><span class="pl">Dubai and Abu Dhabi</span><span class="pw">Kiosk counter</span><img src="https://www.alsalikinteriors.com/projectphotos/274s.jpg" alt="D Café, Dubai and Abu Dhabi" loading="lazy" width="96" height="96"></li></ul></section>
-<section class="cat" id="c5"><div class="catHead"><span class="num" aria-hidden="true">05</span><div><h3>Exhibitions &amp; kiosks</h3><p>Stands and kiosks built to go up fast and come down clean.</p></div></div><ul class="idx"><li><span class="pn">ETA Exhibition</span><span class="pl">Dubai Trade Centre</span><span class="pw">Exhibition stand</span><img src="https://www.alsalikinteriors.com/projectphotos/154s.jpg" alt="ETA Exhibition, Dubai Trade Centre" loading="lazy" width="96" height="96"></li><li><span class="pn">Danat Kiosk</span><span class="pl">UAE</span><span class="pw">Kiosk</span><img src="https://www.alsalikinteriors.com/projectphotos/157s.jpg" alt="Danat Kiosk, UAE" loading="lazy" width="96" height="96"></li><li><span class="pn">Happy Yummy Kiosk</span><span class="pl">UAE malls</span><span class="pw">Kiosk</span><img src="https://www.alsalikinteriors.com/projectphotos/163s.jpg" alt="Happy Yummy Kiosk, UAE malls" loading="lazy" width="96" height="96"></li><li><span class="pn">Event Program Stage</span><span class="pl">Dubai</span><span class="pw">Stage build</span><img src="https://www.alsalikinteriors.com/projectphotos/214s.jpg" alt="Event Program Stage, Dubai" loading="lazy" width="96" height="96"></li></ul></section>
-</div>
-</div>
+<section id="projects" aria-labelledby="proj-h">
+  <div class="head">
+    <span class="count">28 projects, 5 kinds of work</span>
+    <div>
+      <h2 id="proj-h">Projects</h2>
+      <p>From one-week kiosks in the malls to full hotel receptions. Hover a project to see it; on a phone the photo is next to the name.</p>
+    </div>
+  </div>
+
+  <div class="index">
+    <div class="list">
+      <div class="cat">
+        <h3>Offices<span>7 projects</span></h3>
+        <ol class="rows">
+          <li><a href="#contact" data-img="113b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/113s.jpg" alt=""><span class="n">01</span><span class="t">Crowne Plaza Dubai</span><span class="w">Reception, lobby, parquet flooring</span></a></li>
+          <li><a href="#contact" data-img="131b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/131s.jpg" alt=""><span class="n">02</span><span class="t">Office in Business Bay</span><span class="w">Reception, conference hall, MD's room</span></a></li>
+          <li><a href="#contact" data-img="232b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/232s.jpg" alt=""><span class="n">03</span><span class="t">Silver Tower, Business Bay</span><span class="w">Glass partitions, reception counter</span></a></li>
+          <li><a href="#contact" data-img="255s"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/255s.jpg" alt=""><span class="n">04</span><span class="t">Dubai Police Club</span><span class="w">Timber wall panelling and doors</span></a></li>
+          <li><a href="#contact" data-img="297s"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/297s.jpg" alt=""><span class="n">05</span><span class="t">Star Food, Sharjah Free Zone</span><span class="w">Glass partitions and display</span></a></li>
+          <li><a href="#contact" data-img="148b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/148s.jpg" alt=""><span class="n">06</span><span class="t">Veekshanam office</span><span class="w">Texture wall work</span></a></li>
+          <li><a href="#contact" data-img="165b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/165s.jpg" alt=""><span class="n">07</span><span class="t">Whiz Media</span><span class="w">Recording studio</span></a></li>
+        </ol>
+      </div>
+      <div class="cat">
+        <h3>Showrooms<span>8 projects</span></h3>
+        <ol class="rows">
+          <li><a href="#contact" data-img="196b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/196s.jpg" alt=""><span class="n">08</span><span class="t">Perfume showroom</span><span class="w">Shelving and brand fascias</span></a></li>
+          <li><a href="#contact" data-img="200b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/200s.jpg" alt=""><span class="n">09</span><span class="t">Hitachi showroom</span><span class="w">Counter, displays, wall graphics</span></a></li>
+          <li><a href="#contact" data-img="224b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/224s.jpg" alt=""><span class="n">10</span><span class="t">Salt Crystal, Outlet Mall</span><span class="w">Shopfront and lit salt walls</span></a></li>
+          <li><a href="#contact" data-img="248b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/248s.jpg" alt=""><span class="n">11</span><span class="t">Optical showroom, Ras Al Khaimah</span><span class="w">Frame displays and counters</span></a></li>
+          <li><a href="#contact" data-img="183b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/183s.jpg" alt=""><span class="n">12</span><span class="t">Carpet showroom</span><span class="w">Shopfront and display</span></a></li>
+          <li><a href="#contact" data-img="190b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/190s.jpg" alt=""><span class="n">13</span><span class="t">Artistique, The Greens</span><span class="w">Shop fit-out</span></a></li>
+          <li><a href="#contact" data-img="182b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/182s.jpg" alt=""><span class="n">14</span><span class="t">Event showroom</span><span class="w">Showroom fit-out</span></a></li>
+          <li><a href="#contact" data-img="193b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/193s.jpg" alt=""><span class="n">15</span><span class="t">Salon</span><span class="w">Mirror stations in timber</span></a></li>
+        </ol>
+      </div>
+      <div class="cat">
+        <h3>Flats &amp; villas<span>5 projects</span></h3>
+        <ol class="rows">
+          <li><a href="#contact" data-img="260s"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/266s.jpg" alt=""><span class="n">16</span><span class="t">Kanoo Group villa, Jumeirah</span><span class="w">Staircases, doors, joinery</span></a></li>
+          <li><a href="#contact" data-img="205b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/205s.jpg" alt=""><span class="n">17</span><span class="t">Flat in Dubai Marina</span><span class="w">Display walls, kitchen, living</span></a></li>
+          <li><a href="#contact" data-img="179b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/179s.jpg" alt=""><span class="n">18</span><span class="t">Al Barari home theatre</span><span class="w">Acoustic panelling</span></a></li>
+          <li><a href="#contact" data-img="169b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/169s.jpg" alt=""><span class="n">19</span><span class="t">Emaar, Arabian Ranches</span><span class="w">Timber footbridge</span></a></li>
+          <li><a href="#contact" data-img="211b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/211s.jpg" alt=""><span class="n">20</span><span class="t">Villa pergola</span><span class="w">Timber pergola</span></a></li>
+        </ol>
+      </div>
+      <div class="cat">
+        <h3>Restaurants<span>4 projects</span></h3>
+        <ol class="rows">
+          <li><a href="#contact" data-img="252s"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/292s.jpg" alt=""><span class="n">21</span><span class="t">Sealand Restaurant, Ras Al Khaimah</span><span class="w">Timber ceilings, bar, full interior</span></a></li>
+          <li><a href="#contact" data-img="274s"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/275s.jpg" alt=""><span class="n">22</span><span class="t">D Cafe, Dubai</span><span class="w">Counter and display cases</span></a></li>
+          <li><a href="#contact" data-img="303s"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/304s.jpg" alt=""><span class="n">23</span><span class="t">Bangkok Restaurant</span><span class="w">Dining room and lighting</span></a></li>
+          <li><a href="#contact" data-img="274s"><span class="n">24</span><span class="t">D Cafe, Abu Dhabi</span><span class="w">Second branch of D Cafe</span></a></li>
+        </ol>
+      </div>
+      <div class="cat">
+        <h3>Exhibitions &amp; events<span>4 projects</span></h3>
+        <ol class="rows">
+          <li><a href="#contact" data-img="153b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/153s.jpg" alt=""><span class="n">25</span><span class="t">ETA, Dubai World Trade Centre</span><span class="w">Exhibition stand</span></a></li>
+          <li><a href="#contact" data-img="157b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/157s.jpg" alt=""><span class="n">26</span><span class="t">Danat kiosk</span><span class="w">Mall kiosk with glass showcases</span></a></li>
+          <li><a href="#contact" data-img="161b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/161s.jpg" alt=""><span class="n">27</span><span class="t">Happy Yummy kiosks</span><span class="w">Abu Dhabi, Aswaq Mall, Dragon Mart, Union Co-op</span></a></li>
+          <li><a href="#contact" data-img="214b"><img loading="lazy" src="https://www.alsalikinteriors.com/projectphotos/214s.jpg" alt=""><span class="n">28</span><span class="t">Event programme stage</span><span class="w">Stage set and backdrop</span></a></li>
+        </ol>
+      </div>
+    </div>
+    <aside class="preview" aria-hidden="true">
+      <div class="frame"><img id="pv" src="https://www.alsalikinteriors.com/projectphotos/113b.jpg" alt=""></div>
+      <p id="pvc"><b>Crowne Plaza Dubai</b><br>Reception, lobby, parquet flooring</p>
+    </aside>
+  </div>
 </section>
 
-<section class="sec what" id="what">
-<h2>What we do</h2>
-<ol>
-<li>Office &amp; showroom interiors<small>Reception, partitions, counters, display units.</small></li>
-<li>Wooden joinery<small>Doors, panelling, wardrobes, ceilings, made to your drawings.</small></li>
-<li>Exhibition stands<small>Built, installed and taken down.</small></li>
-<li>Refurbishment and turnkey projects<small>One contractor from first drawing to handover.</small></li>
-<li>Promotions, events and product launches<small>Stages, kiosks and branded setups.</small></li>
-</ol>
+<section id="services" aria-labelledby="svc-h">
+  <div class="head">
+    <span class="count">Five things we do</span>
+    <div><h2 id="svc-h">What we do</h2></div>
+  </div>
+  <div class="svc">
+    <ol>
+      <li><h3>Office and showroom interiors</h3><p>Receptions, meeting rooms, partitions, ceilings, shop counters and display walls. <em>Crowne Plaza Dubai, Silver Tower, Hitachi showroom.</em></p></li>
+      <li><h3>Wooden joinery</h3><p>Doors, staircases, wall panelling, wardrobes, kitchens and ceilings, made to your sizes. <em>Kanoo Group villa, Dubai Police Club, Sealand.</em></p></li>
+      <li><h3>Exhibition stands</h3><p>Stands and mall kiosks, designed, built and installed on time for opening day. <em>ETA at the Trade Centre, Danat, Happy Yummy.</em></p></li>
+      <li><h3>Refurbishment and turnkey projects</h3><p>We take the whole job, old interior out, new one in, and hand you the keys. <em>Flat in Dubai Marina, D Cafe.</em></p></li>
+      <li><h3>Promotions, events and product launches</h3><p>Stages, backdrops and promotional displays for a night or a season. <em>Event programme stage.</em></p></li>
+    </ol>
+  </div>
 </section>
+
+<div class="split" id="about" aria-label="Al Salik Interiors">
+  <span>Al Salik</span>
+  <figure><img src="https://www.alsalikinteriors.com/projectphotos/257s.jpg" width="230" height="307" alt="Built-in timber bookcase and doors in a Jumeirah villa"><figcaption>Built-in library, Jumeirah</figcaption></figure>
+  <span>Interiors</span>
 </div>
+<section class="about-wrap" style="padding-top:0" aria-labelledby="about-h">
+  <div class="about">
+    <h2 id="about-h" class="sans" style="font:600 15px var(--sans);color:var(--mute)">About us</h2>
+    <p class="lede">We started in Dubai in 2003 as an interior decoration and exhibition contractor. Today we make and fit interiors for hotels, restaurants, shops, offices and homes across the Emirates.</p>
+    <div class="side">
+      <p>We are makers as well as contractors: the wood, metal, glass and acrylic work in our projects is ours, so the ceiling, the counter and the doors fit together.</p>
+      <p>What we hold ourselves to: good quality, skilled hands, and suppliers who deliver on time, so we do too.</p>
+    </div>
+    <div class="mats">
+      <div><b>Wood</b>Joinery, doors, stairs, ceilings, panelling</div>
+      <div><b>Metal</b>Frames, fixtures and display systems</div>
+      <div><b>Glass</b>Partitions, showcases, shopfronts</div>
+      <div><b>Acrylic</b>Signs, fascias and display parts</div>
+    </div>
+  </div>
+</section>
 
-<section class="contact" id="contact"><div class="g">
-<div><h2>Send us the drawings, or just call.</h2>
-<p style="margin-top:16px;font-size:19px">Tell us what the space is and when you need it. We will come back to you.</p></div>
-<dl>
-<dt>Office</dt><dd><a href="tel:+97142844530">+971 4 284 4530</a></dd>
-<dt>Mobile / WhatsApp</dt><dd><a href="https://wa.me/971502432862" target="_blank" rel="noopener">+971 50 243 2862</a> · <a href="tel:+971554860812">+971 55 486 0812</a></dd>
-<dt>Email</dt><dd><a href="mailto:salikint@eim.ae">salikint@eim.ae</a></dd>
-<dt>Address</dt><dd>P.O. Box 36695, Dubai, U.A.E</dd>
-</dl></div></section>
+<section id="contact" aria-labelledby="ct-h">
+  <div class="head">
+    <span class="count">Contact</span>
+    <div><h2 id="ct-h">Tell us about your space</h2><p>Call, email or send a WhatsApp with your project: an office, a shop, a villa, a restaurant or a stand.</p></div>
+  </div>
+  <div class="ct">
+    <div class="big">
+      <small>Office</small>
+      <a href="tel:+97142844530">+971 4 284 4530</a>
+      <small>Mobile and WhatsApp</small>
+      <a href="tel:+971502432862">+971 50 243 2862</a>
+    </div>
+    <dl class="lines2">
+      <dt>Mobile</dt><dd><a href="tel:+971554860812">+971 55 486 0812</a></dd>
+      <dt>WhatsApp</dt><dd><a class="wa" href="https://wa.me/971502432862"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.5-.3z"/></svg>Send photos of the space</a></dd>
+      <dt>Email</dt><dd><a href="mailto:salikint@eim.ae">salikint@eim.ae</a><br><a href="mailto:alsalikdxb@gmail.com">alsalikdxb@gmail.com</a></dd>
+      <dt>Fax</dt><dd>+971 4 284 4642</dd>
+      <dt>Post</dt><dd>P.O. Box 36695, Dubai, U.A.E.</dd>
+    </dl>
+    <p class="brief">If you have drawings, send them by email. If you don't, a few phone photos of the space and the rough sizes on WhatsApp are enough to start.</p>
+  </div>
+</section>
+</main>
 
-<footer><span>Al Salik Interiors · P.O. Box 36695, Dubai · Fax +971 4 284 4642</span><span>Photos: Al Salik Interiors project archive</span></footer>
-<div class="note">Design concept by Websmith for Al Salik Interiors. Not the official site.</div>
-</body></html>
+<footer>
+  <div><div class="fname">Al Salik<br>Interiors</div><p style="margin-top:8px">Interior fit-out and joinery, Dubai, since 2003.</p></div>
+  <div><h4>Projects</h4><ul><li><a href="#projects">Offices</a></li><li><a href="#projects">Showrooms</a></li><li><a href="#projects">Flats &amp; villas</a></li><li><a href="#projects">Restaurants</a></li><li><a href="#projects">Exhibitions</a></li></ul></div>
+  <div><h4>Company</h4><ul><li><a href="#services">What we do</a></li><li><a href="#about">About us</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  <div><h4>Reach us</h4><p>P.O. Box 36695, Dubai, U.A.E.<br><a href="tel:+97142844530">Tel +971 4 284 4530</a><br>Fax +971 4 284 4642<br><a href="mailto:salikint@eim.ae">salikint@eim.ae</a></p></div>
+</footer>
+<div class="concept">Design concept by Websmith for Al Salik Interiors. Not the official site.</div>
+
+<script>
+(function(){
+  var base="https://www.alsalikinteriors.com/projectphotos/";
+  var pv=document.getElementById("pv"), pvc=document.getElementById("pvc");
+  if(!pv||!window.matchMedia("(min-width:761px)").matches) return;
+  var links=document.querySelectorAll(".rows a"), cur=null;
+  links.forEach(function(a){
+    var k=a.getAttribute("data-img");
+    function show(){
+      if(cur) cur.classList.remove("on"); cur=a; a.classList.add("on");
+      var src=k?base+k+".jpg":a.querySelector("img").src;
+      if(pv.src!==src){pv.style.opacity=.15; pv.onload=function(){pv.style.opacity=1;}; pv.src=src; setTimeout(function(){pv.style.opacity=1;},700);}
+      pvc.innerHTML="<b>"+a.querySelector(".t").textContent+"</b><br>"+a.querySelector(".w").textContent;
+    }
+    a.addEventListener("mouseenter",show); a.addEventListener("focus",show);
+  });
+  links[0].classList.add("on"); cur=links[0];
+  // warm the cache once the list comes into view, so hovers swap instantly
+  var warmed=false, io=new IntersectionObserver(function(e){ if(e[0].isIntersecting&&!warmed){warmed=true; links.forEach(function(a){var k=a.getAttribute("data-img"); if(k){new Image().src=base+k+".jpg";}}); io.disconnect();}});
+  io.observe(document.querySelector(".index"));
+})();
+</script>
+</body>
+</html>
