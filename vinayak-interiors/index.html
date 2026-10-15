@@ -43,7 +43,7 @@ h1,h2,h3{font-family:var(--hd);font-weight:500;letter-spacing:-.02em;line-height
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 30%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.72) 100%);pointer-events:none}
 .hero .labels{position:absolute;z-index:2;left:var(--g);right:var(--g);top:44%;display:flex;gap:clamp(40px,12vw,220px);font-size:15px;opacity:.92}
 .hero h1{position:absolute;z-index:2;left:var(--g);bottom:clamp(36px,7vh,72px);max-width:15.5ch;font-size:clamp(40px,5.6vw,84px)}
-.hcard{position:absolute;z-index:3;right:var(--g);bottom:clamp(36px,7vh,72px);width:330px;color:#fff}
+.hcard{position:absolute;z-index:3;right:var(--g);top:calc(44% - 6px);width:330px;color:#fff}
 .hcard .bar{display:flex;align-items:center;gap:12px;font:500 13px var(--hd);margin-bottom:12px}
 .hcard .track{flex:1;height:1px;background:rgba(255,255,255,.35);position:relative}
 .hcard .track i{position:absolute;left:0;top:-1px;height:3px;background:#fff;width:25%;transition:width .6s ease}
@@ -197,7 +197,7 @@ footer a:hover{color:var(--red)}
   .hero .labels{display:none}
   .hero::after{background:linear-gradient(180deg,rgba(0,0,0,.2) 0,rgba(0,0,0,0) 25%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.85) 100%)}
   .hero h1{bottom:150px;font-size:40px;right:var(--g)}
-  .hcard{left:var(--g);right:var(--g);width:auto;bottom:24px}
+  .hcard{left:var(--g);right:var(--g);width:auto;top:auto;bottom:24px}
   .intro .cols{grid-template-columns:1fr;gap:14px}
   .sechead{flex-direction:column;gap:10px}
   .clients{columns:1}
