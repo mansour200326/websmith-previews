@@ -195,6 +195,7 @@ footer a:hover{color:var(--red)}
   .top .tel small{display:none}
   .hero{min-height:620px;height:min(86vh,760px)}
   .hero .labels{display:none}
+  .hero::after{background:linear-gradient(180deg,rgba(0,0,0,.2) 0,rgba(0,0,0,0) 25%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.85) 100%)}
   .hero h1{bottom:150px;font-size:40px;right:var(--g)}
   .hcard{left:var(--g);right:var(--g);width:auto;bottom:24px}
   .intro .cols{grid-template-columns:1fr;gap:14px}
@@ -469,8 +470,10 @@ footer a:hover{color:var(--red)}
   var data=[["Discover Dubai","Souvenir store, Dubai Mall","69"],["Gazebo Restaurant","Indian restaurant, dining room","76"],["Rolls-Royce","Offices and logo wall","51"],["Al Jaber Gallery","Gift and novelty store","1"]];
   var s=document.querySelectorAll(".hero .slide"),i=0;
   var hn=document.getElementById("hn"),ht=document.getElementById("ht"),hb=document.getElementById("hb"),hs=document.getElementById("hs"),hi=document.getElementById("hi");
-  function go(n){s[i].classList.remove("on");i=n;s[i].classList.add("on");hn.textContent="0"+(i+1);ht.style.width=((i+1)*25)+"%";hb.textContent=data[i][0];hs.textContent=data[i][1];hi.src=P+data[i][2]+".jpg"}
-  if(!matchMedia("(prefers-reduced-motion: reduce)").matches){setInterval(function(){go((i+1)%s.length)},5500)}
+  function go(n){s[i].classList.remove("on");i=n;s[i].classList.add("on");hn.textContent="0"+(i+1);ht.style.width=((i+1)*25)+"%";hb.textContent=data[i][0];hs.textContent=data[i][1];hi.src=P+data[i][2]+".jpg";hi.alt=""}
+  function start(){data.forEach(function(d){new Image().src=P+d[2]+".jpg"});
+    if(!matchMedia("(prefers-reduced-motion: reduce)").matches){setTimeout(function(){setInterval(function(){go((i+1)%s.length)},5500)},4000)}}
+  if(document.readyState==="complete")start();else addEventListener("load",start);
   function place(){
     document.querySelectorAll(".proj").forEach(function(pr){
       var fig=pr.querySelector(".big"),line=pr.querySelector(".lead-line"),side=pr.querySelector(".side");
