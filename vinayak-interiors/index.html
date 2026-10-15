@@ -1,284 +1,494 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Vinayak Interiors L.L.C. — fit-out &amp; joinery, Al Quoz, Dubai</title>
-<meta name="description" content="Interior design, complete fit-out, custom joinery and MEP contractor based in Al Quoz, Dubai. Concept site, not the official site.">
+<title>Vinayak Interiors LLC — Interior design, fit-out and joinery in Dubai</title>
+<meta name="description" content="Vinayak Interiors designs and fits out shops, restaurants, offices and homes in Dubai. Interior design, joinery, MEP and authority approvals. Al Quoz Industrial Area 1.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://www.vinayakme.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1b1712; --bg:#faf8f4; --panel:#efe9df; --mute:#6c6355;
-  --acc:#c0401f; --acc-dark:#8f2c14; --line:#ded6c7; --cream:#f3eee4;
-  --hf:'Fraunces',Georgia,serif; --bf:'Figtree',system-ui,sans-serif;
+  --ink:#171412; --ink-2:#4a4440; --mute:#8a827b; --line:#e4dfd9; --paper:#fff; --off:#f6f4f1;
+  --red:#c9361a; --walnut:#5b3f2e; --stone:#cfc8bd; --char:#26211e;
+  --g:clamp(20px,4vw,56px);
+  --hd:"Space Grotesk",system-ui,sans-serif; --bd:"Inter Tight",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--bf);background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;padding-bottom:46px}
-a{color:inherit}
+body{font:400 17px/1.55 var(--bd);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-h1,h2,h3{font-family:var(--hf);font-weight:500;line-height:1.08;letter-spacing:-0.01em}
+a{color:inherit}
+h1,h2,h3{font-family:var(--hd);font-weight:500;letter-spacing:-.02em;line-height:1.02}
+.wrap{padding:0 var(--g)}
 
 /* header */
-header.top{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{height:24px;width:auto}
-.nav nav{display:none}
-.nav nav ul{display:flex;list-style:none;gap:28px;font-size:.92rem;color:var(--mute)}
-.nav nav a:hover{color:var(--acc)}
-.nav .call{font-weight:700;font-size:.92rem;white-space:nowrap;border-bottom:1px solid var(--acc);padding-bottom:2px}
-@media(min-width:860px){.nav nav{display:block}}
+.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.top .logo img{height:26px;width:auto}
+.top nav{display:flex;gap:26px;margin-left:auto;font-size:15px}
+.top nav a{text-decoration:none;color:var(--ink-2)}
+.top nav a:hover{color:var(--red)}
+.top .tel{font-family:var(--hd);font-weight:500;font-size:16px;text-decoration:none;border-left:1px solid var(--line);padding-left:24px;white-space:nowrap}
+.top .tel small{display:block;font:400 12px/1 var(--bd);color:var(--mute);margin-bottom:3px}
 
 /* hero */
-.hero{position:relative;min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
-.hero img.bgphoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;z-index:0}
-.hero .scrim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,6,.86) 0%,rgba(10,8,6,.45) 42%,rgba(10,8,6,.08) 72%,rgba(10,8,6,0) 100%);z-index:1}
-.hero .credit{position:absolute;top:22px;left:28px;right:90px;z-index:2;font-size:.74rem;letter-spacing:.03em;color:rgba(255,255,255,.78)}
-.hero .pager{position:absolute;top:22px;right:28px;z-index:2;font-size:.78rem;color:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;background:rgba(10,8,6,.35);padding:2px 6px}
-.hero .inner{position:relative;z-index:2;padding:0 28px 54px;max-width:1180px;margin:0 auto;width:100%}
-.hero h1{font-size:clamp(1.9rem,4.6vw,3.15rem);font-weight:500;max-width:840px}
-.hero p.sub{margin-top:16px;font-size:clamp(1rem,1.6vw,1.12rem);color:rgba(255,255,255,.85);max-width:560px}
-.hero .actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;font-size:.95rem}
-.hero .actions a.primary{border-bottom:1px solid #fff;padding-bottom:3px;font-weight:600}
-.hero .actions a.secondary{color:rgba(255,255,255,.78)}
+.hero{position:relative;height:min(88vh,860px);min-height:600px;background:#111;color:#fff;overflow:hidden}
+.hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.hero .slide.on{opacity:1}
+.hero .slide img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 30%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.72) 100%);pointer-events:none}
+.hero .labels{position:absolute;z-index:2;left:var(--g);right:var(--g);top:44%;display:flex;gap:clamp(40px,12vw,220px);font-size:15px;opacity:.92}
+.hero h1{position:absolute;z-index:2;left:var(--g);bottom:clamp(36px,7vh,72px);max-width:15.5ch;font-size:clamp(40px,5.6vw,84px)}
+.hcard{position:absolute;z-index:3;right:var(--g);bottom:clamp(36px,7vh,72px);width:330px;color:#fff}
+.hcard .bar{display:flex;align-items:center;gap:12px;font:500 13px var(--hd);margin-bottom:12px}
+.hcard .track{flex:1;height:1px;background:rgba(255,255,255,.35);position:relative}
+.hcard .track i{position:absolute;left:0;top:-1px;height:3px;background:#fff;width:25%;transition:width .6s ease}
+.hcard .box{display:flex;gap:14px;align-items:center;background:rgba(20,17,15,.62);backdrop-filter:none;border:1px solid rgba(255,255,255,.18);padding:10px}
+.hcard .box img{width:86px;height:64px;object-fit:cover;flex:none}
+.hcard b{display:block;font:500 16px/1.2 var(--hd)}
+.hcard span{font-size:13px;opacity:.75}
 
-section{padding:76px 0}
-section.panel{background:var(--panel)}
-h2{font-size:clamp(1.65rem,3.6vw,2.3rem);margin-bottom:10px}
-.kicker{color:var(--acc);font-weight:600;font-size:.85rem;margin-bottom:6px;font-family:var(--bf)}
-.lede{color:var(--mute);max-width:620px;margin-bottom:40px;font-size:1.02rem}
+/* intro */
+.intro{display:grid;grid-template-columns:8fr 4fr;gap:var(--g);padding:clamp(56px,9vw,120px) var(--g)}
+.intro p.lead{max-width:30ch;font:400 clamp(22px,2.3vw,32px)/1.3 var(--hd);letter-spacing:-.01em}
+.intro .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px;max-width:760px;color:var(--ink-2);font-size:16px}
+.intro aside{border-top:2px solid var(--ink);padding-top:18px;font-size:15px;color:var(--ink-2);align-self:start}
+.intro aside dt{color:var(--mute);font-size:13px;margin-top:14px}
+.intro aside dd{color:var(--ink)}
+.intro aside dd a{text-decoration:none;border-bottom:1px solid var(--red)}
 
-/* intro two-col */
-.intro-grid{display:grid;gap:40px;grid-template-columns:1fr}
-.intro-grid .text p{margin-bottom:16px;color:#3a3530;max-width:520px}
-.intro-grid .shot{position:relative;border-radius:2px;overflow:hidden;max-height:460px}
-.intro-grid .shot img{width:100%;height:100%;object-fit:cover}
-@media(min-width:880px){.intro-grid{grid-template-columns:1.1fr 0.9fr;align-items:stretch}}
+/* work (dark, staggered) */
+.work{background:var(--ink);color:#efebe6;padding:clamp(64px,9vw,120px) 0 40px}
+.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:0 var(--g);margin-bottom:clamp(40px,6vw,80px)}
+.sechead h2{font-size:clamp(34px,4.4vw,64px)}
+.sechead p{max-width:36ch;font-size:15px;opacity:.7}
+.proj{display:grid;grid-template-columns:repeat(12,1fr);gap:0 var(--g);padding:0 var(--g);margin-bottom:clamp(80px,11vw,160px);align-items:start}
+.proj .big{grid-column:1 / span 7;position:relative}
+.proj .big img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.proj .side{grid-column:9 / span 4;padding-top:40px}
+.proj.flip .big{grid-column:6 / span 7;grid-row:1}
+.proj.flip .side{grid-column:1 / span 4;grid-row:1}
+.proj .num{font:500 14px var(--hd);color:var(--red)}
+.proj h3{font-size:clamp(28px,3vw,44px);margin:10px 0 6px}
+.proj .where{font-size:14px;opacity:.6;margin-bottom:18px}
+.proj .side p{font-size:16px;opacity:.85;max-width:38ch}
+.proj .small{margin-top:34px;width:78%}
+.proj.flip .small{margin-left:auto}
+.proj .small img{width:100%;aspect-ratio:4/3;object-fit:cover}
+/* annotation */
+.pin{position:absolute;left:var(--x);top:var(--y);width:14px;height:14px;margin:-7px 0 0 -7px;border:1.5px solid #fff;border-radius:50%;z-index:2;box-shadow:0 0 0 4px rgba(0,0,0,.25)}
+.pin::after{content:"";position:absolute;inset:3.5px;background:#fff;border-radius:50%}
+.lead-line{position:absolute;top:var(--y);left:calc(var(--x) + 9px);width:0;height:0;border-top:1px solid rgba(255,255,255,.75);z-index:1}
+.note{display:block;max-width:250px;margin-bottom:30px;font:italic 400 15px/1.4 var(--bd);color:#fff}
+.flip .note{margin-left:auto;text-align:right}
+.note::before{content:"Detail — ";font-style:normal;color:#ff6a4a;font-weight:600}
+.proj{position:relative}
 
-/* services list */
-.svc{border-top:1px solid var(--line)}
-.svc-row{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
-.svc-row .num{font-family:var(--hf);color:var(--acc);font-size:1rem;padding-top:2px}
-.svc-row .body{min-width:0}
-.svc-row h3{font-weight:500;font-size:1.18rem;margin-bottom:6px}
-.svc-row p{color:var(--mute);max-width:600px;font-size:.98rem}
-@media(min-width:720px){.svc-row{grid-template-columns:80px 1fr 1.6fr}.svc-row .body{display:contents}}
+/* sectors (LPAS panels) */
+.sectors{padding:clamp(64px,9vw,120px) 0 0}
+.sectors .sechead{color:var(--ink)}
+.sectors .sechead p{opacity:1;color:var(--ink-2)}
+.panels{display:grid;grid-template-columns:repeat(4,1fr)}
+.panel{display:flex;flex-direction:column;min-height:640px}
+.panel img{width:100%;height:330px;object-fit:cover}
+.panel .field{flex:1;display:flex;flex-direction:column;padding:26px 26px 22px;color:#fff}
+.panel ul{list-style:none;font-size:15px}
+.panel li{border-bottom:1px solid rgba(255,255,255,.35);padding:7px 0}
+.panel h3{margin-top:auto;padding-top:28px;font-size:clamp(30px,2.6vw,42px)}
+.panel .ct{display:flex;justify-content:space-between;font-size:13px;margin-top:10px;opacity:.8}
+.p1 .field{background:var(--stone);color:var(--ink)} .p1 li{border-color:rgba(0,0,0,.2)}
+.p2 .field{background:var(--walnut)}
+.p3 .field{background:var(--char)}
+.p4 .field{background:var(--red)}
 
-/* projects grid */
-.pgrid{display:grid;grid-template-columns:1fr;gap:4px;margin-top:8px}
-@media(min-width:680px){.pgrid{grid-template-columns:1fr 1fr}}
-@media(min-width:1040px){.pgrid{grid-template-columns:1fr 1fr 1fr}}
-.pcard{position:relative;aspect-ratio:4/3;overflow:hidden;background:#111}
-.pcard img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.pcard:hover img{transform:scale(1.045)}
-.pcard .pscrim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,6,.88) 0%,rgba(10,8,6,.1) 55%,rgba(10,8,6,0) 100%)}
-.pcard .pnum{position:absolute;top:12px;left:14px;color:rgba(255,255,255,.85);font-size:.78rem;font-variant-numeric:tabular-nums}
-.pcard .pmeta{position:absolute;left:14px;right:14px;bottom:12px;color:#fff}
-.pcard .pmeta .cat{font-size:.72rem;letter-spacing:.03em;color:rgba(255,255,255,.78);text-transform:uppercase}
-.pcard .pmeta h3{font-size:1.08rem;font-weight:500;margin:3px 0 2px}
-.pcard .pmeta .loc{font-size:.82rem;color:rgba(255,255,255,.82)}
-.also{margin-top:26px;color:var(--mute);font-size:.95rem;border-top:1px solid var(--line);padding-top:22px}
-.also b{color:var(--ink)}
+/* services */
+.services{display:grid;grid-template-columns:5fr 7fr;gap:var(--g);padding:clamp(64px,9vw,130px) var(--g)}
+.services .photo{position:sticky;top:96px;align-self:start}
+.services .photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.services .photo figcaption{font-size:13px;color:var(--mute);margin-top:10px}
+.services h2{font-size:clamp(34px,4.4vw,64px);margin-bottom:30px}
+.svc{display:grid;grid-template-columns:56px 1fr;gap:0 18px;padding:24px 0;border-top:1px solid var(--line)}
+.svc:last-of-type{border-bottom:1px solid var(--line)}
+.svc span{font:500 15px var(--hd);color:var(--red);padding-top:6px}
+.svc h3{font-size:26px;margin-bottom:6px}
+.svc p{color:var(--ink-2);font-size:16px;max-width:52ch}
+.quote{margin-top:56px;padding-left:22px;border-left:3px solid var(--red)}
+.quote p{font:400 clamp(22px,2vw,28px)/1.3 var(--hd)}
+.quote cite{display:block;font:normal 14px var(--bd);color:var(--mute);margin-top:10px}
 
-/* sectors */
-.sectors p{font-family:var(--hf);font-weight:400;font-size:clamp(1.25rem,2.6vw,1.75rem);line-height:1.4;max-width:900px}
-.sectors p span{color:var(--acc);font-style:italic}
+/* index */
+.index{background:var(--off);padding:clamp(64px,9vw,120px) var(--g)}
+.index .sechead{padding:0;color:var(--ink)}
+.index .sechead p{opacity:1;color:var(--ink-2)}
+.tbl{position:relative}
+.row{display:grid;grid-template-columns:70px 1.2fr 1.6fr 90px;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid #d9d3cc;text-decoration:none}
+.row:last-child{border-bottom:1px solid #d9d3cc}
+.row .n{font:500 14px var(--hd);color:var(--mute)}
+.row .t{font:500 clamp(20px,2vw,28px)/1.1 var(--hd)}
+.row .d{color:var(--ink-2);font-size:15px}
+.row .ph{font-size:13px;color:var(--mute);text-align:right}
+.row[data-img]:hover .t{color:var(--red)}
+.peek{position:absolute;right:120px;width:300px;aspect-ratio:4/3;object-fit:cover;pointer-events:none;opacity:0;transition:opacity .2s,top .25s ease;box-shadow:0 18px 40px rgba(0,0,0,.18);z-index:3}
 
-/* team */
-.team-list{list-style:none;border-top:1px solid var(--line)}
-.team-list li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:18px 0;border-bottom:1px solid var(--line)}
-.team-list .nm{font-family:var(--hf);font-size:1.05rem}
-.team-list .ti{color:var(--mute);font-size:.92rem}
+/* clients + team */
+.people{display:grid;grid-template-columns:7fr 5fr;gap:var(--g);padding:clamp(64px,9vw,120px) var(--g)}
+.people h2{font-size:clamp(30px,3.4vw,48px);margin-bottom:26px}
+.clients{columns:2;column-gap:40px;list-style:none;font:400 18px/1.25 var(--hd)}
+.clients li{padding:8px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.people .src{font-size:13px;color:var(--mute);margin-top:16px}
+.team{list-style:none}
+.team li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
+.team b{font:500 18px var(--hd)}
+.team span{color:var(--ink-2);font-size:15px;text-align:right}
 
 /* contact */
-.contact{background:var(--ink);color:#f1ece2}
-.contact h2{color:#fff}
-.cwrap{display:grid;gap:44px;grid-template-columns:1fr}
-@media(min-width:880px){.cwrap{grid-template-columns:1fr 1fr}}
-.cblock b{display:block;font-family:var(--hf);font-size:1.3rem;font-weight:500;margin-bottom:14px;color:#fff}
-.cblock p{margin-bottom:10px;color:rgba(241,236,226,.82);font-size:.98rem}
-.cblock a.linklike{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
-.mapbox{border:1px solid rgba(255,255,255,.18);filter:grayscale(.3) contrast(1.05);overflow:hidden}
-.mapbox iframe{width:100%;height:320px;border:0;display:block}
+.contact{display:grid;grid-template-columns:6fr 6fr;background:var(--ink);color:#efebe6}
+.contact .txt{padding:clamp(56px,8vw,110px) var(--g)}
+.contact h2{font-size:clamp(36px,4.6vw,68px);margin-bottom:20px}
+.contact p{opacity:.8;max-width:44ch}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.acts a{text-decoration:none;font:500 17px var(--hd);padding:15px 22px;border:1px solid rgba(255,255,255,.4)}
+.acts a.main{background:var(--red);border-color:var(--red);color:#fff}
+.acts a:hover{border-color:#fff}
+.addr{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:46px;font-size:15px}
+.addr dt{font-size:13px;opacity:.55;margin-bottom:4px}
+.addr a{text-decoration:none}
+.contact iframe{width:100%;height:100%;min-height:460px;border:0;filter:grayscale(.85) contrast(1.05)}
 
-footer.note{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);color:rgba(241,236,226,.85);font-size:.76rem;text-align:center;padding:12px 16px}
-footer.note a{text-decoration:underline}
-.foot2{background:var(--ink);color:rgba(241,236,226,.55);font-size:.82rem;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.1)}
+footer{padding:40px var(--g) 70px;font-size:14px;color:var(--ink-2);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer img{height:22px;width:auto;margin-bottom:12px}
+footer b{display:block;font:500 14px var(--hd);color:var(--ink);margin-bottom:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--red)}
+.concept{position:fixed;left:12px;bottom:10px;z-index:30;font-size:11px;background:#fff;color:#555;padding:5px 9px;border:1px solid var(--line)}
+
+@media (max-width:1000px){
+  .top nav{display:none}
+  .intro,.services,.people,.contact{grid-template-columns:1fr}
+  .services .photo{position:static}
+  .services .photo img{aspect-ratio:16/10}
+  .proj,.proj.flip{grid-template-columns:1fr}
+  .proj .big,.proj.flip .big,.proj .side,.proj.flip .side{grid-column:1;grid-row:auto}
+  .proj .side{padding-top:24px}
+  .lead-line{display:none}
+  .proj .side{padding-top:24px!important}
+  .note,.flip .note{max-width:none;margin:0 0 18px;text-align:left;color:#ddd}
+  .proj .small{width:62%}
+  .panels{grid-template-columns:repeat(4,82vw);overflow-x:auto;scroll-snap-type:x mandatory}
+  .panel{scroll-snap-align:start;min-height:560px}
+  .panel img{height:260px}
+  .peek{display:none}
+  .row{grid-template-columns:44px 1fr;gap:4px 12px}
+  .row .d{grid-column:2}
+  .row .ph{display:none}
+  footer{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .top .wrap{height:60px}
+  .top .logo img{height:20px}
+  .top .tel{padding-left:14px;font-size:15px}
+  .top .tel small{display:none}
+  .hero{min-height:620px;height:min(86vh,760px)}
+  .hero .labels{display:none}
+  .hero h1{bottom:150px;font-size:40px;right:var(--g)}
+  .hcard{left:var(--g);right:var(--g);width:auto;bottom:24px}
+  .intro .cols{grid-template-columns:1fr;gap:14px}
+  .sechead{flex-direction:column;gap:10px}
+  .clients{columns:1}
+  .addr{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr}
+  .concept{right:12px;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.hero .slide{transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <header class="top">
-  <div class="wrap nav">
-    <a href="#" class="brand"><img src="http://www.vinayakme.com/images/logo-new.png" alt="Vinayak Interiors"></a>
-    <nav><ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul></nav>
-    <a class="call" href="tel:+97143393270">+971 4 339 3270</a>
+  <div class="wrap">
+    <a class="logo" href="#"><img src="https://www.vinayakme.com/images/logo-new.png" alt="Vinayak Interiors" width="288" height="49"></a>
+    <nav>
+      <a href="#work">Projects</a>
+      <a href="#sectors">Who we build for</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients &amp; team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel" href="tel:+97143393270"><small>Call the office</small>04 339 3270</a>
   </div>
 </header>
 
-<section class="hero">
-  <img class="bgphoto" src="http://www.vinayakme.com/slideshow_images/47.jpg" alt="Rolls-Royce Motor Cars showroom joinery by Vinayak Interiors">
-  <div class="scrim"></div>
-  <div class="credit">Rolls-Royce Motor Cars — showroom joinery, Dubai</div>
-  <div class="pager">14 fit-outs completed</div>
-  <div class="inner">
-    <h1>Vinayak Interiors designs and builds fit-outs across Dubai — shops, restaurants, showrooms and offices, from drawings to handover.</h1>
-    <p class="sub">Our own joinery workshop is in Al Quoz. Interior design, complete fit-out, custom joinery, MEP, project management and authority approvals, under one roof.</p>
-    <div class="actions">
-      <a class="primary" href="tel:+97143393270">Call +971 4 339 3270</a>
-      <a class="secondary" href="#work">See the work ↓</a>
+<section class="hero" aria-label="Recent projects">
+  <div class="slide on"><img src="https://www.vinayakme.com/product_images/66.jpg" alt="Discover Dubai souvenir store at Dubai Mall, fitted out by Vinayak Interiors" fetchpriority="high"></div>
+  <div class="slide"><img src="https://www.vinayakme.com/product_images/62.jpg" alt="Gazebo restaurant dining room with timber lattice ceiling" loading="lazy"></div>
+  <div class="slide"><img src="https://www.vinayakme.com/product_images/50.jpg" alt="Rolls-Royce office with lit logo wall and timber slat screen" loading="lazy"></div>
+  <div class="slide"><img src="https://www.vinayakme.com/product_images/10.jpg" alt="Al Jaber Gallery store with gold display units" loading="lazy"></div>
+  <div class="labels"><span>Interior design + fit-out</span><span>Al Quoz, Dubai</span></div>
+  <h1>We design and fit out shops, restaurants, offices and homes in Dubai.</h1>
+  <div class="hcard" aria-live="polite">
+    <div class="bar"><span id="hn">01</span><span class="track"><i id="ht"></i></span><span>04</span></div>
+    <div class="box">
+      <img id="hi" src="https://www.vinayakme.com/product_images/69.jpg" alt="">
+      <div><b id="hb">Discover Dubai</b><span id="hs">Souvenir store, Dubai Mall</span></div>
     </div>
   </div>
 </section>
 
-<section id="about">
-  <div class="wrap intro-grid">
-    <div class="text">
-      <div class="kicker">Who we are</div>
-      <h2>A fit-out and joinery contractor, built from the workshop up.</h2>
-      <p>Vinayak Interiors is based in Al Quoz, Dubai. We design and build interiors for shops, restaurants, showrooms, offices and private homes — our in-house designers draw the space, our own joinery shop builds the counters, panelling and fixed furniture, and our site teams run the civil, MEP and finishes through to handover.</p>
-      <p>We've carried out projects across Dubai and the northern Emirates, for clients who come back for the next fit-out once the first one is running. Small renovation or full store build, the approach is the same: draw it properly, price it straight, and stay on site until it's done.</p>
-    </div>
-    <div class="shot"><img src="http://www.vinayakme.com/product_images/13.jpg" alt="Custom ceiling joinery and gallery fit-out by Vinayak Interiors"></div>
-  </div>
-</section>
-
-<section id="services" class="panel">
-  <div class="wrap">
-    <div class="kicker">What we do</div>
-    <h2>Services</h2>
-    <p class="lede">Six services, run by one team, so the drawing, the joinery and the site work don't belong to three different contractors.</p>
-    <div class="svc">
-      <div class="svc-row"><div class="num">01</div><div class="body"><h3>Interior Design</h3><p>We draw the space before anyone builds anything — layout, finishes, lighting and material boards, signed off before work starts on site.</p></div></div>
-      <div class="svc-row"><div class="num">02</div><div class="body"><h3>Complete Fit-out Works</h3><p>Partitions, flooring, ceilings, paint and signage — we run the whole site from shell handover to opening day.</p></div></div>
-      <div class="svc-row"><div class="num">03</div><div class="body"><h3>Custom Joinery Work</h3><p>Our own joinery workshop in Al Quoz builds counters, shelving, reception desks and panelling to the drawing, not off a catalogue.</p></div></div>
-      <div class="svc-row"><div class="num">04</div><div class="body"><h3>MEP Works</h3><p>Electrical, air conditioning, plumbing and fire fighting, coordinated with the fit-out so nothing gets opened up again after painting.</p></div></div>
-      <div class="svc-row"><div class="num">05</div><div class="body"><h3>Project Management Consultancy</h3><p>One team tracking programme, budget and subcontractors from kick-off to handover.</p></div></div>
-      <div class="svc-row"><div class="num">06</div><div class="body"><h3>Authority Approval</h3><p>Drawings and permits through the relevant municipality, civil defence and mall or free zone authority, so the site isn't waiting on paperwork.</p></div></div>
+<section class="intro">
+  <div>
+    <p class="lead">Vinayak Interiors is a Dubai fit-out company. Our designers draw the space, our team builds it, and the same project manager stays with you from the first drawing to handover.</p>
+    <div class="cols">
+      <p>We have done hundreds of projects across the Middle East and Asia: souvenir stores in Dubai Mall, an Indian restaurant, nail bars, showroom offices, villa pergolas and living rooms.</p>
+      <p>We take care of procurement, the budget, the MEP work and the approvals, so you can keep running your business while we get the new space ready.</p>
     </div>
   </div>
+  <aside>
+    <dl>
+      <dt>Office &amp; warehouse</dt>
+      <dd>Warehouse No. 8, Building 22, Industrial Area 1, Al Quoz, Dubai</dd>
+      <dt>Phone</dt>
+      <dd><a href="tel:+97143393270">+971 4 339 3270</a> · <a href="tel:+97143393271">3271</a></dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:info@vinayakme.com">info@vinayakme.com</a></dd>
+    </dl>
+  </aside>
 </section>
 
-<section id="work">
-  <div class="wrap">
-    <div class="kicker">Projects</div>
-    <h2>14 fit-outs, a few of them below</h2>
-    <p class="lede">Retail stores, a restaurant, a car showroom, a beauty bar and a private villa — photographed on our own sites.</p>
-    <div class="pgrid">
+<section class="work" id="work">
+  <div class="sechead">
+    <h2>Selected work</h2>
+    <p>Four jobs from our portfolio, with a detail from each one that we built ourselves.</p>
+  </div>
 
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/1.jpg" alt="Al Jaber Gallery retail fit-out">
-        <div class="pscrim"></div><div class="pnum">01</div>
-        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Al Jaber Gallery</h3><div class="loc">Dubai</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/13.jpg" alt="Art and Frames gallery fit-out with custom ceiling joinery">
-        <div class="pscrim"></div><div class="pnum">02</div>
-        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Art &amp; Frames</h3><div class="loc">Dubai — custom ceiling joinery</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/58.jpg" alt="Gazebo Restaurant interior fit-out">
-        <div class="pscrim"></div><div class="pnum">03</div>
-        <div class="pmeta"><div class="cat">F&amp;B fit-out</div><h3>Gazebo Restaurant</h3><div class="loc">Al Tawar, Dubai — 200 m²</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/40.jpg" alt="N Bar beauty salon fit-out">
-        <div class="pscrim"></div><div class="pnum">04</div>
-        <div class="pmeta"><div class="cat">Beauty &amp; wellness fit-out</div><h3>N Bar</h3><div class="loc">Dubai</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/slideshow_images/49.jpg" alt="Rolls-Royce Motor Cars office fit-out">
-        <div class="pscrim"></div><div class="pnum">05</div>
-        <div class="pmeta"><div class="cat">Corporate fit-out</div><h3>Rolls-Royce Motor Cars</h3><div class="loc">Dubai</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/66.jpg" alt="Discover Dubai retail kiosk fit-out">
-        <div class="pscrim"></div><div class="pnum">06</div>
-        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Discover Dubai</h3><div class="loc">Dubai Mall — 60 m²</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/80.jpg" alt="Perfume boutique luxury retail fit-out">
-        <div class="pscrim"></div><div class="pnum">07</div>
-        <div class="pmeta"><div class="cat">Luxury retail fit-out</div><h3>Perfume boutique</h3><div class="loc">Dubai</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/88.jpg" alt="Organique natural beauty retail fit-out">
-        <div class="pscrim"></div><div class="pnum">08</div>
-        <div class="pmeta"><div class="cat">Retail fit-out</div><h3>Organique</h3><div class="loc">Dubai</div></div>
-      </div>
-
-      <div class="pcard">
-        <img src="http://www.vinayakme.com/product_images/33.jpg" alt="Private villa pergola and pool deck joinery">
-        <div class="pscrim"></div><div class="pnum">09</div>
-        <div class="pmeta"><div class="cat">Residential — outdoor joinery</div><h3>Private villa</h3><div class="loc">Dubai — pergola &amp; pool deck</div></div>
-      </div>
-
+  <article class="proj">
+    <figure class="big" style="--x:50%;--y:46%">
+      <img src="https://www.vinayakme.com/product_images/66.jpg" alt="Discover Dubai store front at night" loading="lazy">
+      <span class="pin"></span><span class="lead-line"></span>
+    </figure>
+    <div class="side">
+      <span class="note">The Burj Al Arab display, built as shelving and lit from inside.</span>
+      <div class="num">01 / Retail</div>
+      <h3>Discover Dubai</h3>
+      <div class="where">Souvenir store · Dubai Mall</div>
+      <p>The whole store is a Dubai skyline: towers, the Burj Al Arab and old forts cut out above the shelves, with mugs, plates and magnets displayed inside the shapes.</p>
+      <figure class="small"><img src="https://www.vinayakme.com/product_images/69.jpg" alt="Skyline shelving units inside Discover Dubai" loading="lazy"></figure>
     </div>
-    <p class="also"><b>Also in the portfolio:</b> I Love Dubai, Umm Al Quwain, Rashid Port, Aquarium Al Jaber, Transguard.</p>
+  </article>
+
+  <article class="proj flip">
+    <figure class="big" style="--x:48%;--y:30%">
+      <img src="https://www.vinayakme.com/product_images/76.jpg" alt="Timber lattice ceiling and brass lantern at Gazebo restaurant" loading="lazy">
+      <span class="pin"></span><span class="lead-line"></span>
+    </figure>
+    <div class="side">
+      <span class="note">Timber lattice ceiling over the tables, with the lantern hung from its centre.</span>
+      <div class="num">02 / Restaurant</div>
+      <h3>Gazebo Restaurant</h3>
+      <div class="where">Indian cuisine · dining room and private booths</div>
+      <p>Walnut wall panelling, upholstered booths, curtained alcoves and lit art panels. Warm and quiet, the way a sit-down Indian restaurant should feel.</p>
+      <figure class="small"><img src="https://www.vinayakme.com/product_images/59.jpg" alt="Gazebo restaurant booths and corridor" loading="lazy"></figure>
+    </div>
+  </article>
+
+  <article class="proj">
+    <figure class="big" style="--x:58%;--y:40%">
+      <img src="https://www.vinayakme.com/product_images/51.jpg" alt="Timber slat screen in the Rolls-Royce office corridor" loading="lazy">
+      <span class="pin"></span><span class="lead-line"></span>
+    </figure>
+    <div class="side">
+      <span class="note">Floor-to-ceiling timber slat screen, made to drawing.</span>
+      <div class="num">03 / Offices &amp; showroom</div>
+      <h3>Rolls-Royce</h3>
+      <div class="where">Reception, corridors, logo wall</div>
+      <p>Dark timber slats between the spaces, a back-lit RR monogram set into a white wall, and polished stone floors through the whole office.</p>
+      <figure class="small"><img src="https://www.vinayakme.com/product_images/50.jpg" alt="Back-lit Rolls-Royce logo wall" loading="lazy"></figure>
+    </div>
+  </article>
+
+  <article class="proj flip">
+    <figure class="big" style="--x:52%;--y:22%">
+      <img src="https://www.vinayakme.com/product_images/13.jpg" alt="Triangular coffered ceiling at Art &amp; Frames" loading="lazy">
+      <span class="pin"></span><span class="lead-line"></span>
+    </figure>
+    <div class="side">
+      <span class="note">Triangular coffered ceiling with a spotlight in every joint.</span>
+      <div class="num">04 / Retail</div>
+      <h3>Art &amp; Frames</h3>
+      <div class="where">Art gallery and framing shop</div>
+      <p>A shop that has to show hundreds of frame samples and paintings without looking crowded. The ceiling does the work: one bold pattern, so the walls can stay full.</p>
+      <figure class="small"><img src="https://www.vinayakme.com/product_images/17.jpg" alt="Frame sample wall and gold counter at Art &amp; Frames" loading="lazy"></figure>
+    </div>
+  </article>
+</section>
+
+<section class="sectors" id="sectors">
+  <div class="sechead">
+    <h2>Who we build for</h2>
+    <p>Most of our work is for shops and restaurants in malls, company offices, and private villas.</p>
+  </div>
+  <div class="panels">
+    <div class="panel p1">
+      <img src="https://www.vinayakme.com/product_images/2.jpg" alt="Al Jaber Gallery shop floor" loading="lazy">
+      <div class="field">
+        <ul><li>Al Jaber Gallery</li><li>Discover Dubai</li><li>I Love Dubai</li><li>Art &amp; Frames</li><li>Organique House</li></ul>
+        <h3>Shops</h3>
+        <div class="ct"><span>Retail fit-out</span><span>1 / 4</span></div>
+      </div>
+    </div>
+    <div class="panel p2">
+      <img src="https://www.vinayakme.com/product_images/62.jpg" alt="Gazebo restaurant dining room" loading="lazy">
+      <div class="field">
+        <ul><li>Gazebo Restaurant</li><li>Caribou Coffee</li><li>Café concepts in 3D</li></ul>
+        <h3>Restaurants &amp; cafés</h3>
+        <div class="ct"><span>Food &amp; beverage</span><span>2 / 4</span></div>
+      </div>
+    </div>
+    <div class="panel p3">
+      <img src="https://www.vinayakme.com/product_images/78.jpg" alt="Office reception with light lines in the wall" loading="lazy">
+      <div class="field">
+        <ul><li>Rolls-Royce</li><li>Baker &amp; McKenzie</li><li>beIN Sports</li><li>Transguard Group</li></ul>
+        <h3>Offices &amp; showrooms</h3>
+        <div class="ct"><span>Corporate</span><span>3 / 4</span></div>
+      </div>
+    </div>
+    <div class="panel p4">
+      <img src="https://www.vinayakme.com/product_images/37.jpg" alt="Timber pergola over a villa pool" loading="lazy">
+      <div class="field">
+        <ul><li>N Bar nail salons</li><li>Villa pergolas &amp; pool decks</li><li>Living rooms &amp; TV walls</li></ul>
+        <h3>Salons &amp; homes</h3>
+        <div class="ct"><span>Beauty &amp; residential</span><span>4 / 4</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="panel sectors">
-  <div class="wrap">
-    <div class="kicker">Who we build for</div>
-    <p><span>Retail</span> stores and mall kiosks, <span>restaurants</span> and cafés, <span>corporate</span> showrooms and offices, <span>beauty &amp; wellness</span> retail, and <span>private villas</span> — the mix our site photos are drawn from.</p>
+<section class="services" id="services">
+  <figure class="photo">
+    <img src="https://www.vinayakme.com/product_images/88.jpg" alt="Organique House shop with timber shelving and marble table" loading="lazy">
+    <figcaption>Organique House: shelving, display table and ceiling slats.</figcaption>
+  </figure>
+  <div>
+    <h2>What we do</h2>
+    <div class="svc"><span>01</span><div><h3>Interior design</h3><p>Our in-house designers plan the layout, choose the finishes and show you the space in 3D before anything is ordered.</p></div></div>
+    <div class="svc"><span>02</span><div><h3>Complete fit-out works</h3><p>Partitions, ceilings, flooring, lighting, paint and signage. We hand over a shop, restaurant or office that is ready to open.</p></div></div>
+    <div class="svc"><span>03</span><div><h3>Customised joinery</h3><p>Display units, counters, wall panelling and slat screens made to our own drawings, like the skyline shelving at Discover Dubai.</p></div></div>
+    <div class="svc"><span>04</span><div><h3>MEP works</h3><p>The electrical, plumbing and air-conditioning changes the new layout needs, done by the same team.</p></div></div>
+    <div class="svc"><span>05</span><div><h3>Project management consultancy</h3><p>Procurement, budget and programme looked after for you, through to delivery and installation.</p></div></div>
+    <div class="svc"><span>06</span><div><h3>Authority approval</h3><p>We prepare the drawings and follow up the approvals so work can start, and the doors can open, on time.</p></div></div>
+    <blockquote class="quote">
+      <p>“Anyone can build a space. We build long-term relationships.”</p>
+      <cite>From the Vinayak Interiors company profile</cite>
+    </blockquote>
   </div>
 </section>
 
-<section id="team">
-  <div class="wrap">
-    <div class="kicker">Who you'll work with</div>
-    <h2>Team</h2>
-    <ul class="team-list">
-      <li><span class="nm">Daulat Suthar</span><span class="ti">Managing Director</span></li>
-      <li><span class="nm">Alfredo Panganiban</span><span class="ti">Project Manager</span></li>
-      <li><span class="nm">Umesh Bhadrecha</span><span class="ti">Production Manager</span></li>
-      <li><span class="nm">Mohammed Majid</span><span class="ti">Design Engineer</span></li>
-      <li><span class="nm">Mohan Suthar</span><span class="ti">HR &amp; Finance Manager</span></li>
-      <li><span class="nm">Sahdev Bhadrecha</span><span class="ti">Site Engineer</span></li>
+<section class="index">
+  <div class="sechead">
+    <h2>All projects</h2>
+    <p>The full list from our portfolio. Hover a name to see a photo.</p>
+  </div>
+  <div class="tbl" id="tbl">
+    <img class="peek" id="peek" alt="">
+    <div class="row" data-img="1"><span class="n">01</span><span class="t">Al Jaber Novelty Store</span><span class="d">Gift and novelty store, gold display units</span><span class="ph">5 photos</span></div>
+    <div class="row" data-img="14"><span class="n">02</span><span class="t">Art &amp; Frames</span><span class="d">Art gallery and framing shop</span><span class="ph">6 photos</span></div>
+    <div class="row" data-img="58"><span class="n">03</span><span class="t">Gazebo Restaurant</span><span class="d">Indian restaurant, dining room and booths</span><span class="ph">9 photos</span></div>
+    <div class="row" data-img="54"><span class="n">04</span><span class="t">General</span><span class="d">Villas, apartments, receptions, salons and pergolas</span><span class="ph">14 photos</span></div>
+    <div class="row" data-img="43"><span class="n">05</span><span class="t">N Bar</span><span class="d">Nail bar, manicure stations and reception</span><span class="ph">7 photos</span></div>
+    <div class="row" data-img="51"><span class="n">06</span><span class="t">Rolls-Royce</span><span class="d">Offices, slat screens and logo wall</span><span class="ph">2 photos</span></div>
+    <div class="row" data-img="70"><span class="n">07</span><span class="t">Discover Dubai</span><span class="d">Souvenir store, Dubai Mall</span><span class="ph">7 photos</span></div>
+    <div class="row"><span class="n">08</span><span class="t">I Love Dubai</span><span class="d">Souvenir store</span><span class="ph"></span></div>
+    <div class="row" data-img="81"><span class="n">09</span><span class="t">3D Design</span><span class="d">3D concept views for shops and cafés</span><span class="ph">4 photos</span></div>
+    <div class="row" data-img="91"><span class="n">10</span><span class="t">Organique House</span><span class="d">Natural beauty shop</span><span class="ph">2 photos</span></div>
+    <div class="row"><span class="n">11</span><span class="t">Umm Al Quwain</span><span class="d">Project in Umm Al Quwain</span><span class="ph"></span></div>
+    <div class="row" data-img="94"><span class="n">12</span><span class="t">Rashid Port</span><span class="d">Port Rashid, Dubai</span><span class="ph">1 photo</span></div>
+    <div class="row"><span class="n">13</span><span class="t">Aquarium Al Jaber</span><span class="d">For Al Jaber Group</span><span class="ph"></span></div>
+    <div class="row"><span class="n">14</span><span class="t">Transguard</span><span class="d">For Transguard Group</span><span class="ph"></span></div>
+  </div>
+</section>
+
+<section class="people" id="clients">
+  <div>
+    <h2>Some of the companies we have worked for</h2>
+    <ul class="clients">
+      <li>Al Jaber Group</li><li>AWJ Investments</li><li>Baker &amp; McKenzie</li><li>beIN Sports</li><li>Caribou Coffee</li>
+      <li>DataOrbis</li><li>Emerging Beauty Brands</li><li>Frames</li><li>Gazebo Indian Cuisine</li><li>Harley-Davidson</li>
+      <li>Joanna</li><li>KGMS – Kamat &amp; Gazebo Management Services</li><li>Kraft Foods / Mondelēz International</li><li>Mara Xpress</li><li>MGK</li>
+      <li>Organique</li><li>Rolls-Royce</li><li>Transguard Group</li><li>Aluwood Windows &amp; Doors</li><li>Venus Star Construction</li>
+    </ul>
+    <p class="src">As listed on our current website.</p>
+  </div>
+  <div>
+    <h2>The team</h2>
+    <ul class="team">
+      <li><b>Daulat S Suthar</b><span>Managing Director</span></li>
+      <li><b>Alfredo Panganiban</b><span>Project Manager</span></li>
+      <li><b>Umesh Bhadrecha</b><span>Operations Manager</span></li>
+      <li><b>Mohammed Majid</b><span>Interior Design Engineer</span></li>
+      <li><b>Mohan Suthar</b><span>HR &amp; Finance Manager</span></li>
+      <li><b>Sahdev Bhadrecha</b><span>Site Engineer</span></li>
     </ul>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="kicker" style="color:#e2906f">Get in touch</div>
-    <h2>Contact</h2>
-    <div class="cwrap">
-      <div class="cblock">
-        <b>Vinayak Interiors L.L.C.</b>
-        <p>Warehouse No.8, Building 22, Industrial Area 1, Al Quoz<br>P.O. Box 283927, Dubai, United Arab Emirates</p>
-        <p>Tel: <a class="linklike" href="tel:+97143393270">+971 4 339 3270</a> / <a class="linklike" href="tel:+97143393271">+971 4 339 3271</a></p>
-        <p>Email: <a class="linklike" href="mailto:info@vinayakme.com">info@vinayakme.com</a></p>
-      </div>
-      <div class="mapbox">
-        <iframe src="https://www.google.com/maps?q=Industrial+Area+1,+Al+Quoz,+Dubai&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vinayak Interiors location, Al Quoz Industrial Area 1"></iframe>
-      </div>
+<section class="contact" id="contact">
+  <div class="txt">
+    <h2>Planning a fit-out?</h2>
+    <p>Send us the floor plan, the mall or building name and the date you want to open. We will come and see the space and send you a quote.</p>
+    <div class="acts">
+      <a class="main" href="tel:+97143393270">Call 04 339 3270</a>
+      <a href="mailto:info@vinayakme.com?subject=Fit-out%20enquiry">Email the floor plan</a>
     </div>
-    <div class="wrap foot2">
-      <p>© Vinayak Interiors L.L.C. — Al Quoz Industrial Area 1, Dubai, UAE.</p>
-    </div>
+    <dl class="addr">
+      <div><dt>Address</dt><dd>Warehouse No. 8, Building 22<br>Industrial Area 1, Al Quoz<br>P.O. Box 283927, Dubai, UAE</dd></div>
+      <div><dt>Phone &amp; email</dt><dd><a href="tel:+97143393270">+971 4 339 3270</a><br><a href="tel:+97143393271">+971 4 339 3271</a><br><a href="mailto:info@vinayakme.com">info@vinayakme.com</a></dd></div>
+    </dl>
   </div>
+  <iframe title="Map: Al Quoz Industrial Area 1, Dubai" loading="lazy" src="https://www.google.com/maps?q=Al+Quoz+Industrial+Area+1,+Dubai&amp;z=14&amp;output=embed"></iframe>
 </section>
 
-<footer class="note">Design concept by Websmith for Vinayak Interiors LLC. Not the official site. Their site is <a href="http://www.vinayakme.com">www.vinayakme.com</a>.</footer>
+<footer>
+  <div>
+    <img src="https://www.vinayakme.com/images/logo-new.png" alt="Vinayak Interiors" width="288" height="49">
+    <p>Vinayak Interiors L.L.C.<br>Interior design, fit-out and joinery, Dubai.</p>
+  </div>
+  <div><b>Visit</b>Warehouse No. 8, Building 22<br>Industrial Area 1, Al Quoz<br>P.O. Box 283927, Dubai</div>
+  <div><b>Contact</b><a href="tel:+97143393270">+971 4 339 3270</a><br><a href="tel:+97143393271">+971 4 339 3271</a><br><a href="mailto:info@vinayakme.com">info@vinayakme.com</a></div>
+  <div><b>Pages</b><a href="#work">Projects</a><br><a href="#services">Services</a><br><a href="#clients">Clients &amp; team</a><br><a href="https://www.facebook.com/vinayakinteriorsllc/" rel="noopener">Facebook</a></div>
+</footer>
 
+<div class="concept">Design concept by Websmith for Vinayak Interiors LLC. Not the official site.</div>
+
+<script>
+(function(){
+  var P="https://www.vinayakme.com/product_images/";
+  var data=[["Discover Dubai","Souvenir store, Dubai Mall","69"],["Gazebo Restaurant","Indian restaurant, dining room","76"],["Rolls-Royce","Offices and logo wall","51"],["Al Jaber Gallery","Gift and novelty store","1"]];
+  var s=document.querySelectorAll(".hero .slide"),i=0;
+  var hn=document.getElementById("hn"),ht=document.getElementById("ht"),hb=document.getElementById("hb"),hs=document.getElementById("hs"),hi=document.getElementById("hi");
+  function go(n){s[i].classList.remove("on");i=n;s[i].classList.add("on");hn.textContent="0"+(i+1);ht.style.width=((i+1)*25)+"%";hb.textContent=data[i][0];hs.textContent=data[i][1];hi.src=P+data[i][2]+".jpg"}
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches){setInterval(function(){go((i+1)%s.length)},5500)}
+  function place(){
+    document.querySelectorAll(".proj").forEach(function(pr){
+      var fig=pr.querySelector(".big"),line=pr.querySelector(".lead-line"),side=pr.querySelector(".side");
+      if(innerWidth<=1000){side.style.paddingTop="";return}
+      var cs=getComputedStyle(fig),x=parseFloat(cs.getPropertyValue("--x"))/100,y=parseFloat(cs.getPropertyValue("--y"))/100;
+      var f=fig.getBoundingClientRect(),sd=side.getBoundingClientRect(),px=f.width*x;
+      side.style.paddingTop=Math.max(0,f.height*y-11)+"px";
+      if(pr.classList.contains("flip")){var l=sd.right-f.left+14;line.style.left=l+"px";line.style.width=(px-9-l)+"px"}
+      else{line.style.left=(px+9)+"px";line.style.width=(sd.left-f.left-px-9-14)+"px"}
+    });
+  }
+  addEventListener("load",place);addEventListener("resize",place);place();
+  var peek=document.getElementById("peek"),tbl=document.getElementById("tbl");
+  tbl.querySelectorAll(".row[data-img]").forEach(function(r){
+    r.addEventListener("mouseenter",function(){peek.src=P+r.dataset.img+".jpg";peek.style.top=Math.max(0,r.offsetTop-80)+"px";peek.style.opacity=1});
+    r.addEventListener("mouseleave",function(){peek.style.opacity=0});
+  });
+})();
+</script>
 </body>
 </html>
