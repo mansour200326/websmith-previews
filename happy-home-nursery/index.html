@@ -36,18 +36,20 @@ nav.main{display:none}
 .wa{display:flex;align-items:center;gap:6px;padding:0 14px;font-weight:700;font-size:15px;text-decoration:none;color:var(--ink)}
 .wa svg{width:18px;height:18px;fill:#25a244}
 .wa span{display:none}
-.call{display:flex;flex-direction:column;justify-content:center;background:var(--green);color:#fff;text-decoration:none;padding:0 18px;font-weight:700;font-size:15px;line-height:1.2}
+.call{display:flex;flex-direction:column;justify-content:center;background:var(--green);color:#fff;text-decoration:none;padding:0 14px;font-weight:700;font-size:15px;line-height:1.2;white-space:nowrap}
+@media (max-width:420px){.logo img{height:30px}.wa{padding:0 10px}}
 .call small{font-weight:600;font-size:12px;opacity:.85}
 .call:hover{background:var(--green-d)}
 
 /* hero: big photo + two route tiles */
 .hero{display:grid;gap:14px;padding-top:16px}
-.hero-photo{position:relative;border-radius:22px;overflow:hidden;min-height:440px;background:#c9d7c0}
+.hero-main{display:flex;flex-direction:column;gap:18px}
+.hero-photo{position:relative;border-radius:22px;overflow:hidden;min-height:300px;background:#c9d7c0}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,25,10,0) 30%,rgba(15,25,10,.55) 62%,rgba(15,25,10,.82) 100%)}
-.hero-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px 22px 26px;color:#fff}
-.hero-text h1{color:#fff;font-size:clamp(34px,5.6vw,62px);font-weight:800;max-width:15ch}
-.hero-text p{margin-top:12px;max-width:52ch;font-size:17px;color:#f1f5ee}
+
+.hero-text{padding:0 2px 6px}
+.hero-text h1{font-size:clamp(34px,5.6vw,62px);font-weight:800;max-width:15ch}
+.hero-text p{margin-top:12px;max-width:52ch;font-size:17px}
 .tiles{display:grid;gap:14px}
 .tile{border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;text-decoration:none}
 .tile h2{font-size:30px}
@@ -194,8 +196,12 @@ footer{background:var(--ink);color:#cfd6ca;padding:56px 0 30px;font-size:15px}
   .logo img{height:44px}
   .call{padding:0 24px;font-size:16px}
   .hero{grid-template-columns:1.75fr 1fr;padding-top:20px}
-  .hero-photo{min-height:640px}
-  .hero-text{padding:36px 38px 40px}
+  .hero-main{position:relative;display:block}
+  .hero-photo{min-height:640px;height:100%}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,25,10,0) 30%,rgba(15,25,10,.55) 62%,rgba(15,25,10,.82) 100%)}
+  .hero-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:36px 38px 40px}
+  .hero-text h1{color:#fff}
+  .hero-text p{color:#f1f5ee}
   .tiles{grid-template-columns:1fr}
   .tile{padding:28px 28px}
   .classes{grid-template-columns:1.5fr 1fr;gap:64px;align-items:start}
@@ -232,8 +238,10 @@ footer{background:var(--ink);color:#cfd6ca;padding:56px 0 30px;font-size:15px}
 <main id="top">
 <div class="wrap">
   <div class="hero">
-    <div class="hero-photo">
-      <img src="img/train.jpg" alt="Children riding a cardboard train in front of the Happy Home Nursery tree mural" fetchpriority="high">
+    <div class="hero-main">
+      <div class="hero-photo">
+        <img src="img/train.jpg" alt="Children riding a cardboard train in front of the Happy Home Nursery tree mural" fetchpriority="high">
+      </div>
       <div class="hero-text">
         <h1>Happy Home Nursery, Maysaloon, Sharjah</h1>
         <p>A nursery for children from one year to four. We follow the British EYFS curriculum, with STEAM activities built into the day. Established in 1980.</p>
