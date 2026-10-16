@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Haddad Medical Dental Center, Hamdan Street, Abu Dhabi</title>
+<meta name="description" content="Haddad Medical Dental Center (HMDC), Muraijeb Tower, Hamdan Street, Abu Dhabi. Dr Gaby Haddad, Dr Malika Haddad and orthodontist Dr Abishek Kshetrapal. Call 02 632 5096.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#23439a; --blue-d:#1a3376; --ink:#141a2b; --body:#3b4253; --mute:#6c7383;
+  --rule:#dde0e7; --soft:#f4f6fa; --paper:#fff;
+  --serif:"Lora",Georgia,serif; --sans:"Lato",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--body);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:500;margin:0}
+h2{font-size:30px;line-height:1.15}
+p{margin:0 0 1em}
+
+/* address strip */
+.strip{background:var(--blue);color:#fff;font-size:14px}
+.strip .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.strip a{text-decoration:none;font-weight:700}
+
+/* header */
+header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand img{width:38px;height:auto;border:1px solid var(--rule)}
+.brand b{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:17px;line-height:1.2;display:block}
+.brand small{color:var(--mute);font-size:13px}
+nav{display:none;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--body)}
+nav a:hover{color:var(--blue)}
+.tel{font-weight:700;color:var(--blue);text-decoration:none;white-space:nowrap;font-size:15px}
+
+/* hero */
+.hero{padding:44px 0 56px}
+.hero .wrap{display:grid;gap:36px}
+.hero h1{font-size:40px;line-height:1.08;letter-spacing:-.01em}
+.hero h1 span{display:block;font-style:italic;font-weight:400;color:var(--mute);font-size:.55em;margin-top:12px;letter-spacing:0}
+.hero .lead{font-size:18px;max-width:34em;margin-top:22px;color:var(--body)}
+.act{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:3px}
+.btn:hover{background:var(--blue-d)}
+.act .or{color:var(--mute);font-size:15px}
+.act .or a{color:var(--ink)}
+.hero figure{margin:0;justify-self:start}
+.frame{background:#fff;border:1px solid var(--rule);padding:10px;box-shadow:0 1px 0 var(--rule)}
+.hero .frame img{width:100%;max-width:400px}
+figcaption{font-size:13px;color:var(--mute);margin-top:9px;line-height:1.45}
+
+/* statement */
+.state{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--soft)}
+.state .wrap{display:grid;gap:22px;padding-top:48px;padding-bottom:48px}
+.state blockquote{margin:0;font-family:var(--serif);font-size:30px;line-height:1.2;color:var(--ink)}
+.state .side{font-size:16px}
+.state .side p:last-child{margin:0}
+
+/* section scaffolding */
+section.block{padding:64px 0}
+.head{display:grid;gap:10px;margin-bottom:34px}
+.head p{color:var(--mute);max-width:36em;margin:0}
+
+/* doctors */
+.docs{display:grid;gap:30px}
+.doc{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}
+.doc .frame{padding:6px}
+.doc .frame img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.doc h3{font-size:21px}
+.doc .role{color:var(--blue);font-weight:700;font-size:14px;margin:4px 0 8px}
+.doc ul{margin:0;padding:0;list-style:none;font-size:15px}
+.doc li{padding:2px 0}
+.where{margin-top:30px;font-size:15px;color:var(--mute)}
+
+/* treatments list */
+.tx{border-top:1px solid var(--ink)}
+.tx-row{display:grid;gap:12px;border-bottom:1px solid var(--rule);padding:26px 0}
+.tx-row h3{font-size:22px}
+.tx-row h3 small{display:block;font-family:var(--sans);font-size:14px;color:var(--mute);margin-top:6px;font-weight:400}
+.tx-row dl{margin:0;display:grid;gap:12px}
+.tx-row dt{font-weight:700;color:var(--ink)}
+.tx-row dd{margin:2px 0 0;font-size:15px}
+.tx-row .pic{display:none}
+
+/* files */
+.files{display:grid;gap:22px;margin-top:44px}
+.files .frame img{width:100%;height:220px;object-fit:contain;background:#fff}
+
+/* equipment */
+.kit{display:grid;gap:30px}
+.kit h3{font-size:19px;margin-bottom:10px}
+.kit ul{margin:0;padding:0;list-style:none;columns:2;column-gap:24px;font-size:15px}
+.kit li{padding:5px 0;border-bottom:1px solid var(--rule);break-inside:avoid}
+.kit-pics{display:flex;gap:14px;flex-wrap:wrap}
+.kit-pics figure{margin:0;width:150px}
+.kit-pics .frame{padding:6px}
+.kit-pics img{width:100%;height:120px;object-fit:contain}
+
+/* insurance */
+.ins{background:var(--ink);color:#cfd5e2}
+.ins .wrap{display:grid;gap:24px;padding-top:56px;padding-bottom:56px}
+.ins h2{color:#fff}
+.ins ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #39415a}
+.ins li{padding:13px 0;border-bottom:1px solid #39415a;font-family:var(--serif);font-size:20px;color:#fff}
+.ins p{margin:0;font-size:15px}
+
+/* reviews */
+.rev{display:grid;gap:34px;align-items:center}
+.oval{width:220px;aspect-ratio:3/4;border-radius:50%;overflow:hidden;border:1px solid var(--ink);padding:8px;background:#fff}
+.oval img{width:100%;height:100%;object-fit:cover;object-position:center 18%;border-radius:50%}
+.rev blockquote{margin:0;font-family:var(--serif);font-size:26px;line-height:1.3;color:var(--ink)}
+.rev cite{display:block;margin-top:16px;font-style:normal;font-size:14px;color:var(--mute)}
+.more-rev{display:grid;gap:26px;margin-top:44px;border-top:1px solid var(--rule);padding-top:30px}
+.more-rev blockquote{margin:0;font-size:16px}
+.more-rev q{font-family:var(--serif);font-size:18px;color:var(--ink);font-style:italic;quotes:none}
+.more-rev span{display:block;font-size:13px;color:var(--mute);margin-top:8px}
+
+/* children */
+.kids{background:var(--soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.kids .wrap{display:grid;gap:26px;padding-top:56px;padding-bottom:56px}
+.kids ul{margin:0;padding:0;list-style:none;counter-reset:k;display:grid;gap:0 30px}
+.kids li{counter-increment:k;padding:11px 0 11px 38px;border-bottom:1px solid var(--rule);position:relative;font-size:15.5px}
+.kids li::before{content:counter(k,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--serif);color:var(--blue);font-size:15px}
+.kids .note{font-size:15px;background:#fff;border-left:3px solid var(--blue);padding:14px 16px;margin:0}
+
+/* paintings */
+.art-intro{display:grid;gap:14px;margin-bottom:28px}
+.strip-art{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 22px 18px;margin:0 -22px;-webkit-overflow-scrolling:touch}
+.strip-art figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
+.strip-art img{height:300px;width:auto;max-width:none;border:1px solid var(--rule)}
+.strip-art figcaption{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink)}
+.strip-art figcaption span{font-family:var(--sans);font-style:normal;color:var(--mute);font-size:13px}
+.scroll-hint{font-size:13px;color:var(--mute)}
+
+/* find us */
+.find{display:grid;gap:30px}
+.find .map{border:1px solid var(--rule);min-height:320px}
+.find iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.find dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:12px 14px;font-size:16px}
+.find dt{color:var(--mute);font-size:14px;padding-top:2px}
+.find dd{margin:0;color:var(--ink)}
+.find dd a{color:var(--blue);font-weight:700;text-decoration:none}
+.appt{font-family:var(--serif);font-size:21px;line-height:1.4;color:var(--ink);margin-bottom:24px}
+
+/* footer */
+footer{background:#0f1424;color:#aab2c4;font-size:14px;padding:50px 0 80px}
+footer .wrap{display:grid;gap:30px}
+footer b{color:#fff;font-family:var(--serif);font-weight:500;font-size:18px;display:block;margin-bottom:8px}
+footer a{color:#fff;text-decoration:none}
+footer ul{list-style:none;margin:0;padding:0;columns:2}
+footer li{padding:3px 0}
+.f-logo{width:54px;border:1px solid #2a3147;margin-bottom:12px}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(15,20,36,.94);color:#d2d7e2;font-size:12px;text-align:center;padding:7px 10px}
+
+@media (min-width:760px){
+  .hero h1{font-size:58px}
+  .hero .wrap{grid-template-columns:1.25fr 1fr;align-items:end}
+  .hero figure{justify-self:end}
+  .state .wrap{grid-template-columns:1.2fr 1fr;gap:0}
+  .state blockquote{font-size:40px;padding-right:48px}
+  .state .side{border-left:1px solid #b9c0cf;padding-left:36px;align-self:end}
+  h2{font-size:36px}
+  .head{grid-template-columns:280px 1fr;align-items:end}
+  .docs{grid-template-columns:repeat(3,1fr)}
+  .doc{grid-template-columns:1fr;gap:14px}
+  .doc .frame{max-width:200px}
+  .tx-row{grid-template-columns:280px 1fr 180px;gap:30px}
+  .tx-row dl{grid-template-columns:1fr 1fr;gap:16px 30px}
+  .tx-row .pic{display:block}
+  .tx-row .pic .frame{padding:5px}
+  .tx-row .pic img{width:100%;height:150px;object-fit:cover}
+  .files{grid-template-columns:repeat(3,1fr)}
+  .kit{grid-template-columns:1fr 1fr 1fr}
+  .ins .wrap{grid-template-columns:280px 1fr}
+  .ins ol{grid-template-columns:repeat(3,1fr);column-gap:30px}
+  .rev{grid-template-columns:260px 1fr;gap:56px}
+  .oval{width:260px}
+  .rev blockquote{font-size:32px}
+  .more-rev{grid-template-columns:repeat(3,1fr)}
+  .kids .wrap{grid-template-columns:280px 1fr}
+  .kids ul{grid-template-columns:1fr 1fr}
+  .art-intro{grid-template-columns:280px 1fr;align-items:end}
+  .strip-art img{height:380px}
+  .find{grid-template-columns:1fr 1.15fr}
+  footer .wrap{grid-template-columns:1.2fr 1fr 1fr}
+}
+@media (min-width:1020px){
+  nav{display:flex}
+  .hero{padding:64px 0 76px}
+  .hero h1{font-size:72px}
+}
+</style>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span>Muraijeb Tower, office 208, Hamdan Street, Abu Dhabi</span>
+  <span>Appointments <a href="tel:+97126325096">02 632 5096</a></span>
+</div></div>
+
+<header><div class="wrap">
+  <a class="brand" href="#top" aria-label="Haddad Medical Dental Center">
+    <img src="img/logo.jpg" alt="HMDC logo" width="38" height="51">
+    <span><b>Haddad Medical Dental Center</b><small>HMDC, Abu Dhabi</small></span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#doctors">Doctors</a>
+    <a href="#treatments">Treatments</a>
+    <a href="#insurance">Insurance</a>
+    <a href="#children">Children</a>
+    <a href="#paintings">Dr Gaby's paintings</a>
+    <a href="#find">Find us</a>
+  </nav>
+  <a class="tel" href="tel:+97126325096">02 632 5096</a>
+</div></header>
+
+<main id="top">
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Haddad Medical Dental Center <span>A dental practice on Hamdan Street since April 1979</span></h1>
+    <p class="lead">Dr Gaby Haddad and Dr Malika Haddad look after families from all over Abu Dhabi, from check-ups and fillings to implants, crowns and full mouth work. Orthodontics for children and adults is with our specialist, Dr Abishek Kshetrapal.</p>
+    <div class="act">
+      <a class="btn" href="tel:+97126325096">Call 02 632 5096 to book</a>
+      <span class="or">or email <a href="mailto:haddadmc@eim.ae">haddadmc@eim.ae</a> and we'll get back to you</span>
+    </div>
+  </div>
+  <figure>
+    <div class="frame"><img src="img/dr_gaby_for_endo.jpg" alt="Dr Gaby Haddad treating a patient in the surgery" width="400" height="400"></div>
+    <figcaption>Dr Gaby Haddad during root canal treatment, in the surgery at Muraijeb Tower.</figcaption>
+  </figure>
+</div></section>
+
+<section class="state"><div class="wrap">
+  <blockquote>We believe the best teeth are your own teeth.</blockquote>
+  <div class="side">
+    <p>That's the reason we do so many different procedures to help you keep them: careful root canal work, gum treatment, ozone to stop early decay, and a professional clean every six months. Don't wait until it hurts.</p>
+    <p>When a tooth can't be saved, we replace it with an implant, a crown or a bridge.</p>
+  </div>
+</div></section>
+
+<section class="block" id="doctors"><div class="wrap">
+  <div class="head">
+    <h2>Doctors</h2>
+    <p>Our doctors trained in France, Lebanon, Algeria and Canada.</p>
+  </div>
+  <div class="docs">
+    <article class="doc">
+      <div class="frame"><img src="img/dr_gaby.jpg" alt="Dr Gaby Haddad" loading="lazy"></div>
+      <div>
+        <h3>Dr Gaby Haddad</h3>
+        <div class="role">General practitioner dentist</div>
+        <ul><li>Holder of American and French patents</li><li>Member, American Dental Association</li><li>Root canal treatment</li></ul>
+      </div>
+    </article>
+    <article class="doc">
+      <div class="frame"><img src="img/dr_malika.jpg" alt="Dr Malika Haddad" loading="lazy"></div>
+      <div>
+        <h3>Dr Malika Haddad</h3>
+        <div class="role">General practitioner dentist</div>
+        <ul><li>Holder of an American patent</li><li>Member, American Dental Association</li></ul>
+      </div>
+    </article>
+    <article class="doc">
+      <div class="frame"><img src="img/dr_abishek.jpg" alt="Dr Abishek Kshetrapal" loading="lazy"></div>
+      <div>
+        <h3>Dr Abishek Kshetrapal</h3>
+        <div class="role">Specialist orthodontist</div>
+        <ul><li>Fellow, Royal College of Surgeons of Edinburgh (UK)</li><li>Children and adults</li><li>Braces, aligners, lingual braces, cleft palate</li></ul>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="block" id="treatments" style="padding-top:20px"><div class="wrap">
+  <div class="head">
+    <h2>Treatments</h2>
+    <p>Everything from mercury-free fillings to full mouth rehabilitation, done in our own surgery.</p>
+  </div>
+  <div class="tx">
+    <div class="tx-row">
+      <h3>Check-ups and everyday care<small>See us every six months</small></h3>
+      <dl>
+        <div><dt>Cleaning (prophylaxis)</dt><dd>Removing hardened deposits and surface stains, then Prophyflex micro-cleaning of teeth and gums after scaling.</dd></div>
+        <div><dt>Mercury-free fillings</dt><dd>White fillings, no amalgam.</dd></div>
+        <div><dt>Root canal treatment</dt><dd>Rotary instruments (K3 system), B-system fillings and ozone disinfection of the canal.</dd></div>
+        <div><dt>Ozone therapy (HealOzone)</dt><dd>KaVo HealOzone kills decay bacteria in seconds through a small silicone cap, so early caries can be stopped without drilling.</dd></div>
+      </dl>
+      <div class="pic"><div class="frame"><img src="img/xray-root-canal.jpg" alt="X-ray of a lower tooth after root canal treatment" loading="lazy"></div><figcaption>X-ray after a root canal.</figcaption></div>
+    </div>
+    <div class="tx-row">
+      <h3>Straightening teeth<small>With Dr Abishek Kshetrapal</small></h3>
+      <dl>
+        <div><dt>Braces</dt><dd>Gentle pressure that moves teeth into the right position over time. Lingual braces too.</dd></div>
+        <div><dt>Invisalign</dt><dd>Clear, removable aligners for crooked, crowded or gapped teeth.</dd></div>
+        <div><dt>ClearPath aligners</dt><dd>Hygienic, clear aligners that correct the bite without brackets and wires.</dd></div>
+        <div><dt>Children and adults</dt><dd>Including cleft palate cases.</dd></div>
+      </dl>
+      <div class="pic"><div class="frame"><img src="img/clearpath_aligner.jpg" alt="ClearPath aligner" loading="lazy"></div><figcaption>ClearPath aligner.</figcaption></div>
+    </div>
+    <div class="tx-row">
+      <h3>Smile work<small>Hollywood smile and cosmetic dentistry</small></h3>
+      <dl>
+        <div><dt>Veneers and Lumineers</dt><dd>Lumineers are as thin as a contact lens, for chipped, spaced or crowded front teeth.</dd></div>
+        <div><dt>Crowns and bridges</dt><dd>Zircon, In-Ceram and porcelain.</dd></div>
+        <div><dt>Sapphire whitening</dt><dd>Whitening in the chair, in about an hour.</dd></div>
+        <div><dt>Gummy smile</dt><dd>Surgery for a gummy smile and for dark (melanin) colouring of the gums.</dd></div>
+      </dl>
+      <div class="pic"><div class="frame"><img src="img/airflow-before-after.jpg" alt="Teeth before and after Airflow cleaning" loading="lazy"></div><figcaption>Before and after Airflow cleaning.</figcaption></div>
+    </div>
+    <div class="tx-row">
+      <h3>Implants and surgery</h3>
+      <dl>
+        <div><dt>Dental implants</dt><dd>Replacing the roots of missing teeth, then the crown on top.</dd></div>
+        <div><dt>Sinus elevation</dt><dd>Making room for an implant in the upper jaw.</dd></div>
+        <div><dt>Impacted teeth</dt><dd>Surgical extraction, including wisdom teeth.</dd></div>
+        <div><dt>Gum surgery and radiosurgery</dt><dd>Radiowaves reshape gum tissue precisely, for example around crowns and veneers.</dd></div>
+      </dl>
+      <div class="pic"><div class="frame"><img src="img/implants-steps.jpg" alt="Implant treatment steps: x-ray, placement and final teeth" loading="lazy"></div><figcaption>Implant steps, from x-ray to finished teeth.</figcaption></div>
+    </div>
+    <div class="tx-row">
+      <h3>For nervous patients</h3>
+      <dl>
+        <div><dt>Sedation dentistry</dt><dd>Treatment while you're relaxed and calm.</dd></div>
+        <div><dt>Hypnosis dentistry</dt><dd>For patients who find the chair hard.</dd></div>
+      </dl>
+      <div class="pic"></div>
+    </div>
+  </div>
+
+  <div class="files">
+    <figure style="margin:0"><div class="frame"><img src="img/ortho-before-after.jpg" alt="Orthodontic treatment before and after" loading="lazy"></div><figcaption>Orthodontic treatment, before and after, from our own files.</figcaption></figure>
+    <figure style="margin:0"><div class="frame"><img src="img/healozone.jpg" alt="KaVo HealOzone unit" loading="lazy"></div><figcaption>KaVo HealOzone, used to stop decay with ozone.</figcaption></figure>
+    <figure style="margin:0"><div class="frame"><img src="img/diagnodent.jpg" alt="Diagnodent laser caries detector" loading="lazy"></div><figcaption>Diagnodent, a laser that finds decay early.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="block" style="padding-top:10px"><div class="wrap">
+  <div class="head">
+    <h2>In the surgery</h2>
+    <p>What we work with, and how we sterilise.</p>
+  </div>
+  <div class="kit">
+    <div>
+      <h3>Equipment</h3>
+      <ul><li>Digital X-rays (RVG)</li><li>Dental X-ray units</li><li>Laser system</li><li>Diagnodent</li><li>KaVo HealOzone</li><li>Airflow</li><li>Prophyflex</li><li>K3 rotary endo</li><li>B-system canal filling</li><li>Radiosurgery</li></ul>
+    </div>
+    <div>
+      <h3>Sterilisation</h3>
+      <ul><li>Hydrim washer</li><li>Lisa steriliser</li><li>Statim steriliser</li><li>Kavoclave</li><li>Ultrasonic cleaner</li><li>Terminator</li></ul>
+    </div>
+    <div>
+      <h3>Good to know</h3>
+      <p style="font-size:15px">Every instrument goes through washing and sterilisation to international standard before it's used again. Ask us to show you the sterilisation room when you visit.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="ins" id="insurance"><div class="wrap">
+  <div>
+    <h2>Insurance we accept</h2>
+    <p style="margin-top:12px">Bring your card to the first visit. If your insurer isn't listed, call and ask.</p>
+  </div>
+  <ol>
+    <li>THIQA</li><li>DAMAN</li><li>AXA</li><li>ADNIC</li><li>MSH Dubai</li><li>Nextcare</li><li>NAS</li><li>Neuron</li><li>Globemed</li>
+  </ol>
+</div></section>
+
+<section class="block" id="patients"><div class="wrap">
+  <div class="rev">
+    <div class="oval"><img src="img/dr_gaby_haddad.jpg" alt="Dr Gaby Haddad" loading="lazy" onerror="this.src='img/dr_gaby.jpg'"></div>
+    <div>
+      <blockquote>"I have been a patient of Dr Haddad for the last 30 years. He is a thorough professional and my whole family goes to him for treatment. Once you visit him, you feel completely relaxed."</blockquote>
+      <cite>Patient review on WhatClinic.com, from our Reviews page</cite>
+    </div>
+  </div>
+  <div class="more-rev">
+    <blockquote><q>My root canal was not painful as expected and my new Zirconia crown is 99% identical to my natural teeth.</q><span>Root canal and zirconia crown, 22 December 2013</span></blockquote>
+    <blockquote><q>You took exceptional care of me in consideration of my huge dental phobia. I feel like family at your office.</q><span>New patient examination, 21 June 2014</span></blockquote>
+    <blockquote><q>I had the full Hollywood Smile treatment on my overcrowded mouth. The results are amazing.</q><span>Veneers, 4 December 2013</span></blockquote>
+  </div>
+</div></section>
+
+<section class="kids" id="children"><div class="wrap">
+  <div>
+    <h2>To Mum &amp; Dad</h2>
+    <p style="margin-top:12px;color:var(--mute)">Oral health starts young. Dr Malika sees a lot of our younger patients.</p>
+  </div>
+  <div>
+    <ul>
+      <li>Brush two to three times a day, with a soft children's brush.</li>
+      <li>Use toothpaste the size of your child's little fingernail.</li>
+      <li>Brush at the same time as them. It motivates them.</li>
+      <li>Check their teeth after brushing, and floss every day.</li>
+      <li>Rinse with water after eating or drinking.</li>
+      <li>After brushing at night, only water before bed.</li>
+      <li>Avoid constant snacking and bottle feeding.</li>
+      <li>Bring them for a check-up every six months.</li>
+    </ul>
+    <p class="note" style="margin-top:22px"><strong>Nursing bottle syndrome:</strong> a bottle of milk or juice at bedtime or nap time leads to fast decay and crooked teeth. Give water instead.</p>
+  </div>
+</div></section>
+
+<section class="block" id="paintings"><div class="wrap">
+  <div class="art-intro">
+    <h2>Dr Gaby's paintings</h2>
+    <p style="color:var(--mute);margin:0">When he isn't at the chair, Dr Gaby paints, on canvas and on mirrors. Some of his work, from our art gallery page. <span class="scroll-hint">Scroll sideways to see more.</span></p>
+  </div>
+  <div class="strip-art" tabindex="0" aria-label="Paintings by Dr Gaby Haddad">
+    <figure><img src="img/bedouin_generosity.jpg" alt="Bedouin generosity, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Bedouin generosity <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/falcon.jpg" alt="Falcon, painting on mirror by Dr Gaby Haddad" loading="lazy"><figcaption>Falcon <span>on mirror</span></figcaption></figure>
+    <figure><img src="img/life_cycle.jpg" alt="Life cycle, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Life cycle <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/red_coral.jpg" alt="Red coral, painting on mirror by Dr Gaby Haddad" loading="lazy"><figcaption>Red coral <span>on mirror</span></figcaption></figure>
+    <figure><img src="img/victory_of_goodness.jpg" alt="Victory of Goodness, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Victory of Goodness <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/shy_beauty.jpg" alt="Shy beauty, painting on mirror by Dr Gaby Haddad" loading="lazy"><figcaption>Shy beauty <span>on mirror</span></figcaption></figure>
+    <figure><img src="img/eternal_spirit.jpg" alt="Eternal Spirit, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Eternal Spirit <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/expressive_lines.jpg" alt="Expressive lines, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Expressive lines <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/dream_in_a_city.jpg" alt="Dream in a city, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Dream in a city <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/shadow_of_winter.jpg" alt="Shadow of Winter, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Shadow of Winter <span>on canvas</span></figcaption></figure>
+    <figure><img src="img/love.jpg" alt="Love, painting by Dr Gaby Haddad" loading="lazy"><figcaption>Love <span>on canvas</span></figcaption></figure>
+  </div>
+</div></section>
+
+<section class="block" id="find" style="border-top:1px solid var(--rule)"><div class="wrap">
+  <div class="find">
+    <div>
+      <h2 style="margin-bottom:20px">Appointments and how to find us</h2>
+      <p class="appt">Call us on 02 632 5096 or email haddadmc@eim.ae, and we'll get back to you as soon as possible.</p>
+      <dl>
+        <dt>Address</dt><dd>Muraijeb Tower, office 208<br>Hamdan Street, Abu Dhabi, UAE</dd>
+        <dt>Phone</dt><dd><a href="tel:+97126325096">+971 2 632 5096</a></dd>
+        <dt>Fax</dt><dd>+971 2 634 1911</dd>
+        <dt>Email</dt><dd><a href="mailto:haddadmc@eim.ae">haddadmc@eim.ae</a></dd>
+        <dt>Insurance</dt><dd>THIQA, DAMAN, AXA, ADNIC and <a href="#insurance">others</a></dd>
+      </dl>
+    </div>
+    <div class="map"><iframe title="Map: Muraijeb Tower, Hamdan Street, Abu Dhabi" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Muraijeb%20Tower%2C%20Hamdan%20Street%2C%20Abu%20Dhabi&z=16&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div>
+    <img class="f-logo" src="img/logo.jpg" alt="HMDC logo">
+    <b>Haddad Medical Dental Center</b>
+    Muraijeb Tower, office 208, Hamdan Street, Abu Dhabi<br>
+    Tel <a href="tel:+97126325096">+971 2 632 5096</a> &middot; Fax +971 2 634 1911<br>
+    <a href="mailto:haddadmc@eim.ae">haddadmc@eim.ae</a>
+  </div>
+  <div>
+    <b>On this page</b>
+    <ul><li><a href="#doctors">Doctors</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#insurance">Insurance</a></li><li><a href="#patients">Patients</a></li><li><a href="#children">Children</a></li><li><a href="#paintings">Paintings</a></li><li><a href="#find">Find us</a></li></ul>
+  </div>
+  <div>
+    <b>Jobs</b>
+    Nurses and dental assistants: send your CV to <a href="mailto:haddadmc@eim.ae">haddadmc@eim.ae</a>.
+    <p style="margin-top:16px;color:#7f879a">Your happy smile is our goal.</p>
+  </div>
+</div></footer>
+
+<div class="concept">Design concept by Websmith for Haddad Medical &amp; Dental Centre. Not the official site.</div>
+</body>
+</html>

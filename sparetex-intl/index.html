@@ -56,7 +56,7 @@ h1 .r{text-align:right;color:var(--ink)}
 
 /* search */
 .finder{position:sticky;top:64px;z-index:20;background:var(--navy);color:#fff}
-.finder .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-top:14px;padding-bottom:14px}
+.finder .frow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-top:14px;padding-bottom:14px}
 .finder label{font:500 13px/1.2 var(--mono);color:#b9c7da;flex:0 0 100%}
 .finder input{flex:1 1 260px;min-width:0;height:48px;border:0;border-radius:0;padding:0 14px;font:400 17px/1 var(--sans);color:var(--ink);background:#fff;outline:none}
 .finder input:focus{box-shadow:inset 0 0 0 2px #7fb2ea}
@@ -105,11 +105,12 @@ mark{background:#d9e8fb;color:inherit;padding:0 1px}
 .sec-h{display:grid;gap:10px;margin-bottom:26px}
 .sec-h h2{margin:0;font:600 clamp(32px,4.4vw,56px)/1 var(--cond);color:var(--ink);letter-spacing:-.015em}
 .sec-h p{margin:0;max-width:560px;color:var(--body)}
-.wall{font:500 clamp(19px,2vw,25px)/1.6 var(--cond);color:var(--ink)}
+.wall{border-top:1px solid var(--ink);font:500 clamp(19px,1.8vw,23px)/1.5 var(--cond);color:var(--ink)}
+.wall .lr{display:grid;grid-template-columns:44px 1fr;padding:11px 0;border-bottom:1px solid var(--rule);break-inside:avoid}
 .wall button{all:unset;cursor:pointer;white-space:nowrap}
 .wall button:hover{color:var(--navy);text-decoration:underline;text-underline-offset:4px}
 .wall .sep{color:#c3cad3;margin:0 .35em;font-weight:400}
-.wall .letter{font:500 13px/1 var(--mono);color:var(--navy);margin-right:.5em;vertical-align:.25em}
+.wall .letter{font:500 13px/1 var(--mono);color:var(--navy);padding-top:.55em}
 
 /* shipping */
 .ship{padding-top:40px;padding-bottom:40px;display:grid;gap:34px}
@@ -181,6 +182,8 @@ footer a:hover{text-decoration:underline}
   .row .brands:empty{display:block}
   .row:hover{background:var(--soft)}
   .sec-h{grid-template-columns:1fr 1fr;align-items:end;gap:60px}
+  .wall{columns:2;column-gap:60px;border-top:0}
+  .wall .lr:first-child{border-top:1px solid var(--ink)}
   .ship{grid-template-columns:1fr;}
   .enq{grid-template-columns:1fr 1.1fr;gap:80px}
   .ft{grid-template-columns:1.3fr 1fr 1fr 1fr}
@@ -224,7 +227,7 @@ footer a:hover{text-decoration:underline}
   </section>
 
   <div class="finder" id="products">
-    <div class="wrap">
+    <div class="wrap frow">
       <label for="q">Search what we supply</label>
       <input id="q" type="search" autocomplete="off" placeholder="Type a brand or a part: Danfoss, solenoid valve, Fluke…">
       <span class="count" id="count">33 product lines</span>
@@ -456,13 +459,13 @@ footer a:hover{text-decoration:underline}
 
   var brands=["Suntec","Siemens","Mobrey","Speed Clean","HD Howden","Spirax","Valsteam ADCA","Danfoss","Dungs","Honeywell","Pactrol","Riello","Satronic","Grundfos","Lowara","Ebara","Akas","Pedrollo","KSB","Alfa Laval","Edur","Becker","Adam","Astral","Goulds","Espa","Davey","Crane","Watts","Bray","Hattersley","Pegler","Kunkle","Nabic","ARI","Albion","Wade","Bailey Birkett","Burkert","Parker","Winters","Wika","TruTel","Hunter","Cotherm","Sunvic","Kurz","Spire Metering","B Meters","Sensus","Memolub","Fenner Drives","PowerTwist","Schneider","MK Electric","Hager","GE","Philips","Eaton","FHF","Tork","Pneumatex","IFM","CG Air","Rotronic","Fiama","Penton","SMC","EPN","Pressac","Linxcom","Panduit","Trutool","Perko","Kidde","Sierra","Crowcon","Shield","Extech","Fluke","Palintest","Optima","Varta","Solite","Exide","Yuasa","Long","Miller","ATS","Erie","Oventrop","Copeland","Hartland","Rittal","Carel","Virginia","Bristol","KDK","Casals","Vent-Axia","S&P","Manrose","ebm-papst","Grohe","Geberit","Ideal Standard","Jaquar","General Ceramics","Sanit","Kohler","+GF+","Envotec","Ariston","Sanibano","Bio Dryer","Fantini","Porta Opale","Triton","Dow Corning","Loctite","Fevibond","Geze","Dorma","Yale","Devon","Castrol","Shell","Gulf Oil","TODO","Veeder-Root","Meggitt","Emco Wheaton","Vermont","Husky","Liquid Controls","Woodward","Regulateurs Europa","Heinzmann","Zexel-Kiki","CENTEC","Lifton","SPX Power Team","SPX Bolting","Rhombus","Colson","EWO","Calla","Ambersil","ZOK 27","Permatex","CRC"];
   brands=brands.filter(function(b,i){return brands.indexOf(b)===i;}).sort(function(a,b){return a.replace(/^\+/,'').toLowerCase().localeCompare(b.replace(/^\+/,'').toLowerCase());});
-  var wall=document.getElementById('wall'),last='',html=[];
+  var wall=document.getElementById('wall'),by={},order=[];
   brands.forEach(function(b){
-    var L=b.replace(/^\+/,'').charAt(0).toUpperCase(),pre='';
-    if(L!==last){pre='<span class="letter">'+L+'</span>';last=L;}
-    html.push(pre+'<button type="button" data-b="'+esc(b)+'">'+esc(b)+'</button>');
+    var L=b.replace(/^\+/,'').charAt(0).toUpperCase();
+    if(!by[L]){by[L]=[];order.push(L);}
+    by[L].push('<button type="button" data-b="'+esc(b)+'">'+esc(b)+'</button>');
   });
-  wall.innerHTML=html.join('<span class="sep">/</span>');
+  wall.innerHTML=order.map(function(L){return '<div class="lr"><span class="letter">'+L+'</span><div>'+by[L].join('<span class="sep">/</span>')+'</div></div>';}).join('');
   wall.addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b)return;
     q.value=b.dataset.b; filter();
