@@ -95,6 +95,8 @@ figure figcaption{font-size:.8rem;color:var(--mute);margin-top:8px}
 .codes li span:last-child{color:var(--mute);font-variant-numeric:tabular-nums}
 .note{font-size:.85rem;color:var(--mute);margin-top:14px}
 .side h3{margin:0 0 10px}
+.sr-bottom{margin-top:44px;display:grid;gap:36px}
+@media (max-width:480px){.codes{columns:1}}
 
 /* titans */
 .titans{background:var(--navy);color:#cdd8e8}
@@ -164,7 +166,7 @@ footer ul{list-style:none;display:grid;gap:5px}
   .step p{grid-column:1}
   .adm-more{grid-template-columns:repeat(3,1fr)}
   .sr-grid{grid-template-columns:repeat(3,1fr)}
-  .sr-bottom{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px}
+  .sr-bottom{grid-template-columns:1fr 1fr;gap:40px}
   .mosaic{grid-template-columns:repeat(12,1fr)}
   .m1{grid-column:span 7;grid-row:span 2;aspect-ratio:auto}
   .m2{grid-column:span 5;aspect-ratio:16/10}
