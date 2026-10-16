@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Al Raha Painting &amp; Sanitary Materials LLC | Wallpaper and paint, Ras Al Khaimah</title>
+<meta name="description" content="Wallpapers, 3D and digital wallpaper, and interior and exterior paint, fitted by our own team. Showroom on Mutaser Road, Al Nakeel, Ras Al Khaimah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#6a1d1f;      /* oxblood from their old nav bars */
+  --ox-dark:#4a1214;
+  --ink:#1d1817;
+  --body:#3d3634;
+  --mute:#7b716d;
+  --rule:#e3dcd8;
+  --paper:#ffffff;
+  --tint:#f5f1ef;
+  --serif:"Young Serif", Georgia, serif;
+  --sans:"Work Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--body);background:var(--paper)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+
+/* top line */
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;font-size:14px;color:var(--mute);border-bottom:1px solid var(--rule)}
+.topline a{text-decoration:none;color:var(--ink);font-weight:500}
+.topline .tl-right{display:flex;gap:18px;align-items:center}
+.topline .wa{display:inline-flex;align-items:center;gap:6px}
+.topline .wa svg{width:15px;height:15px;fill:#1f9d55}
+.tl-left{display:none}
+
+/* wordmark */
+.mark{padding:18px 0 6px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.mark h1{font-family:var(--serif);font-weight:400;color:var(--ox);font-size:clamp(68px,18vw,250px);line-height:.82;letter-spacing:-.02em}
+.mark .full{font-size:14px;line-height:1.35;color:var(--ink);max-width:15em;text-align:right;padding-bottom:6px}
+
+/* ruled column grid (nav lives in the column heads) */
+.cols{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
+.cols > *{border-right:1px solid var(--rule)}
+.cols > *:nth-child(2n){border-right:0}
+.navcols a{display:flex;justify-content:space-between;align-items:center;padding:10px 12px 10px 0;font-size:15px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--rule)}
+.navcols a:not(:nth-child(2n+1)){padding-left:12px}
+.navcols a::after{content:"";width:6px;height:6px;background:var(--ox)}
+.navcols a:hover{color:var(--ox)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr;gap:0;margin-top:0}
+.hero .say{padding:26px 0 30px}
+.hero .say p.lead{font-family:var(--serif);font-size:clamp(26px,3.1vw,38px);line-height:1.15;color:var(--ink)}
+.hero .say p.sub{margin-top:18px;max-width:30em}
+.hero .act{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.btn{display:inline-block;background:var(--ox);color:#fff;text-decoration:none;font-weight:600;padding:12px 18px;font-size:15px}
+.btn:hover{background:var(--ox-dark)}
+.textlink{font-weight:500;color:var(--ink);text-underline-offset:4px}
+.hero figure{position:relative}
+.hero .big img{width:100%;height:62vw;max-height:620px;object-fit:cover}
+.hero figcaption{position:absolute;left:0;bottom:0;background:#fff;color:var(--ink);font-size:13px;line-height:1.35;padding:8px 12px 0 0}
+.hero .tall{display:none}
+
+/* price */
+.price{background:var(--tint);margin-top:56px}
+.price .in{display:grid;grid-template-columns:1fr;gap:28px;padding:44px 0}
+.price h2{font-family:var(--serif);font-weight:400;color:var(--ox);font-size:clamp(34px,5.6vw,72px);line-height:1.02}
+.price h2 span{display:block;color:var(--ink);font-size:.5em;line-height:1.2;margin-top:14px}
+.price ul{list-style:none;margin-top:22px;border-top:1px solid var(--rule)}
+.price li{padding:11px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:16px}
+.price li b{color:var(--ink);font-weight:600}
+.price img{width:100%;height:100%;min-height:280px;object-fit:cover}
+
+/* section heads */
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--ink);padding-top:12px;margin-top:72px;margin-bottom:26px}
+.head h2{font-family:var(--serif);font-weight:400;color:var(--ink);font-size:clamp(30px,4vw,48px);line-height:1}
+.head p{font-size:15px;color:var(--mute);max-width:26em;text-align:right}
+
+/* services: numbered columns, photo under text */
+.svc{display:grid;grid-template-columns:1fr;gap:36px}
+.svc article{border-left:1px solid var(--rule);padding-left:16px}
+.svc .n{font-size:14px;color:var(--ox);font-weight:600}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.15;color:var(--ink);margin:30px 0 10px}
+.svc ul{list-style:none;font-size:15px}
+.svc li{padding:5px 0;border-bottom:1px solid var(--rule)}
+.svc img{margin-top:22px;width:100%;aspect-ratio:1/1;object-fit:cover}
+
+/* pattern book */
+.book{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:1fr;gap:12px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.row h3{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink);line-height:1.2}
+.row h3 small{display:block;font-family:var(--sans);font-size:14px;color:var(--mute);margin-top:4px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.strip img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.from{margin-top:22px;font-size:15px;color:var(--ink)}
+.from b{font-weight:600}
+
+/* team */
+.team{display:grid;grid-template-columns:1fr;gap:26px;align-items:start}
+.team p{font-size:18px;line-height:1.55;color:var(--ink);max-width:34em}
+.team p + p{margin-top:14px;font-size:16px;color:var(--body)}
+.team img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* find us */
+.find{display:grid;grid-template-columns:1fr;gap:26px}
+.addr{font-family:var(--serif);font-size:clamp(26px,3vw,36px);line-height:1.18;color:var(--ink)}
+.addr small{display:block;font-family:var(--sans);font-size:15px;color:var(--mute);margin-top:12px;line-height:1.5}
+dl.facts{margin-top:26px;border-top:1px solid var(--rule)}
+dl.facts div{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+dl.facts dt{color:var(--mute)}
+dl.facts dd{color:var(--ink)}
+dl.facts a{text-underline-offset:3px}
+.map{width:100%;height:380px;border:0;filter:grayscale(.35)}
+
+/* footer */
+footer{margin-top:80px;background:var(--ox-dark);color:#eadcd9}
+footer .in{display:grid;grid-template-columns:1fr;gap:28px;padding:44px 0 30px}
+footer .fm{font-family:var(--serif);font-size:44px;line-height:1;color:#fff}
+footer .fm span{display:block;font-family:var(--sans);font-size:14px;color:#d6c1bd;margin-top:10px;line-height:1.4}
+footer h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px}
+footer p,footer li{font-size:14px;line-height:1.7}
+footer ul{list-style:none}
+footer a{color:#eadcd9;text-underline-offset:3px}
+footer .base{border-top:1px solid rgba(255,255,255,.18);padding:14px 0 18px;font-size:13px;color:#cbb3ae;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.concept{position:fixed;left:10px;bottom:10px;z-index:9;background:rgba(255,255,255,.94);border:1px solid var(--rule);color:var(--mute);font-size:11.5px;line-height:1.3;padding:5px 8px;max-width:calc(100% - 20px)}
+
+@media (min-width:760px){
+  .wrap{padding:0 32px}
+  .tl-left{display:block}
+  .cols{grid-template-columns:repeat(4,1fr)}
+  .cols > *:nth-child(2n){border-right:1px solid var(--rule)}
+  .cols > *:nth-child(4n){border-right:0}
+  .navcols a{border-bottom:0}
+  .navcols a:not(:first-child){padding-left:12px}
+  .hero{grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule)}
+  .hero > *{border-right:1px solid var(--rule)}
+  .hero > *:last-child{border-right:0}
+  .hero .say{padding:28px 22px 28px 0;display:flex;flex-direction:column;justify-content:space-between}
+  .hero .big{grid-column:span 2;padding:12px}
+  .hero .big img{height:100%;min-height:520px;max-height:none}
+  .hero figcaption{left:12px;bottom:12px}
+  .hero .tall{display:block;padding:12px 0 12px 12px}
+  .hero .tall img{width:100%;height:100%;object-fit:cover}
+  .price .in{grid-template-columns:1.3fr 1fr;gap:48px;align-items:stretch}
+  .svc{grid-template-columns:repeat(3,1fr);gap:0}
+  .svc article{padding:0 18px}
+  .row{grid-template-columns:1fr 3fr;gap:24px}
+  .strip{grid-template-columns:repeat(4,1fr)}
+  .team{grid-template-columns:2fr 1fr 1fr;gap:28px}
+  .find{grid-template-columns:1fr 1.25fr;gap:44px}
+  .map{height:100%;min-height:440px}
+  footer .in{grid-template-columns:1.4fr 1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="topline">
+    <span class="tl-left">Al Nakeel, Ras Al Khaimah &middot; Showroom open Sat&ndash;Thu</span>
+    <span class="tl-right">
+      <a href="tel:+97172338929">07 233 8929</a>
+      <a class="wa" href="https://wa.me/971559936798" aria-label="WhatsApp 055 993 6798"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a>
+    </span>
+  </div>
+  <div class="mark">
+    <h1>Al Raha</h1>
+    <p class="full">Al Raha Painting &amp; Sanitary Materials LLC</p>
+  </div>
+  <nav class="cols navcols" aria-label="Main">
+    <a href="#wallpaper">Wallpaper</a>
+    <a href="#paint">Paint</a>
+    <a href="#prices">Prices</a>
+    <a href="#find-us">Find us</a>
+  </nav>
+</header>
+
+<main>
+<section class="wrap">
+  <div class="hero">
+    <div class="say">
+      <div>
+        <p class="lead">Wallpaper and paint for your home, chosen in our showroom and fitted by our own team.</p>
+        <p class="sub">Plain and patterned papers, borders, 3D wallpaper, and digital wallpaper printed with a photo of your choice. Interior and exterior paint in matte, durable, washable and water-based finishes.</p>
+      </div>
+      <div class="act">
+        <a class="btn" href="tel:+97172338929">Call the showroom</a>
+        <a class="textlink" href="https://wa.me/971559936798">or WhatsApp a photo of your wall</a>
+      </div>
+    </div>
+    <figure class="big">
+      <img src="img/messara11.jpg" alt="Living room with a plum damask wallpaper feature wall">
+      <figcaption>1604 Mutaser Road, Al Nakeel<br>opp. Al Harameen Book Shop</figcaption>
+    </figure>
+    <figure class="tall">
+      <img src="img/nafees2.jpg" alt="Dark patterned wallpaper in a dining room">
+    </figure>
+  </div>
+</section>
+
+<section class="price" id="prices">
+  <div class="wrap in">
+    <div>
+      <h2>From AED 24 a square metre, fitted.<span>Buy 7 rolls or more and we install them free.</span></h2>
+      <ul>
+        <li><b>Wallpaper with installation</b><span>from AED 24 / sq m</span></li>
+        <li><b>Installation</b><span>free on 7 rolls or more</span></li>
+        <li><b>Papers from</b><span>Italy, Belgium, Germany, US, England, Sweden</span></li>
+      </ul>
+    </div>
+    <img src="img/230-0047_eco_exclusive_007.jpg" alt="Yellow floral wallpaper behind a bronze lamp" loading="lazy">
+  </div>
+</section>
+
+<section class="wrap" id="paint">
+  <div class="head">
+    <h2>What we do</h2>
+    <p>Our painters, masons and joiners do the work themselves, inside and outside the house.</p>
+  </div>
+  <div class="svc">
+    <article>
+      <span class="n">01</span>
+      <h3>Wallpaper, supplied and fitted</h3>
+      <ul>
+        <li>Wallpaper from our showroom range</li>
+        <li>Borders</li>
+        <li>Decorative mouldings</li>
+        <li>Fitting by our own installers</li>
+      </ul>
+      <img src="img/230-0047_eco_exclusive_016.jpg" alt="Red rose wallpaper in a living room" loading="lazy">
+    </article>
+    <article>
+      <span class="n">02</span>
+      <h3>3D and digital wallpaper</h3>
+      <ul>
+        <li>3D wallpapers</li>
+        <li>Digital wallpaper</li>
+        <li>Wallpaper printed with your own photo</li>
+        <li>Feature walls and murals</li>
+      </ul>
+      <img src="img/24325_351397176357_106414676357_3519907_3246256_n.jpg" alt="City skyline digital wallpaper mural behind a red chair" loading="lazy">
+    </article>
+    <article>
+      <span class="n">03</span>
+      <h3>Paint, inside and out</h3>
+      <ul>
+        <li>Interiors: matte, durable, washable or water paint</li>
+        <li>Exteriors: matte, durable, washable or water paint</li>
+        <li>Paint for walls and furnishings</li>
+      </ul>
+      <img src="img/139.jpg" alt="Room painted in deep orange and red" loading="lazy">
+    </article>
+  </div>
+</section>
+
+<section class="wrap" id="wallpaper">
+  <div class="head">
+    <h2>From the showroom</h2>
+    <p>A few of the papers we carry. Come in to see the full books and take samples home.</p>
+  </div>
+  <div class="book">
+    <div class="row">
+      <h3>Damask and ornament<small>Classic repeats, metallic and flock looks</small></h3>
+      <div class="strip">
+        <img src="img/3.jpg" alt="Blue damask wallpaper" loading="lazy">
+        <img src="img/415.jpg" alt="Grey ornamental wallpaper behind a bed" loading="lazy">
+        <img src="img/219.jpg" alt="Dark patterned wallpaper in a sitting room" loading="lazy">
+        <img src="img/nafees3.jpg" alt="Gold textured wallpaper behind a lamp" loading="lazy">
+      </div>
+    </div>
+    <div class="row">
+      <h3>Floral<small>Small prints to full-wall blooms</small></h3>
+      <div class="strip">
+        <img src="img/1113.jpg" alt="Small floral wallpaper in a living room" loading="lazy">
+        <img src="img/230-0047_eco_exclusive_016.jpg" alt="Red rose wallpaper" loading="lazy">
+        <img src="img/230-0047_eco_exclusive_007.jpg" alt="Yellow floral wallpaper" loading="lazy">
+        <img src="img/24325_351397141357_106414676357_3519905_1878534_n.jpg" alt="Painted floral wall design" loading="lazy">
+      </div>
+    </div>
+    <div class="row">
+      <h3>Modern and geometric<small>Bold lines for living rooms and offices</small></h3>
+      <div class="strip">
+        <img src="img/2.jpg" alt="Black and white swirl wallpaper in a bedroom" loading="lazy">
+        <img src="img/1.jpg" alt="Black and beige geometric wallpaper" loading="lazy">
+        <img src="img/612.jpg" alt="Grey wave pattern wallpaper with a yellow chair" loading="lazy">
+        <img src="img/230-0047_eco_exclusive_002.jpg" alt="Dark wallpaper with teal line drawings" loading="lazy">
+      </div>
+    </div>
+    <div class="row">
+      <h3>Kids' rooms and texture<small>Playful prints, wood and stone effects</small></h3>
+      <div class="strip">
+        <img src="img/messara1.jpg" alt="Children's wallpaper samples" loading="lazy">
+        <img src="img/messara.jpg" alt="Children in front of printed wallpaper" loading="lazy">
+        <img src="img/230-0047_eco_exclusive_012.jpg" alt="Blue swan wallpaper in a bedroom" loading="lazy">
+        <img src="img/nafees.jpg" alt="Wood plank effect wallpaper" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <p class="from"><b>Where our papers come from:</b> Italy, Belgium, Germany, the US, England and Sweden.</p>
+</section>
+
+<section class="wrap">
+  <div class="head">
+    <h2>Colour, design and budget</h2>
+  </div>
+  <div class="team">
+    <div>
+      <p>Tell us the room, the colour you have in mind and what you want to spend. We will show you papers and paints that suit it, for every budget.</p>
+      <p>Our decorators look after both the protection and the decoration of your walls, inside and outside. If you have a wallpaper problem, bring it to us and we will help you sort it out.</p>
+    </div>
+    <img src="img/nafees1.jpg" alt="Brown textured wallpaper in a living room" loading="lazy">
+    <img src="img/messara11.jpg" alt="Plum damask wallpaper in a bright room" loading="lazy" style="object-position:20% 50%">
+  </div>
+</section>
+
+<section class="wrap" id="find-us">
+  <div class="head">
+    <h2>Find us</h2>
+    <p>Visit the showroom or call ahead. We reply to email by the next working day.</p>
+  </div>
+  <div class="find">
+    <div>
+      <p class="addr">1604 Mutaser Road, Al Nakeel, Ras Al Khaimah<small>Opposite Al Harameen Book Shop. P.O. Box 16543.</small></p>
+      <dl class="facts">
+        <div><dt>Showroom</dt><dd>Sat&ndash;Thu 10:00am&ndash;1:30pm and 4:30pm&ndash;10:00pm<br>Friday closed</dd></div>
+        <div><dt>Telephone</dt><dd><a href="tel:+97172338929">07 233 8929</a></dd></div>
+        <div><dt>Mobile</dt><dd><a href="tel:+971559936798">055 993 6798</a> &middot; <a href="tel:+971551931725">055 193 1725</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/971559936798">055 993 6798</a></dd></div>
+        <div><dt>Fax</dt><dd>07 233 8644</dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:alrahallc@yahoo.com">alrahallc@yahoo.com</a></dd></div>
+      </dl>
+    </div>
+    <iframe class="map" title="Map: Al Raha Painting and Sanitary Materials, Al Nakeel, Ras Al Khaimah" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Al+Raha+Painting+%26+Sanitary+Materials+Mutaser+Road+Al+Nakeel+Ras+Al+Khaimah&output=embed"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap in">
+    <div class="fm">Al Raha<span>Al Raha Painting &amp; Sanitary Materials LLC<br>Wallpaper and paint, Ras Al Khaimah</span></div>
+    <div>
+      <h4>Showroom</h4>
+      <p>1604 Mutaser Road, Al Nakeel<br>Opp. Al Harameen Book Shop<br>Ras Al Khaimah, UAE<br>P.O. Box 16543</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Sat&ndash;Thu 10:00am&ndash;1:30pm<br>and 4:30pm&ndash;10:00pm<br>Friday closed</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Tel <a href="tel:+97172338929">07 233 8929</a></li>
+        <li>Mobile <a href="tel:+971559936798">055 993 6798</a></li>
+        <li>Mobile <a href="tel:+971551931725">055 193 1725</a></li>
+        <li>Fax 07 233 8644</li>
+        <li><a href="mailto:alrahallc@yahoo.com">alrahallc@yahoo.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap base">
+    <span><a href="#wallpaper">Wallpaper</a> &middot; <a href="#paint">Paint</a> &middot; <a href="#prices">Prices</a> &middot; <a href="#find-us">Find us</a></span>
+    <span>Design concept by Websmith for Al Raha Painting &amp; Sanitary Materials LLC. Not the official site.</span>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Al Raha Painting &amp; Sanitary Materials LLC. Not the official site.</div>
+</body>
+</html>
