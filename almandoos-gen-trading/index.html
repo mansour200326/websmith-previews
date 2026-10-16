@@ -137,7 +137,8 @@ section{padding:60px 20px}
 .brands div{background:#fff;padding:14px 12px 10px}
 .brands img{height:58px;width:auto;margin:0 auto;mix-blend-mode:multiply}
 .brands p{font-size:13px;color:var(--mute);text-align:center;margin-top:6px}
-@media (min-width:700px){.brands{grid-template-columns:repeat(4,1fr)}}
+.brands div:last-child{grid-column:1/-1}
+@media (min-width:700px){.brands{grid-template-columns:repeat(4,1fr)}.brands div:last-child{grid-column:span 1}}
 @media (min-width:1000px){.brands{grid-template-columns:repeat(7,1fr)}}
 
 /* ordering */
