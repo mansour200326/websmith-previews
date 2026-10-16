@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Yousif General Contracting Est. | Building contractor, Al Ain</title>
+<meta name="description" content="Yousif General Contracting Establishment (YGC), building contractor on Main Street, Al Ain. Construction and maintenance, external works, water networks and roads across the UAE since 1986.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16181b; --body:#3a3e44; --mute:#6c7178; --rule:#dcdee1; --soft:#f3f4f5;
+  --red:#d3141b; --paper:#fff;
+  --pad:clamp(18px,4vw,56px);
+  --c1:clamp(220px,27%,380px); --gap:clamp(20px,3vw,44px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;color:var(--body);background:var(--paper);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl}
+.wrap{padding-left:var(--pad);padding-right:var(--pad);max-width:1440px;margin:0 auto}
+h2,h3,.cond{font-stretch:75%;font-variation-settings:"wdth" 75;color:var(--ink);font-weight:700;line-height:1.05}
+
+/* header */
+header.top{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:auto;mix-blend-mode:multiply}
+.brand b{display:block;font-weight:700;font-size:15px;line-height:1.15;font-variation-settings:"wdth" 90}
+.brand .ar{display:block;font-size:13px;color:var(--mute);line-height:1.3;text-align:left}
+nav.main{display:flex;gap:26px;margin-left:auto;font-size:15px}
+nav.main a{text-decoration:none;color:var(--body)}
+nav.main a:hover{color:var(--red)}
+.tel{font-weight:600;color:var(--ink);text-decoration:none;font-size:15px;border-left:1px solid var(--rule);padding-left:24px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tel span{display:block;font-weight:400;font-size:12px;color:var(--mute)}
+
+/* hero */
+.hero{padding-top:clamp(26px,4vw,52px)}
+.mark{font-weight:800;color:var(--ink);font-variation-settings:"wdth" 62;font-stretch:62%;font-size:clamp(50px,8.7vw,150px);line-height:.88;letter-spacing:-.01em;margin-left:-.04em}
+.mark .r{color:var(--red)}
+.corners{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-top:16px;padding-bottom:16px;border-bottom:1px solid var(--ink);font-size:15px;color:var(--ink)}
+.corners .ar{font-size:19px;font-weight:600}
+.hero-grid{display:grid;grid-template-columns:var(--c1) minmax(0,1fr);gap:var(--gap);margin-top:clamp(20px,3vw,36px)}
+.hero-copy p{font-size:clamp(18px,1.5vw,21px);line-height:1.45;color:var(--ink)}
+.hero-copy p + p{margin-top:14px;font-size:16px;color:var(--body)}
+.hero-copy .act{margin-top:26px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:2px;font-size:16px}
+.btn:hover{background:#b10f15}
+.link{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:1px;font-size:15px}
+.link:hover{color:var(--red);border-color:var(--red)}
+figure.lead img{width:100%;aspect-ratio:1140/600;object-fit:cover;object-position:center 62%}
+.mbr{display:none}
+figcaption{font-size:13px;color:var(--mute);margin-top:8px;display:flex;justify-content:space-between;gap:12px}
+
+/* section frame */
+section{padding:clamp(56px,8vw,110px) 0 0}
+.shead{display:grid;grid-template-columns:var(--c1) minmax(0,1fr);gap:var(--gap);align-items:end;border-top:1px solid var(--ink);padding-top:16px;margin-bottom:clamp(26px,3.5vw,44px)}
+.shead h2{font-size:clamp(36px,5vw,68px)}
+.shead p{max-width:62ch;font-size:16px}
+.label{font-size:14px;color:var(--ink);font-weight:600}
+
+/* company */
+.company{display:grid;grid-template-columns:var(--c1) minmax(0,1fr);gap:var(--gap)}
+.company .text{columns:2 320px;column-gap:44px;font-size:17px}
+.company .text p{margin-bottom:14px;break-inside:avoid}
+.company .text p:first-child{font-size:21px;line-height:1.42;color:var(--ink);column-span:all;max-width:46ch;margin-bottom:22px}
+
+/* projects */
+.pgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2vw,28px);row-gap:clamp(30px,3.6vw,52px)}
+.card{grid-column:span 4;display:flex;flex-direction:column}
+.card.w7{grid-column:span 7}.card.w5{grid-column:span 5}.card.w8{grid-column:span 8}.card.w4{grid-column:span 4}.card.w6{grid-column:span 6}
+.card .ph{position:relative;background:var(--soft);overflow:hidden}
+.card .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card.w7 .ph img,.card.w8 .ph img{aspect-ratio:16/10}
+.card .ph .tag{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);color:var(--ink);font-size:12px;padding:3px 7px;border-radius:2px}
+.chips{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+.chip{font-size:12.5px;border:1px solid #c9ccd0;color:var(--body);padding:2px 8px;border-radius:2px;white-space:nowrap}
+.card h3{font-size:clamp(26px,2.4vw,34px);margin-top:10px}
+.card p{font-size:15.5px;margin-top:6px;max-width:52ch}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 16px;margin-top:12px;font-size:14.5px;border-top:1px solid var(--rule);padding-top:10px}
+.card dt{color:var(--mute)}
+.card dd{color:var(--ink);font-variant-numeric:tabular-nums}
+.card.type .ph{background:var(--ink);color:#fff;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:22px}
+.card.type .ph .big{font-weight:800;font-variation-settings:"wdth" 62;font-size:clamp(44px,5vw,76px);line-height:.9;color:#fff}
+.card.type .ph .big small{display:block;font-size:15px;font-weight:500;font-variation-settings:"wdth" 100;color:#b9bdc2;margin-bottom:8px}
+.card.type .ph .ygc{width:34px;filter:grayscale(1) invert(1);mix-blend-mode:screen;opacity:.7;align-self:flex-end}
+.card.type.red .ph{background:var(--red)}
+.card.type.red .ph .big small{color:#ffd9da}
+
+/* clients index */
+.filters{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:16px;color:var(--ink);margin-bottom:8px}
+.filters a{text-decoration:none}
+.filters a:hover{color:var(--red)}
+.filters sup{font-size:11px;color:var(--mute);margin-left:2px}
+.idx{border-top:1px solid var(--rule)}
+details{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px minmax(0,2.4fr) 1fr 1fr 28px;gap:16px;align-items:baseline;padding:18px 0}
+summary::-webkit-details-marker{display:none}
+summary .n{color:var(--mute);font-size:14px;font-variant-numeric:tabular-nums}
+summary .c{font-weight:700;color:var(--ink);font-variation-settings:"wdth" 75;font-size:clamp(22px,2.2vw,30px);line-height:1.1}
+summary .c sup{font-size:13px;font-weight:500;color:var(--red);margin-left:4px;font-variation-settings:"wdth" 100}
+summary .m{font-size:14.5px;color:var(--body)}
+summary .pl{font-size:22px;color:var(--ink);text-align:right;transition:transform .2s}
+details[open] summary .pl{transform:rotate(45deg)}
+summary:hover .c{color:var(--red)}
+.plist{padding:0 0 26px 68px;columns:2 340px;column-gap:40px;font-size:15px;counter-reset:p}
+.plist li{list-style:none;break-inside:avoid;padding:6px 0;border-top:1px dotted #d4d6d9;display:flex;gap:10px}
+.plist li::before{counter-increment:p;content:counter(p,decimal-leading-zero);color:var(--mute);font-size:12.5px;padding-top:2px;font-variant-numeric:tabular-nums}
+.plist li i{font-style:normal;color:var(--mute);margin-left:auto;padding-left:10px;font-variant-numeric:tabular-nums}
+
+/* work */
+.work{display:grid;grid-template-columns:var(--c1) minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}
+.work h3{font-size:30px;margin-bottom:10px}
+.work p{font-size:16px;margin-bottom:12px}
+.scope{list-style:none;border-top:1px solid var(--ink);margin-top:6px}
+.scope li{border-bottom:1px solid var(--rule);padding:12px 0;color:var(--ink);font-size:17px;display:flex;gap:14px}
+.scope li b{font-weight:500;color:var(--mute);font-size:13px;padding-top:4px;min-width:22px}
+.frames{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-top:clamp(30px,4vw,50px)}
+.frames img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* qhse */
+.qhse{display:grid;grid-template-columns:var(--c1) minmax(0,1.1fr) minmax(0,1fr);gap:var(--gap);align-items:start}
+.qhse p{font-size:16px;margin-bottom:12px}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.certs figure{border:1px solid var(--rule);padding:8px;background:#fff}
+.certs img{width:100%;aspect-ratio:778/1100;object-fit:cover}
+.certs figcaption{display:block;color:var(--ink);font-size:12.5px;margin-top:6px;font-weight:600}
+
+/* contact */
+.contact{display:grid;grid-template-columns:var(--c1) minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}
+.office h3{font-size:28px;margin-bottom:4px}
+.office .ar{font-size:16px;color:var(--mute);text-align:left;margin-bottom:14px}
+.office dl{display:grid;grid-template-columns:90px 1fr;gap:8px 12px;font-size:16px}
+.office dt{color:var(--mute)}
+.office dd a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--rule)}
+.office dd a:hover{color:var(--red);border-color:var(--red)}
+.office + .office{border-left:1px solid var(--rule);padding-left:var(--gap)}
+.sublogo{width:150px;mix-blend-mode:multiply;margin-bottom:10px}
+.map{margin-top:clamp(30px,4vw,50px);border:1px solid var(--rule)}
+.map iframe{display:block;width:100%;height:420px;border:0;filter:grayscale(.35)}
+
+/* footer */
+footer{margin-top:clamp(60px,8vw,110px);background:var(--ink);color:#c6c9cd;padding:clamp(40px,5vw,64px) 0 90px;font-size:15px}
+footer .fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+footer .fm{font-weight:800;color:#fff;font-variation-settings:"wdth" 62;font-size:clamp(40px,5vw,64px);line-height:.9}
+footer .fm + .ar{color:#fff;font-size:18px;text-align:left;margin-top:10px}
+footer h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:10px}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:#ff8a8e}
+footer p{line-height:1.6}
+footer .base{border-top:1px solid #33373c;margin-top:40px;padding-top:18px;font-size:13px;color:#8d9298;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.concept{position:fixed;right:12px;bottom:12px;z-index:50;background:rgba(22,24,27,.88);color:#e8eaec;font-size:11.5px;line-height:1.35;padding:6px 10px;border-radius:3px;max-width:280px}
+
+@media (max-width:1020px){
+  nav.main{display:none}
+  .tel{margin-left:auto}
+  .hero-grid,.shead,.company,.work,.qhse,.contact{grid-template-columns:1fr}
+  .hero-grid figure{order:-1}
+  .card,.card.w7,.card.w5,.card.w8,.card.w4,.card.w6{grid-column:span 6}
+  footer .fg{grid-template-columns:1fr 1fr}
+  .office + .office{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:26px}
+  .shead .label{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  header.top .wrap{height:62px;gap:12px}
+  .brand .ar{display:none}
+  .brand b{font-size:14px}
+  .tel{padding-left:12px;font-size:14px}
+  .tel span{display:none}
+  .corners{flex-direction:column;gap:4px;font-size:14px}
+  .mbr{display:inline}
+  .concept{font-size:10.5px;max-width:230px;padding:5px 8px;right:8px;bottom:8px}
+  figure.lead img{aspect-ratio:4/3}
+  .card,.card.w7,.card.w5,.card.w8,.card.w4,.card.w6{grid-column:span 12}
+  summary{grid-template-columns:34px 1fr 24px;gap:10px}
+  summary .m{display:none}
+  summary .m.d{display:block;grid-column:2;font-size:13.5px;margin-top:-4px}
+  .plist{padding-left:0}
+  .certs{grid-template-columns:repeat(3,1fr)}
+  footer .fg{grid-template-columns:1fr}
+  .map iframe{height:320px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="ygc-mark.jpg" alt="YGC logo">
+      <span><b>Yousif General Contracting Est.</b><span class="ar">مؤسسة يوسف للمقاولات العامة</span></span>
+    </a>
+    <nav class="main">
+      <a href="#projects">Projects</a>
+      <a href="#clients">Clients</a>
+      <a href="#work">What we do</a>
+      <a href="#company">Company</a>
+      <a href="#qhse">QHSE</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel" href="tel:+97137377200">03 737 7200<span>Sat–Thu, 8:00–17:00</span></a>
+  </div>
+</header>
+
+<main>
+<div class="hero wrap">
+  <h1 class="mark">Yousif General <br class="mbr">Contracting<span class="r">.</span></h1>
+  <div class="corners">
+    <span>Main Street, Al Ain · Building contractor since 1986</span>
+    <span class="ar">مؤسسة يوسف للمقاولات العامة</span>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p>We build and maintain buildings for government departments, the armed forces and private owners, from our office on Main Street in Al Ain to sites across the UAE.</p>
+      <p>Schools, courts, camps, villas, water tanks, fences and roads. Construction management or design and build.</p>
+      <div class="act">
+        <a class="btn" href="tel:+97137377200">Call 03 737 7200</a>
+        <a class="link" href="http://yousifgc.com/YGC-Profile-2019.pdf">Download our prequalification (PDF)</a>
+      </div>
+    </div>
+    <figure class="lead">
+      <img src="global-english-school.jpg" alt="Global English School building in Al Ain, built by YGC" width="1140" height="855">
+      <figcaption><span>Global English School, Al Ain</span><span>Client: Global English School</span></figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="shead">
+      <span class="label">Project sheets</span>
+      <div><h2>Projects</h2><p>Some of our larger jobs, with the client, value and duration of each.</p></div>
+    </div>
+
+    <div class="pgrid">
+      <article class="card w7">
+        <div class="ph"><img src="masfout-court.jpg" alt="3D render of Masfout Court building" loading="lazy"><span class="tag">3D render</span></div>
+        <div class="chips"><span class="chip">Government building</span><span class="chip">Masfout, Ajman</span></div>
+        <h3>Masfout Court</h3>
+        <p>Construction and maintenance of the court building in Masfout, Ajman.</p>
+        <dl><dt>Client</dt><dd>Ministry of Infrastructure Development</dd><dt>Value</dt><dd>AED 16,911,000</dd><dt>Duration</dt><dd>18 months</dd></dl>
+      </article>
+
+      <article class="card w5 type">
+        <div class="ph">
+          <img class="ygc" src="ygc-mark.jpg" alt="">
+          <div class="big"><small>Value</small>AED<br>59,950,000</div>
+        </div>
+        <div class="chips"><span class="chip">Military camp</span><span class="chip">Fujairah</span></div>
+        <h3>Al Heil Camp</h3>
+        <p>Buildings for the supporting units at Al Heil Camp.</p>
+        <dl><dt>Client</dt><dd>Command of Military Works</dd><dt>Duration</dt><dd>15 months</dd></dl>
+      </article>
+
+      <article class="card w4">
+        <div class="ph"><img src="wadi-tarbat.jpg" alt="Wadi Tarbat site at Jebel Hafeet" loading="lazy"></div>
+        <div class="chips"><span class="chip">Fences, roads, landscaping</span><span class="chip">Jebel Hafeet</span></div>
+        <h3>Wadi Tarbat</h3>
+        <p>Natural reserve works at Jebel Hafeet: fences, roads, landscaping and external works.</p>
+        <dl><dt>Client</dt><dd>Jebel Hafeet Natural Reserve</dd><dt>Value</dt><dd>AED 13,000,000</dd><dt>Duration</dt><dd>4 months</dd></dl>
+      </article>
+
+      <article class="card w8">
+        <div class="ph"><img src="hisn-al-serrah.jpg" alt="3D render of Hisn Al Serrah traditional fort" loading="lazy"><span class="tag">3D render</span></div>
+        <div class="chips"><span class="chip">Traditional fort</span><span class="chip">Beda' Zayed, Abu Dhabi</span></div>
+        <h3>Hisn Al Serrah</h3>
+        <p>A traditional fort building in Beda' Zayed.</p>
+        <dl><dt>Client</dt><dd>Command of Military Works</dd><dt>Value</dt><dd>AED 9,700,000</dd><dt>Duration</dt><dd>15 months</dd></dl>
+      </article>
+
+      <article class="card w6">
+        <div class="ph"><img src="bani-yas-villas-site.jpg" alt="Bani Yas villas under construction" loading="lazy"><span class="tag">On site</span></div>
+        <div class="chips"><span class="chip">Residential villas</span><span class="chip">Bani Yas, Abu Dhabi</span></div>
+        <h3>Bani Yas Villas</h3>
+        <p>Construction and maintenance of four environmentally friendly residential villas.</p>
+        <dl><dt>Client</dt><dd>Mawared Services LLC</dd><dt>Value</dt><dd>AED 8,726,500</dd><dt>Duration</dt><dd>10 months</dd></dl>
+      </article>
+
+      <article class="card w6">
+        <div class="ph"><img src="private-villa-zakher.jpg" alt="3D render of a private villa in Zakher" loading="lazy" style="object-position:center 40%"><span class="tag">3D render</span></div>
+        <div class="chips"><span class="chip">Private villa</span><span class="chip">Zakher, Al Ain</span></div>
+        <h3>Private Villa, Zakher</h3>
+        <p>Construction and maintenance of a private villa in Zakher, Al Ain.</p>
+        <dl><dt>Client</dt><dd>Mrs. Latifa Al Weheibi</dd><dt>Value</dt><dd>AED 2,808,000</dd><dt>Duration</dt><dd>16 months</dd></dl>
+      </article>
+
+      <article class="card w5">
+        <div class="ph"><img src="global-english-school-2.jpg" alt="Global English School building, Al Ain" loading="lazy"></div>
+        <div class="chips"><span class="chip">School, steel structure</span><span class="chip">Al Ain</span></div>
+        <h3>Global English School Extension</h3>
+        <p>Extension buildings and steel structure for the school.</p>
+        <dl><dt>Client</dt><dd>Global English School</dd><dt>Value</dt><dd>AED 3,900,000</dd><dt>Duration</dt><dd>8 months</dd></dl>
+      </article>
+
+      <article class="card w7 type red">
+        <div class="ph" style="aspect-ratio:16/10">
+          <img class="ygc" src="ygc-mark.jpg" alt="">
+          <div class="big"><small>Value</small>AED 5,500,000</div>
+        </div>
+        <div class="chips"><span class="chip">Fences, containers, helipad</span><span class="chip">Western Region</span></div>
+        <h3>Abu Huraiba Fence</h3>
+        <p>Phase 1 of Meydan Al Thaqiba: fences, containers and a helipad.</p>
+        <dl><dt>Client</dt><dd>Emirates Shooting Equipment / Command of Military Works</dd><dt>Duration</dt><dd>6 months</dd></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrap">
+    <div class="shead">
+      <span class="label">Who we build for</span>
+      <div><h2>Clients and their projects</h2><p>Most of our work is for government departments in Al Ain and Abu Dhabi and for the UAE Armed Forces. Open a client to see the projects we did for them.</p></div>
+    </div>
+
+    <div class="filters">
+      <a href="#c-mil">Military<sup>24</sup></a>
+      <a href="#c-for">Forestry<sup>15</sup></a>
+      <a href="#c-agr">Agriculture<sup>12</sup></a>
+      <a href="#c-mun">Municipality<sup>5</sup></a>
+      <a href="#c-pw">Public works<sup>5</sup></a>
+      <a href="#c-alg">ALGECO<sup>5</sup></a>
+      <a href="#c-tp">Town planning<sup>1</sup></a>
+    </div>
+
+    <div class="idx">
+      <details id="c-mil" open>
+        <summary><span class="n">01</span><span class="c">Command of Military Works<sup>24</sup></span><span class="m">U.A.E.</span><span class="m">12+ years</span><span class="pl">+</span></summary>
+        <ol class="plist">
+          <li>Finishing works for Zayed Military College<i>2010</i></li>
+          <li>Camps sheltering in Abu Dhabi, Al Ain and the region<i>2010</i></li>
+          <li>Camps sheltering in the Northern Emirates<i>2010</i></li>
+          <li>Construction of observation towers<i>2010</i></li>
+          <li>Accommodation building and other facilities in Al Manama<i>2011</i></li>
+          <li>Construction of different buildings in Al Hamra<i>2011</i></li>
+          <li>Stores and fences for Zayed Military College<i>2011</i></li>
+          <li>Walls and fences for Zayed Military College<i>2011</i></li>
+          <li>Levelling works and pavement for mechanical parking at camp<i>2013</i></li>
+          <li>Boundary wall for Mahawi Camp<i>2014</i></li>
+          <li>Construction of car parking<i>2014</i></li>
+          <li>Al-Hail alternative station for the Royal Guard<i>2014</i></li>
+          <li>Height extension of security fence at camp No. 420701<i>2014</i></li>
+          <li>Electrical and manual shooting range, camp No. 130803<i>2015</i></li>
+          <li>Maintenance of fence for Border Guard Group No. 121801<i>2016</i></li>
+          <li>Border fence at Um Al Zamool</li>
+          <li>Air defence buildings at Nad Al Sheba Camp</li>
+          <li>Concrete wall around the base of Al Dhafra</li>
+          <li>Lighting poles, buildings, precast concrete wall and watch towers, Air Defence Camp, Baniyas</li>
+          <li>Concrete wall around the camps at Sweihan</li>
+          <li>Border wall around the base at Safrah</li>
+          <li>Buildings for the Armed Forces</li>
+          <li>Military training suite at the Faculty of Khalifa bin Zayed</li>
+          <li>Fences and borders in the Northern Emirates</li>
+        </ol>
+      </details>
+
+      <details id="c-for">
+        <summary><span class="n">02</span><span class="c">Abu Dhabi Forestry Department<sup>15</sup></span><span class="m">Abu Dhabi forests</span><span class="m">8+ years</span><span class="pl">+</span></summary>
+        <ol class="plist">
+          <li>Two worker camps in the forest of Al Liseli, construction and maintenance</li>
+          <li>Two camps in the forests near Busibah</li>
+          <li>60,000 gallon water tank, Dhabian area</li>
+          <li>Brick wall for deer in the forest area of Melt Water</li>
+          <li>Concrete wall and wire fencing, construction and maintenance</li>
+          <li>Concrete wall in Sih Nsash</li>
+          <li>Six water tanks of 60,000 gallons each</li>
+          <li>Workers' dormitory camps no. 5 and no. 20, forest areas</li>
+          <li>Construction of two labour camps</li>
+          <li>Two reservoirs in Arahiya area</li>
+          <li>Reservoir in Bahiran area</li>
+          <li>Reservoir in Yaeilya area</li>
+          <li>Labour camp in Al Wagan</li>
+          <li>Water tanks in Abu Deeb</li>
+          <li>Water tanks in Sein Garaba</li>
+        </ol>
+      </details>
+
+      <details id="c-agr">
+        <summary><span class="n">03</span><span class="c">Al Ain Agriculture Department<sup>12</sup></span><span class="m">Al Ain</span><span class="m">5+ years</span><span class="pl">+</span></summary>
+        <ol class="plist">
+          <li>Al Zalah Centre for livestock, Phase 1</li>
+          <li>Protection works along the valley by the truck road</li>
+          <li>Wire fence and water tanks, third stage</li>
+          <li>Maintenance of five tanks in Suweihan</li>
+          <li>Wire fence and tanks, Al Wagan Phase 2</li>
+          <li>Wire fences and water tanks for citizens' farms, Nahel, fifth stage</li>
+          <li>1 million gallon reservoir, Al Ain</li>
+          <li>Walls and fences, Al Ain</li>
+          <li>Installation of 30 caravans</li>
+          <li>Wire fences and water tanks, Seeh Harz</li>
+          <li>Wire fences and water tanks, Bokrya</li>
+          <li>Mesh walls and cabinets at Sulaimat</li>
+        </ol>
+      </details>
+
+      <details id="c-mun">
+        <summary><span class="n">04</span><span class="c">Al Ain Municipality<sup>5</sup></span><span class="m">Al Ain</span><span class="m">4+ years</span><span class="pl">+</span></summary>
+        <ol class="plist">
+          <li>Supply and installation of 30 caravans</li>
+          <li>General maintenance of popular housing in Balqua</li>
+          <li>Maintenance of the Habara bird enclosures, Al Ain Zoo</li>
+          <li>Protected Jebel Hafeet, Phase 1</li>
+          <li>Maintenance of low-cost houses in Al Quoa, Phase 2</li>
+        </ol>
+      </details>
+
+      <details id="c-pw">
+        <summary><span class="n">05</span><span class="c">Al Ain Department of Public Works<sup>5</sup></span><span class="m">Al Ain</span><span class="m">5+ years</span><span class="pl">+</span></summary>
+        <ol class="plist">
+          <li>Boundary wall around a pumping station</li>
+          <li>Design, construction and maintenance for the Zayed House for Social Welfare</li>
+          <li>Maintenance of mosques in Al Ain</li>
+          <li>Maintenance of Al Jimi Hospital for one year</li>
+          <li>Maintenance of Tawam Hospital for one year</li>
+        </ol>
+      </details>
+
+      <details id="c-alg">
+        <summary><span class="n">06</span><span class="c">ALGECO Al Ain<sup>5</sup></span><span class="m">UAE</span><span class="m">4+ years</span><span class="pl">+</span></summary>
+        <ol class="plist">
+          <li>Border fence, Um Al Zamool</li>
+          <li>Concrete wall around the base of Al Dhafra</li>
+          <li>Concrete wall around the camps at Sweihan</li>
+          <li>Border wall around the base at Safrah</li>
+          <li>Fences and borders in the Northern Emirates</li>
+        </ol>
+      </details>
+
+      <details id="c-tp">
+        <summary><span class="n">07</span><span class="c">Al Ain Town Planning Department<sup>1</sup></span><span class="m">Al Ain</span><span class="m">1+ year</span><span class="pl">+</span></summary>
+        <ol class="plist"><li>One project for the department, Al Ain</li></ol>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="shead">
+      <span class="label">Services</span>
+      <div><h2>What we do</h2></div>
+    </div>
+    <div class="work">
+      <div></div>
+      <div>
+        <h3>Construction management</h3>
+        <p>We plan, coordinate and control the project from preparing for construction to handover. We look at what you need, put together the construction management plan, and help you keep good contractors within your budget.</p>
+        <p>Each job gets a team that knows that type of building, with a senior manager taking an active role.</p>
+        <h3 style="margin-top:28px">Design and build</h3>
+        <p>One company from the first sketches to the finished building, so you don't split the job between an architect and a contractor. We check our proposal against every one of the employer's requirements before any contract is signed.</p>
+      </div>
+      <div>
+        <h3>What we build</h3>
+        <ul class="scope">
+          <li><b>01</b>Construction and maintenance of all types of buildings</li>
+          <li><b>02</b>Landscaping and external works</li>
+          <li><b>03</b>Water transmission and distribution networks, tanks and reservoirs</li>
+          <li><b>04</b>Main roads, streets and related works</li>
+          <li><b>05</b>Walls, fences and camps</li>
+          <li><b>06</b>Onshore and offshore oil and gas fields and facilities</li>
+        </ul>
+      </div>
+    </div>
+    <div class="frames">
+      <figure><img src="public-works-steel.jpg" alt="Steel structure on a YGC site" loading="lazy"><figcaption><span>Steel structure on site</span></figcaption></figure>
+      <figure><img src="algeco-blockwork.jpg" alt="Blockwork foundations on a YGC site" loading="lazy"><figcaption><span>Blockwork and foundations</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="company">
+  <div class="wrap">
+    <div class="shead">
+      <span class="label">About YGC</span>
+      <div><h2>The company</h2></div>
+    </div>
+    <div class="company">
+      <div></div>
+      <div class="text">
+        <p>Yousif General Contracting Establishment was set up in Al Ain in 1986. We are still based here, on Main Street, and we take projects all over the Emirates.</p>
+        <p>Mousa Mahmood Ali Nassar has been our General Manager since 1992. He runs a team of skilled, motivated people, and teamwork is how we get jobs done.</p>
+        <p>We work to the time and cost in the contract, and we want the client, the consultant and our own people to come away satisfied. That means honest dealing with clients, suppliers and subcontractors alike.</p>
+        <p>Al Moutared General Contracting Est. also works from Main Street, Al Ain. Its contact details are below.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qhse">
+  <div class="wrap">
+    <div class="shead">
+      <span class="label">Quality, health, safety, environment</span>
+      <div><h2>QHSE</h2></div>
+    </div>
+    <div class="qhse">
+      <div></div>
+      <div>
+        <p>Our management system follows ISO 9001:2008, ISO 14001:2004 and OHSAS 18001:2007.</p>
+        <p>On site that means safety training and proper protective equipment for every worker, keeping visitors safe, non-polluting methods with regular checks, less waste and careful use of energy.</p>
+        <p>Consultants and procurement teams can download our prequalification document for the full details.</p>
+        <p style="margin-top:18px"><a class="link" href="http://yousifgc.com/YGC-Profile-2019.pdf">Prequalification (PDF)</a></p>
+      </div>
+      <div class="certs">
+        <figure><img src="iso-9001.jpg" alt="ISO 9001 certificate" loading="lazy"><figcaption>ISO 9001:2008</figcaption></figure>
+        <figure><img src="iso-14001.jpg" alt="ISO 14001 certificate" loading="lazy"><figcaption>ISO 14001:2004</figcaption></figure>
+        <figure><img src="ohsas-18001.jpg" alt="OHSAS 18001 certificate" loading="lazy"><figcaption>OHSAS 18001:2007</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="shead">
+      <span class="label">Find us</span>
+      <div><h2>Contact</h2><p>Call or email for tenders, prequalification or a site visit. Office open Saturday to Thursday, 8:00 to 17:00. Closed Friday.</p></div>
+    </div>
+    <div class="contact">
+      <div></div>
+      <div class="office">
+        <h3>Yousif General Contracting Est.</h3>
+        <div class="ar">مؤسسة يوسف للمقاولات العامة</div>
+        <dl>
+          <dt>Address</dt><dd>Main Street, Al Ain, U.A.E.</dd>
+          <dt>Phone</dt><dd><a href="tel:+97137377200">+971 3 737 7200</a></dd>
+          <dt></dt><dd><a href="tel:+97137377202">+971 3 737 7202</a></dd>
+          <dt>Email</dt><dd><a href="mailto:info@yousifgc.com">info@yousifgc.com</a></dd>
+          <dt>Hours</dt><dd>Sat–Thu 8:00–17:00<br>Friday closed</dd>
+        </dl>
+      </div>
+      <div class="office">
+        <img class="sublogo" src="al-moutared-logo.jpg" alt="Al Moutared General Contracting logo">
+        <h3>Al Moutared Gen. Con. Est.</h3>
+        <dl style="margin-top:14px">
+          <dt>Address</dt><dd>Main Street, Al Ain, U.A.E.</dd>
+          <dt>Phone</dt><dd><a href="tel:+97137377331">+971 3 737 7331</a></dd>
+          <dt></dt><dd><a href="tel:+97137377332">+971 3 737 7332</a></dd>
+          <dt>Email</dt><dd><a href="mailto:moutared@yousifgc.com">moutared@yousifgc.com</a></dd>
+          <dt>Hours</dt><dd>Sat–Thu 8:00–17:00<br>Friday closed</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Map: Al Ain" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Al%20Ain%2C%20Abu%20Dhabi%2C%20United%20Arab%20Emirates&z=12&output=embed"></iframe>
+    </div>
+    <p style="font-size:13px;color:var(--mute);margin-top:8px">Our office is on Main Street, Al Ain. Call 03 737 7200 for directions to the office or to a site.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fm">Yousif General<br>Contracting</div>
+        <div class="ar">مؤسسة يوسف للمقاولات العامة</div>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <p>Main Street<br>Al Ain, U.A.E.</p>
+        <p style="margin-top:10px">Sat–Thu 8:00–17:00<br>Friday closed</p>
+      </div>
+      <div>
+        <h4>Call or write</h4>
+        <p><a href="tel:+97137377200">+971 3 737 7200</a><br><a href="tel:+97137377202">+971 3 737 7202</a><br><a href="mailto:info@yousifgc.com">info@yousifgc.com</a></p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <p><a href="#projects">Projects</a><br><a href="#clients">Clients</a><br><a href="#work">What we do</a><br><a href="#qhse">QHSE</a><br><a href="http://yousifgc.com/YGC-Profile-2019.pdf">Prequalification (PDF)</a></p>
+      </div>
+    </div>
+    <div class="base">
+      <span>© Yousif General Contracting Est., Al Ain</span>
+      <span>Design concept by Websmith for Yousif General Contracting Est. Not the official site.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Yousif General Contracting Est. Not the official site.</div>
+</body>
+</html>
