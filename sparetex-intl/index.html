@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sparetex International FZE | Engineering spares and supplies, Ras Al Khaimah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#12386a; --navy-deep:#0b2547;
+  --ink:#15191f; --body:#3c434d; --mute:#79808a; --rule:#dfe3e8; --soft:#f4f6f8; --paper:#fff;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --cond:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--body);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:34px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--rule)}
+.hd{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.brand img{width:52px;height:auto}
+.brand b{font:600 15px/1.15 var(--sans);letter-spacing:-.005em}
+.brand span{display:block;font:400 12px/1.2 var(--sans);color:var(--mute)}
+nav.main{display:none;margin-left:auto;gap:6px}
+nav.main a{display:block;border:1px solid var(--rule);padding:7px 13px;font:500 13px/1 var(--sans);text-decoration:none;color:var(--ink)}
+nav.main a:hover{border-color:var(--navy);color:var(--navy)}
+.hd-tel{margin-left:auto;display:flex;gap:6px}
+.hd-tel a{display:flex;align-items:center;gap:7px;height:36px;padding:0 11px;border:1px solid var(--rule);text-decoration:none;font:500 13px/1 var(--mono);color:var(--ink)}
+.hd-tel a.call{background:var(--navy);border-color:var(--navy);color:#fff}
+.hd-tel svg{width:15px;height:15px;flex:none}
+.hd-tel .lbl{display:none}
+
+/* hero */
+.hero{padding-top:44px}
+h1{margin:0;color:var(--navy);font:600 clamp(40px,9.4vw,138px)/.92 var(--cond);letter-spacing:-.025em}
+h1 .l,h1 .r{display:block}
+h1 .r{text-align:right;color:var(--ink)}
+.hero-row{display:grid;gap:28px;margin-top:34px;padding:28px 0 40px;border-top:1px solid var(--ink)}
+.hero-row p{margin:0;font-size:18px;line-height:1.6;color:var(--body);max-width:620px}
+.hero-row p strong{color:var(--ink);font-weight:600}
+.facts{margin:0;padding:0;list-style:none;font:400 13px/1.5 var(--mono);color:var(--body)}
+.facts li{display:grid;grid-template-columns:118px 1fr;padding:8px 0;border-bottom:1px solid var(--rule)}
+.facts li:first-child{border-top:1px solid var(--rule)}
+.facts dt,.facts .k{color:var(--mute)}
+.facts a{text-decoration:none;color:var(--ink)}
+.facts a:hover{color:var(--navy);text-decoration:underline}
+
+/* search */
+.finder{position:sticky;top:64px;z-index:20;background:var(--navy);color:#fff}
+.finder .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-top:14px;padding-bottom:14px}
+.finder label{font:500 13px/1.2 var(--mono);color:#b9c7da;flex:0 0 100%}
+.finder input{flex:1 1 260px;min-width:0;height:48px;border:0;border-radius:0;padding:0 14px;font:400 17px/1 var(--sans);color:var(--ink);background:#fff;outline:none}
+.finder input:focus{box-shadow:inset 0 0 0 2px #7fb2ea}
+.finder .count{font:400 13px/1.2 var(--mono);color:#dbe4f0;white-space:nowrap}
+.jump{display:flex;gap:0;overflow-x:auto;border-top:1px solid rgba(255,255,255,.18);scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;padding:10px 16px 11px;font:500 13px/1 var(--sans);color:#dbe4f0;text-decoration:none;border-right:1px solid rgba(255,255,255,.18)}
+.jump a:first-child{padding-left:0}
+.jump a:hover{color:#fff;text-decoration:underline}
+
+/* catalogue */
+.cat{padding-top:8px;padding-bottom:30px}
+.group{display:grid;gap:0;border-bottom:1px solid var(--ink);padding:34px 0 22px}
+.group[hidden]{display:none}
+.g-head h2{margin:0 0 6px;font:600 30px/1.05 var(--cond);color:var(--ink);letter-spacing:-.01em}
+.g-head .n{font:500 13px/1 var(--mono);color:var(--navy);display:block;margin-bottom:10px}
+.g-head p{margin:0 0 18px;font-size:14.5px;color:var(--mute);max-width:300px}
+.g-head figure{margin:0 0 22px;max-width:340px}
+.g-head figure img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:saturate(.8)}
+.g-head figcaption{font:400 12px/1.4 var(--mono);color:var(--mute);margin-top:6px}
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:40px 1fr;gap:4px 0;padding:14px 0;border-top:1px solid var(--rule)}
+.row[hidden]{display:none}
+.row .no{font:500 13px/1.6 var(--mono);color:var(--navy);grid-row:span 2}
+.row .what{color:var(--ink);font-size:16px;line-height:1.45}
+.row .brands{font:400 13px/1.6 var(--mono);color:var(--body)}
+.row .brands:empty{display:none}
+.cols{display:none}
+mark{background:#d9e8fb;color:inherit;padding:0 1px}
+.nomatch{display:none;padding:40px 0;border-bottom:1px solid var(--ink)}
+.nomatch.on{display:block}
+.nomatch h3{margin:0 0 8px;font:600 26px/1.1 var(--cond);color:var(--ink)}
+.nomatch p{margin:0 0 18px;max-width:560px}
+
+/* square button + arrow block */
+.sq{display:inline-flex;text-decoration:none;align-items:stretch;height:50px}
+.sq span{display:flex;align-items:center;padding:0 20px;background:var(--navy);color:#fff;font:500 13px/1 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.sq i{display:flex;align-items:center;justify-content:center;width:50px;margin-left:4px;background:var(--navy);color:#fff;font-style:normal}
+.sq i svg{width:16px;height:16px}
+.sq:hover span,.sq:hover i{background:var(--navy-deep)}
+.sq.ghost span,.sq.ghost i{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+.sq.ghost:hover span,.sq.ghost:hover i{background:var(--soft)}
+
+/* brands */
+.brands-sec{padding-top:60px;padding-bottom:50px;border-bottom:1px solid var(--rule)}
+.sec-h{display:grid;gap:10px;margin-bottom:26px}
+.sec-h h2{margin:0;font:600 clamp(32px,4.4vw,56px)/1 var(--cond);color:var(--ink);letter-spacing:-.015em}
+.sec-h p{margin:0;max-width:560px;color:var(--body)}
+.wall{font:500 clamp(19px,2vw,25px)/1.6 var(--cond);color:var(--ink)}
+.wall button{all:unset;cursor:pointer;white-space:nowrap}
+.wall button:hover{color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+.wall .sep{color:#c3cad3;margin:0 .35em;font-weight:400}
+.wall .letter{font:500 13px/1 var(--mono);color:var(--navy);margin-right:.5em;vertical-align:.25em}
+
+/* shipping */
+.ship{padding-top:60px;padding-bottom:60px;display:grid;gap:34px;border-bottom:1px solid var(--rule)}
+.ship .big{margin:0;font:500 clamp(28px,3.6vw,46px)/1.12 var(--cond);color:var(--ink);letter-spacing:-.01em;max-width:900px}
+.ship .big em{font-style:normal;color:var(--navy)}
+.regions{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+.regions div{padding:16px 0;border-bottom:1px solid var(--rule)}
+.regions h3{margin:0 0 4px;font:500 13px/1.3 var(--mono);color:var(--navy)}
+.regions p{margin:0;color:var(--ink)}
+
+/* enquiry */
+.enq{padding-top:60px;padding-bottom:70px;display:grid;gap:36px}
+.enq ol{margin:0;padding:0;list-style:none;counter-reset:s}
+.enq ol li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-top:1px solid var(--rule);color:var(--ink)}
+.enq ol li::before{content:"0" counter(s);font:500 13px/1.7 var(--mono);color:var(--navy)}
+.compose{border:1px solid var(--ink);padding:22px}
+.compose h3{margin:0 0 16px;font:600 22px/1.1 var(--cond);color:var(--ink)}
+.compose label{display:block;font:400 12.5px/1.2 var(--mono);color:var(--mute);margin:14px 0 6px}
+.compose input,.compose textarea{width:100%;border:1px solid #c9d0d8;border-radius:0;padding:11px 12px;font:400 16px/1.4 var(--sans);color:var(--ink);background:#fff}
+.compose textarea{min-height:84px;resize:vertical}
+.compose input:focus,.compose textarea:focus{outline:2px solid var(--navy);outline-offset:-1px}
+.compose .two{display:grid;gap:0 12px}
+.compose .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.compose small{display:block;margin-top:12px;font:400 12px/1.5 var(--mono);color:var(--mute)}
+
+/* footer */
+footer{background:var(--navy-deep);color:#c9d4e3;padding:48px 0 30px;font-size:14.5px}
+.ft{display:grid;gap:30px}
+footer .fb img{width:120px;background:#fff;padding:8px}
+footer h4{margin:0 0 10px;font:500 12.5px/1 var(--mono);color:#8fa5c2}
+footer p{margin:0 0 6px}
+footer a{text-decoration:none;color:#fff}
+footer a:hover{text-decoration:underline}
+.fbot{margin-top:36px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font:400 12px/1.5 var(--mono);color:#8fa5c2;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
+
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--rule);font:400 11px/1.3 var(--mono);color:var(--mute);padding:8px 14px;text-align:center}
+
+@media (min-width:640px){
+  .hd-tel .lbl{display:inline}
+  .regions{grid-template-columns:repeat(3,1fr)}
+  .regions div{padding:18px 18px 18px 0;border-bottom:0;border-right:1px solid var(--rule)}
+  .regions div+div{padding-left:18px}
+  .regions div:last-child{border-right:0}
+  .compose .two{grid-template-columns:1fr 1fr}
+  .finder label{flex:0 0 auto}
+}
+@media (min-width:1000px){
+  .wrap{padding:0 40px}
+  .hd{height:72px}
+  html{scroll-padding-top:150px}
+  .brand img{width:60px}
+  nav.main{display:flex}
+  .hd-tel{margin-left:18px}
+  .finder{top:72px}
+  .hero{padding-top:64px}
+  .hero-row{grid-template-columns:1.25fr 1fr;gap:80px}
+  .group{grid-template-columns:300px 1fr;gap:0 0}
+  .g-head{padding-right:36px;border-right:1px solid var(--rule)}
+  .g-head>div{position:sticky;top:170px}
+  .rows,.cols{padding-left:0}
+  .cols{display:grid;grid-template-columns:64px 1fr 1fr;font:500 12px/1 var(--mono);color:var(--mute);padding:0 0 12px}
+  .cols span{padding-left:18px}
+  .cols span:first-child{padding-left:20px}
+  .row{grid-template-columns:64px 1fr 1fr;gap:0;padding:0}
+  .row>*{padding:15px 18px}
+  .row .no{grid-row:auto;padding-left:20px}
+  .row .what{border-left:1px solid var(--rule)}
+  .row .brands{border-left:1px solid var(--rule)}
+  .row .brands:empty{display:block}
+  .row:hover{background:var(--soft)}
+  .sec-h{grid-template-columns:1fr 1fr;align-items:end;gap:60px}
+  .ship{grid-template-columns:1fr;}
+  .enq{grid-template-columns:1fr 1.1fr;gap:80px}
+  .ft{grid-template-columns:1.3fr 1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="#top" aria-label="Sparetex International FZE, home">
+      <img src="logo.png" alt="Sparetex logo" width="284" height="218">
+      <div><b>Sparetex International FZE</b><span>Ras Al Khaimah, U.A.E.</span></div>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#brands">Brands</a>
+      <a href="#shipping">Where we ship</a>
+      <a href="#enquiry">Send an enquiry</a>
+    </nav>
+    <div class="hd-tel">
+      <a href="https://wa.me/971561133083" aria-label="WhatsApp +971 56 113 3083"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span class="lbl">WhatsApp</span></a>
+      <a class="call" href="tel:+971561133083"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="lbl">+971 56 113 3083</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <h1><span class="l">Engineering spares</span><span class="r">&amp; supplies</span></h1>
+    <div class="hero-row">
+      <p><strong>Sparetex International FZE</strong> supplies engineering products and spare parts from Ras Al Khaimah: boiler and burner spares, pumps, valves and gauges, electrical and automation parts, HVAC, marine and aircraft spares, tools, chemicals and fasteners. We import from manufacturers in different parts of the world and supply to all GCC, Asian and African countries. Send us the part number and we will take it from there.</p>
+      <ul class="facts">
+        <li><span class="k">Phone</span><a href="tel:+971561133083">+971 56 113 3083</a></li>
+        <li><span class="k">WhatsApp</span><a href="https://wa.me/971561133083">+971 56 113 3083</a></li>
+        <li><span class="k">Email</span><a href="mailto:sales@sparetex-intl.com">sales@sparetex-intl.com</a></li>
+        <li><span class="k">Post</span><span>P.O. Box 40821, Ras Al Khaimah, U.A.E.</span></li>
+        <li><span class="k">Licence</span><span>Commercial Licence No. 5014278</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="finder" id="products">
+    <div class="wrap">
+      <label for="q">Search what we supply</label>
+      <input id="q" type="search" autocomplete="off" placeholder="Type a brand or a part: Danfoss, solenoid valve, Fluke…">
+      <span class="count" id="count">33 product lines</span>
+    </div>
+    <div class="wrap"><nav class="jump" aria-label="Product groups">
+      <a href="#g1">Steam, pumps &amp; valves</a>
+      <a href="#g2">Electrical &amp; safety</a>
+      <a href="#g3">HVAC &amp; building</a>
+      <a href="#g4">Oil, gas, marine &amp; aviation</a>
+      <a href="#g5">Workshop &amp; consumables</a>
+    </nav></div>
+  </div>
+
+  <section class="wrap cat" aria-label="Product list">
+
+    <div class="group" id="g1">
+      <div class="g-head"><div>
+        <span class="n">01–09</span>
+        <h2>Steam, boilers, pumps &amp; valves</h2>
+        <p>Plant room and process spares: burners, heating elements, pumps, valves, gauges and meters.</p>
+      </div></div>
+      <div>
+        <div class="cols"><span>No.</span><span>Product line</span><span>Brands</span></div>
+        <ul class="rows">
+          <li class="row"><span class="no">01</span><span class="what">Boilers, calorifiers, burner spares, industrial plant equipment and spares</span><span class="brands">Suntec, Siemens, Mobrey, Speed Clean, HD Howden heating elements, Spirax, Valsteam ADCA, Danfoss, Dungs, Honeywell, Pactrol, Riello, Satronic</span></li>
+          <li class="row"><span class="no">02</span><span class="what">Water heaters and heating elements for commercial and industrial use</span><span class="brands"></span></li>
+          <li class="row"><span class="no">03</span><span class="what">Pumps and pump spares</span><span class="brands">Grundfos, Lowara, Ebara, Akas, Pedrollo, KSB, Alfa Laval, Edur, Becker, Adam, Astral, Goulds, Espa, Davey</span></li>
+          <li class="row"><span class="no">04</span><span class="what">Water pump sets: transfer, booster, irrigation, circulating, sump and chilled water</span><span class="brands"></span></li>
+          <li class="row"><span class="no">05</span><span class="what">Flow control valves, safety valves and solenoid valves</span><span class="brands">Crane, Watts, Bray, Hattersley, Pegler · Kunkle, Spirax, Nabic, ARI, Albion, Wade, Bailey Birkett, Burkert, Parker</span></li>
+          <li class="row"><span class="no">06</span><span class="what">Level gauge glasses, pressure and temperature gauges, pressure switches, gauge cocks, gaskets, thermostats, thermowells, pressure vessels, steam flow control, laundry spares, kitchen equipment, valve and flange guards</span><span class="brands">Winters, Wika, TruTel, Hunter · Cotherm, Sunvic</span></li>
+          <li class="row"><span class="no">07</span><span class="what">Flow meters: ultrasonic, thermal mass, steam mass, gas turbine, oil and water meters</span><span class="brands">Kurz, Spire Metering, B Meters, Sensus</span></li>
+          <li class="row"><span class="no">08</span><span class="what">Automatic lubricating systems</span><span class="brands">Memolub</span></li>
+          <li class="row"><span class="no">09</span><span class="what">Link belting for power transmission and conveying, keyless locking devices, torque limiters, SPA, SPB, SPZ and heavy and medium duty belts</span><span class="brands">Fenner Drives, PowerTwist</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group" id="g2">
+      <div class="g-head"><div>
+        <span class="n">10–15</span>
+        <h2>Electrical, automation &amp; safety</h2>
+        <p>Switchgear, sensors and automation parts, telecom, detection, test equipment and batteries.</p>
+      </div></div>
+      <div>
+        <div class="cols"><span>No.</span><span>Product line</span><span>Brands</span></div>
+        <ul class="rows">
+          <li class="row"><span class="no">10</span><span class="what">Electrical and electronic devices, industrial automation equipment and spares</span><span class="brands">Schneider, Siemens, MK Electric, Hager, GE, Philips, Eaton, Eaton Moeller, FHF, Tork photocells, Pneumatex, IFM Germany, CG Air Canada, Rotronic, Fiama potentiometers, Penton speakers, SMC Pneumatics, EPN Taiwan, Pressac, Linxcom, Panduit, Trutool, Perko</span></li>
+          <li class="row"><span class="no">11</span><span class="what">Telecom equipment, VoIP phones, fibre optic spares, power and communication cables, instrumentation and general consumables</span><span class="brands"></span></li>
+          <li class="row"><span class="no">12</span><span class="what">Smoke detectors and accessories, thermostat guards</span><span class="brands">Honeywell, Kidde, Siemens, Sierra, Crowcon, Shield</span></li>
+          <li class="row"><span class="no">13</span><span class="what">Testing, measuring and analysing equipment for all industries</span><span class="brands">Extech, Fluke, Palintest</span></li>
+          <li class="row"><span class="no">14</span><span class="what">Batteries for industrial and commercial applications, all types</span><span class="brands">Optima, Varta, Solite, Exide, Yuasa, Long</span></li>
+          <li class="row"><span class="no">15</span><span class="what">Fire fighting and safety equipment, fall protection harnesses</span><span class="brands">Miller, Honeywell Titan</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group" id="g3">
+      <div class="g-head"><div>
+        <span class="n">16–21</span>
+        <h2>HVAC, MEP &amp; building</h2>
+        <p>Controls and actuators, ventilation, sanitary ware, pipes and fittings, sealants and door hardware.</p>
+      </div></div>
+      <div>
+        <div class="cols"><span>No.</span><span>Product line</span><span>Brands</span></div>
+        <ul class="rows">
+          <li class="row"><span class="no">16</span><span class="what">HVAC products, actuators, controls, sound attenuators, oil charging pumps</span><span class="brands">Honeywell, Siemens, ATS, Erie, Oventrop, Copeland, Hartland controls, Rittal, Carel, Virginia, Parker, Bristol</span></li>
+          <li class="row"><span class="no">17</span><span class="what">Exhaust fans, ventilation products and accessories</span><span class="brands">KDK, Casals, Vent-Axia, S&amp;P Spain, Manrose, ebm-papst</span></li>
+          <li class="row"><span class="no">18</span><span class="what">Sanitary ware, spares and fittings, float valves, water heaters, hand dryers</span><span class="brands">Grohe, Geberit, Ideal Standard, Jaquar, General Ceramics, Sanit, Kohler, +GF+, Envotec, Pegler, Ariston, Sanibano, Bio Dryer, Fantini, Porta Opale</span></li>
+          <li class="row"><span class="no">19</span><span class="what">MEP spares: pipes and fittings in stainless steel, copper, MS and GI</span><span class="brands"></span></li>
+          <li class="row"><span class="no">20</span><span class="what">Building materials, paints, silicones, fire-rated and standard sealants, glues, gaffer and cloth tape</span><span class="brands">Triton, Dow Corning, Loctite, Fevibond</span></li>
+          <li class="row"><span class="no">21</span><span class="what">Door locks, hinges, closers and accessories</span><span class="brands">Geze, Dorma, Yale, Devon</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group" id="g4">
+      <div class="g-head"><div>
+        <span class="n">22–28</span>
+        <h2>Oil, gas, marine &amp; aviation</h2>
+        <p>Spares for oil skids, fuel handling, refuelling, engines and turbines, ships, refineries and aircraft.</p>
+        <figure><img src="aircraft.jpg" alt="Aircraft taking off at sunset" width="800" height="341" loading="lazy"><figcaption>Marine and aircraft spares, including AOG</figcaption></figure>
+      </div></div>
+      <div>
+        <div class="cols"><span>No.</span><span>Product line</span><span>Brands</span></div>
+        <ul class="rows">
+          <li class="row"><span class="no">22</span><span class="what">Oil and natural gas spares, oil skid spares, hydraulic and lubricating oils</span><span class="brands">Castrol, Shell, Gulf Oil</span></li>
+          <li class="row"><span class="no">23</span><span class="what">Oil, fuel and chemical handling equipment, dosing pumps and spares, high pressure stainless steel hoses, connectors, couplings, cam locks</span><span class="brands">TODO, Veeder-Root</span></li>
+          <li class="row"><span class="no">24</span><span class="what">Fuelling products, aviation refuellers and accessories</span><span class="brands">Meggitt, Emco Wheaton, TODO, Vermont, Veeder-Root, Husky, Liquid Controls USA</span></li>
+          <li class="row"><span class="no">25</span><span class="what">Governors, controls and fuel systems for engines and turbines, for shipping and refineries</span><span class="brands">Woodward, Regulateurs Europa, Heinzmann, Zexel-Kiki</span></li>
+          <li class="row"><span class="no">26</span><span class="what">Marine and aircraft spares, safety items, AOG spares, overhaul spares</span><span class="brands"></span></li>
+          <li class="row"><span class="no">27</span><span class="what">Oilfield chemicals, drilling equipment, compressors, booster pump units, welding equipment, heavy duty casters</span><span class="brands"></span></li>
+          <li class="row"><span class="no">28</span><span class="what">Skid-mounted process units, precision measuring devices and sensors for breweries, food and dairy, soft drinks, wines and spirits, pharma and biotech, chemicals, electronics, power plants and petrochemicals</span><span class="brands">CENTEC Germany</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group" id="g5">
+      <div class="g-head"><div>
+        <span class="n">29–33</span>
+        <h2>Workshop, tools &amp; consumables</h2>
+        <p>Workshop equipment, hydraulic tools, welding, cleaning chemicals and fasteners.</p>
+      </div></div>
+      <div>
+        <div class="cols"><span>No.</span><span>Product line</span><span>Brands</span></div>
+        <ul class="rows">
+          <li class="row"><span class="no">29</span><span class="what">Engineering equipment and spare parts, workshop equipment, machinery spares and safety items</span><span class="brands"></span></li>
+          <li class="row"><span class="no">30</span><span class="what">Hand tools, power tool accessories, hydraulic tools and cylinders, hydraulic and bottle jacks, trolleys, dollies, caster wheels</span><span class="brands">Lifton, SPX Power Team, SPX Bolting, Rhombus, Colson Europe</span></li>
+          <li class="row"><span class="no">31</span><span class="what">Gas welding devices and accessories, occupational safety items, hoses, cable accessories, compressed air hoses and accessories, flow meters, garage equipment</span><span class="brands">EWO Germany</span></li>
+          <li class="row"><span class="no">32</span><span class="what">Chemicals for engineering cleaning and maintenance: isopropyl alcohol, distilled water, white spirit cleaners, grease</span><span class="brands">Calla, Ambersil, ZOK 27, S 758, Permatex, CRC</span></li>
+          <li class="row"><span class="no">33</span><span class="what">Bolts, nuts, washers and other fasteners, all types and grades</span><span class="brands"></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nomatch" id="nomatch">
+      <h3>Not on the list?</h3>
+      <p>We supply all kinds of engineering products and spare parts, so send it anyway. The part number, brand and a photo of the nameplate are enough to start.</p>
+      <a class="sq" href="https://wa.me/971561133083" id="nm-wa"><span>Ask on WhatsApp</span><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 12 4M5 4h7v7"/></svg></i></a>
+    </div>
+  </section>
+
+  <section class="wrap brands-sec" id="brands">
+    <div class="sec-h">
+      <h2>Brands we supply</h2>
+      <p>The makers named on our product list, A to Z. Tap a name to see what we supply from it. If your brand is not here, ask us anyway.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <section class="wrap ship" id="shipping">
+    <p class="big">We import from manufacturers in different parts of the world and supply goods to <em>all GCC, Asian and African countries</em>, from Ras Al Khaimah.</p>
+    <div class="regions">
+      <div><h3>GCC</h3><p>UAE, Saudi Arabia, Oman, Qatar, Bahrain and Kuwait</p></div>
+      <div><h3>Asia</h3><p>Export and supply to Asian countries</p></div>
+      <div><h3>Africa</h3><p>Export and supply to African countries</p></div>
+    </div>
+  </section>
+
+  <section class="wrap enq" id="enquiry">
+    <div>
+      <div class="sec-h" style="grid-template-columns:1fr;margin-bottom:22px"><h2>Send an enquiry</h2></div>
+      <p style="margin:0 0 22px;max-width:520px">Email is best for a list of items, WhatsApp is quickest for one part. Either way, tell us:</p>
+      <ol>
+        <li>The part number, brand and model. A photo of the nameplate helps.</li>
+        <li>How many you need.</li>
+        <li>Where it has to be delivered, in the UAE or abroad.</li>
+      </ol>
+      <p style="margin:24px 0 0;font:400 13px/1.6 var(--mono);color:var(--mute)">sales@sparetex-intl.com<br>+971 56 113 3083 (phone and WhatsApp)</p>
+    </div>
+    <div class="compose">
+      <h3>Write it here, send it your way</h3>
+      <label for="f-part">Part number, brand, model</label>
+      <textarea id="f-part" placeholder="e.g. Danfoss solenoid valve EV220B 15, coil 230V"></textarea>
+      <div class="two">
+        <div><label for="f-qty">Quantity</label><input id="f-qty" placeholder="e.g. 4 pcs"></div>
+        <div><label for="f-to">Deliver to</label><input id="f-to" placeholder="e.g. Jebel Ali, Dubai"></div>
+      </div>
+      <label for="f-co">Your company and name</label>
+      <input id="f-co" placeholder="Company, contact person">
+      <div class="acts">
+        <a class="sq" id="send-wa" href="https://wa.me/971561133083"><span>Send on WhatsApp</span><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 12 4M5 4h7v7"/></svg></i></a>
+        <a class="sq ghost" id="send-mail" href="mailto:sales@sparetex-intl.com"><span>Send by email</span><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 12 4M5 4h7v7"/></svg></i></a>
+      </div>
+      <small>Nothing is sent from this page. The buttons open WhatsApp or your email app with the message filled in.</small>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="fb">
+        <img src="logo.png" alt="Sparetex logo" width="284" height="218" loading="lazy">
+        <p style="margin-top:14px;color:#fff;font-weight:600">Sparetex International FZE</p>
+        <p>Engineering products and spare parts</p>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p>P.O. Box 40821<br>Ras Al Khaimah<br>United Arab Emirates</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+971561133083">+971 56 113 3083</a></p>
+        <p><a href="https://wa.me/971561133083">WhatsApp +971 56 113 3083</a></p>
+        <p><a href="mailto:sales@sparetex-intl.com">sales@sparetex-intl.com</a></p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <p><a href="#products">Products</a></p>
+        <p><a href="#brands">Brands</a></p>
+        <p><a href="#shipping">Where we ship</a></p>
+        <p><a href="#enquiry">Send an enquiry</a></p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>Commercial Licence No. 5014278</span>
+      <span>&copy; Sparetex International FZE</span>
+    </div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Sparetex International FZE. Not the official site.</div>
+
+<script>
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.row'));
+  var groups=[].slice.call(document.querySelectorAll('.group'));
+  rows.forEach(function(r){[].forEach.call(r.querySelectorAll('.what,.brands'),function(el){el.dataset.t=el.textContent;});});
+  var q=document.getElementById('q'),count=document.getElementById('count'),nm=document.getElementById('nomatch');
+  function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function filter(){
+    var v=q.value.trim().toLowerCase(),n=0;
+    rows.forEach(function(r){
+      var hit=!v||r.textContent.toLowerCase().indexOf(v)>-1;
+      r.hidden=!hit; if(hit)n++;
+      [].forEach.call(r.querySelectorAll('.what,.brands'),function(el){
+        var t=el.dataset.t;
+        if(!v){el.textContent=t;return;}
+        var i=t.toLowerCase().indexOf(v);
+        el.innerHTML=i<0?esc(t):esc(t.slice(0,i))+'<mark>'+esc(t.slice(i,i+v.length))+'</mark>'+esc(t.slice(i+v.length));
+      });
+    });
+    groups.forEach(function(g){g.hidden=!g.querySelector('.row:not([hidden])');});
+    count.textContent=v?(n+' of 33 product lines'):'33 product lines';
+    nm.classList.toggle('on',!!v&&n===0);
+    if(v&&n===0){document.getElementById('nm-wa').href='https://wa.me/971561133083?text='+encodeURIComponent('Hello Sparetex, do you supply: '+q.value.trim()+'?');}
+  }
+  q.addEventListener('input',filter);
+
+  var brands=["Suntec","Siemens","Mobrey","Speed Clean","HD Howden","Spirax","Valsteam ADCA","Danfoss","Dungs","Honeywell","Pactrol","Riello","Satronic","Grundfos","Lowara","Ebara","Akas","Pedrollo","KSB","Alfa Laval","Edur","Becker","Adam","Astral","Goulds","Espa","Davey","Crane","Watts","Bray","Hattersley","Pegler","Kunkle","Nabic","ARI","Albion","Wade","Bailey Birkett","Burkert","Parker","Winters","Wika","TruTel","Hunter","Cotherm","Sunvic","Kurz","Spire Metering","B Meters","Sensus","Memolub","Fenner Drives","PowerTwist","Schneider","MK Electric","Hager","GE","Philips","Eaton","FHF","Tork","Pneumatex","IFM","CG Air","Rotronic","Fiama","Penton","SMC","EPN","Pressac","Linxcom","Panduit","Trutool","Perko","Kidde","Sierra","Crowcon","Shield","Extech","Fluke","Palintest","Optima","Varta","Solite","Exide","Yuasa","Long","Miller","ATS","Erie","Oventrop","Copeland","Hartland","Rittal","Carel","Virginia","Bristol","KDK","Casals","Vent-Axia","S&P","Manrose","ebm-papst","Grohe","Geberit","Ideal Standard","Jaquar","General Ceramics","Sanit","Kohler","+GF+","Envotec","Ariston","Sanibano","Bio Dryer","Fantini","Porta Opale","Triton","Dow Corning","Loctite","Fevibond","Geze","Dorma","Yale","Devon","Castrol","Shell","Gulf Oil","TODO","Veeder-Root","Meggitt","Emco Wheaton","Vermont","Husky","Liquid Controls","Woodward","Regulateurs Europa","Heinzmann","Zexel-Kiki","CENTEC","Lifton","SPX Power Team","SPX Bolting","Rhombus","Colson","EWO","Calla","Ambersil","ZOK 27","Permatex","CRC"];
+  brands=brands.filter(function(b,i){return brands.indexOf(b)===i;}).sort(function(a,b){return a.replace(/^\+/,'').toLowerCase().localeCompare(b.replace(/^\+/,'').toLowerCase());});
+  var wall=document.getElementById('wall'),last='',html=[];
+  brands.forEach(function(b){
+    var L=b.replace(/^\+/,'').charAt(0).toUpperCase(),pre='';
+    if(L!==last){pre='<span class="letter">'+L+'</span>';last=L;}
+    html.push(pre+'<button type="button" data-b="'+esc(b)+'">'+esc(b)+'</button>');
+  });
+  wall.innerHTML=html.join('<span class="sep">/</span>');
+  wall.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    q.value=b.dataset.b; filter();
+    document.getElementById('products').scrollIntoView({behavior:'smooth'});
+  });
+
+  function fields(){return{p:document.getElementById('f-part').value.trim(),q:document.getElementById('f-qty').value.trim(),t:document.getElementById('f-to').value.trim(),c:document.getElementById('f-co').value.trim()};}
+  function msg(){var f=fields(),m='Hello Sparetex,\n\nPlease quote for:\n'+(f.p||'(part number / brand / model)')+'\nQuantity: '+(f.q||'-')+'\nDeliver to: '+(f.t||'-')+'\n\n'+(f.c||'');return m;}
+  document.getElementById('send-wa').addEventListener('click',function(){this.href='https://wa.me/971561133083?text='+encodeURIComponent(msg());});
+  document.getElementById('send-mail').addEventListener('click',function(){this.href='mailto:sales@sparetex-intl.com?subject='+encodeURIComponent('Enquiry: '+(fields().p.split('\n')[0]||'spare parts'))+'&body='+encodeURIComponent(msg());});
+})();
+</script>
+</body>
+</html>

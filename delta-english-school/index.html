@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Delta English School, Sharjah | CBSE, KG to Grade 12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e2a57; --navy-2:#173a72; --sky:#2a7fc6; --sky-wash:#eaf3fb;
+  --silver:#c9ced6; --ink:#16202e; --body:#3b4656; --mute:#6b7685; --line:#dfe3e9; --paper:#fff; --off:#f5f7fa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Lexend",system-ui,sans-serif;font-weight:300;color:var(--body);background:var(--paper);line-height:1.6;font-size:16px;padding-bottom:34px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+h2{font-weight:500;color:var(--ink);font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.12;letter-spacing:-.01em}
+h3{font-weight:500;color:var(--ink);font-size:1.1rem;line-height:1.3}
+.ar{font-family:"Cairo",sans-serif;font-weight:700}
+.arrow{display:inline-flex;gap:.5em;align-items:center;font-weight:500;color:var(--navy);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.arrow::after{content:"\2192"}
+.arrow:hover{color:var(--sky)}
+
+/* header */
+header.top{position:relative;z-index:5;border-bottom:1px solid var(--line);background:#fff}
+.top .wrap{display:flex;align-items:stretch;gap:16px;min-height:64px}
+.crest-tab{position:relative;width:84px;flex:none;align-self:flex-start;background:#fff;border:1px solid var(--line);border-top:0;padding:10px 10px 8px;margin-bottom:-58px;text-align:center;text-decoration:none}
+.crest-tab img{width:62px;margin:0 auto}
+.crest-tab span{display:none;font-size:.66rem;color:var(--navy);margin-top:4px;line-height:1.2;font-weight:400}
+nav.main{display:none;align-items:center;gap:28px;margin-left:28px;font-size:.93rem}
+nav.main a{text-decoration:none;color:var(--ink);font-weight:400}
+nav.main a:hover{color:var(--sky)}
+.top-right{margin-left:auto;display:flex;align-items:stretch}
+.tel{display:flex;align-items:center;padding:0 14px;text-decoration:none;color:var(--navy);font-weight:500;font-size:.93rem;white-space:nowrap}
+.visit{display:none;align-items:center;background:var(--navy);color:#fff;text-decoration:none;padding:0 26px;font-weight:500;font-size:.93rem}
+.visit:hover{background:var(--navy-2)}
+
+/* hero */
+.hero{padding:64px 0 0}
+.hero-grid{display:grid;gap:28px}
+.hero-intro{max-width:30em;font-size:1.05rem;color:var(--body)}
+.hero-intro b{font-weight:500;color:var(--ink)}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%}
+.hero-panel{background:var(--navy);color:#dfe7f3;padding:22px 22px 24px;font-size:.95rem}
+.hero-panel dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
+.hero-panel dt{color:#9fb3d1}
+.hero-panel dd{color:#fff;font-weight:400}
+.hero-panel .arrow{color:#fff;margin-top:16px}
+.name{border-top:1px solid var(--ink);padding-top:14px;margin-bottom:22px}
+.name h1{font-weight:500;color:var(--navy);font-size:clamp(3.2rem,12vw,6.6rem);line-height:.94;letter-spacing:-.04em}
+.name .ar{display:block;font-size:clamp(1.5rem,3.4vw,2.4rem);color:var(--sky);line-height:1.4;margin-top:10px}
+
+/* sections */
+section{padding:72px 0}
+.sec-head{display:grid;gap:14px;margin-bottom:34px}
+.sec-head p{max-width:40em}
+.rule-top{border-top:1px solid var(--line)}
+
+/* school facts */
+.school{display:grid;gap:36px}
+.facts{border-top:2px solid var(--navy)}
+.facts div{display:grid;grid-template-columns:9.5em 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.facts dt{color:var(--mute)}
+.facts dd{color:var(--ink);font-weight:400}
+figure figcaption{font-size:.8rem;color:var(--mute);margin-top:8px}
+
+/* admissions */
+.adm{background:var(--off)}
+.steps{display:grid;gap:0;border-top:1px solid var(--silver)}
+.step{padding:22px 0;border-bottom:1px solid var(--silver);display:grid;grid-template-columns:3.2em 1fr;gap:6px 14px}
+.step .n{font-size:.9rem;color:var(--sky);font-weight:500;padding-top:3px}
+.step h3{font-size:1.45rem}
+.step p{grid-column:2;font-size:.95rem}
+.adm-more{display:grid;gap:22px;margin-top:44px}
+.adm-more div{border-left:2px solid var(--sky);padding-left:16px}
+.adm-more h3{font-size:1rem;margin-bottom:4px}
+.adm-more p{font-size:.92rem}
+.adm-links{margin-top:40px;display:flex;flex-wrap:wrap;gap:18px 34px}
+
+/* senior secondary */
+.sr-grid{display:grid;gap:40px}
+.prog h3{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--navy);padding-bottom:8px;margin-bottom:6px}
+.prog h3 small{font-size:.8rem;color:var(--mute);font-weight:400}
+.prog table{width:100%;border-collapse:collapse;font-size:.88rem}
+.prog td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.prog td:first-child{width:3.4em;color:var(--sky);font-weight:500}
+.codes{columns:2;column-gap:28px;font-size:.88rem}
+.codes li{list-style:none;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0;break-inside:avoid}
+.codes li span:last-child{color:var(--mute);font-variant-numeric:tabular-nums}
+.note{font-size:.85rem;color:var(--mute);margin-top:14px}
+.side h3{margin:0 0 10px}
+
+/* titans */
+.titans{background:var(--navy);color:#cdd8e8}
+.titans h2,.titans h3{color:#fff}
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:46px}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.m1{grid-column:span 4;aspect-ratio:16/10}
+.m2{grid-column:span 2}
+.m3,.m4,.m5{grid-column:span 2;aspect-ratio:1/1}
+.results{border-top:1px solid #3a5684;font-size:.95rem}
+.results li{list-style:none;display:grid;grid-template-columns:1fr;gap:2px;padding:16px 0;border-bottom:1px solid #3a5684}
+.results .d{color:#8fb4e0;font-size:.82rem;font-variant-numeric:tabular-nums}
+.results .r{color:#fff;font-weight:400}
+.results .e{font-size:.88rem}
+
+/* principal */
+.letter{display:grid;gap:28px;align-items:start}
+.letter blockquote{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.5;color:var(--ink)}
+.letter blockquote p+p{margin-top:.9em}
+.sig{display:flex;gap:16px;align-items:center;margin-top:26px}
+.sig img{width:76px;height:67px;object-fit:cover}
+.sig b{display:block;color:var(--ink);font-weight:500}
+.sig span{font-size:.88rem;color:var(--mute)}
+
+/* history */
+.timeline{display:grid;gap:0;border-left:2px solid var(--sky);margin-left:6px}
+.timeline li{list-style:none;position:relative;padding:0 0 26px 24px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:#fff;border:2px solid var(--sky);border-radius:50%}
+.timeline .y{font-weight:600;color:var(--navy);font-size:1.25rem}
+.timeline p{font-size:.94rem;max-width:30em}
+
+/* find us */
+.find{background:var(--off)}
+.find-grid{display:grid;gap:30px}
+.contact dl div{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5em 1fr;gap:12px;font-size:.95rem}
+.contact dt{color:var(--mute)}
+.contact dd{color:var(--ink);font-weight:400}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--silver)}
+.map{width:100%;height:340px;border:0;display:block;filter:saturate(.85)}
+.find figure img{width:100%;max-width:626px}
+
+/* footer */
+footer{background:#0a1f42;color:#a9b8cf;padding:56px 0 30px;font-size:.9rem}
+.f-grid{display:grid;gap:30px}
+footer h4{color:#fff;font-weight:500;font-size:.95rem;margin-bottom:10px}
+footer a{text-decoration:none;color:#dfe7f3}
+footer a:hover{color:#fff;text-decoration:underline}
+footer ul{list-style:none;display:grid;gap:5px}
+.f-brand{display:flex;gap:16px;align-items:flex-start}
+.f-brand img{width:64px;background:#fff;padding:5px}
+.f-brand .ar{font-size:1.25rem;color:#fff;display:block;text-align:left}
+.f-legal{border-top:1px solid #23395f;margin-top:40px;padding-top:18px;font-size:.78rem;color:#7d8fab}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid var(--line);color:var(--mute);font-size:.68rem;text-align:center;padding:7px 10px;line-height:1.3}
+
+@media (min-width:760px){
+  .wrap{padding:0 36px}
+  .visit{display:flex}
+  .crest-tab span{display:block}
+  .hero{padding:76px 0 0}
+  .hero-grid{grid-template-columns:1fr 1.3fr;gap:44px;align-items:stretch}
+  .hero-text{display:flex;flex-direction:column;justify-content:space-between;padding-top:30px}
+  .hero-photo img{height:100%;min-height:520px}
+  .hero-panel{position:absolute;left:-1px;bottom:-1px;width:min(340px,60%)}
+  .school{grid-template-columns:1.1fr 1fr;align-items:start}
+  .steps{grid-template-columns:repeat(4,1fr);border-top:0}
+  .step{grid-template-columns:1fr;border-bottom:0;border-top:1px solid var(--silver);padding:20px 22px 0 0}
+  .step p{grid-column:1}
+  .adm-more{grid-template-columns:repeat(3,1fr)}
+  .sr-grid{grid-template-columns:repeat(3,1fr)}
+  .sr-bottom{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px}
+  .mosaic{grid-template-columns:repeat(12,1fr)}
+  .m1{grid-column:span 7;grid-row:span 2;aspect-ratio:auto}
+  .m2{grid-column:span 5;aspect-ratio:16/10}
+  .m3{grid-column:span 3}.m4{grid-column:span 2}
+  .m5{display:none}
+  .results li{grid-template-columns:9em 1fr 1.2fr;gap:20px;align-items:baseline}
+  .letter{grid-template-columns:1fr 2.2fr}
+  .find-grid{grid-template-columns:1fr 1.2fr}
+  .f-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}
+}
+@media (min-width:1040px){
+  nav.main{display:flex}
+  .timeline{grid-template-columns:repeat(5,1fr);border-left:0;border-top:2px solid var(--sky);margin:0}
+  .timeline li{padding:26px 20px 0 0}
+  .timeline li::before{left:0;top:-8px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="crest-tab" href="#top" aria-label="Delta English School home"><img src="img/crest.jpg" alt="Delta English School crest"><span>Delta English School</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#school">About Delta</a>
+      <a href="#admission">Admission</a>
+      <a href="#senior">Grade 11 &amp; 12</a>
+      <a href="#titans">Titans</a>
+      <a href="#history">History</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <div class="top-right">
+      <a class="tel" href="tel:+97165359244">06 535 9244</a>
+      <a class="visit" href="https://helios.schooladminonline.com/portal/public_calendars/campus_tour_calendar">Visit the campus</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="name">
+          <h1>Delta<br>English<br>School</h1>
+          <span class="ar" lang="ar" dir="rtl">مدرسة دلتا الانجليزية</span>
+        </div>
+        <p class="hero-intro">A <b>CBSE school in Muwailih, Sharjah</b>, teaching children from Kindergarten to Grade 12. Our students are the Titans, and they come to us from many countries. Come and see the campus, or call the Office of Admissions and ask us anything.</p>
+      </div>
+      <div class="hero-photo">
+        <img src="img/life-2.jpg" alt="Delta students in lab coats and hard hats at a science exhibit, Exploring Polarity" fetchpriority="high">
+        <div class="hero-panel">
+          <dl>
+            <dt>Grades</dt><dd>KG to Grade 12</dd>
+            <dt>Curriculum</dt><dd>CBSE, New Delhi</dd>
+            <dt>School code</dt><dd>90218</dd>
+            <dt>Campus</dt><dd>Muwailih Commercial, Sharjah</dd>
+          </dl>
+          <a class="arrow" href="#admission">How admission works</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="school">
+  <div class="wrap school">
+    <div>
+      <div class="sec-head">
+        <h2>The school</h2>
+        <p>Delta started as a nursery in Sharjah and grew, class by class, into a full K-12 school. Since September 2009 we have been in our own purpose-built building on Sheikh Khalifa Bin Zayed Road, It has the Ernest Hemingway Library, the DES Media Hub and a student activity centre.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Curriculum</dt><dd>Central Board of Secondary Education (CBSE), New Delhi</dd></div>
+        <div><dt>CBSE school code</dt><dd>90218</dd></div>
+        <div><dt>Approved by</dt><dd>Ministry of Education, UAE</dd></div>
+        <div><dt>Grade levels</dt><dd>Kindergarten to Grade Level 12</dd></div>
+        <div><dt>Founded</dt><dd>1992, by Dennis and Anita D&rsquo;cruz</dd></div>
+        <div><dt>Principal</dt><dd>Anita D&rsquo;cruz</dd></div>
+        <div><dt>Operated by</dt><dd>Delta Education System (USA)</dd></div>
+        <div><dt>Mascot</dt><dd>Titans</dd></div>
+        <div><dt>School colours</dt><dd>Navy, sky blue, silver</dd></div>
+      </dl>
+    </div>
+    <figure>
+      <img src="img/life-6.jpg" alt="Guests in the Delta majlis room with students seated in front">
+      <figcaption>From the DES photo archive.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="admission" class="adm">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Admission</h2>
+      <p>First-time applicants and transfer students go through the same four steps with the Office of the Registrar. If anything is unclear, come in and speak to an Admissions Coordinator, or call or email us.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h3>Ask</h3><p>Call, email or book a campus visit. We answer your questions before you apply.</p></div>
+      <div class="step"><span class="n">02</span><h3>Apply</h3><p>Apply online through Helios, our admissions portal, any time.</p></div>
+      <div class="step"><span class="n">03</span><h3>Assess</h3><p>The Registrar&rsquo;s office takes you through the next step for your child&rsquo;s grade level.</p></div>
+      <div class="step"><span class="n">04</span><h3>Accept</h3><p>You hear back from us and complete registration.</p></div>
+    </div>
+    <div class="adm-more">
+      <div><h3>School transport from Dubai</h3><p>DES offers school transport from Dubai, run by Momentum, our transport office.</p></div>
+      <div><h3>Tamil as a second language</h3><p>Hindi, Urdu, Malayalam and Tamil are offered from Grade 1 to Grade 10.</p></div>
+      <div><h3>Delta Rewards</h3><p>Rewards for parents whose children are already enrolled at DES.</p></div>
+    </div>
+    <div class="adm-links">
+      <a class="arrow" href="https://helios.schooladminonline.com/users/sign_in">Apply online (Helios)</a>
+      <a class="arrow" href="https://helios.schooladminonline.com/portal/public_calendars/campus_tour_calendar">Book a campus visit</a>
+      <a class="arrow" href="mailto:launchpad@deltasch.com">launchpad@deltasch.com</a>
+    </div>
+  </div>
+</section>
+
+<section id="senior">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Grade 11 and 12</h2>
+      <p>Senior Secondary is organised into three learning programs. English (Core, 301) is compulsory for everyone; the rest of the subjects come as clusters.</p>
+    </div>
+    <div class="sr-grid">
+      <div class="prog">
+        <h3>Health Science <small>4 clusters</small></h3>
+        <table>
+          <tr><td>HS 1</td><td>Biology, Chemistry, Physics, Mathematics</td></tr>
+          <tr><td>HS 2</td><td>Biology, Chemistry, Physics, Business Studies</td></tr>
+          <tr><td>HS 3</td><td>Biology, Chemistry, Physics, Computer Science</td></tr>
+          <tr><td>HS 4</td><td>Biology, Chemistry, Physics, Informatics Practices</td></tr>
+        </table>
+      </div>
+      <div class="prog">
+        <h3>Engineering <small>3 clusters</small></h3>
+        <table>
+          <tr><td>E 1</td><td>Biology, Chemistry, Physics, Mathematics</td></tr>
+          <tr><td>E 2</td><td>Chemistry, Physics, Mathematics, Computer Science</td></tr>
+          <tr><td>E 3</td><td>Chemistry, Physics, Mathematics, Informatics Practices</td></tr>
+        </table>
+      </div>
+      <div class="prog">
+        <h3>Business and Finance <small>5 clusters</small></h3>
+        <table>
+          <tr><td>BF 1</td><td>Physics, Mathematics, Business Studies, Computer Science</td></tr>
+          <tr><td>BF 2</td><td>Mathematics, Business Studies, Entrepreneurship, Informatics Practices</td></tr>
+          <tr><td>BF 3</td><td>Accountancy, Economics, Business Studies, Entrepreneurship</td></tr>
+          <tr><td>BF 4</td><td>Accountancy, Economics, Business Studies, Informatics Practices</td></tr>
+          <tr><td>BF 5</td><td>Business Studies, Entrepreneurship, Informatics Practices, Media</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="sr-bottom">
+      <div class="side">
+        <h3>Courses and CBSE codes</h3>
+        <ul class="codes">
+          <li><span>English (Core)</span><span>301</span></li>
+          <li><span>Hindi Elective</span><span>002</span></li>
+          <li><span>Physics</span><span>042</span></li>
+          <li><span>Chemistry</span><span>043</span></li>
+          <li><span>Biology</span><span>044</span></li>
+          <li><span>Mathematics</span><span>041</span></li>
+          <li><span>Computer Science</span><span>083</span></li>
+          <li><span>Informatics Practices</span><span>065</span></li>
+          <li><span>Multi-Media</span><span>821</span></li>
+          <li><span>Web Application</span><span>803</span></li>
+          <li><span>Accountancy</span><span>055</span></li>
+          <li><span>Economics</span><span>030</span></li>
+          <li><span>Entrepreneurship</span><span>066</span></li>
+          <li><span>Business Studies</span><span>054</span></li>
+        </ul>
+        <p class="note">Informatics Practices can&rsquo;t be combined with Web Application or with Computer Science. Students who passed only Mathematics: Basic (241) in Grade 10 can&rsquo;t take Mathematics (041) in Grade 11.</p>
+      </div>
+      <div class="side">
+        <h3>Extra languages, Grade 1 to 10</h3>
+        <ul class="codes">
+          <li><span>Hindi Course B</span><span>085</span></li>
+          <li><span>Urdu Course B</span><span>303</span></li>
+          <li><span>Malayalam</span><span>012</span></li>
+          <li><span>Tamil</span><span>006</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="titans" class="titans">
+  <div class="wrap">
+    <div class="mosaic">
+      <img class="m1" src="img/life-5.jpg" alt="A Delta student speaking at a podium" style="object-position:50% 35%">
+      <img class="m2" src="img/life-4.jpg" alt="A student in a nurse's uniform during a health science demonstration">
+      <img class="m3" src="img/life-7.jpg" alt="A boy with his mother at a classroom activity table">
+      <img class="m4" src="img/life-1.jpg" alt="Young students holding flowers">
+      <img class="m5" src="img/life-8.jpg" alt="Students on a sand dig activity at night">
+    </div>
+    <div class="sec-head">
+      <h2>What the Titans have been winning</h2>
+      <p>Results from inter-school competitions, as reported in the Titan News Center.</p>
+    </div>
+    <ul class="results">
+      <li><span class="d">15 Oct 2022</span><span class="r">First Place, Kaplan Business Cafe</span><span class="e">Kaplan Professional Middle East, DIFC. Our team&rsquo;s business plan was &ldquo;Cafusion&rdquo;, a cafe with an innovative menu, sustainable infrastructure and a loyalty program.</span></li>
+      <li><span class="d">2022</span><span class="r">First Place, Poster Competition, GMU MASE</span><span class="e">Gulf Medical University, Ajman. Aleta Rajan, Hajira Abdul Jaleel and Shamiya Mannarottil (Grade 10) on Green Hydrogen.</span></li>
+      <li><span class="d">31 Mar 2022</span><span class="r">First Place, Pitch Perfect Competition</span><span class="e">GEMS Our Own English High School, Dubai. Iffah Konian (Grade 12).</span></li>
+      <li><span class="d">27 Mar 2022</span><span class="r">Third Place, Water Rocket Competition</span><span class="e">Emirates Aviation University, Dubai. Team &ldquo;Galaxy Titans&rdquo; built a rocket in two hours that flew over 85 metres.</span></li>
+      <li><span class="d">Jan 2022</span><span class="r">Outstanding Delegate, Healthcare Council</span><span class="e">Youth Global Solutions Summit, Sharjah. Iffah Konian (Grade 11).</span></li>
+      <li><span class="d">19 Jan 2022</span><span class="r">Third Place, Calligraphy</span><span class="e">Tilawa Inter-school Islamic Festival, Abu Dhabi. Minahil Sheraz (Grade 9).</span></li>
+      <li><span class="d">SPEA</span><span class="r">&ldquo;Developed&rdquo;, the highest rating</span><span class="e">Distance Learning Inspection by the Sharjah Private Education Authority.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="principal">
+  <div class="wrap letter">
+    <div><h2>From the Principal</h2></div>
+    <div>
+      <blockquote>
+        <p>&ldquo;As one of the earliest C.B.S.E. schools in the country, we have a rich tradition of excellence and a history of producing students who truly make a difference to the society.</p>
+        <p>On behalf of the DES administration, I extend my best wishes as you prepare for your child&rsquo;s admission process and invite you to join us in their exciting journey to a great education.&rdquo;</p>
+      </blockquote>
+      <div class="sig"><img src="img/principal.jpg" alt="Anita D'cruz, Principal"><div><b>Anita D&rsquo;cruz</b><span>Principal and co-founder</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="history" class="rule-top">
+  <div class="wrap">
+    <div class="sec-head"><h2>How we got here</h2></div>
+    <ol class="timeline">
+      <li><span class="y">1989</span><p>Dennis and Anita D&rsquo;cruz open Delta Nursery in Sharjah. Later that year it adds a Pre-K kindergarten program.</p></li>
+      <li><span class="y">1992</span><p>The Ministry of Education grants permission for Delta English School. It opens in Ghafiya, close to Al Shaab Sports Club.</p></li>
+      <li><span class="y">1996</span><p>DES moves to a bigger building in Maysaloon, opposite the Sharjah Municipal Health Clinic.</p></li>
+      <li><span class="y">2009</span><p>In September we move into our own custom-built campus in Muwailih.</p></li>
+      <li><span class="y">2020</span><p>Grade 11 and 12 classes begin with the 2020&ndash;2021 school year.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="find" class="find">
+  <div class="wrap">
+    <div class="sec-head"><h2>Find us</h2></div>
+    <div class="find-grid">
+      <div class="contact">
+        <dl>
+          <div><dt>Address</dt><dd>S116, Sheikh Khalifa Bin Zayed Road, Muwailih Commercial, Sharjah</dd></div>
+          <div><dt>Office hours</dt><dd>Sun&ndash;Thu 7:30am&ndash;12:30pm and 1:30&ndash;3:30pm<br>Sat 8:15am&ndash;12:30pm</dd></div>
+          <div><dt>Telephone</dt><dd><a href="tel:+97165359244">+971 6 535 9244</a></dd></div>
+          <div><dt>Fax</dt><dd>+971 6 535 9245</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:launchpad@deltasch.com">launchpad@deltasch.com</a></dd></div>
+          <div><dt>Mail</dt><dd>Office of Admissions, Delta English School, Postal Code 20121, Muwailih Commercial, Sharjah</dd></div>
+        </dl>
+        <p style="margin-top:22px"><a class="arrow" href="https://www.google.com/maps?q=25.2892643,55.4556679">Open in Google Maps</a></p>
+      </div>
+      <div>
+        <iframe class="map" title="Delta English School on Google Maps" src="https://maps.google.com/maps?q=25.2892643,55.4556679&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+    <figure style="margin-top:30px">
+      <img src="img/campus.jpg" alt="The Delta English School building with its English and Arabic name over the entrance">
+      <figcaption>Our building in Muwailih. The Administration entrance is in the middle.</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <img src="img/crest.jpg" alt="">
+        <div><span class="ar" lang="ar" dir="rtl">مدرسة دلتا الانجليزية</span><b style="color:#fff;font-weight:500">Delta English School</b><br>Our Differentiation Mould Innovators<br>S116, Sheikh Khalifa Bin Zayed Road, Muwailih Commercial, Sharjah, UAE. Postal Code 20121.</div>
+      </div>
+      <div><h4>School</h4><ul><li><a href="#school">About Delta</a></li><li><a href="#principal">Principal&rsquo;s welcome</a></li><li><a href="#history">History</a></li><li><a href="#titans">Titan News</a></li></ul></div>
+      <div><h4>Parents</h4><ul><li><a href="#admission">Admission</a></li><li><a href="#senior">Grade 11 &amp; 12 courses</a></li><li><a href="https://helios.schooladminonline.com/users/sign_in">Helios online admission</a></li><li><a href="https://www.deltasch.com/position-open.html">Employment</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+97165359244">+971 6 535 9244</a></li><li><a href="mailto:launchpad@deltasch.com">launchpad@deltasch.com</a></li><li><a href="https://www.facebook.com/DeltaEnglishSchool/">Facebook</a></li><li><a href="https://www.linkedin.com/company/delta-english-school">LinkedIn</a></li><li><a href="https://www.youtube.com/channel/UCFrz_1TB19rAVBTlQDZdFUQ">YouTube</a></li></ul></div>
+    </div>
+    <div class="f-legal">Affiliated to CBSE, New Delhi (school code 90218). Approved and recognised by the Ministry of Education, UAE. The Delta English School and Delta Nursery wordmark, shield and &ldquo;Our Differentiation Mould Innovators&rdquo; are trademarks of Delta English School and Delta Nursery.</div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Delta English School. Not the official site.</div>
+</body>
+</html>

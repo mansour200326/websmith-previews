@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Happy Home Nursery, Maysaloon, Sharjah | EYFS nursery for ages 1 to 4</title>
+<meta name="description" content="Happy Home Nursery in Maysaloon, Sharjah. British EYFS curriculum with STEAM, Playgroup, Nursery and Preschool, day care until 4pm, school bus across Sharjah city.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Cairo:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#3f8a2c; --green-d:#2f6b20; --green-l:#e6f2df;
+  --ink:#1d241a; --body:#3b4337; --mute:#6a7266; --line:#e2e6de; --soft:#f4f6f1;
+  --r:#e8312f; --o:#f28b30; --y:#f2c919; --g:#5aac3c; --b:#3b5fc0; --p:#7b4fb5; --v:#b0479c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.6;padding-bottom:34px}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.4vw,46px);font-weight:800}
+h3{font-size:21px;font-weight:700}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.ar{font-family:"Cairo",sans-serif;font-weight:600}
+
+/* header: logo, real nav, corner call tab */
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:stretch;justify-content:space-between;max-width:1240px;margin:0 auto;padding-left:20px;min-height:64px}
+.logo{display:flex;align-items:center}
+.logo img{height:38px;width:auto}
+nav.main{display:none}
+.hd-right{display:flex;align-items:stretch}
+.wa{display:flex;align-items:center;gap:6px;padding:0 14px;font-weight:700;font-size:15px;text-decoration:none;color:var(--ink)}
+.wa svg{width:18px;height:18px;fill:#25a244}
+.wa span{display:none}
+.call{display:flex;flex-direction:column;justify-content:center;background:var(--green);color:#fff;text-decoration:none;padding:0 18px;font-weight:700;font-size:15px;line-height:1.2}
+.call small{font-weight:600;font-size:12px;opacity:.85}
+.call:hover{background:var(--green-d)}
+
+/* hero: big photo + two route tiles */
+.hero{display:grid;gap:14px;padding-top:16px}
+.hero-photo{position:relative;border-radius:22px;overflow:hidden;min-height:440px;background:#c9d7c0}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,25,10,0) 30%,rgba(15,25,10,.55) 62%,rgba(15,25,10,.82) 100%)}
+.hero-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px 22px 26px;color:#fff}
+.hero-text h1{color:#fff;font-size:clamp(34px,5.6vw,62px);font-weight:800;max-width:15ch}
+.hero-text p{margin-top:12px;max-width:52ch;font-size:17px;color:#f1f5ee}
+.tiles{display:grid;gap:14px}
+.tile{border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;text-decoration:none}
+.tile h2{font-size:30px}
+.tile ul{list-style:none}
+.tile li{padding:7px 0;border-top:1px solid rgba(0,0,0,.12);display:flex;justify-content:space-between;gap:12px;font-size:16px}
+.tile li b{font-weight:700}
+.t1{background:var(--green);color:#fff}
+.t1 h2{color:#fff}
+.t1 li{border-color:rgba(255,255,255,.28)}
+.t2{background:var(--soft);color:var(--ink)}
+.go{font-weight:700;font-size:15px;text-decoration:underline;text-underline-offset:4px}
+
+/* rainbow children marker from their logo */
+.kids{display:inline-flex;gap:4px;vertical-align:middle}
+.kids i{width:7px;height:16px;border-radius:4px 4px 2px 2px;display:block}
+.kids i:nth-child(1){background:var(--r)}.kids i:nth-child(2){background:var(--o)}.kids i:nth-child(3){background:var(--y)}.kids i:nth-child(4){background:var(--g)}.kids i:nth-child(5){background:var(--b)}.kids i:nth-child(6){background:var(--p)}.kids i:nth-child(7){background:var(--v)}
+
+section{padding:72px 0}
+.lead{font-size:19px;max-width:60ch;margin-top:14px}
+
+/* classes */
+.classes{display:grid;gap:40px}
+.agetable{width:100%;border-collapse:collapse;margin-top:26px}
+.agetable td{padding:16px 0;border-top:1px solid var(--line);vertical-align:top}
+.agetable tr:last-child td{border-bottom:1px solid var(--line)}
+.agetable td:first-child{width:38%;padding-right:14px}
+.agetable .nm{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:22px;color:var(--ink);display:flex;align-items:center;gap:10px}
+.agetable .nm::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c)}
+.agetable .age{font-weight:700;color:var(--green-d);font-size:15px}
+.hours{background:var(--soft);border-radius:22px;padding:26px 24px;align-self:start}
+.hours h3{margin-bottom:10px}
+.hours dl{display:grid;grid-template-columns:1fr;gap:2px}
+.hours dt{font-weight:700;color:var(--ink);margin-top:14px}
+.hours dd{font-size:16px}
+.hours .note{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:15px;color:var(--mute)}
+
+/* full-bleed photo band */
+.band{position:relative;height:56vw;max-height:620px;min-height:260px;overflow:hidden}
+.band img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.band figcaption{position:absolute;right:20px;bottom:14px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;padding:5px 10px;border-radius:6px}
+
+/* a day: numbered list + offset collage */
+.day{display:grid;gap:40px}
+.steps{list-style:none;margin-top:26px;columns:1}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:4px 10px;padding:14px 0;border-top:1px solid var(--line);break-inside:avoid}
+.steps .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;color:var(--green)}
+.steps b{color:var(--ink);font-size:18px;display:block}
+.steps span{font-size:15.5px}
+.collage{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:62px;gap:12px}
+.collage figure{border-radius:16px;overflow:hidden;position:relative}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage figcaption{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.94);font-size:12.5px;font-weight:700;color:var(--ink);padding:3px 8px;border-radius:5px}
+.c1{grid-column:1/5;grid-row:1/5}
+.c2{grid-column:5/7;grid-row:2/6}
+.c3{grid-column:1/4;grid-row:5/8}
+.c4{grid-column:4/7;grid-row:6/9}
+.c5{grid-column:1/4;grid-row:8/11}
+.c6{grid-column:4/7;grid-row:9/12}
+
+/* safety */
+.safe{background:var(--green-l)}
+.safe-grid{display:grid;gap:34px}
+.bus{border-radius:18px;overflow:hidden;border:6px solid #fff;box-shadow:0 1px 0 var(--line)}
+.bus img{width:100%}
+.bus figcaption{background:#fff;padding:8px 4px 2px;font-size:13.5px;color:var(--mute)}
+.facts{list-style:none;margin-top:22px}
+.facts li{padding:14px 0;border-top:1px solid rgba(47,107,32,.2)}
+.facts b{color:var(--ink);display:block;font-size:18px;font-family:"Bricolage Grotesque",sans-serif}
+.fac{margin-top:56px}
+.fac h3{font-size:26px}
+.faclist{list-style:none;display:grid;grid-template-columns:1fr;margin-top:14px;counter-reset:f}
+.faclist li{counter-increment:f;padding:13px 0;border-top:1px solid rgba(47,107,32,.2);display:grid;grid-template-columns:40px 1fr;gap:2px 8px}
+.faclist li::before{content:counter(f,decimal-leading-zero);font-weight:700;color:var(--green-d);font-size:14px;padding-top:3px}
+.faclist b{color:var(--ink)}
+.faclist span{grid-column:2;font-size:15.5px}
+
+/* team */
+.team{display:grid;gap:34px}
+.principal{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-top:24px}
+.principal img{width:120px;height:120px;border-radius:50%;object-fit:cover}
+.principal b{display:block;color:var(--ink);font-size:20px;font-family:"Bricolage Grotesque",sans-serif}
+.names{columns:2;column-gap:24px;list-style:none;font-size:15.5px}
+.names li{padding:8px 0;border-top:1px solid var(--line);break-inside:avoid}
+.names li small{display:block;color:var(--mute);font-size:13px}
+
+/* parents */
+.parents{border-top:1px solid var(--line)}
+.quotes{display:grid;gap:22px;margin-top:30px}
+blockquote{border-left:4px solid var(--c,var(--green));padding:4px 0 4px 18px}
+blockquote p{font-size:18px;color:var(--ink)}
+blockquote.big p{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(22px,2.6vw,30px);line-height:1.25;font-weight:500}
+blockquote cite{display:block;margin-top:10px;font-style:normal;font-size:14px;color:var(--mute);font-weight:700}
+
+/* admissions */
+.adm{background:var(--soft)}
+.adm-grid{display:grid;gap:34px}
+.docs{list-style:none;margin-top:22px;counter-reset:d}
+.docs li{counter-increment:d;display:grid;grid-template-columns:34px 1fr;padding:11px 0;border-top:1px solid var(--line);font-size:16px}
+.docs li::before{content:counter(d);font-weight:800;color:var(--green)}
+.adm-side{align-self:start}
+.adm-side .photo{border-radius:18px;overflow:hidden;margin-bottom:20px}
+.adm-side .photo img{width:100%;height:280px;object-fit:cover;object-position:50% 20%}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:10px}
+.btn:hover{background:var(--green-d)}
+.link{font-weight:700;color:var(--green-d)}
+
+/* find us */
+.find{display:grid;gap:30px}
+.map{border-radius:18px;overflow:hidden;min-height:340px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.contact dl{margin-top:18px}
+.contact dt{font-size:13px;font-weight:700;color:var(--mute);margin-top:16px}
+.contact dd{font-size:18px;color:var(--ink)}
+.contact dd a{text-decoration:none;border-bottom:2px solid var(--green-l)}
+
+/* footer */
+footer{background:var(--ink);color:#cfd6ca;padding:56px 0 30px;font-size:15px}
+.ft{display:grid;gap:30px}
+.ft h4{color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-size:17px;margin-bottom:8px}
+.ft a{text-decoration:none}
+.ft a:hover{text-decoration:underline}
+.ft ul{list-style:none}
+.ft li{padding:3px 0}
+.ft .brand img{background:#fff;border-radius:12px;padding:8px;width:84px}
+.ft .brand .ar{font-size:22px;color:#fff;margin-top:12px;text-align:left}
+.legal{margin-top:36px;padding-top:18px;border-top:1px solid #3a4436;font-size:13px;color:#98a293;display:flex;flex-wrap:wrap;gap:8px 22px}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);font-size:12px;color:var(--mute);text-align:center;padding:7px 10px}
+
+@media (min-width:700px){
+  .wa span{display:inline}
+  .tiles{grid-template-columns:1fr 1fr}
+  .steps{columns:2;column-gap:28px}
+  .faclist{grid-template-columns:1fr 1fr;column-gap:28px}
+  .names{columns:3}
+  .quotes{grid-template-columns:1fr 1fr}
+  .quotes .big{grid-column:1/-1}
+  .ft{grid-template-columns:1.3fr 1fr 1fr 1fr}
+}
+@media (min-width:1000px){
+  nav.main{display:flex;align-items:center;gap:22px;font-size:15px;font-weight:600}
+  nav.main a{text-decoration:none;color:var(--body)}
+  nav.main a:hover{color:var(--green-d)}
+  .hd{gap:20px}
+  .logo img{height:44px}
+  .call{padding:0 24px;font-size:16px}
+  .hero{grid-template-columns:1.75fr 1fr;padding-top:20px}
+  .hero-photo{min-height:640px}
+  .hero-text{padding:36px 38px 40px}
+  .tiles{grid-template-columns:1fr}
+  .tile{padding:28px 28px}
+  .classes{grid-template-columns:1.5fr 1fr;gap:64px;align-items:start}
+  .day{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .collage{position:sticky;top:90px;grid-auto-rows:58px}
+  .safe-grid{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .team{grid-template-columns:1fr 1.25fr;gap:64px}
+  .adm-grid{grid-template-columns:1.3fr 1fr;gap:64px}
+  .find{grid-template-columns:1fr 1.4fr;gap:56px}
+  section{padding:96px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <a class="logo" href="#top" aria-label="Happy Home Nursery"><img src="img/logo-wide.png" alt="Happy Home Nursery" width="248" height="44"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#classes">Classes &amp; times</a>
+      <a href="#day">A day here</a>
+      <a href="#care">Safety &amp; facilities</a>
+      <a href="#team">Our team</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <div class="hd-right">
+      <a class="wa" href="https://wa.me/971564332045" aria-label="WhatsApp 056 433 2045"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg><span>056 433 2045</span></a>
+      <a class="call" href="tel:+97165631772"><small>Admissions</small>06 563 1772</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-photo">
+      <img src="img/train.jpg" alt="Children riding a cardboard train in front of the Happy Home Nursery tree mural" fetchpriority="high">
+      <div class="hero-text">
+        <h1>Happy Home Nursery, Maysaloon, Sharjah</h1>
+        <p>A nursery for children from one year to four. We follow the British EYFS curriculum, with STEAM activities built into the day. Established in 1980.</p>
+      </div>
+    </div>
+    <div class="tiles">
+      <a class="tile t1" href="#admissions">
+        <h2>Admissions</h2>
+        <div>
+          <ul>
+            <li><b>Playgroup</b><span>18 months to 2</span></li>
+            <li><b>Nursery</b><span>2 to 3 years</span></li>
+            <li><b>Preschool</b><span>3 to 4 years</span></li>
+          </ul>
+          <p class="go" style="margin-top:14px">What to bring to register</p>
+        </div>
+      </a>
+      <a class="tile t2" href="#classes">
+        <h2>Day care until 4pm</h2>
+        <div>
+          <ul>
+            <li><b>Monday to Thursday</b><span>7:00 to 4:00</span></li>
+            <li><b>Ages</b><span>18 months to 5 years</span></li>
+            <li><b>School bus</b><span>Across Sharjah city</span></li>
+          </ul>
+          <p class="go" style="margin-top:14px">Classes and times</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<section id="classes">
+  <div class="wrap classes">
+    <div>
+      <h2>Which class is my child in?</h2>
+      <p class="lead">Children start with us from one year old and stay until their fourth birthday, plus a few months depending on the school term. Lessons are in English. Arabic and Islamic studies are available on request.</p>
+      <table class="agetable">
+        <tr><td><span class="nm" style="--c:var(--r)">Playgroup</span><span class="age">18 months to 2 years</span></td><td>Care and learning planned around what toddlers need and are interested in at this age.</td></tr>
+        <tr><td><span class="nm" style="--c:var(--y)">Nursery</span><span class="age">2 to 3 years</span></td><td>A programme built to support each child's development during an important year.</td></tr>
+        <tr><td><span class="nm" style="--c:var(--b)">Preschool</span><span class="age">3 to 4 years</span></td><td>Getting children ready for school: the knowledge and skills they need for what comes next.</td></tr>
+      </table>
+    </div>
+    <aside class="hours">
+      <h3>Times</h3>
+      <dl>
+        <dt>Nursery hours</dt><dd>Monday to Friday, 8:00 am to 12:30 pm</dd>
+        <dt>Building open</dt><dd>Monday to Friday, 7:00 am to 4:00 pm</dd>
+        <dt>Extended day care</dt><dd>Monday to Thursday, 7:00 am to 4:00 pm, for ages 18 months to 5 years</dd>
+        <dt>Language</dt><dd>English, with extra Arabic classes</dd>
+      </dl>
+      <p class="note">Not sure which group fits your child? Call the office on <a class="link" href="tel:+97165631772">06 563 1772</a> and we'll talk it through.</p>
+    </aside>
+  </div>
+</section>
+
+<figure class="band">
+  <img src="img/graduation.jpg" alt="Children in red caps and gowns on stage at the Happy Home Nursery Annual Day" loading="lazy">
+  <figcaption>Annual Day and Graduation Ceremony</figcaption>
+</figure>
+
+<section id="day">
+  <div class="wrap day">
+    <div>
+      <h2>A day at Happy Home</h2>
+      <p class="lead">Children learn through play here. This is roughly how a day goes.</p>
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>Arrival</b><span>A set of morning activities to start the day well.</span></div></li>
+        <li><span class="n">2</span><div><b>Circle time</b><span>Their favourite part of the day: conversations and friendly chatting.</span></div></li>
+        <li><span class="n">3</span><div><b>Indoor activities</b><span>The indoor play area and classroom activities, where children learn to get along.</span></div></li>
+        <li><span class="n">4</span><div><b>Outdoor play</b><span>Every day, in the playground and the soft play gym.</span></div></li>
+        <li><span class="n">5</span><div><b>Arts and crafts</b><span>Something made by hand, every day.</span></div></li>
+        <li><span class="n">6</span><div><b>Sand and water play</b><span>Their favourite outdoor play.</span></div></li>
+        <li><span class="n">7</span><div><b>Messy play</b><span>Shaving foam, noodles, jelly. They love it.</span></div></li>
+        <li><span class="n">8</span><div><b>Reading and story time</b><span>Books, stories and tales every day, from the reading corner.</span></div></li>
+        <li><span class="n">9</span><div><b>Field trips</b><span>A trip somewhere in Sharjah each month.</span></div></li>
+        <li><span class="n">10</span><div><b>Special days</b><span>We celebrate the festivals of all our families.</span></div></li>
+        <li><span class="n">11</span><div><b>Extra-curricular</b><span>Extra activities for the early years.</span></div></li>
+      </ol>
+    </div>
+    <div class="collage" aria-label="Photos from the nursery">
+      <figure class="c1"><img src="img/carousel.jpg" alt="Boys on the see-saw rides in the outdoor play area" loading="lazy"><figcaption>Outdoor play</figcaption></figure>
+      <figure class="c2"><img src="img/ballpit.jpg" alt="Toddlers in the ball pit" loading="lazy"><figcaption>Indoor play</figcaption></figure>
+      <figure class="c3"><img src="img/arts.jpg" alt="Children holding red paper apples they made" loading="lazy"><figcaption>Arts and crafts</figcaption></figure>
+      <figure class="c4"><img src="img/solar.jpg" alt="Two boys with paper rockets in front of a solar system display" loading="lazy"><figcaption>STEAM</figcaption></figure>
+      <figure class="c5"><img src="img/diwali.jpg" alt="Two children holding diyas at a Happy Diwali display" loading="lazy"><figcaption>Diwali</figcaption></figure>
+      <figure class="c6"><img src="img/halloween.jpg" alt="Children in costumes on dress up day" loading="lazy"><figcaption>Dress up day</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="care" class="safe">
+  <div class="wrap">
+    <div class="safe-grid">
+      <figure class="bus">
+        <img src="img/bus.jpg" alt="The Happy Home Nursery school bus outside the nursery sign in Maysaloon" loading="lazy" width="500" height="300">
+        <figcaption>Our bus outside the nursery on Street 27, Maysaloon.</figcaption>
+      </figure>
+      <div>
+        <h2>Keeping them safe</h2>
+        <ul class="facts">
+          <li><b>A nurse on site, full time</b>A qualified, DHA approved nurse runs our own clinic. She keeps an eye on each child's health, eating and safety, and a visiting doctor checks on the children's general health.</li>
+          <li><b>School bus across Sharjah city</b>Our buses have CCTV and seat belts, with a trained female bus attendant and driver. Seats are limited and go first come, first served, so ask the office early.</li>
+          <li><b>Trained staff</b>Every teacher is trained in early childhood, child protection and safety, and fire fighting, with in-house or outside training every quarter.</li>
+          <li><b>Written policies</b>Policies and procedures for child protection, security and safeguarding, available from the office.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fac">
+      <h3>Inside the nursery</h3>
+      <ul class="faclist">
+        <li><b>Classrooms</b><span>Each one set up so children learn through play.</span></li>
+        <li><b>Clinic</b><span>Full-time nurse and a visiting doctor.</span></li>
+        <li><b>Reading corner</b><span>Children learn to handle books and turn the pages themselves.</span></li>
+        <li><b>Indoor play area</b><span>Toys and equipment in a safe, roomy space.</span></li>
+        <li><b>Outdoor playground</b><span>Plus an indoor soft play gym.</span></li>
+        <li><b>Vegetable garden</b><span>Watering, digging and learning about plants, fruit and vegetables.</span></li>
+        <li><b>Special day care room</b><span>For the children who stay on in the afternoon.</span></li>
+        <li><b>STEAM lab</b><span>Hands-on STEAM activities, built into our EYFS days.</span></li>
+      </ul>
+      <p style="margin-top:20px"><a class="link" href="https://kuula.co/share/collection/7PcDV?fs=1&amp;vr=1&amp;zoom=1&amp;gyro=0&amp;thumbs=1" target="_blank" rel="noopener">Take the 360° virtual tour of the nursery</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap team">
+    <div>
+      <h2>Our team</h2>
+      <p class="lead">Our teachers have studied early childhood education and keep training while they work here. These are the people your child will see every day.</p>
+      <div class="principal">
+        <img src="img/principal.jpg" alt="Ms. Shagufta Haji, Nursery Principal" loading="lazy">
+        <div><b>Ms. Shagufta Haji</b>Nursery Principal</div>
+      </div>
+    </div>
+    <ul class="names">
+      <li>Ms. Reem Kher Aldein<small>HR &amp; Legal Affairs Manager</small></li>
+      <li>Ms. Chandini Kushal<small>Accounting Manager</small></li>
+      <li>Geneive Maderal<small>Parent Coordinator, Operations</small></li>
+      <li>Divyamanu<small>Nurse</small></li>
+      <li>Ms. Majida Iqbal<small>Teacher</small></li>
+      <li>Ms. Nadeesha Vitharana<small>Teacher</small></li>
+      <li>Ms. Devyani Shirgill<small>Teacher</small></li>
+      <li>Ms. Petsi Rodrigues<small>Teacher</small></li>
+      <li>Mary Grace<small>Teacher Assistant</small></li>
+      <li>Ms. Jane Dantes<small>Teacher Assistant</small></li>
+      <li>Ms. Cecelyn Artajo<small>Teacher Assistant</small></li>
+      <li>Ms. Dilini Bandara<small>Teacher Assistant</small></li>
+      <li>Ms. Christine Villon<small>Teacher Assistant</small></li>
+      <li>Ms. Michelle Ramos<small>Teacher Assistant</small></li>
+      <li>Ms. Michelle Martin<small>Teacher Assistant</small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="parents">
+  <div class="wrap">
+    <h2>What parents tell us</h2>
+    <div class="quotes">
+      <blockquote class="big" style="--c:var(--o)"><p>"To be precise... my son wants to go to nursery even on a holiday, that explains how much he loves and enjoys going to his Happy Home."</p><cite>Harsha Nair</cite></blockquote>
+      <blockquote style="--c:var(--b)"><p>"It's been a second home for my son and he was very excited and happy to go to nursery everyday."</p><cite>Monisha Sunil, Google review</cite></blockquote>
+      <blockquote style="--c:var(--p)"><p>"Normally kids don't want to get up early morning... but my daughter get up early everyday get ready happily."</p><cite>Zainab Unissa</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="admissions" class="adm">
+  <div class="wrap adm-grid">
+    <div>
+      <h2>Registering your child</h2>
+      <p class="lead">Admissions are open for Playgroup, Nursery and Preschool. Collect the registration forms from the nursery office and bring these with you:</p>
+      <ol class="docs">
+        <li>Completed registration forms, with the terms and conditions signed</li>
+        <li>Copy of your child's passport with the UAE residence visa page</li>
+        <li>Copy of the sponsor's passport with the UAE visa page</li>
+        <li>Copy of your child's Emirates ID</li>
+        <li>Copy of your child's birth certificate</li>
+        <li>Six passport-size photos of your child</li>
+        <li>Copy of your child's immunisation record</li>
+        <li>Child medical history form (from the nursery)</li>
+        <li>Signed welcome circular</li>
+        <li>Emergency contact and pick-up authorisation form</li>
+      </ol>
+    </div>
+    <div class="adm-side">
+      <div class="photo"><img src="img/classroom.jpg" alt="Children colouring at their tables in a Happy Home classroom" loading="lazy"></div>
+      <p style="margin-bottom:16px">Want to see the classrooms first? Call the office, or send us a WhatsApp with your child's age.</p>
+      <a class="btn" href="tel:+97165631772">Call 06 563 1772</a>
+      <p style="margin-top:14px"><a class="link" href="https://wa.me/971564332045">WhatsApp 056 433 2045</a> &nbsp;·&nbsp; <a class="link" href="mailto:info@happyhomenursery.com">info@happyhomenursery.com</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap find">
+    <div class="contact">
+      <h2>Find us</h2>
+      <p class="lead" style="font-size:17px">We're in a villa on Street 27 in Maysaloon, Sharjah. Look for our sign with the tree.</p>
+      <dl>
+        <dt>Address</dt><dd>Villa 17, Street 27<br>Maysaloon, Sharjah, UAE</dd>
+        <dt>Phone</dt><dd><a href="tel:+97165631772">06 563 1772</a></dd>
+        <dt>Mobile / WhatsApp</dt><dd><a href="https://wa.me/971564332045">056 433 2045</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@happyhomenursery.com">info@happyhomenursery.com</a></dd>
+        <dt>Jobs</dt><dd><a href="mailto:careers@happyhomenursery.com">careers@happyhomenursery.com</a></dd>
+      </dl>
+    </div>
+    <div class="map">
+      <iframe title="Happy Home Nursery on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Happy+Home+Nursery,+Maysaloon,+Sharjah&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="brand">
+        <img src="img/tree.png" alt="Happy Home Nursery logo" loading="lazy">
+        <p class="ar" lang="ar" dir="rtl">حضانة البيت السعيد</p>
+        <p style="margin-top:6px">Happy Home Nursery. Established in 1980.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Villa 17, Street 27<br>Maysaloon, Sharjah, UAE</p>
+        <p style="margin-top:8px">Mon–Fri 8:00 am – 12:30 pm<br>Day care Mon–Thu to 4:00 pm</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+97165631772">06 563 1772</a></li>
+          <li><a href="https://wa.me/971564332045">056 433 2045 (WhatsApp)</a></li>
+          <li><a href="mailto:info@happyhomenursery.com">info@happyhomenursery.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/happyhomeshj/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCYC_SgSDXENH2r1ssZKnY6A" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://twitter.com/happyhomeshj" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://ae.linkedin.com/in/happy-home-nursery-a12b12140" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span><span class="kids" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>&nbsp; © Happy Home Nursery</span>
+      <span>EYFS (British) curriculum</span>
+    </div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Happy Home Nursery. Not the official site.</div>
+</body>
+</html>
