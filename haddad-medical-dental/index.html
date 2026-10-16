@@ -27,7 +27,8 @@ p{margin:0 0 1em}
 
 /* address strip */
 .strip{background:var(--blue);color:#fff;font-size:14px}
-.strip .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.strip .wrap{display:flex;justify-content:space-between;gap:2px 16px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap;line-height:1.45}
+@media (max-width:759px){.strip{font-size:13px}}
 .strip a{text-decoration:none;font-weight:700}
 
 /* header */
@@ -55,7 +56,7 @@ nav a:hover{color:var(--blue)}
 .act .or a{color:var(--ink)}
 .hero figure{margin:0;justify-self:start}
 .frame{background:#fff;border:1px solid var(--rule);padding:10px;box-shadow:0 1px 0 var(--rule)}
-.hero .frame img{width:100%;max-width:440px;aspect-ratio:400/300;object-fit:cover;object-position:center 48%}
+.hero .frame img{width:100%;max-width:440px;height:auto;aspect-ratio:400/300;object-fit:cover;object-position:center 48%}
 figcaption{font-size:13px;color:var(--mute);margin-top:9px;line-height:1.45}
 
 /* statement */
