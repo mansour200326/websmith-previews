@@ -20,7 +20,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{font:17px/1.6 "Source Sans 3",system-ui,sans-serif;color:var(--body);background:#fff}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--ink);line-height:1.15}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
@@ -38,7 +38,7 @@ nav a:hover{color:var(--plum)}
 
 /* hero */
 .hero{display:grid;grid-template-columns:1fr;gap:34px;padding:44px 0 64px}
-.hero h1{font-size:clamp(34px,5vw,58px);letter-spacing:-.01em;max-width:13ch}
+.hero h1{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.01em;max-width:17ch}
 .hero .lede{font-size:19px;margin-top:20px;max-width:36em}
 .hero .lede em{font-style:normal;color:var(--ink)}
 .split{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
@@ -49,7 +49,7 @@ nav a:hover{color:var(--plum)}
 .pics{position:relative;padding:0 0 70px 0;min-height:260px}
 .pics .block{position:absolute;left:18%;right:0;top:40px;bottom:0;background:var(--plum)}
 .pics .a{position:relative;width:86%;max-width:620px;box-shadow:0 1px 0 rgba(0,0,0,.05)}
-.pics .b{position:absolute;right:6%;bottom:22px;width:46%;max-width:300px;border:6px solid #fff}
+.pics .b{position:absolute;right:5%;bottom:20px;width:44%;max-width:300px;border:6px solid #fff}
 .pics figcaption{position:absolute;left:0;bottom:30px;font-size:13px;color:var(--mute);max-width:40%}
 @media(min-width:960px){
   .hero{grid-template-columns:5fr 6fr;gap:56px;align-items:start;padding:64px 0 90px}
@@ -172,21 +172,21 @@ footer ul{list-style:none}
         <p>One supplier for a hotel's operating equipment. We buy from manufacturers in Europe, Asia and the Americas, and every item is double-checked before it reaches you. Whatever the size of your business, you get the same service.</p>
       </div>
       <ol class="cat">
-        <li><img src="img/prod1.jpg" alt="" loading="lazy"><div class="n">01</div><div class="t">Chinaware</div></li>
-        <li><img src="img/prod2.jpg" alt="" loading="lazy"><div class="n">02</div><div class="t">Glassware</div></li>
-        <li><img src="img/prod3.jpg" alt="" loading="lazy"><div class="n">03</div><div class="t">Flatware</div></li>
-        <li><img src="img/prod4.jpg" alt="" loading="lazy"><div class="n">04</div><div class="t">Buffetware</div></li>
-        <li><img src="img/prod5.jpg" alt="" loading="lazy"><div class="n">05</div><div class="t">Stoneware</div></li>
-        <li><img src="img/prod6.jpg" alt="" loading="lazy"><div class="n">06</div><div class="t">Linen</div></li>
-        <li><img src="img/prod7.jpg" alt="" loading="lazy"><div class="n">07</div><div class="t">Towels</div></li>
-        <li><img src="img/prod8.jpg" alt="" loading="lazy"><div class="n">08</div><div class="t">Housekeeping items</div></li>
-        <li><img src="img/prod9.jpg" alt="" loading="lazy"><div class="n">09</div><div class="t">In-room amenities</div></li>
-        <li><img src="img/prod10.jpg" alt="" loading="lazy"><div class="n">10</div><div class="t">Disposables</div></li>
-        <li><img src="img/prod11.jpg" alt="" loading="lazy"><div class="n">11</div><div class="t">Restaurant furniture</div></li>
-        <li><img src="img/prod12.jpg" alt="" loading="lazy"><div class="n">12</div><div class="t">Room service</div></li>
-        <li><img src="img/prod13.jpg" alt="" loading="lazy"><div class="n">13</div><div class="t">Kitchenware</div></li>
-        <li><img src="img/prod14.jpg" alt="" loading="lazy"><div class="n">14</div><div class="t">Service line</div></li>
-        <li><img src="img/prod15.jpg" alt="" loading="lazy"><div class="n">15</div><div class="t">Table accessories</div></li>
+        <li><img src="img/prod1.jpg" alt=""><div class="n">01</div><div class="t">Chinaware</div></li>
+        <li><img src="img/prod2.jpg" alt=""><div class="n">02</div><div class="t">Glassware</div></li>
+        <li><img src="img/prod3.jpg" alt=""><div class="n">03</div><div class="t">Flatware</div></li>
+        <li><img src="img/prod4.jpg" alt=""><div class="n">04</div><div class="t">Buffetware</div></li>
+        <li><img src="img/prod5.jpg" alt=""><div class="n">05</div><div class="t">Stoneware</div></li>
+        <li><img src="img/prod6.jpg" alt=""><div class="n">06</div><div class="t">Linen</div></li>
+        <li><img src="img/prod7.jpg" alt=""><div class="n">07</div><div class="t">Towels</div></li>
+        <li><img src="img/prod8.jpg" alt=""><div class="n">08</div><div class="t">Housekeeping items</div></li>
+        <li><img src="img/prod9.jpg" alt=""><div class="n">09</div><div class="t">In-room amenities</div></li>
+        <li><img src="img/prod10.jpg" alt=""><div class="n">10</div><div class="t">Disposables</div></li>
+        <li><img src="img/prod11.jpg" alt=""><div class="n">11</div><div class="t">Restaurant furniture</div></li>
+        <li><img src="img/prod12.jpg" alt=""><div class="n">12</div><div class="t">Room service</div></li>
+        <li><img src="img/prod13.jpg" alt=""><div class="n">13</div><div class="t">Kitchenware</div></li>
+        <li><img src="img/prod14.jpg" alt=""><div class="n">14</div><div class="t">Service line</div></li>
+        <li><img src="img/prod15.jpg" alt=""><div class="n">15</div><div class="t">Table accessories</div></li>
       </ol>
       <div class="order">
         <h3>Ordering</h3>
@@ -220,8 +220,8 @@ footer ul{list-style:none}
         <li>Mercura</li>
       </ul>
       <div class="photos">
-        <figure><img src="img/img3.jpg" alt="Breakfast buffet with pastries on display stands" width="620" height="384" loading="lazy"><figcaption>Buffetware and display risers</figcaption></figure>
-        <figure><img src="img/page1_img1.jpg" alt="Tea service, glassware, stoneware and furniture" width="850" height="100" loading="lazy"><figcaption>Chinaware, glassware, stoneware, furniture</figcaption></figure>
+        <figure><img src="img/img3.jpg" alt="Breakfast buffet with pastries on display stands" width="620" height="384"><figcaption>Buffetware and display risers</figcaption></figure>
+        <figure><img src="img/page1_img1.jpg" alt="Tea service, glassware, stoneware and furniture" width="850" height="100"><figcaption>Chinaware, glassware, stoneware, furniture</figcaption></figure>
       </div>
     </div>
   </section>

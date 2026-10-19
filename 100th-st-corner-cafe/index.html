@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>100th St Corner Cafe | Breakfast and lunch in Urbandale, Iowa</title>
+<meta name="description" content="Breakfast and lunch every day 6am to 1:30pm at 3017 100th St, Urbandale, Iowa. Weekday lunch specials, full menu and directions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c8202a;--red-dk:#a3161f;--ink:#2a1912;--body:#4a3a33;--mute:#85766e;--rule:#e7e1dc;--paper:#fbfaf7;--wash:#f4efea}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 17px/1.55 Karla,system-ui,sans-serif;color:var(--body);background:var(--paper);padding-bottom:34px}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:"Bricolage Grotesque",sans-serif;color:var(--ink);line-height:1.02;letter-spacing:-.02em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,247,.97);border-bottom:1px solid var(--rule)}
+.hd{display:flex;align-items:center;gap:28px;height:66px}
+.mark{font-family:"Bricolage Grotesque";font-weight:800;color:var(--red);font-size:22px;line-height:.95;text-decoration:none;letter-spacing:-.03em}
+.mark span{display:block;font-size:13px;font-weight:500;color:var(--ink);letter-spacing:0;font-family:Karla}
+nav{display:flex;gap:24px;margin-left:auto;font-weight:500}
+nav a{text-decoration:none;color:var(--ink)}
+nav a:hover{color:var(--red)}
+.call{background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:11px 16px;border-radius:4px;white-space:nowrap}
+.call:hover{background:var(--red-dk)}
+@media(max-width:820px){nav{display:none}.hd{justify-content:space-between}.call{padding:9px 12px;font-size:15px}}
+
+/* opening */
+.open{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding:64px 0 72px}
+.open h1{font-size:clamp(46px,7.4vw,96px);font-weight:800}
+.open h1 em{font-style:normal;color:var(--red)}
+.open p.lede{font-size:20px;max-width:30em;margin:26px 0 30px;color:var(--body)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;border-top:2px solid var(--ink);padding-top:16px;max-width:460px}
+.facts dt{font-weight:700;color:var(--ink)}
+.facts dd a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.facts dd a:hover{color:var(--red)}
+.pile{position:relative;height:500px}
+.snap{position:absolute;background:#fff;padding:9px 9px 30px;box-shadow:0 1px 2px rgba(42,25,18,.12),0 10px 26px rgba(42,25,18,.12)}
+.snap img{width:100%;height:100%;object-fit:cover}
+.s1{width:58%;height:250px;left:2%;top:10px;transform:rotate(-4deg)}
+.s2{width:54%;height:240px;right:0;top:120px;transform:rotate(3.5deg);z-index:2}
+.s3{width:44%;height:250px;left:16%;top:250px;transform:rotate(-1.5deg);z-index:3}
+.snap figcaption{position:absolute;bottom:7px;left:11px;font-size:13px;color:var(--mute)}
+@media(max-width:900px){.open{grid-template-columns:1fr;padding:40px 0 50px}.pile{height:380px;max-width:520px}.s1{height:190px}.s2{height:180px;top:90px}.s3{height:190px;top:180px}}
+
+/* specials */
+.specials{background:var(--ink);color:#e9e0d9;padding:76px 0 82px}
+.specials .top{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.specials h2{color:#fff;font-size:clamp(34px,4.6vw,52px)}
+.specials .top p{max-width:26em;color:#c9bbb1}
+.days{list-style:none;border-top:1px solid #4a372e}
+.days li{display:grid;grid-template-columns:minmax(200px,0.9fr) 1.6fr auto;align-items:baseline;gap:24px;border-bottom:1px solid #4a372e;padding:16px 0}
+.days .d{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(36px,5.6vw,72px);line-height:1;color:#5b463c;letter-spacing:-.03em;transition:color .2s}
+.days li:hover .d{color:#fff}
+.days .dish{font-size:19px;color:#f3ece6}
+.days .tag{font-size:14px;font-weight:700;color:var(--paper);background:var(--red);padding:3px 9px;border-radius:3px;visibility:hidden}
+.days li.today .d{color:var(--red)}
+.days li.today .tag{visibility:visible}
+@media(max-width:700px){.days li{grid-template-columns:1fr auto;gap:4px 12px}.days .dish{grid-column:1/-1;font-size:17px}.days .tag{grid-row:1;grid-column:2}}
+
+/* menu */
+.menu{padding:84px 0 40px}
+.menu-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;margin-bottom:38px}
+.menu-head h2{font-size:clamp(40px,6vw,76px);font-weight:800}
+.menu-head p{max-width:30em}
+.mgrid{display:grid;grid-template-columns:210px 1fr;gap:56px}
+.rail{position:sticky;top:96px;align-self:start;list-style:none;font-weight:500;border-left:2px solid var(--rule)}
+.rail li a{display:block;padding:5px 0 5px 14px;margin-left:-2px;border-left:2px solid transparent;text-decoration:none;color:var(--mute)}
+.rail li a:hover,.rail li a.on{color:var(--red);border-left-color:var(--red)}
+.rail .grp{font-family:"Bricolage Grotesque";font-weight:700;color:var(--ink);padding:14px 0 4px 14px;font-size:15px}
+.rail .grp:first-child{padding-top:0}
+.cols{columns:2;column-gap:52px}
+.cat{break-inside:avoid;margin-bottom:40px}
+.cat h3{font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:-.01em;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:6px}
+.cat .note{font-size:15px;color:var(--mute);font-style:italic;margin:6px 0 10px}
+.cat ul{list-style:none}
+.cat li{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:0 8px;padding:7px 0;border-bottom:1px dotted #d8cfc8}
+.cat li .n{font-weight:700;color:var(--ink)}
+.cat li i{border-bottom:1px dotted #c4b8af;transform:translateY(-4px);font-style:normal}
+.cat li i{border:0}
+.cat li b{color:var(--red);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cat li small{grid-column:1/-1;font-size:15px;color:var(--mute);line-height:1.4;margin-top:1px}
+.part{font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;color:var(--red);text-transform:uppercase;letter-spacing:.02em;margin:6px 0 16px;column-span:all}
+.part:not(:first-child){margin-top:20px;padding-top:28px;border-top:1px solid var(--rule)}
+.house{background:var(--wash);padding:16px 18px 6px;margin:-4px -18px 40px}
+.house h3{border-color:var(--red)}
+.warn{font-size:14px;color:var(--mute);margin-top:10px;max-width:40em}
+@media(max-width:980px){.cols{columns:1}}
+@media(max-width:820px){.mgrid{grid-template-columns:1fr;gap:0}.rail{position:sticky;top:66px;z-index:10;display:flex;overflow-x:auto;gap:4px;background:var(--paper);border:0;border-bottom:1px solid var(--rule);margin:0 -22px 28px;padding:10px 22px;white-space:nowrap}.rail .grp{display:none}.rail li a{border:1px solid var(--rule);border-radius:3px;padding:5px 10px;margin:0;font-size:15px}.rail li a.on{border-color:var(--red)}.house{margin:-4px -12px 40px;padding:14px 12px 6px}}
+
+/* about + wall */
+.about{padding:70px 0 86px;border-top:1px solid var(--rule)}
+.agrid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:start}
+.about h2{font-size:clamp(34px,4.4vw,52px);margin-bottom:22px}
+.about p{margin-bottom:14px;max-width:32em;font-size:18px}
+.about .party{border-left:3px solid var(--red);padding:6px 0 6px 16px;margin-top:24px;color:var(--ink);font-weight:500}
+.about .party a{color:var(--red);font-weight:700}
+.wall{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.wall figure{background:#fff;padding:7px 7px 22px;box-shadow:0 1px 2px rgba(42,25,18,.12),0 6px 18px rgba(42,25,18,.09)}
+.wall img{width:100%;height:100%;object-fit:cover}
+.w1{grid-column:span 3;transform:rotate(-1.5deg);aspect-ratio:4/3}
+.w2{grid-column:span 3;transform:rotate(2deg);aspect-ratio:1/1;margin-top:26px}
+.w3{grid-column:span 2;transform:rotate(1deg);aspect-ratio:3/4}
+.w4{grid-column:span 4;transform:rotate(-1deg);aspect-ratio:3/2}
+@media(max-width:900px){.agrid{grid-template-columns:1fr;gap:36px}}
+
+/* find */
+.find{background:var(--wash);padding:70px 0 0}
+.fgrid{display:grid;grid-template-columns:1fr 1.4fr;gap:0;align-items:stretch}
+.fbox{padding:0 40px 70px 0}
+.find h2{font-size:clamp(34px,4.4vw,52px);margin-bottom:24px}
+.addr{font-family:"Bricolage Grotesque";font-size:30px;font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:22px}
+.find dl{display:grid;grid-template-columns:90px 1fr;gap:8px 16px;border-top:1px solid #dcd3cc;padding-top:16px}
+.find dt{font-weight:700;color:var(--ink)}
+.find dd a{color:var(--red);font-weight:700;text-decoration:none}
+.find .dir{display:inline-block;margin-top:24px;color:var(--ink);font-weight:700}
+.map{min-height:420px;border:0;width:100%;height:100%;filter:saturate(.8)}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr}.fbox{padding:0 0 36px}.map{min-height:320px;margin:0 -22px;width:calc(100% + 44px)}}
+
+/* footer */
+footer{background:var(--ink);color:#c9bbb1;padding:54px 0 40px;font-size:15px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer .mark{font-size:28px}
+footer .mark span{color:#c9bbb1}
+footer h4{font-family:"Bricolage Grotesque";color:#fff;font-size:16px;margin-bottom:8px}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:#ff8a8f}
+.fine{border-top:1px solid #4a372e;margin-top:38px;padding-top:16px;color:#9d8c81;font-size:14px}
+@media(max-width:820px){.ft{grid-template-columns:1fr 1fr}}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid var(--rule);font-size:12.5px;color:var(--mute);text-align:center;padding:7px 12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="mark" href="#top">100th St<br>Corner Cafe<span>Urbandale, Iowa</span></a>
+    <nav>
+      <a href="#specials">Lunch specials</a>
+      <a href="#menu">Menu</a>
+      <a href="#cafe">The cafe</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <a class="call" href="tel:+15153312343">Call (515) 331-2343</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap open">
+    <div>
+      <h1>Breakfast and lunch on <em>100th Street.</em></h1>
+      <p class="lede">Hashbrowns, eggs your way, pancakes and omelets in the morning, burgers, melts and a hot special every weekday at lunch. Casual, friendly, and open every day from 6 in the morning.</p>
+      <dl class="facts">
+        <dt>Open</dt><dd>Every day, 6am to 1:30pm</dd>
+        <dt>Where</dt><dd><a href="#find">3017 100th St., Urbandale, IA 50323</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+15153312343">(515) 331-2343</a></dd>
+      </dl>
+    </div>
+    <div class="pile" aria-hidden="true">
+      <figure class="snap s1"><img src="staff.jpg" alt="" width="331" height="227"><figcaption>Behind the counter</figcaption></figure>
+      <figure class="snap s2"><img src="breakfast.jpg" alt="" width="387" height="258"><figcaption>Eggs, hashbrowns and toast</figcaption></figure>
+      <figure class="snap s3"><img src="counter.jpg" alt="" width="227" height="250"><figcaption>Fresh flowers by the door</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="specials" id="specials">
+    <div class="wrap">
+      <div class="top">
+        <h2>Weekday lunch specials</h2>
+        <p id="specnote">A different home-cooked plate every weekday. Ask at the counter or call ahead.</p>
+      </div>
+      <ul class="days">
+        <li data-day="1"><span class="d">Monday</span><span class="dish">Meatloaf with mashed potatoes, gravy and vegetable</span><span class="tag">Today</span></li>
+        <li data-day="2"><span class="d">Tuesday</span><span class="dish">Chicken fried steak, mashed potatoes, gravy, vegetable and bread</span><span class="tag">Today</span></li>
+        <li data-day="3"><span class="d">Wednesday</span><span class="dish">Goulash, salad and garlic bread</span><span class="tag">Today</span></li>
+        <li data-day="4"><span class="d">Thursday</span><span class="dish">Chicken and noodles over mashed potatoes, with salad and garlic bread</span><span class="tag">Today</span></li>
+        <li data-day="5"><span class="d">Friday</span><span class="dish">Open-faced steak sandwich, or fish and chips</span><span class="tag">Today</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="menu wrap" id="menu">
+    <div class="menu-head">
+      <h2>Menu</h2>
+      <p>Breakfast is served all morning. Prices as on our current menu card; ask us if anything has changed.</p>
+    </div>
+    <div class="mgrid">
+      <ul class="rail" id="rail">
+        <li class="grp">Breakfast</li>
+        <li><a href="#m-platters">Breakfast platters</a></li>
+        <li><a href="#m-hash">Hashbrown specials</a></li>
+        <li><a href="#m-omelets">Omelets</a></li>
+        <li><a href="#m-pancakes">Pancakes &amp; waffles</a></li>
+        <li><a href="#m-alacarte">Ala carte</a></li>
+        <li><a href="#m-kids">Kids</a></li>
+        <li class="grp">Lunch</li>
+        <li><a href="#m-hot">Hot sandwiches</a></li>
+        <li><a href="#m-cold">Cold sandwiches</a></li>
+        <li><a href="#m-wraps">Wraps</a></li>
+        <li><a href="#m-roast">Roast beef &amp; turkey</a></li>
+        <li><a href="#m-salads">Salads</a></li>
+        <li><a href="#m-sides">Sides</a></li>
+        <li><a href="#m-drinks">Drinks</a></li>
+      </ul>
+
+      <div>
+        <div class="cols">
+          <p class="part">Breakfast</p>
+
+          <div class="cat" id="m-platters">
+            <h3>Breakfast platters</h3>
+            <ul>
+              <li><span class="n">Breakfast Special</span><i></i><b>9.75</b><small>Hashbrowns, 2 eggs made to order, choice of meat and toast. Without hashbrowns 7.50, without meat 7.25</small></li>
+              <li><span class="n">Small Breakfast Special</span><i></i><b>7.35</b><small>Smaller hashbrowns, 1 egg, half slice of ham or 1 piece bacon or sausage, and toast</small></li>
+              <li><span class="n">The Big Breakfast</span><i></i><b>12.25</b><small>Large hashbrowns, 3 eggs made your way, 3 strips of bacon, 3 sausage links, 2 sausage patties or 1 slice of ham, and toast</small></li>
+              <li><span class="n">Steak and Eggs</span><i></i><b>12.75</b><small>With hashbrowns, 2 eggs your way and toast</small></li>
+              <li><span class="n">Chicken Fried Steak</span><i></i><b>11.25</b><small>With hashbrowns, 2 eggs your way and toast</small></li>
+              <li><span class="n">Corned Beef Hash</span><i></i><b>12.25</b><small>With hashbrowns, 2 eggs your way and toast</small></li>
+              <li><span class="n">Breakfast Sandwich</span><i></i><b>6.25</b><small>Choice of bread, meat, cheese and scrambled eggs</small></li>
+              <li><span class="n">Breakfast Burrito</span><i></i><b>8.75</b><small>Stuffed with sausage, bacon, ham, hashbrowns, eggs, cheese, onion and green pepper</small></li>
+              <li><span class="n">Biscuits and Gravy</span><i></i><b>9.25</b><small>Half order 6.50</small></li>
+              <li><span class="n">Eggs Benedict</span><i></i><b>8.25</b></li>
+            </ul>
+          </div>
+
+          <div class="cat house" id="m-hash">
+            <h3>Hashbrown specials</h3>
+            <p class="note">Each comes with two eggs made to order.</p>
+            <ul>
+              <li><span class="n">Jo&rsquo;s Special</span><i></i><b>7.75 / 10.00</b><small>Onion, green pepper, mushrooms and tomatoes with American cheese. Half / full</small></li>
+              <li><span class="n">Stacy&rsquo;s Special</span><i></i><b>8.75 / 11.50</b><small>Onion, green pepper, mushroom, tomato, bacon, sausage, ham, American and Swiss cheese. Half / full</small></li>
+              <li><span class="n">Abbie&rsquo;s Special</span><i></i><b>8.50 / 11.00</b><small>Onion, sausage, mushroom, jalape&ntilde;o and pepper jack. Half / full</small></li>
+              <li><span class="n">Hashbrowns on their own</span><i></i><b>3.25 / 5.00 / 6.50</b><small>Small / medium / large</small></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-omelets">
+            <h3>Omelets</h3>
+            <p class="note">All include toast. Veggies saut&eacute;ed on request.</p>
+            <ul>
+              <li><span class="n">Ham &amp; Cheese</span><i></i><b>8.75</b></li>
+              <li><span class="n">Ham &amp; Cheese with Mushroom</span><i></i><b>9.25</b></li>
+              <li><span class="n">Vegetarian</span><i></i><b>8.75</b><small>Onion, green pepper and mushroom with American cheese</small></li>
+              <li><span class="n">Cheese</span><i></i><b>7.75</b><small>Add any meat 1.00, veggie .50</small></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-pancakes">
+            <h3>Pancakes &amp; waffles</h3>
+            <p class="note">Platters include 2 eggs your way and 2 pieces of meat. Half orders include 1 egg and 1 piece of meat.</p>
+            <ul>
+              <li><span class="n">Pancake Platter</span><i></i><b>9.50</b><small>Half order 6.50</small></li>
+              <li><span class="n">Blueberry Pancake Platter</span><i></i><b>11.25</b><small>Chocolate chip or strawberry also available. Half order 7.50</small></li>
+              <li><span class="n">Waffle Platter</span><i></i><b>10.25</b></li>
+              <li><span class="n">Blueberry Waffle Platter</span><i></i><b>11.25</b><small>Chocolate chip or strawberry also available</small></li>
+              <li><span class="n">French Toast Platter</span><i></i><b>9.50</b></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-alacarte">
+            <h3>Ala carte</h3>
+            <ul>
+              <li><span class="n">1 Pancake / 2 Pancakes</span><i></i><b>4.40 / 8.00</b></li>
+              <li><span class="n">Blueberry, strawberry or choc. chip pancake</span><i></i><b>5.25 / 8.75</b><small>1 / 2 pancakes</small></li>
+              <li><span class="n">Waffle</span><i></i><b>6.50</b></li>
+              <li><span class="n">Blueberry, strawberry or choc. chip waffle</span><i></i><b>7.25</b></li>
+              <li><span class="n">French Toast (2 pieces)</span><i></i><b>6.25</b></li>
+              <li><span class="n">Bowl of Oatmeal</span><i></i><b>4.25</b></li>
+              <li><span class="n">3 Strips of Bacon</span><i></i><b>3.50</b></li>
+              <li><span class="n">1 Slice of Ham</span><i></i><b>3.50</b></li>
+              <li><span class="n">2 Sausage Links</span><i></i><b>3.50</b></li>
+              <li><span class="n">1 Sausage Patty</span><i></i><b>2.25</b></li>
+              <li><span class="n">Cinnamon Roll</span><i></i><b>3.75</b></li>
+              <li><span class="n">Cup of Sausage Gravy</span><i></i><b>3.15</b></li>
+              <li><span class="n">Two Eggs made to order</span><i></i><b>2.75</b></li>
+              <li><span class="n">Toast (2 pieces)</span><i></i><b>2.00</b></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-kids">
+            <h3>Kids</h3>
+            <ul>
+              <li><span class="n">Kids Breakfast Platter</span><i></i><b>4.75</b><small>1 egg, choice of meat and toast</small></li>
+              <li><span class="n">1 / 2 Blueberry Pancakes</span><i></i><b>3.50 / 5.50</b></li>
+              <li><span class="n">1 / 2 Pancakes</span><i></i><b>2.75 / 4.75</b></li>
+              <li><span class="n">French Toast</span><i></i><b>3.75</b></li>
+              <li><span class="n">Grilled Cheese with fries</span><i></i><b>6.00</b></li>
+              <li><span class="n">2 Chicken Strips with fries</span><i></i><b>6.25</b></li>
+            </ul>
+          </div>
+
+          <p class="part">Lunch</p>
+
+          <div class="cat" id="m-hot">
+            <h3>Hot sandwiches</h3>
+            <p class="note">All with french fries. $1 extra for onion rings, cottage cheese or side salad. Lettuce, tomato, pickle and onion on request.</p>
+            <ul>
+              <li><span class="n">Hamburger*</span><i></i><b>9.25</b></li>
+              <li><span class="n">Double Burger*</span><i></i><b>11.50</b></li>
+              <li><span class="n">Cheeseburger*</span><i></i><b>9.50</b></li>
+              <li><span class="n">Double Cheeseburger*</span><i></i><b>12.25</b></li>
+              <li><span class="n">Bacon Burger*</span><i></i><b>10.75</b></li>
+              <li><span class="n">Double Bacon Cheese Burger*</span><i></i><b>12.75</b></li>
+              <li><span class="n">Mushroom &amp; Swiss Burger*</span><i></i><b>10.75</b></li>
+              <li><span class="n">Patty Melt*</span><i></i><b>10.50</b></li>
+              <li><span class="n">Jacki Melt*</span><i></i><b>10.75</b><small>Our patty melt made with chicken breast, grilled onions and mushrooms</small></li>
+              <li><span class="n">Philly Cheese Steak*</span><i></i><b>10.50</b><small>With green peppers, onions and Swiss cheese</small></li>
+              <li><span class="n">Chicken Sandwich</span><i></i><b>9.50</b><small>Grilled or crispy</small></li>
+              <li><span class="n">Buffalo Chicken Sandwich</span><i></i><b>9.75</b></li>
+              <li><span class="n">Breaded Tenderloin</span><i></i><b>10.75</b></li>
+              <li><span class="n">Tuna Melt</span><i></i><b>9.75</b></li>
+              <li><span class="n">Hot Ham &amp; Cheese</span><i></i><b>8.75</b></li>
+              <li><span class="n">French Dip</span><i></i><b>10.75</b><small>With Swiss cheese and grilled onions</small></li>
+              <li><span class="n">Cod Fish Sandwich</span><i></i><b>9.25</b></li>
+              <li><span class="n">Reuben</span><i></i><b>9.75</b></li>
+              <li><span class="n">Rachel</span><i></i><b>9.75</b><small>A reuben with turkey</small></li>
+              <li><span class="n">Grilled Cheese Sandwich</span><i></i><b>6.25</b></li>
+              <li><span class="n">3 Piece Chicken Strips</span><i></i><b>8.25</b></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-cold">
+            <h3>Cold sandwiches</h3>
+            <ul>
+              <li><span class="n">Egg Salad</span><i></i><b>7.25</b><small>On wheat, with lettuce</small></li>
+              <li><span class="n">Cold Roast Beef</span><i></i><b>8.25</b><small>With mayo and lettuce</small></li>
+              <li><span class="n">Tuna Salad</span><i></i><b>7.75</b><small>On wheat, with lettuce</small></li>
+              <li><span class="n">BLT on wheat</span><i></i><b>8.25</b></li>
+              <li><span class="n">Triple Decker Club</span><i></i><b>9.75</b><small>With mayo or 1000 Island dressing</small></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-wraps">
+            <h3>Wraps</h3>
+            <p class="note">Made with lettuce, shredded cheese and tomato, served with cottage cheese.</p>
+            <ul>
+              <li><span class="n">Tuna Salad</span><i></i><b>9.75</b></li>
+              <li><span class="n">Chicken, grilled or crispy</span><i></i><b>9.75</b></li>
+              <li><span class="n">Cajun Chicken, grilled or crispy</span><i></i><b>9.75</b></li>
+              <li><span class="n">Chicken Bacon Ranch</span><i></i><b>10.50</b></li>
+              <li><span class="n">Black Angus Steak*</span><i></i><b>10.75</b></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-roast">
+            <h3>Roast beef &amp; turkey</h3>
+            <ul>
+              <li><span class="n">Hot Roast Beef</span><i></i><b>10.50</b><small>Half portion 8.75</small></li>
+              <li><span class="n">Hot Turkey</span><i></i><b>10.50</b><small>Half portion 8.75</small></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-salads">
+            <h3>Salads</h3>
+            <ul>
+              <li><span class="n">Chicken Breast</span><i></i><b>10.50</b><small>Mixed lettuce, grilled chicken, mushrooms, green peppers, tomatoes, shredded cheese, croutons, choice of dressing</small></li>
+              <li><span class="n">Chef Salad</span><i></i><b>10.50</b><small>Mixed lettuce, ham, turkey, cheese, mushrooms, green peppers, tomatoes, croutons, choice of dressing</small></li>
+              <li><span class="n">Side Salad</span><i></i><b>3.75</b><small>Mixed lettuce, croutons, tomatoes, choice of dressing</small></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-sides">
+            <h3>Sides</h3>
+            <ul>
+              <li><span class="n">French Fries</span><i></i><b>3.50</b></li>
+              <li><span class="n">Onion Rings</span><i></i><b>4.50</b></li>
+              <li><span class="n">Sweet Potato Fries</span><i></i><b>4.50</b></li>
+              <li><span class="n">Coleslaw</span><i></i><b>2.75</b></li>
+              <li><span class="n">Cottage Cheese</span><i></i><b>2.75</b></li>
+              <li><span class="n">Potato Chips</span><i></i><b>1.50</b></li>
+              <li><span class="n">Cup / Bowl of Soup</span><i></i><b>2.50 / 3.75</b></li>
+              <li><span class="n">Cup / Bowl of Chili</span><i></i><b>3.00 / 4.25</b></li>
+              <li><span class="n">Beef, turkey or country gravy</span><i></i><b>1.50</b></li>
+              <li><span class="n">Hollandaise sauce</span><i></i><b>2.50</b></li>
+              <li><span class="n">Ranch or any dressing</span><i></i><b>.50</b></li>
+              <li><span class="n">Salsa</span><i></i><b>.25</b></li>
+            </ul>
+          </div>
+
+          <div class="cat" id="m-drinks">
+            <h3>Drinks</h3>
+            <ul>
+              <li><span class="n">Coffee or hot tea</span><i></i><b>2.25</b><small>Free refills</small></li>
+              <li><span class="n">Soft drinks</span><i></i><b>2.25</b><small>Free refills. Pepsi, Diet Pepsi, Cherry Pepsi, Starry, Mt. Dew, Diet Mt. Dew, Dr. Pepper, iced tea, pink lemonade</small></li>
+              <li><span class="n">Hot chocolate or French vanilla cappuccino</span><i></i><b>2.75</b></li>
+              <li><span class="n">Juice</span><i></i><b>2.25</b><small>Tomato, orange, apple or cranberry</small></li>
+              <li><span class="n">Milk or chocolate milk</span><i></i><b>2.00</b></li>
+            </ul>
+          </div>
+        </div>
+        <p class="warn">* Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of food-borne illness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="cafe">
+    <div class="wrap agrid">
+      <div>
+        <h2>The cafe</h2>
+        <p>100th St. Corner Cafe is a casual place to sit down for breakfast or lunch. Most of the people at our tables live in Urbandale or close by, and a lot of them we know by name.</p>
+        <p>Pull up a booth, have a cup of coffee with free refills, and take your time.</p>
+        <p class="party">Coming with a group? We take reservations for weekday parties of more than 10. Call <a href="tel:+15153312343">(515) 331-2343</a>.</p>
+      </div>
+      <div class="wall">
+        <figure class="w1"><img src="selfie.jpg" alt="A mother and daughter at the cafe" loading="lazy" width="450" height="300"></figure>
+        <figure class="w2"><img src="booth.jpg" alt="Customers in a booth at the cafe" loading="lazy" width="283" height="209"></figure>
+        <figure class="w3"><img src="menu-reader.jpg" alt="A customer reading the menu" loading="lazy" width="152" height="309"></figure>
+        <figure class="w4"><img src="family.jpg" alt="A mother and toddler at a table" loading="lazy" width="233" height="229"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="wrap fgrid">
+      <div class="fbox">
+        <h2>Find us</h2>
+        <p class="addr">3017 100th St.<br>Urbandale, Iowa 50323</p>
+        <dl>
+          <dt>Hours</dt><dd>Every day, 6am to 1:30pm</dd>
+          <dt>Phone</dt><dd><a href="tel:+15153312343">(515) 331-2343</a></dd>
+          <dt>Email</dt><dd><a href="mailto:cornercafe100th@yahoo.com">cornercafe100th@yahoo.com</a></dd>
+        </dl>
+        <a class="dir" href="https://www.google.com/maps/dir/?api=1&destination=3017+100th+St+Urbandale+IA+50323" target="_blank" rel="noopener">Get directions in Google Maps &rarr;</a>
+      </div>
+      <iframe class="map" title="Map to 100th St Corner Cafe" loading="lazy" src="https://www.google.com/maps?q=3017+100th+St,+Urbandale,+IA+50323&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><a class="mark" href="#top">100th St<br>Corner Cafe<span>Breakfast and lunch, Urbandale</span></a></div>
+      <div><h4>Visit</h4>3017 100th St.<br>Urbandale, IA 50323</div>
+      <div><h4>Hours</h4>Every day<br>6am to 1:30pm</div>
+      <div><h4>Contact</h4><a href="tel:+15153312343">(515) 331-2343</a><br><a href="mailto:cornercafe100th@yahoo.com">cornercafe100th@yahoo.com</a></div>
+    </div>
+    <p class="fine">&copy; 100th St Corner Cafe, Urbandale, Iowa. Weekday parties over 10 by reservation.</p>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for 100th St Corner Cafe. Not the official site.</div>
+
+<script>
+(function(){
+  var d=new Date().getDay(), li=document.querySelector('.days li[data-day="'+d+'"]');
+  if(li){li.classList.add('today');}
+  else{document.getElementById('specnote').textContent='Specials run Monday to Friday. On weekends the full breakfast and lunch menu is on, same hours.';}
+  var links=[].slice.call(document.querySelectorAll('#rail a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=secs.indexOf(e.target);links.forEach(function(l,j){l.classList.toggle('on',j===i)});var a=links[i];if(a&&window.innerWidth<820){a.parentNode.parentNode.scrollLeft=a.offsetLeft-30;}}})},{rootMargin:'-30% 0px -60% 0px'});
+    secs.forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
