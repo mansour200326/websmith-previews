@@ -86,17 +86,14 @@ section{padding:76px 0}
 .roomgrid img{width:100%;object-fit:cover;border-radius:4px}
 .roomgrid h3{font-size:21px;margin-top:12px}
 .roomgrid p{margin:4px 0 0;font-size:15.5px}
-.r3 img{aspect-ratio:1/1;object-position:center 30%}
-.r2 img{aspect-ratio:4/3}
-.r6 img{aspect-ratio:3/2}
+.r3 img{aspect-ratio:9/8;object-position:center top}
+.r2 img,.r6 img{aspect-ratio:4/3}
 @media(min-width:900px){
   .rooms{grid-template-columns:320px 1fr;gap:56px}
   .included{position:sticky;top:24px;align-self:start}
-  .roomgrid{grid-template-columns:1.15fr 1fr;gap:30px 26px}
-  .roomgrid .r3{grid-row:span 2}
-  .r3 img{aspect-ratio:auto;height:100%;max-height:760px}
-  .roomgrid .r3{display:flex;flex-direction:column}
-  .roomgrid .r3 img{flex:1;min-height:0}
+  .roomgrid{grid-template-columns:1fr 1fr;gap:34px 26px}
+  .roomgrid .r3{grid-column:1/-1}
+  .r3 img{aspect-ratio:16/9;object-position:center 45%}
 }
 
 /* breakfast */
@@ -230,17 +227,17 @@ footer a{color:#fff}
       </aside>
       <div class="roomgrid">
         <figure class="r3">
-          <img src="Room-3-2026.jpg" alt="Large front bedroom with a bay window, seating area and high ceiling" width="901" height="901" loading="lazy">
+          <img src="Room-3-2026.jpg" alt="Large front bedroom with a bay window, seating area and high ceiling" width="901" height="901">
           <h3>First floor, front</h3>
           <p>A big room with high ceilings, the original cornice and a seating area in the bay window.</p>
         </figure>
         <figure class="r2">
-          <img src="Room-2-2026.jpg" alt="Front bedroom with armchairs by the window" width="1200" height="1200" loading="lazy">
+          <img src="Room-2-2026.jpg" alt="Front bedroom with armchairs by the window" width="1200" height="1200">
           <h3>First floor, front</h3>
           <p>Bright, with two armchairs and a small table by the tall window.</p>
         </figure>
         <figure class="r6">
-          <img src="th_Room-6-2026.jpg" alt="Ground floor bedroom with en-suite shower room" width="640" height="424" loading="lazy">
+          <img src="th_Room-6-2026.jpg" alt="Ground floor bedroom with en-suite shower room" width="640" height="424">
           <h3>Ground floor, front</h3>
           <p>On the ground floor, with the en-suite shower room just off the bedroom.</p>
         </figure>
@@ -254,19 +251,19 @@ footer a{color:#fff}
     <div class="sec-head"><h2>Breakfast</h2><span>Served 08:30 to 09:15</span></div>
     <div class="bk">
       <div class="side l" aria-hidden="true">
-        <figure class="a"><img src="Scottish-breakfast-1.jpg" alt="" width="232" height="240" loading="lazy"></figure>
-        <figure class="b"><img src="Food-scones-1.jpg" alt="" width="232" height="336" loading="lazy"></figure>
-        <figure class="c"><img src="Fruit-salad-1.jpg" alt="" width="232" height="220" loading="lazy"></figure>
-        <figure class="d"><img src="diner-2.jpg" alt="" width="444" height="250" loading="lazy"></figure>
+        <figure class="a"><img src="Scottish-breakfast-1.jpg" alt="" width="232" height="240"></figure>
+        <figure class="b"><img src="Food-scones-1.jpg" alt="" width="232" height="336"></figure>
+        <figure class="c"><img src="Fruit-salad-1.jpg" alt="" width="232" height="220"></figure>
+        <figure class="d"><img src="diner-2.jpg" alt="" width="444" height="250"></figure>
       </div>
       <div>
         <p class="bk-intro">Our breakfast room has the same high ceilings and period cornice as the rest of the house. No need to pre-order: take a seat and we'll take your order at the table. Everything is cooked to order.</p>
         <div class="strip">
-          <img src="Scottish-breakfast-1.jpg" alt="Full Scottish breakfast with haggis and tattie scone" loading="lazy">
-          <img src="diner-2.jpg" alt="The breakfast room" loading="lazy">
-          <img src="Benny-1.jpg" alt="Eggs Benny" loading="lazy">
-          <img src="BloomerBread.jpg" alt="Homemade bloomer bread" loading="lazy">
-          <img src="Fruit-salad-1.jpg" alt="Fresh fruit" loading="lazy">
+          <img src="Scottish-breakfast-1.jpg" alt="Full Scottish breakfast with haggis and tattie scone">
+          <img src="diner-2.jpg" alt="The breakfast room">
+          <img src="Benny-1.jpg" alt="Eggs Benny">
+          <img src="BloomerBread.jpg" alt="Homemade bloomer bread">
+          <img src="Fruit-salad-1.jpg" alt="Fresh fruit">
         </div>
         <dl class="menu-list">
           <div><dt>The full Scottish</dt><dd>With haggis and a homemade tattie scone, perfect for dipping into a soft fried egg.</dd></div>
@@ -281,10 +278,10 @@ footer a{color:#fff}
         <p class="baker">All the bread, English-style muffins, rolls and baked treats are made here in the house by Lesley.</p>
       </div>
       <div class="side r" aria-hidden="true">
-        <figure class="a"><img src="Breakfast-table.jpg" alt="" width="249" height="250" loading="lazy"></figure>
-        <figure class="b"><img src="Benny-1.jpg" alt="" width="232" height="267" loading="lazy"></figure>
-        <figure class="c"><img src="BloomerBread.jpg" alt="" width="250" height="252" loading="lazy"></figure>
-        <figure class="d"><img src="Bagel-2.jpg" alt="" width="232" height="270" loading="lazy"></figure>
+        <figure class="a"><img src="Breakfast-table.jpg" alt="" width="249" height="250"></figure>
+        <figure class="b"><img src="Benny-1.jpg" alt="" width="232" height="267"></figure>
+        <figure class="c"><img src="BloomerBread.jpg" alt="" width="250" height="252"></figure>
+        <figure class="d"><img src="Bagel-2.jpg" alt="" width="232" height="270"></figure>
       </div>
     </div>
   </div>
@@ -297,9 +294,9 @@ footer a{color:#fff}
       <div>
         <p style="margin:0 0 24px;font-size:17px;color:var(--ink);max-width:44ch">We're in a lovely green belt area on the south side of the city, about 2½ miles from the centre. Close enough for the Castle and the Royal Mile, and quiet when you come back.</p>
         <div class="around-pics">
-          <figure class="wide"><img src="RoyalObs-2.jpg" alt="The Royal Observatory on Blackford Hill" width="320" height="124" loading="lazy"><figcaption>The Royal Observatory on Blackford Hill</figcaption></figure>
-          <figure><img src="Arthurseat-320.jpg" alt="Looking towards Arthur's Seat" width="320" height="240" loading="lazy"><figcaption>Looking towards Arthur's Seat</figcaption></figure>
-          <figure><img src="BraidWalk1-1.jpg" alt="Hermitage of Braid walk" width="320" height="192" loading="lazy"><figcaption>Hermitage of Braid</figcaption></figure>
+          <figure class="wide"><img src="RoyalObs-2.jpg" alt="The Royal Observatory on Blackford Hill" width="320" height="124"><figcaption>The Royal Observatory on Blackford Hill</figcaption></figure>
+          <figure><img src="Arthurseat-320.jpg" alt="Looking towards Arthur's Seat" width="320" height="240"><figcaption>Looking towards Arthur's Seat</figcaption></figure>
+          <figure><img src="BraidWalk1-1.jpg" alt="Hermitage of Braid walk" width="320" height="192"><figcaption>Hermitage of Braid</figcaption></figure>
         </div>
       </div>
       <ol class="idx">
@@ -341,7 +338,7 @@ footer a{color:#fff}
       </div>
       <div class="right">
         <p class="addr">Brae Lodge Guest House<br>30 Liberton Brae<br>Edinburgh EH16 6AF</p>
-        <iframe class="map" title="Map showing Brae Lodge Guest House, 30 Liberton Brae" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=30+Liberton+Brae,+Edinburgh+EH16+6AF&amp;z=15&amp;output=embed"></iframe>
+        <iframe class="map" title="Map showing Brae Lodge Guest House, 30 Liberton Brae" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=30+Liberton+Brae,+Edinburgh+EH16+6AF&amp;z=15&amp;output=embed"></iframe>
         <p class="pin">On the A701, about 2½ miles from the city centre.</p>
       </div>
     </div>
