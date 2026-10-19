@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>UAE Podiatry | Dr Sami Tabib, Chiropody Center, Jumeirah Beach Road, Dubai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#86ad16;      /* logo green */
+    --green-d:#4c7009;    /* text-safe green */
+    --sky:#2aaee3;        /* logo "UAE" blue, wordmark only */
+    --ink:#17201b;
+    --body:#3c4540;
+    --mute:#6b736e;
+    --rule:#dfe3dc;
+    --soft:#f5f7f2;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Figtree",system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:30px}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{color:var(--ink);font-weight:600;letter-spacing:-.015em;margin:0}
+  h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1}
+  h3{font-size:19px;line-height:1.3}
+  p{margin:0 0 1em}
+
+  /* header */
+  .top{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:20}
+  .top .wrap{display:flex;align-items:center;gap:28px;height:72px}
+  .mark{font-size:27px;line-height:1;text-decoration:none;white-space:nowrap;letter-spacing:-.01em}
+  .mark .u{color:var(--sky);font-weight:300}
+  .mark .p{color:var(--green);font-weight:600}
+  .mark small{display:block;font-size:12px;color:var(--mute);font-weight:400;letter-spacing:0;margin-top:5px}
+  nav.main{display:flex;gap:22px;margin-left:auto;font-size:15px}
+  nav.main a{text-decoration:none;color:var(--body)}
+  nav.main a:hover{color:var(--green-d)}
+  .tel{display:inline-flex;align-items:center;gap:8px;background:var(--green-d);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:10px 16px;border-radius:4px;white-space:nowrap}
+  .tel:hover{background:#3b5806}
+  .tel svg{width:15px;height:15px}
+
+  /* hero */
+  .hero{padding:64px 0 0}
+  .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:72px;align-items:end}
+  .hero h1{font-size:clamp(36px,5vw,62px);line-height:1.04;font-weight:600;letter-spacing:-.025em;max-width:13em}
+  .hero .lede{font-size:19px;max-width:34em;margin:26px 0 30px;color:var(--body)}
+  .act{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+  .btn{display:inline-block;background:var(--green-d);color:#fff;text-decoration:none;font-weight:600;padding:15px 22px;border-radius:4px}
+  .btn:hover{background:#3b5806}
+  .act .plain{color:var(--body);font-size:16px}
+  .facts{border-top:2px solid var(--ink)}
+  .facts div{padding:13px 0 14px;border-bottom:1px solid var(--rule)}
+  .facts dt{font-size:13px;color:var(--mute);margin-bottom:2px}
+  .facts dd{margin:0;color:var(--ink);font-size:16px;line-height:1.4;font-weight:500}
+  .facts dl{margin:0}
+
+  .photo-row{display:grid;grid-template-columns:minmax(0,861px) 1fr;gap:40px;margin-top:56px;align-items:end}
+  .photo-row figure{margin:0}
+  .photo-row img{width:100%;height:auto}
+  .caps{display:grid;gap:22px;padding-bottom:6px;font-size:15px;line-height:1.4}
+  .caps p{margin:0;padding-left:14px;border-left:3px solid var(--green)}
+  .caps b{display:block;color:var(--ink);font-weight:600}
+
+  section{padding:96px 0}
+  .sec-head{display:grid;grid-template-columns:300px 1fr;gap:56px;margin-bottom:40px}
+  .sec-head p{max-width:40em;margin:0;align-self:end}
+
+  /* treatments index */
+  .index{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:1px solid var(--ink)}
+  .row{display:grid;grid-template-columns:28px 128px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:start}
+  .row .n{font-size:13px;color:var(--mute);padding-top:3px;font-variant-numeric:tabular-nums}
+  .thumb{width:128px;height:58px;overflow:hidden;background:var(--soft)}
+  .thumb img{width:128px;height:76px;object-fit:cover;object-position:top}
+  .row h3{margin-bottom:4px}
+  .row p{margin:0;font-size:15.5px;line-height:1.5}
+  .also{display:grid;grid-template-columns:300px 1fr;gap:56px;margin-top:48px}
+  .also ul{columns:3;column-gap:32px;margin:0;padding:0;list-style:none;font-size:15.5px}
+  .also li{padding:5px 0;break-inside:avoid;border-bottom:1px dotted var(--rule)}
+  .also h3{font-size:17px}
+  .also .note{font-size:15px;color:var(--mute);margin-top:10px}
+
+  /* children */
+  .kids{background:var(--soft)}
+  .kids-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px}
+  .kids blockquote{margin:0 0 28px;font-size:clamp(22px,2.4vw,28px);line-height:1.3;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+  .kids ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+  .kids li{padding:10px 0;border-bottom:1px solid var(--rule);color:var(--ink)}
+  .kids h3{margin:28px 0 8px}
+  .signs li{color:var(--body)}
+
+  /* laser steps */
+  .steps{border-top:1px solid var(--ink)}
+  .step{display:grid;grid-template-columns:300px 1fr;gap:56px;padding:22px 0;border-bottom:1px solid var(--rule)}
+  .step h3{font-size:18px}
+  .step p{margin:0;max-width:44em}
+  .laser-top{display:grid;grid-template-columns:300px 1fr 212px;gap:56px;margin-bottom:40px;align-items:end}
+  .laser-top img{width:212px;height:100px;object-fit:cover;object-position:top}
+
+  /* orthotics + diabetic two-up */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+  .two h2{margin-bottom:18px}
+  .two ul{padding-left:18px;margin:0 0 1em}
+  .two li{margin:0 0 6px}
+  .boxnote{border-left:3px solid var(--green);padding:4px 0 4px 16px;color:var(--ink);margin:22px 0}
+
+  /* faq */
+  .faq details{border-bottom:1px solid var(--rule);padding:18px 0}
+  .faq{border-top:1px solid var(--ink)}
+  .faq summary{cursor:pointer;color:var(--ink);font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--green-d);font-weight:400;font-size:22px;line-height:1}
+  .faq details[open] summary::after{content:"\2013"}
+  .faq details p{margin:12px 0 0;max-width:46em}
+
+  /* find us */
+  .find{background:var(--ink);color:#d9ded9}
+  .find h2{color:#fff}
+  .find .sec-head p{color:#b8c0ba}
+  .locs{display:grid;grid-template-columns:1.5fr 1fr;gap:40px}
+  .loc h3{color:#fff;font-size:22px;margin-bottom:6px}
+  .loc .where{font-size:13px;color:#9fd23a;margin-bottom:10px;display:block}
+  .loc address{font-style:normal;margin-bottom:14px}
+  .loc a.ph{color:#fff;font-weight:600;font-size:20px;text-decoration:none}
+  .map{margin-top:22px;border:0;width:100%;height:320px;filter:grayscale(.3)}
+  .book{margin-top:28px;padding-top:22px;border-top:1px solid #34403a;font-size:16px}
+
+  footer{padding:56px 0 40px;font-size:15px}
+  .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+  footer h4{margin:0 0 10px;font-size:14px;color:var(--ink);font-weight:600}
+  footer ul{list-style:none;margin:0;padding:0}
+  footer li{margin:0 0 6px}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--green-d)}
+  .legal{margin-top:40px;padding-top:18px;border-top:1px solid var(--rule);color:var(--mute);font-size:13.5px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .concept{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--rule);color:var(--mute);font-size:12px;text-align:center;padding:6px 12px}
+
+  @media (max-width:1000px){
+    nav.main{display:none}
+    .top .wrap{justify-content:space-between}
+    .hero-grid,.sec-head,.also,.kids-grid,.two,.locs,.step,.laser-top{grid-template-columns:1fr;gap:28px}
+    .laser-top img{display:none}
+    .photo-row{grid-template-columns:1fr;gap:24px}
+    .index{grid-template-columns:1fr}
+    .also ul{columns:2}
+    .foot{grid-template-columns:1fr 1fr}
+    .step{gap:6px}
+    section{padding:72px 0}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    .wrap{padding:0 18px}
+    .top .wrap{height:64px;gap:12px}
+    .mark{font-size:23px}
+    .mark small{display:none}
+    .tel{padding:9px 12px;font-size:14px}
+    .tel .lbl{display:none}
+    .hero{padding-top:40px}
+    .hero .lede{font-size:17px}
+    .row{grid-template-columns:22px 92px 1fr;gap:12px}
+    .thumb{width:92px;height:42px}
+    .thumb img{width:92px;height:55px}
+    .also ul{columns:1}
+    .kids ul{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr}
+    .map{height:260px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#" aria-label="UAE Podiatry home"><span class="u">UAE</span> <span class="p">Podiatry</span><small>Dr Sami Tabib &middot; Chiropody Center, Jumeirah</small></a>
+    <nav class="main" aria-label="Main">
+      <a href="#treat">What we treat</a>
+      <a href="#children">Children</a>
+      <a href="#laser">Nail fungus laser</a>
+      <a href="#orthotics">Orthotics</a>
+      <a href="#faq">FAQs</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <a class="tel" href="tel:+97143484092"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span class="lbl">Appointments</span> 04 348 4092</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>Heel pain, ingrown toenails, nail fungus, verrucae and diabetic feet.</h1>
+          <p class="lede">Dr Sami Tabib treats them at the Chiropody Center on Jumeirah Beach Road in Dubai, and at the Imperial College London Diabetes Centre in Abu Dhabi. Adults and children. Dr Sami wants you to understand what's going on with your feet, because informed patients make better decisions.</p>
+          <div class="act">
+            <a class="btn" href="tel:+97143484092">Call 04 348 4092 to book</a>
+            <a class="plain" href="#find">780 Jumeirah Beach Road, Dubai</a>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Your doctor</dt><dd>Dr Sami Tabib, Doctor of Podiatric Medicine (DPM)</dd></div>
+          <div><dt>Licensed by</dt><dd>Dubai Health Authority (DHA) and Health Authority of Abu Dhabi (HAAD)</dd></div>
+          <div><dt>Custom orthotics</dt><dd>Made for you at Langer labs in the UK</dd></div>
+          <div><dt>Nail fungus</dt><dd>GenesisPlus laser, at the Dubai clinic</dd></div>
+          <div><dt>Payment</dt><dd>Cash, Mastercard, Visa, AMEX and debit cards</dd></div>
+        </dl>
+      </div>
+
+      <div class="photo-row">
+        <figure><img src="img/main-image.jpg" width="861" height="293" alt="A family's feet, two adults and a baby, sticking out from under a white duvet"></figure>
+        <div class="caps">
+          <p><b>Dr Sami Tabib, DPM</b>Podiatrist, with his podiatry team</p>
+          <p><b>Two clinics</b>Jumeirah Beach Road, Dubai and Al Khaleej Al Arabi Street, Abu Dhabi</p>
+          <p><b>The whole family</b>From in-toeing toddlers to diabetic foot care</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="treat">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What we treat</h2>
+        <p>The things people come to us for most. If your problem isn't here, call anyway. Dr Sami sees a wide range of foot conditions, and the full list is below.</p>
+      </div>
+      <div class="index">
+        <div>
+          <div class="row"><span class="n">01</span><div class="thumb"><img src="img/heel-pain.jpg" alt="" loading="lazy"></div><div><h3>Heel pain / plantar fasciitis</h3><p>Pain under or inside the heel, usually worst on the first steps out of bed. Most people with a "heel spur" don't need it removed.</p></div></div>
+          <div class="row"><span class="n">02</span><div class="thumb"><img src="img/ingrown.jpg" alt="" loading="lazy"></div><div><h3>Ingrown toenails</h3><p>We treat ingrowing toenails with phenol matricectomy, without surgery.</p></div></div>
+          <div class="row"><span class="n">03</span><div class="thumb"><img src="img/laser.jpg" alt="" loading="lazy"></div><div><h3>Nail fungus laser</h3><p>GenesisPlus laser at the Dubai clinic. A session takes about 40 minutes for 5 to 10 nails. <a href="#laser">What to expect</a></p></div></div>
+          <div class="row"><span class="n">04</span><div class="thumb"><img src="img/nail-skin.jpg" alt="" loading="lazy"></div><div><h3>Nail &amp; skin fungus</h3><p>Athlete's foot and fungal nails. Plenty of things look like athlete's foot, so have it checked before you spend on creams.</p></div></div>
+          <div class="row"><span class="n">05</span><div class="thumb"><img src="img/Corns-Calluses.jpg" alt="" loading="lazy"></div><div><h3>Corns &amp; calluses</h3><p>Thick skin from pressure or friction. We pare it down and look for the cause, which is often the shoes.</p></div></div>
+        </div>
+        <div>
+          <div class="row"><span class="n">06</span><div class="thumb"><img src="img/warts.jpg" alt="" loading="lazy"></div><div><h3>Warts / verrucae</h3><p>Picked up around pools, on gym and yoga mats and in hotel showers. Over-the-counter treatments rarely reach deep enough.</p></div></div>
+          <div class="row"><span class="n">07</span><div class="thumb"><img src="img/flat-feet.jpg" alt="" loading="lazy"></div><div><h3>Flat feet</h3><p>In adults and children. Many flat feet never hurt. When they hurt, custom orthotics are often part of the treatment.</p></div></div>
+          <div class="row"><span class="n">08</span><div class="thumb"><img src="img/Orthotics.jpg" alt="" loading="lazy"></div><div><h3>Orthotics / insoles</h3><p>Custom made at Langer labs in the UK from a mould or a scan of your feet. <a href="#orthotics">Coming for orthotics?</a></p></div></div>
+          <div class="row"><span class="n">09</span><div class="thumb"><img src="img/diabetic.jpg" alt="" loading="lazy"></div><div><h3>Diabetic foot</h3><p>Everyone with diabetes should have a podiatrist. On your first visit Dr Sami tells you if your feet are low or high risk.</p></div></div>
+          <div class="row"><span class="n">10</span><div class="thumb"><img src="img/running.jpg" alt="" loading="lazy"></div><div><h3>Runners</h3><p>Which running shoe suits your arch: low, normal or high. And what we know so far about barefoot running.</p></div></div>
+        </div>
+      </div>
+
+      <div class="also">
+        <div>
+          <h3>Also treated</h3>
+          <p class="note">General chiropody too: we file nails, corns, callus and cracked heels with proper machines.</p>
+        </div>
+        <ul>
+          <li>Bunions</li><li>Hammertoes</li><li>Heel spurs</li><li>Trauma and athletic injuries</li><li>Non-surgical treatment for neuromas</li><li>Tendon and joint pain</li><li>Arthritis</li><li>Sports injuries</li><li>Infections and ulcerations</li><li>Burning pain</li><li>Unexplained foot swelling</li><li>Restless legs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="kids" id="children">
+    <div class="wrap kids-grid">
+      <div>
+        <h2 style="margin-bottom:26px">Children's feet</h2>
+        <blockquote>Pain is not normal. Your child should not have pain. "Growing pains" can be a sign of something more serious.</blockquote>
+        <p>Dr Sami treats children of all ages. The most common things we see in children are heel pain, flat feet, ingrown nails, warts and sprains. All children have flat feet until about 5 or 6, when the arch develops, so flat feet on their own aren't a worry.</p>
+        <h3>Bring them in if they</h3>
+        <ul class="signs">
+          <li>complain of pain in the feet</li>
+          <li>are clumsy when running</li>
+          <li>sit on the sidelines while others play</li>
+          <li>have ankles that roll in, seen from behind</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-top:6px">Children's foot conditions we treat</h3>
+        <ul>
+          <li>In-toeing</li><li>Out-toeing</li><li>Toe walking</li><li>Crooked toes</li><li>Heel pain</li><li>Flat feet</li>
+        </ul>
+        <p style="margin-top:24px">If a child needs them, orthotics are made to their feet and help the foot mature in a good position.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="laser">
+    <div class="wrap">
+      <div class="laser-top">
+        <h2>Laser for nail fungus</h2>
+        <p style="margin:0">Thick, yellow or crumbly toenails are usually fungus (onychomycosis). At the Dubai clinic we use the GenesisPlus laser, an Nd:YAG 1064nm laser cleared by the FDA for nail fungus. The light passes through the nail and heats the fungus. Here's how it goes.</p>
+        <img src="img/laser.jpg" alt="Laser treatment on a toenail" loading="lazy">
+      </div>
+      <div class="steps">
+        <div class="step"><h3>The day before</h3><p>Take off all nail polish and nail decorations.</p></div>
+        <div class="step"><h3>The session</h3><p>About 40 minutes to treat 5 to 10 nails. The laser passes over the nails and the skin around them a few times. Your nail feels warm, and most people describe a small hot pinch at the end that goes quickly.</p></div>
+        <div class="step"><h3>Afterwards</h3><p>Your nail may feel warm for a few minutes. Most people go straight back to what they were doing.</p></div>
+        <div class="step"><h3>The months after</h3><p>Nails grow slowly. As the new nail grows out you see the difference, but a whole clear nail can take up to 12 months. The number of sessions depends on how badly each nail is infected, and fungus is everywhere, so we'll show you how to keep it from coming back.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="orthotics" style="padding-top:0">
+    <div class="wrap two">
+      <div>
+        <h2>Coming for orthotics?</h2>
+        <p>Orthotics are more than an arch support. They're made to your feet to correct how the bones and joints line up, and they can help with flat feet, high arches, plantar fasciitis, tendonitis, neuromas, shin splints, and knee, hip and back pain.</p>
+        <p>First Dr Sami checks whether you actually need them. He examines your feet standing and lying, and watches how you walk. Then he takes a plaster mould or a digital scan, and the orthotics are made at Langer labs in the UK.</p>
+        <p class="boxnote">Bring any insoles or orthotics you already have, shop-bought or custom, and the shoes and trainers you wear most. Sometimes old orthotics only need adjusting.</p>
+      </div>
+      <div>
+        <h2>If you have diabetes</h2>
+        <p>Every diabetic should see a podiatrist. If your circulation is good and you have no numbness, burning or tingling, once a year is usually enough. If you're higher risk, it's every 2 to 3 months.</p>
+        <p>At home, look at your feet every day, or ask someone to, or use a mirror. Look for cuts, blisters, redness, warmth and changes in the nails. A few of the rules we give our patients:</p>
+        <ul>
+          <li>Don't soak your feet, and keep them away from hot sand and heaters.</li>
+          <li>Don't use corn plasters or corn removers, and don't shave off corns yourself.</li>
+          <li>Cut toenails straight across. If one is ingrowing, call us.</li>
+          <li>Never go barefoot, indoors or out, and don't wear flip-flops.</li>
+          <li>Break in new shoes two hours at a time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>FAQs</h2>
+        <p>The questions we're asked most at the front desk.</p>
+      </div>
+      <div class="faq">
+        <details open><summary>Do you do general chiropody?</summary><p>Yes. We file nails, corns, callus and cracked heels using proper machines.</p></details>
+        <details><summary>I have a heel spur. Does it need to be removed?</summary><p>Usually not. Heel pain mostly comes from the plantar fascia, the band under your arch, getting inflamed. The pain comes first and the spur comes later, and the spur usually isn't what hurts. Plenty of people have heel pain with no spur, and spurs with no pain. Dr Sami can show you how heel pain is treated without surgery.</p></details>
+        <details><summary>Should children see a podiatrist?</summary><p>Yes. Your child should not have pain in their feet. Dr Sami is trained in children's foot and ankle problems and sees children of all ages.</p></details>
+        <details><summary>What are orthotics?</summary><p>Devices made to your feet that you wear in your shoes. Dr Sami takes a plaster mould or a digital scan, and the orthotics are made in the lab from that. They control the foot and help line it up, which also affects your ankles, knees, hips and back.</p></details>
+        <details><summary>I'm diabetic. How often should I come?</summary><p>On your first visit Dr Sami tells you if you're low or high risk. Low risk is usually once a year. Higher risk, with poor circulation or numbness, every 2 to 3 months.</p></details>
+        <details><summary>Do you take credit cards?</summary><p>Yes. Cash, credit cards (Mastercard, Visa and AMEX) and debit cards.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Where to see Dr Sami</h2>
+        <p>Dr Sami sees patients in Dubai and in Abu Dhabi. To book at either clinic, call 04 348 4092 and tell us which city suits you and whether you've seen Dr Sami before.</p>
+      </div>
+      <div class="locs">
+        <div class="loc">
+          <span class="where">Dubai</span>
+          <h3>Chiropody Center</h3>
+          <address>780 Jumeirah Beach Road, Jumeirah, Dubai</address>
+          <a class="ph" href="tel:+97143484092">04 348 4092</a>
+          <iframe class="map" title="Map: Chiropody Center, 780 Jumeirah Beach Road, Dubai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Chiropody%20Center%2C%20Jumeirah%20Beach%20Road%2C%20Dubai&z=15&output=embed"></iframe>
+        </div>
+        <div class="loc">
+          <span class="where">Abu Dhabi</span>
+          <h3>Imperial College London Diabetes Centre</h3>
+          <address>Al Khaleej Al Arabi Street, Abu Dhabi</address>
+          <p>At both clinics Dr Sami sees the full range, from heel pain and ingrown toenails to nail fungus, verrucae and diabetic foot disease.</p>
+          <div class="book">
+            <p style="margin:0 0 14px">Laser for nail fungus is at the Dubai clinic.</p>
+            <a class="btn" href="tel:+97143484092">Call to book: 04 348 4092</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="mark" href="#"><span class="u">UAE</span> <span class="p">Podiatry</span></a>
+        <p style="margin-top:14px">Dr Sami Tabib and his podiatry team strive to deliver quality care to informed patients in a comfortable and convenient setting.</p>
+      </div>
+      <div>
+        <h4>Dubai</h4>
+        <p style="margin:0">Chiropody Center<br>780 Jumeirah Beach Road<br><a href="tel:+97143484092">04 348 4092</a></p>
+      </div>
+      <div>
+        <h4>Abu Dhabi</h4>
+        <p style="margin:0">Imperial College London Diabetes Centre<br>Al Khaleej Al Arabi Street</p>
+      </div>
+      <div>
+        <h4>Follow Dr Sami</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/pages/dubaifootdoc/311590103236" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/uae_podiatry" rel="noopener">X / Twitter @uae_podiatry</a></li>
+          <li><a href="https://ae.linkedin.com/pub/sami-tabib/43/89/421" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <h4 style="margin-top:20px">Member of</h4>
+        <img src="img/apma-logo.png" width="169" height="45" alt="APMA, American Podiatric Medical Association">
+      </div>
+    </div>
+    <div class="legal">
+      <span>UAE Podiatry &middot; Chiropody Center, Jumeirah, Dubai</span>
+      <span>Design concept by Websmith for UAE Podiatry. Not the official site.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for UAE Podiatry. Not the official site.</div>
+</body>
+</html>

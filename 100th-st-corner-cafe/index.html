@@ -32,22 +32,21 @@ nav a:hover{color:var(--red)}
 @media(max-width:820px){nav{display:none}.hd{justify-content:space-between}.call{padding:9px 12px;font-size:15px}}
 
 /* opening */
-.open{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding:64px 0 72px}
+.open{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:72px}
 .open h1{font-size:clamp(46px,7.4vw,96px);font-weight:800}
-.open h1 em{font-style:normal;color:var(--red)}
 .open p.lede{font-size:20px;max-width:30em;margin:26px 0 30px;color:var(--body)}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;border-top:2px solid var(--ink);padding-top:16px;max-width:460px}
 .facts dt{font-weight:700;color:var(--ink)}
 .facts dd a{text-decoration:none;border-bottom:1px solid var(--rule)}
 .facts dd a:hover{color:var(--red)}
 .pile{position:relative;height:500px}
-.snap{position:absolute;background:#fff;padding:9px 9px 30px;box-shadow:0 1px 2px rgba(42,25,18,.12),0 10px 26px rgba(42,25,18,.12)}
+.snap{position:absolute;background:#fff;padding:9px 9px 26px;box-shadow:0 1px 2px rgba(42,25,18,.12),0 10px 26px rgba(42,25,18,.12)}
 .snap img{width:100%;height:100%;object-fit:cover}
 .s1{width:58%;height:250px;left:2%;top:10px;transform:rotate(-4deg)}
 .s2{width:54%;height:240px;right:0;top:120px;transform:rotate(3.5deg);z-index:2}
 .s3{width:44%;height:250px;left:16%;top:250px;transform:rotate(-1.5deg);z-index:3}
 .snap figcaption{position:absolute;bottom:7px;left:11px;font-size:13px;color:var(--mute)}
-@media(max-width:900px){.open{grid-template-columns:1fr;padding:40px 0 50px}.pile{height:380px;max-width:520px}.s1{height:190px}.s2{height:180px;top:90px}.s3{height:190px;top:180px}}
+@media(max-width:900px){.open{grid-template-columns:1fr;padding-top:36px;padding-bottom:50px}.pile{height:380px;max-width:520px}.s1{height:190px}.s2{height:180px;top:90px}.s3{height:190px;top:180px}}
 
 /* specials */
 .specials{background:var(--ink);color:#e9e0d9;padding:76px 0 82px}
@@ -65,7 +64,7 @@ nav a:hover{color:var(--red)}
 @media(max-width:700px){.days li{grid-template-columns:1fr auto;gap:4px 12px}.days .dish{grid-column:1/-1;font-size:17px}.days .tag{grid-row:1;grid-column:2}}
 
 /* menu */
-.menu{padding:84px 0 40px}
+.menu{padding-top:84px;padding-bottom:40px}
 .menu-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;margin-bottom:38px}
 .menu-head h2{font-size:clamp(40px,6vw,76px);font-weight:800}
 .menu-head p{max-width:30em}
@@ -153,7 +152,7 @@ footer a:hover{color:#ff8a8f}
 <main id="top">
   <section class="wrap open">
     <div>
-      <h1>Breakfast and lunch on <em>100th Street.</em></h1>
+      <h1>Breakfast and lunch on 100th Street.</h1>
       <p class="lede">Hashbrowns, eggs your way, pancakes and omelets in the morning, burgers, melts and a hot special every weekday at lunch. Casual, friendly, and open every day from 6 in the morning.</p>
       <dl class="facts">
         <dt>Open</dt><dd>Every day, 6am to 1:30pm</dd>
@@ -162,9 +161,9 @@ footer a:hover{color:#ff8a8f}
       </dl>
     </div>
     <div class="pile" aria-hidden="true">
-      <figure class="snap s1"><img src="staff.jpg" alt="" width="331" height="227"><figcaption>Behind the counter</figcaption></figure>
-      <figure class="snap s2"><img src="breakfast.jpg" alt="" width="387" height="258"><figcaption>Eggs, hashbrowns and toast</figcaption></figure>
-      <figure class="snap s3"><img src="counter.jpg" alt="" width="227" height="250"><figcaption>Inside the cafe</figcaption></figure>
+      <figure class="snap s1"><img src="staff.jpg" alt="" width="331" height="227"></figure>
+      <figure class="snap s2"><img src="breakfast.jpg" alt="" width="387" height="258"></figure>
+      <figure class="snap s3"><img src="counter.jpg" alt="" width="227" height="250"></figure>
     </div>
   </section>
 
@@ -407,10 +406,10 @@ footer a:hover{color:#ff8a8f}
         <p class="party">Coming with a group? We take reservations for weekday parties of more than 10. Call <a href="tel:+15153312343">(515) 331-2343</a>.</p>
       </div>
       <div class="wall">
-        <figure class="w1"><img src="selfie.jpg" alt="A mother and daughter at the cafe" loading="lazy" width="450" height="300"></figure>
-        <figure class="w2"><img src="booth.jpg" alt="Customers in a booth at the cafe" loading="lazy" width="283" height="209"></figure>
-        <figure class="w3"><img src="menu-reader.jpg" alt="A customer reading the menu" loading="lazy" width="152" height="309"></figure>
-        <figure class="w4"><img src="family.jpg" alt="A mother and toddler at a table" loading="lazy" width="233" height="229"></figure>
+        <figure class="w1"><img src="selfie.jpg" alt="A mother and daughter at the cafe" width="450" height="300"></figure>
+        <figure class="w2"><img src="booth.jpg" alt="Customers in a booth at the cafe" width="283" height="209"></figure>
+        <figure class="w3"><img src="menu-reader.jpg" alt="A customer reading the menu" width="152" height="309"></figure>
+        <figure class="w4"><img src="family.jpg" alt="A mother and toddler at a table" width="233" height="229"></figure>
       </div>
     </div>
   </section>
@@ -427,7 +426,7 @@ footer a:hover{color:#ff8a8f}
         </dl>
         <a class="dir" href="https://www.google.com/maps/dir/?api=1&destination=3017+100th+St+Urbandale+IA+50323" target="_blank" rel="noopener">Get directions in Google Maps &rarr;</a>
       </div>
-      <iframe class="map" title="Map to 100th St Corner Cafe" loading="lazy" src="https://www.google.com/maps?q=3017+100th+St,+Urbandale,+IA+50323&output=embed"></iframe>
+      <iframe class="map" title="Map to 100th St Corner Cafe" src="https://www.google.com/maps?q=3017+100th+St,+Urbandale,+IA+50323&output=embed"></iframe>
     </div>
   </section>
 </main>
