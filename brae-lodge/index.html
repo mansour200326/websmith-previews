@@ -30,29 +30,31 @@ h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:450;margin:0;font
 .name small{display:block;font:400 14px/1.4 var(--sans);color:var(--mute);margin-top:4px}
 .hello{grid-column:1/-1;font-size:15.5px;line-height:1.5;margin:0;max-width:46ch;color:var(--body)}
 .hello em{font-family:var(--serif);font-style:italic;color:var(--ink)}
-.contact{text-align:right;font-size:15px;line-height:1.35}
+.contact{text-align:right;font-size:15px;line-height:1.35;grid-column:2;grid-row:1}
+.name{grid-column:1;grid-row:1}
 .contact a.tel{color:var(--ink);text-decoration:none;font-weight:700;white-space:nowrap}
-.book{display:inline-block;margin-top:8px;background:var(--green);color:#fff;text-decoration:none;padding:9px 16px;border-radius:3px;font-weight:700;font-size:15px}
+.book{display:inline-block;margin-top:8px;white-space:nowrap;background:var(--green);color:#fff;text-decoration:none;padding:9px 16px;border-radius:3px;font-weight:700;font-size:15px}
 .book:hover{background:var(--green-d)}
 nav.menu{grid-column:1/-1;display:flex;gap:22px;overflow-x:auto;font-size:15.5px;padding-top:4px}
 nav.menu a{color:var(--ink);text-decoration:none;white-space:nowrap;border-bottom:1px solid transparent}
 nav.menu a:hover{border-color:var(--green)}
 @media(min-width:900px){
   .top .wrap{grid-template-columns:260px 1fr auto;align-items:center;padding-top:22px;padding-bottom:20px}
-  .hello{grid-column:auto;font-size:15px}
+  .hello{grid-column:auto;grid-row:1;font-size:15px}
+  .contact{grid-column:3}
   nav.menu{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:12px;margin-top:4px}
 }
 
 /* hero */
-.hero{padding:44px 0 0}
-.hero h1{font-size:clamp(38px,6.6vw,92px);line-height:1.02;letter-spacing:-.015em;max-width:15ch}
+.hero{padding-top:44px}
+.hero h1{font-size:clamp(36px,6vw,84px);line-height:1.02;letter-spacing:-.015em;max-width:15ch}
 .hero h1 i{font-style:italic;font-weight:350;font-size:.62em;letter-spacing:0;color:var(--body)}
 .facts{display:grid;gap:18px;margin:30px 0 34px;font-size:16px;line-height:1.5;color:var(--ink)}
 .facts p{margin:0}
 @media(min-width:760px){
-  .hero{padding-top:64px}
+  .hero.wrap{padding-top:64px}
   .hero h1{max-width:none}
-  .hero h1 .l2{display:block;padding-left:22%}
+  .hero h1 .l2{display:block;padding-left:16%}
   .facts{grid-template-columns:repeat(12,1fr);margin:44px 0 48px}
   .facts p:nth-child(1){grid-column:1/4}
   .facts p:nth-child(2){grid-column:6/9}
@@ -86,14 +88,12 @@ section{padding:76px 0}
 .roomgrid img{width:100%;object-fit:cover;border-radius:4px}
 .roomgrid h3{font-size:21px;margin-top:12px}
 .roomgrid p{margin:4px 0 0;font-size:15.5px}
-.r3 img{aspect-ratio:9/8;object-position:center top}
-.r2 img,.r6 img{aspect-ratio:4/3}
+.r3 img{aspect-ratio:4/3;object-position:center 30%}
+.r6 img{aspect-ratio:4/3}
 @media(min-width:900px){
   .rooms{grid-template-columns:320px 1fr;gap:56px}
   .included{position:sticky;top:24px;align-self:start}
   .roomgrid{grid-template-columns:1fr 1fr;gap:34px 26px}
-  .roomgrid .r3{grid-column:1/-1}
-  .r3 img{aspect-ratio:16/9;object-position:center 45%}
 }
 
 /* breakfast */
@@ -199,6 +199,7 @@ footer a{color:#fff}
   <div class="photos">
     <figure class="main">
       <img src="Room-2-2026.jpg" alt="Bedroom on the first floor at the front of Brae Lodge, with a large window, period cornice and two armchairs" width="1200" height="1200">
+      <figcaption>First floor, front: two armchairs and a small table by the tall window.</figcaption>
     </figure>
     <figure class="house">
       <img src="GuestHouse.jpg" alt="The sandstone front of Brae Lodge Guest House with flower boxes at the windows" width="570" height="500">
@@ -230,11 +231,6 @@ footer a{color:#fff}
           <img src="Room-3-2026.jpg" alt="Large front bedroom with a bay window, seating area and high ceiling" width="901" height="901">
           <h3>First floor, front</h3>
           <p>A big room with high ceilings, the original cornice and a seating area in the bay window.</p>
-        </figure>
-        <figure class="r2">
-          <img src="Room-2-2026.jpg" alt="Front bedroom with armchairs by the window" width="1200" height="1200">
-          <h3>First floor, front</h3>
-          <p>Bright, with two armchairs and a small table by the tall window.</p>
         </figure>
         <figure class="r6">
           <img src="th_Room-6-2026.jpg" alt="Ground floor bedroom with en-suite shower room" width="640" height="424">

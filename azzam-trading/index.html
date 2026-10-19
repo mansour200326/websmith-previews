@@ -59,12 +59,13 @@ section{padding:clamp(56px,7vw,104px) 0 0}
 .idx .n{font:500 14px "Space Grotesk";color:var(--mute)}
 .idx h3{font-size:clamp(22px,2vw,28px);margin-bottom:8px}
 .idx p{max-width:520px}
-.idx img{width:100%;max-width:440px;aspect-ratio:3/2;object-fit:cover;justify-self:end}
+.idx img{width:100%;max-width:340px;aspect-ratio:4/3;object-fit:cover;justify-self:end}
 
 /* work grid */
 .work{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
 .work figure{margin:0}
-.work img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2}
+.work img{width:100%;height:clamp(200px,25vw,370px);object-fit:cover}
+.work .w3 img,.work .w4 img{height:clamp(160px,17vw,250px)}
 .w6{grid-column:span 6}.w4{grid-column:span 4}.w3{grid-column:span 3}.w5{grid-column:span 5}.w7{grid-column:span 7}
 .cat{display:flex;gap:6px;flex-wrap:wrap;margin:-14px 0 22px}
 .cat a{font-size:14px;padding:6px 12px;border:1px solid var(--rule);text-decoration:none;color:var(--ink)}
@@ -154,6 +155,8 @@ footer{margin-top:clamp(64px,8vw,110px);background:var(--blue);color:#dfe6f7;pad
   .sh,.idx li,.hist li,.people,.cmptext,.news{grid-template-columns:1fr;gap:10px}
   .idx img{justify-self:start;max-width:100%}
   .w6,.w4,.w3,.w5,.w7{grid-column:span 6}
+  .work img,.work .w3 img,.work .w4 img{height:150px}
+  .work .full img{height:230px}
   .work .full{grid-column:span 12}
   .prod,.iso{grid-template-columns:1fr}
   .prod > div,.prod > div + div,.iso div,.iso div + div{padding:22px 0;border-right:0;border-bottom:1px solid var(--rule)}

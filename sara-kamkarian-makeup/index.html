@@ -37,9 +37,9 @@ nav a:hover{color:var(--text)}
 .hero{position:relative;min-height:calc(100svh - 64px);display:grid;overflow:hidden}
 .hero .photo{position:absolute;inset:0 0 0 auto;width:100%;}
 .hero .photo img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
-.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,12,12,.95) 0%,rgba(13,12,12,.55) 38%,rgba(13,12,12,0) 65%)}
-.hero .txt{position:relative;align-self:end;padding:0 22px 40px;max-width:1240px;width:100%;margin:0 auto}
-.hero h1{font:800 clamp(64px,15vw,212px)/.82 var(--disp);text-transform:uppercase;letter-spacing:-.005em;margin-left:-.04em}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,12,12,1) 0%,rgba(13,12,12,.6) 22%,rgba(13,12,12,0) 40%),linear-gradient(0deg,rgba(13,12,12,.95) 0%,rgba(13,12,12,.55) 38%,rgba(13,12,12,0) 65%)}
+.hero .txt{position:relative;align-self:end;padding:0 22px 64px;max-width:1240px;width:100%;margin:0 auto}
+.hero h1{font:800 clamp(64px,13vw,178px)/.82 var(--disp);text-transform:uppercase;letter-spacing:-.005em;margin-left:-.04em}
 .hero h1 span{display:block}
 .hero p{max-width:30em;margin-top:22px;font-size:18px;color:#d9d4cf}
 .hero .act{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px;font-weight:600}
@@ -47,7 +47,7 @@ nav a:hover{color:var(--text)}
 .hero .act a.q{border-color:var(--silver)}
 @media(min-width:900px){
   .hero .photo{width:58%}
-  .hero .photo::after{background:linear-gradient(90deg,rgba(13,12,12,1) 0%,rgba(13,12,12,0) 40%),linear-gradient(0deg,rgba(13,12,12,.7) 0%,rgba(13,12,12,0) 35%)}
+  .hero .photo::after{background:linear-gradient(90deg,rgba(13,12,12,1) 0%,rgba(13,12,12,.85) 22%,rgba(13,12,12,0) 50%),linear-gradient(180deg,rgba(13,12,12,1) 0%,rgba(13,12,12,0) 32%),linear-gradient(0deg,rgba(13,12,12,.7) 0%,rgba(13,12,12,0) 35%)}
   .hero .txt{padding-bottom:64px}
 }
 
@@ -94,7 +94,7 @@ figcaption{font-size:13px;color:var(--mute);margin-top:8px}
 .cats{columns:2;column-gap:28px;margin-top:26px;list-style:none}
 .cats li{break-inside:avoid;padding:9px 0;border-bottom:1px solid var(--line);font-size:16px}
 .prod figure img{width:100%;border:1px solid var(--line)}
-@media(min-width:900px){.prod{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}.cats{columns:3}}
+@media(min-width:900px){.prod{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}}
 
 /* lines */
 .lines{display:grid;gap:2px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
@@ -110,6 +110,7 @@ figcaption{font-size:13px;color:var(--mute);margin-top:8px}
 .brand-b{display:grid;gap:14px}
 .brand-b img{width:100%;border:1px solid var(--line)}
 .brand-b h3{font-size:30px}
+.brand-b.text{border-top:2px solid var(--text);padding-top:18px}
 @media(min-width:900px){.brands{grid-template-columns:1.1fr 1.1fr .8fr;align-items:start}}
 
 /* sara */
@@ -142,7 +143,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
 .flogo{width:110px;opacity:.9}
 .copy-line{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
 @media(min-width:800px){.fgrid{grid-template-columns:1.2fr 1fr 1fr 1fr}}
-.concept{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#000;color:#aaa;font-size:12px;text-align:center;padding:8px 10px;border-top:1px solid #222}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#000;color:#aaa;font-size:11px;line-height:1.35;text-align:center;padding:6px 10px;border-top:1px solid #222}
 </style>
 </head>
 <body>
@@ -193,7 +194,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
       </div>
     </div>
     <figure>
-      <img src="img/class.jpg" alt="Students practising makeup at the Sara Kamkarian Training Center" loading="lazy">
+      <img src="img/class.jpg" alt="Students practising makeup at the Sara Kamkarian Training Center">
       <figcaption>Students at the Sara Kamkarian Training Center.</figcaption>
     </figure>
   </div>
@@ -236,10 +237,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
 </section>
 
 <section class="strip" aria-label="SK Makeup images">
-  <img src="img/face-hat.jpg" alt="Evening makeup with red lip" loading="lazy">
-  <img src="img/face-peacock.jpg" alt="Fantasy eye makeup with peacock feathers" loading="lazy">
-  <img src="img/face-berries.jpg" alt="Glitter eyes and gloss lip" loading="lazy">
-  <img src="img/face-bob.jpg" alt="Soft pink makeup with a red bow" loading="lazy">
+  <img src="img/face-hat.jpg" alt="Evening makeup with red lip">
+  <img src="img/face-peacock.jpg" alt="Fantasy eye makeup with peacock feathers">
+  <img src="img/face-berries.jpg" alt="Glitter eyes and gloss lip">
+  <img src="img/face-bob.jpg" alt="Soft pink makeup with a red bow">
   <span class="side">SK Makeup campaign images</span>
 </section>
 
@@ -259,7 +260,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
       </ul>
     </div>
     <figure>
-      <img src="img/catalogue.jpg" alt="Pages from the SK Makeup catalogue: brushes, airbrush, palettes, pencils, special effects" loading="lazy">
+      <img src="img/catalogue.jpg" alt="Pages from the SK Makeup catalogue: brushes, airbrush, palettes, pencils, special effects">
       <figcaption>From the SK Makeup catalogue. Ask us for the full catalogue.</figcaption>
     </figure>
   </div>
@@ -274,25 +275,25 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
         <span class="lab">Skin care</span>
         <h3>SK Skin Care</h3>
         <p>Developed by Sara Kamkarian with a team of chemists in the U.S. There are corrective products for salon treatments and a home range so clients can keep their results. Acid-balanced, with natural botanicals.</p>
-        <img src="img/skincare.jpg" alt="SK Skin Care range: cleansers, creams, masques, vitamin E oil, herbal shampoo" loading="lazy">
+        <img src="img/skincare.jpg" alt="SK Skin Care range: cleansers, creams, masques, vitamin E oil, herbal shampoo">
       </div>
       <div class="line">
         <span class="lab">Hair treatment</span>
         <h3>SK Keratin</h3>
         <p>A keratin treatment that turns dry, frizzy, dull hair silky and shiny without changing its texture. Works on all hair types, including coloured, permed, relaxed and bleached hair.</p>
-        <img src="img/keratin.jpg" alt="SK Keratin before and after" loading="lazy">
+        <img src="img/keratin.jpg" alt="SK Keratin before and after">
       </div>
       <div class="line">
         <span class="lab">Hair treatment</span>
         <h3>SK Straightening</h3>
         <p>Our straightening system, formulated with specialists at HBS Group in Italy. It permanently straightens curly, frizzy hair, coloured hair included, without split ends or dullness.</p>
-        <img src="img/straightening.jpg" alt="SK Straightening before and after" loading="lazy">
+        <img src="img/straightening.jpg" alt="SK Straightening before and after">
       </div>
       <div class="line">
         <span class="lab">Tools</span>
         <h3>SK LCD Iron</h3>
         <p>A titanium flat iron with a digital display, set anywhere from 50 to 210&nbsp;°C. Far-infrared and ionic heat, a 360° swivel cord, and it straightens, flips or curls. Made with an Italian partner.</p>
-        <img src="img/jalyd.jpg" alt="Coloured hair styled with professional products" loading="lazy" style="object-position:70% 40%">
+        <img src="img/iron.jpg" alt="SK LCD Iron and straight, glossy hair">
       </div>
     </div>
   </div>
@@ -304,16 +305,16 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
     <p class="lede" style="margin-top:22px">Besides our own SK line, we sell these professional brands at the school.</p>
     <div class="brands">
       <div class="brand-b">
-        <img src="img/bennye.jpg" alt="Ben Nye makeup: palettes, lipsticks, colour wheels, powders" loading="lazy">
+        <img src="img/bennye.jpg" alt="Ben Nye makeup: palettes, lipsticks, colour wheels, powders">
         <h3>Ben Nye</h3>
         <p class="mute small">Professional theatre and film makeup: palettes, creme colours, powders and lipsticks. Ask us for the Ben Nye catalogue and colour charts.</p>
       </div>
       <div class="brand-b">
-        <img src="img/jalyd.jpg" alt="Jalyd professional hair colour" loading="lazy">
+        <img src="img/jalyd.jpg" alt="Jalyd professional hair colour">
         <h3>Jalyd professional</h3>
         <p class="mute small">Italian salon hair line: Color Cream, Color Kontrast, bleaching, Bio Complex treatments, straightening and finishing products.</p>
       </div>
-      <div class="brand-b">
+      <div class="brand-b text">
         <h3>Graftobian</h3>
         <p class="mute small">HD creme foundations, airbrush makeup, special effects and fantasy makeup from the U.S.</p>
       </div>
@@ -325,7 +326,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
   <div class="wrap sara">
     <div class="pic"><img src="img/sara.jpg" alt="Sara Kamkarian"></div>
     <div>
-      <blockquote>“Have you always dreamed of doing something you love? Then a career as a professional makeup artist is for you.”</blockquote>
+      <blockquote>Have you always dreamed of doing something you love? Then a career as a professional makeup artist is perfect for you.</blockquote>
       <p class="who">Sara Kamkarian is an international cinema makeup artist with more than 25 years in the trade. She is the founder of the school and president of SK.</p>
     </div>
   </div>
@@ -353,7 +354,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2
       <p class="mute small" style="margin-top:18px">Please call before you visit to check class times.</p>
     </div>
     <div class="map">
-      <iframe title="Map: Al Khaleej Centre, Bur Dubai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Al+Khaleej+Centre,+Bur+Dubai&amp;output=embed"></iframe>
+      <iframe title="Map: Al Khaleej Centre, Bur Dubai" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Al+Khaleej+Centre,+Bur+Dubai&amp;output=embed"></iframe>
     </div>
   </div>
 </section>
