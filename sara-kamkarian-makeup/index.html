@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sara Kamkarian | Makeup, Hair and Beauty School, Bur Dubai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0c0c; --bg2:#151414; --line:#2a2828; --text:#ece8e4; --mute:#9d9893; --silver:#b9b7b5; --red:#c4242f;
+  --disp:"Big Shoulders Display",Impact,sans-serif; --body:"Hanken Grotesk",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:34px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(13,12,12,.94);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:40px;width:auto}
+.brand span{font:600 21px/1 var(--disp);letter-spacing:.02em;text-transform:uppercase}
+nav{display:none;gap:22px;margin-left:auto}
+nav a{text-decoration:none;font-size:15px;color:var(--mute)}
+nav a:hover{color:var(--text)}
+.tel{margin-left:auto;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.tel b{color:var(--red);font-weight:600}
+@media(min-width:960px){nav{display:flex}.tel{margin-left:28px}}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 64px);display:grid;overflow:hidden}
+.hero .photo{position:absolute;inset:0 0 0 auto;width:100%;}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,12,12,.95) 0%,rgba(13,12,12,.55) 38%,rgba(13,12,12,0) 65%)}
+.hero .txt{position:relative;align-self:end;padding:0 22px 40px;max-width:1240px;width:100%;margin:0 auto}
+.hero h1{font:800 clamp(64px,15vw,212px)/.82 var(--disp);text-transform:uppercase;letter-spacing:-.005em;margin-left:-.04em}
+.hero h1 span{display:block}
+.hero p{max-width:30em;margin-top:22px;font-size:18px;color:#d9d4cf}
+.hero .act{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px;font-weight:600}
+.hero .act a{text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px}
+.hero .act a.q{border-color:var(--silver)}
+@media(min-width:900px){
+  .hero .photo{width:58%}
+  .hero .photo::after{background:linear-gradient(90deg,rgba(13,12,12,1) 0%,rgba(13,12,12,0) 40%),linear-gradient(0deg,rgba(13,12,12,.7) 0%,rgba(13,12,12,0) 35%)}
+  .hero .txt{padding-bottom:64px}
+}
+
+/* sections */
+section{padding:84px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(44px,7vw,84px)/.9 var(--disp);text-transform:uppercase}
+h3{font:600 26px/1.05 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+.lede{font-size:19px;max-width:36em;color:#d9d4cf}
+.mute{color:var(--mute)}
+.small{font-size:14px}
+
+/* school */
+.school{display:grid;gap:40px}
+.school .copy p+p{margin-top:16px}
+.school figure img{width:100%;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--mute);margin-top:8px}
+.campus{display:grid;gap:18px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.campus h3{font-size:22px;margin-bottom:4px}
+@media(min-width:900px){.school{grid-template-columns:1.25fr .75fr;gap:72px}.campus{grid-template-columns:1fr 1fr}}
+
+/* courses index */
+.courses-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:34px}
+.group{margin-top:34px}
+.group h3{color:var(--silver);font-size:22px;padding-bottom:10px;border-bottom:2px solid var(--text)}
+.row{display:grid;grid-template-columns:42px 1fr;gap:4px 14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row .n{font:600 20px/1.3 var(--disp);color:var(--red)}
+.row .t{font-weight:600;font-size:18px}
+.row .d{grid-column:2;color:var(--mute);font-size:15px}
+@media(min-width:900px){
+  .row{grid-template-columns:56px minmax(220px,1fr) 1.6fr;align-items:baseline}
+  .row .d{grid-column:auto}
+}
+.ask{margin-top:30px;font-size:16px}
+.ask a{font-weight:600;text-decoration:none;border-bottom:2px solid var(--red)}
+
+/* face strip */
+.strip{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border-top:0;padding:0}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.strip .side{position:absolute;left:8px;bottom:12px;transform:rotate(-90deg);transform-origin:left bottom;font-size:12px;color:#d9d4cf;white-space:nowrap;translate:12px 0}
+@media(min-width:800px){.strip{grid-template-columns:repeat(4,1fr)}}
+
+/* products */
+.prod{display:grid;gap:44px}
+.cats{columns:2;column-gap:28px;margin-top:26px;list-style:none}
+.cats li{break-inside:avoid;padding:9px 0;border-bottom:1px solid var(--line);font-size:16px}
+.prod figure img{width:100%;border:1px solid var(--line)}
+@media(min-width:900px){.prod{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}.cats{columns:3}}
+
+/* lines */
+.lines{display:grid;gap:2px;margin-top:44px;background:var(--line);border:1px solid var(--line)}
+.line{background:var(--bg);padding:26px 22px 30px;display:flex;flex-direction:column;gap:12px}
+.line .lab{font-size:13px;color:var(--mute)}
+.line img{width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:auto}
+.line p{font-size:15.5px;color:#cfcac5}
+@media(min-width:760px){.lines{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.lines{grid-template-columns:repeat(4,1fr)}}
+
+/* brands */
+.brands{display:grid;gap:30px;margin-top:40px}
+.brand-b{display:grid;gap:14px}
+.brand-b img{width:100%;border:1px solid var(--line)}
+.brand-b h3{font-size:30px}
+@media(min-width:900px){.brands{grid-template-columns:1.1fr 1.1fr .8fr;align-items:start}}
+
+/* sara */
+.sara{display:grid;gap:30px;align-items:start}
+.sara .pic{width:150px;padding:6px;background:#fff}
+.sara .pic img{width:100%}
+.sara blockquote{font:400 clamp(24px,3.2vw,36px)/1.25 var(--body);font-style:italic;max-width:24em}
+.sara .who{margin-top:16px;color:var(--mute);font-size:15px}
+@media(min-width:800px){.sara{grid-template-columns:170px 1fr;gap:48px}}
+
+/* find us */
+.find{display:grid;gap:40px}
+.branches{display:grid;gap:0}
+.branch{padding:22px 0;border-top:1px solid var(--line)}
+.branch h3{font-size:28px;margin-bottom:6px}
+.branch .co{color:var(--mute);font-size:14px;margin-bottom:10px}
+.branch a{text-decoration:none;border-bottom:1px solid var(--silver)}
+.map{min-height:340px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(1) contrast(.95)}
+@media(min-width:900px){.find{grid-template-columns:.9fr 1.1fr;gap:64px}}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2);font-size:15px}
+.fgrid{display:grid;gap:30px}
+.fgrid h4{font:600 18px/1 var(--disp);text-transform:uppercase;color:var(--silver);margin-bottom:12px}
+.fgrid a{text-decoration:none;color:var(--mute)}
+.fgrid a:hover{color:var(--text)}
+.fgrid ul{list-style:none}
+.fgrid li{padding:3px 0}
+.flogo{width:110px;opacity:.9}
+.copy-line{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+@media(min-width:800px){.fgrid{grid-template-columns:1.2fr 1fr 1fr 1fr}}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#000;color:#aaa;font-size:12px;text-align:center;padding:8px 10px;border-top:1px solid #222}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="Sara Kamkarian logo"><span>Sara Kamkarian</span></a>
+    <nav>
+      <a href="#school">school</a>
+      <a href="#courses">courses</a>
+      <a href="#makeup">sk makeup</a>
+      <a href="#hair-skin">hair &amp; skin</a>
+      <a href="#brands">brands</a>
+      <a href="#find">find us</a>
+    </nav>
+    <a class="tel" href="tel:+97143599412"><b>Call</b> 04 359 9412</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="photo"><img src="img/face-pencil.jpg" alt="Smoky eye done with an SK pencil"></div>
+  <div class="txt">
+    <h1><span>Sara</span><span>Kamkarian</span></h1>
+    <p>Makeup, hair and beauty school, and our own SK professional makeup line. Courses for beginners and working artists at Al Khaleej Centre, Bur Dubai.</p>
+    <div class="act">
+      <a href="tel:+97143599412">Call 04 359 9412</a>
+      <a class="q" href="#courses">See the courses</a>
+    </div>
+  </div>
+</div>
+
+<section id="school">
+  <div class="wrap school">
+    <div class="copy">
+      <h2>The school</h2>
+      <p class="lede" style="margin-top:22px">Sara Kamkarian started this school more than 25 years ago. We teach makeup, hairdressing and skin therapy for film, television, fashion, salons, spas and cosmetics counters.</p>
+      <p class="mute" style="margin-top:16px">If you have never picked up a brush, you start with the basics. If you already work as a makeup artist, you come to sharpen your skills. Classes are small and every level is welcome. Our instructors have worked in film, television, fashion and salons, and we keep the course content up to date with the latest techniques. Students also get career advice and help finding work after the course.</p>
+      <div class="campus">
+        <div>
+          <h3>Dubai</h3>
+          <p class="mute small">Al Khaleej Centre, Bur Dubai. Classrooms, a video and photography area, offices and a shop where students buy their kit.</p>
+        </div>
+        <div>
+          <h3>Los Angeles</h3>
+          <p class="mute small">Woodland Hills, in the Warner Center area. Classrooms, a library and resource room, a shop and offices.</p>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <img src="img/class.jpg" alt="Students practising makeup at the Sara Kamkarian Training Center" loading="lazy">
+      <figcaption>Students at the Sara Kamkarian Training Center.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="courses-head">
+      <h2>Courses</h2>
+      <p class="mute" style="max-width:26em">Call us for the next start dates and fees. Each course can be taken on its own.</p>
+    </div>
+
+    <div class="group">
+      <h3>Makeup</h3>
+      <div class="row"><span class="n">01</span><span class="t">Professional make-up course</span><span class="d">Everything you need to start as a freelance makeup artist: consultation, hygiene, tools and kit organisation, facial anatomy, skin types and tones, foundations, dewy skin, concealers, colour correctors, camouflage, colour theory, eyebrow shaping, eye and lip shapes, day, evening and bridal makeup, false lashes, fashion, photographic and catwalk makeup, glitter and embellishments.</span></div>
+      <div class="row"><span class="n">02</span><span class="t">Evening makeup course</span><span class="d">Three styles of evening makeup, false lashes, lip shapes, skin tones, foundations, dewy skin, concealers, colour correctors, camouflage, blushers and bronzers.</span></div>
+    </div>
+
+    <div class="group">
+      <h3>Hair</h3>
+      <div class="row"><span class="n">03</span><span class="t">Blow dry hairstyle</span><span class="d"></span></div>
+      <div class="row"><span class="n">04</span><span class="t">Basic hair cut</span><span class="d"></span></div>
+      <div class="row"><span class="n">05</span><span class="t">Advanced hair cut</span><span class="d">Advanced cutting techniques.</span></div>
+      <div class="row"><span class="n">06</span><span class="t">Hair colour</span><span class="d"></span></div>
+      <div class="row"><span class="n">07</span><span class="t">Hair extension</span><span class="d">Ring, glue (keratin) and weaving.</span></div>
+      <div class="row"><span class="n">08</span><span class="t">Hair straightening and perming</span><span class="d"></span></div>
+    </div>
+
+    <div class="group">
+      <h3>Beauty and nails</h3>
+      <div class="row"><span class="n">09</span><span class="t">Beautician course</span><span class="d">Also offered as an advanced beautician course.</span></div>
+      <div class="row"><span class="n">10</span><span class="t">Massage</span><span class="d"></span></div>
+      <div class="row"><span class="n">11</span><span class="t">Manicure and pedicure</span><span class="d"></span></div>
+      <div class="row"><span class="n">12</span><span class="t">Nail extension</span><span class="d">Acrylic and gel.</span></div>
+      <div class="row"><span class="n">13</span><span class="t">Nail art</span><span class="d">Paint, acrylic and gel nail art.</span></div>
+    </div>
+
+    <p class="ask">Not sure which course fits you? <a href="tel:+97143599412">Call 04 359 9412</a> or <a href="mailto:ninagallery@gmail.com">email ninagallery@gmail.com</a>.</p>
+  </div>
+</section>
+
+<section class="strip" aria-label="SK Makeup images">
+  <img src="img/face-hat.jpg" alt="Evening makeup with red lip" loading="lazy">
+  <img src="img/face-peacock.jpg" alt="Fantasy eye makeup with peacock feathers" loading="lazy">
+  <img src="img/face-berries.jpg" alt="Glitter eyes and gloss lip" loading="lazy">
+  <img src="img/face-bob.jpg" alt="Soft pink makeup with a red bow" loading="lazy">
+  <span class="side">SK Makeup campaign images</span>
+</section>
+
+<section id="makeup">
+  <div class="wrap prod">
+    <div>
+      <h2>SK Makeup</h2>
+      <p class="lede" style="margin-top:22px">Our own professional line, more than 300 products, made for makeup artists. It is built to hold up under hot studio lights and look right on HD cameras.</p>
+      <p class="mute" style="margin-top:14px">Sara Kamkarian has spent over 25 years working as a makeup artist and develops the range together with the artists who use it. Students train with it, and it is on sale at the school.</p>
+      <ul class="cats">
+        <li>HD cream foundation</li><li>Contour &amp; neutralizer</li><li>Loose &amp; compact powder</li>
+        <li>Cheeks</li><li>Pressed eye shadow powder</li><li>Eye shadow bases</li>
+        <li>Glitter powder</li><li>Magic Fix</li><li>Pencils</li>
+        <li>Lips</li><li>Eye lashes</li><li>Air brush</li>
+        <li>Special F/X</li><li>Blood</li><li>Brushes</li>
+        <li>Sponges &amp; accessories</li><li>Cosmetic bags &amp; cases</li><li>DVDs</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/catalogue.jpg" alt="Pages from the SK Makeup catalogue: brushes, airbrush, palettes, pencils, special effects" loading="lazy">
+      <figcaption>From the SK Makeup catalogue. Ask us for the full catalogue.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="hair-skin">
+  <div class="wrap">
+    <h2>Hair and skin care</h2>
+    <p class="lede" style="margin-top:22px">Sara's products for salons, spas and clinics, also sold for home use.</p>
+    <div class="lines">
+      <div class="line">
+        <span class="lab">Skin care</span>
+        <h3>SK Skin Care</h3>
+        <p>Developed by Sara Kamkarian with a team of chemists in the U.S. There are corrective products for salon treatments and a home range so clients can keep their results. Acid-balanced, with natural botanicals.</p>
+        <img src="img/skincare.jpg" alt="SK Skin Care range: cleansers, creams, masques, vitamin E oil, herbal shampoo" loading="lazy">
+      </div>
+      <div class="line">
+        <span class="lab">Hair treatment</span>
+        <h3>SK Keratin</h3>
+        <p>A keratin treatment that turns dry, frizzy, dull hair silky and shiny without changing its texture. Works on all hair types, including coloured, permed, relaxed and bleached hair.</p>
+        <img src="img/keratin.jpg" alt="SK Keratin before and after" loading="lazy">
+      </div>
+      <div class="line">
+        <span class="lab">Hair treatment</span>
+        <h3>SK Straightening</h3>
+        <p>Our straightening system, formulated with specialists at HBS Group in Italy. It permanently straightens curly, frizzy hair, coloured hair included, without split ends or dullness.</p>
+        <img src="img/straightening.jpg" alt="SK Straightening before and after" loading="lazy">
+      </div>
+      <div class="line">
+        <span class="lab">Tools</span>
+        <h3>SK LCD Iron</h3>
+        <p>A titanium flat iron with a digital display, set anywhere from 50 to 210&nbsp;°C. Far-infrared and ionic heat, a 360° swivel cord, and it straightens, flips or curls. Made with an Italian partner.</p>
+        <img src="img/jalyd.jpg" alt="Coloured hair styled with professional products" loading="lazy" style="object-position:70% 40%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="wrap">
+    <h2>Other brands we stock</h2>
+    <p class="lede" style="margin-top:22px">Besides our own SK line, we sell these professional brands at the school.</p>
+    <div class="brands">
+      <div class="brand-b">
+        <img src="img/bennye.jpg" alt="Ben Nye makeup: palettes, lipsticks, colour wheels, powders" loading="lazy">
+        <h3>Ben Nye</h3>
+        <p class="mute small">Professional theatre and film makeup: palettes, creme colours, powders and lipsticks. Ask us for the Ben Nye catalogue and colour charts.</p>
+      </div>
+      <div class="brand-b">
+        <img src="img/jalyd.jpg" alt="Jalyd professional hair colour" loading="lazy">
+        <h3>Jalyd professional</h3>
+        <p class="mute small">Italian salon hair line: Color Cream, Color Kontrast, bleaching, Bio Complex treatments, straightening and finishing products.</p>
+      </div>
+      <div class="brand-b">
+        <h3>Graftobian</h3>
+        <p class="mute small">HD creme foundations, airbrush makeup, special effects and fantasy makeup from the U.S.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sara">
+  <div class="wrap sara">
+    <div class="pic"><img src="img/sara.jpg" alt="Sara Kamkarian"></div>
+    <div>
+      <blockquote>“Have you always dreamed of doing something you love? Then a career as a professional makeup artist is for you.”</blockquote>
+      <p class="who">Sara Kamkarian is an international cinema makeup artist with more than 25 years in the trade. She is the founder of the school and president of SK.</p>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap find">
+    <div>
+      <h2>Find us</h2>
+      <div class="branches" style="margin-top:28px">
+        <div class="branch">
+          <h3>Dubai</h3>
+          <p class="co">Nina Gallery L.L.C</p>
+          <p>Al Khaleej Centre, Bur Dubai</p>
+          <p style="margin-top:8px"><a href="tel:+97143599412">04 359 9412</a></p>
+          <p style="margin-top:4px"><a href="mailto:ninagallery@gmail.com">ninagallery@gmail.com</a></p>
+        </div>
+        <div class="branch">
+          <h3>Los Angeles</h3>
+          <p class="co">Nina Gallery Inc.</p>
+          <p>6303 Owensmouth Ave., Woodland Hills, California</p>
+          <p style="margin-top:8px"><a href="tel:+18184222396">+1 818 422 2396</a></p>
+        </div>
+      </div>
+      <p class="mute small" style="margin-top:18px">Please call before you visit to check class times.</p>
+    </div>
+    <div class="map">
+      <iframe title="Map: Al Khaleej Centre, Bur Dubai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Al+Khaleej+Centre,+Bur+Dubai&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img class="flogo" src="img/logo.png" alt="Sara Kamkarian">
+        <p class="mute small" style="margin-top:14px">Sara Kamkarian Beauty, Makeup and Hairdressing School. SK Makeups.</p>
+      </div>
+      <div>
+        <h4>Dubai</h4>
+        <ul class="mute">
+          <li>Nina Gallery L.L.C</li>
+          <li>Al Khaleej Centre, Bur Dubai</li>
+          <li><a href="tel:+97143599412">04 359 9412</a></li>
+          <li><a href="mailto:ninagallery@gmail.com">ninagallery@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Los Angeles</h4>
+        <ul class="mute">
+          <li>Nina Gallery Inc.</li>
+          <li>6303 Owensmouth Ave.</li>
+          <li>Woodland Hills, California</li>
+          <li><a href="tel:+18184222396">+1 818 422 2396</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#school">The school</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#makeup">SK Makeup</a></li>
+          <li><a href="#hair-skin">Hair and skin care</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#find">Find us</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy-line">Sara Kamkarian / SK Makeups. www.ng-sk.com</p>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Sara Kamkarian Makeup / Nina Gallery LLC. Not the official site.</div>
+</body>
+</html>
