@@ -40,11 +40,12 @@ nav.main a:hover{color:var(--red);text-decoration:underline;text-underline-offse
 .hero h1{font-size:clamp(44px,9.4vw,118px);line-height:.93;font-variation-settings:"wdth" 80;font-weight:800;letter-spacing:-.025em;max-width:11.5ch}
 .hero h1 .inset{display:inline-block;vertical-align:-.08em;width:2.1em;height:.78em;margin:0 .06em;overflow:hidden;border:3px solid var(--ink)}
 .hero h1 .inset img{width:100%;height:100%;object-fit:cover}
-.hero-row{display:grid;gap:28px;margin-top:34px;padding-bottom:40px}
+.hero-grid{display:grid;gap:30px;padding-bottom:40px}
+.hero-row{display:grid;gap:26px}
 .hero-row p{margin:0;font-size:19px;max-width:38ch;color:var(--ink)}
+.hero-row .pic img{border:1px solid var(--rule);width:310px}
 .hero-row .pic figcaption{font-size:13px;color:var(--mute);margin-top:6px}
-.hero-row .pic img{border:1px solid var(--rule)}
-@media(min-width:900px){.hero{padding-top:64px}.hero-row{grid-template-columns:5fr 7fr;align-items:end}}
+@media(min-width:900px){.hero{padding-top:56px}.hero h1{font-size:clamp(64px,7.4vw,104px)}.hero-grid{grid-template-columns:1fr 340px;gap:56px;align-items:end;padding-bottom:44px}.hero-row{gap:22px}}
 
 /* booking bar */
 .bar{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);display:grid;grid-template-columns:1fr 1fr}
@@ -140,7 +141,7 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
 
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#" aria-label="Clifton Motel"><img src="wordmark.jpg" alt="Clifton Motel" width="192" height="98"></a>
+    <a class="mark" href="#" aria-label="Clifton Motel"><img src="wordmark.jpg" alt="Clifton Motel" width="186" height="90"></a>
     <nav class="main" aria-label="Main">
       <a href="#rooms">Rooms</a>
       <a href="#in-the-room">In the room</a>
@@ -157,7 +158,7 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
 
 <main>
 <section class="hero" aria-label="Clifton Motel">
-  <div class="wrap">
+  <div class="wrap hero-grid">
     <h1>Across the road <span class="inset"><img src="street.jpg" alt="The Clifton Motel sign on Smollett Street with Albury railway station behind it" width="300" height="185"></span> from Albury station.</h1>
     <div class="hero-row">
       <p>Clifton Motel is a quiet, 11-room motel at 424&nbsp;Smollett Street in Albury's CBD. Shops, restaurants and the cinemas are close by, Main Street is one block away, and the Hume Highway is a couple of minutes' drive.</p>
