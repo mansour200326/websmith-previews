@@ -37,7 +37,7 @@ nav a:hover{color:var(--plum)}
 @media(max-width:860px){nav{display:none}.bar{height:64px}.bar .logo img{width:112px}}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1fr;gap:34px;padding:44px 0 64px}
+.hero{display:grid;grid-template-columns:1fr;gap:34px;padding-top:40px;padding-bottom:56px}
 .hero h1{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.01em;max-width:17ch}
 .hero .lede{font-size:19px;margin-top:20px;max-width:36em}
 .hero .lede em{font-style:normal;color:var(--ink)}
@@ -46,13 +46,14 @@ nav a:hover{color:var(--plum)}
 .split a + a{padding-left:16px;border-left:1px solid var(--rule)}
 .split b{display:block;font-family:"Source Serif 4",serif;font-weight:600;font-size:19px;color:var(--plum)}
 .split span{font-size:15px;color:var(--mute)}
+@media(max-width:480px){.split b{font-size:17px}.split span{font-size:13.5px;line-height:1.4}}
 .pics{position:relative;padding:0 0 70px 0;min-height:260px}
 .pics .block{position:absolute;left:18%;right:0;top:40px;bottom:0;background:var(--plum)}
 .pics .a{position:relative;width:86%;max-width:620px;box-shadow:0 1px 0 rgba(0,0,0,.05)}
 .pics .b{position:absolute;right:5%;bottom:20px;width:44%;max-width:300px;border:6px solid #fff}
 .pics figcaption{position:absolute;left:0;bottom:30px;font-size:13px;color:var(--mute);max-width:40%}
 @media(min-width:960px){
-  .hero{grid-template-columns:5fr 6fr;gap:56px;align-items:start;padding:64px 0 90px}
+  .hero{grid-template-columns:5fr 6fr;gap:56px;align-items:start;padding-top:64px;padding-bottom:90px}
   .pics{padding-bottom:90px}
 }
 
@@ -74,9 +75,10 @@ section{padding:72px 0}
 .cat .t{font-weight:600;color:var(--ink);font-size:16.5px;line-height:1.3}
 
 .order{margin-top:46px;display:grid;gap:22px;padding:26px 0 0;border-top:1px solid var(--rule)}
-.order p{max-width:46em}
+.order p{max-width:46em;margin-top:10px}
+.order figure{max-width:620px}
 .order a{color:var(--plum);font-weight:600}
-@media(min-width:900px){.order{grid-template-columns:1fr 1.4fr;gap:56px}}
+@media(min-width:900px){.order{grid-template-columns:1.2fr 1fr;gap:56px;align-items:end}}
 
 /* brands */
 #brands{background:#f6f4f5}
@@ -84,10 +86,8 @@ section{padding:72px 0}
 @media(min-width:800px){.brands{columns:4}}
 .brands li{break-inside:avoid;padding:9px 0;border-bottom:1px solid #e2dcdf}
 .brands small{display:block;font-family:"Source Sans 3",sans-serif;font-size:13px;color:var(--mute)}
-.photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px}
-.photos figure:first-child{grid-column:1/-1}
-@media(min-width:800px){.photos{grid-template-columns:620px 1fr;align-items:end}.photos figure:first-child{grid-column:auto}}
-.photos figcaption{font-size:13px;color:var(--mute);margin-top:8px}
+.photos{margin-top:48px;max-width:850px}
+.order figcaption,.photos figcaption{font-size:13px;color:var(--mute);margin-top:8px}
 
 /* joinery */
 #joinery{background:var(--plum);color:#eadde3}
@@ -115,9 +115,10 @@ section{padding:72px 0}
 @media(min-width:900px){.contact{grid-template-columns:1fr 1.25fr;gap:56px}}
 .addr{font-style:normal;font-size:18px;line-height:1.55;color:var(--ink)}
 .lines{margin-top:26px;border-top:1px solid var(--rule)}
-.lines div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.lines div{display:grid;grid-template-columns:minmax(110px,150px) 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule)}
 .lines dt{color:var(--mute);font-size:15px}
-.lines dd a{color:var(--plum);font-weight:600;text-decoration:none;word-break:break-word}
+.lines dd a{color:var(--plum);font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+@media(max-width:480px){.lines dd{font-size:15px}}
 .map{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.35)}
 
 /* footer */
@@ -189,8 +190,9 @@ footer ul{list-style:none}
         <li><img src="img/prod15.jpg" alt=""><div class="n">15</div><div class="t">Table accessories</div></li>
       </ol>
       <div class="order">
-        <h3>Ordering</h3>
-        <p>Send us your list, or tell us about the outlet you are opening, and we will come back with items and prices. After-sales service is part of what we do. Email <a href="mailto:sales@arabiancoastqatar.com">sales@arabiancoastqatar.com</a> or call <a href="tel:+97440052599">4005 2599</a>.</p>
+        <figure><img src="img/img3.jpg" alt="Breakfast buffet with pastries on display stands" width="620" height="384"><figcaption>Buffetware and display risers</figcaption></figure>
+        <div><h3>Ordering</h3>
+        <p>Send us your list, or tell us about the outlet you are opening, and we will come back with items and prices. After-sales service is part of what we do. Email <a href="mailto:sales@arabiancoastqatar.com">sales@arabiancoastqatar.com</a> or call <a href="tel:+97440052599">4005 2599</a>.</p></div>
       </div>
     </div>
   </section>
@@ -220,7 +222,6 @@ footer ul{list-style:none}
         <li>Mercura</li>
       </ul>
       <div class="photos">
-        <figure><img src="img/img3.jpg" alt="Breakfast buffet with pastries on display stands" width="620" height="384"><figcaption>Buffetware and display risers</figcaption></figure>
         <figure><img src="img/page1_img1.jpg" alt="Tea service, glassware, stoneware and furniture" width="850" height="100"><figcaption>Chinaware, glassware, stoneware, furniture</figcaption></figure>
       </div>
     </div>
@@ -289,7 +290,7 @@ footer ul{list-style:none}
           <div><dt>Carpentry &amp; joinery</dt><dd><a href="mailto:info@arabiancoastqatar.com">info@arabiancoastqatar.com</a></dd></div>
         </dl>
       </div>
-      <iframe class="map" title="Map: Barwa Commercial Avenue, Doha" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Barwa+Commercial+Avenue,+Doha,+Qatar&output=embed"></iframe>
+      <iframe class="map" title="Map: Barwa Commercial Avenue, Doha" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Barwa+Commercial+Avenue,+Doha,+Qatar&output=embed"></iframe>
     </div>
   </section>
 </main>

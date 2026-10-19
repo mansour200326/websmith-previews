@@ -25,8 +25,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;color:var(--ink);margin:0;
 /* header */
 .top{border-bottom:1px solid var(--rule)}
 .top .wrap{display:flex;align-items:stretch;gap:28px;min-height:84px}
-.mark{background:var(--navy);display:flex;align-items:center;padding:0 14px;margin-left:-20px}
-.mark img{width:150px}
+.mark{background:#003466;display:flex;align-items:center;padding:0 6px;margin-left:-20px}
+.wm{position:relative;display:block}
+.wm img{height:84px;width:auto}
+.wm::after{content:"";position:absolute;inset:0;background:#003466;clip-path:polygon(56% 100%,100% 64%,100% 100%)}
 nav.main{display:none;align-items:center;gap:26px;font-weight:500;font-size:16px}
 nav.main a{text-decoration:none;color:var(--ink)}
 nav.main a:hover{color:var(--red);text-decoration:underline;text-underline-offset:4px}
@@ -133,7 +135,8 @@ footer .cols{display:grid;gap:30px}
 footer h3{font-size:16px;margin-bottom:8px}
 footer p{margin:0;font-size:15.5px}
 footer a{text-decoration:none;border-bottom:1px solid var(--rule)}
-footer .mark{margin:0;padding:12px 14px;display:inline-flex}
+footer .mark{margin:0;padding:8px 10px;display:inline-flex}
+footer .wm img{height:74px}
 .concept{position:fixed;left:10px;bottom:10px;z-index:9;background:rgba(255,255,255,.95);border:1px solid var(--rule);font-size:11.5px;color:var(--mute);padding:5px 9px;max-width:calc(100% - 20px)}
 </style>
 </head>
@@ -141,7 +144,7 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
 
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#" aria-label="Clifton Motel"><img src="wordmark.jpg" alt="Clifton Motel" width="186" height="90"></a>
+    <a class="mark" href="#" aria-label="Clifton Motel"><span class="wm"><img src="wordmark.jpg" alt="Clifton Motel" width="222" height="98"></span></a>
     <nav class="main" aria-label="Main">
       <a href="#rooms">Rooms</a>
       <a href="#in-the-room">In the room</a>
@@ -151,7 +154,7 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
     </nav>
     <div class="ring">
       <a href="tel:+61260217126">02 6021 7126</a>
-      <small>Ring to book direct, no fees</small>
+      <small>Book direct, no fees</small>
     </div>
   </div>
 </header>
@@ -202,38 +205,38 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
         <span class="n">01</span>
         <div><h3>Queen Room</h3><p class="beds">A spacious room with a queen bed.</p><p class="sleeps">Sleeps up to 2 adults</p></div>
         <div class="strip">
-          <img src="Rooms_Queen-Bed-Room-2_32.jpg" alt="Queen room" width="178" height="99" loading="lazy">
-          <img src="Rooms_Queen-Bed-Room-3_39.jpg" alt="Queen room" width="178" height="99" loading="lazy">
+          <img src="Rooms_Queen-Bed-Room-2_32.jpg" alt="Queen room" width="178" height="99">
+          <img src="Rooms_Queen-Bed-Room-3_39.jpg" alt="Queen room" width="178" height="99">
         </div>
       </li>
       <li>
         <span class="n">02</span>
         <div><h3>King Room</h3><p class="beds">A spacious room with a king bed.</p><p class="sleeps">Sleeps up to 2 adults</p></div>
         <div class="strip">
-          <img src="Rooms_King-Bed-Room-1_29.jpg" alt="King room" width="178" height="99" loading="lazy">
-          <img src="Rooms_King-Bed-Room-2_30.jpg" alt="King room" width="178" height="99" loading="lazy">
-          <img src="Rooms_King-Bed-Room-3_37.jpg" alt="King room" width="178" height="99" loading="lazy">
-          <img src="Rooms_King-Bed-Room-4_38.jpg" alt="King room" width="178" height="99" loading="lazy">
+          <img src="Rooms_King-Bed-Room-1_29.jpg" alt="King room" width="178" height="99">
+          <img src="Rooms_King-Bed-Room-2_30.jpg" alt="King room" width="178" height="99">
+          <img src="Rooms_King-Bed-Room-3_37.jpg" alt="King room" width="178" height="99">
+          <img src="Rooms_King-Bed-Room-4_38.jpg" alt="King room" width="178" height="99">
         </div>
       </li>
       <li>
         <span class="n">03</span>
         <div><h3>Twin Room</h3><p class="beds">A queen bed and a single bed.</p><p class="sleeps">Sleeps up to 3 adults</p></div>
         <div class="strip">
-          <img src="Rooms_Twin-Bed-Room-1_33.jpg" alt="Twin room" width="178" height="99" loading="lazy">
-          <img src="Rooms_Twin-Bed-Room-2_34.jpg" alt="Twin room" width="178" height="99" loading="lazy">
-          <img src="Rooms_Twin-Bed-Room-3_35.jpg" alt="Twin room" width="178" height="99" loading="lazy">
-          <img src="Rooms_Twin-Bed-Room-4_36.jpg" alt="Twin room" width="178" height="99" loading="lazy">
+          <img src="Rooms_Twin-Bed-Room-1_33.jpg" alt="Twin room" width="178" height="99">
+          <img src="Rooms_Twin-Bed-Room-2_34.jpg" alt="Twin room" width="178" height="99">
+          <img src="Rooms_Twin-Bed-Room-3_35.jpg" alt="Twin room" width="178" height="99">
+          <img src="Rooms_Twin-Bed-Room-4_36.jpg" alt="Twin room" width="178" height="99">
         </div>
       </li>
       <li>
         <span class="n">04</span>
         <div><h3>Family Room</h3><p class="beds">A two-bedroom unit with a king bed and two singles.</p><p class="sleeps">Sleeps up to 4 adults</p></div>
         <div class="strip">
-          <img src="Rooms_2-Bed-Room-Pic-1_24.jpg" alt="Family room" width="178" height="99" loading="lazy">
-          <img src="Rooms_2-Bed-Room-Pic-2_26.jpg" alt="Family room" width="178" height="99" loading="lazy">
-          <img src="Rooms_2-Bed-Room-Pic-3_27.jpg" alt="Family room" width="178" height="99" loading="lazy">
-          <img src="Rooms_2-Bed-Room-Pic-4_28.jpg" alt="Family room" width="178" height="99" loading="lazy">
+          <img src="Rooms_2-Bed-Room-Pic-1_24.jpg" alt="Family room" width="178" height="99">
+          <img src="Rooms_2-Bed-Room-Pic-2_26.jpg" alt="Family room" width="178" height="99">
+          <img src="Rooms_2-Bed-Room-Pic-3_27.jpg" alt="Family room" width="178" height="99">
+          <img src="Rooms_2-Bed-Room-Pic-4_28.jpg" alt="Family room" width="178" height="99">
         </div>
       </li>
     </ol>
@@ -304,7 +307,7 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
       </div>
     </div>
     <div class="map-row">
-      <iframe title="Map: Clifton Motel, 424 Smollett St, Albury" src="https://www.google.com/maps?q=Clifton+Motel,+424+Smollett+St,+Albury+NSW+2640&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe title="Map: Clifton Motel, 424 Smollett St, Albury" src="https://www.google.com/maps?q=Clifton+Motel,+424+Smollett+St,+Albury+NSW+2640&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div>
         <h3 class="sub">How far</h3>
         <dl class="dist">
@@ -329,17 +332,17 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
       <li>
         <div class="km">under 1 km<small>Sundays</small></div>
         <div><h3>Albury Wodonga Community Market</h3><p>Everything from worm farms to woollen socks, flowers to fishing tackle, pottery to produce. Every Sunday, 9am to 12.30pm, at the Wilson Street car park. Entry is by donation, and the money goes to local and international Rotary projects.</p></div>
-        <img src="Local-Attractions_Market_46.png" alt="Albury Wodonga Community Market" width="283" height="178" loading="lazy">
+        <img src="Local-Attractions_Market_46.png" alt="Albury Wodonga Community Market" width="283" height="178">
       </li>
       <li>
         <div class="km">1.3 km</div>
         <div><h3>Albury Botanic Gardens</h3><p>Four hectares in the heart of the city near the Murray River and the riverside parks, with more than 1,000 native and exotic plant species.</p></div>
-        <img src="Local-Attractions_Botanical_42.jpg" alt="Albury Botanic Gardens" width="250" height="165" loading="lazy">
+        <img src="Local-Attractions_Botanical_42.jpg" alt="Albury Botanic Gardens" width="250" height="165">
       </li>
       <li>
         <div class="km">3 km</div>
         <div><h3>Monument Hill War Memorial</h3><p>The monument was designed by architect Louis Harrison in 1923. Below it is a Memorial Bowl honouring the men and women who served in World War II, and walking tracks run to and around the site.</p></div>
-        <img src="Local-Attractions_War_44.jpg" alt="Monument Hill War Memorial" width="199" height="300" loading="lazy" style="max-height:200px;width:auto">
+        <img src="Local-Attractions_War_44.jpg" alt="Monument Hill War Memorial" width="199" height="300" style="max-height:200px;width:auto">
       </li>
       <li>
         <div class="km">5 km</div>
@@ -349,12 +352,12 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
       <li>
         <div class="km">17 km</div>
         <div><h3>Hume Dam and Lake Hume</h3><p>The major dam across the Murray River, and home to the Lake Hume Cycle Challenge, which raises money for the Albury Wodonga Regional Cancer Centre. Lake Hume is a favourite for water sports.</p></div>
-        <img src="Local-Attractions_Hume-Dam_43.jpg" alt="Hume Dam" width="300" height="225" loading="lazy">
+        <img src="Local-Attractions_Hume-Dam_43.jpg" alt="Hume Dam" width="300" height="225">
       </li>
       <li>
         <div class="km">under 200 km<small>Victorian Alps</small></div>
         <div><h3>Falls Creek and Mt Hotham snowfields</h3><p>Up in the Victorian Alps, at 1,862 m. Many skiers drive up for the major events, and Albury is the natural overnight stop on the way.</p></div>
-        <img src="Local-Attractions_Snow-Field_45.jpg" alt="Skier at the snowfields" width="300" height="136" loading="lazy">
+        <img src="Local-Attractions_Snow-Field_45.jpg" alt="Skier at the snowfields" width="300" height="136">
       </li>
     </ol>
     <p class="alsolist">Also nearby: wineries and vineyards, the Performing Arts Centre, the art gallery, theatre and cinemas, clubs, historical sites, canoe hire, the wetlands, children's play centres, sport and leisure facilities, antiques and collectables, and the 'Man From Snowy River' Bush Festival.</p>
@@ -364,7 +367,7 @@ footer .mark{margin:0;padding:12px 14px;display:inline-flex}
 
 <footer id="contact">
   <div class="wrap cols">
-    <div><span class="mark"><img src="wordmark.jpg" alt="Clifton Motel" width="140" style="width:140px"></span></div>
+    <div><span class="mark"><span class="wm"><img src="wordmark.jpg" alt="Clifton Motel" width="222" height="98"></span></span></div>
     <div>
       <h3>Clifton Motel</h3>
       <p>424 Smollett St<br>Albury NSW 2640<br>Opposite the railway station</p>
