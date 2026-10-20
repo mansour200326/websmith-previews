@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>V-Auto Service Ltd | WOF, servicing and repairs, East Tamaki</title>
+<meta name="description" content="WOF inspections, servicing and mechanical and electrical repairs at 1 Birmingham Rd, East Tamaki, Auckland. Open Monday to Saturday, 9am to 5pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1f1d22; --body:#3d3a42; --mute:#75717b; --rule:#e3e1e6; --soft:#f5f4f7;
+  --purple:#5d2fa3; --purple-d:#43207a; --block:#2b2a2e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Archivo",system-ui,sans-serif;font-stretch:100%;color:var(--body);background:#fff;line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;padding-bottom:34px}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{color:var(--ink);font-stretch:118%;line-height:1.05;font-weight:750;letter-spacing:-.01em}
+
+/* header */
+.top{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.mark b{display:grid;place-items:center;width:34px;height:34px;background:var(--purple);color:#fff;font-stretch:125%;font-weight:800;font-size:19px}
+.mark span{font-stretch:125%;font-weight:750;font-size:18px;line-height:1}
+.mark small{display:block;font-stretch:100%;font-weight:500;font-size:12px;color:var(--mute);margin-top:3px}
+.top nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.top nav a{text-decoration:none;color:var(--body)}
+.top nav a:hover{color:var(--purple)}
+.phones{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;border-left:1px solid var(--rule);padding-left:22px}
+.phones a{text-decoration:none;font-weight:700;color:var(--ink);font-size:17px}
+.phones a+a{font-weight:500;color:var(--mute);font-size:13px}
+.callbtn{display:none}
+
+/* hero */
+.hero{padding:64px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end}
+.hero h1{font-size:clamp(40px,5.6vw,74px)}
+.hero h1 em{font-style:normal;display:block;font-weight:500;font-stretch:100%;color:var(--mute);font-size:.42em;letter-spacing:0;margin-top:18px;line-height:1.25}
+.hero p{font-size:18px;max-width:34em}
+.book{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:26px}
+.book a.ring{background:var(--purple);color:#fff;text-decoration:none;font-weight:650;padding:15px 22px;border-radius:3px;font-stretch:110%}
+.book a.ring:hover{background:var(--purple-d)}
+.book .or{font-size:15px;color:var(--mute)}
+.book .or a{color:var(--ink);font-weight:600}
+
+.yard{display:grid;grid-template-columns:minmax(0,938px) 1fr;margin-top:52px;background:var(--block)}
+.yard figure{position:relative}
+.yard img{width:100%;height:auto;aspect-ratio:938/258;object-fit:cover}
+.yard figcaption{font-size:13px;color:var(--mute);padding:8px 0 0;position:absolute;top:100%}
+.addr{background:var(--purple);color:#fff;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.addr strong{font-stretch:118%;font-size:22px;line-height:1.1;font-weight:700}
+.addr span{font-size:14px;opacity:.88;line-height:1.45}
+.addr a{color:#fff}
+
+/* section heads */
+section{padding:96px 0 0}
+.shead{display:grid;grid-template-columns:280px 1fr;gap:40px;margin-bottom:30px}
+.shead h2{font-size:clamp(30px,3.4vw,44px)}
+.shead p{max-width:40em;padding-top:6px}
+
+/* services index */
+.index{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:280px 1fr;gap:40px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.row h3{font-size:21px;font-stretch:110%}
+.row h3 small{display:block;font-weight:500;font-stretch:100%;color:var(--mute);font-size:14px;margin-top:6px;line-height:1.4}
+.row ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 36px}
+.row li{color:var(--ink);font-size:17px;padding:3px 0}
+.tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--purple);border:1px solid #d4c8e8;padding:1px 6px;margin-left:6px;vertical-align:2px;border-radius:2px;white-space:nowrap}
+
+/* 30 point */
+.job{background:var(--block);color:#d9d6de;margin-top:96px;padding:84px 0}
+.job-grid{display:grid;grid-template-columns:330px 1fr;gap:56px;align-items:start}
+.job h2{color:#fff;font-size:clamp(30px,3.4vw,44px)}
+.price{font-stretch:125%;font-weight:800;color:#fff;font-size:76px;line-height:1;margin:24px 0 8px}
+.price small{font-size:16px;font-weight:500;font-stretch:100%;color:#b9b4c2;margin-left:4px}
+.job .incl{font-size:15px;color:#b9b4c2;max-width:30em}
+.job .book{margin-top:28px}
+.job .book .or{color:#b9b4c2}.job .book .or a{color:#fff}
+.card{background:#fff;color:var(--ink);padding:28px 30px 24px;border-top:6px solid var(--purple)}
+.card-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:10px;font-size:14px;color:var(--mute)}
+.card-h b{color:var(--ink);font-stretch:112%;font-size:17px}
+.card ol{list-style:none;columns:2;column-gap:34px;counter-reset:c}
+.card li{break-inside:avoid;display:grid;grid-template-columns:30px 1fr 16px;gap:8px;font-size:14.5px;line-height:1.35;padding:6px 0;border-bottom:1px dotted #d8d5dc;counter-increment:c}
+.card li::before{content:counter(c,decimal-leading-zero);font-family:"IBM Plex Mono",monospace;color:var(--purple);font-size:12.5px;padding-top:1px}
+.card li::after{content:"";width:12px;height:12px;border:1.5px solid #b6b1bd;margin-top:2px}
+
+/* drop off */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.step{padding:22px 28px 6px 0}
+.step+.step{padding-left:28px;border-left:1px solid var(--rule)}
+.step .n{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--purple)}
+.step h3{font-size:22px;margin:10px 0 10px;font-stretch:112%}
+.step p{font-size:16px}
+.step a{font-weight:600;color:var(--ink)}
+
+/* about */
+.about{display:grid;grid-template-columns:280px 1fr;gap:40px}
+.about blockquote{font-size:clamp(22px,2.4vw,30px);line-height:1.3;color:var(--ink);font-weight:500;max-width:30em;font-stretch:104%}
+.about blockquote+p{margin-top:18px;max-width:40em}
+
+/* find us */
+.find{display:grid;grid-template-columns:1.25fr 1fr;gap:0;border:1px solid var(--rule)}
+.find iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.35)}
+.details{padding:30px 32px}
+.details h3{font-size:24px;margin-bottom:6px}
+.details dl{display:grid;grid-template-columns:110px 1fr;gap:12px 14px;margin-top:22px;font-size:16px}
+.details dt{color:var(--mute);font-size:14px;padding-top:2px}
+.details dd{color:var(--ink)}
+.details dd a{text-decoration:none;font-weight:600}
+.details dd a:hover{color:var(--purple)}
+.dir{display:inline-block;margin-top:26px;font-weight:600;color:var(--purple)}
+
+/* footer */
+footer{background:var(--soft);margin-top:96px;padding:56px 0 40px;font-size:15px;border-top:1px solid var(--rule)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:36px}
+footer h4{font-size:14px;color:var(--ink);font-weight:700;margin-bottom:10px;font-stretch:110%}
+footer ul{list-style:none}
+footer li{padding:2px 0}
+footer a{text-decoration:none}
+footer a:hover{color:var(--purple)}
+.fnote{margin-top:40px;padding-top:18px;border-top:1px solid var(--rule);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(31,29,34,.92);color:#e7e4ea;font-size:12px;padding:7px 14px;text-align:center}
+
+@media (max-width:980px){
+  .top nav{display:none}
+  .hero-grid,.job-grid,.find{grid-template-columns:1fr}
+  .hero-grid{gap:20px}
+  .yard{grid-template-columns:1fr}
+  .yard figcaption{position:static;background:#fff;padding-top:8px}
+  .shead,.row,.about{grid-template-columns:1fr;gap:12px}
+  .find iframe{min-height:300px}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .top .wrap{height:60px;gap:12px}
+  .phones{display:none}
+  .callbtn{display:block;margin-left:auto;background:var(--purple);color:#fff;text-decoration:none;font-weight:650;font-size:15px;padding:9px 14px;border-radius:3px}
+  .mark small{display:none}
+  .hero{padding-top:36px}
+  .yard{margin-top:34px;margin-left:-22px;margin-right:-22px}
+  .yard figcaption{padding-left:22px}
+  section{padding-top:68px}
+  .row ul{grid-template-columns:1fr}
+  .job{margin-top:68px;padding:60px 0}
+  .card{padding:22px 18px}
+  .card ol{columns:1}
+  .price{font-size:62px}
+  .steps{grid-template-columns:1fr}
+  .step,.step+.step{padding:20px 0;border-left:0;border-bottom:1px solid var(--rule)}
+  .details{padding:24px 20px}
+  .details dl{grid-template-columns:90px 1fr}
+  .fgrid{grid-template-columns:1fr}
+  footer{margin-top:68px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#">
+      <b>V</b>
+      <span>V-Auto Service<small>East Tamaki, Auckland</small></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#thirty">30 point service</a>
+      <a href="#bring">Bringing your car in</a>
+      <a href="#about">About us</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <div class="phones">
+      <a href="tel:+6492738191">09 273 8191</a>
+      <a href="tel:+642102723638" aria-label="Mobile">Mob 021 027 236 38</a>
+    </div>
+    <a class="callbtn" href="tel:+6492738191">Call</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <h1>WOFs, servicing and repairs in East Tamaki.<em>V-Auto Service Ltd, 1 Birmingham Rd</em></h1>
+      <div>
+        <p>We're a full service and repair workshop. Bring us any make or model for a Warrant of Fitness, a regular service, or the mechanical or electrical fault you've been putting off.</p>
+        <div class="book">
+          <a class="ring" href="tel:+6492738191">Ring 09 273 8191 to book</a>
+          <span class="or">or text <a href="sms:+642102723638">021 027 236 38</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="yard">
+      <figure>
+        <img src="workshop.jpg" width="938" height="258" alt="The V-Auto Service workshop on Birmingham Rd, with its purple block wall and open service bays">
+        <figcaption>Our workshop on Birmingham Rd.</figcaption>
+      </figure>
+      <div class="addr">
+        <strong>Mon to Sat<br>9am to 5pm</strong>
+        <span>1 Birmingham Rd<br>East Tamaki, Auckland<br><a href="#find">Map and directions</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="shead">
+      <h2>What we do</h2>
+      <p>Servicing, WOFs and repairs for all makes and models. If your car needs something that isn't on this list, ring and ask.</p>
+    </div>
+    <div class="index">
+      <div class="row">
+        <h3>Warrant of Fitness<small>We're approved to issue WOFs for motor vehicles.</small></h3>
+        <ul><li>WOF inspection</li><li>WOF repairs</li></ul>
+      </div>
+      <div class="row">
+        <h3>Servicing and maintenance</h3>
+        <ul>
+          <li>Lubrication <span class="tag">grease &amp; oil</span></li>
+          <li>Engine tune-ups</li>
+          <li>Yearly flush and antifreeze</li>
+          <li>Brake flush <span class="tag">every 2 years</span></li>
+          <li>Transmission service <span class="tag">50,000 km</span></li>
+          <li>Cam belt replacement <span class="tag">per manufacturer's book</span></li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3>Tyres and batteries</h3>
+        <ul><li>Tyres</li><li>Puncture repairs</li><li>Wheel alignment</li><li>Batteries</li></ul>
+      </div>
+      <div class="row">
+        <h3>Repairs</h3>
+        <ul>
+          <li>General repairs</li>
+          <li>Transmission repairs <span class="tag">manual &amp; automatic</span></li>
+          <li>Automotive electrical repairs</li>
+          <li>Welding <span class="tag">gas &amp; electric</span></li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3>Warranty and insurance work</h3>
+        <ul><li>Warranty service</li><li>Insurance mechanical repairs</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="job" id="thirty">
+  <div class="wrap job-grid">
+    <div>
+      <h2>The V-Auto 30 point service</h2>
+      <div class="price">$170</div>
+      <p class="incl">Includes an oil change with up to 4 litres of quality oil and a standard oil filter (up to $16 retail). Extra oil and some filters are charged on top.</p>
+      <div class="book">
+        <a class="ring" href="tel:+6492738191">Book a service</a>
+        <span class="or">or text <a href="sms:+642102723638">021 027 236 38</a></span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-h"><b>What we check</b><span>30 items</span></div>
+      <ol>
+        <li>Change engine oil</li>
+        <li>Change engine oil filter</li>
+        <li>Check / fill brake fluid</li>
+        <li>Check brake fluid condition</li>
+        <li>Check / fill / test clutch fluid level</li>
+        <li>Check / fill / test coolant and radiator fluid level</li>
+        <li>Visual check of radiator cap</li>
+        <li>Visual check of cooling system hoses</li>
+        <li>Check / fill power steering fluid</li>
+        <li>Check / fill battery fluid level</li>
+        <li>Test battery condition</li>
+        <li>Check / fill windscreen washer fluid</li>
+        <li>Visual check air filter</li>
+        <li>Check / adjust gearbox or transmission fluid level</li>
+        <li>Check / adjust diff or transaxle fluid level</li>
+        <li>Check / adjust tyre pressure and condition</li>
+        <li>Grease tyres</li>
+        <li>Check / clean windscreen</li>
+        <li>Check / test side, indicator, brake, number plate and reverse lights</li>
+        <li>Check / adjust headlights</li>
+        <li>Visual inspection of exhaust system</li>
+        <li>Visual inspection of steering rack and CV boot</li>
+        <li>Lubricate door hinges</li>
+        <li>Deodorise interior</li>
+        <li>Check brake pads</li>
+        <li>Visual check fan / vee belt</li>
+        <li>Age check fuel filter</li>
+        <li>Visual check spark plugs (conditions apply)</li>
+        <li>Visual search for cam belt replacement date</li>
+        <li>Check / measure tyre condition</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<section id="bring">
+  <div class="wrap">
+    <div class="shead">
+      <h2>Bringing your car in</h2>
+      <p>Most jobs start with a phone call.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1 / 3</span>
+        <h3>Ring or text us</h3>
+        <p>Call <a href="tel:+6492738191">09 273 8191</a> or text <a href="sms:+642102723638">021 027 236 38</a>. Tell us the make and model and what it needs: a WOF, a service, or a fault.</p>
+      </div>
+      <div class="step">
+        <span class="n">2 / 3</span>
+        <h3>Drop it at Birmingham Rd</h3>
+        <p>We're at 1 Birmingham Rd, East Tamaki. The workshop is open Monday to Saturday, 9am to 5pm.</p>
+      </div>
+      <div class="step">
+        <span class="n">3 / 3</span>
+        <h3>Not sure what it needs?</h3>
+        <p>Ask us first. If you want advice on a repair, a WOF or maintenance, get in touch and we'll talk it through.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="shead" style="display:block;margin:0"><h2>About us</h2></div>
+    <div>
+      <blockquote>Our qualified and certified mechanics have over 20 years of experience between them, so your car is in capable hands.</blockquote>
+      <p>We're a full service and repair workshop, doing servicing, repairs and WOF inspections on all makes and models. With that much time on the tools, we've likely already worked on the typical problems of a car like yours.</p>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="shead">
+      <h2>Find us</h2>
+      <p>On Birmingham Rd in East Tamaki, Auckland.</p>
+    </div>
+    <div class="find">
+      <iframe title="Map: 1 Birmingham Rd, East Tamaki, Auckland" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1+Birmingham+Road,+East+Tamaki,+Auckland,+New+Zealand&output=embed"></iframe>
+      <div class="details">
+        <h3>V-Auto Service Ltd</h3>
+        <p>1 Birmingham Rd, East Tamaki, Auckland</p>
+        <dl>
+          <dt>Phone</dt><dd><a href="tel:+6492738191">09 273 8191</a></dd>
+          <dt>Mobile</dt><dd><a href="tel:+642102723638">021 027 236 38</a></dd>
+          <dt>Email</dt><dd><a href="mailto:starnet123@hotmail.com">starnet123@hotmail.com</a></dd>
+          <dt>Mon to Sat</dt><dd>9:00am to 5:00pm</dd>
+          <dt>Sunday</dt><dd>Closed</dd>
+        </dl>
+        <a class="dir" href="https://www.google.com/maps/dir/?api=1&destination=1+Birmingham+Road,+East+Tamaki,+Auckland">Get directions in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="mark" href="#"><b>V</b><span>V-Auto Service Ltd</span></a>
+        <p style="margin-top:14px;max-width:24em">Servicing, WOFs, and mechanical and electrical repairs for all makes and models in East Tamaki.</p>
+      </div>
+      <div>
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#thirty">30 point service</a></li>
+          <li><a href="#bring">Bringing your car in</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#find">Find us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>1 Birmingham Rd, East Tamaki, Auckland</li>
+          <li><a href="tel:+6492738191">Tel 09 273 8191</a></li>
+          <li><a href="tel:+642102723638">Mob 021 027 236 38</a></li>
+          <li><a href="mailto:starnet123@hotmail.com">starnet123@hotmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul><li>Monday to Saturday</li><li>9:00am to 5:00pm</li><li>Sunday closed</li></ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>V-Auto Service Ltd, East Tamaki, Auckland</span>
+      <span>Design concept by Websmith for V-Auto Service Ltd. Not the official site.</span>
+    </div>
+  </div>
+</footer>
+<div class="concept">Design concept by Websmith for V-Auto Service Ltd. Not the official site.</div>
+</body>
+</html>
