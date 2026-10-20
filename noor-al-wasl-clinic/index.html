@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Noor Al Wasl Clinic | Dental clinic, Al Wasl Road, Umm Suqeim 1, Dubai</title>
+<meta name="description" content="Dental clinic in Villa 877, Al Wasl Road, Umm Suqeim 1. Gum treatment, implants, oral surgery, children's dentistry, root canal, whitening and veneers. Call 04 395 3900.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400&family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1d5fa3; --blue-d:#154677; --tint:#eef4fa;
+  --ink:#111922; --body:#3a4450; --mute:#6b7682; --rule:#d8dee5;
+  --leaf:#137a3c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Albert Sans",system-ui,sans-serif;color:var(--body);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:34px}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.ar{font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:500}
+
+/* header */
+header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
+.brand img{height:54px;width:auto}
+nav.main{display:none;gap:28px;font-size:15px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--ink)}
+nav.main a:hover{color:var(--blue)}
+.tel{font-weight:700;color:var(--blue);text-decoration:none;font-size:16px;white-space:nowrap;border-bottom:2px solid var(--blue);padding-bottom:1px}
+.rail{border-bottom:1px solid var(--rule);background:var(--tint);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+.rail .wrap{display:flex;gap:26px;font-size:14px;font-weight:600;height:42px;align-items:center}
+.rail span{color:var(--mute);font-weight:500}
+.rail a{text-decoration:none;color:var(--blue-d)}
+.rail a:hover{text-decoration:underline}
+
+/* hero */
+.hero{padding:56px 0 64px}
+.hero .grid{display:grid;gap:44px}
+.hero h1{font-size:clamp(36px,6.4vw,70px);line-height:1.02;letter-spacing:-.025em;font-weight:800;color:var(--ink);max-width:13ch}
+.hero .lede{margin-top:24px;font-size:19px;max-width:36em;color:var(--body)}
+.hero .act{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:15px 24px;border-radius:4px;font-size:17px}
+.btn:hover{background:var(--blue-d)}
+.act small{color:var(--mute);font-size:15px}
+.hside{display:grid;gap:28px;align-content:end}
+.smile img{width:100%;max-width:280px;aspect-ratio:265/332;object-fit:cover;object-position:70% 50%;border:1px solid var(--rule);padding:6px;background:#fff}
+.facts{list-style:none}
+.facts li{border-top:1px solid var(--ink);padding:12px 0 18px}
+.facts li:last-child{border-bottom:1px solid var(--rule)}
+.facts b{display:block;font-size:13px;font-weight:600;color:var(--mute);margin-bottom:4px}
+.facts span,.facts a{font-size:19px;font-weight:600;color:var(--ink);text-decoration:none;line-height:1.35}
+.facts a:hover{color:var(--blue)}
+
+/* section scaffolding: label column + content */
+section.blk{border-top:1px solid var(--rule);padding:64px 0}
+.blk .grid{display:grid;gap:28px}
+.blk h2{font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.blk .side p{margin-top:12px;color:var(--mute);font-size:16px;max-width:22em}
+
+/* doctors */
+.docs{display:grid;gap:44px}
+.doc{display:grid;grid-template-columns:130px 1fr;gap:22px;align-items:start}
+.doc img{width:130px;height:auto;border:1px solid var(--rule);padding:5px;background:#fff}
+.doc h3{font-size:clamp(24px,3vw,32px);line-height:1.1;font-weight:700;color:var(--ink);letter-spacing:-.015em}
+.doc .role{margin-top:6px;color:var(--blue);font-weight:600}
+.doc ul{list-style:none;margin-top:14px;border-top:1px solid var(--rule)}
+.doc li{padding:9px 0;border-bottom:1px solid var(--rule);font-size:16px}
+
+/* treatments */
+.tx{width:100%;border-collapse:collapse}
+.tx caption{text-align:left;font-size:13px;font-weight:700;color:var(--blue);padding:0 0 10px;letter-spacing:.02em}
+.tx th,.tx td{text-align:left;vertical-align:top;padding:16px 0;border-top:1px solid var(--rule)}
+.tx th{font-size:20px;font-weight:700;color:var(--ink);width:44%;padding-right:18px;line-height:1.25}
+.tx td{font-size:16px}
+.tx tr:last-child th,.tx tr:last-child td{border-bottom:1px solid var(--rule)}
+.tx + .tx{margin-top:40px}
+.cos-note{margin:0 0 14px;max-width:38em}
+.zoom{color:var(--mute);font-weight:500;font-size:15px}
+
+/* bridal */
+.bride{background:var(--blue-d);color:#e6eef7}
+.bride .grid{display:grid;gap:30px;align-items:center;padding:60px 0}
+.bride .line{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:clamp(30px,4.4vw,48px);line-height:1.1;color:#fff}
+.bride h2{font-size:22px;font-weight:700;color:#fff;margin-top:22px}
+.bride p{margin-top:8px;max-width:30em}
+.bride a.tl{color:#fff;font-weight:700}
+.bride figure img{width:100%;max-width:420px;border:6px solid #fff}
+.bride figure{justify-self:start}
+
+/* find us */
+.route{margin-top:18px;list-style:none;counter-reset:r}
+.route li{position:relative;padding:10px 0 10px 40px;border-top:1px solid var(--rule);font-size:16px}
+.route li:last-child{border-bottom:1px solid var(--rule)}
+.route li::before{counter-increment:r;content:counter(r);position:absolute;left:0;top:10px;width:26px;height:26px;border-radius:50%;background:var(--tint);color:var(--blue-d);font-weight:700;font-size:14px;display:grid;place-items:center}
+.maps{display:grid;gap:18px}
+.handmap{border:1px solid var(--rule);background:#fff;padding:10px}
+.handmap figcaption{font-size:14px;color:var(--mute);padding-top:8px}
+.gmap{width:100%;height:320px;border:0;display:block;filter:saturate(.85)}
+
+/* footer */
+footer{background:#0f1720;color:#b8c2cc;padding:56px 0 30px;font-size:15px}
+footer .grid{display:grid;gap:32px}
+footer .logo{background:#fff;padding:10px 12px;display:inline-block;border-radius:3px}
+footer .logo img{height:58px;width:auto}
+footer h4{color:#fff;font-size:15px;font-weight:700;margin-bottom:10px}
+footer ul{list-style:none}
+footer li{padding:3px 0}
+footer a{color:#dfe6ec;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .ar{font-size:20px;color:#fff;margin-top:14px}
+footer .small{border-top:1px solid #26313c;margin-top:40px;padding-top:18px;font-size:13px;color:#7f8b96}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#f4f6f8;border-top:1px solid var(--rule);color:#5d6873;font-size:12px;text-align:center;padding:7px 12px}
+
+@media(min-width:760px){
+  .hero{padding:80px 0 88px}
+  .hero .grid{grid-template-columns:1.55fr 1fr;gap:70px}
+  .blk .grid{grid-template-columns:260px 1fr;gap:56px}
+  .doc{grid-template-columns:180px 1fr;gap:30px}
+  .doc img{width:180px}
+  .bride .grid{grid-template-columns:1.1fr 1fr;gap:60px;padding:76px 0}
+  .bride figure{justify-self:end}
+  footer .grid{grid-template-columns:1.3fr 1fr 1fr 1fr}
+}
+@media(min-width:980px){
+  nav.main{display:flex}
+  .docs{grid-template-columns:1fr 1fr;gap:40px}
+  .maps{grid-template-columns:1.15fr 1fr;align-items:stretch}
+  .doc{grid-template-columns:140px 1fr;gap:24px}
+  .doc img{width:140px}
+  .gmap{height:100%;min-height:380px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Noor Al Wasl Clinic home"><img src="logo.png" alt="Noor Al Wasl Clinic logo, عيادة نور الوصل" width="219" height="161"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#specialists">Our specialists</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#brides">Offers</a>
+      <a href="#find-us">Find us</a>
+    </nav>
+    <a class="tel" href="tel:+97143953900">04 395 3900</a>
+  </div>
+  <div class="rail">
+    <div class="wrap">
+      <span>Treatments:</span>
+      <a href="#t-gums">Gums</a>
+      <a href="#t-surgery">Wisdom teeth</a>
+      <a href="#t-children">Children</a>
+      <a href="#t-root">Root canal</a>
+      <a href="#t-whitening">Zoom whitening</a>
+      <a href="#t-veneers">Veneers</a>
+      <a href="#t-gems">Tooth gems</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1>Gum care, implants and everyday dentistry in Umm Suqeim</h1>
+      <p class="lede">We are a small dental clinic in a villa on Al Wasl Road. Both of our dentists are consultant periodontists (gum specialists) trained in implantology, and we look after adults and children for preventative, corrective and cosmetic dentistry.</p>
+      <div class="act">
+        <a class="btn" href="tel:+97143953900">Call to book: 04 395 3900</a>
+        <small>Or visit us at the clinic.</small>
+      </div>
+    </div>
+    <div class="hside">
+    <figure class="smile"><img src="smile.jpg" alt="Smiling patient" width="345" height="332"></figure>
+    <ul class="facts">
+      <li><b>Visit</b><span>Villa #877, Al Wasl Road<br>Umm Suqeim 1, Dubai</span></li>
+      <li><b>Call</b><a href="tel:+97143953900">+971 4 395 3900</a></li>
+      <li><b>Post</b><span>P.O. Box 71277, Dubai, UAE</span></li>
+    </ul>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="specialists">
+  <div class="wrap grid">
+    <div class="side">
+      <h2>Our specialists</h2>
+      <p>Two consultant periodontists, both with fellowships in implantology.</p>
+    </div>
+    <div class="docs">
+      <article class="doc">
+        <img src="dr-mahnaz-raissi.jpg" alt="Dr. Mahnaz Raissi" width="250" height="350">
+        <div>
+          <h3>Dr. Mahnaz Raissi</h3>
+          <p class="role">Consultant Periodontist (gum specialist)</p>
+          <ul>
+            <li>Dental Surgeon</li>
+            <li>Fellowship of Implantology, U.S.A.</li>
+            <li>American National Board Certified</li>
+          </ul>
+        </div>
+      </article>
+      <article class="doc">
+        <img src="dr-asghar-miremadi.jpg" alt="Dr. Asghar Miremadi" width="250" height="340">
+        <div>
+          <h3>Dr. Asghar Miremadi</h3>
+          <p class="role">Consultant Periodontist &amp; Implantologist</p>
+          <ul>
+            <li>Fellowship of Implantology, Switzerland</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="treatments">
+  <div class="wrap grid">
+    <div class="side">
+      <h2>Treatments</h2>
+      <p>Preventative, corrective and cosmetic dentistry. Not sure what you need? Call us and describe the problem.</p>
+    </div>
+    <div>
+      <table class="tx">
+        <caption>CORRECTIVE</caption>
+        <tr id="t-gums"><th>Periodontics</th><td>Treatment for gum disease, bad breath, bleeding gums and gummy smile</td></tr>
+        <tr id="t-surgery"><th>Oral surgery</th><td>Wisdom tooth removal</td></tr>
+        <tr id="t-children"><th>Pediatric dentistry</th><td>Fissure sealants and fluoride therapy for children</td></tr>
+        <tr id="t-root"><th>Endodontics</th><td>Root canal treatment</td></tr>
+      </table>
+      <table class="tx">
+        <caption>COSMETIC</caption>
+        <tr><td colspan="2" style="border-top:0;padding-top:0"><p class="cos-note">We are known for our general dental care, but our patients also come to us for treatments that improve their smile.</p></td></tr>
+        <tr id="t-whitening"><th>Laser teeth whitening <span class="zoom">(Zoom)</span></th><td>Whiter teeth with the Zoom laser system</td></tr>
+        <tr id="t-veneers"><th>Porcelain veneers</th><td>Creating the perfect "Hollywood smile"</td></tr>
+        <tr id="t-gems"><th>Tooth gems</th><td>Temporary tooth jewellery</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="bride" id="brides">
+  <div class="wrap grid">
+    <div>
+      <p class="line">"It all begins with a smile"</p>
+      <h2>Dental packages for brides</h2>
+      <p>Let us help you have a perfect smile on your perfect day. Call or visit us for package details: <a class="tl" href="tel:+97143953900">04 395 3900</a>.</p>
+    </div>
+    <figure>
+      <img src="bridal-smile.jpg" alt="Smiling bride holding red roses" width="300" height="168">
+    </figure>
+  </div>
+</section>
+
+<section class="blk" id="find-us">
+  <div class="wrap grid">
+    <div class="side">
+      <h2>Find us</h2>
+      <p>Villa #877, Al Wasl Road, Umm Suqeim 1. <span class="ar">عيادة نور الوصل</span></p>
+      <ol class="route">
+        <li>Drive along Al Wasl Road towards Umm Suqeim, passing Al Safa Park.</li>
+        <li>Cross Umm Al Sheif Street, with Spinneys on your left.</li>
+        <li>At Al Manara Street, U-turn and come back. The clinic is on the corner.</li>
+      </ol>
+    </div>
+    <div class="maps">
+      <figure class="handmap">
+        <img src="directions-map.jpg" alt="Hand-drawn directions map: Al Wasl Road past Al Safa Park, Umm Al Sheif Street and Spinneys to Noor Al Wasl Clinic at Al Manara Street, Umm Suqeim 1" width="590" height="351">
+        <figcaption>Our own directions map.</figcaption>
+      </figure>
+      <iframe class="gmap" title="Map: Al Wasl Road, Umm Suqeim 1, Dubai" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Noor%20Al%20Wasl%20Clinic%2C%20Al%20Wasl%20Road%2C%20Umm%20Suqeim%201%2C%20Dubai&z=15&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="logo"><img src="logo.png" alt="Noor Al Wasl Clinic" width="219" height="161"></span>
+        <p class="ar">عيادة نور الوصل</p>
+      </div>
+      <div>
+        <h4>Clinic</h4>
+        <ul>
+          <li>Villa #877, Al Wasl Road</li>
+          <li>Umm Suqeim 1, Dubai, UAE</li>
+          <li>P.O. Box 71277</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Appointments</h4>
+        <ul>
+          <li><a href="tel:+97143953900">+971 4 395 3900</a></li>
+          <li>Call or visit to book</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#specialists">Our specialists</a></li>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#brides">Offers</a></li>
+          <li><a href="#find-us">Find us</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">Noor Al Wasl Clinic, Dubai. Preventative, corrective and cosmetic dentistry.</p>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Noor Al Wasl Clinic. Not the official site.</div>
+</body>
+</html>
