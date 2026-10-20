@@ -99,7 +99,9 @@ section.blk{border-top:1px solid var(--rule);padding:64px 0}
 .maps{display:grid;gap:18px}
 .handmap{border:1px solid var(--rule);background:#fff;padding:10px}
 .handmap figcaption{font-size:14px;color:var(--mute);padding-top:8px}
-.gmap{width:100%;height:320px;border:0;display:block;filter:saturate(.85)}
+.gmap-box{display:flex;flex-direction:column;gap:8px}
+.gmap{width:100%;height:320px;border:1px solid var(--rule);background:var(--tint);display:block;flex:1}
+.gmap-box a{font-size:15px;font-weight:600;color:var(--blue)}
 
 /* footer */
 footer{background:#0f1720;color:#b8c2cc;padding:56px 0 30px;font-size:15px}
@@ -131,7 +133,7 @@ footer .small{border-top:1px solid #26313c;margin-top:40px;padding-top:18px;font
   .maps{grid-template-columns:1.15fr 1fr;align-items:stretch}
   .doc{grid-template-columns:140px 1fr;gap:24px}
   .doc img{width:140px}
-  .gmap{height:100%;min-height:380px}
+  .gmap{min-height:330px}
 }
 </style>
 </head>
@@ -271,8 +273,11 @@ footer .small{border-top:1px solid #26313c;margin-top:40px;padding-top:18px;font
         <img src="directions-map.jpg" alt="Hand-drawn directions map: Al Wasl Road past Al Safa Park, Umm Al Sheif Street and Spinneys to Noor Al Wasl Clinic at Al Manara Street, Umm Suqeim 1" width="590" height="351">
         <figcaption>Our own directions map.</figcaption>
       </figure>
+      <div class="gmap-box">
       <iframe class="gmap" title="Map: Al Wasl Road, Umm Suqeim 1, Dubai" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=Noor%20Al%20Wasl%20Clinic%2C%20Al%20Wasl%20Road%2C%20Umm%20Suqeim%201%2C%20Dubai&z=15&output=embed"></iframe>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Noor%20Al%20Wasl%20Clinic%2C%20Al%20Wasl%20Road%2C%20Umm%20Suqeim%201%2C%20Dubai" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
     </div>
   </div>
 </section>
