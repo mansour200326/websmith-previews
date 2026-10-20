@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Al-Fanar Clinic, Salmiya | الفنار كلينك</title>
+<meta name="description" content="Al-Fanar Clinic, 1st Street, Block 5, Salmiya, Kuwait. Dermatology, laser, skin care, plastic surgery, ENT, obstetrics and gynaecology, urology and dental. Tel 2574 4449.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#b3121b; --red-d:#8c0d14; --ink:#1f1a1a; --body:#423b3b; --mute:#786f6f;
+  --rule:#e6dfdf; --tint:#faf6f6; --white:#fff;
+  --serif:"Lora",Georgia,serif; --sans:"Lato",system-ui,sans-serif; --ar:"IBM Plex Sans Arabic",Tahoma,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--body);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:34px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ar{font-family:var(--ar);direction:rtl;unicode-bidi:isolate}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:600;margin:0}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:4px solid var(--red)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.logo{display:block;flex:none}
+.logo img{height:48px;width:auto;mix-blend-mode:multiply}
+nav.main{display:flex;gap:24px;margin-left:auto;font-size:15px}
+nav.main a{text-decoration:none;color:var(--ink)}
+nav.main a:hover{color:var(--red)}
+.callbtn{flex:none;display:flex;flex-direction:column;align-items:flex-start;background:var(--red);color:#fff;text-decoration:none;padding:9px 16px;border-radius:4px;line-height:1.2}
+.callbtn small{font-size:12px;opacity:.85}
+.callbtn b{font-size:17px;letter-spacing:.02em}
+.callbtn:hover{background:var(--red-d)}
+
+/* hero */
+.hero{padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
+.hero h1{font-size:46px;line-height:1.14;letter-spacing:-.01em}
+.hero p.lead{font-size:19px;margin:24px 0 0;max-width:36em}
+.hero .arline{margin-top:22px;font-size:19px;color:var(--ink)}
+.hero .phones{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 30px;align-items:baseline}
+.hero .phones a{text-decoration:none}
+.hero .phones .big{font-family:var(--serif);font-size:28px;color:var(--red);border-bottom:2px solid var(--red)}
+.hero .phones span{font-size:15px;color:var(--mute)}
+.hero figure{margin:6px 0 0}
+.hero figure img{width:100%;max-width:440px;border:1px solid var(--rule);padding:8px;background:#fff}
+.hero figcaption{font-size:13px;color:var(--mute);margin-top:8px}
+.hero .twin{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:440px;margin-top:8px}
+.hero .twin img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* routing */
+.route{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--tint)}
+.route .wrap{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-top:30px;padding-bottom:30px}
+.route h2{font-size:22px}
+.route ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+.route li a{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.route li a:after{content:"\2192";color:var(--red)}
+.route li a:hover{color:var(--red)}
+
+/* departments */
+section{scroll-margin-top:90px}
+.sec{padding:80px 0}
+.sechead{display:flex;justify-content:space-between;align-items:baseline;gap:20px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+.sechead h2{font-size:36px}
+.sechead .ar{font-size:22px;color:var(--mute)}
+.sechead p{margin:0;color:var(--mute);font-size:15px}
+.dept{border-bottom:1px solid var(--rule)}
+.dept summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px 1fr auto 28px;gap:20px;align-items:center;padding:26px 0}
+.dept summary::-webkit-details-marker{display:none}
+.dept .n{font-family:var(--serif);font-size:15px;color:var(--mute)}
+.dept h3{font-size:30px;line-height:1.2}
+.dept .gist{display:block;font-family:var(--sans);font-size:15px;color:var(--mute);font-weight:400;margin-top:4px}
+.dept .ar{font-size:19px;color:var(--ink)}
+.dept .pm{width:28px;height:28px;border:1.5px solid var(--red);border-radius:50%;position:relative}
+.dept .pm:before,.dept .pm:after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--red);transform:translate(-50%,-50%)}
+.dept .pm:after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s}
+.dept[open] .pm:after{transform:translate(-50%,-50%) rotate(0)}
+.dept summary:hover h3{color:var(--red)}
+.dept .list{padding:0 0 30px 84px}
+.dept ul{margin:0;padding:0;list-style:none;columns:3;column-gap:32px}
+.dept li{break-inside:avoid;padding:6px 0 6px 14px;position:relative;font-size:16px}
+.dept li:before{content:"";position:absolute;left:0;top:15px;width:5px;height:5px;background:var(--red)}
+.dept .more{margin:18px 0 0;font-size:15px}
+.dept .more a{color:var(--red)}
+.fm{margin:26px 0 0;font-size:16px;color:var(--body)}
+
+/* stones */
+.stones{background:var(--ink);color:#efe9e9}
+.stones .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;padding-top:80px;padding-bottom:80px}
+.stones h2{color:#fff;font-size:40px;line-height:1.15}
+.stones h2 .ar{display:block;font-size:24px;color:#d9b9bb;margin-top:14px;font-weight:600}
+.stones p{color:#cfc6c6;margin:22px 0 0;max-width:30em}
+.without{list-style:none;margin:0;padding:0;border-top:1px solid #4a3f3f}
+.without li{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid #4a3f3f}
+.without b{font-family:var(--serif);font-size:28px;color:#fff;font-weight:500}
+.without .ar{font-size:20px;color:#d9b9bb}
+.stones .also{margin-top:28px;font-size:15px;color:#bdb2b2}
+.stones .also b{color:#fff}
+.stones a.tel{color:#fff}
+
+/* laser */
+.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:34px;border-left:1px solid var(--rule)}
+.areas div{padding:4px 24px 10px;border-right:1px solid var(--rule)}
+.areas h3{font-family:var(--sans);font-size:13px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.areas p{margin:0;font-size:17px;line-height:2;color:var(--ink)}
+.lasernote{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:34px;padding:20px 24px;border:1px solid var(--rule);border-left:4px solid var(--red)}
+.lasernote p{margin:0}
+.lasernote a{color:var(--red);font-weight:700;white-space:nowrap}
+
+/* clinic */
+.clinic .grid{display:grid;grid-template-columns:330px 1fr;gap:56px;margin-top:40px;align-items:start}
+.clinic blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.5;color:var(--ink)}
+.clinic .who{margin-top:14px;font-size:14px;color:var(--mute)}
+.clinic .about{margin-top:28px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.photos figure{margin:0}
+.photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photos figcaption{font-size:13px;color:var(--mute);padding-top:6px}
+.photos .wide{grid-column:span 2}
+.photos .wide img{aspect-ratio:auto;height:calc(100% - 26px);}
+
+/* find */
+.find .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;margin-top:40px}
+.find dl{margin:0}
+.find dt{font-size:13px;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:22px}
+.find dt:first-child{margin-top:0}
+.find dd{margin:4px 0 0;font-size:18px;color:var(--ink)}
+.find dd a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.find dd a:hover{color:var(--red);border-color:var(--red)}
+.find dd .ar{display:block;font-size:17px;color:var(--body);margin-top:4px}
+.map{border:1px solid var(--rule);min-height:420px}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* footer */
+footer.site{background:#2a1416;color:#d8c9c9;padding:56px 0 40px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px}
+footer h4{margin:0 0 12px;color:#fff;font:700 13px var(--sans);text-transform:uppercase;letter-spacing:.06em}
+footer .name{font-family:var(--serif);font-size:24px;color:#fff}
+footer .name .ar{display:block;font-size:20px;margin-top:4px;color:#e3c6c8}
+footer p{margin:0 0 6px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{padding:2px 0}
+footer .base{margin-top:40px;padding-top:20px;border-top:1px solid #4a3033;font-size:13px;color:#a99596}
+.concept{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--rule);text-align:center;font-size:12px;color:var(--mute);padding:8px 12px}
+
+@media (max-width:980px){
+  nav.main{display:none}
+  .callbtn{margin-left:auto}
+  .hero .wrap,.stones .wrap,.clinic .grid,.find .grid{grid-template-columns:1fr;gap:36px}
+  .route .wrap{grid-template-columns:1fr;gap:10px}
+  .route ul{grid-template-columns:1fr 1fr}
+  .dept ul{columns:2}
+  .areas{grid-template-columns:1fr 1fr}
+  .areas div{border-bottom:1px solid var(--rule);padding-top:16px}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .top .wrap{height:66px;gap:12px}
+  .logo img{height:38px}
+  .callbtn{padding:7px 12px}
+  .callbtn b{font-size:15px}
+  .hero{padding:36px 0 40px}
+  .hero h1{font-size:31px}
+  .hero p.lead{font-size:17px}
+  .hero .phones .big{font-size:24px}
+  .route ul{grid-template-columns:1fr}
+  .sec{padding:56px 0}
+  .sechead{flex-direction:column;gap:4px}
+  .sechead h2{font-size:30px}
+  .dept summary{grid-template-columns:34px 1fr 26px;gap:12px;padding:20px 0}
+  .dept summary .ar{display:none}
+  .dept h3{font-size:23px}
+  .dept .list{padding:0 0 24px 46px}
+  .dept ul{columns:1}
+  .stones .wrap{padding-top:56px;padding-bottom:56px}
+  .stones h2{font-size:30px}
+  .without b{font-size:22px}
+  .areas{grid-template-columns:1fr 1fr}
+  .areas div{padding:12px 14px}
+  .lasernote{flex-direction:column;align-items:flex-start}
+  .photos{grid-template-columns:1fr 1fr}
+  .photos .wide{grid-column:span 2}
+  .photos .wide img{height:auto;aspect-ratio:4/3}
+  .map,.map iframe{min-height:320px}
+  footer .cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Al-Fanar Clinic home"><img src="logo.jpg" alt="Al-Fanar Clinic logo, الفنار كلينك" width="256" height="86"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#departments">Departments</a>
+      <a href="#stones">Kidney stones</a>
+      <a href="#laser">Laser areas</a>
+      <a href="#clinic">The clinic</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <a class="callbtn" href="tel:+96525744449"><small>Book an appointment</small><b>2574 4449</b></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Skin, laser, cosmetic surgery, ENT, women's health, urology and dental care, at one clinic in Salmiya.</h1>
+        <p class="lead">Al-Fanar Clinic is an outpatient centre on 1st Street, Block 5, run by experienced consultants and surgeons. Diagnosis, treatment and cosmetic work are all done here. Call reception and tell us which department you need.</p>
+        <p class="arline ar">الفنار كلينك - السالمية، الشارع الأول</p>
+        <div class="phones">
+          <a class="big" href="tel:+96525744449">2574 4449</a>
+          <span>Hotline <a href="tel:+96560090047">600 900 47</a></span>
+        </div>
+      </div>
+      <figure>
+        <img src="reception-desk.jpg" alt="Reception desk at Al-Fanar Clinic" width="333" height="249">
+        <div class="twin">
+          <img src="waiting-room.jpg" alt="Waiting room with red sofas" width="333" height="249" loading="lazy">
+          <img src="consulting-room.jpg" alt="Consulting room" width="333" height="249" loading="lazy">
+        </div>
+        <figcaption>Reception, waiting room and a consulting room at the clinic.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="route">
+    <div class="wrap">
+      <h2>What brings you in?</h2>
+      <ul>
+        <li><a href="#laser">Laser hair removal</a></li>
+        <li><a href="#d-derm">Botox and fillers</a></li>
+        <li><a href="#stones">Kidney stones</a></li>
+        <li><a href="#d-obgyn">Pregnancy follow-up</a></li>
+        <li><a href="#d-ent">Ear, nose and throat</a></li>
+        <li><a href="#d-dental">Implants and whitening</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="sec" id="departments">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Departments</h2>
+        <span class="ar">الأقسام</span>
+      </div>
+
+      <details class="dept" id="d-derm" open>
+        <summary><span class="n">01</span><h3>Dermatology<span class="gist">Botox and filler, meso treatments, acne and scars, pigmentation, all skin diseases</span></h3><span class="ar">الجلدية</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Laser hair removal without pain</li><li>Botox and filler injection</li><li>Meso skin rejuvenation</li><li>Meso hair thinning treatment</li><li>Meso fat removal</li><li>Stretch marks treatment</li><li>Face and eye wrinkle removal</li><li>Eyebrow and forehead lifting</li><li>Nourishing the skin with vitamins</li><li>Lip and cheek augmentation</li><li>Freckles and skin pigmentation</li><li>Acne and scars</li><li>Skin whitening and toning</li><li>Treatment of excessive sweating</li><li>Treatment of all skin diseases</li>
+        </ul></div>
+      </details>
+
+      <details class="dept" id="d-laser">
+        <summary><span class="n">02</span><h3>Laser<span class="gist">Hair removal for every area, face to legs, with course and package prices</span></h3><span class="ar">الليزر</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Face, ear, nose, cheeks</li><li>Moustache and chin</li><li>Neck and nape of neck</li><li>Chest and abdomen</li><li>Under arm and shoulder</li><li>Arms and back</li><li>Bikini line and bikini</li><li>Buttocks</li><li>Legs, knees and thighs</li>
+        </ul><p class="more"><a href="#laser">See the full list of laser areas</a></p></div>
+      </details>
+
+      <details class="dept" id="d-skin">
+        <summary><span class="n">03</span><h3>Skin care<span class="gist">Cleansing, peeling, whitening and anti-ageing courses</span></h3><span class="ar">العناية بالبشرة</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Skin cleansing</li><li>Herbal peeling</li><li>Crystal peeling</li><li>Skin whitening</li><li>Eye circle whitening</li><li>Under arm whitening</li><li>Elbow and knee whitening</li><li>Anti-ageing courses</li><li>Skin rejuvenation courses</li><li>Skin lifting courses</li>
+        </ul></div>
+      </details>
+
+      <details class="dept" id="d-plastic">
+        <summary><span class="n">04</span><h3>Plastic surgery<span class="gist">Body contouring, breast surgery and face surgery</span></h3><span class="ar">جراحة التجميل</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Liposuction</li><li>Lipo filling</li><li>Neck lift (cervicoplasty)</li><li>Obesity surgery and non-surgical weight loss</li><li>Thigh lift</li><li>Tummy tuck (abdominoplasty)</li><li>Buttock augmentation</li><li>Breast augmentation</li><li>Breast reduction</li><li>Breast lift</li><li>Chin implants and augmentation</li><li>Ear surgery (otoplasty)</li><li>Eyebrow lift</li><li>Eyelid surgery (blepharoplasty)</li><li>Lip augmentation</li><li>Nose surgery (rhinoplasty)</li><li>Wrinkle relaxation</li>
+        </ul></div>
+      </details>
+
+      <details class="dept" id="d-dental">
+        <summary><span class="n">05</span><h3>Dental<span class="gist">Cosmetic dentistry, implants, orthodontics and everyday treatment</span></h3><span class="ar">الأسنان</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Dental cosmetics</li><li>Fixed and removable dentures (ceramic, veneer, zirconium, vitallium, acrylic)</li><li>Teeth bleaching, in clinic and at home</li><li>Cosmetic fillings</li><li>Dental repairs</li><li>Tooth crystals</li><li>Scaling and polishing</li><li>Deep scaling for gums</li><li>Tooth extraction</li><li>Dental surgery (wisdom teeth)</li><li>Dental implants</li><li>Orthodontics</li><li>Root canal treatment</li><li>Preventive treatment for early decay</li>
+        </ul></div>
+      </details>
+
+      <details class="dept" id="d-obgyn">
+        <summary><span class="n">06</span><h3>Obstetrics and gynaecology<span class="gist">Infertility, pregnancy follow-up, delivery and women's check-ups</span></h3><span class="ar">النساء والولادة والعقم</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Infertility treatment</li><li>Treatment of ovarian cysts</li><li>Prenatal care</li><li>All delivery surgeries</li><li>Follow-up of high-risk pregnancy and recurrent miscarriage</li><li>Diagnostic and therapeutic hysteroscopy, without removing the uterus</li><li>Periodic examination for early detection of cervical tumours</li><li>All obstetric operations and repair</li><li>Early detection of congenital malformations</li><li>Urinary incontinence</li>
+        </ul></div>
+      </details>
+
+      <details class="dept" id="d-uro">
+        <summary><span class="n">07</span><h3>Urology<span class="gist">Kidney stones, prostate, incontinence and men's health</span></h3><span class="ar">المسالك البولية</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Women's urinary incontinence after childbirth or from weak pelvic muscles</li><li>Laparoscopic urethral widening and bladder tumour removal</li><li>Incontinence examinations and urodynamics</li><li>Men's urinating difficulty, prostate enlargement and tumours</li><li>Male infertility</li><li>Erectile dysfunction</li><li>Children's urinary incontinence</li><li>Circumcision</li><li>Neurogenic bladder</li><li>Kidney and urinary tract stones</li><li>Strictures, treated endoscopically</li>
+        </ul><p class="more"><a href="#stones">Kidney stones without surgery</a></p></div>
+      </details>
+
+      <details class="dept" id="d-ent">
+        <summary><span class="n">08</span><h3>Ear, nose and throat<span class="gist">Tonsils, sinuses, hearing, vertigo, snoring and voice</span></h3><span class="ar">الأنف والأذن والحنجرة</span><span class="pm"></span></summary>
+        <div class="list"><ul>
+          <li>Throat problems and chronic tonsillitis</li><li>Nose problems</li><li>Tinnitus</li><li>Vertigo</li><li>Allergic rhinitis</li><li>Nose and sinuses, chronic sinusitis</li><li>Nasal polyps</li><li>Deafness in adults and children</li><li>Discharging ears</li><li>Speech problems</li><li>Mouth breathing and snoring</li><li>Voice problems and hoarseness</li><li>Neck swelling</li><li>Headache</li>
+        </ul></div>
+      </details>
+
+      <p class="fm">Family medicine is also available at the clinic. <span class="ar">طب العائلة</span></p>
+    </div>
+  </section>
+
+  <section class="stones" id="stones">
+    <div class="wrap">
+      <div>
+        <h2>Kidney and urinary tract stones, broken up here in the clinic.<span class="ar">تفتيت حصوات الكلى والمسالك البولية</span></h2>
+        <p>Our urology department breaks up kidney and urinary stones with a lithotripsy machine. Call to ask whether it suits your case and to book a session.</p>
+        <p class="also"><b>Also in urology:</b> male infertility, prostate and urethral problems, incontinence in women after childbirth and in children, and correction of birth defects of the testicles and urinary passage.</p>
+        <p class="also">Call <a class="tel" href="tel:+96525744449">2574 4449</a> or <a class="tel" href="tel:+96525752833">2575 2833</a></p>
+      </div>
+      <ul class="without">
+        <li><b>No surgery</b><span class="ar">بدون جراحة</span></li>
+        <li><b>No anaesthetic</b><span class="ar">بدون تخدير</span></li>
+        <li><b>No scopes</b><span class="ar">بدون مناظير</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="laser">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Laser hair removal, by area</h2>
+        <p>Laser hair removal without pain.</p>
+      </div>
+      <div class="areas">
+        <div><h3>Head</h3><p>Face<br>Ear<br>Nose<br>Cheeks<br>Moustache<br>Chin</p></div>
+        <div><h3>Neck</h3><p>Neck<br>Nape of neck</p></div>
+        <div><h3>Upper body</h3><p>Chest<br>Abdomen<br>Under arm<br>Shoulder<br>Arms<br>Back</p></div>
+        <div><h3>Lower body</h3><p>Bikini line<br>Bikini<br>Buttocks<br>Legs and knees<br>Thighs</p></div>
+      </div>
+      <div class="lasernote">
+        <p>We have special prices on full-body courses and other packages. Ask when you call.</p>
+        <a href="tel:+96560090047">Hotline 600 900 47</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec clinic" id="clinic" style="padding-top:0">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>The clinic</h2>
+        <span class="ar">الفنار كلينك</span>
+      </div>
+      <div class="grid">
+        <div>
+          <blockquote>"We strive to heal, comfort and to promote health and prevent disease. Our patients and their families are at the center of everything we do."</blockquote>
+          <p class="who">Our mission</p>
+          <p class="about">Every department sees outpatients in the same building on 1st Street in Salmiya, so you can see a dermatologist, a dentist or a gynaecologist without driving across Kuwait for each one.</p>
+        </div>
+        <div class="photos">
+          <figure class="wide"><img src="reception-flowers.jpg" alt="Reception area" width="333" height="249" loading="lazy"><figcaption>Reception</figcaption></figure>
+          <figure><img src="building.jpg" alt="The clinic building" width="333" height="249" loading="lazy"><figcaption>The building</figcaption></figure>
+          <figure><img src="waiting-room-2.jpg" alt="Waiting room" width="333" height="249" loading="lazy"><figcaption>Waiting room</figcaption></figure>
+          <figure><img src="waiting-corner.jpg" alt="Seating by the window" width="333" height="249" loading="lazy"><figcaption>Seating by the window</figcaption></figure>
+          <figure><img src="entrance.jpg" alt="Clinic entrance" width="333" height="249" loading="lazy"><figcaption>Entrance</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec find" id="find" style="background:var(--tint);border-top:1px solid var(--rule)">
+    <div class="wrap">
+      <div class="sechead">
+        <h2>Find us and book</h2>
+        <span class="ar">العنوان والحجز</span>
+      </div>
+      <div class="grid">
+        <dl>
+          <dt>Address</dt>
+          <dd>1st Street, Block 5, Salmiya, State of Kuwait<span class="ar">السالمية - الشارع الأول، قطعة 5</span></dd>
+          <dt>Postal</dt>
+          <dd>P.O. Box 78, Salmiya 22001</dd>
+          <dt>Appointments</dt>
+          <dd><a href="tel:+96525744449">2574 4449</a> &nbsp;·&nbsp; <a href="tel:+96525752833">2575 2833</a> &nbsp;·&nbsp; <a href="tel:+96525752832">2575 2832</a></dd>
+          <dt>Hotline (mobile)</dt>
+          <dd><a href="tel:+96560090047">600 900 47</a></dd>
+          <dt>Fax</dt>
+          <dd>2573 0610</dd>
+        </dl>
+        <div class="map">
+          <iframe title="Map: Block 5, 1st Street, Salmiya, Kuwait" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Al%20Fanar%20Clinic%2C%201st%20Street%2C%20Block%205%2C%20Salmiya%2C%20Kuwait&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="name">Al-Fanar Clinic<span class="ar">الفنار كلينك</span></div>
+        <p style="margin-top:14px">Outpatient clinic for diagnosis, treatment and cosmetic care in Salmiya, Kuwait.</p>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p>1st Street, Block 5<br>Salmiya, Kuwait<br>P.O. Box 78, Salmiya 22001</p>
+      </div>
+      <div>
+        <h4>Phone</h4>
+        <p><a href="tel:+96525744449">Tel 2574 4449</a><br><a href="tel:+96560090047">Hotline 600 900 47</a><br>Fax 2573 0610</p>
+      </div>
+      <div>
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="#d-derm">Dermatology</a> · <a href="#d-laser">Laser</a></li>
+          <li><a href="#d-skin">Skin care</a> · <a href="#d-plastic">Plastic surgery</a></li>
+          <li><a href="#d-dental">Dental</a> · <a href="#d-obgyn">Obs and gyn</a></li>
+          <li><a href="#d-uro">Urology</a> · <a href="#d-ent">ENT</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">Al-Fanar Clinic, Salmiya, Kuwait.</div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Al-Fanar Clinic. Not the official site.</div>
+
+<script>
+// open a department when a link points to it
+function openTarget(){var el=document.querySelector(location.hash);if(el&&el.tagName==="DETAILS"){el.open=true;}}
+window.addEventListener("hashchange",openTarget);openTarget();
+</script>
+</body>
+</html>
