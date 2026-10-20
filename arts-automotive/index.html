@@ -33,7 +33,7 @@ header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0
 .callbox:hover{background:var(--orange-d)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;padding:64px 0 70px;align-items:start}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;padding-top:64px;padding-bottom:70px;align-items:start}
 .hero h1{font-size:clamp(46px,6.6vw,92px)}
 .hero p.lead{font-size:19.5px;max-width:34em;margin-top:24px;color:var(--body)}
 .act{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:34px}
@@ -51,7 +51,7 @@ header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0
 
 .shop{position:relative;margin-top:8px}
 .shop .frame{border:1px solid var(--rule);padding:10px;background:#fff;box-shadow:0 1px 0 var(--rule)}
-.shop img.front{width:100%;max-width:420px;aspect-ratio:345/261;object-fit:cover}
+.shop img.front{width:100%;max-width:420px;aspect-ratio:336/254;object-fit:cover}
 .shop .cap{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);padding-top:9px}
 .shop .seal{position:absolute;right:-14px;top:-20px;width:96px;border:4px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.18);transform:rotate(4deg)}
 .shop ul{list-style:none;margin-top:22px;font-size:15px;border-top:1px solid var(--rule)}
@@ -86,7 +86,7 @@ section{padding:76px 0}
 /* crew */
 #crew{border-top:1px solid var(--rule)}
 .crew{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:start}
-.crew figure{border:1px solid var(--rule);padding:10px;width:420px;max-width:100%}
+.crew figure{border:1px solid var(--rule);padding:10px;width:420px;max-width:100%;min-width:0}
 .crew figcaption{font-size:13px;color:var(--mute);padding-top:9px}
 .crew h2{font-size:clamp(38px,4.6vw,62px);margin-bottom:18px}
 blockquote{font-size:20px;line-height:1.5;color:var(--ink);border-left:4px solid var(--orange);padding-left:22px;margin-top:26px;max-width:36em}
@@ -123,9 +123,9 @@ footer{background:#111214;color:#8d9297;font-size:14.5px;padding:46px 0 30px}
 @media (max-width:900px){
   .hd nav{display:none}
   .hd{height:66px}.callbox{height:66px;margin-left:auto}.hd .logo img{height:48px}
-  .hero{grid-template-columns:1fr;gap:40px;padding:38px 0 50px}
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:38px;padding-bottom:50px}
   .shop{max-width:440px}
-  .sec-head,.find,.crew{grid-template-columns:1fr;gap:22px}
+  .sec-head,.find,.crew{grid-template-columns:minmax(0,1fr);gap:22px}
   .order{grid-template-columns:1fr;padding:4px 20px}
   .row:nth-last-child(2){border-bottom:1px dashed var(--rule)}
   .steps{grid-template-columns:1fr}
@@ -179,7 +179,7 @@ footer{background:#111214;color:#8d9297;font-size:14.5px;padding:46px 0 30px}
 
     <div class="shop">
       <div class="frame">
-        <img class="front" src="shopfront.jpg" alt="The orange-and-grey Art's Automotive shopfront and service bays on Clark Drive" width="345" height="261">
+        <img class="front" src="shopfront.jpg" alt="The orange-and-grey Art's Automotive shopfront and service bays on Clark Drive" width="336" height="254">
         <div class="cap"><span>The shop, 675 Clark Drive</span><span>Bays open Mon to Fri</span></div>
       </div>
       <img class="seal" src="bccaa-approved-auto-repair-services.jpg" alt="BCAA Approved Auto Repair Services" width="110" height="106">
@@ -203,7 +203,7 @@ footer{background:#111214;color:#8d9297;font-size:14.5px;padding:46px 0 30px}
         <div class="row"><span class="n">03</span><div><h3>Engine and suspension</h3><p>Engine repair, and the suspension work that keeps the car driving straight.</p></div></div>
         <div class="row"><span class="n">04</span><div><h3>Cooling system and radiator</h3><p>Radiator repair and cooling system work, before an overheat turns into an engine job.</p></div></div>
         <div class="row"><span class="n">05</span><div><h3>Battery, starter, alternator</h3><p>Car won't start or the battery keeps dying? We test and repair the charging and starting system.</p></div></div>
-        <div class="row"><span class="n">06</span><div><h3>Tune-up, oil change, maintenance</h3><p>Warranty-approved maintenance service, so your new-car warranty stays intact.</p></div></div>
+        <div class="row"><span class="n">06</span><div><h3>Tune-up, oil change, maintenance</h3><p>Tune-ups, oil changes and warranty approved maintenance service.</p></div></div>
       </div>
       <div class="makes">
         <span><b>Import &amp; domestic.</b> Complete automotive service.</span>

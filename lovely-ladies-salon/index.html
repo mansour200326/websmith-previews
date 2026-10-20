@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lovely Ladies Salon, Sharjah | Facials, massage, nails, hair and makeup</title>
+<meta name="description" content="Ladies salon at Al Reem Building, National Paints, Sharjah. Waxing, galvanic, spa massage, ear candles, manicure and pedicure, nail art, hot oil head massage, organic facial scrub, hair and makeup. Open 10am to 9:30pm. 06 535 9915.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --berry:#9b1f68;
+    --berry-d:#6e1449;
+    --ink:#1f1a1d;
+    --body:#4a4246;
+    --mute:#8a8186;
+    --rule:#e8e2e5;
+    --tint:#faf6f8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--body);font:400 17px/1.6 "Jost",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;color:var(--ink);margin:0}
+
+  /* header */
+  header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:20}
+  .bar{display:flex;align-items:center;gap:28px;height:66px}
+  .brand{font-family:"Bodoni Moda",serif;font-style:italic;font-size:22px;color:var(--berry);text-decoration:none;white-space:nowrap}
+  nav{display:flex;gap:26px;margin-left:auto;font-size:15px}
+  nav a{text-decoration:none;color:var(--body)}
+  nav a:hover{color:var(--berry)}
+  .tel{display:flex;align-items:center;gap:12px;font-weight:500;color:var(--ink);font-size:15px}
+  .tel a{text-decoration:none}
+  .wa{display:inline-flex;width:22px;height:22px;color:var(--berry)}
+  .wa svg{width:22px;height:22px}
+
+  /* hero */
+  .hero{padding:56px 0 72px}
+  .hero-grid{display:grid;grid-template-columns:5fr 7fr;align-items:end}
+  .hero-text{position:relative;z-index:2;padding-bottom:6px}
+  .hero h1{font-size:clamp(54px,8.6vw,132px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;margin-right:-34%;font-weight:400}
+  .hero h1 span{display:block}
+  .hero h1 em{font-style:italic;text-transform:none;color:var(--berry);font-size:.62em;letter-spacing:0;display:block;margin-top:.12em}
+  .lede{max-width:30em;margin:36px 0 22px;font-size:18px;color:var(--body)}
+  .lede strong{font-weight:500;color:var(--ink)}
+  .reach{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:16px}
+  .reach a{color:var(--berry);font-weight:500;text-decoration-thickness:1px;text-underline-offset:4px}
+  .hours{margin-top:18px;font-size:15px;color:var(--mute)}
+  .hero-photo{position:relative;z-index:1}
+  .hero-photo img{width:100%;aspect-ratio:1100/733;object-fit:cover}
+  .hero-photo figcaption{font-size:13px;color:var(--mute);margin-top:10px;text-align:right}
+
+  /* treatments */
+  .treat{padding:88px 0;border-top:1px solid var(--rule)}
+  .treat-head{display:grid;grid-template-columns:5fr 7fr;gap:40px;margin-bottom:44px}
+  .treat-head h2{font-size:clamp(38px,5vw,60px);line-height:1}
+  .treat-head p{margin:6px 0 0;max-width:34em}
+  .treat-grid{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:start}
+  .stage{position:sticky;top:100px}
+  .stage-frame{background:var(--tint);padding:18px}
+  .stage img{width:100%;max-width:450px;aspect-ratio:3/2;object-fit:cover;margin:0 auto;transition:opacity .25s}
+  .stage p{margin:12px 0 0;font-size:14px;color:var(--mute);text-align:center}
+  ol.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+  ol.list li{display:grid;grid-template-columns:54px 1fr;gap:4px 18px;padding:20px 8px 20px 0;border-bottom:1px solid var(--rule);cursor:default}
+  ol.list .n{font-family:"Bodoni Moda",serif;font-size:17px;color:var(--mute);padding-top:6px}
+  ol.list h3{font-size:clamp(24px,2.6vw,32px);line-height:1.15;transition:color .2s}
+  ol.list p{grid-column:2;margin:0;font-size:16px;color:var(--body)}
+  ol.list li.on h3,ol.list li:hover h3{color:var(--berry)}
+  ol.list li.on .n{color:var(--berry)}
+  .price-note{margin:26px 0 0;font-size:16px}
+  .price-note a{color:var(--berry);font-weight:500}
+
+  /* photos */
+  .photos{padding:88px 0;background:var(--tint)}
+  .photos h2{font-size:clamp(38px,5vw,60px);line-height:1;margin-bottom:10px}
+  .photos .sub{margin:0 0 40px;max-width:36em}
+  .pgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px;align-items:start}
+  .pgrid figure{margin:0}
+  .pgrid img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .pgrid figcaption{font-size:14px;color:var(--mute);margin-top:8px}
+  .p1{grid-column:1/6}
+  .p2{grid-column:6/10;margin-top:70px}
+  .p3{grid-column:10/13;margin-top:18px}
+  .p4{grid-column:2/5}
+  .p5{grid-column:5/9;margin-top:-30px}
+  .p6{grid-column:9/13;margin-top:30px}
+
+  /* find us */
+  .visit{padding:88px 0}
+  .visit-grid{display:grid;grid-template-columns:4fr 6fr;gap:56px;align-items:start}
+  .visit h2{font-size:clamp(38px,5vw,60px);line-height:1;margin-bottom:28px}
+  .addr{font-family:"Bodoni Moda",serif;font-size:clamp(24px,2.4vw,30px);line-height:1.3;color:var(--ink);margin:0 0 28px}
+  dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:12px 16px;font-size:16px;border-top:1px solid var(--rule);padding-top:22px}
+  dt{color:var(--mute)}
+  dd{margin:0;color:var(--ink)}
+  dd a{text-decoration-thickness:1px;text-underline-offset:3px}
+  .map{border:0;width:100%;height:440px;filter:grayscale(.25)}
+  .map-note{font-size:13px;color:var(--mute);margin-top:8px}
+
+  /* footer */
+  footer{background:var(--berry-d);color:#f2e6ec;padding:60px 0 90px;font-size:15px}
+  .fgrid{display:grid;grid-template-columns:4fr 3fr 3fr 2fr;gap:32px}
+  footer .fname{font-family:"Bodoni Moda",serif;font-style:italic;font-size:26px;color:#fff;margin:0 0 10px}
+  footer h4{font-weight:500;font-size:14px;color:#fff;margin:0 0 10px}
+  footer p{margin:0 0 6px}
+  footer a{color:#fff;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px}
+  .fbottom{margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:13px;color:#d9bfcd}
+
+  .concept{position:fixed;right:12px;bottom:10px;z-index:40;font-size:11px;color:#6b6266;background:rgba(255,255,255,.92);border:1px solid var(--rule);padding:4px 8px}
+  .mbar{display:none}
+
+  @media (max-width:900px){
+    nav{display:none}
+    .hero{padding:28px 0 48px}
+    .hero-grid,.treat-head,.treat-grid,.visit-grid{grid-template-columns:1fr}
+    .hero-text{order:2;padding-top:0;margin-top:-34px}
+    .hero h1{margin-right:0;font-size:clamp(46px,14vw,80px)}
+    .hero-photo figcaption{display:none}
+    .lede{margin-top:22px}
+    .treat,.photos,.visit{padding:60px 0}
+    .treat-head{gap:12px;margin-bottom:28px}
+    .stage{display:none}
+    .pgrid{grid-template-columns:1fr 1fr;gap:14px}
+    .pgrid figure{grid-column:auto !important;margin-top:0 !important}
+    .visit-grid{gap:28px}
+    .map{height:320px}
+    .fgrid{grid-template-columns:1fr 1fr}
+    .concept{left:0;right:0;bottom:52px;text-align:center;border-width:1px 0 0}
+    .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:41;background:#fff;border-top:1px solid var(--rule)}
+    .mbar a{display:block;text-align:center;padding:14px 0;font-weight:500;text-decoration:none;color:var(--ink);font-size:15px}
+    .mbar a+a{border-left:1px solid var(--rule);color:var(--berry)}
+    footer{padding-bottom:130px}
+  }
+  @media (max-width:560px){
+    .bar{gap:12px;height:58px}
+    .brand{font-size:19px}
+    .tel .num{display:none}
+    .tel::before{content:"Call";font-weight:500}
+    .fgrid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Lovely Ladies Salon</a>
+    <nav aria-label="Main">
+      <a href="#treatments">Treatments</a>
+      <a href="#photos">Photos</a>
+      <a href="#find-us">Find us</a>
+    </nav>
+    <div class="tel">
+      <a class="num" href="tel:+97165359915">06 535 9915</a>
+      <a class="wa" href="https://wa.me/971504990953" aria-label="WhatsApp 050 499 0953" title="WhatsApp 050 499 0953">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1><span>Lovely</span><span>Ladies</span><em>salon, Sharjah</em></h1>
+      <p class="lede">Top to toe beauty treatments for ladies: facials and massages, manicures and pedicures, waxing, nail art, <strong>hair and makeup</strong>. Come in, sit down and take a quiet hour away from the hustle of the day.</p>
+      <div class="reach">
+        <a href="tel:+97165359915">Call 06 535 9915</a>
+        <a href="https://wa.me/971504990953">WhatsApp 050 499 0953</a>
+      </div>
+      <p class="hours">Open 10am to 9:30pm &middot; Shop 1, Al Reem Building, National Paints</p>
+    </div>
+    <figure class="hero-photo">
+      <img src="facial-roses.jpg" width="1100" height="733" alt="A client lying back during a facial, rose petals on the towel">
+      <figcaption>Facial and head massage</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="treat" id="treatments">
+  <div class="wrap">
+    <div class="treat-head">
+      <h2>Treatments</h2>
+      <p>Everything on our list, from a quick wax to a full spa massage. For prices and how long a treatment takes, call us or send a WhatsApp and we will tell you straight away.</p>
+    </div>
+    <div class="treat-grid">
+      <div class="stage" aria-hidden="true">
+        <div class="stage-frame">
+          <img id="stage-img" src="massage-lily.jpg" width="450" height="300" alt="">
+        </div>
+        <p id="stage-cap">Spa massage</p>
+      </div>
+      <div>
+        <ol class="list">
+          <li><span class="n">01</span><h3>Waxing</h3><p>Hair removal with warm wax.</p></li>
+          <li data-img="facial-roses.jpg" data-cap="Galvanic"><span class="n">02</span><h3>Galvanic</h3><p>A facial treatment using a mild galvanic current.</p></li>
+          <li class="on" data-img="massage-lily.jpg" data-cap="Spa massage"><span class="n">03</span><h3>Spa massage</h3><p>A full massage in a calm, quiet room.</p></li>
+          <li><span class="n">04</span><h3>Ear candles</h3><p>Ear candling, lying down and relaxed.</p></li>
+          <li data-img="mani-pedi.jpg" data-cap="Manicure and pedicure"><span class="n">05</span><h3>Manicure and pedicure</h3><p>Hands and feet: shaping, cuticles and polish.</p></li>
+          <li data-img="nails-plum.jpg" data-cap="Nail art"><span class="n">06</span><h3>Nail art</h3><p>Colour and designs on your nails.</p></li>
+          <li data-img="hair-straight.jpg" data-cap="Hot oil with head massage"><span class="n">07</span><h3>Hot oil with head massage</h3><p>Warm oil worked into the hair and scalp, with a head massage.</p></li>
+          <li><span class="n">08</span><h3>Organic facial scrub</h3><p>An organic scrub to clean and smooth the face.</p></li>
+          <li data-img="makeup.jpg" data-cap="Hair and makeup"><span class="n">09</span><h3>Hair and makeup</h3><p>Hair service and makeup.</p></li>
+        </ol>
+        <p class="price-note">Ask about any treatment: <a href="tel:+97165359915">06 535 9915</a> or <a href="tel:+971504990953">050 499 0953</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photos" id="photos">
+  <div class="wrap">
+    <h2>Photos</h2>
+    <p class="sub">Nails, hair, massage and makeup at Lovely Ladies.</p>
+    <div class="pgrid">
+      <figure class="p1"><img src="massage-lily.jpg" width="450" height="300" alt="Back massage"><figcaption>Spa massage</figcaption></figure>
+      <figure class="p2"><img src="nails-plum.jpg" width="450" height="300" alt="Plum nail polish"><figcaption>Nails</figcaption></figure>
+      <figure class="p3"><img src="hair-curls.jpg" width="450" height="300" alt="Long curled hair"><figcaption>Hair</figcaption></figure>
+      <figure class="p4"><img src="makeup.jpg" width="450" height="300" alt="Makeup brushes"><figcaption>Makeup</figcaption></figure>
+      <figure class="p5"><img src="mani-pedi.jpg" width="450" height="300" alt="French manicure and pedicure"><figcaption>Manicure and pedicure</figcaption></figure>
+      <figure class="p6"><img src="hair-portrait.jpg" width="450" height="300" alt="Curled hair, styled"><figcaption>Hair</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="find-us">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Find us</h2>
+      <p class="addr">Shop No. 1, Al Reem Building,<br>National Paints, Sharjah</p>
+      <dl>
+        <dt>Open</dt><dd>10am to 9:30pm</dd>
+        <dt>Salon</dt><dd><a href="tel:+97165359915">06 535 9915</a></dd>
+        <dt>Mobile</dt><dd><a href="tel:+971504990953">050 499 0953</a> &middot; <a href="https://wa.me/971504990953">WhatsApp</a></dd>
+        <dt>Email</dt><dd><a href="mailto:karkera.lalitha@yahoo.com">karkera.lalitha@yahoo.com</a></dd>
+      </dl>
+    </div>
+    <div>
+      <iframe class="map" title="Map: Al Reem Building, National Paints, Sharjah" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Al+Reem+Building,+National+Paints,+Sharjah&output=embed"></iframe>
+      <p class="map-note">Lost? Call 06 535 9915 and we will guide you in.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <p class="fname">Lovely Ladies Salon</p>
+        <p>Top to toe beauty treatments for ladies in Sharjah.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Shop No. 1, Al Reem Building</p>
+        <p>National Paints, Sharjah</p>
+        <p>United Arab Emirates</p>
+      </div>
+      <div>
+        <h4>Call</h4>
+        <p><a href="tel:+97165359915">06 535 9915</a></p>
+        <p><a href="tel:+971504990953">050 499 0953</a></p>
+        <p><a href="mailto:karkera.lalitha@yahoo.com">karkera.lalitha@yahoo.com</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>10am to 9:30pm</p>
+      </div>
+    </div>
+    <div class="fbottom">Lovely Ladies Salon, Sharjah. Design concept by Websmith for Lovely Ladies Salon. Not the official site.</div>
+  </div>
+</footer>
+
+<div class="concept">Design concept by Websmith for Lovely Ladies Salon. Not the official site.</div>
+<div class="mbar">
+  <a href="tel:+97165359915">Call the salon</a>
+  <a href="https://wa.me/971504990953">WhatsApp</a>
+</div>
+
+<script>
+  (function(){
+    var img=document.getElementById('stage-img'),cap=document.getElementById('stage-cap');
+    var rows=document.querySelectorAll('ol.list li[data-img]');
+    rows.forEach(function(li){
+      function show(){
+        if(img.getAttribute('src')===li.dataset.img){cap.textContent=li.dataset.cap;return;}
+        img.style.opacity=0;
+        setTimeout(function(){img.src=li.dataset.img;cap.textContent=li.dataset.cap;img.style.opacity=1;},180);
+        document.querySelectorAll('ol.list li.on').forEach(function(o){o.classList.remove('on')});
+        li.classList.add('on');
+      }
+      li.addEventListener('mouseenter',show);
+      li.addEventListener('click',show);
+    });
+  })();
+</script>
+</body>
+</html>
