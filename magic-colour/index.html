@@ -1,351 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" data-lenis>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Magic Colour Technical Services LLC | Exhibition stands, event builds and fit-out, Al Quoz, Dubai</title>
-<meta name="description" content="Exhibition stands, kiosks, national pavilions, event sets and interior fit-out, built in our own workshop in Al Quoz Industrial Area 4, Dubai, since 2003.">
+<title>Magic Colour Technical Services LLC | Exhibition stands, kiosks and event builds, Al Quoz, Dubai</title>
+<meta name="description" content="Exhibition stands, national pavilions, kiosks, event sets and interior fit-out, designed and built in our own workshop in Al Quoz Industrial Area 4, Dubai, since 2003.">
+<link rel="alternate" hreflang="en" href="./"><link rel="alternate" hreflang="ar" href="ar/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#1b1a33;--mute:#5d5b72;--line:#e3e2ee;--soft:#f4f4f9;
-  --indigo:#36318c;--indigo-d:#2a2672;--lav:#8e8bc8;
-  --hf:'Barlow Condensed','Arial Narrow',sans-serif;--bf:'Hanken Grotesk',Arial,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font:400 16px/1.6 var(--bf);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img{display:block;max-width:100%}
-.w{max-width:1320px;margin:0 auto;padding:0 22px}
-h1,h2,h3{font-family:var(--hf);font-weight:600;line-height:1.02;letter-spacing:.002em}
-.n{font-family:var(--hf);font-weight:500;color:var(--lav);font-variant-numeric:tabular-nums}
-
-/* header */
-.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
-.top .w{display:flex;align-items:center;justify-content:space-between;height:68px;gap:18px}
-.logo img{height:52px;width:auto}
-.top nav{display:none;gap:28px;font-size:.94rem}
-.top nav a{text-decoration:none;color:var(--mute)}
-.top nav a:hover{color:var(--indigo)}
-.tel{font:600 1.15rem/1 var(--hf);text-decoration:none;color:var(--indigo);white-space:nowrap;letter-spacing:.02em}
-.tel small{font:500 .78rem var(--bf);color:var(--mute);margin-right:6px;letter-spacing:0}
-
-/* hero */
-.hero{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--line)}
-.hero-text{padding:40px 22px 36px;display:flex;flex-direction:column;justify-content:space-between;gap:34px}
-.hero-text .intro{font-size:1.02rem;color:var(--mute);max-width:30em}
-.hero h1{font-size:clamp(2.5rem,5.6vw,4.5rem);font-weight:600;max-width:12em}
-.hero h1 span{display:block;color:var(--mute);font-weight:500;font-size:.62em;line-height:1.1;margin-top:.4em}
-.act{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
-.btn{display:inline-block;background:var(--indigo);color:#fff;text-decoration:none;font:600 1.15rem/1 var(--hf);letter-spacing:.03em;padding:16px 24px;border-radius:2px}
-.btn:hover{background:var(--indigo-d)}
-.act a.plain{font-size:.95rem;color:var(--mute);text-underline-offset:3px}
-.act a.plain:hover{color:var(--indigo)}
-.hero-photo{position:relative;min-height:78vh;background:#222 url(img/armani-burj.jpg) center 30%/cover no-repeat}
-.cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;padding:52px 20px 16px;background:linear-gradient(transparent,rgba(10,9,30,.72));color:#fff;font-size:.86rem}
-.cap a{color:#fff;text-underline-offset:3px}
-
-/* plain facts line */
-.facts{border-bottom:1px solid var(--line);font-size:.92rem;color:var(--mute)}
-.facts .w{display:flex;flex-wrap:wrap;gap:6px 30px;padding-top:16px;padding-bottom:16px}
-.facts b{color:var(--ink);font-weight:600}
-
-/* section heads */
-.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
-.sh h2{font-size:clamp(2.2rem,5vw,3.6rem)}
-.sh .n{font-size:1.4rem}
-.lede{color:var(--mute);max-width:40em;margin-bottom:34px}
-
-/* project index */
-#projects{padding:72px 0 40px}
-.idx{border-top:2px solid var(--ink)}
-.row{display:grid;grid-template-columns:1fr;gap:14px;padding:22px 0 24px;border-bottom:1px solid var(--line)}
-.row .meta{display:grid;grid-template-columns:44px 1fr auto;align-items:baseline;gap:4px 10px}
-.row .meta .n{font-size:1.15rem}
-.row h3{font-size:clamp(1.6rem,3vw,2.2rem)}
-.row .yr{font:500 1.15rem var(--hf);color:var(--mute)}
-.row p{grid-column:2/4;font-size:.92rem;color:var(--mute);max-width:34em}
-.strip{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;-webkit-overflow-scrolling:touch}
-.strip img{flex:0 0 auto;width:178px;height:120px;object-fit:cover;scroll-snap-align:start;background:var(--soft)}
-.row:hover h3{color:var(--indigo)}
-.more{padding:18px 0 0;font-size:.92rem;color:var(--mute)}
-
-/* workshop */
-#workshop{padding:70px 0 80px;background:var(--soft)}
-.ws{display:grid;gap:34px;grid-template-columns:1fr}
-.ws figure img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
-.ws figcaption{font-size:.84rem;color:var(--mute);padding-top:10px}
-.ws .t p{margin-bottom:14px;max-width:34em}
-.ws .t p.big{font-size:1.18rem;line-height:1.5}
-.trades{display:flex;flex-wrap:wrap;gap:0;margin:22px 0 26px;border-top:1px solid #d6d5e6}
-.trades span{font:500 1.25rem var(--hf);padding:10px 22px 10px 0;margin-right:22px;border-bottom:1px solid #d6d5e6}
-.group{font-size:.9rem;color:var(--mute)}
-.group a{color:var(--indigo)}
-
-/* services */
-#services{padding:76px 0}
-.svc{display:grid;grid-template-columns:1fr;border-top:2px solid var(--ink)}
-.svc>div{padding:20px 0 22px;border-bottom:1px solid var(--line)}
-.svc h3{font-size:1.65rem;margin-bottom:6px}
-.svc p{font-size:.94rem;color:var(--mute);max-width:30em}
-.svc .see{display:block;margin-top:8px;font-size:.85rem;color:var(--lav)}
-.svc .see a{color:var(--indigo);text-underline-offset:3px}
-
-/* contact: flooded indigo */
-#contact{background:var(--indigo);color:#fff;position:relative;overflow:hidden;padding:72px 0 0}
-#contact .sh .n{color:#b9b7e6}
-#contact .lede{color:#d6d4f3}
-.bignum{display:block;font:600 clamp(3.4rem,13vw,10.5rem)/.9 var(--hf);color:#fff;text-decoration:none;letter-spacing:-.005em;margin:6px 0 30px}
-.bignum:hover{color:#e2e0ff}
-.cgrid{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid rgba(255,255,255,.28)}
-.cgrid>div{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18);display:grid;grid-template-columns:110px 1fr;gap:10px;font-size:.96rem}
-.cgrid span{color:#b9b7e6;font-size:.86rem;padding-top:2px}
-.cgrid a{color:#fff;text-underline-offset:3px}
-.open{display:inline-block;margin-left:8px;font-size:.8rem;padding:2px 8px;border:1px solid rgba(255,255,255,.45);border-radius:2px;white-space:nowrap}
-.open i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9be29b;margin-right:6px;vertical-align:1px}
-.open.shut i{background:#e8a3a3}
-.tuck{display:none}
-.map{margin-top:46px;height:340px;border-top:1px solid rgba(255,255,255,.2)}
-.map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35)}
-
-/* footer */
-footer{padding:46px 0 22px;font-size:.88rem;color:var(--mute)}
-.fg{display:grid;grid-template-columns:1fr;gap:26px;padding-bottom:28px;border-bottom:1px solid var(--line)}
-.fg h4{font:600 1.15rem var(--hf);color:var(--ink);margin-bottom:8px}
-.fg p,.fg a{display:block;margin-bottom:4px;text-decoration:none}
-.fg a:hover{color:var(--indigo)}
-.fb{display:flex;flex-direction:column;gap:6px;padding-top:16px;font-size:.8rem;color:#8b89a0}
-
-@media(min-width:720px){
-  .top nav{display:flex}
-  .row{grid-template-columns:minmax(260px,.9fr) 1.6fr;gap:28px;align-items:start}
-  .row p{grid-column:2/4}
-  .ws{grid-template-columns:1.15fr .85fr;gap:54px;align-items:start}
-  .svc{grid-template-columns:1fr 1fr;column-gap:48px}
-  .cgrid{grid-template-columns:1fr 1fr;column-gap:48px}
-  .fg{grid-template-columns:1.3fr 1fr 1fr 1fr}
-  .fb{flex-direction:row;justify-content:space-between}
-}
-@media(min-width:1000px){
-  .hero{grid-template-columns:1.1fr .9fr;min-height:calc(100vh - 68px)}
-  .hero-text{padding:56px 48px 44px max(22px,calc((100vw - 1320px)/2 + 22px))}
-  .hero-photo{min-height:auto}
-  .cap{padding:60px 26px 20px}
-  .svc{grid-template-columns:repeat(3,1fr)}
-  .tuck{display:block;position:absolute;right:0;top:110px;width:230px}
-  .tuck img{width:219px;height:147px;object-fit:cover;margin-bottom:10px}
-  .tuck img+img{margin-left:-70px}
-  #contact .w{padding-right:300px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Familjen+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hd/armani-burj.webp" fetchpriority="high">
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('k-js')</script>
 </head>
 <body>
+<!-- Page intro (kit 17): once per session, skipped under reduced motion -->
+<div class="k-intro" data-k-intro aria-hidden="true"><div class="k-intro__name">Magic Colour</div><div class="k-intro__line"></div></div>
+<script>
+(function(){
+  var d=document.documentElement,el=document.querySelector('[data-k-intro]');if(!el)return;
+  var seen=false;try{seen=sessionStorage.getItem('k-intro')}catch(e){}
+  if(seen||matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('k-intro-done');el.remove();return}
+  try{sessionStorage.setItem('k-intro','1')}catch(e){}
+  var n=el.querySelector('.k-intro__name'),txt=n.textContent.trim();
+  n.innerHTML=Array.from(txt).map(function(c,i){return'<span style="--i:'+i+'">'+(c.trim()?c:'&nbsp;')+'</span>'}).join('');
+  d.classList.add('k-intro-on');
+  setTimeout(function(){d.classList.add('k-intro-done')},1150);
+  setTimeout(function(){d.classList.remove('k-intro-on');el.remove()},2000);
+})();
+</script>
 
 <header class="top"><div class="w">
-  <a class="logo" href="#top"><img src="img/logo.png" alt="Magic Colour Technical Services L.L.C." width="77" height="46"></a>
-  <nav><a href="#projects">Projects</a><a href="#workshop">Workshop</a><a href="#services">What we build</a><a href="#contact">Contact</a></nav>
-  <a class="tel" href="tel:+97143410060"><small>Call</small>04 341 0060</a>
+  <a class="logo" href="./"><img src="img/hd/logo.webp" alt="Magic Colour Technical Services L.L.C." width="77" height="46"></a>
+  <nav class="nav" aria-label="Main"><a class="k-link" href="#projects">Projects</a><a class="k-link" href="services.html">Services</a><a class="k-link" href="about.html">About</a><a class="k-link" href="#visit">Contact</a></nav>
+  <div class="top__r">
+    <a class="tel" href="tel:+97143410060"><small>Call</small><span class="k-roll"><span data-text="04 341 0060">04 341 0060</span></span></a>
+    <nav class="lang" aria-label="Language"><a href="./" lang="en" aria-current="true">EN</a><a href="ar/" lang="ar" hreflang="ar">عربي</a></nav>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
+  </div>
 </div></header>
+<div class="mnav">
+  <nav aria-label="Mobile"><a href="#projects">Projects</a><a href="services.html">Services</a><a href="about.html">About</a><a href="#visit">Contact</a></nav>
+  <p>Al Quoz Industrial Area 4, Dubai<br><a href="tel:+97143410060">+971 4 341 0060</a> · <a href="https://wa.me/971556611304">WhatsApp</a></p>
+</div>
 
-<main id="top">
+<main>
 
-<section class="hero">
-  <div class="hero-text">
-    <p class="intro">Magic Colour Technical Services LLC is an exhibition, event, kiosk and interior production company in Dubai. We&rsquo;ve been building from Al Quoz since 2003.</p>
-    <h1>Stands, kiosks and event builds, made in our own workshop. <span>Designed, built and installed by the same team.</span></h1>
-    <div class="act">
-      <a class="btn" href="tel:+97143410060">Call +971 4 341 0060</a>
-      <a class="plain" href="mailto:info@magiccolourdubai.com?subject=Enquiry%20from%20website">or email info@magiccolourdubai.com</a>
+<section class="hero" aria-label="Introduction">
+  <div class="hero__text">
+    <p class="hero__intro fade" style="--i:4">Magic Colour Technical Services is an exhibition, event, kiosk and interior production company. Registered in Dubai since 2003.</p>
+    <div>
+      <h1><span class="m"><span style="--i:0">Stands,</span></span><span class="m"><span style="--i:1">kiosks &amp;</span></span><span class="m"><span style="--i:2">event builds</span></span></h1>
+    </div>
+    <p class="hero__sub fade" style="--i:1">Designed at our desk, made in our own Al Quoz workshop, installed by the same crew.</p>
+    <div class="hero__act fade" style="--i:2">
+      <a class="k-btn" data-k-magnetic href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20I%27d%20like%20a%20quote%20for%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Get a quote on WhatsApp</a>
+      <a class="alt k-link k-link--under" href="tel:+97143410060">or call 04 341 0060</a>
+    </div>
+    <div class="reel fade" style="--i:3" data-k-seq data-k-seq-ms="2600">
+      <div class="reel__win" aria-hidden="true"><figure class="k-seq__frame is-on" data-k-seq-frame data-cap="Meydan Beach · 2014"><img src="img/hd/3_60d48598.webp" alt="" loading="lazy"></figure><figure class="k-seq__frame" data-k-seq-frame data-cap="Abu Dhabi Golf · 2015"><img src="img/hd/2_237ff055.webp" alt="" loading="lazy"></figure><figure class="k-seq__frame" data-k-seq-frame data-cap="Reese's, Dubai Mall · 2014"><img src="img/hd/4_7e6df54e.webp" alt="" loading="lazy"></figure><figure class="k-seq__frame" data-k-seq-frame data-cap="Wedding · 2015"><img src="img/hd/7_609489e1.webp" alt="" loading="lazy"></figure><div class="reel__bars" data-k-seq-bars></div></div>
+      <div class="reel__t"><span class="n">(09)</span> <b>projects from our workshop</b><span data-k-seq-cap>Meydan Beach · 2014</span><a class="reel__go k-link k-link--under" href="#projects">See them <span class="k-arrow">→</span></a><span data-k-seq-count hidden></span></div>
     </div>
   </div>
-  <div class="hero-photo" role="img" aria-label="Red flower column built by Magic Colour for Armani, with the Burj Khalifa behind it">
-    <div class="cap"><span><span class="n" style="color:#c9c7f0">(01)</span>&nbsp; Armani, flower column</span><span>Downtown Dubai</span><span>2014</span><a href="#p01">See the photos</a></div>
+  <figure class="hero__photo">
+    <img src="img/hd/armani-burj.webp" alt="Red flower column built by Magic Colour for Armani, with the Burj Khalifa behind it" width="1800" height="2400" fetchpriority="high">
+    <figcaption class="hero__cap"><span><span class="n" style="color:#c9c7f0">(01)</span>&nbsp; Armani flower column</span><span>Downtown Dubai · 2014</span><span>Magic Colour, since 2003</span><a class="k-link k-link--under" href="#projects" data-project="p01">See the photos</a></figcaption>
+  </figure>
+</section>
+
+<div class="k-marquee" data-k-marquee data-k-marquee-speed="48" aria-label="Some of our projects">
+  <div class="k-marquee__track">
+    <span class="mq-w">Armani</span><span class="mq-d"></span>
+    <span class="mq-w">Meydan Beach</span><span class="mq-d"></span>
+    <span class="mq-w">Abu Dhabi Golf</span><span class="mq-d"></span>
+    <span class="mq-w">Hershey's</span><span class="mq-d"></span>
+    <span class="mq-w">Emirates Golf</span><span class="mq-d"></span>
+    <span class="mq-w">President Cup</span><span class="mq-d"></span>
+    <span class="mq-w">Fragrance Station</span><span class="mq-d"></span>
+  </div>
+</div>
+
+<section class="state"><div class="w">
+  <p class="state__p" data-reveal>Everything starts at the Magic Colour design desk <i class="chip" style="--img:url(img/hd/5_7f934d36.webp)"></i>. Once you sign off the design, our own carpenters <i class="chip" style="--img:url(img/hd/workshop-crew.webp)"></i> electricians and painters build it in the warehouse, and the same team takes it to site <i class="chip" style="--img:url(img/hd/5_b50044bb.webp)"></i>.</p>
+  <div class="state__grid">
+    <div class="stat" data-reveal><span class="stat__n" data-k-count="23">23</span><p class="stat__t"><b>years building in Dubai.</b> Registered here in 2003. Hundreds of stands and designs since.</p></div>
+    <div class="stat" data-reveal data-reveal-delay="120"><span class="stat__n" data-k-count="3">3</span><p class="stat__t"><b>trades in our own crew.</b> Carpenters, electricians and painters, under one roof in Al Quoz.</p></div>
+  </div>
+</div></section>
+
+<section class="dark" id="projects">
+  <div class="k-drag" data-k-drag aria-labelledby="pj-h">
+    <div class="k-drag__head">
+      <div><h2 class="sec-h" id="pj-h" data-reveal="lines">Projects <span class="n" style="font-size:.3em;vertical-align:top">(09)</span></h2><p class="lede" data-reveal data-reveal-delay="150">Stands, kiosks, event sets, furniture and hospitality fit-outs that came out of our workshop. Tap one to see the photos.</p></div>
+      <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous projects">←</button><button type="button" data-k-drag-next aria-label="Next projects">→</button></div>
+    </div>
+    <div class="k-drag__track" tabindex="0" aria-label="Projects, scroll sideways">
+      <a class="k-drag__card" href="#projects" data-project="p01"><div class="k-drag__fig"><img src="img/hd/1_9c5917b0.webp" alt="Armani event dining set-up with the Downtown skyline" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">01</span><h3>Armani</h3><span>Downtown · 2014</span><p>Flower column, outdoor lounges, dining and furniture.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p03"><div class="k-drag__fig"><img src="img/hd/3_60d48598.webp" alt="Meydan Beach shade tents with the Burj Al Arab behind" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">02</span><h3>Meydan Beach</h3><span>2014</span><p>Daybeds, shade tents, mashrabiya screens, lounges.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p02"><div class="k-drag__fig"><img src="img/hd/2_237ff055.webp" alt="Etihad planter and bar at the Abu Dhabi Golf Championship" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">03</span><h3>Abu Dhabi Golf Championship</h3><span>2015</span><p>Reception, lounges, planters and branded spaces.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p04"><div class="k-drag__fig"><img src="img/hd/4_7e6df54e.webp" alt="Reese's kiosk at Dubai Mall" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">04</span><h3>Hershey's / Reese's</h3><span>Dubai Mall · 2014</span><p>Retail kiosk and shelving, built and fitted in the mall.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p05"><div class="k-drag__fig"><img src="img/hd/5_806a4f70.webp" alt="Fragrance Station exhibition stand" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">05</span><h3>Fragrance Station</h3><span>Stand</span><p>Shelving wall, displays and seating, on the show floor.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p07"><div class="k-drag__fig"><img src="img/hd/7_609489e1.webp" alt="Wedding centre piece and round platform" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">06</span><h3>Wedding event</h3><span>2015</span><p>Stage, round platform, carved screens and furniture.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p09"><div class="k-drag__fig"><img src="img/hd/9_883b253d.webp" alt="Emirates Golf Club lounge with pendant lights" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">07</span><h3>Emirates Golf Club</h3><span>Dubai · 2014</span><p>Lounge and dining fit-out, counter, seating, lighting.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p06"><div class="k-drag__fig"><img src="img/hd/6_bf4266f4.webp" alt="President Cup timber units stacked in the Magic Colour warehouse" loading="lazy" draggable="false"><span class="cnt">5 photos</span></div><div class="k-drag__meta"><span class="n">08</span><h3>President Cup</h3><span>2015</span><p>Timber units made and staged in our warehouse.</p></div></a>
+      <a class="k-drag__card" href="#projects" data-project="p08"><div class="k-drag__fig"><img src="img/hd/8_6b5aae7d.webp" alt="Rustic timber stools and benches" loading="lazy" draggable="false"><span class="cnt">6 photos</span></div><div class="k-drag__meta"><span class="n">09</span><h3>Rustic furniture</h3><span>2015</span><p>Tables, benches and stools by our carpenters.</p></div></a>
+    </div>
+    <div class="k-drag__bar" aria-hidden="true"><i></i></div>
   </div>
 </section>
 
-<div class="facts"><div class="w">
-  <span><b>Since</b> 2003</span>
-  <span><b>Workshop</b> Block 38, Warehouse 1, Al Quoz Industrial Area 4</span>
-  <span><b>Open</b> Sat&ndash;Thu 9am&ndash;7pm, Fri 9am&ndash;2pm</span>
-</div></div>
-
-<section id="projects"><div class="w">
-  <div class="sh"><h2>Projects</h2><span class="n">(09)</span></div>
-  <p class="lede">Some of the jobs that came out of our workshop: stands, kiosks, event sets, furniture and full hospitality fit-outs. Scroll a row sideways for more photos.</p>
-
-  <div class="idx">
-    <article class="row" id="p01">
-      <div class="meta"><span class="n">(01)</span><h3>Armani</h3><span class="yr">2014</span><p>Event build in Downtown Dubai: the red flower column, outdoor lounges, dining set-up and furniture.</p></div>
-      <div class="strip">
-        <img src="img/1_97fbd5e4.jpg" alt="Armani event, outdoor lounge" loading="lazy">
-        <img src="img/1_9c5917b0.jpg" alt="Armani event, dining tables with the Downtown skyline" loading="lazy">
-        <img src="img/1_ef8f5444.jpg" alt="Armani event, black lounge seating" loading="lazy">
-        <img src="img/1_c3e7671c.jpg" alt="Armani event, terrace" loading="lazy">
-        <img src="img/1_b8aa6782.jpg" alt="Armani event, white bar seating" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p02">
-      <div class="meta"><span class="n">(02)</span><h3>Abu Dhabi Golf Championship</h3><span class="yr">2015</span><p>Hospitality areas for the tournament: reception counter, lounges, planters and the branded spaces.</p></div>
-      <div class="strip">
-        <img src="img/2_1873453f.jpg" alt="Abu Dhabi Golf Championship, reception counter" loading="lazy">
-        <img src="img/2_106e61bb.jpg" alt="Abu Dhabi Golf Championship, red lounge" loading="lazy">
-        <img src="img/2_237ff055.jpg" alt="Abu Dhabi Golf Championship, Etihad planter" loading="lazy">
-        <img src="img/2_3c3f1df5.jpg" alt="Abu Dhabi Golf Championship, terrace with palm" loading="lazy">
-        <img src="img/2_e6c62fd6.jpg" alt="Abu Dhabi Golf Championship, tent interior" loading="lazy">
-        <img src="img/2_f67d4979.jpg" alt="Abu Dhabi Golf Championship, white lounge" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p03">
-      <div class="meta"><span class="n">(03)</span><h3>Meydan Beach</h3><span class="yr">2014</span><p>Beach fit-out: daybeds, shade tents, mashrabiya screens and the lounge interiors.</p></div>
-      <div class="strip">
-        <img src="img/3_4e6614b0.jpg" alt="Meydan Beach, tents on the sand" loading="lazy">
-        <img src="img/3_0c1afd3c.jpg" alt="Meydan Beach, daybeds" loading="lazy">
-        <img src="img/3_23db4ddc.jpg" alt="Meydan Beach, mashrabiya screen" loading="lazy">
-        <img src="img/3_60d48598.jpg" alt="Meydan Beach with the Burj Al Arab behind" loading="lazy">
-        <img src="img/3_b1ad25d1.jpg" alt="Meydan Beach, walkway between tents" loading="lazy">
-        <img src="img/3_dfa62674.jpg" alt="Meydan Beach, lounge interior" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p04">
-      <div class="meta"><span class="n">(04)</span><h3>Hershey&rsquo;s / Reese&rsquo;s, Dubai Mall</h3><span class="yr">2014</span><p>Retail kiosk and shelving, built in the workshop and fitted in the mall.</p></div>
-      <div class="strip">
-        <img src="img/4_7e6df54e.jpg" alt="Reese's kiosk at Dubai Mall" loading="lazy">
-        <img src="img/4_623c33a2.jpg" alt="Hershey's kiosk during installation" loading="lazy">
-        <img src="img/4_8c84e51d.jpg" alt="Hershey's shelving stocked" loading="lazy">
-        <img src="img/4_9014dc2e.jpg" alt="Hershey's counter" loading="lazy">
-        <img src="img/4_aabc2864.jpg" alt="Kiosk counter with coloured panels" loading="lazy">
-        <img src="img/4_f8593fda.jpg" alt="White shelving units" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p05">
-      <div class="meta"><span class="n">(05)</span><h3>Fragrance Station</h3><span class="yr">&nbsp;</span><p>Exhibition stand: shelving wall, display shelves, seating and graphics, built and installed on the show floor.</p></div>
-      <div class="strip">
-        <img src="img/5_b50044bb.jpg" alt="Fragrance Station stand, finished" loading="lazy">
-        <img src="img/5_7d26e761.jpg" alt="Fragrance Station stand, seating corner" loading="lazy">
-        <img src="img/5_806a4f70.jpg" alt="Fragrance Station stand, display wall" loading="lazy">
-        <img src="img/5_33b088b1.jpg" alt="Magic Colour crew building the stand" loading="lazy">
-        <img src="img/5_7bc2b81e.jpg" alt="Fragrance Station stand frame going up" loading="lazy">
-        <img src="img/5_7f934d36.jpg" alt="Fragrance Station display detail" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p06">
-      <div class="meta"><span class="n">(06)</span><h3>President Cup</h3><span class="yr">2015</span><p>Timber units produced and staged in our warehouse before going out to site.</p></div>
-      <div class="strip">
-        <img src="img/6_bf4266f4.jpg" alt="President Cup, stacked timber units" loading="lazy">
-        <img src="img/6_24b8af82.jpg" alt="President Cup, units in the warehouse" loading="lazy">
-        <img src="img/6_4b38f3a4.jpg" alt="President Cup, finished units" loading="lazy">
-        <img src="img/6_f80caa72.jpg" alt="President Cup, stacks ready to load" loading="lazy">
-        <img src="img/6_1b3ac1c1.jpg" alt="President Cup, warehouse floor" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p07">
-      <div class="meta"><span class="n">(07)</span><h3>Wedding event</h3><span class="yr">2015</span><p>Stage, round platform, carved screens, consoles and the furniture for the hall.</p></div>
-      <div class="strip">
-        <img src="img/7_14349068.jpg" alt="Wedding, round platform with flowers" loading="lazy">
-        <img src="img/7_609489e1.jpg" alt="Wedding, centre piece" loading="lazy">
-        <img src="img/7_42d4d0ff.jpg" alt="Wedding, hall layout" loading="lazy">
-        <img src="img/7_315b3de4.jpg" alt="Wedding, carved screen" loading="lazy">
-        <img src="img/7_7bec90f9.jpg" alt="Wedding, console with lamps" loading="lazy">
-        <img src="img/7_553b4b5f.jpg" alt="Wedding, screen and seating" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p08">
-      <div class="meta"><span class="n">(08)</span><h3>Rustic furniture</h3><span class="yr">2015</span><p>Tables, benches and stools made by our carpenters in solid timber.</p></div>
-      <div class="strip">
-        <img src="img/8_b6b57f3e.jpg" alt="Rustic dining table" loading="lazy">
-        <img src="img/8_6b5aae7d.jpg" alt="Rustic stools stacked" loading="lazy">
-        <img src="img/8_17dfd33a.jpg" alt="Rustic table top" loading="lazy">
-        <img src="img/8_8f9e2306.jpg" alt="Timber leg detail" loading="lazy">
-        <img src="img/8_c86402da.jpg" alt="Rustic bench" loading="lazy">
-        <img src="img/8_89cbc766.jpg" alt="Timber in the workshop" loading="lazy">
-      </div>
-    </article>
-    <article class="row" id="p09">
-      <div class="meta"><span class="n">(09)</span><h3>Emirates Golf, Dubai</h3><span class="yr">2014</span><p>Lounge and dining fit-out: reception counter, built-in seating, tables and lighting.</p></div>
-      <div class="strip">
-        <img src="img/9_0aa03500.jpg" alt="Emirates Golf, lounge seating" loading="lazy">
-        <img src="img/9_3fb6ee11.jpg" alt="Emirates Golf, reception counter" loading="lazy">
-        <img src="img/9_883b253d.jpg" alt="Emirates Golf, lounge with pendant lights" loading="lazy">
-        <img src="img/9_94c16e53.jpg" alt="Emirates Golf, dining table" loading="lazy">
-        <img src="img/9_bf99a64c.jpg" alt="Emirates Golf, dining room" loading="lazy">
-        <img src="img/9_80d14573.jpg" alt="Emirates Golf, built-in bench" loading="lazy">
-      </div>
-    </article>
-  </div>
-  <p class="more">Planning something similar? <a href="tel:+97143410060">Call the workshop</a> and ask for photos of the full job.</p>
-</div></section>
-
-<section id="workshop"><div class="w ws">
-  <figure>
-    <img src="img/workshop-crew.jpg" alt="Magic Colour carpenters building letters and props at the workbench" width="1025" height="683">
-    <figcaption>Our crew at the bench in Al Quoz.</figcaption>
-  </figure>
-  <div class="t">
-    <div class="sh"><h2>The workshop</h2></div>
-    <p class="big">Everything starts at the Magic Colour design desk. Once the client signs off the design, it goes straight to our own crew in the warehouse.</p>
-    <p>We don&rsquo;t pass the job to someone else to build. Our carpenters, electricians and painters make it under one roof, and the same team takes it to site and installs it.</p>
-    <div class="trades"><span>Carpenters</span><span>Electricians</span><span>Painters</span><span>Installers</span></div>
-    <p class="group">Part of the Magic Colour group, with Magic Colour Interior Decoration LLC and <a href="http://royalzoneexhibition.com/" target="_blank" rel="noopener">Royal Zone Technical Services LLC</a>.</p>
-  </div>
-</div></section>
-
-<section id="services"><div class="w">
-  <div class="sh"><h2>What we build</h2></div>
-  <p class="lede">Residential, commercial, exhibition and event work, from the first drawing to handover.</p>
-  <div class="svc">
-    <div><h3>Exhibition stands</h3><p>Custom and corporate stands and trade show booths, built in the workshop and installed on the show floor.</p><span class="see">See <a href="#p05">(05) Fragrance Station</a></span></div>
-    <div><h3>National pavilions</h3><p>Country pavilions for trade shows, from design to the build on site.</p></div>
-    <div><h3>Promotional kiosks</h3><p>Retail and mall kiosks, counters and display shelving.</p><span class="see">See <a href="#p04">(04) Hershey&rsquo;s, Dubai Mall</a></span></div>
-    <div><h3>Event sets</h3><p>Stages, platforms, lounges, screens and furniture for brand events, sports and weddings.</p><span class="see">See <a href="#p01">(01) Armani</a>, <a href="#p02">(02)</a>, <a href="#p07">(07)</a></span></div>
-    <div><h3>Home and office interiors</h3><p>Interior design, fit-out and decor for villas, apartments and offices.</p></div>
-    <div><h3>Indoor and outdoor fit-out</h3><p>Lounges, restaurants and beach areas, including the furniture we make ourselves.</p><span class="see">See <a href="#p03">(03) Meydan Beach</a>, <a href="#p09">(09)</a>, <a href="#p08">(08)</a></span></div>
-  </div>
-</div></section>
-
-<section id="contact">
-  <div class="tuck" aria-hidden="true"><img src="img/5_b50044bb.jpg" alt=""><img src="img/3_4e6614b0.jpg" alt=""></div>
-  <div class="w">
-    <div class="sh"><h2>Call the workshop</h2></div>
-    <p class="lede">Tell us the show or venue, the dates and the size of the space. Send drawings or photos if you have them, and we&rsquo;ll come back with ideas and a quote.</p>
-    <a class="bignum" href="tel:+97143410060">04 341 0060</a>
-    <div class="cgrid">
-      <div><span>Address</span><p>Al Quoz Industrial Area 4, behind Emirates Glass, Block 38, Warehouse 1, Dubai, UAE</p></div>
-      <div><span>Hours</span><p>Sat&ndash;Thu 9am&ndash;7pm<br>Fri 9am&ndash;2pm <em class="open" style="font-style:normal" data-open hidden><i></i><b>Open now</b></em></p></div>
-      <div><span>Mobile</span><p><a href="tel:+971556611304">+971 55 6611 304</a> &middot; <a href="https://wa.me/971556611304" target="_blank" rel="noopener">WhatsApp</a></p></div>
-      <div><span>Email</span><p><a href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a></p></div>
-      <div><span>Fax</span><p>+971 4 341 0070</p></div>
-      <div><span>Follow</span><p><a href="https://www.facebook.com/magiccolourdubai" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://twitter.com/magiccolour" target="_blank" rel="noopener">X / Twitter</a></p></div>
+<section class="k-story" data-k-story aria-labelledby="st-h"><div class="w">
+  <div class="k-story__head"><h2 class="sec-h" id="st-h" data-reveal="lines">From the drawing to the show floor</h2><p class="lede" data-reveal data-reveal-delay="150">One company from start to finish. This is how the Fragrance Station stand was made.</p></div>
+  <div class="k-story__grid">
+    <div class="k-story__media" aria-hidden="true">
+      <span class="k-story__prog"></span>
+      <figure class="is-on" data-k-story-media><img src="img/hd/5_7f934d36.webp" alt="" loading="lazy"><figcaption>Fragrance Station · display detail</figcaption></figure>
+      <figure data-k-story-media><img src="img/hd/workshop-crew.webp" alt="" loading="lazy"><figcaption>Our carpenters at the bench in Al Quoz</figcaption></figure>
+      <figure data-k-story-media><img src="img/hd/5_7bc2b81e.webp" alt="" loading="lazy"><figcaption>Fragrance Station · the frame going up on the show floor</figcaption></figure>
+      <figure data-k-story-media><img src="img/hd/5_b50044bb.webp" alt="" loading="lazy"><figcaption>Fragrance Station, finished</figcaption></figure>
+    </div>
+    <div class="k-story__steps">
+      <article class="k-story__step is-on" data-k-story-step><div class="k-story__inline"><img src="img/hd/5_7f934d36.webp" alt="Fragrance Station display detail" loading="lazy"></div><span class="k-story__n">01</span><h3>The design desk</h3><p>Tell us the show, the dates and the size of the space. Our designers turn the brief into a design you can sign off.</p></article>
+      <article class="k-story__step" data-k-story-step><div class="k-story__inline"><img src="img/hd/workshop-crew.webp" alt="Magic Colour carpenters at the workbench" loading="lazy"></div><span class="k-story__n">02</span><h3>Our workshop</h3><p>It goes straight to our warehouse in Al Quoz. Carpenters, electricians and painters build it under one roof.</p></article>
+      <article class="k-story__step" data-k-story-step><div class="k-story__inline"><img src="img/hd/5_7bc2b81e.webp" alt="Magic Colour crew building the stand" loading="lazy"></div><span class="k-story__n">03</span><h3>On site</h3><p>The same team takes it to the venue and puts it up, from the bare frame to the last shelf.</p></article>
+      <article class="k-story__step" data-k-story-step><div class="k-story__inline"><img src="img/hd/5_b50044bb.webp" alt="Fragrance Station stand, finished" loading="lazy"></div><span class="k-story__n">04</span><h3>Ready for the doors</h3><p>Finished and lit before the show opens. This is the same Fragrance Station stand, done.</p></article>
     </div>
   </div>
-  <div class="map"><iframe title="Magic Colour Technical Services on Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3612.6789485092527!2d55.220645999999995!3d25.112727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5e4b4555555f%3A0x713957257ee48117!2sMagic+Colour+Technical+Services+LLC.+Dubai!5e0!3m2!1sen!2sae!4v1423123996682" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div></section>
+
+<section class="k-acc" data-k-acc aria-labelledby="sv-h"><div class="w">
+  <div class="k-acc__top"><h2 class="sec-h" id="sv-h" data-reveal="lines">What we build</h2><a class="k-link k-link--under" href="services.html" data-reveal>All services in detail <span class="k-arrow">→</span></a></div>
+  <div class="k-acc__list">
+    <details class="k-acc__row" data-img="img/hd/5_b50044bb.webp">
+      <summary><span class="k-acc__n">01</span><span class="k-acc__t">Exhibition stands<small>Custom, corporate and trade show booths</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Designed at our design desk</li><li>Built in our Al Quoz workshop</li><li>Installed on the show floor by our crew</li><li>Example: Fragrance Station</li></ul><img src="img/hd/5_b50044bb.webp" alt="Fragrance Station stand" loading="lazy"><p><a class="k-link k-link--under" href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20I%20need%20a%20stand%20for%20" target="_blank" rel="noopener">Ask about a stand on WhatsApp <span class="k-arrow">→</span></a></p></div>
+    </details>
+    <details class="k-acc__row">
+      <summary><span class="k-acc__n">02</span><span class="k-acc__t">National pavilions<small>Country pavilions for trade shows</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Pavilion design and layout</li><li>Built and installed by one team</li></ul><p><a class="k-link k-link--under" href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20we%20need%20a%20national%20pavilion%20for%20" target="_blank" rel="noopener">Ask about a pavilion <span class="k-arrow">→</span></a></p></div>
+    </details>
+    <details class="k-acc__row" data-img="img/hd/4_7e6df54e.webp">
+      <summary><span class="k-acc__n">03</span><span class="k-acc__t">Promotional kiosks<small>Mall kiosks, counters and shelving</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Kiosks, counters and display shelving</li><li>Made in the workshop, fitted in the mall</li><li>Example: Hershey's / Reese's, Dubai Mall</li></ul><img src="img/hd/4_7e6df54e.webp" alt="Reese's kiosk" loading="lazy"><p><a class="k-link k-link--under" href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20I%20need%20a%20kiosk%20for%20" target="_blank" rel="noopener">Ask about a kiosk <span class="k-arrow">→</span></a></p></div>
+    </details>
+    <details class="k-acc__row" data-img="img/hd/7_14349068.webp">
+      <summary><span class="k-acc__n">04</span><span class="k-acc__t">Event sets<small>Brand events, sport and weddings</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Stages, platforms and screens</li><li>Lounges and furniture</li><li>Examples: Armani, Abu Dhabi Golf Championship, a 2015 wedding</li></ul><img src="img/hd/7_14349068.webp" alt="Wedding platform" loading="lazy"><p><a class="k-link k-link--under" href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20we%20have%20an%20event%20on%20" target="_blank" rel="noopener">Ask about an event <span class="k-arrow">→</span></a></p></div>
+    </details>
+    <details class="k-acc__row" data-img="img/hd/9_883b253d.webp">
+      <summary><span class="k-acc__n">05</span><span class="k-acc__t">Home &amp; office interiors<small>Interior design, fit-out and decor</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Villas, apartments and offices</li><li>Design and decor, end to end</li><li>Example: Emirates Golf Club lounge</li></ul><img src="img/hd/9_883b253d.webp" alt="Emirates Golf lounge" loading="lazy"><p><a class="k-link k-link--under" href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20I%27d%20like%20a%20quote%20for%20an%20interior%20" target="_blank" rel="noopener">Ask about an interior <span class="k-arrow">→</span></a></p></div>
+    </details>
+    <details class="k-acc__row" data-img="img/hd/3_4e6614b0.webp">
+      <summary><span class="k-acc__n">06</span><span class="k-acc__t">Indoor &amp; outdoor fit‑out<small>Lounges, beach areas and our own furniture</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Beach and terrace lounges</li><li>Tents, screens and daybeds</li><li>Furniture made by our carpenters</li><li>Example: Meydan Beach</li></ul><img src="img/hd/3_4e6614b0.webp" alt="Meydan Beach tents" loading="lazy"><p><a class="k-link k-link--under" href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20I%27d%20like%20a%20quote%20for%20a%20fit-out%20" target="_blank" rel="noopener">Ask about a fit-out <span class="k-arrow">→</span></a></p></div>
+    </details>
+  </div>
+</div></section>
+
+<section class="shop" aria-labelledby="ws-h">
+  <div class="shop__ph" data-reveal="clip"><img src="img/hd/6_bf4266f4.webp" alt="Timber units for the President Cup stacked in the Magic Colour warehouse" loading="lazy"><img src="img/hd/6_24b8af82.webp" alt="President Cup units in production in the warehouse" loading="lazy"></div>
+  <div class="shop__t">
+    <h2 class="sec-h" id="ws-h" data-reveal="lines">The workshop</h2>
+    <p data-reveal>Block 38, Warehouse 1, behind Emirates Glass in Al Quoz Industrial Area 4. This is where every stand, kiosk and set on this site was built.</p>
+    <div class="trades" data-reveal><span>Carpenters</span><span>Electricians</span><span>Painters</span></div>
+    <p data-reveal>Part of the Magic Colour group, with Magic Colour Interior Decoration LLC and Royal Zone Technical Services LLC.</p>
+    <p data-reveal><a class="k-link k-link--under" href="about.html" style="color:var(--k-accent);font-weight:600">About Magic Colour <span class="k-arrow">→</span></a></p>
+  </div>
+</section>
+
+<section class="k-cta" aria-labelledby="cta-h">
+  <div class="k-cta__bg" aria-hidden="true"><img src="img/hd/1_9c5917b0.webp" alt=""><img src="img/hd/3_b1ad25d1.webp" alt=""><img src="img/hd/7_42d4d0ff.webp" alt=""><img src="img/hd/2_1873453f.webp" alt=""><img src="img/hd/1_9c5917b0.webp" alt=""><img src="img/hd/3_b1ad25d1.webp" alt=""><img src="img/hd/7_42d4d0ff.webp" alt=""><img src="img/hd/2_1873453f.webp" alt=""></div>
+  <div class="w">
+    <h2 id="cta-h" data-k-cta-type>Got a show coming up?</h2>
+    <a class="k-cta__big" href="tel:+97143410060">04 341 0060</a>
+    <div class="k-cta__row">
+      <a class="k-btn k-btn--light" data-k-magnetic href="https://wa.me/971556611304?text=Hi%20Magic%20Colour%2C%20I%27d%20like%20a%20quote%20for%20a%20stand%20at%20___%20on%20___%20(size%3A%20___%20sqm)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Send us the floor plan</a>
+      
+      <p class="k-cta__meta">Tell us the show or venue, the dates and the size of the space. Drawings or photos help. We come back with ideas and a quote.</p>
+    </div>
+  </div>
+</section>
+
+<section class="k-visit" id="visit" aria-labelledby="vi-h" data-k-hours='{"6":[9,19],"0":[9,19],"1":[9,19],"2":[9,19],"3":[9,19],"4":[9,19],"5":[9,14]}' data-k-tz="Asia/Dubai">
+  <div class="k-visit__info">
+    <h2 class="sec-h" id="vi-h" data-reveal="lines">Find the workshop</h2>
+    <span class="k-visit__badge" data-k-badge hidden><i></i><span>Open now</span></span>
+    <p class="k-visit__addr">Block 38, Warehouse 1, Al Quoz Industrial Area 4, Dubai</p>
+    <p class="k-visit__land">Behind Emirates Glass.</p>
+    <table>
+      <tr data-day="6"><td>Saturday</td><td>9am – 7pm</td></tr>
+      <tr data-day="0"><td>Sunday</td><td>9am – 7pm</td></tr>
+      <tr data-day="1"><td>Monday</td><td>9am – 7pm</td></tr>
+      <tr data-day="2"><td>Tuesday</td><td>9am – 7pm</td></tr>
+      <tr data-day="3"><td>Wednesday</td><td>9am – 7pm</td></tr>
+      <tr data-day="4"><td>Thursday</td><td>9am – 7pm</td></tr>
+      <tr data-day="5"><td>Friday</td><td>9am – 2pm</td></tr>
+    </table>
+    <div class="k-visit__acts">
+      <a class="k-btn" data-k-magnetic href="https://www.google.com/maps/search/?api=1&query=Magic+Colour+Technical+Services+LLC+Al+Quoz+Dubai" target="_blank" rel="noopener">Directions <span class="k-arrow">→</span></a>
+      <a class="k-link k-link--under" href="tel:+97143410060">+971 4 341 0060</a>
+    </div>
+    <div class="k-visit__more">
+      <b>Mobile</b><span><a class="k-link" href="tel:+971556611304">+971 55 6611 304</a> · <a class="k-link" href="https://wa.me/971556611304" target="_blank" rel="noopener">WhatsApp</a></span>
+      <b>Email</b><a class="k-link" href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a>
+      <b>Fax</b><span>+971 4 341 0070</span>
+    </div>
+  </div>
+  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3612.6789485092527!2d55.220645999999995!3d25.112727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5e4b4555555f%3A0x713957257ee48117!2sMagic+Colour+Technical+Services+LLC.+Dubai!5e0!3m2!1sen!2sae!4v1423123996682">
+    <p class="k-visit__mapt" aria-hidden="true">Al Quoz<br>Industrial<br>Area 4</p><button type="button">Show the map</button><span class="k-visit__pin" aria-hidden="true"></span><span class="k-visit__coord" aria-hidden="true">25.1127° N · 55.2206° E</span>
+  </div>
 </section>
 
 </main>
 
-<footer><div class="w">
-  <div class="fg">
+<footer class="foot"><div class="w">
+  <p class="foot__big" aria-hidden="true">Magic <span>Colour</span></p>
+  <div class="foot__g">
     <div><h4>Magic Colour Technical Services LLC</h4><p>Exhibition, event, kiosk and interior production and fit-out. Dubai, since 2003.</p></div>
     <div><h4>Workshop</h4><p>Al Quoz Industrial Area 4</p><p>Behind Emirates Glass</p><p>Block 38, Warehouse 1, Dubai</p></div>
-    <div><h4>Contact</h4><a href="tel:+97143410060">+971 4 341 0060</a><a href="tel:+971556611304">+971 55 6611 304</a><a href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a><p>Sat&ndash;Thu 9&ndash;7, Fri 9&ndash;2</p></div>
-    <div><h4>Group</h4><p>Magic Colour Interior Decoration LLC</p><a href="http://royalzoneexhibition.com/" target="_blank" rel="noopener">Royal Zone Technical Services LLC</a><a href="https://www.facebook.com/magiccolourdubai" target="_blank" rel="noopener">Facebook</a></div>
+    <div><h4>Contact</h4><a href="tel:+97143410060">+971 4 341 0060</a><a href="tel:+971556611304">+971 55 6611 304</a><a href="mailto:info@magiccolourdubai.com">info@magiccolourdubai.com</a><p>Sat–Thu 9am–7pm · Fri 9am–2pm</p></div>
+    <div><h4>Pages</h4><a href="services.html">Services</a><a href="about.html">About</a><a href="ar/" lang="ar">العربية</a><a href="https://www.facebook.com/magiccolourdubai" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/magiccolour" target="_blank" rel="noopener">X / Twitter</a></div>
   </div>
-  <div class="fb"><span>&copy; Magic Colour Technical Services LLC. Photos and business details belong to Magic Colour.</span><span>Design concept by Websmith for Magic Colour Technical Services LLC. Not the official site.</span></div>
+  <div class="foot__b"><span>&copy; Magic Colour Technical Services LLC. Photos and business details belong to Magic Colour.</span><span>Design concept by Websmith for Magic Colour Technical Services LLC. Not the official site.</span></div>
 </div></footer>
 
-<script>
-// Open / closed, Dubai time (UTC+4). Sat–Thu 9–19, Fri 9–14.
-(function(){
-  var el=document.querySelector('[data-open]'); if(!el) return;
-  var d=new Date(Date.now()+(new Date().getTimezoneOffset()+240)*60000);
-  var day=d.getDay(), h=d.getHours()+d.getMinutes()/60;
-  var open = day===5 ? (h>=9&&h<14) : (h>=9&&h<19);
-  if(!open){el.classList.add('shut');el.querySelector('b').textContent='Closed now';}
-  el.hidden=false;
-})();
-</script>
-<img src="https://mansours-mac-mini.taild02aba.ts.net/t/v/magic-colour.gif" alt="" width="1" height="1" style="position:absolute;left:-9999px" loading="eager" referrerpolicy="no-referrer">
+<script src="projects.js"></script>
+<script src="site.js"></script>
+<img src="https://mansours-mac-mini.taild02aba.ts.net/t/v/magic-colour.gif" alt="" width="1" height="1" style="position:absolute;left:-9999px" referrerpolicy="no-referrer">
 </body>
 </html>
