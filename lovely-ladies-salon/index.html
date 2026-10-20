@@ -22,7 +22,8 @@
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:#fff;color:var(--body);font:400 17px/1.6 "Jost",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  img{display:block;max-width:100%}
+  img{display:block;max-width:100%;height:auto}
+  figure{margin:0}
   a{color:inherit}
   .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
   h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;color:var(--ink);margin:0}
@@ -31,19 +32,20 @@
   header{border-bottom:1px solid var(--rule);background:#fff;position:sticky;top:0;z-index:20}
   .bar{display:flex;align-items:center;gap:28px;height:66px}
   .brand{font-family:"Bodoni Moda",serif;font-style:italic;font-size:22px;color:var(--berry);text-decoration:none;white-space:nowrap}
-  nav{display:flex;gap:26px;margin-left:auto;font-size:15px}
+  nav{display:flex;gap:26px;margin-left:auto;margin-right:6px;font-size:15px}
   nav a{text-decoration:none;color:var(--body)}
   nav a:hover{color:var(--berry)}
-  .tel{display:flex;align-items:center;gap:12px;font-weight:500;color:var(--ink);font-size:15px}
+  .tel{margin-left:auto;display:flex;align-items:center;gap:12px;font-weight:500;color:var(--ink);font-size:15px}
   .tel a{text-decoration:none}
   .wa{display:inline-flex;width:22px;height:22px;color:var(--berry)}
   .wa svg{width:22px;height:22px}
 
   /* hero */
   .hero{padding:56px 0 72px}
-  .hero-grid{display:grid;grid-template-columns:5fr 7fr;align-items:end}
-  .hero-text{position:relative;z-index:2;padding-bottom:6px}
-  .hero h1{font-size:clamp(54px,8.6vw,132px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;margin-right:-34%;font-weight:400}
+  .hero-grid{display:grid;grid-template-columns:4fr 8fr;align-items:end}
+  .hero-text{position:relative;z-index:2;padding-bottom:6px;align-self:center}
+  .hero h1{font-size:clamp(54px,10vw,150px);line-height:.88;letter-spacing:-.01em;text-transform:uppercase;margin-right:-60%;font-weight:400}
+  .hero h1 span:first-child{color:var(--ink)}
   .hero h1 span{display:block}
   .hero h1 em{font-style:italic;text-transform:none;color:var(--berry);font-size:.62em;letter-spacing:0;display:block;margin-top:.12em}
   .lede{max-width:30em;margin:36px 0 22px;font-size:18px;color:var(--body)}
