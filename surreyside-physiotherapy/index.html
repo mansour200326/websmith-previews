@@ -67,7 +67,7 @@ h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;color:var(--ink);font-weight
 .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
 .tags button{font:inherit;font-size:14px;font-weight:700;border:1.5px solid var(--rule);background:#fff;color:var(--body);padding:6px 12px;border-radius:3px;cursor:pointer}
 .tags button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-ol.cond{list-style:none;margin-top:36px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:2px solid var(--ink)}
+ol.cond{list-style:none;margin-top:36px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:2px solid var(--ink);grid-template-rows:repeat(7,auto);grid-auto-flow:column}
 ol.cond li{display:grid;grid-template-columns:64px 1fr auto;align-items:baseline;gap:8px;padding:16px 0;border-bottom:1px solid var(--rule);transition:opacity .2s}
 ol.cond li.off{opacity:.18}
 ol.cond .n{font-weight:900;font-size:26px;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
@@ -75,7 +75,7 @@ ol.cond .t{font-size:19px;font-weight:700;color:var(--ink);line-height:1.3}
 ol.cond .t small{display:block;font-weight:400;font-size:14px;color:var(--mute)}
 ol.cond .a{font-size:13px;color:var(--mute)}
 .cond-note{margin-top:22px;font-size:16px;max-width:60ch}
-@media (max-width:860px){.cond-head{grid-template-columns:1fr;gap:18px}.tags{justify-content:flex-start}ol.cond{grid-template-columns:1fr}ol.cond li{grid-template-columns:48px 1fr}ol.cond .a{display:none}ol.cond .n{font-size:22px}}
+@media (max-width:860px){.cond-head{grid-template-columns:1fr;gap:18px}.tags{justify-content:flex-start}ol.cond{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}ol.cond li{grid-template-columns:48px 1fr}ol.cond .a{display:none}ol.cond .n{font-size:22px}}
 
 /* coverage */
 .cover{background:var(--soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
@@ -200,18 +200,18 @@ footer ul{list-style:none;line-height:1.9}
     </div>
     <ol class="cond">
       <li data-a="spine"><span class="n">01</span><span class="t">Back and neck pain or stiffness</span><span class="a">Back, neck</span></li>
-      <li data-a="joint"><span class="n">08</span><span class="t">Tendonitis and tendinosis</span><span class="a">Tendons</span></li>
       <li data-a="spine"><span class="n">02</span><span class="t">Whiplash</span><span class="a">Neck</span></li>
-      <li data-a="soft"><span class="n">09</span><span class="t">Repetitive strain and overuse injuries</span><span class="a">Muscles</span></li>
       <li data-a="joint"><span class="n">03</span><span class="t">Joint pain or stiffness</span><span class="a">Joints</span></li>
-      <li data-a="rehab"><span class="n">10</span><span class="t">Work-related injuries</span><span class="a">Rehab</span></li>
       <li data-a="joint rehab"><span class="n">04</span><span class="t">Joint replacements</span><span class="a">Joints</span></li>
-      <li data-a="spine"><span class="n">11</span><span class="t">Cervicogenic headaches<small>Headaches that start in the neck</small></span><span class="a">Neck, head</span></li>
       <li data-a="joint"><span class="n">05</span><span class="t">Arthritic conditions<small>Osteoarthritis, rheumatoid arthritis, osteoporosis</small></span><span class="a">Joints</span></li>
-      <li data-a="rehab"><span class="n">12</span><span class="t">After a fracture</span><span class="a">Rehab</span></li>
       <li data-a="joint"><span class="n">06</span><span class="t">Shoulder pain</span><span class="a">Joints</span></li>
-      <li data-a="rehab"><span class="n">13</span><span class="t">Post-op rehabilitation and strengthening</span><span class="a">Rehab</span></li>
       <li data-a="soft"><span class="n">07</span><span class="t">Ligament and muscle sprains</span><span class="a">Muscles</span></li>
+      <li data-a="soft"><span class="n">08</span><span class="t">Tendonitis and tendinosis</span><span class="a">Tendons</span></li>
+      <li data-a="soft"><span class="n">09</span><span class="t">Repetitive strain and overuse injuries</span><span class="a">Muscles</span></li>
+      <li data-a="rehab"><span class="n">10</span><span class="t">Work-related injuries</span><span class="a">Rehab</span></li>
+      <li data-a="spine"><span class="n">11</span><span class="t">Cervicogenic headaches<small>Headaches that start in the neck</small></span><span class="a">Neck, head</span></li>
+      <li data-a="rehab"><span class="n">12</span><span class="t">After a fracture</span><span class="a">Rehab</span></li>
+      <li data-a="rehab"><span class="n">13</span><span class="t">Post-op rehabilitation and strengthening</span><span class="a">Rehab</span></li>
       <li data-a="spine soft"><span class="n">14</span><span class="t">Chronic pain</span><span class="a">Ongoing</span></li>
     </ol>
     <p class="cond-note">Don't see your problem here? Call and describe it. If physio isn't the right treatment, we'll tell you and refer you to the right person.</p>
