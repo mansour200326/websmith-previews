@@ -694,7 +694,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 .k-visit__acts a{border-radius:2px}
 .k-visit__go{background:var(--k-accent)}
 .k-visit__go:hover{background:var(--k-ink)}
-.k-visit__map{background:#dfe1e3 url("img/qnb-steel2.webp") center/cover;min-height:420px}
+.k-visit__map{background:#dfe1e3 url("img/store.webp") center/cover;min-height:420px}
 .k-visit__map::before{content:"";position:absolute;inset:0;background:rgba(15,17,18,.55)}
 
 /* ---------- footer with giant wordmark (Vide Infra technique) ---------- */
@@ -775,7 +775,7 @@ html:lang(ar) .k-kb h1{font-size:clamp(2.3rem,5.6vw,5.4rem);line-height:1.15!imp
 html:lang(ar) .sec-h,html:lang(ar) .k-story__head h2{line-height:1.15;letter-spacing:0}
 html:lang(ar) .sheet__lead{line-height:1.45;letter-spacing:0}
 html:lang(ar) .k-cta h2{letter-spacing:0;line-height:1.2}
-html:lang(ar) .ft__big{direction:ltr;justify-content:flex-end}
+html:lang(ar) .ft__big{direction:ltr;justify-content:flex-start}
 html:lang(ar) .ptable .t{letter-spacing:0}
 [dir=rtl] .ptable tr.row:hover .t{transform:translateX(-10px)}
 [dir=rtl] .ruler{inset-inline-end:auto;left:14px}
@@ -787,8 +787,32 @@ html:lang(ar) .k-kb__cap,html:lang(ar) .spec dt,html:lang(ar) .addr dt,html:lang
 html:lang(ar) .k-kb__cap{font-size:.86rem}
 .phead__row p.mono{font-size:.85rem;line-height:1.6}
 
-html:lang(ar) .hd__tel::before{content:"اتصل"}
+@media (max-width:520px){html:lang(ar) .hd__tel::before{content:"اتصل"}}
 html:lang(ar) .ft__big small{font-family:"Readex Pro",sans-serif;margin-inline:0}
 .proj{padding-bottom:clamp(40px,5vw,70px)}
 .k-stats{padding-bottom:clamp(30px,5vw,70px)}
 .k-acc{padding-top:clamp(50px,7vw,100px)}
+
+/* ---- round 3 fixes ---- */
+.hd__tel{display:inline-flex;align-items:center;gap:.4em}
+.hd__num{margin-inline-start:.4em;unicode-bidi:isolate}
+.k-drag__card .k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/5}
+.k-drag__fig img{object-fit:cover;height:100%}
+.k-drag{padding-bottom:0}
+.mq-label{margin-top:64px}
+.ft__big{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:calc((100vw - 2 * var(--pad)) / 1.8);line-height:.78;margin:0;letter-spacing:-.06em;justify-content:flex-start;gap:0}
+.ft__base{margin-top:clamp(18px,2vw,30px)}
+@media (max-width:600px){.k-kb h1{font-size:clamp(2.25rem,10.2vw,3.2rem);text-wrap:balance}.k-kb h1 .k-line-mask{display:inline;}.k-kb h1 .k-kb__line{display:inline}}
+.ptable .mphoto{display:none}
+@media (max-width:760px){
+  .ptable tr.mphoto{display:block;padding:16px 0;border-bottom:1px solid var(--k-line)}
+  .ptable tr.mphoto td{display:block;border:0;padding:0}
+  .ptable tr.mphoto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .ptable tr.mphoto span{display:block;font:400 .7rem var(--k-mono);color:var(--k-mute);margin-top:8px}
+  html:lang(ar) .ptable tr.mphoto span{font-family:"Readex Pro",sans-serif}
+}
+@media (max-width:600px){
+  .k-js .k-kb h1 .k-kb__line{animation:none;transform:none}
+  .k-js .k-kb h1{opacity:0;transform:translateY(22px);animation:k-sw 1.1s var(--k-ease) .25s forwards}
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce){.k-js .k-kb h1{animation:none;opacity:1;transform:none}}
