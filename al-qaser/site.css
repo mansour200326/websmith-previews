@@ -368,3 +368,8 @@ html:lang(ar) .hero h1 .l2{line-height:1.35;margin-top:.2em}
 .div .h2{font-size:clamp(2.8rem,4vw,4.4rem);overflow-wrap:break-word;hyphens:manual}
 .foot .foot__wm{font-size:clamp(4.4rem,19vw,19rem)}
 @media (min-width:1000px){.foot .foot__wm{font-size:calc((100vw - var(--rail)) * .2)}}
+.rail__cell b.ltr{font-size:1.02rem;overflow-wrap:anywhere}
+.rail__cell--call b{font-size:1.25rem}
+[dir=rtl] .hero h1{margin-inline-start:0}
+.hero__media img{filter:contrast(1.08) saturate(1.05)}
+html:lang(ar) .rail__cell b,html:lang(ar) .bar__call,html:lang(ar) .lines b.ltr{font-family:"Barlow Condensed","Arial Narrow",sans-serif}
