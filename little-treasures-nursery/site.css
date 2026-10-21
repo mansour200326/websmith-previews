@@ -356,8 +356,7 @@ bdi,.ltr{unicode-bidi:isolate;direction:ltr}
 .route li{position:relative;padding:0 0 22px 46px}
 .route li::before{content:"";position:absolute;left:9px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--green)}
 .route li:last-child::before{content:"✕";width:auto;height:auto;border:0;background:none;color:var(--pink);font:800 1.5rem/1 var(--k-body);left:6px;top:-2px}
-.route__path{position:absolute;left:15px;top:14px;bottom:30px;width:3px;overflow:visible}
-.route__path line{stroke:rgba(255,255,255,.55);stroke-width:3;stroke-dasharray:2 9;stroke-linecap:round}
+.route::before{content:"";position:absolute;left:15px;top:14px;bottom:34px;border-left:3px dotted rgba(255,255,255,.5)}
 .route li b{display:block;font-weight:600}
 .route li span{color:#c3c9db}
 .route .warn{color:#ffd1e8}
@@ -454,6 +453,6 @@ bdi,.ltr{unicode-bidi:isolate;direction:ltr}
 [dir=rtl] .route li{padding:0 46px 22px 0}
 [dir=rtl] .route li::before{left:auto;right:9px}
 [dir=rtl] .route li:last-child::before{right:6px}
-[dir=rtl] .route__path{left:auto;right:15px}
+[dir=rtl] .route::before{left:auto;right:15px}
 [dir=rtl] .state__img{border-radius:22px 22px 120px 22px}
 [dir=rtl] .docs li::before{font-family:var(--k-body)}

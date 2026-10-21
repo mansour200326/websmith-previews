@@ -305,7 +305,8 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 .t4{background:var(--navy)}
 .t4 .note{display:flex}
 @media (max-width:979px){
-  .t4{aspect-ratio:auto;min-height:150px}
+  .t4{aspect-ratio:auto;min-height:130px;grid-column:1/-1}
+  .t4 .note{flex-direction:row;align-items:end;justify-content:space-between}
   .t4 .note b{font-size:1.7rem}
   .t4 .note{gap:18px}
 }
