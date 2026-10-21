@@ -309,3 +309,12 @@ html:lang(ar) .contact__tel{font-family:"Barlow Condensed",sans-serif}
   .hero__lede--m{display:block;padding:22px var(--pad) 30px;margin:0}.hero__top .hero__lede{display:none}}
 @media (min-width:701px){.hero__lede--m{display:none}}
 @media (max-width:700px){.hero>*{width:100%;max-width:100%;margin-inline:0;align-self:stretch}.hero .mark{width:100%}}
+
+/* coordinator polish round */
+.nw{white-space:nowrap}
+.en-tag{font:600 .62rem/1 "Barlow",system-ui,sans-serif;letter-spacing:.04em;border:1px solid currentColor;padding:2px 4px;border-radius:2px;opacity:.7;vertical-align:middle;margin-inline-start:4px}
+.strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,28px)}
+.strip3 figure{margin:0}.strip3 .ph{aspect-ratio:4/5;overflow:hidden;background:#d8d5cc}.strip3 img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.06) brightness(.98)}
+.strip3 figcaption{display:flex;gap:10px;padding-top:10px;font:500 .95rem/1.3 var(--body);color:var(--mute)}.strip3 figcaption b{font:700 .95rem/1.3 var(--display);color:var(--ink)}
+@media (max-width:700px){.strip3{grid-template-columns:1fr 1fr}.strip3 figure:first-child{grid-column:1/3}.strip3 figure:first-child .ph{aspect-ratio:4/3}
+  .about-photo{height:52vh!important;min-height:0}.about-photo img{object-position:50% 85%!important}}
