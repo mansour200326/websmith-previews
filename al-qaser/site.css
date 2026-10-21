@@ -81,7 +81,7 @@ main,.foot{padding-top:64px}
 .hero__body{padding:0 var(--pad) clamp(22px,4vh,40px);width:100%}
 .hero h1{font:800 clamp(5.4rem,21vw,19rem)/.78 var(--display);text-transform:uppercase;letter-spacing:-.012em;margin-inline-start:-.04em}
 .hero h1 .l2{display:block;font-weight:600;font-size:.3em;line-height:1;letter-spacing:.01em;text-align:end;margin-top:.12em;color:#fff}
-.hero h1 .l2 em{font-style:normal;color:var(--or)}
+.hero h1 .l2 em{font-style:normal;color:#aeb2b7;font-weight:500}
 .mask{display:block;overflow:hidden;padding-bottom:.04em}
 .hero__row{display:grid;gap:22px;margin-top:clamp(22px,4vh,44px);padding-top:20px;border-top:1px solid rgba(255,255,255,.28)}
 .hero__sub{font-size:clamp(1.05rem,1.45vw,1.3rem);line-height:1.5;max-width:36em;color:#e9eaeb}
