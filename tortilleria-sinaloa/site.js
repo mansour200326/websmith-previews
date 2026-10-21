@@ -344,3 +344,9 @@
     if(t)t.textContent=(es?'Hoy 7am – ':'Today 7am – ')+(close===18?'6pm':'7pm');
   });
 })();
+(function(){
+  var c=document.querySelector('[data-ts-qcount]'),tr=document.querySelector('.k-quotes__track');
+  if(!c||!tr)return;var n=tr.children.length,pad=function(x){return(x<10?'0':'')+x};
+  var u=function(){var i=Math.round(tr.scrollLeft/Math.max(1,tr.clientWidth));c.textContent=pad(Math.min(n,Math.abs(i)+1))+' / '+pad(n)};
+  tr.addEventListener('scroll',function(){clearTimeout(tr._t);tr._t=setTimeout(u,80)},{passive:true});u();
+})();

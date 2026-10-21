@@ -29,12 +29,12 @@
 </header>
 
 <main id="main">
-<section class="intro">
+<section class="intro intro--tight">
   <div><h1 data-reveal="lines">Our story</h1></div>
   <div data-reveal><p>A tortilleria and taqueria on Eastern Avenue, half a block east of Broadway. Since 2002 we’ve tried to make some of the tastiest and most affordable Mexican food in East Baltimore.</p></div>
 </section>
-<section class="story">
-  <div class="story__media"><figure data-reveal="clip"><img src="img/window.webp" alt="The Tortilleria Sinaloa window with hand-painted lettering and people at the window counter" loading="lazy" width="2144" height="1488"></figure></div>
+<section class="story story--first">
+  <div class="story__media"><figure data-reveal="clip"><img class="ph" src="img/window.webp" alt="The Tortilleria Sinaloa window with hand-painted lettering and people at the window counter" loading="lazy" width="2144" height="1488"><figcaption>Our window on Eastern Ave. Photo: Frank Hamilton, City Paper, 2010</figcaption></figure></div>
   <div class="story__txt">
     <h2 class="sec-h" data-reveal="lines">Since 2002</h2>
     <p data-reveal>We’ve been here since 2002, and people know us for our fresh tortillas, freshly made tacos and guacamole. Just ask our customers and the critics.</p>
@@ -49,17 +49,17 @@
     <p data-reveal>Come in for great taste at a great price. Eat in at the counter, carry out, or have us cater your party.</p>
     <p data-reveal><a class="k-btn" data-k-magnetic href="services.html">See the menu <span class="k-arrow">→</span></a></p>
   </div>
-  <div class="story__media"><figure data-reveal="clip" style="max-width:440px"><img src="img/counter.webp" alt="Customers ordering at the counter under the chalkboard menu" loading="lazy" width="859" height="1100"><figcaption>At the counter</figcaption></figure></div>
+  <div class="story__media"><figure class="fig-counter" data-reveal="clip"><img class="ph" src="img/counter.webp" alt="Customers ordering at the counter under the chalkboard menu" loading="lazy" width="859" height="1100"><figcaption>At the counter</figcaption></figure></div>
 </section>
 <section class="quotes" aria-labelledby="q-h">
-  <div class="quotes__top">
-    <h2 class="sec-h" id="q-h" data-reveal="lines">What people wrote</h2>
-    <p class="quotes__award" data-reveal><b>City Paper’s Best of Baltimore, 2011:</b> Best Mexican Food, Best Tacos and Best Breakfast (the huevos con chorizo).</p>
-  </div>
   <div class="k-quotes" data-k-quotes data-k-quotes-auto="8000" aria-roledescription="carousel" aria-label="Reviews">
-    <div class="k-quotes__head"><p><a class="k-link k-link--under" href="about.html#press">All the press</a></p><div class="k-quotes__btns"><button type="button" data-k-quotes-prev aria-label="Previous">←</button><button type="button" data-k-quotes-next aria-label="Next">→</button></div></div>
+  <div class="quotes__top">
+    <div class="quotes__row"><h2 class="sec-h" id="q-h" data-reveal="lines">What people wrote</h2>
+      <div class="quotes__ctl"><span class="quotes__count" data-ts-qcount aria-live="polite">01 / 05</span><button type="button" class="quotes__next" data-k-quotes-next>Next <span class="k-arrow">→</span></button></div></div>
+    <p class="quotes__award" data-reveal><b>City Paper’s Best of Baltimore, 2011:</b> Best Mexican Food, Best Tacos and Best Breakfast (the huevos con chorizo). <a class="k-link k-link--under" href="about.html#press">All the press</a></p>
+  </div>
     <div class="k-quotes__track"><figure class="k-quotes__slide" aria-label="1"><blockquote>Tortilleria Sinaloa is everything a taqueria should be. Be sure to try hot, fresh tortillas made fresh daily.</blockquote><figcaption class="k-quotes__who"><b>The Baltimore Sun</b></figcaption></figure><figure class="k-quotes__slide" aria-label="2"><blockquote>Carnitas tacos “with everything,” served rapido with big slices of lime and two kinds of thick hot sauce, stuffed with steamy, succulent shredded pork…</blockquote><figcaption class="k-quotes__who"><b>City Paper</b><span>“What We Eat”</span></figcaption></figure><figure class="k-quotes__slide" aria-label="3"><blockquote>Best tacos in town. … This is it. Tortillas made on premises and tasty ingredients. I highly recommend stopping in for lunch or a quick dinner any time.</blockquote><figcaption class="k-quotes__who"><b>Wade P.</b><span>Dundalk</span></figcaption></figure><figure class="k-quotes__slide" aria-label="4"><blockquote>These tortillas are some of the best I’ve ever had — fresh from the tortilla machine.</blockquote><figcaption class="k-quotes__who"><b>Life with Karma</b><span>Blog</span></figcaption></figure><figure class="k-quotes__slide" aria-label="5"><blockquote>Fabulous tacos!!! Did not think I would find good Mexican in Baltimore, but I was wrong. Yum!</blockquote><figcaption class="k-quotes__who"><b>D.T.</b><span>San Diego</span></figcaption></figure></div>
-    <div class="k-quotes__dots" role="tablist"></div>
+    <div class="k-quotes__dots" role="tablist" hidden></div>
   </div>
 </section>
 <section class="press" id="press" aria-labelledby="p-h">
@@ -76,7 +76,7 @@
     <p class="areas">Neighbors and office workers come from <b>Upper Fells Point, Fells Point, Harbor East, Patterson Park, Washington Hill and Canton</b>, and points near and far.</p>
     <div class="k-visit__acts"><a class="k-visit__go" data-k-magnetic href="https://www.google.com/maps/dir/?api=1&destination=1716+Eastern+Ave,+Baltimore,+MD+21231" target="_blank" rel="noopener">Directions <span class="k-arrow">→</span></a><a class="k-visit__call" href="tel:+14102763741">Call (410) 276-3741</a></div>
   </div>
-  <div class="k-visit__map" data-k-map data-src="https://www.google.com/maps?q=1716+Eastern+Ave,+Baltimore,+MD+21231&z=16&output=embed"><button type="button">Show the map</button></div>
+  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=1716+Eastern+Ave,+Baltimore,+MD+21231&z=16&output=embed" style="--k-map-poster:url(img/map.webp)"><button type="button">Show the map</button><span class="map-attr">Map © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</span></div>
 </section>
 </main>
 <footer class="ft">
