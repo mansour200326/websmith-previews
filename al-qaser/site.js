@@ -161,9 +161,10 @@
 /* Al Qaser: mobile menu, top bar state, footer wordmark rise */
 (function(){
   var b=document.querySelector('[data-menu-btn]'),n=document.querySelector('[data-menu]');
-  if(b&&n){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);document.documentElement.classList.toggle('menu-open',!o)});
-    n.addEventListener('click',function(e){if(e.target.closest('a')){b.setAttribute('aria-expanded','false');document.documentElement.classList.remove('menu-open')}});
-    addEventListener('keydown',function(e){if(e.key==='Escape'){b.setAttribute('aria-expanded','false');document.documentElement.classList.remove('menu-open')}});}
+  if(b&&n){var set=function(o){b.setAttribute('aria-expanded',o);document.documentElement.classList.toggle('menu-open',o);n.setAttribute('aria-hidden',!o);n.inert=!o};set(false);
+    b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true')});
+    n.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+    addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});}
   var bar=document.querySelector('.bar');
   if(bar){var f=function(){bar.classList.toggle('is-scrolled',scrollY>40)};addEventListener('scroll',f,{passive:true});f();}
   var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,w=document.querySelector('[data-wordmark]');
