@@ -704,9 +704,9 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 .ft p,.ft li{font-size:.95rem;line-height:1.6}
 .ft ul{list-style:none;padding:0}
 .ft a{text-decoration:none;color:#fff}
-.ft__big{font:700 clamp(7rem,30vw,30rem)/.72 var(--k-display);letter-spacing:-.075em;color:#fff;white-space:nowrap;margin:0 0 -.04em -.04em;display:flex;align-items:flex-end;gap:.06em;user-select:none}
+.ft__big{font:700 46vw/.74 var(--k-display);letter-spacing:-.06em;color:#fff;white-space:nowrap;margin:0 0 -.05em -.05em;display:flex;flex-wrap:wrap;align-items:flex-end;gap:0 .02em;user-select:none}
 .ft__big span{display:inline-block}
-.ft__big small{font:500 clamp(.9rem,1.6vw,1.4rem)/1.2 var(--k-body);letter-spacing:0;color:#868c92;margin-bottom:.9em;white-space:normal;max-width:12em}
+.ft__big small{order:-1;flex-basis:100%;font:400 .76rem/1.2 var(--k-mono);letter-spacing:0;color:#868c92;margin:0 0 18px .3em;white-space:normal}
 .k-js .ft__big span{transform:translateY(40%);opacity:0;transition:transform 1.2s var(--k-ease),opacity .8s ease;transition-delay:calc(var(--i,0)*90ms)}
 .k-js .ft__big.is-in span{transform:none;opacity:1}
 .ft__base{border-top:1px solid #2a2d31;padding:18px 0 22px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:.8rem;color:#868c92}
@@ -786,3 +786,9 @@ html:lang(ar) .ptable .t{letter-spacing:0}
 html:lang(ar) .k-kb__cap,html:lang(ar) .spec dt,html:lang(ar) .addr dt,html:lang(ar) .resto__cap,html:lang(ar) .k-drag__meta span,html:lang(ar) .ft h4,html:lang(ar) .ptable th,html:lang(ar) .tag,html:lang(ar) .k-stats__src,html:lang(ar) .mono{font-family:"Readex Pro",system-ui,sans-serif;letter-spacing:0}
 html:lang(ar) .k-kb__cap{font-size:.86rem}
 .phead__row p.mono{font-size:.85rem;line-height:1.6}
+
+html:lang(ar) .hd__tel::before{content:"اتصل"}
+html:lang(ar) .ft__big small{font-family:"Readex Pro",sans-serif;margin-inline:0}
+.proj{padding-bottom:clamp(40px,5vw,70px)}
+.k-stats{padding-bottom:clamp(30px,5vw,70px)}
+.k-acc{padding-top:clamp(50px,7vw,100px)}
