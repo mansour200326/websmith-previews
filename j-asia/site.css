@@ -505,3 +505,12 @@ em.i{font-style:italic}
 .ph__img img{width:100%;height:100%;object-fit:cover;filter:contrast(1.06) saturate(.88) brightness(.97)}
 .ph__fig .ph__tag{display:block;margin-top:16px;text-align:left;font:400 clamp(2rem,4vw,3.4rem)/1.05 var(--k-display);font-style:italic;color:var(--k-accent)}
 @media (min-width:980px){.ph__split{grid-template-columns:1fr 40vw;gap:60px}.ph__img{aspect-ratio:4/5}.ph--split{padding-top:clamp(120px,12vw,170px)}}
+.nowrap{white-space:nowrap}
+.feat__cap h3{max-width:none}
+@media (min-width:980px){.ph__img{aspect-ratio:auto;height:min(60vh,640px)}.ph--split{padding-top:140px;padding-bottom:60px}}
+/* round 3 fixes (Fannan r3), applied after the final round */
+h2{text-wrap:balance}
+.em-nw{white-space:nowrap}
+@media (min-width:900px){.k-kb__img{object-position:50% 68%}}
+.k-kb__media::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(15,14,12,.6) 0,rgba(15,14,12,0) 32%)}
+.k-kb__cap a{color:inherit;text-decoration:none}
