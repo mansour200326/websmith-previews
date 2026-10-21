@@ -627,3 +627,6 @@ html:lang(ar) .k-split.hero .k-split__type h1{font-size:clamp(3.6rem,15vw,8rem)}
 .k-story__media figure img,.k-story__inline.is-scan img{object-fit:cover;object-position:50% 70%}
 @media (min-width:900px){.hero__note{align-self:start;margin-top:48px}}
 .map__poster small .only-lg{font-size:.74rem;color:rgba(255,255,255,.42);letter-spacing:.01em}
+/* round 5: step 03 orthotics, cover-cropped */
+.k-story__media figure.is-orth img,.k-story__inline.is-scan img{object-fit:cover;object-position:50% 50%}
+@media (min-width:900px){.k-split.hero .k-split__type h1{font-size:clamp(4rem,9vw,9.5rem)}}
