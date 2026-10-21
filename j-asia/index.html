@@ -9,7 +9,8 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/sentosa-hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/sentosa-hero.webp" media="(min-width:900px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/sentosa-hero-portrait.webp" media="(max-width:899px)" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -26,6 +27,7 @@
       <a href="#contact" class="k-link">Contact</a>
     </nav>
     <a class="hd__tel" href="tel:+6563392338"><span>Tel</span><span class="k-roll"><span data-text="+65 6339 2338">+65 6339 2338</span></span></a>
+    <a class="hd__call" href="tel:+6563392338" aria-label="Call J-Asia, +65 6339 2338">Call</a>
     <details class="mnav">
       <summary><i aria-hidden="true"></i>Menu</summary>
       <div class="mnav__p">
@@ -44,7 +46,7 @@
 <!-- Hero: kit 01 restyled. Their own photo (Sentosa Cove project page, DSC05327), 4x upscaled. -->
 <section class="k-kb" aria-label="Introduction">
   <div class="k-kb__media">
-    <img class="k-kb__img" src="img/sentosa-hero.webp" alt="A white hot tub set into a dark timber deck at the water's edge, Sentosa Cove" fetchpriority="high" width="2400" height="1800">
+    <picture><source media="(max-width:899px)" srcset="img/sentosa-hero-portrait.webp"><img class="k-kb__img" src="img/sentosa-hero.webp" alt="A white hot tub set into a dark timber deck at the water's edge, Sentosa Cove" fetchpriority="high" width="2400" height="1800"></picture>
   </div>
   <div class="k-kb__body">
     <div class="hero__grid">
@@ -85,32 +87,32 @@
       <p data-reveal>Four private installations from our portfolio. Open one to see the photos from site.</p>
     </div>
     <div class="k-acc__list">
-      <details class="k-acc__row" data-img="img/francis-wave.webp">
+      <details class="k-acc__row" data-img="img/francis-skyline.webp">
         <summary><span class="k-acc__n">01</span><span class="k-acc__t">Mr Francis</span><span class="k-acc__meta"><b>Rooftop terrace</b>Jacuzzi® J-480™</span><span class="k-acc__plus" aria-hidden="true"></span></summary>
         <div class="k-acc__body">
           <p>A Jacuzzi® J-480™ on a rooftop, set into a curved timber deck under a pergola, with the city skyline behind. <b>This project earned J-Asia the Jacuzzi® 11th Annual International Design Awards 2011.</b></p>
-          <div class="pstrip"><img src="img/francis-skyline.webp" alt="The J-480 hot tub on the rooftop deck, city towers behind" loading="lazy"><img src="img/francis-pergola.webp" alt="Pergola and curved timber deck on the roof" loading="lazy"><img src="img/francis-roof.webp" alt="The whole rooftop terrace with the pergola" loading="lazy"></div>
+          <div class="pstrip"><img src="img/francis-skyline.webp" alt="The J-480 hot tub on the rooftop deck, city towers behind" loading="lazy"><img src="img/francis-roof.webp" alt="The whole rooftop terrace with the pergola" loading="lazy"></div>
         </div>
       </details>
-      <details class="k-acc__row" data-img="img/sentosa-deck.webp">
+      <details class="k-acc__row" data-img="img/sentosa-close.webp">
         <summary><span class="k-acc__n">02</span><span class="k-acc__t">Sentosa Cove</span><span class="k-acc__meta"><b>Waterfront deck</b>Hot tub</span><span class="k-acc__plus" aria-hidden="true"></span></summary>
         <div class="k-acc__body">
           <p>A hot tub sunk into a dark timber deck right at the water's edge, next to the pool, with the cove behind it.</p>
-          <div class="pstrip"><img src="img/sentosa-close.webp" alt="Close view of the hot tub seats and jets" loading="lazy"><img src="img/sentosa-pool.webp" alt="The deck beside the pool" loading="lazy"><img src="img/sentosa-view.webp" alt="The hot tub on the balcony above the water" loading="lazy"></div>
+          <div class="pstrip"><img src="img/sentosa-close.webp" alt="Close view of the hot tub seats and jets" loading="lazy"><img src="img/sentosa-pool.webp" alt="The deck beside the pool" loading="lazy"></div>
         </div>
       </details>
       <details class="k-acc__row" data-img="img/reflection-steps.webp">
         <summary><span class="k-acc__n">03</span><span class="k-acc__t">Reflection Condo</span><span class="k-acc__meta"><b>Timber-clad enclosure</b>Hot tub</span><span class="k-acc__plus" aria-hidden="true"></span></summary>
         <div class="k-acc__body">
           <p>A hot tub raised on a stepped timber platform inside a timber-clad enclosure, with a window out to the view.</p>
-          <div class="pstrip"><img src="img/reflection-steps.webp" alt="Stepped timber platform around the hot tub" loading="lazy"><img src="img/reflection-wide.webp" alt="The timber-clad enclosure" loading="lazy"><img src="img/reflection-window.webp" alt="The hot tub below the window" loading="lazy"></div>
+          <div class="pstrip"><img src="img/reflection-steps.webp" alt="Stepped timber platform around the hot tub" loading="lazy"><img src="img/reflection-wide.webp" alt="The timber-clad enclosure" loading="lazy"></div>
         </div>
       </details>
       <details class="k-acc__row" data-img="img/holland-marin.webp">
         <summary><span class="k-acc__n">04</span><span class="k-acc__t">Holland Road</span><span class="k-acc__meta"><b>Garden deck</b>Sundance® Marin</span><span class="k-acc__plus" aria-hidden="true"></span></summary>
         <div class="k-acc__body">
           <p>A Sundance® Marin on a garden deck, set among tree ferns and palms.</p>
-          <div class="pstrip"><img src="img/holland-marin.webp" alt="The Sundance Marin running, with palms behind" loading="lazy"><img src="img/holland-deck.webp" alt="The hot tub on the timber deck" loading="lazy"><img src="img/holland-garden.webp" alt="The garden around the deck" loading="lazy"></div>
+          <div class="pstrip"><img src="img/holland-marin.webp" alt="The Sundance Marin running, with palms behind" loading="lazy"><img src="img/holland-deck.webp" alt="The hot tub on the timber deck" loading="lazy"></div>
         </div>
       </details>
     </div>
@@ -122,7 +124,7 @@
   <div class="wrap">
     <figure class="feat__fig" data-reveal="clip"><img src="img/francis-wave.webp" alt="Rooftop with a curved, wave-shaped timber deck, a pergola and a white hot tub, city skyline behind" loading="lazy" data-speed="-0.08"></figure>
     <div class="feat__cap">
-      <h3 id="feat-h" data-reveal="lines">A rooftop for <em class="i">Mr Francis</em></h3>
+      <h3 id="feat-h" data-reveal="lines">A rooftop for <em class="i">Mr&nbsp;Francis</em></h3>
       <p data-reveal>The deck rises in a wave towards the pergola, and the <b>Jacuzzi® J-480™</b> sits flush inside it, facing the skyline.</p>
       <p class="feat__tag" data-reveal data-reveal-delay="150">Jacuzzi® 11th Annual International Design Awards, 2011. Earned by J-Asia for this project.</p>
     </div>
@@ -189,50 +191,31 @@
   </div>
   <div class="k-story__grid">
     <div class="k-story__media" aria-hidden="true">
-      <figure class="is-on" data-k-story-media><img src="img/reflection-steps.webp" alt=""></figure>
-      <figure data-k-story-media><img src="img/sentosa-deck.webp" alt="" loading="lazy"></figure>
-      <figure data-k-story-media><img src="img/holland-marin.webp" alt="" loading="lazy"></figure>
-      <figure data-k-story-media><img src="img/francis-skyline.webp" alt="" loading="lazy"></figure>
+      <figure class="is-on" data-k-story-media><img src="img/reflection-window.webp" alt=""></figure>
+      <figure data-k-story-media><img src="img/holland-garden.webp" alt="" loading="lazy"></figure>
+      <figure data-k-story-media><img src="img/sentosa-view.webp" alt="" loading="lazy"></figure>
+      <figure data-k-story-media><img src="img/francis-pergola.webp" alt="" loading="lazy"></figure>
       <span class="k-story__prog"></span>
     </div>
     <div class="k-story__steps">
       <article class="k-story__step is-on" data-k-story-step>
-        <div class="k-story__inline"><img src="img/reflection-steps.webp" alt="Hot tub on a stepped timber platform, Reflection Condo" loading="lazy"></div>
+        <div class="k-story__inline"><img src="img/reflection-window.webp" alt="Hot tub below the window in the timber enclosure, Reflection Condo" loading="lazy"></div>
         <span class="k-story__n">01</span><h3>Design</h3><p>We look at the space with you, a rooftop, a balcony, a garden deck or a bathroom, and design the spa, sauna or steam room around it.</p>
       </article>
       <article class="k-story__step" data-k-story-step>
-        <div class="k-story__inline"><img src="img/sentosa-deck.webp" alt="Hot tub set into a waterfront deck, Sentosa Cove" loading="lazy"></div>
+        <div class="k-story__inline"><img src="img/holland-garden.webp" alt="Garden deck among tree ferns, Holland Road" loading="lazy"></div>
         <span class="k-story__n">02</span><h3>Customise</h3><p>Spa pool systems and modular sauna and steam rooms are made to fit: the model, the size, the controls and the finish.</p>
       </article>
       <article class="k-story__step" data-k-story-step>
-        <div class="k-story__inline"><img src="img/holland-marin.webp" alt="Sundance Marin on a garden deck, Holland Road" loading="lazy"></div>
+        <div class="k-story__inline"><img src="img/sentosa-view.webp" alt="Hot tub on a balcony over the water, Sentosa Cove" loading="lazy"></div>
         <span class="k-story__n">03</span><h3>Install</h3><p>Our own trained technicians do the installation, on time, and hand it over running.</p>
       </article>
       <article class="k-story__step" data-k-story-step>
-        <div class="k-story__inline"><img src="img/francis-skyline.webp" alt="Jacuzzi J-480 on a rooftop, Mr Francis project" loading="lazy"></div>
+        <div class="k-story__inline"><img src="img/francis-pergola.webp" alt="Pergola over the rooftop deck, Mr Francis project" loading="lazy"></div>
         <span class="k-story__n">04</span><h3>After-sales</h3><p>We believe in strong after-sales service. For any technical question, write to <a class="k-link k-link--under" href="mailto:technical@j-asia-sg.com">technical@j-asia-sg.com</a>.</p>
       </article>
     </div>
   </div>
-</section>
-
-<!-- On site: kit 09 drag strip of their own project photos -->
-<section class="k-drag" data-k-drag aria-labelledby="drag-h">
-  <div class="k-drag__head">
-    <h2 id="drag-h" data-reveal="lines">On site</h2>
-    <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous">←</button><button type="button" data-k-drag-next aria-label="Next">→</button></div>
-  </div>
-  <div class="k-drag__track" tabindex="0" aria-label="Project photos, scroll sideways">
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/francis-pergola.webp" alt="Rooftop pergola and wave deck" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Mr Francis</h3><span>Rooftop</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/sentosa-close.webp" alt="Hot tub seats and jets" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Sentosa Cove</h3><span>Waterfront</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/holland-garden.webp" alt="Garden deck with tree ferns" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Holland Road</h3><span>Garden</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/reflection-wide.webp" alt="Timber-clad spa enclosure" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Reflection Condo</h3><span>Enclosure</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/sentosa-view.webp" alt="Hot tub on a balcony over the water" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Sentosa Cove</h3><span>Balcony</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/francis-roof.webp" alt="Whole rooftop terrace" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Mr Francis</h3><span>Rooftop</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/holland-deck.webp" alt="Hot tub on a timber deck" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Holland Road</h3><span>Sundance® Marin</span></div></a>
-    <a class="k-drag__card" href="#projects"><div class="k-drag__fig"><img src="img/sentosa-pool.webp" alt="Deck beside the pool" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Sentosa Cove</h3><span>Poolside</span></div></a>
-  </div>
-  <div class="k-drag__bar" aria-hidden="true"><i></i></div>
 </section>
 
 <!-- Contact: kit 16 restyled, no hours (not published), tap-to-load map -->
