@@ -81,7 +81,8 @@ a{color:inherit}
   .hero__fig::before{content:"";position:absolute;z-index:-1;top:clamp(36px,4vw,64px);left:0;bottom:0;right:calc(-1*var(--pad));background:var(--butter)}
   .hero__cap{color:#3d3a2a}
   .hero__side{grid-column:1/6}
-  .hero__side{grid-column:1/5;grid-row:2;align-self:end;padding-bottom:40px}
+  .hero__side{grid-column:1/5;grid-row:2;align-self:start;padding-bottom:0}
+  .hero{padding-bottom:clamp(24px,3vw,40px)}
 }
 .k-js .hero .k-word{display:block;transform:translateY(110%);animation:rise 1.15s var(--ease) forwards;animation-delay:calc(.12s + var(--i,0)*.11s)}
 .k-js .hero__photo{clip-path:inset(0 0 100% 0);animation:wipe 1.5s var(--ease) .45s forwards}
@@ -92,7 +93,7 @@ a{color:inherit}
 @keyframes kb{to{transform:scale(1.02)}}
 
 /* ---------- welcome ---------- */
-.welcome{display:grid;gap:30px;padding:clamp(70px,10vw,150px) var(--pad);border-top:1px solid var(--line)}
+.welcome{display:grid;gap:30px;padding:clamp(48px,5vw,72px) var(--pad) clamp(80px,8.4vw,120px);border-top:1px solid var(--line)}
 .welcome__q{font:400 clamp(1.7rem,3.3vw,3.1rem)/1.16 var(--display);letter-spacing:-.015em;max-width:21em}
 .welcome__q span{color:var(--navy)}
 .welcome__by{display:flex;gap:16px;align-items:center;color:var(--mute);font-size:.95rem}
@@ -327,3 +328,46 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 
 .room__frame{grid-template-rows:auto auto;gap:14px}
 .room__frame figcaption{font-size:.84rem;color:#5b5232;text-align:center}
+
+/* ---------- round 3 ---------- */
+.hero__fig{position:relative}
+.tag{position:absolute;z-index:3;top:-16px;right:clamp(14px,2vw,28px);display:inline-flex;align-items:baseline;gap:.35em;background:var(--butter);color:var(--ink);text-decoration:none;padding:10px 16px 11px;font-size:.92rem;font-weight:500;box-shadow:0 14px 30px -16px rgba(21,25,43,.55);transform:rotate(-2deg);transition:transform .5s var(--ease)}
+.tag b{font:400 1.7rem/1 var(--display);letter-spacing:-.02em}
+.tag:hover{transform:rotate(0) translateY(-2px)}
+.k-js .hero .tag.fade{transform:translateY(14px) rotate(-2deg)}
+@keyframes tagin{to{opacity:1;transform:rotate(-2deg)}}
+.k-js .hero .tag.fade{animation-name:tagin}
+@media (max-width:979px){.tag{right:calc(var(--pad) + 12px);top:-14px}}
+/* price tile */
+.note__p{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:2px 12px}
+.note__p span{font-size:.82rem;color:rgba(255,255,255,.7)}
+.note__p b{font:400 clamp(2.4rem,3.6vw,3.4rem)/1 var(--display);letter-spacing:-.03em;color:#fff}
+@media (min-width:980px){.t4{align-self:start!important;aspect-ratio:.624}}
+@media (max-width:979px){.t4 .note__p b{font-size:2.4rem;white-space:nowrap}}
+/* own map panel */
+.k-visit__map{background:var(--navy);color:#fff;padding:clamp(28px,4vw,56px)}
+.mapown{display:grid;gap:14px;justify-items:start;max-width:420px}
+.mapown img{width:100%;max-width:400px;height:auto;border:6px solid #fff}
+.mapown__cap{font-size:.84rem;color:rgba(255,255,255,.72)}
+.k-visit__map .mapcard{position:static;max-width:400px;box-shadow:none;color:var(--ink);margin-top:6px}
+.k-visit__map button{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7);margin-top:4px}
+.k-visit__map button:hover{background:#fff;color:var(--navy)}
+.k-visit__map iframe{z-index:2}
+/* footer led by the drive times */
+.ft .ft__drive{display:flex;flex-direction:column;gap:.04em;font:400 clamp(2rem,5.4vw,5.2rem)/1.04 var(--display);letter-spacing:-.025em;color:#fff;margin-bottom:22px}
+.ft__drive b{font-weight:400;color:var(--butter);display:inline-block;min-width:1.45em}
+.ft .ft__brand{font-size:.95rem;color:#8f93a6;margin-bottom:clamp(40px,6vw,72px)}
+/* mobile header shows the number */
+@media (max-width:520px){
+  .hd__tel .k-roll{display:inline-block}
+  .hd__tel::before{content:none}
+  .hd__tel{font-size:.9rem;padding:10px 0}
+  .hd__lg{display:none}
+  .brand b{font-size:1rem}
+  .brand small{font-size:.68rem}
+  .hd__in{gap:12px}
+}
+.hd__book{gap:0}
+.ft .ft__drive span{display:grid;grid-template-columns:1.55em 1fr;align-items:baseline}
+.ft__drive b{min-width:0}
+@media (max-width:600px){.ft .ft__drive{font-size:clamp(1.5rem,7vw,2rem);gap:.18em}.ft__drive span{line-height:1.08}}
