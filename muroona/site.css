@@ -255,7 +255,7 @@ html:lang(ar) .h2{font-weight:500;letter-spacing:0}
 .mute{color:var(--k-mute)}
 
 /* ---- header ---- */
-.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid transparent;transition:border-color .4s,box-shadow .4s}
+.top{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid transparent;transition:border-color .4s,box-shadow .4s}
 .top.is-scrolled{border-color:var(--k-line)}
 .top__in{max-width:1440px;margin:0 auto;padding:10px var(--pad);display:flex;align-items:center;gap:22px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
@@ -301,7 +301,7 @@ html:lang(ar) .top__lang{font-family:var(--k-display) !important}
 
 /* ---- hero (kit 02, restyled) ---- */
 .k-split{max-width:1440px;margin:0 auto;padding:clamp(18px,2.4vw,34px) var(--pad) clamp(36px,5vw,60px);min-height:calc(100svh - 79px);gap:22px;align-content:end}
-.k-split__type h1{font-weight:300;font-size:clamp(4rem,9.4vw,9.4rem);line-height:.9;letter-spacing:-.055em}
+.k-split__type h1{font-weight:300;font-size:clamp(4.2rem,11.2vw,11.4rem);line-height:.88;letter-spacing:-.055em}
 .k-split__type h1 .k-mask--ar{padding-inline-start:.9em}
 .k-split__type h1 [lang=ar]{font:400 .8em/1.2 var(--ar);letter-spacing:0;color:var(--k-accent)}
 .k-split__lead{font-size:clamp(1.08rem,1.35vw,1.28rem);line-height:1.5;color:var(--k-ink);max-width:25em;margin-top:clamp(18px,2.4vw,34px)}
@@ -399,7 +399,7 @@ html:lang(ar) .k-story__step h3{font-weight:500;letter-spacing:0;line-height:1.3
 .k-team__head{grid-template-columns:1fr;align-items:end}
 @media (min-width:900px){.k-team__head{grid-template-columns:1fr 1fr}}
 .k-team__ph{border-radius:0;background:var(--paper)}
-.k-team__ph img{filter:grayscale(.35);object-position:50% 28%}
+.k-team__ph img{filter:saturate(.92) contrast(1.06);object-position:50% 28%}
 .k-team__card h3{font-weight:600;font-size:1.18rem}
 .k-team__card p.role{color:var(--k-accent)}
 .k-team__card ul{list-style:none;padding:0;margin:10px 0 0;font-size:.9rem;color:var(--k-mute)}
@@ -516,9 +516,29 @@ html:lang(ar) .cred h2{font-weight:500;letter-spacing:0;line-height:1.3}
 .map__poster b{font:300 clamp(2.4rem,5vw,4.6rem)/.95 var(--k-display);letter-spacing:-.04em}
 .map__poster span{font:400 clamp(1.3rem,2.4vw,2rem)/1.3 var(--ar);color:#8cc3df}
 .map__poster small{color:rgba(255,255,255,.6);font-size:.92rem}
-.map__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.map__grid{display:none}
 .k-visit__map button{background:#fff;color:var(--k-ink)}
 .k-visit__map iframe{z-index:2}
 /* header mark: just the spine from the logo */
 .brand__mark{display:block;height:50px;width:26px;overflow:hidden;flex:none}
 .brand__mark img{height:76px !important;width:auto;max-width:none;margin-top:-2px;mix-blend-mode:multiply}
+
+/* round 2: one heading voice everywhere (kit headings defaulted to 700) */
+.k-acc h2.h2,.k-story__head h2.h2,.k-team__head h2.h2,.k-visit h2,.faq .h2,.room .h2{font-weight:400;letter-spacing:-.035em}
+html:lang(ar) .k-acc h2.h2,html:lang(ar) .k-story__head h2.h2,html:lang(ar) .k-team__head h2.h2,html:lang(ar) .k-visit h2{font-weight:500;letter-spacing:0}
+.svc__item h2{margin-bottom:18px}
+/* hero photo: slow Ken Burns once the clip wipe has settled */
+.k-js .k-split__photo img{animation:k-settle 2.2s var(--k-ease) .35s forwards,mu-kb 16s ease-out 2.6s forwards}
+@keyframes mu-kb{from{transform:scale(1)}to{transform:scale(1.07) translate3d(-1%,-1%,0)}}
+/* mobile call bar: slides in after the hero, plain full-width bar, not a floating pill */
+.callbar{display:none}
+@media (max-width:899px){
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset:auto 0 0 0;z-index:45;background:var(--k-ink);transform:translateY(100%);transition:transform .5s var(--k-ease);padding-bottom:env(safe-area-inset-bottom)}
+  .callbar.is-on{transform:none}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 10px;color:#fff;text-decoration:none;font-weight:600;font-size:1rem}
+  .callbar a+a{border-inline-start:1px solid rgba(255,255,255,.2)}
+  .callbar a:first-child{background:var(--k-accent)}
+  .callbar svg{width:18px;height:18px;flex:none}
+  .foot{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){.k-js .k-split__photo img{animation:none}.callbar{transition:none}}

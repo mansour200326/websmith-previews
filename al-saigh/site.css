@@ -308,3 +308,4 @@ html:lang(ar) .contact__tel{font-family:"Barlow Condensed",sans-serif}
 @media (max-width:700px){.hero{display:flex;flex-direction:column}.hero .mark{order:1}.hero__top{order:2;gap:0}.hero__spacer{order:3;height:18px!important}.hero__photo{order:4;height:52vh}.hero__lede{order:5}
   .hero__lede--m{display:block;padding:22px var(--pad) 30px;margin:0}.hero__top .hero__lede{display:none}}
 @media (min-width:701px){.hero__lede--m{display:none}}
+@media (max-width:700px){.hero>*{width:100%;max-width:100%;margin-inline:0;align-self:stretch}.hero .mark{width:100%}}

@@ -367,3 +367,8 @@
     document.querySelectorAll('.svc__item[id]').forEach(function(s){io.observe(s)});
   }
 })();
+
+/* mobile call bar appears once the hero is scrolled past */
+(function(){var b=document.querySelector('.callbar');if(!b)return;var t=false;
+  function u(){t=false;b.classList.toggle('is-on',scrollY>innerHeight*.6)}
+  addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u();})();

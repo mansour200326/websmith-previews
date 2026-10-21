@@ -501,7 +501,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line-height:1}
 .mono{font-family:var(--k-mono);font-size:.78rem;letter-spacing:0;font-weight:400}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
-.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:10px}
+.skip{position:absolute;top:0;left:0;z-index:99;background:#fff;padding:10px;transform:translateY(-120%)}.skip:focus{transform:none}
 :focus-visible{outline:2px solid var(--k-accent);outline-offset:3px}
 
 /* ---------- header ---------- */
@@ -541,8 +541,8 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 
 /* right-edge scroll ruler (desktop) */
 .ruler{position:fixed;inset-inline-end:14px;top:50%;translate:0 -50%;z-index:30;width:10px;height:180px;display:none;pointer-events:none;
-  background:repeating-linear-gradient(to bottom,rgba(19,21,23,.28) 0 1px,transparent 1px 12px);mix-blend-mode:difference}
-.ruler i{position:absolute;inset-inline-end:0;top:0;width:10px;height:2px;background:var(--k-accent);transform:translateY(calc(var(--sp,0) * 178px));mix-blend-mode:normal}
+  background:repeating-linear-gradient(to bottom,rgba(19,21,23,.28) 0 1px,transparent 1px 12px);}
+.ruler i{position:absolute;inset-inline-end:0;top:0;width:10px;height:2px;background:var(--k-accent);transform:translateY(calc(var(--sp,0) * 178px))}
 @media (min-width:1100px){.ruler{display:block}}
 
 /* ---------- hero (kit 01, restyled) ---------- */
@@ -782,3 +782,7 @@ html:lang(ar) .ptable .t{letter-spacing:0}
 
 @media (max-width:600px){.k-kb__cap span:nth-child(4){display:none}.k-kb__cap{gap:4px 18px}}
 .k-kb h1{text-shadow:0 2px 30px rgba(0,0,0,.35)}
+
+html:lang(ar) .k-kb__cap,html:lang(ar) .spec dt,html:lang(ar) .addr dt,html:lang(ar) .resto__cap,html:lang(ar) .k-drag__meta span,html:lang(ar) .ft h4,html:lang(ar) .ptable th,html:lang(ar) .tag,html:lang(ar) .k-stats__src,html:lang(ar) .mono{font-family:"Readex Pro",system-ui,sans-serif;letter-spacing:0}
+html:lang(ar) .k-kb__cap{font-size:.86rem}
+.phead__row p.mono{font-size:.85rem;line-height:1.6}
