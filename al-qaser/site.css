@@ -152,8 +152,8 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .intro{display:grid;gap:clamp(30px,5vw,70px);padding-block:clamp(70px,10vw,140px) clamp(50px,7vw,90px)}
 .intro__say{font:600 clamp(1.9rem,3.8vw,3.5rem)/1.04 var(--display);text-transform:uppercase;max-width:20em;letter-spacing:.002em}
 .intro__grid{display:grid;gap:30px}
-.intro__ph{overflow:hidden;aspect-ratio:4/3;background:#ccc}
-.intro__ph img{width:100%;height:118%;object-fit:cover}
+.intro__ph{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--ink)}
+.intro__ph img{position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover}
 .facts{border-top:1px solid var(--ink);align-self:start}
 .facts div{display:grid;grid-template-columns:9.5em 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:1rem}
 .facts dt{color:var(--mute);font-size:.88rem;padding-top:.15em}
@@ -371,5 +371,19 @@ html:lang(ar) .hero h1 .l2{line-height:1.35;margin-top:.2em}
 .rail__cell b.ltr{font-size:1.02rem;overflow-wrap:anywhere}
 .rail__cell--call b{font-size:1.25rem}
 [dir=rtl] .hero h1{margin-inline-start:0}
-.hero__media img{filter:contrast(1.08) saturate(1.05)}
 html:lang(ar) .rail__cell b,html:lang(ar) .bar__call,html:lang(ar) .lines b.ltr{font-family:"Barlow Condensed","Arial Narrow",sans-serif}
+
+/* round 2 (independent Fannan) */
+.hero__media img{object-position:50% 50%;filter:contrast(1.06) saturate(.95) brightness(.9)}
+.hero__media::after{background:linear-gradient(180deg,rgba(14,15,17,.55) 0,rgba(14,15,17,.3) 32%,rgba(14,15,17,.4) 55%,rgba(14,15,17,.93) 100%)}
+@media (max-width:700px){.hero__media img{object-position:40% 72%}}
+.shop .idx{color:rgba(22,23,25,.75)}
+.shop__ph{min-height:0;aspect-ratio:4/3;align-self:start}
+@media (min-width:1100px){.shop__ph{min-height:0;margin:clamp(60px,8vw,120px) var(--pad) 0 0}}
+[dir=rtl] .shop__ph{margin-inline:0 var(--pad)}
+@media (min-width:1100px){[dir=rtl] .shop__ph{margin:clamp(60px,8vw,120px) 0 0 var(--pad)}}
+@media (max-width:1099px){[dir=rtl] .shop__ph{margin:0}}
+.shop__ph figcaption{color:#fff}
+/* one shared grade for every project photo */
+.k-gal__item img,.strip img,.duo img,.intro__ph img,.shop__ph img{filter:contrast(1.06) saturate(.88) brightness(1.02) sepia(.06)}
+@media (min-width:1100px){.shop{grid-template-columns:1fr 1fr}}
