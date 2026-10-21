@@ -618,3 +618,12 @@ html:lang(ar) .k-split.hero .k-split__type h1{font-size:clamp(3.6rem,15vw,8rem)}
 }
 .hero__call{border-bottom:0;padding-bottom:4px}
 @media (max-width:899px){.hide-sm,.only-lg{display:none}}@media (min-width:900px){.only-sm{display:none}}
+/* round 4: visible labels on illustrative photos; step 03 foot scanner fills the frame */
+.illus{position:absolute;inset-inline-start:10px;bottom:10px;z-index:2;background:rgba(11,34,48,.78);color:#fff;font-size:.74rem;line-height:1.2;padding:4px 8px;border-radius:2px;pointer-events:none}
+.k-story__inline{position:relative}
+.acc__fig{position:relative;max-width:420px}
+.acc__fig img{width:100%}
+@media (min-width:900px){.acc__fig{display:none}}
+.k-story__media figure img,.k-story__inline.is-scan img{object-fit:cover;object-position:50% 70%}
+@media (min-width:900px){.hero__note{align-self:start;margin-top:48px}}
+.map__poster small .only-lg{font-size:.74rem;color:rgba(255,255,255,.42);letter-spacing:.01em}
