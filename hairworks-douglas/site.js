@@ -38,7 +38,7 @@
   });
   document.querySelectorAll('[data-k-map]').forEach(function(m){
     var btn=m.querySelector('button');
-    function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title='Map: Hairworks, 4 Douglas West, Douglas, Cork';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');var c=m.querySelector('.map-cta');if(c)c.remove()};m.appendChild(f)}
+    function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title='Map: Hairworks, 4 Douglas West, Douglas, Cork';f.loading='eager';setTimeout(function(){f.classList.add('is-on')},2500);f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');var c=m.querySelector('.map-cta');if(c)c.remove()};m.appendChild(f)}
     if(btn)btn.addEventListener("click",load);
     if(matchMedia("(min-width:900px)").matches)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();load()}},{rootMargin:"300px"}).observe(m);
   });
