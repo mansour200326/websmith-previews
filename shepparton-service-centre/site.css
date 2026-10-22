@@ -215,7 +215,7 @@ a{color:inherit}
 .k-visit__badge{margin-bottom:22px}
 
 /* ---------- page intro (inner pages) ---------- */
-.pin{padding:clamp(40px,6vw,90px) 0 clamp(30px,4vw,60px);border-bottom:1px solid var(--k-line)}
+.pin{padding-top:clamp(40px,6vw,90px);padding-bottom:clamp(30px,4vw,60px);border-bottom:1px solid var(--k-line)}
 .pin h1{font:900 clamp(3.6rem,12vw,12rem)/.84 var(--k-display);text-transform:uppercase}
 .pin h1 .lm{display:block;overflow:hidden;padding-bottom:.03em}
 .pin__row{display:grid;gap:22px;margin-top:28px}
@@ -286,3 +286,9 @@ a{color:inherit}
 .years__fig--wide{grid-column:1/-1;margin-top:0}
 .years__fig--wide img{aspect-ratio:21/8}
 @media (max-width:700px){.years__fig--wide img{aspect-ratio:2/1}}
+.ft .ft__name{font:900 clamp(3rem,10.5vw,10.5rem)/.84 var(--k-display)}
+.k-visit__side{grid-template-rows:1fr auto}
+.k-visit__shop,.k-visit__shop .ph{height:100%}
+.k-visit__shop img{height:100%;min-height:320px}
+.k-visit__map{min-height:260px!important}
+@media (max-width:899px){.k-visit__map{min-height:200px!important}}
