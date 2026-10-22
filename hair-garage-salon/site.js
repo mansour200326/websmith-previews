@@ -54,7 +54,7 @@
     var img=fig.querySelector('img');if(!img)return;
     function rgb(h){h=h.replace('#','');var v=parseInt(h,16);return[v>>16&255,v>>8&255,v&255]}
     function render(){var W=fig.clientWidth,Hh=fig.clientHeight;if(!W||!Hh||!img.naturalWidth)return;
-      var cell=+fig.getAttribute('data-k-fx-cell')||7;cell=Math.min(cell,Math.max(4,W/110));
+      var cell=+fig.getAttribute('data-k-fx-cell')||7;cell=Math.max(5,Math.min(cell,W/110));
       var k=+fig.getAttribute('data-k-fx-contrast')||1.25,ink=fig.getAttribute('data-k-fx-ink')||'#141a2e',paper=fig.getAttribute('data-k-fx-paper')||'#ffffff';
       var cols=Math.ceil(W/cell),rows=Math.ceil(Hh/cell),s=document.createElement('canvas');s.width=cols;s.height=rows;
       var sx=s.getContext('2d',{willReadFrequently:true});var sc=Math.max(cols/img.naturalWidth,rows/img.naturalHeight),dw=img.naturalWidth*sc,dh=img.naturalHeight*sc;sx.drawImage(img,(cols-dw)/2,(rows-dh)/2,dw,dh);

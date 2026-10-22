@@ -318,3 +318,14 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .pole::before{left:0;margin-left:-1px}
   .tag{font-size:clamp(1.9rem,8.6vw,2.6rem)}
 }
+/* Fannan (independent) fixes */
+.shop__ph img,.svc__ph img{filter:grayscale(1) sepia(.32) contrast(1.06) brightness(1.02)}
+.shop__ph{max-width:340px}
+.svc__ph{margin-top:30px;max-width:420px}
+.inc-p{margin-top:12px;color:var(--mute);font-size:1.02rem;max-width:40em}
+figcaption{text-wrap:balance}
+.front__facts dd{margin:0}
+@media (max-width:700px){.k-fx>canvas{display:none}.k-fx-tap{display:none!important}.k-fx{cursor:default}}
+@media (max-width:860px){.pole::before{width:20px;height:20px;left:1px;margin-left:0;top:-24px}}
+.nw{white-space:nowrap}
+.fact-tel{font-weight:700;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding-block:10px;margin-block:-10px}
