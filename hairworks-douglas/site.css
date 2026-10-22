@@ -285,3 +285,32 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .tue .tue__big sup.eu{font:300 .26em/1 var(--body);vertical-align:2.3em;margin-right:.14em;opacity:.9}
 @media (min-width:900px){.today__line{max-width:none}.today__line strong{font-size:clamp(1.4rem,1.85vw,1.8rem);white-space:nowrap}}
 @media (max-width:899px){.k-visit__map{min-height:260px}}
+/* independent Fannan round fixes */
+.ring__num{font-weight:500;font-variation-settings:"opsz" 36}
+.ring__hrs span{white-space:nowrap}
+.kw{margin-right:-.07em}
+.lede a{display:inline-block;padding:10px 0}
+.svc__main{min-width:0}
+.svc__main .svc__ph{margin-top:clamp(28px,3vw,44px);aspect-ratio:3/2}
+.svc__main .svc__ph--short{aspect-ratio:2/1}
+.svc__main .svc__ph--short img{object-position:50% 30%}
+.svc.svc--wide{display:block}
+.svc__head{display:grid;gap:20px;align-items:end;margin-bottom:clamp(36px,5vw,72px)}
+.svc__head .svc__txt{margin-top:0}
+.from{list-style:none;display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+.from li{display:flex;flex-direction:column;gap:10px;padding:clamp(22px,3vw,36px) 0;border-bottom:1px solid var(--line)}
+.from__p{font:400 clamp(4rem,9vw,8.4rem)/.9 var(--display);letter-spacing:-.04em;font-variant-numeric:lining-nums;font-variation-settings:"opsz" 72}
+.from__p small{font:italic 400 .22em var(--display);letter-spacing:0;margin-right:.3em;color:var(--rose-ink);vertical-align:.25em}
+.from__p .eu{font-size:.42em;vertical-align:.7em}
+.from__n{font-size:1.15rem;font-weight:500}
+@media (min-width:900px){
+  .svc__head{grid-template-columns:1.2fr 1fr;column-gap:64px}
+  .from{grid-template-columns:repeat(3,1fr);border-bottom:0}
+  .from li{border-bottom:0;padding-right:24px}
+  .from li+li{border-left:1px solid var(--line);padding-left:clamp(20px,2.4vw,36px)}
+  .hero__top{grid-template-columns:minmax(0,1fr) 400px minmax(0,1fr);align-items:start}
+  .hero__photo{max-height:none;aspect-ratio:4/5}
+  .today{align-self:end}
+}
+@media (min-width:900px){.hero__photo{aspect-ratio:5/4}.mark{margin-top:clamp(28px,4vw,56px)}}
+.ring__num{font-weight:500;font-variation-settings:"opsz" 11;letter-spacing:-.03em}
