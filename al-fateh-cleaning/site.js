@@ -180,3 +180,5 @@
     else if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)on(e.target)})},{rootMargin:'-48% 0px -48% 0px'});rows.forEach(function(li){io.observe(li)})}
   });
 })();
+/* round 3: the map loads itself when it scrolls into view, on phones too */
+(function(){if(!('IntersectionObserver' in window))return;document.querySelectorAll('[data-k-map]').forEach(function(m){var b=m.querySelector('button');if(!b)return;new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();b.click()}},{rootMargin:'150px'}).observe(m)})})();
