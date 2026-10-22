@@ -96,7 +96,7 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 }
 
 /* ---------- header ---------- */
-.hd{position:sticky;top:0;z-index:40;background:rgba(255,252,250,.96);border-bottom:1px solid transparent;transition:border-color .4s}
+.hd{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid transparent;transition:border-color .4s}
 .hd.is-scrolled{border-color:var(--line)}
 .hd__in{display:flex;align-items:center;gap:clamp(12px,2.4vw,36px);height:72px;padding:0 var(--pad)}
 .mark{font:400 1.7rem/1 var(--disp);text-decoration:none;letter-spacing:-.01em;display:inline-flex;align-items:baseline;gap:.4em;min-height:44px;align-items:center}
