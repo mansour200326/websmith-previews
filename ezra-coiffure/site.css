@@ -857,3 +857,10 @@ a{color:inherit}
 .book--dark .book__tels h3{color:var(--k-mute)}
 .sec-h,.pub__h h2,.k-acc h2,.k-gal__head h2,.k-visit h2,.book h2,.say__q,.hero__lede,.pi__lede{text-wrap:balance}
 .tri__tag{background:rgba(15,13,14,.82);padding:8px 10px;top:calc(50% - 34px);text-shadow:none}
+
+/* independent review polish */
+.hero__mark .w{padding:0 .04em .36em;margin:0 -.04em -.36em}
+.k-visit__map{background-image:url(img/s4965.webp)}
+.k-visit__map::before{background:rgba(15,13,14,.65)}
+.say__facts{margin-top:22px;color:var(--k-mute);max-width:34em;font-size:1.05rem}
+.k-gal__more{margin-top:clamp(24px,3vw,40px)}
