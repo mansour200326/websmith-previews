@@ -89,11 +89,11 @@ ul{list-style:none}
 .k-js .hero__photo{clip-path:inset(0 0 100% 0);animation:hp-clip 1.4s var(--ease) .25s forwards}
 .k-js .hero__photo img{animation:hp-kb 16s cubic-bezier(.25,.1,.25,1) .25s both}
 @keyframes hp-clip{to{clip-path:inset(0 0 0 0)}}
-@keyframes hp-kb{from{transform:scale(1.07)}to{transform:scale(1)}}
+@keyframes hp-kb{from{transform:scale(1.03)}to{transform:scale(1)}}
 .hero__cap{color:var(--mute);order:2}
 @media (min-width:900px){
   .hero__row{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:end}
-  .hero__fig{grid-template-columns:minmax(0,1fr) minmax(0,1120px);align-items:end;gap:28px}
+  .hero__fig{grid-template-columns:minmax(0,1fr) minmax(0,940px);align-items:end;gap:28px}
   .hero__cap{order:0;max-width:12em;padding-bottom:4px;border-top:2px solid var(--red);padding-top:10px}
   .hero__fig .hero__photo{order:1}
 }
@@ -143,7 +143,7 @@ ul{list-style:none}
 /* ---------- red band ---------- */
 .redband{background:var(--red);color:#fff;padding-block:clamp(64px,8vw,120px)}
 .redband__grid{display:grid;gap:40px}
-.redband h2{font:800 clamp(2.2rem,5.4vw,5rem)/.98 var(--display);font-stretch:114%;letter-spacing:-.03em}
+.redband h2{font:800 clamp(2rem,4.4vw,4.2rem)/1 var(--display);font-stretch:114%;letter-spacing:-.03em}
 .redband__items{display:grid;gap:0}
 .redband__items div{padding:20px 0;border-top:1px solid rgba(255,255,255,.45)}
 .redband__items div:last-child{border-bottom:1px solid rgba(255,255,255,.45)}
@@ -198,7 +198,7 @@ ul{list-style:none}
 .phead__row{display:grid;gap:22px;margin-top:clamp(22px,3vw,40px)}
 .phead__row p{color:var(--mute);max-width:36em;font-size:clamp(1.05rem,1.4vw,1.2rem)}
 @media (min-width:900px){.phead__row{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:end}}
-.wide{position:relative;overflow:hidden;background:#cfd0d2;aspect-ratio:940/257;max-width:1120px;margin-inline-start:auto;margin-inline-end:var(--pad)}
+.wide{position:relative;overflow:hidden;background:#cfd0d2;aspect-ratio:940/257;max-width:940px;margin-inline-start:auto;margin-inline-end:var(--pad)}
 @media (min-width:1500px){.wide{margin-inline-end:calc((100vw - 1520px)/2 + var(--pad))}}
 .wide img{width:100%;height:100%;object-fit:cover}
 @media (max-width:899px){.wide{aspect-ratio:2/1;margin-inline-end:0}.wide img{object-position:62% 50%}}
@@ -236,7 +236,7 @@ ul{list-style:none}
 .tl__k{font:800 clamp(1.6rem,3vw,2.6rem)/1 var(--display);font-stretch:114%;letter-spacing:-.02em}
 .tl__k small{display:block;font:500 .8rem/1.5 var(--mono);color:var(--mute);letter-spacing:.02em;margin-top:10px;font-stretch:100%}
 .tl__item p{font-size:clamp(1.06rem,1.4vw,1.24rem);max-width:34em}
-.about__photo{overflow:hidden;background:#d8d8d8;max-width:440px}
+.about__photo{overflow:hidden;background:#d8d8d8;max-width:320px}
 .about__photo img{width:100%;aspect-ratio:636/252;object-fit:cover}
 .about__shop img{aspect-ratio:3/2}
 
@@ -263,3 +263,28 @@ ul{list-style:none}
   html{scroll-behavior:auto}
   .k-js .hero__photo,.k-js .hero__photo img{animation:none;clip-path:none;transform:none}
 }
+
+/* r3 */
+.redband__p{font-size:clamp(1.06rem,1.4vw,1.25rem);max-width:30em}
+@media (min-width:900px){.redband__grid{grid-template-columns:1.5fr 1fr;align-items:end}}
+.track2{display:grid;gap:18px}
+@media (min-width:700px){.track2{grid-template-columns:1.25fr 1fr;align-items:end}}
+.track2 figure{display:grid;gap:8px}
+.track2__img{background:#cfd0d2}
+.track2__img img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.track2 figcaption{color:var(--mute)}
+.track2__ask{margin-top:26px}
+.svc__big{font:700 clamp(1.9rem,4.4vw,4.2rem)/1.05 var(--display);font-stretch:110%;letter-spacing:-.025em;max-width:18em;margin-top:18px}
+.svc__fig{max-width:600px;margin-top:10px}
+.svc--short{padding-block:clamp(44px,5vw,70px)}
+.track-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 28px}
+.track-line h2{font:700 clamp(1.5rem,3vw,2.4rem)/1.15 var(--display);font-stretch:108%;letter-spacing:-.015em}
+.phead__row--start{align-items:start}
+@media (max-width:899px){
+  .hero__row{gap:16px;padding-block:20px 22px}
+  .hero__side{gap:14px}
+  .hero__acts{flex-wrap:nowrap;gap:14px}
+  .hero__acts .btn{padding:0 16px;min-height:52px;white-space:nowrap}
+  .hero__acts .tlink{white-space:nowrap}
+}
+@media (max-width:374px){.hero__acts{flex-wrap:wrap}}
