@@ -33,7 +33,7 @@ html:lang(ar) .brand__t{font-size:1.3rem}
 .nav a{text-decoration:none;font-weight:500;font-size:.98rem;padding-block:12px;position:relative}
 .nav a[aria-current=page]{color:var(--blue)}
 .nav a[aria-current=page]::after{content:"";position:absolute;inset-inline:0;bottom:4px;height:2px;background:var(--blue)}
-.hd__tel{font:600 .98rem/1 var(--mono);text-decoration:none;color:var(--blue);display:inline-flex;align-items:center;min-height:44px}
+.hd__tel{white-space:nowrap;font:600 .98rem/1 var(--mono);text-decoration:none;color:var(--blue);display:inline-flex;align-items:center;min-height:44px}
 .lang{font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--line-2);padding:0 12px;min-height:44px;display:inline-flex;align-items:center}
 .lang:hover{border-color:var(--ink)}
 .lang[lang=ar]{font-family:"IBM Plex Sans Arabic",sans-serif}
@@ -168,7 +168,7 @@ html:lang(ar) .volt h2{line-height:1.35}
 .pj h3{transition:color .3s}
 @media (max-width:800px){
   .proj{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--pad));padding:0 var(--pad) 18px;scroll-padding-inline:var(--pad);-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-  .pj:nth-child(n){flex:0 0 80%;margin-top:0;scroll-snap-align:start}
+  .pj:nth-child(n){flex:0 0 80%;margin-top:0;scroll-snap-align:start;align-self:start}
   .pj:nth-child(1) .pj__ph{aspect-ratio:4/3}
 }
 @media (prefers-reduced-motion:reduce){.pj__ph img{transition:none}.pj:hover .pj__ph img{transform:none}}
@@ -309,3 +309,5 @@ html:lang(ar) .tbl th{font-family:var(--body);font-size:.92rem}
 .intro__spec li{color:var(--ink)}
 /* Arabic: no monospace on Arabic text (breaks the letter joins) */
 html:lang(ar) .mono,html:lang(ar) .dept__n,html:lang(ar) .k-acc__n,html:lang(ar) .pj figcaption .n,html:lang(ar) .svc__idx a span,html:lang(ar) .hd__tel,html:lang(ar) .k-seq__cap,html:lang(ar) figcaption.cap,html:lang(ar) .spec li span:first-child,html:lang(ar) .contact dt,html:lang(ar) .ft .ft__h,html:lang(ar) .tbl th{font-family:var(--body);letter-spacing:0}
+
+@media (max-width:380px){.hd__in{gap:10px}.hd__tel{font-size:.8rem}.lang{padding:0 9px}}
