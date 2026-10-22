@@ -18,10 +18,11 @@
 <header class="hd">
   <div class="hd__in">
     <a class="hd__brand" href="index.html"><img src="img/badge-sm.webp" alt="" width="48" height="48"><span>Brilliant Mechanical Workshop<b>Claremont, Cape Town</b></span></a>
-    <nav class="hd__nav" aria-label="Main"><a href="index.html" aria-current="page">Workshop</a><a href="services.html">Services</a><a href="about.html">About</a><a href="index.html#book"><span class="nl">Book a service</span><span class="ns">Book</span></a><a href="index.html#visit">Find us</a></nav>
+    <nav class="hd__nav" aria-label="Main"><a href="index.html" aria-current="page">Workshop</a><a href="services.html">Services</a><a href="about.html">About</a><a href="#book"><span class="nl">Book a service</span><span class="ns">Book</span></a><a href="index.html#visit">Find us</a></nav>
     <a class="hd__tel" href="tel:+27216712274" aria-label="Call 021 671 2274"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="full k-roll"><span data-text="021 671 2274">021 671 2274</span></span><span class="short">Call</span></a>
   </div>
 </header>
+<nav class="subnav" aria-label="Main"><a href="index.html" aria-current="page">Workshop</a><a href="services.html">Services</a><a href="about.html">About</a><a href="#book"><span class="nl">Book a service</span><span class="ns">Book</span></a><a href="index.html#visit">Find us</a></nav>
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-h">
@@ -65,6 +66,12 @@
     </div>
   </div>
 </section>
+
+<!-- Photo: from the workshop's Google Maps listing (115 Garfield Rd, contributed Oct 2022). Number plate blurred. 4x upscaled. -->
+<figure class="band">
+  <div class="band__img" data-reveal="clip"><img src="img/workshop-band.webp" width="2400" height="1350" alt="A blue-grey BMW 650i convertible with its door and bonnet open inside the workshop, blue lifts and parts shelves behind it" loading="lazy" data-speed="0.08"></div>
+  <figcaption><span><b>Inside the workshop</b> &middot; 115 Garfield Road, Claremont</span><span>Photo from the Google Maps listing, October 2022</span></figcaption>
+</figure>
 
 <section class="svc" aria-labelledby="svc-h">
   <div class="k-acc" data-k-acc>
@@ -113,9 +120,10 @@
       <p data-reveal>We specialise in all BMW and Mini models, and cater for most other makes. Pick yours to start a service request.</p>
     </div>
     <div class="makes__spec" data-reveal-stagger="120">
-      <a class="make make--big" href="#book" data-make="BMW" data-reveal><b>BMW</b><small>All models &middot; our speciality</small></a>
-      <a class="make make--big" href="#book" data-make="Mini" data-reveal><b>Mini</b><small>All models &middot; our speciality</small></a>
+      <a class="make make--big make--bmw" href="#book" data-make="BMW" data-reveal><b>BMW</b><small>All models &middot; our speciality</small></a>
+      <a class="make make--big make--mini" href="#book" data-make="Mini" data-reveal><b>Mini</b><small>All models &middot; our speciality</small></a>
     </div>
+    <p class="makes__div" data-reveal>Other makes we service</p>
     <div class="makes__all" data-reveal-stagger="40">
       <a class="make" href="#book" data-make="Volkswagen" data-reveal><b>Volkswagen</b><span class="k-arrow" aria-hidden="true">&rarr;</span></a>
       <a class="make" href="#book" data-make="Toyota" data-reveal><b>Toyota</b><span class="k-arrow" aria-hidden="true">&rarr;</span></a>
@@ -224,8 +232,33 @@
       <p class="coffee">Come along and visit us, you are always welcome, and there is free coffee.</p>
     </div>
     <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=115+Garfield+Road,+Claremont,+Cape+Town+7708&amp;z=16&amp;output=embed">
-      <div class="pin" aria-hidden="true"><img src="img/gear.svg" alt="" width="460" height="460" loading="lazy"></div>
-      <button type="button">Show the map</button>
+      <svg class="route-svg" data-route viewBox="0 0 600 520" role="img" aria-labelledby="route-t">
+        <title id="route-t">Route sketch, not to scale: from the M5 Kenilworth off ramp, past Access Park to the Engen lights opposite Kenilworth Centre, right into Garfield Road, right into Warrington Road, left into the Garfield Road service road, workshop about 80 metres up on the right.</title>
+        <path class="rd m5" d="M540 10V510"/>
+        <text x="540" y="505" text-anchor="middle" style="fill:#0b0b0c;font-weight:600">M5</text>
+        <path class="rd" d="M540 250C540 330 520 380 470 400H40"/>
+        <path class="rd" d="M200 400V300"/>
+        <path class="rd" d="M200 300H262"/>
+        <path class="rd" d="M262 300V60"/>
+        <rect class="blk" x="350" y="420" width="110" height="60"/><text class="lbl" x="405" y="455" text-anchor="middle">Access Park</text>
+        <rect class="blk" x="120" y="428" width="170" height="70"/><text class="lbl" x="205" y="467" text-anchor="middle">Kenilworth Centre</text>
+        <rect class="blk" x="104" y="340" width="76" height="40"/><text class="lbl" x="142" y="364" text-anchor="middle">Engen</text>
+        <circle cx="200" cy="400" r="6" fill="#3ccf73"/>
+        <text x="190" y="290" text-anchor="end">Garfield Rd</text>
+        <text x="280" y="304">Warrington Rd</text>
+        <text x="250" y="80" text-anchor="end">service road</text>
+        <path class="path" pathLength="1200" d="M540 250C540 330 520 380 470 400H200V300H262V150"/>
+        <path class="pinmark" d="M300 112c-11 0-20 9-20 20 0 15 20 34 20 34s20-19 20-34c0-11-9-20-20-20z"/>
+        <circle cx="300" cy="132" r="7" fill="#fff"/>
+        <text class="lbl" x="330" y="128" style="font-size:14px;fill:#f3f2ee">115 Garfield Rd</text>
+        <text x="330" y="148">~80 m up, on the right</text>
+        <g class="n"><circle cx="560" cy="300" r="13"/><text x="560" y="300">1</text></g>
+        <g class="n"><circle cx="405" cy="378" r="13"/><text x="405" y="378">2</text></g>
+        <g class="n"><circle cx="222" cy="378" r="13"/><text x="222" y="378">3</text></g>
+        <g class="n"><circle cx="231" cy="330" r="13"/><text x="231" y="330">4</text></g>
+        <g class="n"><circle cx="240" cy="190" r="13"/><text x="240" y="190">5</text></g>
+      </svg>
+      <div class="mapbar"><span>Sketch, not to scale. Numbers match the steps.</span><button type="button">Show the Google map</button></div>
     </div>
   </div>
 </section>
