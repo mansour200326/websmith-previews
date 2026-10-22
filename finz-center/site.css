@@ -332,3 +332,10 @@ a{color:inherit}
 [dir=rtl].k-js .flag__stripe{clip-path:polygon(50% 0,36% 0,36% 0,50% 0)}
 @media (max-width:899px){[dir=rtl] .flag__stripe,[dir=rtl].k-js .flag.is-in .flag__stripe{clip-path:polygon(60% 0,38% 0,0 13%,0 22%)}[dir=rtl].k-js .flag__stripe{clip-path:polygon(60% 0,38% 0,38% 0,60% 0)}}
 @media (prefers-reduced-motion:reduce){[dir=rtl].k-js .flag__stripe{clip-path:polygon(50% 0,36% 0,0 50%,0 74%)}}
+[lang=ar] [lang=en]{font-family:"Archivo",system-ui,sans-serif}
+[lang=ar] .hero h1 [lang=en]{display:block;text-align:right;letter-spacing:-.055em}
+[lang=ar] .label,[lang=ar] .ladder__d,[lang=ar] .visit__dl dt,[lang=ar] .ft h3,[lang=ar] .trips__photo figcaption,[lang=ar] .flag__meta,[lang=ar] .jump,[lang=ar] .cacc summary h3 small,[lang=ar] .deep .k-drag__meta span,[lang=ar] .sites__list span,[lang=ar] .prod p{font-family:"Readex Pro",var(--mono)}
+[dir=rtl] .gauge{inset-inline-end:auto;right:18px}
+[dir=rtl] .gauge__scale,[dir=rtl] .gauge__scale::before,[dir=rtl] .gauge__pin{inset-inline-end:auto;right:0}
+[dir=rtl] .gauge__val{inset-inline-end:auto;right:28px}
+[lang=ar] .hero__hud span{font-family:"Readex Pro",sans-serif}

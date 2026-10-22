@@ -227,7 +227,7 @@ ul,ol{margin:0;padding:0}
 .ft__motto{margin-top:14px;font-style:italic;color:#bdbdc2}
 .ft h3{font:600 .95rem var(--body);color:#fff;margin-bottom:10px}
 .ft ul{list-style:none}
-.ft li a{display:inline-block;padding-block:7px;text-decoration:none}
+.ft li a,.ft address a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;text-decoration:none}
 .ft li a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
 .ft address{font-style:normal;line-height:1.7}
 .ft__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:32px}
@@ -330,3 +330,5 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 [lang=ar] .k-acc__t small{font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:400}
 
 .nw{white-space:nowrap}
+@media (max-width:900px){.k-js .stage[data-reveal]{opacity:1;transform:none}}
+.k-rv-w{white-space:nowrap}

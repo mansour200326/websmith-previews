@@ -299,3 +299,21 @@ h1,h2,h3{font-family:var(--k-display);color:var(--navy);letter-spacing:-.025em;l
 /* FAQ (kit 21 restyled) */
 .k-faq__head h2{color:var(--navy)}
 .k-faq__q summary{color:var(--navy)}
+@media (max-width:899px){.ft li a,.ft p a,.visit dd a{padding-block:11px;min-height:44px}.visit dd{line-height:1.2}}
+/* round 2 */
+.hd__call{display:flex;align-items:center;justify-content:center;width:56px;background:#fff;color:var(--navy);border-inline-start:1px solid var(--line)}
+.hd__call:hover{background:var(--mist)}
+@media (min-width:1000px){.hd__call{display:none}}
+@media (max-width:520px){.hd__lang,.brand small{display:none}.hd__call{width:50px}.menu-btn{width:52px}.hd__block{padding-inline:12px;font-size:.88rem}}
+.num__v,.bells b,.day__big{font-variant-numeric:normal}
+@media (max-width:600px){
+  .hero{padding-top:22px}
+  .hero h1{font-size:15vw}
+  .hero__type{gap:14px}
+  .hero__lede{padding-bottom:24px;gap:10px}
+  .hero__lede p{font-size:1rem;line-height:1.5}
+  .hero__lede .ar-name{display:none}
+  .hero__ph{height:300px;min-height:0}
+  .notice{margin-top:-40px;padding:20px 20px 16px}
+  .notice p{margin-bottom:8px;font-size:.95rem}
+}

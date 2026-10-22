@@ -17,3 +17,7 @@
     }
   }catch(e){}
 })();
+
+/* slogan reveal */
+(function(){var s=document.querySelector('.slog');if(!s)return;if(!('IntersectionObserver' in window)){s.classList.add('is-in');return}
+new IntersectionObserver(function(e,o){if(e[0].isIntersecting){s.classList.add('is-in');o.disconnect()}},{rootMargin:'0px 0px -10% 0px'}).observe(s)})();
