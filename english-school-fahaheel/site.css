@@ -422,3 +422,10 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .hero--stages .hero__acts{order:1;padding:0}
 }
 @media (max-width:900px){.stages__row{scroll-padding-inline:var(--pad)}}
+
+/* ===== round 5 ===== */
+html,body{overflow-x:clip}
+[data-reveal=clip]{overflow:hidden}
+.pair figcaption.big{font:400 clamp(1.6rem,3.4vw,2.8rem)/1.05 var(--display);color:var(--ink);margin-top:12px}
+.pair figcaption.big small{display:block;font:400 .88rem/1.4 var(--body);color:var(--mute);margin-top:6px}
+@media (max-width:640px){.intro__fig img{aspect-ratio:4/3;object-position:50% 35%}}
