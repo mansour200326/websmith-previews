@@ -51,13 +51,15 @@
     var g=function(t){return(p.find(function(x){return x.type===t})||{}).value};
     var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday'));var now=(+g('hour')%24)+(+g('minute'))/60;
     var today=H[day],open=today&&now>=today[0]&&now<today[1],txt;
+    var unk=(day===0)||(day===6&&now>=12);
     if(open)txt='Open now, until '+fmt(today[1]);
+    else if(unk)txt=day===6?'Closed now. Sunday hours aren\'t listed, so call to check':'Sunday hours aren\'t listed. Call to check';
     else{
       var d=day,first=true,nx=null;
       for(var i=0;i<8;i++){var hh=H[d];if(hh&&!(first&&now>=hh[0])){nx=[d,hh];break}d=(d+1)%7;first=false}
       txt='Closed now. Opens '+(nx[0]===day?'today':(nx[0]===(day+1)%7?'tomorrow':NAMES[nx[0]]))+' at '+fmt(nx[1][0]);
     }
-    document.querySelectorAll('[data-status]').forEach(function(s){s.classList.add(open?'is-open':'is-closed');var t=s.querySelector('[data-status-text]');if(t)t.textContent=txt+' (Canandaigua time)'});
+    document.querySelectorAll('[data-status]').forEach(function(s){s.classList.add(open?'is-open':(unk?'is-unk':'is-closed'));var t=s.querySelector('[data-status-text]');if(t)t.textContent=txt+' (Canandaigua time)'});
     document.querySelectorAll('.hours tr[data-day]').forEach(function(r){if(+r.getAttribute('data-day')===day)r.classList.add('is-today')});
   }catch(e){}
 
