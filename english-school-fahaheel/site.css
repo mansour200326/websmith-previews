@@ -68,7 +68,7 @@ ul,ol{margin:0;padding:0}
 .more{font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:.45em;min-height:44px}
 
 /* ---------- hero ---------- */
-.hero{padding-top:clamp(28px,5vw,64px)}
+.hero{padding-top:clamp(24px,2.6vw,40px)}
 .hero__top{display:grid;grid-template-columns:1fr;gap:28px;align-items:end;padding-bottom:clamp(28px,4vw,52px)}
 .hero__name{font:400 clamp(3.1rem,9.4vw,9.6rem)/.9 var(--display);letter-spacing:-.025em}
 .hero__name .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
@@ -78,8 +78,8 @@ ul,ol{margin:0;padding:0}
 .hero__lead{font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.55;margin-bottom:18px}
 .hero__ar{font:500 1.35rem/1.6 "Noto Naskh Arabic",serif;color:var(--mute);margin-bottom:22px;direction:rtl;text-align:start}
 .hero__acts{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
-.hero__photo{margin:0;position:relative;overflow:hidden;height:clamp(300px,34vw,520px)}
-.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:68% 42%}
+.hero__photo{margin:0;position:relative;overflow:hidden;height:clamp(340px,40vw,620px)}
+.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 74%}
 .hero__photo figcaption{position:absolute;inset-inline-end:var(--pad);bottom:14px;color:#fff;font-size:.82rem;text-shadow:0 1px 6px rgba(0,0,0,.55)}
 @media (min-width:1000px){.hero__top{grid-template-columns:1fr minmax(300px,27rem)}}
 @media (max-width:640px){.hero__photo{height:62vw;min-height:250px}.hero__name .ln--2{padding-inline-start:0}}
@@ -334,3 +334,21 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .k-rv-w{white-space:nowrap}
 .regi .regi__qr .k-link{color:var(--red-deep)}
 @media (max-width:640px){.hero__photo{overflow:visible;height:auto;min-height:0}.hero__photo picture{display:block;height:62vw;min-height:250px;overflow:hidden}.hero__photo figcaption{position:static;color:var(--mute);text-shadow:none;padding:8px var(--pad) 0}}
+
+/* round 1: phone hero = name, photo, then lead + CTA, all inside the first screen */
+@media (max-width:640px){
+  .hero{display:flex;flex-direction:column;padding-top:20px}
+  .hero__top{display:contents}
+  .hero__name{order:1;padding-inline:var(--pad);font-size:clamp(3.1rem,14vw,4.6rem);margin-bottom:18px}
+  .hero__photo{order:2}
+  .hero__photo picture{height:52vw;min-height:0}
+  .hero__aside{order:3;padding:18px var(--pad) 8px}
+  .hero__lead{font-size:1rem;margin-bottom:16px}
+  .hero__ar{display:none}
+  [lang=ar] .hero__name{font-size:clamp(2.7rem,12.5vw,4rem)}
+}
+.intro__fig{margin:clamp(24px,3vw,40px) 0 0}
+.intro__fig img{width:100%;object-fit:cover}
+.intro__fig figcaption{font-size:.88rem;color:var(--mute);margin-top:8px}
+@media (max-width:1080px){.subnav{-webkit-mask:linear-gradient(90deg,#000 82%,transparent);mask:linear-gradient(90deg,#000 82%,transparent)}
+ [dir=rtl] .subnav{-webkit-mask:linear-gradient(270deg,#000 82%,transparent);mask:linear-gradient(270deg,#000 82%,transparent)}}
