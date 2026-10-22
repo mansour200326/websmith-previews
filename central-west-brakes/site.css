@@ -90,8 +90,7 @@ a{color:inherit}
 /* ---------- intro (owner's words) ---------- */
 .intro{padding-block:clamp(70px,10vw,150px) clamp(30px,4vw,60px)}
 .intro__grid{display:grid;gap:34px}
-.intro__big{font:600 clamp(1.7rem,3.4vw,3rem)/1.12 var(--k-body);letter-spacing:-.02em;max-width:20em}
-.intro__big mark{background:none;color:var(--k-accent)}
+.intro__big{font:600 clamp(2rem,4.4vw,4rem)/1.04 var(--k-body);letter-spacing:-.025em;max-width:22ch;text-wrap:balance}
 .intro__side{display:grid;gap:16px;color:var(--k-mute);max-width:30em;align-self:end}
 .intro__side p:first-child{color:var(--k-ink)}
 @media (min-width:980px){.intro__grid{grid-template-columns:1.55fr 1fr;gap:80px}}
@@ -175,7 +174,7 @@ a{color:inherit}
 .k-visit{background:var(--k-bg)}
 .k-visit h2{font-weight:900;text-transform:uppercase;font-size:clamp(3rem,7vw,6rem);line-height:.86}
 .k-visit__addr{font-weight:600}
-.k-visit__map{background:linear-gradient(rgba(20,20,20,.35),rgba(20,20,20,.35)),url(img/shopfront.webp) 50% 70%/cover #333;min-height:420px}
+.k-visit__map{background:#262625;min-height:420px}
 .k-visit__map button{min-height:44px}
 .k-visit__acts a{min-height:48px}
 .k-visit__go{background:var(--k-accent);color:#fff}
@@ -266,3 +265,19 @@ a{color:inherit}
 .pgphoto figcaption{position:absolute;left:var(--pad);bottom:14px;font-family:var(--mono);font-size:.8rem;background:var(--dark);color:#fff;padding:6px 10px}
 @media (prefers-reduced-motion:reduce){.k-js .pgphoto,.k-js .pgphoto img{animation:none;clip-path:none;transform:none}}
 .rotor-crop{object-position:85% 50%}
+
+/* r3 fixes */
+.hero__facts address{text-wrap:balance}
+.k-stats{padding-bottom:clamp(40px,6vw,80px)}
+.made__photo figcaption{max-width:calc(100% - 2*var(--pad))}
+@media (max-width:699px){.made__photo{aspect-ratio:4/3}.made__photo img{object-position:40% 50%}}
+.brands{background:var(--dark);color:#fff;padding-top:clamp(40px,5vw,64px)}
+.brands__h{font:800 1.3rem/1 var(--k-display);text-transform:uppercase;color:var(--yellow);letter-spacing:.04em;margin-bottom:8px}
+.brands .k-mq-word{font-size:clamp(2.2rem,5vw,4.6rem)}
+.bin--call{background:var(--k-accent);color:#fff;padding:22px!important;display:flex;flex-direction:column;gap:14px;align-items:flex-start;border:0!important}
+.bin--call h3{color:#fff}
+.bin--call p{font-size:1rem}
+.bin--call .k-btn{background:#fff;color:var(--dark);margin-top:auto}
+.bin--call .k-btn::before{background:var(--dark)}.bin--call .k-btn:hover{color:#fff}
+@media (min-width:1000px){.parts__grid{grid-template-columns:repeat(4,1fr)}.parts__grid .bin:first-child{grid-row:span 2}.bin{border-inline-start:1px solid var(--k-line)}.bin:first-child{border-inline-start:0}}
+.grp__photo{background:none}.grp__photo img{background:#ddd}
