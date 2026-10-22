@@ -351,3 +351,46 @@ html:lang(ar) .hero h1 [lang=en]{font-weight:900!important;font-variation-settin
 [lang=ar] .hero__hud b,[lang=ar] .hero__hud .slogan{text-align:right;direction:ltr;unicode-bidi:plaintext}
 @media (min-width:900px){[lang=ar] .hero__hud,[lang=ar] .hero__hud b,[lang=ar] .hero__hud .slogan{text-align:left}}
 .ph__bg img{filter:saturate(1.15) brightness(1.15)}
+/* ---- round 2 (Fannan) ---- */
+.cacc summary{grid-template-columns:2.6em minmax(0,1fr) 28px}
+.cacc__body{grid-template-columns:minmax(0,1fr)}
+.cacc__body>*{min-width:0}
+.cacc__facts{grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));max-width:760px}
+@media (max-width:600px){.cacc__facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.svc>*,.svc__tx>*,.trips>*,.intro>*{min-width:0}
+.cacc summary h3,.svc__tx p{overflow-wrap:anywhere}
+.hd__call{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;color:inherit;text-decoration:none}
+.hd__call svg{width:21px;height:21px}
+@media (min-width:1000px){.hd__call{display:none}}
+@media (max-width:420px){.hd__in{gap:8px}.hd__acts{gap:0}.brand b{font-size:1.12rem}.brand svg{width:30px;height:35px}.hd__lang{padding:0 6px}}
+.sites__list b{hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal}
+@media (max-width:600px){.sites__list b{font-size:clamp(1.45rem,7.2vw,2.1rem)}}
+.sites__list--light{border-top-color:var(--ink)}
+.sites__list--light li{border-bottom-color:var(--line)}
+.sites__list--light .n{color:var(--mute)}
+.sites__list--light span{color:var(--mute)}
+@media (hover:hover){.sites__list--light li:hover b{color:var(--blue)}}
+/* course table: fixed columns, descent indent only on the title */
+@media (min-width:960px){
+  .ladder__row{padding-inline-start:0;grid-template-columns:3em minmax(0,1.3fr) minmax(0,1.2fr) 2em}
+  .ladder__t{padding-inline-start:calc(var(--d,0) * 1.1vw)}
+  .ladder__d{grid-template-columns:5.5em 9em 1fr}
+}
+/* hero name at ~75-80% width */
+.hero h1{font-size:clamp(5rem,30vw,8.4rem)}
+@media (min-width:900px){.hero h1{font-size:clamp(6rem,29.5vw,30rem)}}
+@media (min-width:900px) and (max-height:820px){.hero h1{font-size:clamp(6rem,min(29.5vw,40vh),30rem)}}
+/* services/about header: lighter */
+.ph__bg{opacity:.85}
+.ph__bg::after{background:linear-gradient(180deg,rgba(11,22,48,.15) 0,rgba(11,22,48,.35) 55%,rgba(11,22,48,.92) 100%)}
+/* map poster */
+.visit__map{background:url("img/map-poster.webp") 43.5% 48.6%/cover no-repeat,var(--deep)}
+.visit__dot{position:absolute;left:43.5%;top:48.6%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(255,255,255,.85)}
+.visit__osm{position:absolute;inset:auto 8px 6px auto;font-size:.7rem;color:#fff;background:rgba(11,22,48,.6);padding:2px 6px}
+.visit__osm a{color:#fff}
+/* drag strip: one aspect ratio */
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:min(80vw,460px)}
+.k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/3}
+.visit__map button{position:absolute;bottom:52px;left:50%;translate:-50% 0;z-index:2}
+.visit__pin{z-index:2}
+.log td:last-child{white-space:nowrap}
