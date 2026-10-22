@@ -1,0 +1,239 @@
+/* Cawsey Motors concept · Websmith
+   Type: Unbounded (display) · Albert Sans (body) · Martian Mono (labels)
+   Colour: logo orange #f77b00 (sampled from their logo), ink, white. Orange is used for big fills only;
+   small orange text uses --orange-ink (#9a4800, 6.2:1 on white). */
+:root{
+  --orange:#f77b00;--orange-ink:#9a4800;--ink:#121212;--mute:#555552;--line:#d9d9d4;--paper:#ffffff;--soft:#f2f3f4;
+  --pad:clamp(20px,4.2vw,64px);--max:1440px;
+  --k-bg:var(--paper);--k-ink:var(--ink);--k-mute:var(--mute);--k-line:var(--line);--k-accent:var(--orange);--k-on-accent:var(--ink);
+  --k-display:"Unbounded",system-ui,sans-serif;--k-body:"Albert Sans",system-ui,sans-serif;--mono:"Martian Mono",ui-monospace,monospace;
+  --k-ease:cubic-bezier(.16,1,.3,1);--ease:cubic-bezier(.16,1,.3,1)
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:96px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--k-body);overflow-x:clip}
+img{max-width:100%;display:block}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:12px 16px;z-index:100;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.mono{font-family:var(--mono);font-size:.78rem;line-height:1.5;letter-spacing:0}
+
+/* ---------- header ---------- */
+.hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.hd__in{max-width:var(--max);margin:0 auto;padding:12px var(--pad);display:flex;align-items:center;gap:20px}
+.hd__logo{display:flex;align-items:center;flex:none;min-height:44px}
+.hd__logo img{height:40px;width:auto}
+.hd__nav{display:flex;gap:4px;margin-inline-start:auto}
+.hd__nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;text-decoration:none;font-weight:500;font-size:.98rem;border-radius:2px;position:relative}
+.hd__nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.hd__nav a:hover::after,.hd__nav a[aria-current=page]::after{transform:none}
+.hd__tel{display:inline-flex;align-items:center;min-height:44px;font:600 1rem/1 var(--k-body);text-decoration:none;font-variant-numeric:tabular-nums}
+.hd__call{padding:14px 20px}
+.hd__cs{display:none}
+@media (max-width:899px){
+  .hd__in{flex-wrap:wrap;row-gap:0;padding-block:8px 0}
+  .hd__logo img{height:30px}
+  .hd__tel{display:none}
+  .hd__call{margin-inline-start:auto;padding:12px 16px;font-size:.95rem;min-height:44px}
+  .hd__cl{display:none}.hd__cs{display:inline}
+  .hd__nav{order:3;width:100%;margin:0 0 0 -14px;gap:0}
+  .hd__nav a{font-size:.92rem;padding:0 14px}
+}
+
+/* ---------- buttons (kit 19, restyled: square, orange with ink text) ---------- */
+.k-btn{border-radius:0;font:600 1.02rem/1 var(--k-body);padding:20px 26px;color:var(--ink)}
+.k-btn::before{background:var(--ink)}
+.k-btn:hover,.k-btn:focus-visible{color:#fff}
+.k-btn svg{width:18px;height:18px;flex:none}
+.k-btn--ink{background:var(--ink);color:#fff}
+.k-btn--ink::before{background:var(--orange)}
+.k-btn--ink:hover,.k-btn--ink:focus-visible{color:var(--ink)}
+
+/* ---------- kit 18 tweak: give masks room for descenders ---------- */
+.k-rv-line{padding-bottom:.2em;margin-bottom:-.2em}
+
+/* ---------- hero ---------- */
+.hero{max-width:var(--max);margin:0 auto;padding:clamp(28px,5.5vw,84px) var(--pad) clamp(36px,5vw,72px);display:grid;gap:clamp(28px,4vw,60px);grid-template-columns:minmax(0,1fr)}
+.hero-wrap{background:var(--orange)}
+.hero h1{font:700 clamp(2.05rem,7.4vw,6.6rem)/1.02 var(--k-display);letter-spacing:-.045em;max-width:12.2em}
+.hero__lede{margin-top:clamp(18px,2.4vw,30px);max-width:34em;font-size:clamp(1.05rem,1.4vw,1.22rem);color:var(--ink)}
+.hero__act{margin-top:clamp(22px,3vw,36px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.hero__body .hero__lede{margin-top:0}
+.hero__note{font-size:.98rem;color:var(--ink);max-width:20em}
+@media (min-width:1000px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(300px,360px);align-items:end;row-gap:clamp(30px,3.4vw,52px)}
+  .hero h1{grid-column:1/-1}
+}
+
+/* MOT classes card (corner panel idea from 363 Car & Social Club) */
+.classes{border:2px solid var(--ink);background:var(--paper);align-self:end;box-shadow:10px 10px 0 var(--ink)}
+.classes__hd{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:2px solid var(--ink);font-family:var(--mono);font-size:.74rem}
+.classes__nums{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.classes__nums span{display:grid;place-items:center;aspect-ratio:1/1.12;font:800 clamp(2rem,4.4vw,3.1rem)/1 var(--k-display);border-right:1px solid var(--line)}
+.classes__nums span:last-child{border-right:0}
+.classes__veh{padding:14px 16px;border-top:2px solid var(--ink);font-size:.95rem;line-height:1.45}
+.classes__ft{padding:10px 16px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:.72rem}
+.k-js .classes .classes__nums span{opacity:0;transform:scale(1.5);transition:opacity .35s ease,transform .7s var(--ease);transition-delay:calc(500ms + var(--i)*110ms)}
+.k-js .classes.is-in .classes__nums span{opacity:1;transform:none}
+
+/* orange vehicle marquee (kit 07) */
+.band{background:var(--ink);color:#fff;overflow:hidden}
+.band .k-marquee{border:0;padding:clamp(14px,2vw,22px) 0}
+.band .k-mq-word{font:700 clamp(1.7rem,4.4vw,3.6rem)/1.1 var(--k-display);letter-spacing:-.035em}
+.band .k-mq-word:nth-child(even){color:#fff;-webkit-text-stroke:0}
+.band .k-mq-word:nth-child(4n){color:transparent;-webkit-text-stroke:1.5px #fff}
+.band .k-mq-dot{background:var(--orange);width:.42em;height:.42em;font-size:2rem}
+
+/* ---------- statement with scroll word-fill (from Selected Car Group) ---------- */
+.say{max-width:var(--max);margin:0 auto;padding:clamp(70px,11vw,170px) var(--pad);display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
+.say__fill{font:500 clamp(1.5rem,3.3vw,3rem)/1.22 var(--k-display);letter-spacing:-.03em;max-width:24em}
+.say__fill .w{transition:color .4s ease}
+.k-js .say__fill.is-live .w{color:#8a8a85}
+.k-js .say__fill.is-live .w.on{color:var(--ink)}
+.say__list{list-style:none;padding:0;border-top:2px solid var(--ink);align-self:start}
+.say__list li{display:flex;gap:12px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-weight:500}
+.say__list li::before{content:"";flex:none;width:10px;height:10px;background:var(--orange);transform:translateY(-1px)}
+@media (min-width:1000px){.say{grid-template-columns:300px minmax(0,1fr);gap:clamp(40px,7vw,120px)}.say__list{order:-1;margin-top:.6rem}}
+
+/* ---------- services index (kit 11, restyled) ---------- */
+.svc{max-width:var(--max);margin:0 auto;padding:0 var(--pad) clamp(70px,10vw,150px);display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
+.svc h2,.h2{font:700 clamp(2.2rem,5.6vw,4.8rem)/1 var(--k-display);letter-spacing:-.045em}
+.svc .k-acc{padding:0;max-width:none;margin:0}
+.svc .k-acc__list{border-top:2px solid var(--ink);margin-top:clamp(24px,3.6vw,44px)}
+.svc .k-acc__n{font:500 .8rem var(--mono);color:var(--orange-ink)}
+.svc .k-acc__t{font:600 clamp(1.25rem,2.7vw,2.25rem)/1.12 var(--k-display);letter-spacing:-.035em}
+.svc .k-acc__t small{font-size:1rem;color:var(--mute);margin-top:8px}
+.svc .k-acc__row summary{grid-template-columns:3em minmax(0,1fr) auto}
+.svc .k-acc__body{grid-template-columns:minmax(0,1fr)}
+.svc .k-acc__body ul{columns:2 220px}
+.svc .k-acc__body a{color:var(--ink);text-decoration-color:var(--orange);text-decoration-thickness:2px}
+@media (hover:hover){.svc .k-acc__row summary:hover{color:var(--ink)}}
+.svc__aside{align-self:start;display:grid;gap:22px}
+.svc__big{font:700 clamp(1.6rem,2.6vw,2.3rem)/1.08 var(--k-display);letter-spacing:-.04em}
+.svc__aside p{color:#2a2a28;max-width:24em}
+@media (min-width:1000px){.svc{grid-template-columns:minmax(0,1fr) 340px;gap:clamp(40px,6vw,100px)}.svc__aside{position:sticky;top:120px;margin-top:clamp(90px,9vw,130px)}}
+.tick{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;min-height:44px}
+.tick .k-arrow{color:var(--orange-ink)}
+
+/* ---------- MOT section: orange flood + test sheet (artefact idea from Payana) ---------- */
+.mot{background:var(--ink);color:#fff;overflow:clip}
+.mot__in{max-width:var(--max);margin:0 auto;padding:clamp(70px,10vw,150px) var(--pad);display:grid;gap:clamp(36px,5vw,80px);grid-template-columns:minmax(0,1fr)}
+.mot h2{color:var(--orange);font:800 clamp(2.6rem,8vw,7.4rem)/.92 var(--k-display);letter-spacing:-.055em}
+.mot__txt p{margin-top:22px;max-width:30em;font-size:1.08rem;color:#ececea}
+.mot__txt .k-btn{margin-top:30px}
+.sheet{background:#fff;color:var(--ink);box-shadow:14px 14px 0 var(--orange);transform:rotate(-1.2deg);max-width:620px;width:100%;justify-self:center;font-family:var(--mono);font-size:.8rem}
+.sheet__hd{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 20px;border-bottom:2px solid var(--ink)}
+.sheet__hd img{height:30px;width:auto}
+.sheet dl{display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr)}
+.sheet dt,.sheet dd{padding:13px 20px;border-bottom:1px solid var(--line)}
+.sheet dt{color:var(--mute);border-right:1px solid var(--line)}
+.sheet dd{font-family:var(--k-body);font-size:1rem;font-weight:500;line-height:1.4}
+.sheet dd b{font:800 1.35rem/1 var(--k-display);letter-spacing:-.02em}
+.sheet__ft{padding:16px 20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+.sheet__ft a{font:700 1.15rem/1 var(--k-display);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.k-js .sheet [data-row]{opacity:0;transform:translateX(-10px);transition:opacity .5s ease,transform .7s var(--ease);transition-delay:calc(300ms + var(--i)*90ms)}
+.k-js .sheet.is-in [data-row]{opacity:1;transform:none}
+@media (max-width:560px){.sheet__hd span{display:none}.sheet dl{grid-template-columns:minmax(0,1fr)}.sheet dt{border-right:0;border-bottom:0;padding-bottom:0}.sheet dd{padding-top:4px}}
+@media (min-width:1000px){.mot__in{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:center}}
+
+/* ---------- region: schematic of the towns ---------- */
+.reg{max-width:var(--max);margin:0 auto;padding:clamp(70px,10vw,150px) var(--pad);display:grid;gap:clamp(30px,5vw,80px);grid-template-columns:minmax(0,1fr)}
+.reg__txt p{margin-top:22px;max-width:30em;font-size:1.08rem}
+.reg__map{width:100%;height:auto;max-width:640px}
+.reg__map .rt{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:0}
+.k-js .reg__map .rt{stroke-dashoffset:1;transition:stroke-dashoffset 1.4s var(--ease);transition-delay:calc(200ms + var(--i)*180ms)}
+.k-js .reg__fig.is-in .reg__map .rt{stroke-dashoffset:0}
+.reg__map .town{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+.reg__map .home{fill:var(--orange);stroke:var(--ink);stroke-width:2}
+.reg__map text{font:500 15px var(--k-body);fill:var(--ink)}
+.reg__map .lbl-home{font:700 17px var(--k-display);letter-spacing:-.02em}
+.reg__map .north{font:500 11px var(--mono);fill:var(--mute)}
+@media (max-width:640px){.reg__map text{font-size:24px}.reg__map .lbl-home{font-size:26px}.reg__map .north{font-size:18px}}
+.reg__cap{margin-top:10px;color:var(--mute);font-size:.9rem}
+@media (min-width:1000px){.reg{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center}}
+
+/* ---------- find us ---------- */
+.find{background:var(--soft);border-top:2px solid var(--ink)}
+.find__in{max-width:var(--max);margin:0 auto;padding:clamp(70px,9vw,130px) var(--pad);display:grid;gap:clamp(30px,4vw,60px);grid-template-columns:minmax(0,1fr)}
+.addr{font:600 clamp(1.25rem,2.1vw,1.85rem)/1.22 var(--k-display);letter-spacing:-.035em;font-style:normal;margin-top:26px}
+.find__tel{display:inline-flex;align-items:center;min-height:44px;margin-top:22px;font:700 clamp(1.6rem,3.2vw,2.6rem)/1 var(--k-display);letter-spacing:-.04em;text-decoration:none;font-variant-numeric:tabular-nums}
+.find__tel:hover{color:var(--orange-ink)}
+.find__p{margin-top:12px;color:#2a2a28}
+.find__act{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.map{position:relative;margin:0}
+.map__link{position:relative;display:block;border:2px solid var(--ink);overflow:hidden;height:clamp(340px,60vw,600px);background:#e8e8e8;text-decoration:none}
+.map__link img{width:100%;height:100%;object-fit:cover;object-position:37.7% 45.3%;transition:transform 1.2s var(--ease);transform-origin:37.7% 45.3%}
+.map__link:hover img{transform:scale(1.04)}
+.map__pin{position:absolute;left:37.7%;top:45.3%;width:40px;height:52px;margin:-52px 0 0 -20px}
+.k-js .map .map__pin{opacity:0;transform:translateY(-40px);transition:opacity .3s ease .5s,transform .9s cubic-bezier(.34,1.56,.64,1) .5s}
+.k-js .map.is-in .map__pin{opacity:1;transform:none}
+.map__open{position:absolute;right:0;bottom:0;background:var(--ink);color:#fff;padding:14px 18px;font-weight:600;display:inline-flex;gap:10px;min-height:44px;align-items:center}
+.map__cap{margin-top:8px;font-size:.8rem;color:var(--mute)}
+.club{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:center;margin-top:40px;padding-top:28px;border-top:1px solid #c9c9c4}
+.club img{width:112px;height:auto;transform:rotate(-3deg);border:6px solid #fff;box-shadow:0 12px 24px -12px rgba(0,0,0,.4)}
+.club p{font-weight:500;max-width:22em}
+@media (min-width:1000px){.find__in{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}}
+
+/* ---------- footer ---------- */
+.ft{background:var(--paper);border-top:2px solid var(--ink)}
+.ft__in{max-width:var(--max);margin:0 auto;padding:clamp(50px,7vw,90px) var(--pad) 30px;display:grid;gap:36px;grid-template-columns:minmax(0,1fr)}
+.ft__logo img{height:52px;width:auto}
+.ft__addr{font-style:normal;margin-top:18px;line-height:1.55}
+.ft h3{font:500 .74rem/1 var(--mono);color:var(--mute);margin-bottom:12px}
+.ft ul{list-style:none;padding:0}
+.ft li a{display:inline-flex;min-height:44px;align-items:center;padding-block:6px;text-decoration:none}
+.ft__tel{font:700 clamp(1.5rem,3vw,2.2rem)/1 var(--k-display);letter-spacing:-.04em;text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+.ft__base{grid-column:1/-1;border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:.86rem;color:var(--mute)}
+@media (min-width:900px){.ft__in{grid-template-columns:1.4fr 1fr 1fr 1.2fr}}
+
+/* ---------- services page ---------- */
+.intro{max-width:var(--max);margin:0 auto;padding:clamp(34px,6vw,96px) var(--pad) clamp(34px,5vw,70px);display:grid;gap:28px;grid-template-columns:minmax(0,1fr)}
+.intro h1{font:700 clamp(2.2rem,8.6vw,7rem)/1 var(--k-display);letter-spacing:-.05em}
+.intro p{max-width:34em;font-size:clamp(1.05rem,1.4vw,1.2rem);color:#2a2a28}
+@media (min-width:1000px){.intro{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end}}
+.strip{position:relative;overflow:hidden;height:clamp(220px,34vw,460px);background:#2b2a28}
+.strip__img{position:absolute;inset:-14% 0;overflow:hidden}
+.strip__img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.list{max-width:var(--max);margin:0 auto;padding:clamp(60px,9vw,130px) var(--pad);display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
+.list__nav{display:none}
+@media (min-width:1000px){
+  .list{grid-template-columns:260px minmax(0,1fr);gap:clamp(40px,7vw,120px)}
+  .list__nav{display:block;position:sticky;top:120px;align-self:start}
+  .list__nav ol{list-style:none;padding:0;border-top:2px solid var(--ink)}
+  .list__nav a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500;min-height:44px;align-items:center}
+  .list__nav a span{font:500 .72rem var(--mono);color:var(--orange-ink);width:2.4em}
+  .list__nav a.is-here{color:var(--orange-ink)}
+}
+.item{display:grid;gap:18px;grid-template-columns:minmax(0,1fr);padding:clamp(28px,4vw,48px) 0;border-top:2px solid var(--ink)}
+.item:first-child{padding-top:0;border-top:0}
+.item__n{font:500 .8rem var(--mono);color:var(--orange-ink)}
+.item h2{font:700 clamp(1.7rem,3.8vw,3.2rem)/1.05 var(--k-display);letter-spacing:-.045em}
+.item p{max-width:36em}
+.item ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));border-top:1px solid var(--line)}
+.item li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:500;padding-inline-end:16px}
+@media (min-width:760px){.item{grid-template-columns:5em minmax(0,1fr)}.item>*:not(.item__n){grid-column:2}.item__n{grid-row:1;padding-top:.7em}}
+.motb{background:var(--ink);color:#fff}
+.motb__in{max-width:var(--max);margin:0 auto;padding:clamp(70px,10vw,140px) var(--pad);display:grid;gap:clamp(30px,5vw,80px);grid-template-columns:minmax(0,1fr)}
+.motb h2{font:800 clamp(2rem,4.4vw,4.4rem)/1 var(--k-display);letter-spacing:-.055em}
+.motb p{max-width:32em;margin-top:20px;color:#e6e6e3}
+.motb__nums{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:2px solid #fff}
+.motb__nums span{display:grid;place-items:center;aspect-ratio:1/1.2;font:800 clamp(2rem,6vw,5rem)/1 var(--k-display);color:var(--orange);border-right:1px solid #444}
+.motb__nums span:last-child{border-right:0}
+.motb__cap{font:500 .78rem var(--mono);color:#cfcfcb;margin-top:12px}
+.motb .k-btn{margin-top:28px}
+@media (min-width:1000px){.motb__in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.cta{background:var(--orange)}
+.cta__in{max-width:var(--max);margin:0 auto;padding:clamp(60px,8vw,110px) var(--pad);display:grid;gap:28px;grid-template-columns:minmax(0,1fr);align-items:end}
+.cta h2{font:800 clamp(2rem,5.6vw,4.6rem)/1 var(--k-display);letter-spacing:-.05em;max-width:14em}
+.cta a.cta__tel{font:700 clamp(1.8rem,5vw,4rem)/1 var(--k-display);letter-spacing:-.04em;text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+@media (min-width:1000px){.cta__in{grid-template-columns:minmax(0,1.3fr) auto}}
+
+@media (prefers-reduced-motion:reduce){
+  .k-js .map .map__pin{opacity:1;transform:none;transition:none}
+  .k-js .classes .classes__nums span,.k-js .sheet [data-row],.k-js .reg__map .rt{opacity:1;transform:none;stroke-dashoffset:0;transition:none}
+  .hd__nav a::after{transition:none}
+}
