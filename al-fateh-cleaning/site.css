@@ -579,3 +579,7 @@ html:lang(ar) .hero h1,html:lang(ar) .k-seq.hero h1{font-size:clamp(2.2rem,9vw,3
   .hero__media::after{background:none}
 }
 @media (min-width:980px){.pg-head__grid{align-items:center}.pg-head{padding-top:calc(var(--hh) + clamp(40px,5vw,80px))}}
+/* round 4 */
+.pg-head__grid{grid-template-columns:minmax(0,1fr)}
+.pg-head__txt{min-width:0}
+@media (min-width:980px){.pg-head__grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}html:lang(ar) .hero h1,html:lang(ar) .k-seq.hero h1{font-size:clamp(2.6rem,4.6vw,5.4rem)}}
