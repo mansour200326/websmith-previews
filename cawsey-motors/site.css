@@ -57,16 +57,26 @@ a{color:inherit}
 .k-rv-line{padding-bottom:.2em;margin-bottom:-.2em}
 
 /* ---------- hero ---------- */
-.hero{max-width:var(--max);margin:0 auto;padding:clamp(28px,5.5vw,84px) var(--pad) clamp(36px,5vw,72px);display:grid;gap:clamp(28px,4vw,60px);grid-template-columns:minmax(0,1fr)}
+.hero{max-width:var(--max);margin:0 auto;padding:clamp(28px,4.4vw,64px) var(--pad) clamp(36px,5vw,72px);display:grid;gap:clamp(28px,4vw,60px);grid-template-columns:minmax(0,1fr)}
 .hero-wrap{background:var(--orange)}
-.hero h1{font:700 clamp(2.05rem,7.4vw,6.6rem)/1.02 var(--k-display);letter-spacing:-.045em;max-width:12.2em}
+.hero h1{font:700 clamp(2.05rem,7vw,6.1rem)/1.02 var(--k-display);letter-spacing:-.045em;max-width:12.2em}
 .hero__lede{margin-top:clamp(18px,2.4vw,30px);max-width:34em;font-size:clamp(1.05rem,1.4vw,1.22rem);color:var(--ink)}
 .hero__act{margin-top:clamp(22px,3vw,36px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
 .hero__body .hero__lede{margin-top:0}
 .hero__note{font-size:.98rem;color:var(--ink);max-width:20em}
+.hero__photo{margin:0}
+.hero__frame{overflow:hidden;border:2px solid var(--ink);aspect-ratio:4/3;background:#cfcfcf}
+.hero__frame img{width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+.hero__photo figcaption{margin-top:8px;color:var(--ink);font-size:.72rem}
+@media (max-width:999px){
+  .hero__left{display:contents}
+  .hero h1{order:0}.hero__body{order:1}.hero__photo{order:2}.classes{order:3}
+}
 @media (min-width:1000px){
-  .hero{grid-template-columns:minmax(0,1fr) minmax(300px,360px);align-items:end;row-gap:clamp(30px,3.4vw,52px)}
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);align-items:start;row-gap:clamp(30px,3.4vw,52px);column-gap:clamp(36px,4.5vw,72px)}
   .hero h1{grid-column:1/-1}
+  .hero__left{display:grid;gap:clamp(30px,3vw,44px);align-content:start}
+  .classes{max-width:400px;align-self:start}
 }
 
 /* MOT classes card (corner panel idea from 363 Car & Social Club) */
@@ -98,6 +108,16 @@ a{color:inherit}
 .say__list li{display:flex;gap:12px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-weight:500}
 .say__list li::before{content:"";flex:none;width:10px;height:10px;background:var(--orange);transform:translateY(-1px)}
 @media (min-width:1000px){.say{grid-template-columns:300px minmax(0,1fr);gap:clamp(40px,7vw,120px)}.say__list{order:-1;margin-top:.6rem}}
+
+/* ---------- the unit: shopfront band ---------- */
+.unit{max-width:var(--max);margin:0 auto clamp(70px,10vw,140px);padding:0 var(--pad)}
+.unit__frame{overflow:hidden;aspect-ratio:4/3;border:2px solid var(--ink)}
+.unit__frame img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.unit figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;margin-top:12px;font-weight:500}
+.unit figcaption .mono{color:var(--mute)}
+@media (min-width:760px){.unit__frame{aspect-ratio:16/9}}
+.find__photo{margin:34px 0 0;overflow:hidden;border:2px solid var(--ink);aspect-ratio:16/10}
+.find__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 
 /* ---------- services index (kit 11, restyled) ---------- */
 .svc{max-width:var(--max);margin:0 auto;padding:0 var(--pad) clamp(70px,10vw,150px);display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
@@ -195,9 +215,11 @@ a{color:inherit}
 .intro h1{font:700 clamp(2.2rem,8.6vw,7rem)/1 var(--k-display);letter-spacing:-.05em}
 .intro p{max-width:34em;font-size:clamp(1.05rem,1.4vw,1.2rem);color:#2a2a28}
 @media (min-width:1000px){.intro{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end}}
-.strip{position:relative;overflow:hidden;height:clamp(220px,34vw,460px);background:#2b2a28}
-.strip__img{position:absolute;inset:-14% 0;overflow:hidden}
-.strip__img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.strip{margin:0;padding:0 var(--pad);max-width:var(--max);margin-inline:auto}
+.strip__img{overflow:hidden;height:clamp(240px,40vw,560px);border:2px solid var(--ink)}
+.strip__img img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.item__img{margin:6px 0 4px;overflow:hidden;aspect-ratio:16/9;border:2px solid var(--ink);max-width:760px}
+.item__img img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
 .list{max-width:var(--max);margin:0 auto;padding:clamp(60px,9vw,130px) var(--pad);display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
 .list__nav{display:none}
 @media (min-width:1000px){
