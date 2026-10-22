@@ -11,7 +11,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Franklin:wght@400;600&family=Noto+Naskh+Arabic:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../site.css">
-<link rel="preload" as="image" href="../img/building-sign.webp" fetchpriority="high">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
 <body>
@@ -22,7 +21,7 @@
     <a class="hd__brand" href="./"><img src="../img/crest.webp" alt="" width="40" height="41"><b>المدرسة الانجليزية الفحيحيل<small>الكويت · منذ 1968</small></b></a>
     <nav class="hd__nav" aria-label="القائمة الرئيسية">
       <a class="k-link" href="./" aria-current="page">الرئيسية</a>
-      <a class="k-link" href="../about.html" lang="en" hreflang="en">About ESF</a>
+      <a class="k-link" href="../about.html" hreflang="en">عن المدرسة</a>
       <a class="k-link" href="services.html">المناهج</a>
       <a class="k-link" href="#register">القبول والتسجيل</a>
       <a class="k-link" href="#visit">اتصل بنا</a>
@@ -34,70 +33,50 @@
     </div>
   </div>
   <nav class="subnav" aria-label="القائمة (الهاتف)">
-    <a href="./" aria-current="page">الرئيسية</a><a href="services.html">المناهج</a><a href="#register">القبول والتسجيل</a><a href="#visit">اتصل بنا</a>
+    <a href="./" aria-current="page">الرئيسية</a><a href="../about.html" hreflang="en">عن المدرسة</a><a href="services.html">المناهج</a><a href="#register">القبول والتسجيل</a><a href="#visit">اتصل بنا</a>
   </nav>
 </header>
 
 <main id="main">
-<section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero__top">
-    <h1 class="hero__name" id="hero-h">
-      <span class="ln"><span style="--i:0">المدرسة الانجليزية</span></span>
-      <span class="ln ln--2"><span style="--i:1">الفحيحيل</span></span>
-    </h1>
-    <div class="hero__aside">
-      <p class="hero__lead">مدرسة بريطانية في المنقف بجنوب الكويت، أسسها عام 1968 عدد من أولياء الأمور المقيمين. ندرّس من الروضة وصف الاستقبال (عمر 4 سنوات) حتى مستوى A Level في الصف الثالث عشر (عمر 18 سنة)، وفق المنهج الوطني لإنجلترا وويلز.</p>
-      <p class="hero__ar" lang="en" dir="ltr" style="font-family:var(--display);text-align:start">The English School Fahaheel · Kuwait</p>
+<section class="hero hero--stages" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero__row">
+      <h1 class="hero__name" id="hero-h"><span class="ln"><span style="--i:0">المدرسة الانجليزية الفحيحيل</span></span></h1>
       <div class="hero__acts">
         <a class="btn btn--red" data-k-magnetic="0.25" href="#register">التسجيل للعام ⁦2026–2027⁩ <span class="k-arrow" aria-hidden="true">→</span></a>
         <a class="more k-link" href="tel:+96523711070">اتصل: <bdi dir="ltr">(965) 2371 1070</bdi></a>
       </div>
     </div>
-  </div>
-  <figure class="hero__photo">
-    <picture>
-      <img src="../img/building-sign.webp" alt="مبنى المدرسة الانجليزية الفحيحيل في المنقف بجدرانه البيضاء ونوافذه الدائرية تحت سماء زرقاء" width="2400" height="1371" fetchpriority="high">
-    </picture>
-    <figcaption>مبنى المدرسة في المنقف، افتُتح في يناير 2005</figcaption>
-  </figure>
-</section>
-
-<section class="sec stages" aria-labelledby="st-h">
-  <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2" id="st-h" data-reveal="lines">من صف الاستقبال حتى الصف الثالث عشر</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">نتبع النظام البريطاني في تسمية الصفوف: صف الاستقبال في عمر 4 سنوات، ثم الصف الأول، وصولاً إلى الصف الثالث عشر في عمر 18 سنة. أي 12 سنة من التعليم المتواصل في مدرسة واحدة.</p>
-    </div>
-    <div class="stages__row" data-reveal-stagger="110" role="region" aria-label="المراحل الدراسية، مرّر جانبياً على الهاتف" tabindex="0">
-      <a class="stage" href="services.html#lower" data-reveal>
-        <div class="stage__ph k-zoom"><img src="../img/p1-reception.webp" alt="طفلتان بزي المدرسة الأحمر" width="480" height="594" loading="lazy"></div>
+    <div class="stages__row hero__strip" role="region" aria-label="المراحل الدراسية، مرّر جانبياً على الهاتف" tabindex="0">
+      <a class="stage" style="--d:0" href="services.html#lower">
+        <div class="stage__ph k-zoom"><img src="../img/p1-reception.webp" alt="طفلتان بزي المدرسة الأحمر" width="480" height="594"></div>
         <p class="stage__t">المرحلة الدنيا <span class="k-arrow" aria-hidden="true">→</span></p>
         <p class="stage__d">الروضة وصف الاستقبال، وفق منهج المرحلة التأسيسية البريطاني.</p>
       </a>
-      <a class="stage" href="services.html#middle" data-reveal>
-        <div class="stage__ph k-zoom"><img src="../img/p3-library.webp" alt="تلميذ بالكنزة الحمراء يقرأ في المكتبة" width="1720" height="1440" loading="lazy"></div>
+      <a class="stage" style="--d:1" href="services.html#middle">
+        <div class="stage__ph k-zoom"><img src="../img/p3-library.webp" alt="تلميذ بالكنزة الحمراء يقرأ في المكتبة" width="860" height="720"></div>
         <p class="stage__t">المرحلة المتوسطة <span class="k-arrow" aria-hidden="true">→</span></p>
         <p class="stage__d">من الصف الثالث إلى السادس. القراءة والحساب والعلوم أولاً.</p>
       </a>
-      <a class="stage" href="services.html#upper" data-reveal>
-        <div class="stage__ph k-zoom"><img src="../img/p5-upper.webp" alt="أربع طالبات من المرحلة العليا بالزي الأحمر" width="780" height="594" loading="lazy"></div>
+      <a class="stage" style="--d:2" href="services.html#upper">
+        <div class="stage__ph k-zoom"><img src="../img/p5-upper.webp" alt="أربع طالبات من المرحلة العليا بالزي الأحمر" width="780" height="594"></div>
         <p class="stage__t">المرحلة العليا <span class="k-arrow" aria-hidden="true">→</span></p>
         <p class="stage__d">من عمر 11 سنة، بعد اختبار قبول ومقابلة.</p>
       </a>
-      <a class="stage" href="services.html#upper" data-reveal>
-        <div class="stage__ph k-zoom"><img src="../img/p4-science.webp" alt="طالبة بالسترة الكحلية مع معلمتها في مختبر العلوم" width="1320" height="1440" loading="lazy"></div>
+      <a class="stage" style="--d:3" href="services.html#upper">
+        <div class="stage__ph k-zoom"><img src="../img/p4-science.webp" alt="طالبة بالسترة الكحلية مع معلمتها في مختبر العلوم" width="660" height="720"></div>
         <p class="stage__t"><bdi>IGCSE</bdi> و <bdi>A Level</bdi> <span class="k-arrow" aria-hidden="true">→</span></p>
         <p class="stage__d">كامبريدج الدولية وإديكسل، وتُصحَّح الأوراق في المملكة المتحدة.</p>
       </a>
-      <a class="stage" href="services.html#sixth" data-reveal>
-        <div class="stage__ph k-zoom"><img src="../img/p6-graduate.webp" alt="خريجة دفعة 2024 بالروب والوشاح الأزرق" width="860" height="1440" loading="lazy"></div>
+      <a class="stage" style="--d:4" href="services.html#sixth">
+        <div class="stage__ph k-zoom"><img src="../img/p6-graduate.webp" alt="خريجة دفعة 2024 بالروب والوشاح الأزرق" width="428" height="720"></div>
         <p class="stage__t">الصف الثالث عشر <span class="k-arrow" aria-hidden="true">→</span></p>
         <p class="stage__d">مركز السادس الثانوي، ثم الجامعة. دفعة 2024.</p>
       </a>
     </div>
-    <div class="stages__foot" data-reveal>
-      <p>تُدرَّس اللغة العربية والتربية الإسلامية وفق منهج وزارة التربية، في فصول منفصلة للعرب وغير العرب. والفرنسية من الصف الرابع.</p>
-      <a class="more k-link" href="services.html">المناهج كاملة <span class="k-arrow" aria-hidden="true">→</span></a>
+    <div class="hero__foot">
+      <p class="hero__lead">مدرسة بريطانية في المنقف بجنوب الكويت، أسسها عام 1968 عدد من أولياء الأمور المقيمين. نتبع المنهج الوطني لإنجلترا وويلز من صف الاستقبال في عمر 4 سنوات حتى الصف الثالث عشر في عمر 18 سنة، بما يحقق متطلب 12 سنة من التعليم المتواصل.</p>
+      <p class="hero__note">تُدرَّس اللغة العربية والتربية الإسلامية وفق منهج وزارة التربية، في فصول منفصلة للعرب وغير العرب. والفرنسية من الصف الرابع. <a class="more k-link" href="services.html">المناهج كاملة <span class="k-arrow" aria-hidden="true">→</span></a></p>
     </div>
   </div>
 </section>
@@ -121,7 +100,7 @@
 
 <section class="sec hist" aria-labelledby="hi-h">
   <div class="wrap">
-    <div class="sec__head">
+    <div class="sec__head sec__head--wide">
       <h2 class="h2" id="hi-h" data-reveal="lines">أقدم مدرسة إنجليزية في الكويت</h2>
       <p class="lede" data-reveal data-reveal-delay="150">عندما فتحنا أبوابنا لم تكن في جنوب الكويت مدرسة أخرى تدرّس بالإنجليزية، سوى مدرسة شركة نفط الكويت في الأحمدي لأبناء موظفيها.</p>
     </div>
@@ -145,16 +124,15 @@
 
 <section class="sec prem" aria-labelledby="pr-h">
   <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2" id="pr-h" data-reveal="lines">مبنى المنقف</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">مكيّف بالكامل، وكاميرات مراقبة في الداخل والخارج، وحراسة على البوابات طوال اليوم الدراسي. هكذا أراده المالك ليطمئن الأهل على أبنائهم.</p>
-    </div>
+    <h2 class="h2 prem__h" id="pr-h" data-reveal="lines">مبنى المنقف</h2>
     <figure class="prem__wide" data-reveal="clip"><img src="../img/lab.webp" alt="معلمة وطلاب بالكمامات ونظارات الوقاية في مختبر العلوم" width="2400" height="726" loading="lazy"></figure>
     <div class="prem__tiles" data-reveal-stagger="100">
       <figure data-reveal><div class="k-zoom"><img src="../img/library.webp" alt="طلاب بالكنزات الحمراء على أجهزة الحاسوب في المكتبة" width="1010" height="594" loading="lazy"></div><figcaption>مكتبتان وأربعة مراكز حاسوب</figcaption></figure>
       <figure data-reveal><div class="k-zoom"><img src="../img/pool.webp" alt="المسبح الداخلي" width="690" height="594" loading="lazy"></div><figcaption>مسبح داخلي مع غرف تبديل الملابس</figcaption></figure>
       <figure data-reveal><div class="k-zoom"><img src="../img/court.webp" alt="الملعب الخارجي المظلل" width="684" height="594" loading="lazy"></div><figcaption>ساحة لعب خارجية تحت الإشراف</figcaption></figure>
     </div>
+    <div class="prem__body">
+      <p class="lede" data-reveal data-reveal-delay="150">مكيّف بالكامل، وكاميرات مراقبة في الداخل والخارج، وحراسة على البوابات طوال اليوم الدراسي. هكذا أراده المالك ليطمئن الأهل على أبنائهم.</p>
     <ul class="prem__list" data-reveal-stagger="40">
       <li data-reveal><b>ستة مختبرات علوم</b> مع غرف التحضير</li>
       <li data-reveal><b>مسرحان</b>: مسرح لويد ويبر ومسرح جولي أندروز</li>
@@ -168,6 +146,7 @@
       <li data-reveal>غرفة لقاء خاصة بين الأهل والمعلمين</li>
       <li data-reveal>مسجد ومقصف وكافتيريا خارج المبنى</li>
     </ul>
+    </div>
   </div>
 </section>
 
@@ -207,7 +186,8 @@
   </div>
 </section>
 
-<section class="k-visit" id="visit" aria-labelledby="vi-h">
+<section class="sec visit" id="visit" aria-labelledby="vi-h">
+  <div class="wrap visit__grid">
   <div class="k-visit__info">
     <h2 class="h2" id="vi-h" data-reveal="lines">زورونا</h2>
     <p class="k-visit__addr" data-reveal>المدرسة الانجليزية الفحيحيل، المنقف، الكويت</p>
@@ -225,8 +205,13 @@
       <a class="btn btn--line" href="mailto:esf@skee.com">esf@skee.com</a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=The+English+School+Fahaheel,+Mangaf,+Kuwait&amp;z=15&amp;output=embed&amp;hl=ar">
+  <div class="visit__media">
+    <figure class="visit__fig" data-reveal="clip"><img src="../img/building-sign.webp" alt="مبنى المدرسة في المنقف ولافتة The English School Fahaheel" width="1200" height="686" loading="lazy"></figure>
+    <p class="visit__cap">المدرسة في المنقف قرب البحر، في مبناها منذ يناير 2005.</p>
+    <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=The+English+School+Fahaheel,+Mangaf,+Kuwait&amp;z=15&amp;output=embed&amp;hl=ar">
     <button type="button">اعرض الخريطة</button>
+  </div>
+  </div>
   </div>
 </section>
 </main>
@@ -243,7 +228,7 @@
         </div>
       </div>
       <div class="ft__cols">
-        <div><h3>المدرسة</h3><ul><li><a href="../about.html" lang="en">About ESF</a></li><li><a href="services.html">المناهج</a></li><li><a href="#register">القبول والتسجيل</a></li><li><a href="../img/school-calendar-2026-2027.jpg">التقويم المدرسي</a></li></ul></div>
+        <div><h3>المدرسة</h3><ul><li><a href="../about.html" hreflang="en">عن المدرسة</a></li><li><a href="services.html">المناهج</a></li><li><a href="#register">القبول والتسجيل</a></li><li><a href="../img/school-calendar-2026-2027.jpg">التقويم المدرسي</a></li></ul></div>
         <div><h3>اتصل بنا</h3><address>ص.ب 7209 الفحيحيل<br>الرمز البريدي 64003، الكويت<br><a href="tel:+96523711070" dir="ltr">(965) 2371 1070</a><br>فاكس <bdi dir="ltr">(965) 2371 5458</bdi><br><a href="mailto:esf@skee.com">esf@skee.com</a></address></div>
         <div><h3>تابعونا</h3><ul><li><a href="https://www.facebook.com/pages/The-English-School-Fahaheel-Kuwait-ESF/216711958339278" rel="noopener" target="_blank">فيسبوك</a></li><li><a href="../" lang="en">English</a></li></ul><p style="margin-top:12px;font-size:.88rem;color:#a9a9ae">فرع من مؤسسة جنوب الكويت التعليمية (SKEE)</p></div>
       </div>

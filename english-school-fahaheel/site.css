@@ -210,8 +210,7 @@ ul,ol{margin:0;padding:0}
 .phones{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px 18px;margin-bottom:26px;max-width:520px}
 .phones a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-variant-numeric:tabular-nums}
 .k-visit__acts{display:flex;flex-wrap:wrap;gap:12px}
-.k-visit__map{position:relative;min-height:380px;background:#e7e9ea url(img/building-sign.webp) center/cover;display:grid;place-items:center}
-.k-visit__map::before{content:"";position:absolute;inset:0;background:rgba(23,23,26,.35)}
+.k-visit__map{position:relative;min-height:260px;background:var(--stone);display:grid;place-items:center;border:1px solid var(--line)}
 .k-visit__map button{position:relative;z-index:1;background:#fff;color:var(--ink);border:0;min-height:48px;padding:0 22px;font:600 1rem var(--body);border-radius:2px;cursor:pointer}
 .k-visit__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .8s;z-index:2}
 .k-visit__map iframe.is-on{opacity:1}
@@ -352,3 +351,74 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .intro__fig figcaption{font-size:.88rem;color:var(--mute);margin-top:8px}
 @media (max-width:1080px){.subnav{-webkit-mask:linear-gradient(90deg,#000 82%,transparent);mask:linear-gradient(90deg,#000 82%,transparent)}
  [dir=rtl] .subnav{-webkit-mask:linear-gradient(270deg,#000 82%,transparent);mask:linear-gradient(270deg,#000 82%,transparent)}}
+
+/* ===== round 3 ===== */
+/* hero: the pupils carry the first screen; the name is set on one line above them */
+.hero--stages{padding-top:clamp(22px,3vw,44px);padding-bottom:clamp(56px,7vw,96px)}
+.hero__row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px;margin-bottom:clamp(26px,3vw,40px)}
+.hero--stages .hero__name{font-size:clamp(2.6rem,5.3vw,5.6rem);line-height:.95;letter-spacing:-.02em}
+.hero--stages .hero__acts{flex:none}
+.hero__strip .stage:nth-child(1){margin-top:56px}.hero__strip .stage:nth-child(2){margin-top:12px}.hero__strip .stage:nth-child(3){margin-top:76px}.hero__strip .stage:nth-child(4){margin-top:0}.hero__strip .stage:nth-child(5){margin-top:40px}
+.hero__foot{display:grid;gap:18px 56px;margin-top:clamp(30px,4vw,52px);padding-top:22px;border-top:1px solid var(--line)}
+.hero__foot .hero__lead{margin:0;max-width:40em}
+.hero__note{color:var(--mute);font-size:.97rem;max-width:34em}
+.hero__note .more{color:var(--ink);margin-top:6px}
+@media (min-width:1000px){.hero__foot{grid-template-columns:1.3fr 1fr}}
+.k-js .hero--stages .hero__name .ln>span{animation-delay:.1s}
+.k-js .hero__strip .stage__ph{clip-path:inset(100% 0 0 0);animation:wipe 1.25s var(--ease) forwards;animation-delay:calc(.25s + var(--d,0)*.11s)}
+.k-js .hero__strip .stage__ph img{transform:scale(1.15);animation:settle 2.2s var(--ease) forwards;animation-delay:calc(.25s + var(--d,0)*.11s)}
+.k-js .hero__strip .stage__t,.k-js .hero__strip .stage__d,.k-js .hero--stages .hero__acts{opacity:0;animation:fadeup .9s var(--ease) forwards;animation-delay:calc(.75s + var(--d,0)*.11s)}
+.k-js .hero--stages .hero__acts{transform:translateY(12px);animation-delay:.5s}
+@media (max-width:900px){.hero__strip .stage{margin-top:0!important}}
+@media (max-width:640px){
+  .hero--stages{display:block;padding-top:18px}
+  .hero__row{margin-bottom:20px}
+  .hero--stages .hero__acts{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+  .hero__strip .stage{flex-basis:58vw}
+}
+@media (prefers-reduced-motion:reduce){.k-js .hero__strip .stage__ph,.k-js .hero__strip .stage__ph img,.k-js .hero__strip .stage__t,.k-js .hero__strip .stage__d,.k-js .hero--stages .hero__acts{animation:none!important;opacity:1;transform:none;clip-path:none}}
+
+/* section heads that change shape down the page */
+.sec__head--wide{grid-template-columns:1fr!important;gap:18px}
+.sec__head--wide .h2{font-size:clamp(2.8rem,7vw,6.6rem);max-width:12em}
+@media (min-width:1000px){.sec__head--wide .lede{margin-inline-start:38%}}
+.prem__h{margin-bottom:clamp(28px,4vw,48px);text-align:end}
+.prem__body{display:grid;gap:28px 56px;margin-top:clamp(40px,5vw,64px);align-items:start}
+.prem__body .prem__list{margin-top:0;columns:2 230px}
+@media (min-width:1000px){.prem__body{grid-template-columns:minmax(260px,1fr) 2fr}.prem__body .lede{position:sticky;top:110px}}
+.clubs .k-marquee{margin-bottom:clamp(40px,5vw,64px)}
+.clubs__grid{display:grid;gap:36px 56px;align-items:end}
+.clubs__text .lede{margin:20px 0 32px}
+.clubs__text figure{margin:0;max-width:380px}
+.clubs__text figure img{aspect-ratio:700/594;object-fit:cover;width:100%}
+.clubs__grid>figure{margin:0}
+.clubs__grid>figure img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%}
+.clubs figcaption{font-size:.88rem;color:var(--mute);margin-top:8px}
+@media (min-width:1000px){.clubs__grid{grid-template-columns:1fr 1.7fr}}
+
+/* visit: the building appears once, here */
+.visit{border-top:1px solid var(--line)}
+.visit__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px 64px;align-items:start}
+.visit .k-visit__info{padding:0}
+.visit__fig{margin:0;overflow:hidden;max-width:1200px}
+.visit__fig img{width:100%}
+.visit__cap{font-size:.88rem;color:var(--mute);margin:8px 0 14px}
+@media (min-width:1000px){.visit__grid{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}}
+
+/* registration: QR card follows you down */
+.regi__grid{align-items:start}
+@media (min-width:1000px){.regi__qr{position:sticky;top:110px}}
+
+/* inner page intro actions */
+.intro__acts{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;margin-top:22px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:clamp(24px,3vw,40px)}
+.pair figure{margin:0}
+.pair img{width:100%;aspect-ratio:1044/720;object-fit:cover}
+.pair figcaption{font-size:.88rem;color:var(--mute);margin-top:8px}
+.pair figure:first-child img{filter:grayscale(1)}
+@media (max-width:640px){
+  .hero--stages .hero__name{order:0;padding-inline:0;margin-bottom:0;font-size:clamp(2.5rem,11.5vw,3.4rem)}
+  .hero--stages .hero__row{flex-direction:column;align-items:flex-start;gap:16px}
+  .hero--stages .hero__acts{order:1;padding:0}
+}
+@media (max-width:900px){.stages__row{scroll-padding-inline:var(--pad)}}

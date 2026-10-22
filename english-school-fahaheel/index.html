@@ -11,7 +11,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Naskh+Arabic:wght@500&family=IBM+Plex+Sans+Arabic:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
-<link rel="preload" as="image" href="img/building-sign.webp" fetchpriority="high">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
 <body>
@@ -39,67 +38,46 @@
 </header>
 
 <main id="main">
-<!-- HERO: name set big, the Mangaf building opens beneath it -->
-<section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero__top">
-    <h1 class="hero__name" id="hero-h">
-      <span class="ln"><span style="--i:0">The English School</span></span>
-      <span class="ln ln--2"><span style="--i:1">Fahaheel</span></span>
-    </h1>
-    <div class="hero__aside">
-      <p class="hero__lead">A British school in Mangaf, South Kuwait, founded in 1968 by a group of expatriate parents. We teach from Kindergarten and Reception (age&nbsp;4) to A Level in Year&nbsp;13 (age&nbsp;18), following the National Curriculum for England and Wales.</p>
-      <p class="hero__ar" lang="ar">المدرسة الانجليزية الفحيحيل · الكويت</p>
+<!-- HERO: the school told by its own pupils, Reception to Year 13 -->
+<section class="hero hero--stages" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero__row">
+      <h1 class="hero__name" id="hero-h"><span class="ln"><span style="--i:0">The English School Fahaheel</span></span></h1>
       <div class="hero__acts">
         <a class="btn btn--red" data-k-magnetic="0.25" href="#register">Register for 2026–2027 <span class="k-arrow" aria-hidden="true">→</span></a>
-        <a class="more k-link" href="tel:+96523711070">Call (965) 2371 1070</a>
+        <a class="more k-link" href="tel:+96523711070">Call (965) 2371&nbsp;1070</a>
       </div>
     </div>
-  </div>
-  <figure class="hero__photo">
-    <picture>
-      <img src="img/building-sign.webp" alt="The English School Fahaheel building in Mangaf, white walls and round windows under a blue sky, with the school's name sign" width="2400" height="1371" fetchpriority="high">
-    </picture>
-    <figcaption>Our premises in Mangaf, opened January 2005</figcaption>
-  </figure>
-</section>
-
-<!-- STAGES: Reception to Year 13 -->
-<section class="sec stages" aria-labelledby="st-h">
-  <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2" id="st-h" data-reveal="lines">From Reception to Year 13</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">The school follows the British model and names its year groups the same way: Reception at age 4, through Year 1, up to Year 13 at age 18. That gives every student 12 years of continuous education in one place.</p>
-    </div>
-    <div class="stages__row" data-reveal-stagger="110" role="region" aria-label="School stages, scroll sideways on phones" tabindex="0">
-      <a class="stage" href="services.html#lower" data-reveal>
-        <div class="stage__ph k-zoom"><img src="img/p1-reception.webp" alt="Two young pupils in red ESF jumpers and tartan" width="480" height="594" loading="lazy"></div>
-        <p class="stage__t">Lower School <span class="k-arrow" aria-hidden="true">→</span></p>
-        <p class="stage__d">Kindergarten and Reception. The UK Foundation Stage curriculum.</p>
+    <div class="stages__row hero__strip" role="region" aria-label="School stages from Reception to Year 13, scroll sideways on phones" tabindex="0">
+      <a class="stage" href="services.html#lower" style="--d:0">
+        <div class="stage__ph k-zoom"><img src="img/p1-reception.webp" alt="Two young pupils in red ESF jumpers and tartan" width="480" height="594" fetchpriority="high"></div>
+        <p class="stage__t">Reception <span class="k-arrow" aria-hidden="true">→</span></p>
+        <p class="stage__d">Age 4. Kindergarten and Reception, the UK Foundation Stage.</p>
       </a>
-      <a class="stage" href="services.html#middle" data-reveal>
-        <div class="stage__ph k-zoom"><img src="img/p3-library.webp" alt="A boy in the red school jumper reading in the library" width="1720" height="1440" loading="lazy"></div>
+      <a class="stage" href="services.html#middle" style="--d:1">
+        <div class="stage__ph k-zoom"><img src="img/p3-library.webp" alt="A boy in the red school jumper reading in the library" width="860" height="720"></div>
         <p class="stage__t">Middle School <span class="k-arrow" aria-hidden="true">→</span></p>
-        <p class="stage__d">Years 3 to 6. Literacy, Numeracy and Science first.</p>
+        <p class="stage__d">Years&nbsp;3 to 6. Literacy, Numeracy and Science first.</p>
       </a>
-      <a class="stage" href="services.html#upper" data-reveal>
-        <div class="stage__ph k-zoom"><img src="img/p5-upper.webp" alt="Four Upper School girls in red jumpers and tartan skirts" width="780" height="594" loading="lazy"></div>
+      <a class="stage" href="services.html#upper" style="--d:2">
+        <div class="stage__ph k-zoom"><img src="img/p5-upper.webp" alt="Four Upper School girls in red jumpers and tartan skirts" width="780" height="594"></div>
         <p class="stage__t">Upper School <span class="k-arrow" aria-hidden="true">→</span></p>
-        <p class="stage__d">From age 11, by entrance exam and interview.</p>
+        <p class="stage__d">From age&nbsp;11, by entrance exam and interview.</p>
       </a>
-      <a class="stage" href="services.html#upper" data-reveal>
-        <div class="stage__ph k-zoom"><img src="img/p4-science.webp" alt="A senior student in a navy blazer working with a teacher in a science laboratory" width="1320" height="1440" loading="lazy"></div>
-        <p class="stage__t">IGCSE &amp; A Level <span class="k-arrow" aria-hidden="true">→</span></p>
-        <p class="stage__d">Cambridge International and Edexcel, scripts marked in the UK.</p>
+      <a class="stage" href="services.html#upper" style="--d:3">
+        <div class="stage__ph k-zoom"><img src="img/p4-science.webp" alt="A senior student in a navy blazer working with a teacher in a science laboratory" width="660" height="720"></div>
+        <p class="stage__t">IGCSE &amp; A&nbsp;Level <span class="k-arrow" aria-hidden="true">→</span></p>
+        <p class="stage__d">Cambridge International and Edexcel, marked in the UK.</p>
       </a>
-      <a class="stage" href="services.html#sixth" data-reveal>
-        <div class="stage__ph k-zoom"><img src="img/p6-graduate.webp" alt="A graduate of the Class of 2024 in gown, cap and blue ESF sash" width="860" height="1440" loading="lazy"></div>
-        <p class="stage__t">Year 13 <span class="k-arrow" aria-hidden="true">→</span></p>
-        <p class="stage__d">The Sixth Form Centre, then university. Class of 2024.</p>
+      <a class="stage" href="services.html#sixth" style="--d:4">
+        <div class="stage__ph k-zoom"><img src="img/p6-graduate.webp" alt="A graduate of the Class of 2024 in gown, cap and blue ESF sash" width="428" height="720"></div>
+        <p class="stage__t">Year&nbsp;13 <span class="k-arrow" aria-hidden="true">→</span></p>
+        <p class="stage__d">Age 18. The Sixth Form Centre, then university.</p>
       </a>
     </div>
-    <div class="stages__foot" data-reveal>
-      <p>Arabic and Islamic Studies are taught to the Ministry of Education syllabus, in separate classes for Arabs and non-Arabs. French from Year 4.</p>
-      <a class="more k-link" href="services.html">The full curriculum <span class="k-arrow" aria-hidden="true">→</span></a>
+    <div class="hero__foot">
+      <p class="hero__lead">A British school in Mangaf, South Kuwait, founded in 1968 by a group of expatriate parents. We follow the National Curriculum for England and Wales, from Reception at age&nbsp;4 to Year&nbsp;13 at age&nbsp;18: which meets the requirement for 12 years of continuous education.</p>
+      <p class="hero__note">Arabic and Islamic Studies are taught to the Ministry of Education syllabus, in separate classes for Arabs and non-Arabs. French from Year&nbsp;4. <a class="more k-link" href="services.html">The full curriculum <span class="k-arrow" aria-hidden="true">→</span></a></p>
     </div>
   </div>
 </section>
@@ -125,7 +103,7 @@
 <!-- HISTORY: the school register -->
 <section class="sec hist" aria-labelledby="hi-h">
   <div class="wrap">
-    <div class="sec__head">
+    <div class="sec__head sec__head--wide">
       <h2 class="h2" id="hi-h" data-reveal="lines">Kuwait’s oldest English school</h2>
       <p class="lede" data-reveal data-reveal-delay="150">When we opened there was no other school in South Kuwait teaching in English, apart from a Kuwait Oil Company school in Ahmadi for its employees’ children.</p>
     </div>
@@ -150,16 +128,15 @@
 <!-- PREMISES -->
 <section class="sec prem" aria-labelledby="pr-h">
   <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2" id="pr-h" data-reveal="lines">The Mangaf premises</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">Air-conditioned throughout, with CCTV inside and out and the gates guarded through the teaching day. The owner built it that way so parents can be sure their children are safe.</p>
-    </div>
+    <h2 class="h2 prem__h" id="pr-h" data-reveal="lines">The Mangaf premises</h2>
     <figure class="prem__wide" data-reveal="clip"><img src="img/lab.webp" alt="A teacher and students in masks and safety glasses working together in a science laboratory" width="2400" height="726" loading="lazy" data-speed="-0.06"></figure>
     <div class="prem__tiles" data-reveal-stagger="100">
       <figure data-reveal><div class="k-zoom"><img src="img/library.webp" alt="Students in red jumpers working on computers in the library" width="1010" height="594" loading="lazy"></div><figcaption>Two libraries and four computer centres</figcaption></figure>
       <figure data-reveal><div class="k-zoom"><img src="img/pool.webp" alt="The indoor swimming pool" width="690" height="594" loading="lazy"></div><figcaption>Indoor pool with changing rooms</figcaption></figure>
       <figure data-reveal><div class="k-zoom"><img src="img/court.webp" alt="The shaded outdoor sports court" width="684" height="594" loading="lazy"></div><figcaption>Supervised outdoor play area</figcaption></figure>
     </div>
+    <div class="prem__body">
+      <p class="lede" data-reveal data-reveal-delay="150">Air-conditioned throughout, with CCTV inside and out and the gates guarded through the teaching day. The owner built it that way so parents can be sure their children are safe.</p>
     <ul class="prem__list" data-reveal-stagger="40">
       <li data-reveal><b>Six science laboratories</b> with preparation rooms</li>
       <li data-reveal><b>Two theatres</b>, the Lloyd Webber and the Julie Andrews</li>
@@ -174,17 +151,12 @@
       <li data-reveal>Parent/teacher room for confidential talks</li>
       <li data-reveal>Mosque, tuck shop and cafe outside the building</li>
     </ul>
+    </div>
   </div>
 </section>
 
 <!-- CLUBS -->
 <section class="sec clubs" aria-labelledby="cl-h">
-  <div class="wrap">
-    <div class="sec__head">
-      <h2 class="h2" id="cl-h" data-reveal="lines">After lessons</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">Our staff run clubs and activities during and after school hours, and places go first come, first served. ESF is a member of KFSAC and ISACK, so students compete and perform with other schools in Kuwait.</p>
-    </div>
-  </div>
   <div class="k-marquee" data-k-marquee data-k-marquee-speed="55" aria-label="Some of the ESF clubs">
     <div class="k-marquee__track">
       <span class="mq-w">ESF Singers</span><i class="mq-d"></i>
@@ -199,11 +171,13 @@
       <span class="mq-w">Badminton</span><i class="mq-d"></i>
     </div>
   </div>
-  <div class="wrap">
-    <div class="clubs__media">
-      <figure data-reveal="clip"><img src="img/sports.webp" alt="A group of boys in blue ESF sports shirts holding basketballs" width="2400" height="726" loading="lazy"><figcaption>Sports clubs are run by the P.E. Department.</figcaption></figure>
+  <div class="wrap clubs__grid">
+    <div class="clubs__text">
+      <h2 class="h2" id="cl-h" data-reveal="lines">After lessons</h2>
+      <p class="lede" data-reveal data-reveal-delay="150">Our staff run clubs and activities during and after school hours, and places go first come, first served. ESF is a member of KFSAC and ISACK, so students compete and perform with other schools in Kuwait.</p>
       <figure data-reveal="clip" data-reveal-delay="120"><img src="img/concert.webp" alt="Students singing on stage with a student band behind them" width="700" height="594" loading="lazy"><figcaption>Concerts, plays and the ESF Band</figcaption></figure>
     </div>
+    <figure data-reveal="clip"><img src="img/sports.webp" alt="A group of boys in blue ESF sports shirts holding basketballs" width="2400" height="726" loading="lazy"><figcaption>Sports clubs are run by the P.E. Department.</figcaption></figure>
   </div>
 </section>
 
@@ -216,8 +190,8 @@
     </div>
     <div class="exams__grid">
       <div><dl>
-        <dt data-reveal>IGCSE, Years 10 and 11</dt><dd data-reveal>Cambridge International. Some subjects can be sat after one year.</dd>
-        <dt data-reveal>AS and A Level, Years 12 and 13</dt><dd data-reveal>Cambridge International and Edexcel.</dd>
+        <dt data-reveal>IGCSE, Years&nbsp;10 and 11</dt><dd data-reveal>Cambridge International. Some subjects can be sat after one year.</dd>
+        <dt data-reveal>AS and A Level, Years&nbsp;12 and 13</dt><dd data-reveal>Cambridge International and Edexcel.</dd>
       </dl></div>
       <div><dl>
         <dt data-reveal>Kuwaiti High School Secondary Examination</dt><dd data-reveal>Offered by the Secondary Department alongside IGCSE Arabic.</dd>
@@ -266,7 +240,8 @@
 </section>
 
 <!-- VISIT -->
-<section class="k-visit" id="visit" aria-labelledby="vi-h">
+<section class="sec visit" id="visit" aria-labelledby="vi-h">
+  <div class="wrap visit__grid">
   <div class="k-visit__info">
     <h2 class="h2" id="vi-h" data-reveal="lines">Visit us</h2>
     <p class="k-visit__addr" data-reveal>The English School Fahaheel, Mangaf, Kuwait</p>
@@ -284,8 +259,13 @@
       <a class="btn btn--line" href="mailto:esf@skee.com">esf@skee.com</a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=The+English+School+Fahaheel,+Mangaf,+Kuwait&amp;z=15&amp;output=embed">
+  <div class="visit__media">
+    <figure class="visit__fig" data-reveal="clip"><img src="img/building-sign.webp" alt="The school building in Mangaf with its sign: The English School Fahaheel, Kindergarten, Primary, Secondary" width="1200" height="686" loading="lazy"></figure>
+    <p class="visit__cap">The school in Mangaf, near the sea. Our premises since January 2005.</p>
+    <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=The+English+School+Fahaheel,+Mangaf,+Kuwait&amp;z=15&amp;output=embed">
     <button type="button">Show the map</button>
+  </div>
+  </div>
   </div>
 </section>
 </main>
@@ -297,7 +277,7 @@
         <img src="img/crest.webp" alt="" width="64" height="65" loading="lazy">
         <div>
           <p class="ft__name">The English School Fahaheel</p>
-          <p class="ft__ar" lang="ar">المدرسة الانجليزية الفحيحيل · الكويت</p>
+          <p class="ft__ar" lang="ar"><span class="nw">المدرسة الانجليزية الفحيحيل</span> <span class="nw">· الكويت</span></p>
           <p class="ft__motto">“Excellence in Education since 1968”</p>
         </div>
       </div>
