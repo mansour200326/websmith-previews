@@ -381,3 +381,23 @@ a{color:inherit}
 .story__grid{row-gap:clamp(30px,4vw,56px)}
 /* kit reveal leaves clip-path:inset(0) on revealed text, which cut the dots of final ي (في read as فى) and glyph overhangs */
 .k-js [data-reveal].is-in:not([data-reveal=clip]){clip-path:none}
+/* ===== Fannan round 4 fixes ===== */
+.split__pics figure{position:relative}
+.split__pics figcaption{position:absolute;inset-inline-start:12px;bottom:12px;background:var(--plum);color:var(--on-plum);font:500 .85rem/1.2 var(--k-body);padding:7px 10px}
+.svc__pics figcaption{font-size:.85rem;color:var(--k-mute);padding:8px 0 0;background:#fff}
+.svc__pics figure{background:none}
+.svc__pics figure img{display:block}
+.ph__strip{position:relative}
+.ph__cap{position:absolute;inset-inline-start:10px;bottom:10px;background:var(--plum);color:var(--on-plum);font:500 .85rem/1.2 var(--k-body);padding:7px 10px;margin:0}
+.k-cta h2{text-wrap:balance}
+.ph__jump{row-gap:10px}
+@media (max-width:899px){.ph__jump{row-gap:10px;column-gap:18px}}
+.story__grid{grid-template-columns:1fr!important}
+.story__txt{grid-column:1/-1!important;max-width:40em}
+.k-visit__map{display:grid;place-items:center;align-content:center;gap:22px;padding:clamp(28px,4vw,56px)}
+.mapaddr{position:relative;z-index:1;color:var(--on-plum);text-align:center;max-width:24em;font-size:1rem;line-height:1.5}
+.mapaddr b{display:block;font:700 clamp(1.6rem,3vw,2.4rem)/1.1 var(--k-display);text-transform:uppercase;color:var(--tang-l);margin-bottom:8px}
+:lang(ar) .mapaddr b{text-transform:none;line-height:1.4;font-size:clamp(1.3rem,2.4vw,1.9rem)}
+.k-visit__map:has(iframe.is-on) .mapaddr,.k-visit__map:has(iframe.is-on)>button{visibility:hidden}
+@media (max-width:899px){.k-visit__map{min-height:300px}}
+.split__pics figcaption{bottom:auto;top:12px;z-index:2}
