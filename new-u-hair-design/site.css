@@ -300,3 +300,66 @@ a{color:inherit}
   .kathy__shop{grid-row:2/4}
 }
 @media (max-width:600px){.strip .ph:last-child{aspect-ratio:auto}}
+
+/* ===== round 3 (independent Fannan review) ===== */
+/* one grade across every photo: neutral black and white, slightly lifted contrast */
+main img:not(.k-fx img){filter:grayscale(1) contrast(1.08) brightness(1.02)}
+
+/* hero: flat grid, photo bleeds to the right edge, mark overlaps the photo bottom */
+.hero{max-width:none;margin:0;padding:clamp(24px,5vw,40px) var(--pad) 0;display:grid;grid-template-columns:1fr;gap:0;position:relative}
+.hero h1{font-size:clamp(2.6rem,5.6vw,6.5rem);line-height:.98;max-width:none;order:1}
+.hero__l{padding-bottom:.08em;margin-bottom:-.04em}
+.hero__fig{order:2;margin-top:22px}
+.hero__now{order:3;margin-top:18px}
+.hero__acts{order:4;margin-top:16px}
+.hero__lead{order:5;margin-top:18px}
+.mark{order:6}
+.hero__photo{aspect-ratio:16/10.4}
+.hero__photo img{object-position:62% 50%}
+@media (min-width:980px){
+  .hero{grid-template-columns:minmax(0,1fr) 56vw;grid-template-rows:auto auto auto 1fr auto;padding:0 0 0 var(--pad);height:calc(100svh - 69px);min-height:660px;max-height:900px;column-gap:clamp(28px,3vw,48px)}
+  .hero h1{grid-column:1;grid-row:1;padding-top:clamp(28px,4vh,48px);font-size:clamp(2.6rem,5.2vw,6.5rem)}
+  .hero__lead{grid-column:1;grid-row:2;margin-top:18px;font-size:1.05rem;max-width:30em}
+  .hero__now{grid-column:1;grid-row:3;margin-top:16px}
+  .hero__acts{grid-column:1;grid-row:4;align-self:start;margin-top:20px}
+  .hero__fig{grid-column:2;grid-row:1/6;margin:0;position:relative;height:100%}
+  .hero__photo{aspect-ratio:auto;height:100%}
+  .hero__fig figcaption{position:absolute;top:16px;right:16px;margin:0;background:#fff;color:var(--k-ink);font-size:.82rem;padding:6px 10px}
+  .mark{grid-column:1/-1;grid-row:5;position:relative;z-index:2;margin:0;padding:0 var(--pad) clamp(18px,3vh,30px) 0;font-size:clamp(5rem,8.6vw,9.5rem)}
+  .mark__u{background:#fff;border-radius:50%}
+}
+@media (max-width:979px){
+  .mark{font-size:clamp(4.2rem,22vw,9rem);margin-top:26px}
+}
+
+/* (3) "Kathy" descender */
+.kathy__name{line-height:.9}
+.kathy__name .k-rv-line{padding-bottom:.14em;margin-bottom:-.14em}
+.phead h1{line-height:.9}
+.phead .hero__l{padding-bottom:.14em;margin-bottom:-.1em}
+
+/* (1) photo sizes: the 800px interior never wider than 560px; halftone small on phones */
+.kathy__shop .ph,.svc__fig .ph,.strip .ph:last-child{max-width:560px}
+.svc__fig{max-width:560px}
+@media (max-width:600px){.kathy__por .k-fx,.story__por .k-fx{max-width:260px}}
+
+/* (4) dead holes */
+.ward__in{align-items:center}
+@media (min-width:980px){.ward__in{align-items:center}}
+.kathy__years{grid-column:1/-1;margin:6px 0 0}
+@media (min-width:900px){
+  .kathy__por{grid-column:1/4;grid-row:2}
+  .kathy__tools{grid-column:1/5;grid-row:3;margin-top:clamp(20px,3vw,36px)}
+  .kathy__text{grid-column:5/9;grid-row:2/4}
+  .kathy__shop{grid-column:9/13;grid-row:2;margin-top:clamp(30px,4vw,60px)}
+  .kathy__years{grid-column:9/13;grid-row:3;align-self:start;margin-top:clamp(20px,3vw,36px)}
+}
+@media (max-width:899px){.kathy__shop,.kathy__tools{grid-column:1/-1}}
+.sign{width:80%;max-width:640px}
+.sign__row{font-size:clamp(1.4rem,2.6vw,2.3rem);padding:20px 28px}
+.brands{padding-top:clamp(8px,2vw,24px)}
+
+/* (5) wayfinding plates fill the row on phones */
+@media (max-width:719px){.way__plate{width:100%;min-width:0}}
+@media (min-width:980px){.hero h1{font-size:clamp(2.6rem,5.6vw,6.5rem)}.hero__photo img{object-position:92% 50%}}
+@media (max-width:600px){.sign{width:100%}.sign__row{font-size:1.35rem;padding:16px 20px}}
