@@ -296,3 +296,88 @@ a{color:inherit}
 .ph__strip img{width:100%;height:100%;object-fit:cover}
 @media (max-width:600px){.ph__strip{grid-template-columns:1.4fr 1fr}.ph__strip figure:nth-child(3){display:none}}
 @media (min-width:900px){.hero__quote{font-size:clamp(1.3rem,1.8vw,1.7rem)}.hero__looks .k-zoom{aspect-ratio:1/1}.hero__lead{font-size:1.12rem}.hero__side{gap:16px}.hero__side .bot{gap:14px}}
+
+/* ===== Fannan round 3 fixes ===== */
+/* 1: EN mark keeps Antonio on Arabic pages; tighter header on phones */
+.mark b[lang=en],:lang(ar) .mark b{font-family:"Antonio","Arial Narrow",sans-serif;font-weight:700;letter-spacing:.01em}
+@media (max-width:599px){.hd__in{gap:12px}.hd__tools{gap:2px}.hd__book{padding:0 12px}.hd__lang{min-width:44px;padding:0 4px}}
+/* 2: display glyphs not clipped by masks */
+.hero__name .m{padding:.04em 0 .1em;margin-bottom:-.1em}
+.ph h1 .m{padding-bottom:.08em;margin-bottom:-.08em}
+.k-rv-line{padding-bottom:.12em;margin-bottom:-.12em}
+:lang(ar) .k-rv-line,:lang(ar) .hero__name .m,:lang(ar) .ph h1 .m,:lang(ar) .hero__svc .m{padding-bottom:.3em;margin-bottom:-.3em}
+
+/* type-led plum hero (no stock photo) */
+.hero{background:var(--plum);color:var(--on-plum);padding:clamp(22px,3vw,40px) 0 clamp(18px,2vw,28px)}
+.hero__name{color:var(--tang-l)}
+.hero__grid{max-width:var(--max);margin:clamp(28px,4vw,56px) auto 0;padding-inline:var(--pad);display:grid;gap:34px}
+.hero__side{padding:0;display:grid;gap:18px;align-content:start}
+.hero__quote{display:block;color:var(--tang-l);font-size:clamp(1.4rem,2.2vw,2rem)}
+.hero__lead{font-size:clamp(1.1rem,1.5vw,1.3rem);max-width:26em;color:var(--on-plum)}
+.hero .k-btn{background:var(--tang-l);color:var(--plum)}
+.hero .k-btn::before{background:#fff}
+.hero .k-btn:hover{color:var(--plum)}
+.hero .tel-big{color:var(--on-plum)}
+.hero__svc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.05em .45em;font:700 clamp(2.3rem,5.4vw,5rem)/1 var(--k-display);text-transform:uppercase}
+:lang(ar) .hero__svc ul{text-transform:none;font-size:clamp(1.9rem,4.4vw,4rem);line-height:1.3}
+.hero__svc li{display:flex;align-items:center;gap:.45em}
+.hero__svc li:not(:last-child)::after{content:"";width:.16em;height:.16em;background:var(--tang-l);transform:rotate(45deg);flex:none}
+.hero__svc .m{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero__svc a{display:block;color:var(--on-plum);text-decoration:none;background-size:0 .06em;min-height:44px}
+.hero__svc a:hover{color:var(--tang-l)}
+.k-js .hero__svc a{transform:translateY(105%);animation:k-rise 1s var(--k-ease) forwards;animation-delay:calc(.55s + var(--i,0)*.07s)}
+.hero__cap{border-top-color:rgba(255,255,255,.3);color:var(--on-plum-mute);margin-top:clamp(30px,4vw,56px)}
+.hero__cap span:nth-child(2){font-style:normal}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:start}
+  .hero__side{grid-column:9/13;grid-row:1;padding-top:.3em}
+  .hero__svc{grid-column:1/9;grid-row:1}
+  .hero__quote{font-size:clamp(1.3rem,1.8vw,1.7rem)}
+}
+@media (max-width:600px){.hero__cap span:nth-child(2){display:none}}
+@media (prefers-reduced-motion:reduce){.k-js .hero__svc a{animation:none;transform:none}}
+
+/* split: single bundle panel narrower */
+.split__pics{grid-template-columns:1fr 1.6fr}
+.split__pics figure:first-child img{object-position:50% 45%}
+
+/* accordion rows without a photo */
+.k-acc__body:not(:has(img)){grid-template-columns:1fr}
+
+/* 6: CTA aligns with the content grid */
+.k-cta{padding-inline:max(var(--pad),calc((100% - var(--max))/2 + var(--pad)))}
+
+/* 5: page heads, right half filled */
+.ph__grid{display:grid;gap:28px}
+.ph__grid .ph__strip{margin-top:0}
+.ph__panel{background:var(--plum);color:var(--on-plum);padding:clamp(24px,3vw,40px);display:grid;gap:18px;align-content:end;min-height:280px}
+.ph__panel p{font:400 clamp(1.4rem,2.2vw,2rem)/1.2 var(--k-body);color:var(--tang-l);font-style:italic}
+:lang(ar) .ph__panel p{font-style:normal;line-height:1.6}
+.ph__panel dl{margin:0;display:grid;gap:10px;font-size:1rem}
+.ph__panel dt{color:var(--on-plum-mute);font-size:.88rem}
+.ph__panel dd{margin:0}
+@media (min-width:900px){
+  .ph__grid{grid-template-columns:1.15fr 1fr;column-gap:clamp(24px,4vw,64px);align-items:end}
+  .ph__grid .ph__row{grid-template-columns:1fr}
+  .ph__grid .ph__strip{grid-template-columns:1fr 1fr;align-self:stretch}
+  .ph__grid .ph__strip figure{aspect-ratio:auto;min-height:100%}
+  .ph__grid .ph__strip figure:nth-child(3){display:none}
+}
+/* services blocks without photos */
+.svc--nopic .svc__txt{grid-column:1/-1!important;position:static;order:0!important}
+.svc--nopic ul{columns:2 200px;column-gap:30px;max-width:46em}
+.svc--nopic li{break-inside:avoid}
+.ph__l{display:grid;gap:0;align-content:end}
+.ph__l .ph__row{margin-top:clamp(20px,2.4vw,32px)}
+@media (min-width:900px){
+  .ph .ph__l h1{font-size:clamp(4rem,9.4vw,9.5rem)}
+  :lang(ar) .ph .ph__l h1{font-size:clamp(3rem,7vw,7rem)}
+  .ph__grid .ph__strip{height:clamp(320px,32vw,460px)}
+  .ph__grid .ph__strip figure{min-height:0;height:100%}
+  .ph__grid{align-items:end}
+}
+@media (min-width:900px){.story__ph{margin-top:0}}
+.story__q{position:relative;z-index:1}
+.story__grid{row-gap:clamp(30px,4vw,56px)}
+/* kit reveal leaves clip-path:inset(0) on revealed text, which cut the dots of final ي (في read as فى) and glyph overhangs */
+.k-js [data-reveal].is-in:not([data-reveal=clip]){clip-path:none}
