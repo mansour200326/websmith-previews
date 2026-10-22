@@ -344,3 +344,10 @@ a{color:inherit}
   .ft ul{gap:2px}
   .visit__dl{row-gap:14px}
 }
+/* round-1 polish */
+@media (min-width:900px){.hero h1{font-size:clamp(6rem,21vw,19rem)}}
+html:lang(ar) .hero h1 [lang=en]{font-weight:900!important;font-variation-settings:"wdth" 125;letter-spacing:-.055em!important;line-height:.8!important}
+[lang=ar] .hero__hud{text-align:right}
+[lang=ar] .hero__hud b,[lang=ar] .hero__hud .slogan{text-align:right;direction:ltr;unicode-bidi:plaintext}
+@media (min-width:900px){[lang=ar] .hero__hud,[lang=ar] .hero__hud b,[lang=ar] .hero__hud .slogan{text-align:left}}
+.ph__bg img{filter:saturate(1.15) brightness(1.15)}
