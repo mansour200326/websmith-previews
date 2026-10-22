@@ -300,3 +300,20 @@ a{color:inherit}
 .hero__row a,.branch .acts a,.tlink{min-height:44px}
 .subnav a{padding-inline:4px;min-width:44px;text-align:center}
 .video button b{font-family:var(--k-display)}
+@media (max-width:1100px){.k-js .cls>[data-reveal]{opacity:1;transform:none}}
+
+.subnav .wrap{gap:0 24px}.subnav a{flex:none}
+.hd__call{display:none;width:48px;height:48px;border-radius:50%;background:var(--red-ink);color:#fff;place-items:center;flex:none}
+.hd__call svg{width:20px;height:20px}
+.mbar{display:none}
+@media (max-width:560px){.hd__call{display:grid;margin-inline-start:auto}.nav-m{margin-inline-start:0}}
+@media (max-width:760px){
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;inset-inline:0;bottom:0;z-index:45;background:var(--ink);border-top:1px solid rgba(255,255,255,.15);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;color:#fff;text-decoration:none;font:700 1.05rem var(--k-display)}
+  .mbar a+a{background:var(--red-ink)}
+  .mbar svg{width:18px;height:18px}
+  body{padding-bottom:58px}
+  .k-js .mbar{transform:translateY(100%);animation:mbar-in .7s var(--k-ease) 1.4s forwards}
+}
+@keyframes mbar-in{to{transform:none}}
+@media (prefers-reduced-motion:reduce){.k-js .mbar{animation:none;transform:none}}

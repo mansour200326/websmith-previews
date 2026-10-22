@@ -41,10 +41,12 @@ a{color:inherit}
 .hd__nav a:hover{color:var(--blue)}
 .hd__tel{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;color:var(--blue);padding:12px 4px;min-height:44px;font-variant-numeric:tabular-nums}
 .hd__tel svg{width:18px;height:18px}
-.k-lang{display:inline-flex}
-.k-lang a{display:inline-grid;place-items:center;min-width:48px;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:4px;text-decoration:none;font-weight:700;font-size:.95rem}
+.k-lang{display:inline-flex;border:0;padding:0;border-radius:0}
+.k-lang a{display:inline-grid;place-items:center;min-width:48px;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:4px;text-decoration:none;font:700 .95rem/1 var(--body);color:var(--ink)}
+.k-lang a::after{display:none}
 .k-lang a:hover{border-color:var(--blue);color:var(--blue)}
-.k-lang a[lang=ar]{font-family:"Almarai",sans-serif}
+.k-lang a[lang=ar]{font-family:"Almarai","Amiri",sans-serif;font-size:1rem}
+.k-lang a[lang=en]{font-family:"Atkinson Hyperlegible",sans-serif}
 .hd__menu{display:none;margin-inline-start:auto;min-width:48px;min-height:44px;border:1px solid var(--line);background:#fff;border-radius:4px;font:700 .95rem var(--body);color:var(--ink);cursor:pointer}
 @media (max-width:1060px){
   .hd__nav{display:none;position:absolute;inset-inline:0;top:100%;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:8px var(--pad) 18px}
@@ -108,6 +110,7 @@ a{color:inherit}
 .grade--g{background:var(--blue)}
 .grade--g b{color:#fff}
 .grade--g small{color:#dfe4ff}
+@media (max-width:559px){.grades{grid-template-columns:repeat(3,1fr);gap:6px}.grade{min-height:96px;padding:20px 4px 10px}.grade b{font-size:1.05rem}.grade small{font-size:.78rem}[lang=ar] .grade b{font-size:.95rem;white-space:normal}}
 .grades__note{margin-top:22px;color:var(--mute);font-size:.98rem;max-width:56em}
 
 /* ---------- Quran band ---------- */
@@ -197,6 +200,7 @@ a{color:inherit}
 .ft a{color:#fff}
 .ft__acts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;margin-bottom:56px}
 @media (min-width:860px){.ft__acts{grid-template-columns:repeat(5,1fr)}}
+@media (max-width:859px){.ft__acts a:last-child{grid-column:1/-1}}
 .ft__acts a{display:flex;flex-direction:column;gap:12px;padding:22px 20px;background:var(--blue-deep);text-decoration:none;font-weight:700;min-height:100px;transition:background .3s}
 .ft__acts a:hover{background:#1d2a7d}
 .ft__acts svg{width:26px;height:26px;color:var(--gold)}
@@ -207,7 +211,7 @@ a{color:inherit}
 [lang=ar] .ft__name{font-weight:700;line-height:1.4}
 .ft__name span{display:block;font:700 1.25rem/1.6 "Amiri",serif;color:#c9d0ff;margin-top:6px}
 .ft h3{font:700 .95rem/1 var(--body);color:#c3caf2;margin-bottom:12px}
-.ft ul a{display:inline-block;padding-block:8px;text-decoration:none}
+.ft ul a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;text-decoration:none}
 .ft ul a:hover{text-decoration:underline}
 .ft p{color:#c9cff3}
 .ft__note{margin-top:56px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.88rem;color:#b9c1ee}
@@ -277,7 +281,7 @@ table.ages{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums
 .vmv__grid{display:grid;gap:40px}
 @media (min-width:980px){.vmv__grid{grid-template-columns:.9fr 1.1fr;gap:80px}}
 .vmv__tabs{display:flex;flex-direction:column;align-items:flex-start}
-.vmv__tabs button{all:unset;cursor:pointer;font:400 clamp(3rem,7vw,6.2rem)/1.02 var(--display);letter-spacing:-.03em;color:#aab1cc;display:flex;align-items:center;gap:18px;transition:color .4s var(--ease);min-height:44px}
+.vmv__tabs button{all:unset;cursor:pointer;font:400 clamp(3rem,7vw,6.2rem)/1.02 var(--display);letter-spacing:-.03em;color:#767d99;display:flex;align-items:center;gap:18px;transition:color .4s var(--ease);min-height:44px}
 [lang=ar] .vmv__tabs button{font-weight:700;letter-spacing:0;line-height:1.45}
 .vmv__tabs button::after{content:"";height:2px;width:0;background:var(--gold);transition:width .6s var(--ease)}
 .vmv__tabs button[aria-selected=true]{color:var(--blue-ink)}

@@ -347,7 +347,7 @@ bdi,.ltr{unicode-bidi:isolate}
 /* kit 06 restyle */
 .k-stats{padding:clamp(60px,8vw,120px) 0 0;max-width:none}
 .k-stats__num{font:400 clamp(5.5rem,15vw,13rem)/.8 var(--display);letter-spacing:-.02em}
-.k-stats__num small{font:400 .3em var(--body);color:var(--mute);vertical-align:baseline;margin-inline-start:.2em;letter-spacing:0}
+.k-stats__num small{font:400 .18em var(--body);color:var(--mute);vertical-align:baseline;margin-inline-start:.2em;letter-spacing:0}
 .k-stats__txt{color:var(--mute)}
 .k-stats__txt b{font-weight:500}
 
@@ -413,6 +413,7 @@ bdi,.ltr{unicode-bidi:isolate}
 @media (min-width:900px){.gas__grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
 .gas .label,.gas .label b{color:#fff}
 .gas .label{color:#ffe1e3}
+.gas .label .ar{color:#fff}
 .gas h2{font:400 clamp(2.5rem,5.6vw,5.6rem)/1 var(--display);margin-top:18px;max-width:12em}
 .gas p{color:#ffe9ea;max-width:34em;margin-top:22px;font-size:1.06rem}
 .gas ul{list-style:none;padding:0;margin-top:24px;max-width:34em}

@@ -67,7 +67,7 @@ a{color:inherit}
 .hero__body{width:100%;max-width:1600px;margin:0 auto;padding:0 var(--pad) clamp(26px,5vh,56px)}
 .hero h1{font:900 clamp(4.6rem,19vw,17rem)/.8 var(--k-display);letter-spacing:-.055em;font-variation-settings:"wdth" 125;margin-inline-start:-.04em;text-shadow:0 2px 40px rgba(0,0,0,.18)}
 .hero h1 .k-line-mask{padding-bottom:.02em}
-.hero h1 small{display:block;font:600 clamp(1.3rem,3.2vw,2.6rem)/1 var(--k-display);letter-spacing:-.02em;font-variation-settings:"wdth" 110;margin:.25em 0 0 .08em}
+.hero h1 small{display:block;font:500 clamp(2.2rem,5.4vw,4.8rem)/1 var(--k-display);letter-spacing:-.035em;font-variation-settings:"wdth" 112;margin:.12em 0 0 .06em}
 .hero__row{display:grid;gap:22px;margin-top:clamp(18px,3vh,34px);padding-top:clamp(18px,3vh,26px);border-top:1px solid rgba(255,255,255,.32)}
 .hero__sub{font-size:clamp(1.05rem,1.45vw,1.25rem);line-height:1.5;max-width:31em}
 .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
@@ -201,24 +201,24 @@ a{color:inherit}
 
 /* dive-flag CTA band */
 .flag{position:relative;background:var(--red);color:#fff;overflow:hidden;isolation:isolate;padding:clamp(80px,12vw,180px) 0 clamp(64px,8vw,110px)}
-.flag__stripe{position:absolute;inset:0;z-index:-1;background:#fff;clip-path:polygon(0 0,13% 0,100% 82%,100% 100%,87% 100%,0 18%);opacity:.96}
-.flag__stripe{clip-path:polygon(0 0,12% 0,100% 64%,100% 86%,88% 86%,0 22%)}
-.k-js .flag__stripe{clip-path:polygon(0 0,12% 0,12% 0,0 0,0 0,0 22%);transition:clip-path 1.4s var(--ease) .1s}
-.k-js .flag.is-in .flag__stripe{clip-path:polygon(0 0,12% 0,100% 64%,100% 86%,88% 86%,0 22%)}
+.flag__stripe{position:absolute;inset:0;z-index:-1;background:#fff;clip-path:polygon(50% 0,64% 0,100% 50%,100% 74%)}
+.k-js .flag__stripe{clip-path:polygon(50% 0,64% 0,64% 0,50% 0);transition:clip-path 1.4s var(--ease) .1s}
+.k-js .flag.is-in .flag__stripe{clip-path:polygon(50% 0,64% 0,100% 50%,100% 74%)}
 .flag__in{display:grid;gap:26px}
-.flag h2{font:900 clamp(2.6rem,7.4vw,7rem)/.9 var(--k-display);letter-spacing:-.045em;font-variation-settings:"wdth" 118;max-width:11em}
+.flag h2{font:900 clamp(2.6rem,6vw,6rem)/.9 var(--k-display);letter-spacing:-.045em;font-variation-settings:"wdth" 118;max-width:11em}
 .flag p{font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:30em}
 .flag__acts{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
 .flag .btn{background:#fff;color:var(--navy)}
 .flag .btn::before{background:var(--navy)}
 .flag .btn:hover{color:#fff}
 .flag__meta{font:500 .84rem var(--mono);opacity:.95}
-@media (min-width:900px){.flag__in{padding-top:clamp(120px,14vw,220px)}}
+@media (min-width:900px){.flag__in>*{max-width:min(46vw,640px)}.flag h2{max-width:min(48vw,680px)}}
 @media (max-width:899px){
-  .flag__stripe,.k-js .flag.is-in .flag__stripe{clip-path:polygon(0 0,22% 0,100% 18%,100% 24%,78% 24%,0 6%)}
+  .flag__stripe,.k-js .flag.is-in .flag__stripe{clip-path:polygon(40% 0,62% 0,100% 13%,100% 22%)}
+  .k-js .flag__stripe{clip-path:polygon(40% 0,62% 0,62% 0,40% 0)}
   .flag{padding-top:clamp(150px,40vw,220px)}
 }
-@media (prefers-reduced-motion:reduce){.k-js .flag__stripe{transition:none;clip-path:polygon(0 0,12% 0,100% 64%,100% 86%,88% 86%,0 22%)}}
+@media (prefers-reduced-motion:reduce){.k-js .flag__stripe{transition:none;clip-path:polygon(50% 0,64% 0,100% 50%,100% 74%)}}
 
 /* find us */
 .visit{display:grid;border-top:1px solid var(--line)}
@@ -328,3 +328,7 @@ a{color:inherit}
 [lang=ar] .sites__list b{letter-spacing:-.02em}
 [lang=ar] .ladder__t small,[lang=ar] .cacc summary h3 small{line-height:1.7}
 [lang=ar] .hero__hud .slogan,[lang=ar] .ft__big span{font-style:normal}
+[dir=rtl] .flag__stripe,[dir=rtl].k-js .flag.is-in .flag__stripe{clip-path:polygon(50% 0,36% 0,0 50%,0 74%)}
+[dir=rtl].k-js .flag__stripe{clip-path:polygon(50% 0,36% 0,36% 0,50% 0)}
+@media (max-width:899px){[dir=rtl] .flag__stripe,[dir=rtl].k-js .flag.is-in .flag__stripe{clip-path:polygon(60% 0,38% 0,0 13%,0 22%)}[dir=rtl].k-js .flag__stripe{clip-path:polygon(60% 0,38% 0,38% 0,60% 0)}}
+@media (prefers-reduced-motion:reduce){[dir=rtl].k-js .flag__stripe{clip-path:polygon(50% 0,36% 0,0 50%,0 74%)}}
