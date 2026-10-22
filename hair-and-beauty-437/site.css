@@ -438,3 +438,31 @@ a{color:inherit}
 @media (max-width:899px){.intro{padding-top:calc(60px + 56vw * .1)}}
 .ph-band{position:relative}
 .ph-band img{position:absolute;inset:0}
+/* ===== Fannan re-review fixes ===== */
+/* (1) hero: bigger line, bigger number filling the lower part of the first screen */
+.hero__what{font-size:clamp(2.4rem,4.4vw,4.2rem);line-height:1;max-width:none}
+@media (min-width:900px){
+  .hero{--num:clamp(16rem,34vw,30rem)}
+  .hero__body{grid-template-columns:auto 1fr;column-gap:clamp(30px,4vw,64px)}
+  .hero__what{grid-column:1/-1;grid-row:1;white-space:nowrap}
+  .hero h1{grid-column:1;grid-row:2;margin-top:clamp(8px,1.5vh,20px)}
+  .hero__side{grid-column:2;grid-row:2;align-self:start;margin-top:clamp(30px,5vh,60px);max-width:30em}
+}
+/* (2) inside: overlapping pair */
+.inside{padding-bottom:clamp(64px,8vw,120px)}
+@media (min-width:900px){
+  .inside__txt{grid-column:1/6;grid-row:1}
+  .inside__a{grid-column:6/13;grid-row:1;max-width:none}
+  .inside__b{grid-column:1/7;grid-row:2;max-width:none;margin-top:-140px;position:relative;z-index:2;align-self:start}
+}
+@media (max-width:899px){
+  .k-visit__map{background:#a91d28;color:#fff}
+  .k-visit__map .mp-addr small{color:#fff}
+  .k-visit__map .mp-acts a{color:#1c1a1d}
+  .k-visit__map .mp-acts a:hover{background:#1c1a1d;color:#fff}
+}
+/* (3) intro photo + footer wordmark */
+.intro__ph{aspect-ratio:4/5;overflow:hidden}
+@media (max-width:899px){.intro__fig{max-width:none;width:78%;margin-left:auto}.intro__ph{aspect-ratio:4/3}}
+.ft .ft__big span{white-space:nowrap}
+@media (min-width:900px){.inside__a figcaption{text-align:right}}
