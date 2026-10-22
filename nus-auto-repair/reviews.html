@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700;800&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/crew.webp" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -32,13 +31,14 @@
 
 <main id="main">
 
-<section class="pintro" aria-labelledby="rv-h">
-  <div class="wrap pintro__grid">
-    <div>
-      <h1 id="rv-h" data-reveal="lines">Reviews</h1>
-      <p data-reveal data-reveal-delay="200">Seven customers, in their own words, from Yelp, InsiderPages and Kudzu. Some have been coming to us for over twenty years.</p>
-    </div>
-    <figure><div data-reveal="clip"><img src="img/crew.webp" alt="The Nu's crew lined up in front of the open bays" width="2400" height="1599" fetchpriority="high"></div></figure>
+<section class="rhead" aria-labelledby="rv-h">
+  <div class="wrap">
+    <h1 id="rv-h" class="rhead__h">Reviews</h1>
+    <figure class="rhead__q">
+      <blockquote data-reveal="lines">“He's the car whisperer. No joke!”</blockquote>
+      <figcaption data-reveal data-reveal-delay="300"><b>David H.</b>, <a href="https://www.insiderpages.com/b/3710424667/nu-auto-repair-san-diego" target="_blank" rel="noopener">InsiderPages</a></figcaption>
+    </figure>
+    <p class="rhead__p" data-reveal data-reveal-delay="400">Seven customers, in their own words, from Yelp, InsiderPages and Kudzu. Some have been coming to us for over twenty years.</p>
   </div>
 </section>
 

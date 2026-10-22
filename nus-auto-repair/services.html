@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700;800&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/bays.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/wheel.webp" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -33,13 +33,19 @@
 <main id="main">
 
 <section class="pintro" aria-labelledby="svc-h">
-  <div class="wrap pintro__grid">
+  <div class="wrap pintro__grid pintro__grid--svc">
     <div>
       <h1 id="svc-h" data-reveal="lines">Services</h1>
       <p data-reveal data-reveal-delay="200">Everything we do at the shop on 54th Street, in four groups. If your car isn't on the list, call anyway: we fix all cars, from Toyota to Mercedes Benz, and foreign cars too.</p>
-      <p data-reveal data-reveal-delay="300" style="margin-top:26px"><a class="btn" href="tel:+16192875668" data-k-magnetic="0.25"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>(619) 287-5668</a></p>
+      <ol class="jump" data-reveal-stagger="80" aria-label="Jump to a group">
+        <li data-reveal><a href="#engine"><span>01</span>Engine &amp; transmission<i class="k-arrow" aria-hidden="true">↓</i></a></li>
+        <li data-reveal><a href="#body"><span>02</span>Body work<i class="k-arrow" aria-hidden="true">↓</i></a></li>
+        <li data-reveal><a href="#electrical"><span>03</span>Electrical<i class="k-arrow" aria-hidden="true">↓</i></a></li>
+        <li data-reveal><a href="#brakes"><span>04</span>Brakes &amp; maintenance<i class="k-arrow" aria-hidden="true">↓</i></a></li>
+      </ol>
+      <p data-reveal data-reveal-delay="300" style="margin-top:30px"><a class="btn" href="tel:+16192875668" data-k-magnetic="0.25"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>(619) 287-5668</a></p>
     </div>
-    <figure><div data-reveal="clip"><img src="img/bays.webp" alt="The Nu's Auto Repair & Body bays with a car up on the lift and an SUV pulling in" width="2400" height="1599" fetchpriority="high"></div></figure>
+    <figure class="pintro__tall"><div data-reveal="clip"><img src="img/wheel.webp" alt="A Nu's mechanic kneeling by a white car with the front wheel off, working on the brake rotor" width="2400" height="1601" fetchpriority="high"></div><figcaption class="cap">Front wheel off, out on the lot.</figcaption></figure>
   </div>
 </section>
 
@@ -81,7 +87,7 @@
         <summary><span class="k-acc__n">04</span><span class="k-acc__t">Brakes &amp; maintenance<small>Brake Services · ABS Systems · Maintenance Service · Complete Auto Repair</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
         <div class="k-acc__body">
           <ul><li>Brake Services</li><li>ABS Systems</li><li>Maintenance Service</li><li>Complete Auto Repair</li></ul>
-          <figure class="k-zoom"><img src="img/wheel.webp" alt="A mechanic kneeling by a white car with the front wheel off, working on the brake rotor" width="2400" height="1601" loading="lazy"></figure>
+          <figure class="k-zoom"><img src="img/pole-sign.webp" alt="The tall Nu's Auto Repair &amp; Body pole sign against a clear blue sky" width="2400" height="1599" loading="lazy"></figure>
           <blockquote>They helped us maintain several vehicles that ended up going for 100K, 150K and even 200K miles! They are fast and never try to sell you a service or part that your car doesn't need.<cite>Leslie F., Yelp</cite></blockquote>
           <p class="k-acc__acts"><a href="tel:+16192875668">Call to book a service</a><a href="mailto:nuautorepair@att.net?subject=Brakes%20or%20maintenance">Email us</a></p>
         </div>

@@ -53,13 +53,13 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.012em;line-
 /* ---------- hero: type left, photo sequence right ---------- */
 .hero{display:grid;grid-template-columns:1fr;max-width:1600px;margin:0 auto}
 .hero__text{padding:clamp(24px,5vw,72px) var(--pad) clamp(32px,5vw,64px);display:flex;flex-direction:column;justify-content:flex-end}
-.hero h1{font-size:clamp(2.45rem,6.2vw,6.4rem);line-height:.98;letter-spacing:-.018em;max-width:9.5em;margin-bottom:clamp(18px,2.4vw,30px)}
+.hero h1{position:relative;z-index:3;font-size:clamp(2.8rem,11.5vw,6.4rem);line-height:.98;letter-spacing:-.018em;max-width:9.5em;margin-bottom:clamp(18px,2.4vw,30px)}
 .hero__lede{font-size:clamp(1.05rem,1.4vw,1.28rem);max-width:28em;color:var(--mute);margin-bottom:clamp(20px,2.4vw,30px)}
 .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-bottom:clamp(28px,4vw,48px)}
 .hero__facts{display:flex;flex-wrap:wrap;gap:6px 26px;border-top:1px solid var(--ink);padding-top:16px;font-size:.95rem;font-variant-numeric:tabular-nums}
 .hero__facts span{display:inline-flex;align-items:center;gap:8px}
 .hero__media{position:relative;overflow:hidden}
-.hero .k-seq{height:42svh;min-height:300px}
+.hero .k-seq{height:38svh;min-height:280px}
 .hero .k-seq::after{background:linear-gradient(180deg,transparent 60%,rgba(10,14,24,.72))}
 .hero .k-seq__ui{padding:0 clamp(16px,3vw,36px) clamp(16px,3vh,28px)}
 .k-seq__cap{font-size:.95rem;font-weight:500;margin-bottom:10px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
@@ -67,9 +67,10 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.012em;line-
 .k-seq__bar::after{background:rgba(255,255,255,.4)}
 .k-seq__bar::before{background:var(--red)}
 .k-seq__frame img{object-position:50% 55%}
-.k-seq__frame:first-child img{object-position:8% 55%}
+.k-seq__frame:first-child img{object-position:50% 28%}
+@media (min-width:900px){.k-seq__frame:first-child img{object-position:0% 28%}}
 @media (min-width:900px){
-  .hero{grid-template-columns:minmax(0,5fr) minmax(0,6.5fr);min-height:calc(100svh - 75px)}
+  .hero{grid-template-columns:minmax(0,4.2fr) minmax(0,7.8fr);min-height:calc(100svh - 75px)}
   .hero__media{order:2}
   .hero .k-seq{height:100%;min-height:600px}
 }
@@ -284,9 +285,9 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.012em;line-
 /* kit 03 hero sequence */
 .k-seq{position:relative;overflow:hidden;color:#fff;background:#0d1220}
 .k-seq__frame{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
-.k-seq__frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.k-seq__frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.16)}
 .k-seq__frame.is-on{opacity:1}
-.k-seq__frame.is-on img{transform:scale(1.05) translate3d(-1.5%,0,0);transition:transform 7s linear}
+.k-seq__frame.is-on img{transform:scale(1.04) translate3d(-1.2%,-1%,0);transition:transform 9s cubic-bezier(.25,.6,.3,1)}
 .k-seq::after{content:"";position:absolute;inset:0;pointer-events:none}
 .k-seq__ui{position:absolute;inset:auto 0 0 0;z-index:2}
 .k-seq__cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;min-height:1.6em}
@@ -339,3 +340,43 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .hero__facts .open{font-size:.95rem}
 @media (max-width:899px){.hero__facts{font-size:.9rem;gap:4px 18px}}
 @media (min-width:900px){.hero__facts .open{display:none}}
+
+/* --- independent Fannan round 1 fixes --- */
+/* hero: h1 in white boxes, overlapping the photo edge on desktop */
+.hero__text{position:relative;z-index:3}
+.hero h1 .hl{background:#fff;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .12em;margin-inline-start:-.12em}
+.hero h1 .k-rv-line{overflow:hidden}
+.hero h1 .k-rv-line>span{display:table;background:#fff;padding:0 .12em;margin-inline-start:-.12em}
+@media (min-width:900px){
+  .hero h1{font-size:clamp(4rem,6.6vw,7.4rem);width:calc(100% + 16vw);max-width:none}
+  .hero__lede,.hero__acts,.hero__facts{max-width:26em}
+}
+@media (max-width:899px){.hero__text{padding-top:20px}.hero h1{margin-bottom:14px;line-height:.95}.hero__lede{font-size:1rem;margin-bottom:18px}}
+/* 1987 colour/margin bug */
+.since .since__year{color:var(--blue);margin:0;max-width:none}
+/* reviews carousel: index layout, not the kit demo */
+.k-quotes{background:var(--paper);border-top:2px solid var(--ink)}
+.k-quotes__slide{display:grid;gap:14px 40px;align-content:start}
+.k-quotes__no{font:800 clamp(3.4rem,8vw,7rem)/.8 var(--display);color:var(--red);letter-spacing:-.03em}
+.k-quotes__slide blockquote::before{content:none}
+.k-quotes__slide blockquote{font-weight:600}
+.k-quotes__who{margin-top:18px;border-top:1px solid #cfd4dc;padding-top:14px;max-width:34em}
+@media (min-width:900px){.k-quotes__slide{grid-template-columns:minmax(0,2.4fr) minmax(0,9fr)}.k-quotes__slide .k-quotes__who{grid-column:2}.k-quotes__slide blockquote{grid-column:2;grid-row:1}}
+/* services header: jump index + tall photo */
+.jump{list-style:none;padding:0;margin-top:30px;border-top:2px solid var(--ink);max-width:30em}
+.jump a{display:grid;grid-template-columns:2.6em 1fr auto;align-items:baseline;gap:8px;padding:14px 0;border-bottom:1px solid #cfd4dc;text-decoration:none;font:700 clamp(1.25rem,2vw,1.6rem)/1.1 var(--display);transition:padding .45s var(--ease),color .3s}
+.jump span{font:600 .9rem var(--body);color:var(--red-d)}
+.jump i{font-style:normal;color:var(--mute)}
+@media (hover:hover){.jump a:hover{padding-inline-start:10px;color:var(--blue)}}
+a:hover i.k-arrow{transform:translateY(4px)}
+.pintro__tall img{aspect-ratio:4/5;object-position:45% 50%}
+@media (min-width:900px){.pintro__grid--svc{grid-template-columns:1.25fr 1fr;align-items:start}.pintro__tall{max-width:520px;justify-self:end}}
+/* reviews header: big quote */
+.rhead{padding:clamp(56px,8vw,120px) 0 clamp(40px,6vw,80px)}
+.rhead__h{font:600 1.05rem var(--body);letter-spacing:0;color:var(--red-d);margin-bottom:18px}
+.rhead__q{margin:0 0 28px}
+.rhead__q blockquote{margin:0;font:800 clamp(3rem,9vw,8.6rem)/.95 var(--display);letter-spacing:-.025em;max-width:11em;color:var(--blue)}
+.rhead__q figcaption{margin-top:22px;font-size:1.05rem;color:var(--mute)}
+.rhead__q figcaption b{color:var(--ink)}
+.rhead__q figcaption a{text-underline-offset:3px;display:inline-block;padding-block:11px}
+.rhead__p{max-width:32em;font-size:1.1rem;color:#2b303a}
