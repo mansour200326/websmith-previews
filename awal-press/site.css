@@ -333,16 +333,12 @@ a:hover .roll>span{transform:translateY(-50%)}
 .letter__sig{font:600 1rem var(--body)}
 .letter__sig span{display:block;font-weight:400;color:var(--mute)}
 @media (min-width:980px){.letter__body{columns:2}}
-.team{display:grid;grid-template-columns:1fr;gap:16px}
-.team article{border-top:2px solid var(--ink);padding:18px 0 6px;display:grid;grid-template-columns:72px 1fr;gap:4px 18px;align-items:start}
-.team .mono{grid-row:span 3;width:72px;height:72px;background:var(--char);color:#fff;display:grid;place-items:center;font:800 1.5rem/1 var(--display);letter-spacing:-.03em}
-.team article:first-child .mono{background:var(--red)}
-.team h3{font:700 1.3rem/1.15 var(--display);letter-spacing:-.02em}
-.team .role{color:var(--red-d);font-weight:600;font-size:.95rem}
-.team .c{font-size:.95rem;color:var(--mute);display:flex;flex-direction:column}
-.team .c a{color:var(--ink);text-decoration:none;padding-block:5px}
-@media (min-width:760px){.team{grid-template-columns:1fr 1fr;gap:26px 40px}}
-@media (min-width:1200px){.team{grid-template-columns:repeat(4,1fr)}.team article{grid-template-columns:1fr}.team .mono{grid-row:auto;margin-bottom:16px}}
+.team{list-style:none;border-top:2px solid var(--ink)}
+.team li{display:grid;grid-template-columns:1fr;gap:2px 30px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.team h3{font:700 clamp(1.3rem,2vw,1.7rem)/1.15 var(--display);letter-spacing:-.02em}
+.team .role{color:var(--red-d);font-weight:600;font-size:.98rem}
+.team a{text-decoration:none;justify-self:start;padding-block:6px;font-size:.98rem}
+@media (min-width:900px){.team li{grid-template-columns:1.3fr .9fr 1.1fr .8fr;padding:24px 0}.team a:last-child{justify-self:end}}
 
 /* ---------- footer ---------- */
 .ft{background:var(--char);color:#e9e5e1;padding:clamp(60px,8vw,110px) 0 28px}
@@ -359,14 +355,17 @@ a:hover .roll>span{transform:translateY(-50%)}
 @media (min-width:900px){.ft__top{grid-template-columns:260px 1fr}.ft__cols{grid-template-columns:repeat(4,1fr)}}
 
 @media (max-width:979px){
-  .hero__grid{grid-template-areas:"title" "photo" "foot" "copy" "meta";gap:0}
-  .hero__ph{display:contents}
-  .hero__ph .sheet{grid-area:photo;margin-top:30px}
-  .hero__foot{grid-area:foot}
-  .hero__meta{grid-area:meta;margin-top:34px}
-  .hero__copy{grid-area:copy;margin-top:4px}
-  .hero h1{font-size:clamp(4.4rem,24vw,9rem)}
-  .hero__frame{aspect-ratio:4/3.3}
+  .hero{padding-top:22px}
+  .hero__grid{grid-template-areas:"title" "photo" "copy";gap:0}
+  .hero__ph{margin-top:22px}
+  .hero__copy{margin-top:0}
+  .hero h1{font-size:clamp(3.4rem,18.5vw,6.2rem)}
+  .hero__ar{font-size:1.45rem;margin-top:8px}
+  .hero__frame{aspect-ratio:16/10}
+  .hero__lead{font-size:1.06rem;margin-top:18px}
+  .hero__acts{margin-top:18px;gap:10px 22px}
+  .hero__acts .btn{padding:16px 22px}
+  .hero__foot{margin-top:30px}
   .cm{transform:scale(.7)}
   .cm--tl,.cm--bl{left:-8px}.cm--tr,.cm--br{right:-8px}
   .tag{font-size:.78rem;padding:8px 11px}
@@ -389,3 +388,22 @@ a:hover .roll>span{transform:translateY(-50%)}
 .ln::after{content:"";position:absolute;inset:-9px -2px}
 .hd__logo{min-height:44px;display:flex;align-items:center}
 .team .c a{padding-block:8px}
+
+/* round 2 */
+.hero__foot{margin-top:34px}
+.state{grid-template-columns:1fr}
+@media (min-width:900px){.state>div{margin-inline-start:clamp(0px,17vw,260px)}}
+.cat__aside .solo{grid-column:1/-1;max-width:340px}
+a[href^="tel:"],.nw{white-space:nowrap}
+.clients__more summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:14px;font-weight:600;border-bottom:1px solid var(--ink)}
+.clients__more summary::-webkit-details-marker{display:none}
+.clients__more summary::after{content:"+";font-weight:400;font-size:1.3em;line-height:1}
+.clients__more[open] summary::after{content:"\2212"}
+.clients__grid--rest{border-top:0;padding-top:0}
+@media (min-width:760px){.clients__more summary{display:none}}
+.story__ph--detail img{aspect-ratio:4/5;object-position:50% 20%}
+@media (min-width:980px){.story__ph--detail{max-width:520px}}
+.ft a[href^="tel:"]{white-space:normal}
+.ft__cols>div{min-width:0}
+.ft a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:599px){.yr li{grid-template-columns:1fr;gap:6px}}

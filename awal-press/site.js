@@ -48,6 +48,9 @@
     cs.forEach(function(el){el.style.minWidth=el.offsetWidth+'px';el.style.display='inline-block';el.textContent=fmt(el,0);cio.observe(el)});
   }
 
+  /* client list: open on desktop, first 16 + summary on phones */
+  if(matchMedia('(min-width:760px)').matches)document.querySelectorAll('details[data-desk-open]').forEach(function(d){d.open=true});
+
   /* kit 16: open now, Bahrain time */
   document.querySelectorAll('[data-k-hours]').forEach(function(root){
     var h={};try{h=JSON.parse(root.getAttribute('data-k-hours'))}catch(e){}
