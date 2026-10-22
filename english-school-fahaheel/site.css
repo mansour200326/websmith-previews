@@ -332,3 +332,5 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .nw{white-space:nowrap}
 @media (max-width:900px){.k-js .stage[data-reveal]{opacity:1;transform:none}}
 .k-rv-w{white-space:nowrap}
+.regi .regi__qr .k-link{color:var(--red-deep)}
+@media (max-width:640px){.hero__photo{overflow:visible;height:auto;min-height:0}.hero__photo picture{display:block;height:62vw;min-height:250px;overflow:hidden}.hero__photo figcaption{position:static;color:var(--mute);text-shadow:none;padding:8px var(--pad) 0}}

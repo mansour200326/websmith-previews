@@ -36,7 +36,7 @@ a{color:inherit}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
 .brand svg{width:34px;height:40px;flex:none}
 .brand b{font:800 1.28rem/1 var(--k-display);letter-spacing:-.03em;font-variation-settings:"wdth" 118}
-.brand b span{font-weight:500;font-variation-settings:"wdth" 100;letter-spacing:-.01em;margin-inline-start:.18em}
+.brand b span{font-weight:500;font-variation-settings:"wdth" 100;letter-spacing:-.01em}
 .nav{display:none;gap:clamp(16px,2vw,30px);margin-inline-start:auto}
 .nav a{text-decoration:none;font-weight:500;font-size:.98rem;padding:12px 0;position:relative}
 .nav a::after{content:"";position:absolute;inset:auto 0 6px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
@@ -339,3 +339,8 @@ a{color:inherit}
 [dir=rtl] .gauge__scale,[dir=rtl] .gauge__scale::before,[dir=rtl] .gauge__pin{inset-inline-end:auto;right:0}
 [dir=rtl] .gauge__val{inset-inline-end:auto;right:28px}
 [lang=ar] .hero__hud span{font-family:"Readex Pro",sans-serif}
+@media (max-width:899px){
+  .visit__dl a,.ft a,.jump a{padding-block:11px;margin-block:-4px}
+  .ft ul{gap:2px}
+  .visit__dl{row-gap:14px}
+}

@@ -317,3 +317,4 @@ h1,h2,h3{font-family:var(--k-display);color:var(--navy);letter-spacing:-.025em;l
   .notice{margin-top:-40px;padding:20px 20px 16px}
   .notice p{margin-bottom:8px;font-size:.95rem}
 }
+.adm .kicker::before{background:var(--navy)}
