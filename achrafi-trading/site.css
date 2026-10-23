@@ -529,3 +529,23 @@ html[dir=rtl] .mapcard__big{font-family:"Cairo",system-ui,sans-serif;font-stretc
   .hero__h .m:first-child .w{padding-top:clamp(22px,3.4vh,40px)}
   .hero__h .m--r{font-size:.9em}
 }
+.types li{display:block}
+.ft__cols li a,.ft__cols p a{gap:.35em}
+
+/* ===== round 3 ===== */
+@media (min-width:900px){
+  .ph:has(.ph__fig){grid-template-rows:auto auto auto;align-content:start}
+  .ph .toc{align-self:start;align-items:flex-start}
+  .shopgrid figure:nth-child(5){position:relative}
+  .shopgrid figure:nth-child(5) img{position:absolute;inset:0}
+  .hero__grid>div{align-self:stretch;display:flex;flex-direction:column;padding-top:calc(min(9.2vw,9.4rem) * .86 + clamp(22px,3.4vh,40px) + 48px)}
+  .hero__meta{margin-top:auto;padding-top:0}
+  .hero__acts{margin-bottom:36px}
+}
+@media (min-width:900px){
+  .ph:has(.ph__fig){grid-template-rows:auto auto auto 1fr}
+  .ph .ph__fig{grid-row:1/5}
+  .hero__lead{font-size:clamp(1.15rem,1.55vw,1.5rem);max-width:28em}
+  .hero__meta div:nth-child(n+3){display:block}
+}
+@media (min-width:900px){html[dir=rtl] .ph:has(.ph__fig){grid-template-columns:1fr minmax(0,290px)}}
