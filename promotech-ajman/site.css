@@ -291,3 +291,15 @@ html[lang=ar] .spec__list li b{font-size:.9rem}
   .hero__lead{font-size:1rem;line-height:1.55}
   html[lang=ar] .hero h1{font-size:clamp(2.2rem,10vw,3.2rem)}
 }
+
+/* r3: hero fills the column; Ken Burns never shows the edge */
+.hero .k-seq__frame.is-on img{transform:scale(1.06) translate3d(-1.5%,0,0)}
+.hero .k-seq__frame img{transform:scale(1.12)}
+@media (prefers-reduced-motion:reduce){.hero .k-seq__frame img,.hero .k-seq__frame.is-on img{transform:scale(1.04)}}
+@media (min-width:1000px){
+  .hero{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+  .hero h1{font-size:clamp(3.4rem,8vw,9.5rem);line-height:.84}
+  .hero__type{justify-content:center;gap:30px}
+}
+
+html[lang=ar] .hd__logo b{font-family:"Big Shoulders Display",Impact,sans-serif!important;font-weight:800;letter-spacing:.02em}

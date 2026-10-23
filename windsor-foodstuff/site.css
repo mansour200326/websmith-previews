@@ -441,7 +441,7 @@ html:lang(ar) .quote{text-transform:none;line-height:1.4;font-size:clamp(1.5rem,
 
 html:lang(ar) .hero__word{font-size:clamp(4rem,19vw,15.5rem);line-height:1.12;margin-bottom:-.12em}
 html:lang(ar) .ft__word{line-height:1.2}
-html:lang(ar) .shelf{margin-top:calc(clamp(4rem,19vw,15.5rem) * -.08)}
+
 .mark{min-height:44px;justify-content:center}.hd__tel{min-width:44px;justify-content:center}
 @media (max-width:1100px){.k-js .bcard[data-reveal]{opacity:1;transform:none}}
 .story .story__year{font:900 clamp(6rem,20vw,17rem)/.78 var(--k-display);color:var(--red);letter-spacing:-.02em;max-width:none}
@@ -460,3 +460,18 @@ html:lang(ar) .shelf{margin-top:calc(clamp(4rem,19vw,15.5rem) * -.08)}
   .prod th{font-size:.7rem}
 }
 @media (max-width:600px){.prod th:nth-child(2),.prod td:nth-child(2){display:none}}
+
+/* r3: the word stays whole; the packshot sits under it */
+@media (min-width:900px){.shelf{margin-top:clamp(18px,2vw,30px)}.hero__copy{padding-top:clamp(18px,2vw,30px)}}
+.agents__big em{color:inherit}
+/* r3: inner page heads get their products on the right */
+.phead--art{display:grid;gap:30px}
+.phead__art{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-self:end}
+.phead__art figure{background:var(--studio);aspect-ratio:4/5;overflow:hidden}
+.phead__art img{width:100%;height:100%;object-fit:cover}
+@media (min-width:900px){.phead--art{grid-template-columns:1.05fr .95fr;align-items:end}}
+@media (max-width:899px){.phead__art{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:24px}.phead__art figure{aspect-ratio:1/1}}
+.svc .qa__list li{grid-template-columns:3.2em 1fr;gap:12px}
+.hero__lead,.phead p{text-wrap:pretty}
+@media (max-width:600px){.jump{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad)}.jump::-webkit-scrollbar{display:none}.jump a{flex:0 0 auto;scroll-snap-align:start}}
+.phead--art{grid-template-columns:minmax(0,1fr)}.phead--art>*{min-width:0}@media (min-width:900px){.phead--art{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}}

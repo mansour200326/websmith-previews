@@ -245,7 +245,7 @@ a{color:inherit}
 
 /* ---------- about page ---------- */
 .ab__grid{display:grid;gap:clamp(40px,6vw,90px);align-items:start}
-@media (min-width:920px){.ab__grid{grid-template-columns:.8fr 1.2fr}.ab__grid .arch{position:sticky;top:110px}}
+@media (min-width:920px){.ab__grid{grid-template-columns:.8fr 1.2fr}}
 .ab__block{padding:34px 0;border-top:1px solid var(--line)}
 .ab__block:first-child{border-top:0;padding-top:0}
 .ab__block h2{font:500 clamp(1.9rem,3.4vw,3rem)/1 var(--k-display);margin-bottom:14px;color:var(--ink)}
@@ -278,7 +278,8 @@ html[lang=ar] .k-seq h1 .ln>span{font-style:normal!important}
 /* ---- round 2 (Fannan) ---- */
 /* optical sizes: display sizes keep the Bodoni hairlines; text under 2rem uses a sturdier cut */
 .h2,.events .h2,.ph h1,.k-gal__head h2,.k-story__head h2,.k-visit h2,.band h2,.lede,.gm blockquote,.big-num .n,.svc h2{font-variation-settings:"opsz" 96}
-.k-seq h1{font-variation-settings:"opsz" 96;font-weight:600;text-shadow:0 2px 40px rgba(16,12,17,.45)}
+.k-seq h1{font-variation-settings:"opsz" 72;font-weight:600}
+@media (max-width:899px){.k-seq h1{font-variation-settings:"opsz" 60}}
 .brand b,.ft__name,.certs b,.intro__cols h3,.k-story__step h3,.events__list b,.ab__block h2{font-variation-settings:"opsz" 18}
 /* real logo */
 .brand img{height:46px;width:auto;flex:none}
@@ -329,4 +330,74 @@ html[lang=ar] .svc-ivory li{line-height:1.5}
   .hero__lead{font-size:1rem;margin-bottom:12px}
   .hero__ar{margin-bottom:6px}
   .brand img{height:32px}
+}
+.svc-hero::after{background:linear-gradient(180deg,rgba(16,12,17,.15) 0,rgba(16,12,17,.2) 30%,rgba(16,12,17,.94) 78%),linear-gradient(90deg,rgba(16,12,17,.75),rgba(16,12,17,0) 65%)}
+[dir=rtl] .svc-hero::after{background:linear-gradient(180deg,rgba(16,12,17,.15) 0,rgba(16,12,17,.2) 30%,rgba(16,12,17,.94) 78%),linear-gradient(270deg,rgba(16,12,17,.75),rgba(16,12,17,0) 65%)}
+.svc-hero>figure img{object-position:50% 78%}
+.ph{position:relative}
+.ph__arch{display:none}
+@media (min-width:1000px){.ph__arch{display:block;position:absolute;inset-inline-end:calc(var(--pad) + 2vw);top:118px;width:clamp(240px,22vw,320px);aspect-ratio:3/4}}
+@media (min-width:1000px){.ph__index{max-width:calc(100% - clamp(280px,26vw,370px))}.ph p{max-width:min(36em,calc(100% - clamp(280px,26vw,370px)))}}
+/* round 3 */
+html{overflow-x:clip}
+.skip{inset-inline-start:auto;left:12px;right:auto;top:12px;transform:translateY(-300%)}
+.skip:focus{transform:none}
+.k-seq h1 .ln:last-child{margin-top:.06em}
+.k-seq__ui::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 18% 85%,rgba(16,12,17,.6),rgba(16,12,17,0) 60%);pointer-events:none;z-index:-1}
+[dir=rtl] .k-seq__ui::before{background:radial-gradient(120% 70% at 82% 85%,rgba(16,12,17,.6),rgba(16,12,17,0) 60%)}
+/* one shared grade for their photos */
+.k-seq__frame img,.arch img,.k-gal__item img,.svc figure img,.svc__media img,.svc-pair img,.svc-hero img,.svc-flood img,.kitchen img,.k-story img,.ab__photo img,.events__float img{filter:saturate(.8) contrast(1.05) brightness(.97)}
+.k-seq__frame::after,.arch::after,.k-gal__item::after,.svc__media figure::after,.svc-pair figure::after,.svc-flood figure::after,.kitchen__photo::after,.kitchen__photo2::after,.ab__photo::after{content:"";position:absolute;inset:0;background:rgba(201,164,92,.06);mix-blend-mode:soft-light;pointer-events:none}
+.svc__media figure,.svc-pair figure,.svc-flood figure,.k-seq__frame,.ab__photo{position:relative}
+.k-seq__frame{position:absolute}
+.arch figcaption{z-index:1}
+/* about: second photo under the arch */
+.ab__photo{width:62%;margin:40px 0 0 auto;aspect-ratio:4/3;overflow:hidden;border-radius:2px}
+.ab__photo img{width:100%;height:100%;object-fit:cover}
+/* mobile hero: push the ceiling out of frame */
+@media (max-width:700px){
+  .k-seq__frame img{transform-origin:50% 92%;transform:scale(1.22)}
+  .k-seq__frame.is-on img{transform:scale(1.14) translate3d(-1.5%,0,0)}
+}
+@media (max-width:700px) and (prefers-reduced-motion:reduce){.k-seq__frame img,.k-seq__frame.is-on img{transform:scale(1.14)!important}}
+/* services weddings: stronger side scrim; stacked on phones */
+.svc-hero::after{background:linear-gradient(180deg,rgba(16,12,17,.1) 0,rgba(16,12,17,.15) 30%,rgba(16,12,17,.94) 80%),linear-gradient(90deg,rgba(16,12,17,.9) 0,rgba(16,12,17,.7) 40%,rgba(16,12,17,0) 70%)}
+[dir=rtl] .svc-hero::after{background:linear-gradient(180deg,rgba(16,12,17,.1) 0,rgba(16,12,17,.15) 30%,rgba(16,12,17,.94) 80%),linear-gradient(270deg,rgba(16,12,17,.9) 0,rgba(16,12,17,.7) 40%,rgba(16,12,17,0) 70%)}
+@media (max-width:700px){
+  .svc-hero{display:block;min-height:0;margin-top:0}
+  .svc-hero>figure{position:relative;aspect-ratio:4/3;margin:0}
+  .svc-hero::after{display:none}
+  .svc-hero .wrap{padding-top:34px;padding-bottom:20px}
+  .ph{padding-bottom:40px}
+  .ph__arch{display:block;width:58vw;margin:28px 0 0 auto;position:relative;inset:auto}
+  [dir=rtl] .ph__arch{margin:28px auto 0 0}
+  .ph__index{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;gap:4px 22px;white-space:nowrap;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad)}
+  .ph__index::-webkit-scrollbar{display:none}
+}
+@media (max-width:700px){.ph{display:flex;flex-direction:column}.ph>.wrap{order:1;width:100%}.ph__arch{order:2;margin-inline-end:var(--pad)!important}}
+.k-seq h1{font-variation-settings:"opsz" 36}
+@media (max-width:899px){.k-seq h1{font-variation-settings:"opsz" 28}}
+.k-seq__frame img{object-position:50% 80%}
+@media (max-width:700px){.k-seq__frame img{object-position:50% 70%}}
+.k-seq h1{font-variation-settings:"opsz" 20}
+@media (max-width:899px){.k-seq h1{font-variation-settings:"opsz" 14}}
+/* even gallery grid: 16 tiles, no orphans */
+.k-gal__grid{columns:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:700px){.k-gal__grid{grid-template-columns:repeat(4,1fr);gap:14px;columns:auto}}
+.k-gal__item{margin:0!important;aspect-ratio:4/3}
+.k-gal__item img{width:100%;height:100%!important;object-fit:cover;aspect-ratio:auto}
+@media (max-width:699px){.k-gal__item{aspect-ratio:4/5}}
+
+.k-visit h2{font-size:clamp(2.4rem,4.6vw,4.4rem)}
+.k-gal__grid{grid-auto-flow:dense}
+/* after round 3 (applied locally, not yet re-reviewed) */
+.k-visit{grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.k-visit{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}}
+.visit__list a{overflow-wrap:anywhere}
+@media (max-width:600px){.visit__list li{grid-template-columns:1fr;gap:2px}}
+.k-visit__map{--k-map-poster:url(img/t/garden.webp)}
+@media (max-width:700px){
+  .h2,.ph h1,.k-story__head h2,.k-story__step h3,.k-visit h2,.events .h2,.k-gal__head h2,.band h2,.svc__body h2,.svc h2{font-variation-settings:"opsz" 36}
+  .events .h2{letter-spacing:0}
+  .ring svg{inset:-6px -4px;width:calc(100% + 8px)}
 }
