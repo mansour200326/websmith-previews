@@ -484,6 +484,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 [dir=rtl] .idx__row:hover .idx__pic.cut img{transform:translateX(-4%)}
 .cars figure{background:none;padding:0;display:flex;flex-direction:column;gap:8px}
 .cars--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cars__hint{display:none;margin-top:10px;font-size:.86rem;color:var(--mute)}
 @media (max-width:620px){
   /* services saloons: a swipe strip of big cards instead of four small tiles */
   .cars--2{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);scroll-padding-inline:var(--pad);overscroll-behavior-x:contain}
@@ -491,7 +492,6 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .cars--2 figure{flex:0 0 80%;scroll-snap-align:start}
   .cars__hint{display:block}
 }
-.cars__hint{display:none;margin-top:10px;font-size:.86rem;color:var(--mute)}
 .fleet__note{max-width:var(--max);margin:14px auto 0;padding-inline:var(--pad);font-size:.9rem;color:var(--mute)}
 
 /* scenery photos (Unsplash, credited, never captioned as theirs) */
@@ -570,3 +570,32 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .idx__tags li{background:none!important;padding:9px 0!important;border-radius:0!important;border-bottom:1px solid var(--line);font:800 clamp(1.15rem,1.6vw,1.45rem)/1.2 var(--display)!important;letter-spacing:-.015em}
 [lang=ar] .idx__tags li{letter-spacing:0;line-height:1.5!important;font-weight:700!important}
 @media (max-width:980px){.idx__tags{grid-column:2;max-width:420px}}
+
+/* ---------- rescue 2 (after Fannan round 5) ---------- */
+/* (1) desktop hero: bigger art column. Sign fills the column, the car overhangs the gutter, tyres on the lane line */
+.hero h1{text-wrap:balance}
+@media (min-width:861px){
+  .sign-wrap{width:100%}
+  .sign__post--b{inset-inline-end:20%}.sign__post--a{inset-inline-end:calc(80% - 10px)}
+  .road{margin-bottom:-82px} /* .ground is 120px, lane centre at 68% = 81.6px: the tyre line sits on it */
+  /* end edge overhangs the gutter by up to 18% (never past the viewport: pad - 8px); the rest extends into the column gap */
+  .road__car{--w:min(118%,640px);--over:min(18%,calc(var(--pad) - 8px));width:var(--w);margin-inline-start:calc(100% - var(--w) + var(--over));margin-inline-end:auto}
+  .road__car::after{bottom:-14px}
+}
+/* (2) full-bleed scenery band before "Before you drive" (Unsplash, credited, captioned as scenery only) */
+.band{margin:0;position:relative}
+.band__img{height:clamp(300px,46vw,640px);overflow:hidden;background:var(--soft)}
+.band__img img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block}
+.band figcaption{max-width:var(--max);margin-inline:auto;padding:10px var(--pad) 0;font-size:.86rem;color:var(--mute)}
+.k-js .band [data-reveal=clip]{clip-path:inset(0 100% 0 0)}
+[dir=rtl].k-js .band [data-reveal=clip]{clip-path:inset(0 0 0 100%)}
+.k-js .band [data-reveal=clip].is-in{clip-path:inset(0 0 0 0)}
+.k-js .band__img img{transform:scale(1.08);transition:transform 1.8s var(--ease) .1s}
+.k-js .band__img.is-in img{transform:none}
+.band+.sec{padding-top:clamp(56px,7vw,100px)}
+@media (max-width:860px){.band__img{height:auto;aspect-ratio:4/3}}
+@media (prefers-reduced-motion:reduce){.k-js .band [data-reveal=clip]{clip-path:none!important}.k-js .band__img img{transform:none!important;transition:none!important}}
+/* (4) AR footer "write" column: never split the PO Box line or the city */
+.ftr__write li>span{white-space:nowrap}
+@media (min-width:861px){[dir=rtl] .ftr__in{grid-template-columns:minmax(0,5fr) minmax(0,2fr) minmax(0,2fr) minmax(220px,2.4fr)}}
+@media (max-width:860px){.ftr__write{grid-column:1/-1}}
