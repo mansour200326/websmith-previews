@@ -91,7 +91,7 @@ a:hover .arw{transform:translateX(5px)}
 
 /* ---------- HERO ---------- */
 .hero{padding:clamp(18px,3vw,40px) var(--pad) clamp(40px,6vw,90px);position:relative}
-.word-xl{display:flex;justify-content:space-between;align-items:flex-start;font:300 clamp(3.1rem,15.2vw,15.5rem)/.82 var(--sans);letter-spacing:0;margin:0 -.04em;user-select:none;color:var(--ink)}
+.word-xl{display:flex;justify-content:space-between;align-items:flex-start;font:300 clamp(3.1rem,15.2vw,15.5rem)/.82 var(--sans);letter-spacing:0;margin:0 0 0 -.04em;user-select:none;color:var(--ink)}
 .word-xl span{display:block}
 .hero__mark{display:block;width:34px;height:34px;color:var(--rattan-d);margin-bottom:18px}
 .hero__mark line{stroke-width:4}
@@ -107,6 +107,7 @@ a:hover .arw{transform:translateX(5px)}
 .hero__pics .p2{aspect-ratio:4/5.4}
 .hero__pics img{width:100%;height:100%;object-fit:cover}
 .hero__pics .p1 img{object-position:62% 50%}
+.hero__pics .p2 img{object-position:50% 78%}
 .cap{position:absolute;inset-inline-start:12px;bottom:10px;font-size:.82rem;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.45)}
 @media (min-width:900px){
   .hero__grid{grid-template-columns:minmax(300px,4fr) 8fr;gap:clamp(24px,3vw,56px);align-items:end}
@@ -322,4 +323,4 @@ html:lang(ar) .lang{font-family:"Jost",sans-serif}
 .hero__cta .ln,.band__cta .ln,.visit__acts .ln,.mg__act .ln,.idx__more .ln{display:inline-flex;align-items:center;min-height:44px;background-position:0 calc(100% - 8px)}
 .qt figcaption .ln{padding-block:10px}
 .tabs a{min-width:44px;justify-content:center}
-@media (max-width:899px){.ft li a{min-height:44px;display:inline-flex;align-items:center}}
+@media (max-width:899px){.ft li a{min-height:44px;min-width:44px;display:inline-flex;align-items:center}.nav a{min-width:44px;justify-content:center}}
