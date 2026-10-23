@@ -173,7 +173,6 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
   --k-bg:#ffffff;--k-ink:#0d0d0d;--k-mute:#55555a;--k-line:#dcdcdc;--k-accent:#e01b22;--k-on-accent:#fff;
   --red:#e01b22;--red-dk:#b3121a;--ink:#0d0d0d;--paper:#ffffff;--soft:#f1f1ef;--mute:#55555a;--line:#dcdcdc;
   --k-display:"Anybody",system-ui,sans-serif;--k-body:"Instrument Sans",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,monospace;
   --ease:cubic-bezier(.16,1,.3,1);
   --pad:clamp(20px,4vw,56px);--max:1440px;
 }
@@ -190,11 +189,12 @@ a{color:inherit}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--ink);color:#fff;padding:12px 16px}
 .skip:focus{left:8px}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.mono{font-family:var(--mono);font-weight:500;font-size:.8rem;letter-spacing:.02em}
+/* labels: Anybody condensed caps (round 2, replaces IBM Plex Mono) */
+.mono,.label{font:600 .8rem/1.3 var(--k-display);font-stretch:65%;text-transform:uppercase;letter-spacing:.04em}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
 
 /* ---------- header ---------- */
-.hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.hd{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
 .hd__in{max-width:var(--max);margin-inline:auto;padding:0 var(--pad);height:68px;display:flex;align-items:center;gap:18px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-inline-end:auto;min-height:44px}
 .brand__bars{display:flex;gap:2px;height:26px;align-items:stretch}
@@ -202,7 +202,7 @@ a{color:inherit}
 .brand__bars i:nth-child(2){background:var(--red);margin-top:8px}
 .brand__bars i:nth-child(3){margin-bottom:6px}
 .brand__name{font:800 1.12rem/1 var(--k-display);font-stretch:118%;letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap}
-.brand__name small{display:block;font:500 .66rem/1.3 var(--mono);letter-spacing:.04em;text-transform:none;color:var(--mute);font-stretch:100%}
+.brand__name small{display:block;font:600 .72rem/1.3 var(--k-display);font-stretch:65%;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
 .nav{display:flex;gap:4px}
 .nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font-weight:600;font-size:.95rem}
 .nav a[aria-current=page]{box-shadow:inset 0 -3px 0 var(--red)}
@@ -248,52 +248,50 @@ a{color:inherit}
 .btn--wline .btn__t::before{background:#fff}
 .btn--wline:hover{color:var(--red-dk)}
 
-/* ---------- hero: live Sharjah clock + entrance photo ---------- */
-.hero{max-width:var(--max);margin-inline:auto;display:grid;grid-template-columns:1fr;gap:0}
-.hero__copy{padding:22px var(--pad) 22px;display:flex;flex-direction:column;gap:14px}
-.clock{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
-.clock__t{font:800 clamp(4.6rem,24vw,13.5rem)/.8 var(--k-display);font-stretch:72%;letter-spacing:-.03em;font-variant-numeric:tabular-nums;display:flex}
+/* ---------- hero (round 2): clock alone across the top, then name + entrance photo ---------- */
+.hero{max-width:var(--max);margin-inline:auto;padding:clamp(18px,2.6vw,36px) var(--pad) clamp(40px,5vw,72px)}
+.hero__clock{border-bottom:2px solid var(--ink);padding-bottom:clamp(12px,1.4vw,18px);margin-bottom:clamp(22px,3vw,40px)}
+.clock__t{font:800 clamp(6rem,21vw,19rem)/.8 var(--k-display);font-stretch:72%;letter-spacing:-.03em;font-variant-numeric:tabular-nums;display:flex;margin-inline-start:-.04em}
 .clock__t .d{display:inline-block;overflow:hidden;padding-bottom:.02em}
 .clock__t .d>span{display:inline-block}
 .clock__t .c{color:var(--red)}
-.clock__cap{font-family:var(--mono);font-weight:500;font-size:.82rem;line-height:1.35;color:var(--mute);padding-bottom:.35em;max-width:15em}
-.clock__cap b{display:flex;align-items:center;gap:7px;color:var(--ink);font-weight:500}
-.clock__cap b i{width:9px;height:9px;border-radius:50%;background:#15a34a;position:relative;flex:none}
-.clock__cap b i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#15a34a;animation:k-ping 2s ease-out 3}
-.hero h1{font-size:clamp(2.3rem,6.4vw,5.4rem);font-stretch:112%;line-height:.92;letter-spacing:-.035em;text-transform:uppercase}
-.hero__lead{font-size:clamp(1.02rem,1.4vw,1.2rem);max-width:30em;color:#2b2b2e}
-.hero__addr{display:flex;flex-wrap:wrap;gap:4px 18px;color:var(--mute);border-top:1px solid var(--line);padding-top:14px}
-.hero__media{position:relative;overflow:hidden;background:#111;aspect-ratio:4/3.3}
-.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
-.hero__media figcaption{position:absolute;inset-inline-start:0;bottom:0;background:var(--ink);color:#fff;padding:8px 12px;font:500 .74rem/1.2 var(--mono)}
-.bars{display:flex;align-items:stretch;gap:clamp(4px,.7vw,9px);height:100%}
-.bars i{flex:1;position:relative}
-.bars i::before{content:"";position:absolute;inset-inline:0;top:var(--t);height:var(--h);background:var(--ink);transform-origin:50% 100%}
-.bars i.r::before{background:var(--red)}
-.hero__bars{display:none}
-@media (max-width:899px){
-  .hero__media{margin-inline:var(--pad)}
-  .hero .cta .btn{flex:1 1 auto}
-  .hero .cta .btn--line{flex:0 1 auto}
-}
+.clock__cap{display:flex;align-items:center;gap:10px;margin-top:clamp(10px,1.2vw,16px);font:600 clamp(.98rem,1.2vw,1.1rem)/1.35 var(--k-body);color:var(--ink)}
+.clock__cap i{width:10px;height:10px;background:var(--red);flex:none}
+.hero__row{display:grid;gap:26px}
+.hero__copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.hero h1{font-size:clamp(2.3rem,5.4vw,5rem);font-stretch:112%;line-height:.92;letter-spacing:-.035em;text-transform:uppercase}
+.hero__lead{font-size:clamp(1.02rem,1.3vw,1.18rem);max-width:30em;color:#2b2b2e}
+.hero__addr{color:var(--mute);font-size:.95rem;display:flex;flex-wrap:wrap;align-items:center;gap:2px 16px}
+.hero__addr .hero__train{display:none}
+.hero__media{position:relative;overflow:hidden;background:#111;aspect-ratio:16/9;margin:0}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
 @media (min-width:900px){
-  .hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:min(calc(100svh - 68px),900px)}
-  .hero__media{aspect-ratio:auto;order:-1}
-  .hero__copy{padding:clamp(28px,4vw,60px) var(--pad) clamp(28px,3vw,44px) clamp(32px,4.5vw,72px);justify-content:space-between;gap:24px}
-  .hero__mid{display:flex;flex-direction:column;gap:20px}
-  .hero__bars{display:block;height:clamp(70px,9vh,110px)}
+  .hero__row{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:end}
+  .hero__copy{gap:22px}
+}
+@media (max-width:899px){
+  .hero__media{aspect-ratio:4/3}
+  .hero__addr .hero__train{display:inline-flex;color:var(--ink)}
+  .hero .cta{flex-wrap:nowrap}
+  .hero .cta .btn{flex:1 1 auto;min-height:52px}
+  .hero .cta .btn--line{flex:0 1 auto}
+  .hero .cta .btn__a{width:52px}
+  .hero .btn__t{padding:0 16px}
+  .hero__lead{font-size:1rem;line-height:1.5}
 }
 /* hero motion */
-.k-js .hero__media{clip-path:inset(0 0 100% 0);animation:wipe 1.3s var(--ease) .1s forwards}
-.k-js .hero__media img{transform:scale(1.16);animation:settle 7s cubic-bezier(.2,.7,.2,1) .1s forwards}
-.k-js .clock__t .d>span{transform:translateY(105%);animation:rise 1s var(--ease) forwards;animation-delay:calc(.25s + var(--i)*.07s)}
-.k-js .hero .fade{opacity:0;transform:translateY(14px);animation:rise2 .9s var(--ease) forwards;animation-delay:calc(.55s + var(--i,0)*.09s)}
-.k-js .hero__bars .bars i::before{transform:scaleY(0);animation:grow .9s var(--ease) forwards;animation-delay:calc(.6s + var(--d)*28ms)}
+.k-js .hero__media{clip-path:inset(0 0 100% 0);animation:wipe 1.3s var(--ease) .35s forwards}
+.k-js .hero__media img{transform:scale(1.16);animation:settle 7s cubic-bezier(.2,.7,.2,1) .35s forwards}
+.k-js .clock__t .d>span{transform:translateY(105%);animation:rise 1s var(--ease) forwards;animation-delay:calc(.15s + var(--i)*.07s)}
+.k-js .hero .fade{opacity:0;transform:translateY(14px);animation:rise2 .9s var(--ease) forwards;animation-delay:calc(.5s + var(--i,0)*.09s)}
 @keyframes wipe{to{clip-path:inset(0 0 0 0)}}
 @keyframes settle{to{transform:scale(1.02)}}
 @keyframes rise{to{transform:none}}
 @keyframes rise2{to{opacity:1;transform:none}}
-@keyframes grow{to{transform:none}}
+.bars{display:flex;align-items:stretch;gap:clamp(4px,.7vw,9px);height:100%}
+.bars i{flex:1;position:relative}
+.bars i::before{content:"";position:absolute;inset-inline:0;top:var(--t);height:var(--h);background:var(--ink);transform-origin:50% 100%}
+.bars i.r::before{background:var(--red)}
 
 /* ---------- section scaffolding ---------- */
 .sec{padding-block:clamp(64px,10vw,140px)}
@@ -309,16 +307,17 @@ a{color:inherit}
 .dial svg{width:100%;height:auto;display:block;overflow:visible}
 .dial .seg{fill:var(--red);transition:fill .4s}
 .dial .seg.is-now{fill:#fff}
-.dial text{font:500 11px var(--mono);fill:#bdbdbd}
+.dial text{font:600 12px var(--k-display);font-stretch:65%;letter-spacing:.04em;fill:#bdbdbd}
 .dial__mid{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
-.dial__mid strong{font:800 clamp(4rem,10vw,6rem)/.85 var(--k-display);font-stretch:70%;letter-spacing:-.02em}
-.dial__mid span{font:500 .78rem/1.4 var(--mono);color:#cfcfcf;margin-top:8px}
+.dial__mid strong{font:800 clamp(3.4rem,9vw,5.2rem)/.85 var(--k-display);font-stretch:70%;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.dial__mid strong .c{color:var(--red)}
+.dial__mid span{font:600 .8rem/1.4 var(--k-display);font-stretch:65%;text-transform:uppercase;letter-spacing:.04em;color:#cfcfcf;margin-top:10px}
 .k-js .dial .seg{opacity:0;transform-origin:160px 160px;transform:scale(.9);transition:opacity .5s ease,transform .8s var(--ease),fill .4s;transition-delay:calc(var(--i)*35ms)}
 .k-js .dial.is-in .seg{opacity:1;transform:none}
 .facts{display:grid;gap:0;margin-top:34px;border-top:1px solid #333}
 .facts div{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid #333}
-.facts dt{font:800 clamp(2.6rem,5vw,3.8rem)/.9 var(--k-display);font-stretch:75%;min-width:2.2ch;font-variant-numeric:tabular-nums}
-.facts dd{color:#d6d6d6}
+.facts dt{font:800 clamp(4rem,8vw,5.2rem)/.85 var(--k-display);font-stretch:72%;min-width:2.2ch;font-variant-numeric:tabular-nums}
+.facts dd{color:#d6d6d6;font-size:1.1rem;max-width:16em}
 .facts dd a{color:#fff}
 @media (min-width:900px){.hours__grid{grid-template-columns:1.1fr .9fr;gap:clamp(40px,7vw,120px)}}
 
@@ -327,7 +326,7 @@ a{color:inherit}
 .k-story__head{max-width:var(--max);display:grid;gap:14px}
 .k-story__head h2{font-size:clamp(2.5rem,7vw,6.2rem);font-stretch:108%;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
 .k-story__grid{max-width:var(--max)}
-.k-story__n{font:500 .85rem/1 var(--mono);color:var(--red-dk);letter-spacing:.02em}
+.k-story__n{font:600 .85rem/1 var(--k-display);font-stretch:65%;text-transform:uppercase;color:var(--red-dk);letter-spacing:.04em}
 .k-story__step h3{font-weight:800;font-stretch:100%;text-transform:uppercase;font-size:clamp(1.7rem,3.2vw,2.8rem);letter-spacing:-.02em}
 .k-story__step p{color:#3a3a3e}
 .k-story__step .k-story__inline{border-radius:0;aspect-ratio:4/4.4}
@@ -344,7 +343,7 @@ a{color:inherit}
 .train__head{display:grid;gap:14px;margin-bottom:clamp(30px,5vw,60px)}
 .rows{border-top:2px solid var(--ink)}
 .row{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.row__n{font:500 .85rem/1 var(--mono);color:var(--red-dk);grid-row:span 3}
+.row__n{font:600 .85rem/1 var(--k-display);font-stretch:65%;letter-spacing:.04em;color:var(--red-dk);grid-row:span 3}
 .row h3{font-size:clamp(2rem,4.6vw,3.8rem);text-transform:uppercase;font-stretch:110%;letter-spacing:-.03em}
 .row p{max-width:36em;color:#3a3a3e}
 .row .lnk{justify-self:start;margin-top:6px}
@@ -375,21 +374,21 @@ a{color:inherit}
 .k-drag__btns button{border-radius:0;width:56px;height:56px;border:2px solid var(--ink)}
 .k-drag__fig{border-radius:0;background:#111}
 .k-drag__meta h3{font:700 1.15rem/1.2 var(--k-body);letter-spacing:0;text-transform:none}
-.k-drag__meta span{font:500 .78rem var(--mono);color:var(--mute)}
+.k-drag__meta span{font:600 .8rem var(--k-display);font-stretch:65%;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
 .k-drag__bar{height:3px}
 .k-drag__bar i{background:var(--red)}
 
 /* ---------- find us (kit 16 restyled) ---------- */
 .k-visit{border-top:0;background:var(--soft)}
 .k-visit h2{font-size:clamp(2.5rem,7vw,6.2rem);font-stretch:108%;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
-.k-visit__badge{border-radius:0;font:500 .82rem var(--mono);background:#dff3e6;color:#0f5a2e}
+.k-visit__badge{border-radius:0;font:600 .82rem var(--k-display);font-stretch:65%;text-transform:uppercase;letter-spacing:.04em;background:#dff3e6;color:#0f5a2e}
 .k-visit__addr{font-weight:600}
 .k-visit__land{color:#46464b}
 .k-visit table{font-size:1rem}
 .k-visit td{border-color:#cfcfcc}
 .k-visit__shop{margin:6px 0 26px;max-width:520px}
 .k-visit__shop img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.k-visit__shop figcaption{font:500 .76rem/1.4 var(--mono);color:#46464b;margin-top:8px}
+.k-visit__shop figcaption{font:600 .8rem/1.4 var(--k-display);font-stretch:65%;text-transform:uppercase;letter-spacing:.04em;color:#46464b;margin-top:8px}
 .k-visit__map{background:#d9d9d6;min-height:420px}
 .k-visit__map button{border-radius:0;min-height:52px;font-weight:600}
 .k-visit__acts a{border-radius:0;min-height:52px}
@@ -401,7 +400,7 @@ a{color:inherit}
 .ft__grid{display:grid;gap:34px}
 .ft__name{font:800 clamp(1.8rem,3.4vw,2.6rem)/.95 var(--k-display);font-stretch:118%;text-transform:uppercase;color:#fff;letter-spacing:-.02em}
 .ft__ar{font:700 1.15rem/1.6 "Alexandria",sans-serif;color:#fff;margin-top:8px}
-.ft h3{font:500 .8rem/1 var(--mono);color:#a8a8ad;margin-bottom:14px;letter-spacing:.02em}
+.ft h3{font:600 .8rem/1 var(--k-display);font-stretch:65%;text-transform:uppercase;color:#a8a8ad;margin-bottom:14px;letter-spacing:.04em}
 .ft ul li a,.ft p a{display:inline-block;padding-block:6px;text-decoration:none;color:#fff}
 .ft ul li a:hover,.ft p a:hover{color:#ff6b70}
 .ft p{color:#cfcfd3}
@@ -423,7 +422,7 @@ a{color:inherit}
 .svc{display:grid;gap:26px;padding-block:clamp(56px,8vw,110px);border-bottom:1px solid var(--line)}
 .svc__media{overflow:hidden;background:#111;aspect-ratio:4/4.6}
 .svc__media img{width:100%;height:100%;object-fit:cover}
-.svc__n{font:500 .85rem/1 var(--mono);color:var(--red-dk)}
+.svc__n{font:600 .85rem/1 var(--k-display);font-stretch:65%;letter-spacing:.04em;color:var(--red-dk)}
 .svc h2{font-size:clamp(2.5rem,6.4vw,5.6rem);font-stretch:108%;text-transform:uppercase;letter-spacing:-.035em;line-height:.9;margin:12px 0 20px}
 .svc__body p{max-width:34em;color:#2f2f33;margin-bottom:14px}
 .svc ul{margin:8px 0 26px;border-top:1px solid var(--line);max-width:34em}
@@ -457,8 +456,7 @@ a{color:inherit}
 
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion:reduce){
-  .k-js .hero__media,.k-js .hero__media img,.k-js .clock__t .d>span,.k-js .hero .fade,.k-js .hero__bars .bars i::before,.k-js .band__bars .bars i::before,.k-js .dial .seg{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
-  .clock__cap b i::after{animation:none}
+  .k-js .hero__media,.k-js .hero__media img,.k-js .clock__t .d>span,.k-js .hero .fade,.k-js .band__bars .bars i::before,.k-js .dial .seg{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
   .btn__t::before{transition:none}
 }
 
@@ -473,17 +471,7 @@ a{color:inherit}
   .brand__bars{height:22px}
   .hd__lang{min-width:44px;padding:0 6px;font-size:.85rem}
   .nav a{padding:0 8px}
-  .hero__copy{padding-top:16px;gap:12px}
-  .clock{flex-wrap:nowrap;gap:12px}
-  .clock__t{font-size:clamp(4.2rem,21vw,6rem)}
-  .clock__cap{font-size:.72rem;max-width:none;padding-bottom:.2em}
   .hero h1{font-size:clamp(2.1rem,10vw,2.8rem)}
-  .hero__lead{font-size:1rem;line-height:1.5}
-  .hero .cta{flex-wrap:nowrap}
-  .hero .cta .btn{min-height:52px}
-  .hero .cta .btn__a{width:52px}
-  .hero__foot{display:none}
-  .hero__media{aspect-ratio:auto;height:max(300px,calc(100svh - 470px))}
 }
 @media (max-width:374px){.nav a{font-size:.85rem}.brand__name{font-size:.8rem}}
 @media (min-width:900px){
@@ -491,14 +479,12 @@ a{color:inherit}
   .band h2{max-width:none}
   .band__bars{width:34%}
 }
-.k-visit__map{background:var(--ink)}
 .k-visit__map button{background:#fff;color:var(--ink)}
 @media (max-width:439px){.hd__call{min-width:44px;padding:0 11px}.hd__call span{display:none}}
 .skip{left:8px;inset-inline-start:8px;top:8px;transform:translateY(-300%);transition:transform .2s}
 .skip:focus{left:8px;transform:none}
-[lang=ar] :is(.hero__media figcaption,.k-visit__shop figcaption,.hero__addr,.k-story__n){font-family:"Alexandria",sans-serif;letter-spacing:0}
+[lang=ar] :is(.k-visit__shop figcaption,.hero__addr,.k-story__n,.brand__name small,.ft h3,.k-drag__meta span,.dial__mid span,.k-visit__badge){font-family:"Alexandria",sans-serif;letter-spacing:0}
 .btn__t{white-space:nowrap}
-@media (max-width:899px){.hero .btn__t{padding:0 16px}}
 .ph__jump{grid-column:1/-1}
 @media (max-width:899px){
   .ph__in{gap:18px;padding-top:24px}
@@ -514,7 +500,82 @@ a{color:inherit}
 .skip{transition:none}
 .ft ul li a{padding-block:10px}
 .ft ul li a{min-width:44px}
-.map-deco{position:absolute;inset:12% 10%;pointer-events:none}
-.map-deco .bars i::before{background:#2b2b2e}
-.map-deco .bars i.r::before{background:var(--red)}
+.k-visit__map{background:#111}
 .k-visit__map button{box-shadow:none;padding:16px 26px}
+
+/* ---------- round 2 ---------- */
+/* fix 7: WhatsApp mark as a square tile beside the red call tile (phones) */
+.hd__wam{display:none}
+@media (max-width:899px){
+  .nav{display:none}
+  .hd__wam,.hd__call{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#fff;text-decoration:none}
+  .hd__wam{background:var(--ink);padding:0}
+  .hd__wam .ico{width:20px;height:20px}
+  .brand__name{font-size:1rem;font-stretch:112%}
+}
+@media (max-width:374px){.brand__name{font-size:.86rem}}
+/* fix 2 (AR) + fix 9 */
+[lang=ar] .clock__cap{font-family:"Alexandria",sans-serif;font-weight:600;line-height:1.6}
+[lang=ar] .hero__lead{line-height:1.85;max-width:26em;margin-bottom:20px}
+[lang=ar] .hero__addr{text-transform:none;letter-spacing:0}
+[lang=ar] :is(.k-story__n,.row__n,.svc__n){text-transform:none}
+@media (max-width:899px){[lang=ar] .hero__lead{line-height:1.85}}
+/* round 2 hero tune: day label on the clock line, tighter caption, bigger clock on phones */
+.hero__clock{display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:24px}
+.clock__day{grid-column:2;grid-row:1;justify-self:end;font:600 clamp(.9rem,1.5vw,1.5rem)/1.1 var(--k-display);font-stretch:65%;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);text-align:end;padding-bottom:.4em}
+.clock__t{grid-column:1;grid-row:1}
+.clock__cap{grid-column:1/-1;margin-top:6px;align-items:flex-start}
+.clock__cap i{margin-top:.38em}
+[lang=ar] .clock__day{text-transform:none;letter-spacing:0;font-family:"Alexandria",sans-serif;font-stretch:100%}
+@media (max-width:899px){
+  .clock__t{font-size:clamp(6rem,38vw,11rem)}
+  .clock__day{display:none}
+}
+.dial__mid strong .c{font:inherit;margin:0;color:var(--red);text-transform:none;letter-spacing:inherit}
+[lang=ar] .clock__day{font-size:clamp(.9rem,1.15vw,1.15rem);font-weight:600}
+
+/* ---------- round 3 ---------- */
+/* fix 1: desktop clock runs edge to edge; the day label moves onto the caption line, at the end */
+.hero__clock{grid-template-columns:minmax(0,1fr) auto}
+.clock__t{grid-column:1/-1;grid-row:1}
+.clock__cap{grid-column:1;grid-row:2}
+.clock__day{grid-column:2;grid-row:2;align-self:start;justify-self:end;padding-bottom:0;margin-top:6px;font-size:clamp(.9rem,1.2vw,1.1rem);line-height:1.35}
+[lang=ar] .clock__day{font-size:clamp(.9rem,1.1vw,1.05rem);line-height:1.6}
+[dir=rtl] .clock__t{justify-content:flex-end;margin-left:0;margin-right:-.04em}
+/* Anybody at its widest (150) with 0 tracking: the right edge (left in Arabic) lands 16-24px from the container at 1100-1920px; the 19rem cap keeps the height */
+@media (min-width:1100px){.clock__t{font-stretch:var(--clock-w,150%);letter-spacing:0}}
+/* fix 2: the dial centre is a static 24/7; the Find us badge speaks like the hero caption (red square, ink text) */
+.dial__mid strong{font-stretch:70%}
+.k-visit__badge,.k-visit__badge.is-open,.k-visit__badge.is-shut{background:transparent;color:var(--ink);padding:0;border-radius:0;gap:10px;font:600 clamp(.98rem,1.2vw,1.1rem)/1.35 var(--k-body);font-stretch:100%;text-transform:none;letter-spacing:0}
+.k-visit__badge i{width:10px;height:10px;border-radius:0;background:var(--red)}
+.k-visit__badge i::after,.k-visit__badge.is-open i::after{content:none;animation:none}
+[lang=ar] .k-visit__badge{font-family:"Alexandria",sans-serif}
+/* fix 4: phones, the Call button in service blocks and red bands becomes a 52px icon tile on the same row */
+@media (max-width:599px){
+  .cta--tile{flex-wrap:nowrap;gap:8px}
+  .cta--tile .btn:not(.btn--tile){flex:1 1 auto;min-width:0;min-height:52px}
+  .cta--tile .btn:not(.btn--tile) .btn__t{flex:1 1 auto;min-width:0;padding:0 14px;gap:8px;font-size:.96rem}
+  .cta--tile .btn__a{width:52px}
+  .btn--tile{flex:0 0 52px;min-height:52px}
+  .btn--tile .btn__t{width:52px;padding:0;justify-content:center}
+  .btn--tile .btn__lab{display:none}
+}
+/* phones: the hero WhatsApp label fills its button so the row has no gap before Call */
+@media (max-width:899px){.hero .cta .btn:not(.btn--line) .btn__t,.ph .cta .btn:not(.btn--line) .btn__t{flex:1 1 auto;justify-content:center}}
+
+/* ---------- pre-publish polish (Fannan round 3) ---------- */
+/* 1: services hero, phones: the grid track can't grow past the container; the hero call button is the 52px tile (as in the bands) */
+@media (max-width:899px){
+  .ph__in{grid-template-columns:minmax(0,1fr)}
+  .ph .cta--tile{flex-wrap:nowrap;gap:8px}
+  .ph .cta--tile .btn:not(.btn--tile){flex:1 1 auto;min-width:0;min-height:52px}
+  .ph .cta--tile .btn:not(.btn--tile) .btn__t{flex:1 1 auto;min-width:0;padding:0 14px;gap:8px}
+  .ph .cta--tile .btn__a{width:52px}
+  .ph .btn--tile{flex:0 0 52px;min-height:52px}
+  .ph .btn--tile .btn__t{width:52px;padding:0;justify-content:center}
+  .ph .btn--tile .btn__lab{display:none}
+}
+/* 2: Arabic phone clock: no optical offset, so the "4" stays inside the right gutter */
+@media (max-width:899px){[lang=ar] .clock__t,[dir=rtl] .clock__t{margin-inline-start:0;margin-right:0;margin-left:0}}
+/* 3: phones, Find us: the tap-to-load map is a 16/9 strip, button centred */
+@media (max-width:899px){.k-visit__map{min-height:0;aspect-ratio:16/9;display:grid;place-items:center}}

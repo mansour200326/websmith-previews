@@ -292,3 +292,63 @@ html[dir=rtl] .ft .ft__en{text-align:right}
 .hrs span{font-weight:600;font-variant-numeric:tabular-nums}
 /* 7. on phones the gallery is swiped, so the arrow pair goes and the heading gets the full width */
 @media (max-width:600px){.gal .k-drag__btns{display:none}}
+
+/* ================= Round 3 (Fannan r2 fixes) ================= */
+/* 1. desktop hero: photo bleeds to the viewport edge at full height, bigger sign name */
+@media (min-width:960px){
+  .hero{grid-template-columns:1.1fr 1fr;align-items:stretch;padding-block:0;min-height:calc(100svh - 72px)}
+  .hero__type{align-self:center;padding-block:clamp(28px,4vh,56px)}
+  .hero__media{margin-inline-end:calc(-1 * var(--pad));height:calc(100svh - 72px);min-height:560px}
+  .hero .k-seq{height:100%;border-radius:0}
+  .hero__sign{font-size:clamp(5rem,8.5vw,9rem);line-height:1.1;margin-bottom:clamp(10px,1.4vw,20px)}
+  .hero .k-seq__ui{padding:0 clamp(20px,2.4vw,36px) clamp(20px,3vh,32px)}
+}
+/* 2. folded.webp cropped to the plate (chain out of frame); figures capped on phones */
+img.crop-plate{object-position:40% 80%;scale:1.6;transform-origin:40% 80%}
+@media (max-width:959px){
+  .make__photo,.k-menu__feat{aspect-ratio:4/3;max-height:52svh;width:100%}
+}
+@media (min-width:960px){
+  /* landscape 4/3 on desktop too: in a portrait frame the chain cannot be cropped out without going soft */
+  .make__photo,.k-menu__feat{aspect-ratio:4/3}
+}
+/* 3. menu page header: type top-aligned with the photo, an action in the first screen, regag-tawa.webp (no door photo: ruler portrait) */
+.pg-hero{align-items:start}
+.pg-hero__txt{align-content:start}
+.pg-hero .hero__acts{margin-top:4px}
+.pg-hero__fig img{object-position:45% 50%;scale:none}
+@media (min-width:960px){.pg-hero__fig{aspect-ratio:5/4}}
+@media (max-width:959px){.pg-hero__fig{aspect-ratio:4/3}}
+/* home make 05 (Aash): bowls.webp, the bowls in frame */
+.make__photo img[data-k="5"]{object-position:50% 22%}
+@media (min-width:960px){.pg-hero{align-items:start}.pg-hero__txt{padding-top:0}}
+/* 4. story: less dead space, text column bottom-aligned with the halftone */
+.story.sec{padding-bottom:clamp(4rem,8vw,7rem)}
+@media (min-width:960px){.story{align-items:end}}
+/* 5. dish names under the English (and English under the Arabic) readable on black */
+.menu .k-menu__name .ar{font:500 1rem/1.6 "IBM Plex Sans Arabic",sans-serif;color:#ff6b5e;margin:.2rem 0 .35rem;letter-spacing:0}
+.menu .k-menu__name .en{font:500 1rem/1.6 "DM Sans",system-ui,sans-serif;color:#ff6b5e;margin:.2rem 0 .35rem}
+/* 6. how to order: WhatsApp leads */
+.how__wa{margin-top:14px;grid-column:2}
+.how .how__wa{color:#fff;padding:16px 22px;font-size:1.06rem}
+.how .how__wa:hover{color:#06301a}
+.how .how__wa bdi{font-variant-numeric:tabular-nums}
+@media (min-width:960px){.how{grid-template-columns:1.5fr 1fr 1fr}.how li:first-child b{font-size:2.1rem}}
+/* 7. AR menu index: the English name sits under the Arabic name */
+html[lang=ar] .idx__row{grid-template-columns:3.2em 1fr;row-gap:2px}
+html[lang=ar] .idx__ar{grid-column:2;font:500 .85rem/1.4 "DM Sans",system-ui,sans-serif;color:var(--paper-mute);letter-spacing:.01em}
+html[lang=ar] .idx__desc{grid-column:2;margin-top:6px}
+/* 8. gallery captions stack on phones */
+@media (max-width:600px){.gal .k-drag__meta{flex-direction:column;align-items:flex-start;gap:.2rem}}
+.how .how__wa{display:inline-flex;padding-block:16px}
+@media (min-width:960px){
+  .hero__sign{line-height:1.02}
+  html[lang=en] .hero h1{font-size:clamp(2.5rem,4.2vw,4.6rem);max-width:none}
+}
+/* 4. less black between the story and the gallery */
+.story.sec+.gal.sec{padding-top:clamp(3rem,5vw,5rem)}
+@media (min-width:960px){.make__grid{grid-template-columns:1fr 1fr}}
+.how .how__wa{justify-self:start}
+.pg-hero .hero__or .k-roll{vertical-align:-.25em}
+/* Fannan r3 fix 3: AR hero intro balanced, no lone last line at 1440 */
+html[lang=ar] .hero__lead{text-wrap:balance;max-width:36ch}

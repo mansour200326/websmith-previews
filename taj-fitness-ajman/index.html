@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="ar" href="ar/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Sans+Arabic:wght@700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/dumbbell-floor.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/dumbbell-floor.webp" imagesrcset="img/dumbbell-floor-800.webp 800w, img/dumbbell-floor-1200.webp 1200w, img/dumbbell-floor.webp 2400w" imagesizes="(max-width:860px) 66vw, 61vw" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -39,11 +39,11 @@
 <section class="hero" data-hero aria-labelledby="h1">
   <div class="hero__stage">
     <div class="hero__panels">
-      <div class="hero__p"><img src="img/dumbbell-floor.webp" alt="The free-weights floor at Taj Fitness: dumbbell racks along the mirror wall, benches and members training" fetchpriority="high" width="2400" height="1800"></div>
-      <div class="hero__p"><img src="img/coach-machine-m.webp" alt="A Taj trainer in yellow adjusting a member on a shoulder machine" width="2400" height="1800"></div>
-      <div class="hero__p"><img src="img/cable-row-m.webp" loading="lazy" alt="Two members on the cable machines, the turf strip and front desk behind them" width="1300" height="975"></div>
+      <div class="hero__p"><img src="img/dumbbell-floor.webp" srcset="img/dumbbell-floor-800.webp 800w, img/dumbbell-floor-1200.webp 1200w, img/dumbbell-floor.webp 2400w" sizes="(max-width:860px) 66vw, 61vw" alt="The free-weights floor at Taj Fitness: dumbbell racks along the mirror wall, benches and members training" fetchpriority="high" width="2400" height="1800"></div>
+      <div class="hero__p"><img src="img/coach-machine-m.webp" srcset="img/coach-machine-m-800.webp 800w, img/coach-machine-m.webp 1300w" sizes="(max-width:860px) 34vw, 23vw" alt="A Taj trainer in yellow adjusting a member on a shoulder machine" width="2400" height="1800"></div>
+      <div class="hero__p"><img src="img/deadlift-m.webp" srcset="img/deadlift-m-560.webp 560w, img/deadlift-m.webp 860w" sizes="17vw" alt="A member holding a loaded bar in front of the dumbbell racks and mirror wall" width="860" height="1300"></div>
     </div>
-    <div class="hero__name"><h1 id="h1"><span class="ln"><span class="red">Taj</span></span><span class="ln"><span>Fitness</span></span></h1></div>
+    <div class="hero__name"><h1 id="h1"><span class="ln"><span class="red">Taj</span></span><span class="ln"><span>Fit<span class="hn">n</span>ess</span></span></h1></div>
   </div>
   <div class="hero__facts">
     <p><strong>A gym for men and women in Al Bustan, Ajman.</strong> KM Trading Building, opposite Lulu. Free weights, machines, cardio, and trainers on the floor.</p>
@@ -63,47 +63,29 @@
       <div><dt>Where</dt><dd>KM Trading Building, Al Bustan</dd></div>
       <div><dt>Landmark</dt><dd>Opposite Lulu</dd></div>
       <div><dt>Who</dt><dd>Men and women</dd></div>
-      <div><dt>Ask</dt><dd><a class="k-link" href="tel:+971505350663">050 535 0663</a></dd></div>
+      <div><dt>Ask</dt><dd><a href="tel:+971505350663"><span class="k-roll"><span data-text="050 535 0663">050 535 0663</span></span></a></dd></div>
     </dl>
   </div>
   <figure class="intro__fig">
-    <div class="ph" data-reveal="clip"><img src="img/reception.webp" alt="The front desk at Taj Fitness, a trainer checking his phone at the counter" loading="lazy" width="2400" height="1800"></div>
+    <div class="ph" data-reveal="clip"><img src="img/reception.webp" srcset="img/reception-800.webp 800w, img/reception-1200.webp 1200w, img/reception.webp 2400w" sizes="(max-width:860px) 92vw, 37vw" alt="The front desk at Taj Fitness, a trainer checking his phone at the counter" loading="lazy" width="2400" height="1800"></div>
     <figcaption>The front desk, by the door. Come in and ask.</figcaption>
   </figure>
 </section>
 
-<!-- THE FLOOR: kit 11, numbered index with a photo that follows the cursor -->
-<section class="sec dark k-acc" data-k-acc aria-labelledby="floor-h" id="floor">
+<!-- THE FLOOR: numbered index (kit 11 base, rebuilt): each row shows its own photo and links to its area on the gym page -->
+<section class="sec dark floor" aria-labelledby="floor-h" id="floor">
   <div class="floor__head">
     <h2 class="h2" id="floor-h" data-reveal="lines">What's on the floor</h2>
-    <p class="lede" data-reveal data-reveal-delay="120">It's all one open room, so you're a few steps from dumbbells to cables to cardio. Tap a line for the detail.</p>
+    <p class="lede" data-reveal data-reveal-delay="120">It's all one open room, so you're a few steps from dumbbells to cables to cardio. Tap a line to see that area on the gym page.</p>
   </div>
-  <div class="k-acc__list">
-    <details class="k-acc__row" data-img="img/deadlift.webp">
-      <summary><span class="k-acc__n">01</span><span class="k-acc__t">Free weights<small>Dumbbell racks along the mirror wall, benches, plates and bars</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Dumbbells in pairs on two-tier racks</li><li>Flat and adjustable benches</li><li>Weight plates and plate trees</li><li>Straight and EZ bars</li><li>Lifting belts on the rack</li><li>Mirrors the length of the wall</li></ul><p><a class="wa-link" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20a%20question%20about%20the%20free%20weights"><svg class="ico"><use href="#i-wa"/></svg><span class="k-link">Ask about free weights</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
-    </details>
-    <details class="k-acc__row" data-img="img/racks.webp">
-      <summary><span class="k-acc__n">02</span><span class="k-acc__t">Racks &amp; cables<small>Smith machines and cable towers for pulls, presses and rows</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Smith machines</li><li>Cable crossover towers</li><li>Lat pull-down</li><li>Cable rows and attachments</li></ul><p><a class="wa-link" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20a%20question%20about%20the%20racks%20and%20cables"><svg class="ico"><use href="#i-wa"/></svg><span class="k-link">Ask about the racks</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
-    </details>
-    <details class="k-acc__row" data-img="img/coach-machine.webp">
-      <summary><span class="k-acc__n">03</span><span class="k-acc__t">Machines<small>Pin-loaded and plate-loaded machines for every body part</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Shoulder and chest machines</li><li>Leg machines</li><li>Back machines</li><li>Plate-loaded stations</li></ul><p><a class="wa-link" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20a%20question%20about%20the%20machines"><svg class="ico"><use href="#i-wa"/></svg><span class="k-link">Ask about the machines</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
-    </details>
-    <details class="k-acc__row" data-img="img/floor-wide.webp">
-      <summary><span class="k-acc__n">04</span><span class="k-acc__t">Cardio<small>A row of treadmills and spin bikes facing the floor</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Treadmills</li><li>Spin bikes</li><li>Space to cool down on the turf next to them</li></ul><p><a class="wa-link" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20a%20question%20about%20cardio"><svg class="ico"><use href="#i-wa"/></svg><span class="k-link">Ask about cardio</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
-    </details>
-    <details class="k-acc__row" data-img="img/turf.webp">
-      <summary><span class="k-acc__n">05</span><span class="k-acc__t">Turf strip<small>Green turf by the cardio row, for warm-ups and stretching</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Warm up before lifting</li><li>Stretch after a session</li><li>Bodyweight work</li></ul><p><a class="wa-link" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20a%20question%20about%20the%20gym"><svg class="ico"><use href="#i-wa"/></svg><span class="k-link">Ask us anything</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
-    </details>
-    <details class="k-acc__row" data-img="img/coach-women.webp">
-      <summary><span class="k-acc__n">06</span><span class="k-acc__t">Trainers<small>On the floor to show you a machine and check your form</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Show you how a machine works</li><li>Watch your form</li><li>Support you toward your goals</li></ul><p><a class="wa-link" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20I%27d%20like%20to%20ask%20about%20training%20with%20a%20coach"><svg class="ico"><use href="#i-wa"/></svg><span class="k-link">Ask about a trainer</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
-    </details>
-  </div>
+  <ol class="fl" data-reveal-stagger="70">
+    <li><a class="fl__row" href="services.html#weights"><span class="fl__n">01</span><span class="fl__t">Free weights</span><span class="fl__d">Dumbbell racks along the mirror wall, benches, plates and bars</span><span class="fl__th"><img src="img/th-dumbbell-floor.webp" srcset="img/th-dumbbell-floor-240.webp 240w, img/th-dumbbell-floor.webp 480w" sizes="(max-width:700px) 96px, 240px" alt="" loading="lazy" width="320" height="240"></span></a></li>
+    <li><a class="fl__row" href="services.html#racks"><span class="fl__n">02</span><span class="fl__t">Racks &amp; cables</span><span class="fl__d">Smith machines and cable towers for pulls, presses and rows</span><span class="fl__th"><img src="img/th-racks.webp" srcset="img/th-racks-240.webp 240w, img/th-racks.webp 480w" sizes="(max-width:700px) 96px, 240px" alt="" loading="lazy" width="320" height="240"></span></a></li>
+    <li><a class="fl__row" href="services.html#machines"><span class="fl__n">03</span><span class="fl__t">Machines</span><span class="fl__d">Pin-loaded and plate-loaded machines for every body part</span><span class="fl__th"><img src="img/th-coach-machine.webp" srcset="img/th-coach-machine-240.webp 240w, img/th-coach-machine.webp 480w" sizes="(max-width:700px) 96px, 240px" alt="" loading="lazy" width="320" height="240"></span></a></li>
+    <li><a class="fl__row" href="services.html#cardio"><span class="fl__n">04</span><span class="fl__t">Cardio</span><span class="fl__d">A row of treadmills and spin bikes facing the floor</span><span class="fl__th"><img src="img/th-floor-wide.webp" srcset="img/th-floor-wide-240.webp 240w, img/th-floor-wide.webp 480w" sizes="(max-width:700px) 96px, 240px" alt="" loading="lazy" width="320" height="240"></span></a></li>
+    <li><a class="fl__row" href="services.html#cardio"><span class="fl__n">05</span><span class="fl__t">Turf strip</span><span class="fl__d">Green turf by the cardio row, for warm-ups and stretching</span><span class="fl__th"><img src="img/th-turf.webp" srcset="img/th-turf-240.webp 240w, img/th-turf.webp 480w" sizes="(max-width:700px) 96px, 240px" alt="" loading="lazy" width="320" height="240"></span></a></li>
+    <li><a class="fl__row" href="services.html#trainers"><span class="fl__n">06</span><span class="fl__t">Trainers</span><span class="fl__d">On the floor to show you a machine and check your form</span><span class="fl__th"><img src="img/th-team.webp" srcset="img/th-team-240.webp 240w, img/th-team.webp 480w" sizes="(max-width:700px) 96px, 240px" alt="" loading="lazy" width="320" height="240"></span></a></li>
+  </ol>
 </section>
 
 <!-- RED FLOOD: men and women -->
@@ -113,8 +95,8 @@
     <p data-reveal data-reveal-delay="120">Taj is listed as a gym for male and female members. If you'd like to know the timings that suit you, or what membership costs, send us a message and we'll reply on WhatsApp.</p>
     <a class="btn-w" href="https://wa.me/971505350663?text=Hi%20Taj%20Fitness%2C%20I%27d%20like%20to%20ask%20about%20membership" data-k-magnetic="0.2"><svg class="ico"><use href="#i-wa"/></svg>Ask about membership <span class="k-arrow" aria-hidden="true">→</span></a>
   </div>
-  <div class="flood__a" data-reveal="clip"><img src="img/coach-women.webp" alt="A Taj trainer talking with three women members by the front desk" loading="lazy" width="2400" height="1800"></div>
-  <div class="flood__b" data-reveal="clip" data-reveal-delay="160"><img src="img/turf.webp" alt="A woman stretching on the turf strip, treadmills behind her" loading="lazy" width="2400" height="1800"></div>
+  <div class="flood__a" data-reveal="clip"><img src="img/coach-women.webp" srcset="img/coach-women-800.webp 800w, img/coach-women-1200.webp 1200w, img/coach-women.webp 2400w" sizes="(max-width:860px) 62vw, 30vw" alt="A Taj trainer talking with three women members by the front desk" loading="lazy" width="2400" height="1800"></div>
+  <div class="flood__b" data-reveal="clip" data-reveal-delay="160"><img src="img/turf.webp" srcset="img/turf-800.webp 800w, img/turf-1200.webp 1200w, img/turf.webp 2400w" sizes="(max-width:860px) 30vw, 15vw" alt="A woman stretching on the turf strip, treadmills behind her" loading="lazy" width="2400" height="1800"></div>
 </section>
 
 <!-- FILM STRIP: kit 09 -->
@@ -124,22 +106,22 @@
     <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous photo">←</button><button type="button" data-k-drag-next aria-label="Next photo">→</button></div>
   </div>
   <div class="k-drag__track" tabindex="0" role="region" aria-label="Photos of the gym, scroll sideways">
-    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/floor-wide.webp" alt="The main floor from the cardio side: machines, benches and the turf strip" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>01</b><h3>The main floor, from the bikes</h3></figcaption></figure>
-    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/deadlift.webp" alt="A member lifting a barbell in front of the dumbbell racks and mirrors" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>02</b><h3>Barbell work by the mirrors</h3></figcaption></figure>
-    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/racks.webp" alt="Smith machines and cable towers with members training" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>03</b><h3>Smith machines and cables</h3></figcaption></figure>
-    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/team.webp" alt="Taj trainers with a member between sets" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>04</b><h3>The Taj crew between sets</h3></figcaption></figure>
-    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/cable-row.webp" alt="Two members on the cable stations, seen from behind" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>05</b><h3>Cable stations, looking to the door</h3></figcaption></figure>
+    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/floor-wide.webp" srcset="img/floor-wide-800.webp 800w, img/floor-wide-1200.webp 1200w, img/floor-wide.webp 2400w" sizes="(max-width:860px) 80vw, 560px" alt="The main floor from the cardio side: machines, benches and the turf strip" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>01</b><h3>The main floor, from the bikes</h3></figcaption></figure>
+    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/deadlift.webp" srcset="img/deadlift-800.webp 800w, img/deadlift-1200.webp 1200w, img/deadlift.webp 2400w" sizes="(max-width:860px) 80vw, 560px" alt="A member lifting a barbell in front of the dumbbell racks and mirrors" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>02</b><h3>Barbell work by the mirrors</h3></figcaption></figure>
+    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/racks.webp" srcset="img/racks-800.webp 800w, img/racks-1200.webp 1200w, img/racks.webp 2400w" sizes="(max-width:860px) 80vw, 560px" alt="Smith machines and cable towers with members training" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>03</b><h3>Smith machines and cables</h3></figcaption></figure>
+    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/team.webp" srcset="img/team-800.webp 800w, img/team-1200.webp 1200w, img/team.webp 2400w" sizes="(max-width:860px) 80vw, 560px" alt="Taj trainers with a member between sets" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>04</b><h3>The Taj crew between sets</h3></figcaption></figure>
+    <figure class="k-drag__card"><div class="k-drag__fig"><img src="img/cable-row.webp" srcset="img/cable-row-800.webp 800w, img/cable-row-1200.webp 1200w, img/cable-row.webp 2400w" sizes="(max-width:860px) 80vw, 560px" alt="Two members on the cable stations, seen from behind" loading="lazy" draggable="false" width="2400" height="1800"></div><figcaption class="k-drag__meta"><b>05</b><h3>Cable stations, looking to the door</h3></figcaption></figure>
   </div>
   <div class="k-drag__bar" aria-hidden="true"><i></i></div>
 </section>
 
-<!-- RATING: kit 06, the one real number -->
-<section class="sec dark" aria-label="Google rating">
+<!-- RATING: kit 06, the one real number, line set on its baseline -->
+<section class="sec dark rate-sec" aria-label="Google rating">
   <div class="rate">
     <div class="rate__n"><span data-k-count="4.6" data-k-count-dec="1" data-k-count-from="1">4.6</span></div>
-    <div>
-      <p data-reveal>out of 5 on Google, <span>from 18 ratings.</span></p>
-      <a class="wa-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taj+Fitness+Ajman+KM+Trading+Building+Al+Bustan" target="_blank" rel="noopener"><span class="k-link">Read them on Google Maps</span> <span class="k-arrow" aria-hidden="true">→</span></a>
+    <p class="rate__line" data-reveal>out of 5 on Google, <span>from 18 ratings.</span></p>
+    <div class="rate__more" data-reveal data-reveal-delay="120">
+      <a class="wa-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taj+Fitness+Ajman+KM+Trading+Building+Al+Bustan" target="_blank" rel="noopener"><span class="k-link">Read the ratings on Google Maps</span> <span class="k-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -158,8 +140,10 @@
     </div>
   </div>
   <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Taj+Fitness+Ajman,+KM+Trading+Building,+Al+Bustan,+Ajman&amp;z=16&amp;output=embed">
-    <img src="img/team.webp" alt="" loading="lazy" width="2400" height="1800">
-    <button type="button">Show the map</button>
+    <div class="map-face">
+      <p class="map-face__addr">KM Trading Building<br>opposite Lulu<br>Al Bustan, Ajman</p>
+      <div class="map-face__act"><svg class="map-face__pin" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20.8 12 32 12 32s12-11.2 12-20.1C24 5.3 18.6 0 12 0Zm0 16.6a4.7 4.7 0 1 1 0-9.4 4.7 4.7 0 0 1 0 9.4Z"/></svg><button type="button">Show the map</button></div>
+    </div>
   </div>
 </section>
 </main>

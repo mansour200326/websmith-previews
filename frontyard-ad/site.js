@@ -100,8 +100,15 @@
   var els=document.querySelectorAll('[data-reveal]');
   if(RM||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-in')});return}
   // clip reveals are fully clipped (zero visible area), which IntersectionObserver never reports, so watch their parent
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){(e.target.__kRv||[e.target]).forEach(function(x){x.classList.add('is-in')});io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px',threshold:0});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){(e.target.__kRv||[e.target]).forEach(function(x){x.classList.add('is-in')});io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:0});
   els.forEach(function(e){var t=e.getAttribute('data-reveal')==='clip'&&e.parentElement?e.parentElement:e;(t.__kRv=t.__kRv||[]).push(e);io.observe(t)});
+  // safety net (round 2): after a fast scroll the observer can miss elements. On scroll end, and once 3s after load,
+  // show every reveal whose top is already above the bottom of the viewport.
+  function sweep(){var vh=innerHeight;els.forEach(function(e){if(!e.classList.contains('is-in')&&e.getBoundingClientRect().top<vh){e.classList.add('is-in');var t=e.getAttribute('data-reveal')==='clip'&&e.parentElement?e.parentElement:e;io.unobserve(t)}});
+    document.querySelectorAll('[data-k-drag]:not(.is-in),.k-fx:not(.is-in)').forEach(function(e){if(e.getBoundingClientRect().top<vh)e.classList.add('is-in')})}
+  var se;addEventListener('scroll',function(){clearTimeout(se);se=setTimeout(sweep,160)},{passive:true});
+  if('onscrollend' in window)addEventListener('scrollend',sweep);
+  setTimeout(sweep,3000);
   // parallax
   var px=[].slice.call(document.querySelectorAll('[data-speed]'));
   if(DESK&&px.length){var tk=false;function upd(){tk=false;var vh=innerHeight;px.forEach(function(e){var r=e.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;var c=(r.top+r.height/2-vh/2);e.style.transform='translate3d(0,'+(c*(+e.getAttribute('data-speed'))).toFixed(1)+'px,0)'})}
@@ -180,43 +187,44 @@
     b.hidden=false;b.classList.add(open?'is-open':'is-shut');
     var t=b.querySelector('span');if(t)t.textContent=open?b.getAttribute('data-open'):b.getAttribute('data-shut');
   });
+  /* hero branch lines: a small open/closed dot on each line, with its state for screen readers */
+  document.querySelectorAll('[data-odot]').forEach(function(d){
+    d.hidden=false;d.classList.add(open?'is-open':'is-shut');
+    var s=d.querySelector('.sr');if(s)s.textContent=open?d.getAttribute('data-open'):d.getAttribute('data-shut');
+  });
 
-  /* hero: the oval opens on load, then widens to the full photo as you scroll (desktop) */
+  /* hero: the oval opens on load and the words rise (kit 02). Round 3: no scroll widen at all. The oval keeps its
+     load-in size (about 490 x 630 at 1440x900); on scroll only the photo inside it drifts, scale 1 to 1.06 and up
+     about 4%, while the hero (100vh, not sticky) scrolls away with the name and branch list on it. */
   var hero=document.querySelector('[data-hero]');
   if(hero){
-    var win=hero.querySelector('.hero__win'),img=win&&win.querySelector('img'),cap=hero.querySelector('.hero__cap'),words=hero.querySelector('.hero__name');
+    var win=hero.querySelector('.hero__win'),img=win&&win.querySelector('img');
     var t0=null,intro=RM?1:0,prog=0;
     function ease(x){return 1-Math.pow(1-x,4)}
     function draw(){
       if(!win)return;
-      var desk=DESK.matches,W=innerWidth,H=innerHeight;
-      if(desk){
-        var rx0=Math.min(W*.17,H*.36),ry0=H*.35,rxE=Math.hypot(W,H)*.75,ryE=rxE;
-        var p=ease(prog),rx=(rx0+(rxE-rx0)*p)*intro,ry=(ry0+(ryE-ry0)*p)*intro;
+      var W=innerWidth,H=innerHeight,kb=(1.14-.14*intro)*(1+.06*prog);
+      if(DESK.matches){
+        var rx=Math.min(W*.17,H*.36)*intro,ry=H*.35*intro;
         win.style.setProperty('--rx',rx.toFixed(1)+'px');win.style.setProperty('--ry',ry.toFixed(1)+'px');
-        win.style.setProperty('--cy',(53-3*p)+'%');
-        var fo=Math.max(0,1-prog*2.4);
-        if(words){words.style.opacity=fo;words.style.transform='scale('+(1+prog*.08)+')'}
-        hero.style.setProperty('--fo',fo);hero.style.setProperty('--fy',(-prog*40)+'px');
-        var co=Math.min(1,Math.max(0,(prog-.62)/.3));if(cap)cap.style.opacity=co;win.style.setProperty('--sc',co);
-        var iw0=rx0*2*1.04,iwE=Math.max(W,H/1.78);
-        if(img){img.style.setProperty('--kb',(1.14-.14*intro).toFixed(4));img.style.setProperty('--iw',(iw0+(iwE-iw0)*Math.min(1,p*1.7)).toFixed(1)+'px')}
+        if(img){
+          img.style.setProperty('--iw',(Math.min(W*.17,H*.36)*2*1.04).toFixed(1)+'px');
+          img.style.setProperty('--ty',(-50-4*prog).toFixed(2)+'%');
+          img.style.setProperty('--kb',kb.toFixed(4));
+        }
       }else{
         win.style.setProperty('--rx',(44*intro).toFixed(2)+'%');win.style.setProperty('--ry',(50*intro).toFixed(2)+'%');
-        if(words){words.style.opacity='';words.style.transform=''}
-        hero.style.removeProperty('--fo');hero.style.removeProperty('--fy');
-        if(img){img.style.setProperty('--kb',(1.14-.14*intro).toFixed(4));img.style.removeProperty('--iw')}
+        if(img){img.style.setProperty('--kb',(1.14-.14*intro).toFixed(4));img.style.removeProperty('--iw');img.style.removeProperty('--ty')}
       }
     }
     function measure(){
       if(RM||!DESK.matches){prog=0;return}
-      var r=hero.getBoundingClientRect(),run=hero.offsetHeight-innerHeight;
-      prog=run>0?Math.min(1,Math.max(0,-r.top/run)):0;
-      hero.classList.toggle('is-scrub',prog>0);
+      var r=hero.getBoundingClientRect();
+      prog=Math.min(1,Math.max(0,-r.top/(hero.offsetHeight||innerHeight)));
     }
-    if(!RM)hero.classList.add('is-tall');
     measure();draw();
     requestAnimationFrame(function(){hero.classList.add('is-in')});
+    setTimeout(function(){hero.classList.add('is-settled')},1800);
     if(!RM){
       (function tick(t){if(t0===null)t0=t;var k=Math.min(1,(t-t0)/1300);intro=ease(k);draw();if(k<1)requestAnimationFrame(tick)})(performance.now());
       var tk=false;addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;measure();draw()})},{passive:true});
@@ -228,7 +236,13 @@
   var pic=document.querySelector('[data-order-pic]');
   if(pic){
     var imgs=[].slice.call(pic.querySelectorAll('img'));
-    function show(k){imgs.forEach(function(im){im.classList.toggle('is-on',im.getAttribute('data-k')===k)})}
+    var cap=document.querySelector('[data-order-cap]');
+    function show(k){
+      imgs.forEach(function(im){im.classList.toggle('is-on',im.getAttribute('data-k')===k)});
+      /* round 3: the dish name under the photo follows it */
+      var li=document.querySelector('[data-order="'+k+'"] h3');
+      if(cap&&li&&cap.textContent!==li.textContent){cap.classList.remove('is-on');void cap.offsetWidth;cap.textContent=li.textContent;cap.classList.add('is-on')}
+    }
     document.querySelectorAll('[data-order]').forEach(function(li){
       var k=li.getAttribute('data-order');
       function on(){document.querySelectorAll('[data-order].is-on').forEach(function(x){x.classList.remove('is-on')});li.classList.add('is-on');if(k)show(k)}

@@ -104,8 +104,11 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .sign__pin{display:inline-grid;place-items:center;width:clamp(30px,3vw,42px);height:clamp(30px,3vw,42px);border-radius:50%;background:var(--amber);color:var(--ink);font:800 1rem/1 var(--display)}
 .sign__post{position:absolute;top:120px;bottom:-30px;width:10px;background:#8E989B;z-index:0}
 .sign__post--b{inset-inline-end:calc(min(100%,480px)*.2)}.sign__post--a{inset-inline-end:calc(min(100%,480px)*.8 - 10px)}
-.road{margin-top:clamp(18px,2vw,30px);margin-bottom:-64px}
+.road{margin-top:clamp(18px,2vw,30px);margin-bottom:-58px}
 .road__car{position:relative;z-index:1;display:block;margin-inline-start:auto;width:min(100%,500px)}
+.road__car img{position:relative;z-index:1;width:100%}
+.road__car::after{content:"";position:absolute;z-index:0;left:-3%;right:-1%;bottom:-16px;height:44px;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(15,27,32,.42),rgba(15,27,32,.16) 50%,rgba(15,27,32,0) 76%)}
 .ground{position:relative;height:120px;background:var(--soft2)}
 .ground__lane{position:absolute;top:68%;inset-inline:0;height:6px;margin-top:-3px;background:repeating-linear-gradient(90deg,#fff 0 56px,transparent 56px 104px)}
 [dir=rtl] .ground__lane{background:repeating-linear-gradient(270deg,#fff 0 56px,transparent 56px 104px)}
@@ -114,7 +117,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .hero__strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 30px;padding-block:4px 20px;font-size:.92rem;color:#2F3C41}
 .hero__strip a{font-weight:600}
 @media (max-width:860px){
-  .hero__grid{grid-template-columns:1fr}
+  .hero__grid{grid-template-columns:minmax(0,1fr)}
   .hero__art{min-height:0;margin-top:8px}
   .sign-wrap{width:100%}
   .road{margin-top:20px}
@@ -135,6 +138,28 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
   .sign__arrow{width:26px}
   .sign__pin{width:26px;height:26px;font-size:.8rem}
 }
+/* mobile first screen: h1, sign, car and Call/WhatsApp all inside 390x844 (rescue) */
+@media (max-width:860px){
+  .hero{padding-top:16px}
+  .hero h1{font-size:clamp(2rem,9.1vw,2.6rem);line-height:1.02;letter-spacing:-.04em}
+  [lang=ar] .hero h1{font-size:clamp(1.7rem,7.4vw,2.2rem);line-height:1.4}
+  .hero__lede{margin-top:10px;font-size:1rem;line-height:1.5}
+  [lang=ar] .hero__lede{line-height:1.7}
+  .hero__acts{margin-top:14px}
+  .hero__acts .btn{min-height:52px}
+  .hero__art{margin-top:4px}
+  .sign{padding:6px 12px}
+  .sign__row{padding-block:5px}
+  [lang=ar] .sign__ar{font-size:1rem!important;line-height:1.35}
+  [lang=ar] .sign__ar small{font-size:.74rem!important;line-height:1.35!important}
+  .sign__post{top:60px;bottom:-24px}
+  .road{margin-top:6px;margin-bottom:-34px}
+  .road__car{width:76%}
+  .road__car::after{bottom:-10px;height:26px}
+  .ground{height:64px}
+  .ground__lane{top:62%;height:4px}
+  .hero__strip .wrap{padding-block:2px 16px;font-size:.86rem;gap:4px}
+}
 @media (max-width:370px){.hero__acts{gap:12px}.hero__acts .btn{padding:0 14px;font-size:1rem}}
 /* hero motion (JS gated) */
 .k-js .sign{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s var(--ease) .25s}
@@ -143,7 +168,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .k-js .hero.is-on .sign__post{transform:none}
 .sign__post{z-index:0}
 .k-js .road__car{opacity:0;transform:translateX(38%);transition:transform 1.5s var(--ease) .45s,opacity .6s ease .45s}
-[dir=rtl].k-js .road__car{transform:translateX(-38%)}
+/* the car faces left in every file (not mirrored: badge lettering), so it drives in from the right on EN and AR */
 .k-js .hero.is-on .road__car{opacity:1;transform:none}
 @media (max-width:860px){
   .k-js .road__car,[dir=rtl].k-js .road__car{transform:none;clip-path:inset(0 0 0 100%);transition:clip-path 1.3s var(--ease) .45s,opacity .4s ease .45s}
@@ -172,7 +197,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .spec dt{color:var(--mute);font-weight:600}
 .spec dd{font-weight:600}
 [lang=ar] .spec div{grid-template-columns:8em minmax(0,1fr)}
-.fleet .k-drag__track{padding-inline:var(--pad);scroll-padding-inline:var(--pad)}
+.fleet .k-drag__track{--in:max(var(--pad),calc((100% - var(--max))/2 + var(--pad)));padding-inline:var(--in);scroll-padding-inline:var(--in)}
 .fleet .k-drag__card{flex:0 0 clamp(250px,27vw,380px);scroll-snap-align:start;display:block}
 .fleet .k-drag__card:nth-child(3n+2){flex-basis:clamp(250px,27vw,380px)}
 .fleet .k-drag__fig{aspect-ratio:4/3;background:var(--soft);border-radius:6px;margin-bottom:14px;display:grid;place-items:center;padding:8%}
@@ -318,7 +343,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .tips li{background:var(--soft);border-radius:6px;padding:22px 22px 24px;font-size:1rem}
 .tips li b{display:block;font:700 1.08rem/1.35 var(--display);margin-bottom:8px}
 @media (max-width:860px){
-  .svc{grid-template-columns:1fr}
+  .svc{grid-template-columns:minmax(0,1fr)}
   .svc__side{position:static}
   .cars{grid-template-columns:repeat(2,minmax(0,1fr))}
   .seats{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -364,11 +389,12 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 [lang=ar] .ftr__name{letter-spacing:0;line-height:1.4}
 .ftr h2{font:700 .9rem/1.4 var(--body);color:#9FB0B3;margin-bottom:8px}
 .ftr ul{list-style:none}
-.ftr li a,.ftr li span{display:inline-flex;align-items:center;min-height:44px;padding-block:4px;text-decoration:none;line-height:1.35}
+.ftr li a{display:inline-flex;align-items:center;min-height:44px;padding-block:4px;text-decoration:none;line-height:1.35}
+.ftr li>span{display:inline-block;min-height:44px;padding-block:11px;line-height:1.35}
 .ftr li a{min-width:44px}
 .ftr li a:hover{color:#fff;text-decoration:underline}
 .ftr__base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;padding-block:20px 30px;border-top:1px solid rgba(255,255,255,.14);font-size:.86rem;color:#AEBBBD}
-@media (max-width:860px){.ftr__in{grid-template-columns:1fr 1fr}.ftr__in>div:first-child{grid-column:1/-1}}
+@media (max-width:860px){.ftr__in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.ftr__in>div:first-child{grid-column:1/-1}}
 
 
 /* ---------- kit 07 marquee ---------- */
@@ -442,17 +468,30 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .idx__pic img{transition:none}
 }
 
-/* ---------- one treatment for every car cutout (round 3) ---------- */
-.cut{position:relative;background:var(--soft);border-radius:6px;aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:center;padding:0 0 9%;overflow:hidden;margin:0}
-.cut::after{content:"";position:absolute;left:12%;right:12%;bottom:7.5%;height:9%;background:radial-gradient(closest-side,rgba(15,27,32,.22),rgba(15,27,32,0));z-index:0}
-.cut img{position:relative;z-index:1;display:block;width:86%;height:74%;max-width:none;object-fit:contain;object-position:50% 100%;mix-blend-mode:multiply;margin:0}
-.fleet .k-drag__fig.cut{padding:0 0 9%;display:flex;place-items:normal;margin-bottom:14px}
-.fleet .k-drag__fig.cut img{width:86%;height:74%;object-fit:contain;transform:none}
-.idx__pic.cut{padding:0 0 9%;display:flex;place-items:normal;aspect-ratio:4/3}
-.idx__pic.cut img{width:86%}
-.cars .cut{aspect-ratio:4/3}
+/* ---------- one treatment for every car cutout (rescue, 2026-10-23) ----------
+   Every file is trimmed to the car's bounding box with no baked shadow (macOS Vision subject mask, original pixels).
+   So the image bottom IS the tyre line: every car is pinned to the same line (14% up the card), scaled by length
+   (84% of the card width), and sits on the same CSS floor shadow, centred on that line. */
+.cut{--tyre:14%;position:relative;background:var(--soft);border-radius:6px;aspect-ratio:4/3;overflow:hidden;margin:0;padding:0;display:block}
+.cut::after{content:"";position:absolute;left:7%;right:7%;bottom:calc(var(--tyre) - 5%);height:9%;z-index:0;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(15,27,32,.34),rgba(15,27,32,.14) 46%,rgba(15,27,32,0) 74%)}
+.cut img,.fleet .k-drag__fig.cut img,.idx__pic.cut img,.cars .cut img{position:absolute;z-index:1;left:8%;width:84%;bottom:var(--tyre);height:68%;max-width:none;margin:0;
+  object-fit:contain;object-position:50% 100%;mix-blend-mode:normal;transform:none}
+.fleet .k-drag__fig.cut{padding:0;margin-bottom:14px}
+.idx__pic.cut{padding:0;aspect-ratio:4/3}
+.idx__pic.cut img{transition:transform 1.1s var(--ease)}
+.idx__row:hover .idx__pic.cut img{transform:translateX(-4%)}
+[dir=rtl] .idx__row:hover .idx__pic.cut img{transform:translateX(-4%)}
 .cars figure{background:none;padding:0;display:flex;flex-direction:column;gap:8px}
 .cars--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:620px){
+  /* services saloons: a swipe strip of big cards instead of four small tiles */
+  .cars--2{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);scroll-padding-inline:var(--pad);overscroll-behavior-x:contain}
+  .cars--2::-webkit-scrollbar{display:none}
+  .cars--2 figure{flex:0 0 80%;scroll-snap-align:start}
+  .cars__hint{display:block}
+}
+.cars__hint{display:none;margin-top:10px;font-size:.86rem;color:var(--mute)}
 .fleet__note{max-width:var(--max);margin:14px auto 0;padding-inline:var(--pad);font-size:.9rem;color:var(--mute)}
 
 /* scenery photos (Unsplash, credited, never captioned as theirs) */
@@ -503,3 +542,31 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .ab-hero .scene__img{aspect-ratio:4/3}
 @media (max-width:860px){.ab-hero__grid{grid-template-columns:1fr}}
 .nw{white-space:nowrap}
+
+/* services first screen (rescue): words left, a car + Call/WhatsApp right */
+.intro__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.intro__side .cut{aspect-ratio:5/4}
+.intro__side .cut img{height:72%}
+.intro__cap{margin-top:10px;font-size:.88rem;color:var(--mute)}
+.intro__side .svc__acts{margin-top:18px}
+@media (max-width:860px){.intro__grid{grid-template-columns:minmax(0,1fr)}.intro__side .cut{aspect-ratio:16/10}}
+.ab-hero .q cite .nm{display:block}
+@media (max-width:860px){
+  .intro{padding-block:22px 26px}
+  .jump{flex-wrap:nowrap;overflow-x:auto;gap:0 20px;margin-top:14px;margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad);scrollbar-width:none}
+  .jump::-webkit-scrollbar{display:none}
+  .jump a{flex:none;white-space:nowrap}
+  .intro__side .cut{aspect-ratio:16/9}
+  .intro__cap{margin-top:6px}
+  .intro__side .svc__acts{margin-top:12px;flex-wrap:wrap;gap:4px 18px}
+  .intro__grid{gap:18px}
+}
+.btn,.btn bdi,.svc__acts .plain{white-space:nowrap}
+.intro__side .svc__acts .btn{flex:none}
+.ftr bdi{white-space:nowrap}
+[dir=rtl] .ab-hero .q cite .nm{text-align:right}
+/* travel row: type instead of a weak photo, same rule as the bus-seats row */
+.idx__tags{list-style:none;display:flex;flex-direction:column;border-top:2px solid var(--ink);margin:0!important;gap:0!important}
+.idx__tags li{background:none!important;padding:9px 0!important;border-radius:0!important;border-bottom:1px solid var(--line);font:800 clamp(1.15rem,1.6vw,1.45rem)/1.2 var(--display)!important;letter-spacing:-.015em}
+[lang=ar] .idx__tags li{letter-spacing:0;line-height:1.5!important;font-weight:700!important}
+@media (max-width:980px){.idx__tags{grid-column:2;max-width:420px}}

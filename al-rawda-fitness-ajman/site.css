@@ -1,5 +1,11 @@
 /* Al Rawda Fitness, concept by Websmith. Palette from the gym's own lighting: the blue neon strips over the floor,
    the red ceiling bars, on cool white. Type: Familjen Grotesk (display), IBM Plex Sans (body), IBM Plex Mono (clock). */
+/* Fix 2 (r2): line reveal mask must not clip descenders (overrides kit .k-rv-line) */
+.k-rv-line{padding-bottom:.2em;margin-bottom:-.2em}
+/* The kit also sets clip-path:inset(0) on every revealed element, which cut descenders at the h2 box itself.
+   Line-split headings are already masked per line, so they need no clip-path. */
+.k-js [data-reveal=lines],.k-js [data-reveal=lines].is-in{clip-path:none}
+
 :root{
   --k-bg:#f2f3f6;--k-ink:#0b0f2a;--k-mute:#4a5068;--k-line:#d3d7e2;--k-accent:#2232e6;--k-on-accent:#fff;
   --k-display:"Familjen Grotesk",system-ui,sans-serif;--k-body:"IBM Plex Sans",system-ui,sans-serif;
@@ -56,8 +62,8 @@ a{color:inherit}
 .hero{display:grid;grid-template-columns:1fr;max-width:1600px;margin:0 auto}
 .hero__photo{position:relative;overflow:hidden;height:min(44svh,400px);background:#0b0f2a;margin:0}
 .hero__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
-.hero__photo figcaption{position:absolute;inset-inline-start:12px;bottom:12px;background:rgba(11,15,42,.78);color:#fff;font:500 .74rem/1 var(--mono);padding:7px 9px}
-.hero__body{padding:20px var(--pad) 28px;display:flex;flex-direction:column}
+.hero__name{padding:20px var(--pad) 0}
+.hero__intro{padding:0 var(--pad)}
 .hero h1{font-size:clamp(3rem,13.2vw,9.6rem);line-height:.86;letter-spacing:-.045em}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .ln>span{display:block}
@@ -81,15 +87,7 @@ a{color:inherit}
 .callline .k-roll{height:1.25em;line-height:1.25}
 
 /* the day ribbon: 24 hours, the gym's 21 */
-.day{margin-top:22px;max-width:620px}
-.day__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
-.day__state{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem}
-.day__state i{width:9px;height:9px;border-radius:50%;background:var(--k-mute);position:relative;flex:none}
-.day.is-open .day__state i{background:#12924a}
-.day.is-open .day__state i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#12924a;animation:ping 2.2s ease-out infinite}
-.day.is-shut .day__state i{background:var(--red)}
-@keyframes ping{from{transform:scale(1);opacity:.7}to{transform:scale(3);opacity:0}}
-.day__now{font:500 .8rem var(--mono);color:var(--k-mute)}
+.day{margin:22px var(--pad) 28px;max-width:620px}
 .day__bar{position:relative;height:30px;background:var(--k-ink);display:block}
 .day__closed{position:absolute;top:0;bottom:0;left:calc(2/24*100%);width:calc(3/24*100%);background:var(--k-bg);box-shadow:inset 0 0 0 1px var(--k-line)}
 .day__ticks{position:absolute;inset:0;display:flex;pointer-events:none}
@@ -106,11 +104,6 @@ html[dir=rtl] .day__bar,html[dir=rtl] .day__lbl{direction:ltr}
 @keyframes fill{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 
 @media (min-width:900px){
-  .hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:calc(100svh - 76px);align-items:stretch}
-  .hero__photo{height:auto;min-height:560px}
-  .hero__body{padding:clamp(28px,4vw,64px) var(--pad) 40px;justify-content:space-between}
-  .hero h1{font-size:clamp(4.4rem,10.6vw,11rem)}
-  .hero__lead{font-size:1.15rem;margin-top:26px}
   .acts{max-width:560px;margin-top:28px}
   .btn--wa{flex:0 1 auto;padding:0 34px}
 }
@@ -249,25 +242,16 @@ html[dir=rtl] .day__bar,html[dir=rtl] .day__lbl{direction:ltr}
 .svc li::before{content:"";display:inline-block;width:8px;height:8px;background:var(--k-accent);margin-inline-end:12px;vertical-align:.1em}
 .svc figure{margin:0;overflow:hidden;aspect-ratio:4/3;max-height:640px;background:#ccd}
 .svc figure img{width:100%;height:100%;object-fit:cover}
-.svc__type{aspect-ratio:4/3;max-height:640px;background:var(--k-ink);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:28px}
-.svc__type b{font:700 clamp(4rem,10vw,8rem)/.85 var(--k-display);letter-spacing:-.05em}
-.svc__type span{font:500 .82rem/1.5 var(--mono);color:#b9bfd6;max-width:22em}
-@media (min-width:900px){
-  .svc{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,100px);align-items:center}
-  .svc:nth-of-type(even)>:first-child{order:2}
-  .svc figure,.svc__type{aspect-ratio:4/5}
-}
 
 @media (prefers-reduced-motion:reduce){
   .k-js .hero h1 .ln>span,.k-js .hero__photo,.k-js .hero__photo img,.k-js .hero__fade{animation:none;transform:none;opacity:1;clip-path:none}
   .js-fill .day__fill{animation:none}
-  .day.is-open .day__state i::after{animation:none}
   .bar,.btn::before{transition:none}
 }
 
 /* Arabic */
 html[lang=ar] body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;font-size:18px;line-height:1.75}
-html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .brand b,html[lang=ar] .ft__name,html[lang=ar] .clock__t b,html[lang=ar] .find__addr,html[lang=ar] .svc__type b{font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .brand b,html[lang=ar] .ft__name,html[lang=ar] .clock__t b,html[lang=ar] .find__addr{font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
 html[lang=ar] .hero h1{font-size:clamp(3rem,13vw,8.4rem);line-height:1.08;font-weight:700}
 html[lang=ar] .h2,html[lang=ar] .k-story__head h2,html[lang=ar] .k-drag__head h2,html[lang=ar] .svc h2{line-height:1.15;letter-spacing:0}
 html[lang=ar] .ph h1{line-height:1.1;letter-spacing:0}
@@ -287,15 +271,105 @@ html[dir=rtl] .js-fill .day__fill{animation-name:fill}
 .k-visit__map button{z-index:2}
 .ft [aria-current=page]{color:#fff;text-decoration:underline;text-underline-offset:4px}
 .callline{display:flex;align-items:center;gap:6px}
-@media (min-width:900px){.day{max-width:none}}
 .k-drag{padding-inline:0}
-html[lang=ar] :is(.hd__info,.day__now,.hero__photo figcaption,.k-story__media figcaption,.both__list li span:last-child,.k-drag__meta span,.ft h3,.hrs td.note,.svc__type span){font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+html[lang=ar] :is(.hd__info,.k-story__media figcaption,.both__list li span:last-child,.k-drag__meta span,.ft h3,.hrs td.note){font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
 html[lang=ar] .hd__info{font-size:.82rem}
-html[lang=ar] .svc__type b{line-height:1.1}
-@media (min-width:900px){.svc figure,.svc__type{aspect-ratio:1/1;max-height:none}}
-.svc__type b{font-size:clamp(3.2rem,7vw,6.4rem)}
 .brand{min-height:44px;justify-content:center}
 .callline a{min-height:44px;display:inline-flex;align-items:center}
 @media (max-width:899px){.ft li a{min-height:44px}}
 .ft li a{min-width:44px}
-.k-rv-line{padding-bottom:.16em;margin-bottom:-.16em}
+
+/* ================= Round 2 (Fannan r1 fixes) ================= */
+/* Fix 1: desktop hero restacked: name row, intro on the right, timetable band, 21:9 hall */
+.day__closed{display:flex;align-items:center;justify-content:center;overflow:hidden}
+.day__closed-t{display:none}
+@media (max-width:899px){.day__l3{display:none}}
+@media (min-width:900px){
+  .hero{max-width:none;grid-template-columns:minmax(0,1fr)}
+  .hero__name{order:1;padding:clamp(28px,3.4vw,52px) var(--pad) 0;display:flex;gap:.22em;white-space:nowrap}
+  .hero h1.hero__name{font-size:clamp(4rem,9vw,10rem);line-height:.9}
+  .hero__intro{order:2;justify-self:end;width:40%;min-width:400px;padding:clamp(18px,2vw,30px) var(--pad) 0 0;box-sizing:content-box}
+  html[dir=rtl] .hero__intro{padding:clamp(18px,2vw,30px) 0 0 var(--pad)}
+  .hero__lead{font-size:1.15rem;margin-top:0}
+  .hero__intro .acts{margin-top:22px}
+  .day{order:3;max-width:none;margin:clamp(30px,3.6vw,52px) var(--pad) clamp(30px,3vw,44px)}
+  .day__bar{height:56px}
+  .day__ticks span:nth-child(3n){border-inline-end-color:rgba(255,255,255,.34)}
+  .day__closed-t{display:block;font:500 .8rem/1 var(--mono);color:var(--k-ink);white-space:nowrap;position:relative;z-index:1}
+  .day__mark{top:-10px;bottom:-10px;width:3px}
+  .day__lbl{font-size:.8rem;margin-top:10px}
+  .day__lm{display:none}
+  .hero__photo{order:4;height:auto;min-height:0;aspect-ratio:21/9;width:100%}
+  .hero__photo img{object-position:50% 40%}
+}
+html[lang=ar] .day__closed-t{font-family:"IBM Plex Sans Arabic",sans-serif}
+@media (min-width:900px){html[lang=ar] .hero h1.hero__name{font-size:clamp(4rem,9vw,10rem);line-height:1.15}}
+
+/* Fix 3: services as ruled index rows, photo always on the right */
+.svc{display:grid;grid-template-columns:1fr;gap:14px;padding:clamp(36px,5vw,64px) var(--pad);max-width:1600px;margin:0 auto;border-bottom:1px solid var(--k-line)}
+.svc__n{font:500 1rem/1 var(--mono);color:var(--k-accent);padding-top:.5em}
+.svc h2{margin:0 0 16px}
+.svc__fig{margin:0;overflow:hidden;aspect-ratio:4/3;background:#ccd}
+.svc__fig img{width:100%;height:100%;object-fit:cover}
+.svc figure.svc__fig--cardio img{object-position:85% 60%}
+.svc__fig figcaption{font:500 .8rem/1.4 var(--mono);color:var(--k-mute);padding-top:10px;background:var(--k-bg)}
+.svc figure.svc__fig--cardio{aspect-ratio:auto;max-height:none;background:none}
+.svc figure.svc__fig--cardio img{aspect-ratio:4/3;height:auto}
+.svc .acts{margin-top:4px}
+html[lang=ar] .svc__fig figcaption{font-family:"IBM Plex Sans Arabic",sans-serif}
+@media (min-width:900px){
+  .svc{grid-template-columns:64px minmax(0,1fr) 38%;gap:0 clamp(28px,4vw,64px);align-items:start}
+  .svc--nofig .svc__body{grid-column:2 / -1}
+  .svc--nofig .svc__body>p,.svc--nofig ul{max-width:44em}
+}
+
+/* Fix 5: no empty navy tail after step 04 */
+@media (min-width:900px){.k-story__steps{padding:14vh 0 6vh}.k-story{padding-bottom:clamp(40px,5vw,72px)}}
+
+/* Fix 6: footer brand on one line (desktop), tight wrap (mobile) */
+.ft__name{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1}
+@media (min-width:900px){.ft__in{grid-template-columns:max-content 1fr 1fr 1fr;gap:36px clamp(36px,5vw,90px)}.ft__name{white-space:nowrap}}
+
+/* Fix 7: phone gallery cards the same height; tighter progress line */
+@media (max-width:599px){
+  .k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:78vw}
+  .k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/5}
+  .k-drag__bar{margin-top:24px}
+}
+
+/* Keep the open/closed status inside the first 844px on phones (AR headline is taller) */
+@media (max-width:899px){.day{margin-top:14px}.hero__intro .callline{margin-top:6px}html[lang=ar] .hero h1{line-height:1}html[lang=ar] .hero__lead{line-height:1.65}}
+
+/* ================= Round 3 (Fannan r2 fixes) ================= */
+/* Fix 1: name and intro share one row, so the 21:9 hall comes into the first screen */
+@media (min-width:900px){
+  .hero{grid-template-columns:auto minmax(340px,1fr);align-items:end;column-gap:clamp(32px,4vw,72px)}
+  .hero h1.hero__name,html[lang=ar] .hero h1.hero__name{order:1;font-size:clamp(4rem,8vw,8.6rem);padding:clamp(24px,2.6vw,40px) 0 0;padding-inline-start:var(--pad)}
+  .hero__intro,html[dir=rtl] .hero__intro{order:2;justify-self:stretch;width:auto;min-width:0;max-width:440px;padding:clamp(28px,3vw,44px) 0 0;padding-inline-end:var(--pad);box-sizing:content-box}
+  .hero__lead{font-size:1.02rem;line-height:1.5}
+  .hero__intro .acts{margin-top:16px}
+  .hero__intro .callline{margin-top:2px}
+  .hero .day{order:3;grid-column:1 / -1;margin:24px var(--pad) 22px}
+  .hero .day__bar{height:40px}
+  .hero .day__mark{top:-8px;bottom:-8px}
+  .hero__photo{order:4;grid-column:1 / -1}
+}
+
+@media (min-width:900px) and (max-width:1023px){.hero{grid-template-columns:auto minmax(300px,1fr)}.hero__intro,html[dir=rtl] .hero__intro{box-sizing:border-box}.hero__intro .btn--wa{padding:0 18px}}
+
+/* Fix 2: the state hangs off the red now-marker; the ribbon is the only time device */
+.day__tag{position:absolute;top:50%;left:calc(100% + 6px);transform:translateY(-50%);background:var(--k-ink);color:#fff;font:500 .72rem/1 var(--mono);padding:5px 6px;white-space:nowrap;z-index:2;pointer-events:none}
+.day.is-flip .day__tag{left:auto;right:calc(100% + 6px)}
+.day.is-early .day__closed-t{visibility:hidden}
+.day__tag:empty{display:none}
+html[lang=ar] .day__tag{font:600 .74rem/1.2 "IBM Plex Sans Arabic",sans-serif;padding:4px 7px}
+@media (min-width:900px){.day__tag{font-size:.84rem;padding:6px 8px}html[lang=ar] .day__tag{font-size:.88rem}}
+
+/* Fix 3: floor-red re-cropped from the raw; belt and braces for any edge */
+.k-story__media figure,.k-story__inline,.svc__fig{overflow:hidden}
+
+/* Fix 5: blue band, paragraph clears the descender, list sits level with the headline */
+.both h2{display:flow-root} /* stops the line-reveal -.2em margin collapsing the gap away */
+html:not([lang=ar]) .both h2{padding-bottom:.2em} /* room for the g descender at line-height .86 */
+.both p{margin-top:28px}
+@media (min-width:900px){.both .sec{align-items:center}}

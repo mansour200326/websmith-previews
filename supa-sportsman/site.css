@@ -489,3 +489,119 @@ a:hover .roll>span{transform:translateY(-50%)}
 @media (min-width:861px){.hero__photo figcaption{padding-inline-end:var(--pad)}}
 @media (min-width:861px){[dir=rtl] .hero__name{font-size:calc((min(100vw,var(--max)) - 2 * var(--pad)) * var(--wm));margin:calc(-1 * var(--wm-lift)) -.02em 0 0}}
 @media (min-width:861px){[dir=rtl] .hero__name .ar{align-self:baseline;margin-bottom:0;font-size:clamp(1.2rem,1.8vw,1.7rem)}}
+
+/* ---- rescue (2026-10-23) ---- */
+/* hero: branch block fills the space under the CTA, clears the wordmark */
+.hero__find{display:none}
+@media (min-width:861px){
+  .hero__lead{display:flex;flex-direction:column;padding-bottom:calc((min(100vw,var(--max)) - 2 * var(--pad)) * .124 * .82 + 26px)}
+  [dir=rtl] .hero__lead{padding-bottom:calc((min(100vw,var(--max)) - 2 * var(--pad)) * .094 * .9 + 30px)}
+  .hero__mlink{display:none}
+  .hero__acts{margin-top:30px}
+  .hero__lead p{font-size:clamp(1.1rem,1.72vw,1.62rem);line-height:1.32}
+  .hero__find{display:block;margin-top:auto;padding-top:24px;max-width:34em}
+  .hero__lead .hero__find-h{max-width:none;font:700 .95rem/1.2 "Archivo";letter-spacing:0;color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--ink)}
+  [dir=rtl] .hero__lead .hero__find-h{font-family:"IBM Plex Sans Arabic",sans-serif}
+  .hero__find a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;align-items:center;min-height:52px;padding:7px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .45s var(--ease),color .3s}
+  .hero__find b{display:block;font:700 1.02rem/1.25 "Archivo";font-stretch:85%}
+  [dir=rtl] .hero__find b{font-family:"IBM Plex Sans Arabic",sans-serif;font-stretch:100%}
+  .hero__find small{display:block;font-size:.86rem;line-height:1.35;color:var(--mute);margin-top:2px}
+  .hero__find a>span:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .hero__find-go{display:inline-flex;align-items:center;gap:6px}
+  .hero__find a:hover{padding-inline-start:10px;color:var(--red-dk)}
+}
+@media (min-width:861px) and (max-height:820px){.hero__lead p{font-size:clamp(1.05rem,1.6vw,1.5rem)}.hero__acts{margin-top:28px}.hero__find small{display:none}.hero__find a{min-height:48px}}
+
+/* home: work band (replaces the drag scroller) */
+.work{background:var(--ink);color:#fff;padding-block:clamp(72px,10vw,150px)}
+.work .lede{color:#c3c7cc}
+.work__head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px clamp(28px,4vw,64px);align-items:end;margin-bottom:clamp(34px,4.5vw,64px)}
+.work__grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(14px,1.8vw,26px);align-items:start}
+.work figure{margin:0}
+.work figure a{display:block;overflow:hidden;background:#1d2126}
+.work figure img{width:100%;height:100%;object-fit:cover}
+.work figcaption{display:flex;justify-content:space-between;gap:12px;font-size:.84rem;color:#b2b6bc;padding-top:10px}
+.work__a{grid-column:1/8;grid-row:1}
+.work__a a{aspect-ratio:16/10}
+.work__steps{grid-column:8/13;grid-row:1/3;counter-reset:s;border-top:2px solid #fff}
+.work__steps li{display:grid;grid-template-columns:clamp(3.2rem,4.6vw,4.6rem) minmax(0,1fr);gap:14px;padding:clamp(18px,2vw,28px) 0;border-bottom:1px solid #33373d}
+.work__n{font:800 clamp(2.4rem,3.6vw,3.6rem)/.8 "Barlow Condensed","Archivo",sans-serif;color:var(--red);color:#ff4d63}
+.work__steps b{display:block;font:800 clamp(1.7rem,2.5vw,2.4rem)/.95 "Barlow Condensed","Archivo",sans-serif;text-transform:uppercase}
+.work__steps p{margin-top:8px;color:#c3c7cc;font-size:1rem;max-width:28em}
+.work__c{grid-column:1/5;grid-row:2}
+.work__c a{aspect-ratio:4/3}
+.work__b{grid-column:5/8;grid-row:2}
+.work__b a{aspect-ratio:3/4}
+.work__b img{object-position:30% 50%}
+.work__more{margin-top:clamp(34px,4vw,56px);padding-top:22px;border-top:1px solid #33373d;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 28px;font-size:1.1rem;color:#d7dadd}
+.work__more .tlink{color:#fff}
+.work a:focus-visible{outline-color:#fff}
+[dir=rtl] .work__steps b{font-family:"Noto Kufi Arabic",sans-serif;text-transform:none;font-size:clamp(1.3rem,1.9vw,1.75rem);line-height:1.35;font-weight:800}
+[dir=rtl] .work__steps p{font-size:1.02rem}
+@media (max-width:860px){
+  .work__head{grid-template-columns:minmax(0,1fr)}
+  .work__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .work__a,.work__steps{grid-column:1/-1;grid-row:auto}
+  .work__steps{margin-top:8px}
+  .work__c{grid-column:1;grid-row:auto}
+  .work__b{grid-column:2;grid-row:auto}
+  .work__c a,.work__b a{aspect-ratio:4/5}
+  .work figcaption{font-size:.8rem}
+}
+
+/* services 05: type only */
+.svc__words{border-top:2px solid var(--ink)}
+.svc__words li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0 12px;border-bottom:1px solid var(--line);font:800 clamp(3rem,7vw,6.4rem)/.86 "Barlow Condensed","Archivo",sans-serif;text-transform:uppercase}
+.svc__words li span{font:500 .9rem/1.3 "Archivo",sans-serif;text-transform:none;color:var(--mute);white-space:nowrap}
+[dir=rtl] .svc__words li{font-family:"Noto Kufi Arabic",sans-serif;font-size:clamp(2.2rem,4.6vw,4.2rem);line-height:1.3;text-transform:none}
+[dir=rtl] .svc__words li span{font-family:"IBM Plex Sans Arabic",sans-serif}
+#sauna .svc__media{display:block}
+#courts .svc__media{grid-template-columns:minmax(0,1fr)}
+@media (min-width:861px){
+  .work__steps{align-self:start;position:sticky;top:104px}
+  .work__b a{aspect-ratio:31/32}
+}
+#gyms~.svc .svc__media figure>div,.svc__media figure:not(.wide)>div{aspect-ratio:4/3.4}
+.tlink{min-width:44px}
+
+/* ---- rescue 2 (after round 7, 2026-10-23) ---- */
+/* hero: smaller, sharper photo (<=720x480, ~1.33x native) on the wordmark baseline; their logo slogan above it */
+.hero__slogan{display:none}
+@media (min-width:861px){
+  .hero__photo{align-self:end;justify-self:end;width:min(720px,calc(100% + var(--pad)))}
+  .hero__clip{flex:none;min-height:0;height:auto;aspect-ratio:3/2;width:100%}
+  .hero__clip img{object-position:50% 60%}
+  .k-js .hero__clip img{animation:kb2 9s cubic-bezier(.16,1,.3,1) .3s forwards}
+  .hero__slogan{grid-area:photo;align-self:start;justify-self:end;width:min(720px,calc(100% + var(--pad)));margin-inline-end:calc(-1 * var(--pad));padding-inline-end:var(--pad);display:flex;align-items:flex-start;gap:clamp(14px,1.6vw,24px);padding-top:0}
+  .hero__slogan img{width:clamp(52px,4.8vw,72px);height:auto;flex:none;margin-top:.5em}
+  .hero__slogan span{font:400 clamp(2.4rem,4.6vw,4.9rem)/1.02 "Yellowtail",cursive;color:var(--red);letter-spacing:0;text-transform:none}
+  .hero__slogan span br{display:block}
+  [dir=rtl] .hero__slogan{margin-inline-end:calc(-1 * var(--pad))}
+}
+@keyframes kb2{from{transform:scale(1.04)}to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.k-js .hero__clip img{animation:none;transform:none}}
+/* footer slogan in their logo's script */
+.ft__slogan{font-family:"Yellowtail",cursive;font-style:normal;font-weight:400;font-size:1.6rem;line-height:1.2;letter-spacing:0;text-transform:none}
+
+/* work band: link + line in the right column under step 04; equal 4/3 tiles */
+.work__side{grid-column:8/13;grid-row:1/3;align-self:start}
+.work__side .work__steps{grid-column:auto;grid-row:auto;position:static}
+.work__side .work__more{display:block;margin-top:26px;padding-top:0;border-top:0;font-size:1.05rem;line-height:1.5;max-width:30em}
+.work__side .work__more .tlink{display:flex;width:fit-content;margin-top:12px}
+.work__pair{grid-column:1/8;grid-row:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,1.8vw,26px);align-items:start}
+.work__pair .work__c,.work__pair .work__b{grid-column:auto;grid-row:auto}
+.work__pair .work__c a,.work__pair .work__b a{aspect-ratio:4/3}
+.work__pair .work__b img{object-position:50% 50%}
+@media (min-width:861px){.work__side{position:sticky;top:104px}}
+@media (min-width:861px) and (max-height:820px){.work__side{position:static}}
+@media (max-width:860px){
+  .work__side{display:contents}
+  .work__a{order:1}.work__side .work__steps{order:2;grid-column:1/-1}.work__pair{order:3;grid-column:1/-1;grid-row:auto}.work__side .work__more{order:4;grid-column:1/-1;margin-top:6px;padding-top:0;border-top:0}
+  .work__pair .work__c a,.work__pair .work__b a{aspect-ratio:1/1}
+}
+
+/* services 02: stagger the pair so it spans the text column (no empty band under it) */
+@media (min-width:961px){
+  .svc--equip .svc__media{align-items:start}
+  .svc--equip .svc__media figure:nth-child(2){align-self:end}
+}

@@ -36,12 +36,20 @@
 </header>
 <main id="main">
   <section class="intro">
-    <div class="wrap">
+    <div class="wrap intro__grid">
+      <div>
       <h1 data-reveal="lines">السيارات والخدمات</h1>
       <p class="lede" data-reveal>تأجير سيارات باليوم أو الأسبوع أو الشهر، وتأجير طويل المدة، وحافلات للمجموعات، وخدمات السفر المرتبطة بها. كل ما في هذه الصفحة نقدّمه من مكتبنا الرئيسي في الغبرة.</p>
       <nav class="jump" aria-label="في هذه الصفحة" data-reveal>
         <a class="k-link" href="#hire">تأجير السيارات</a><a class="k-link" href="#leasing">التأجير طويل المدة</a><a class="k-link" href="#transport">الحافلات</a><a class="k-link" href="#travel">السفر والجولات</a><a class="k-link" href="#cover">التأمين</a><a class="k-link" href="#terms">شروط الإيجار</a><a class="k-link" href="#tips">نصائح القيادة</a>
       </nav>
+    </div>
+      <aside class="intro__side" data-reveal data-reveal-delay="200" aria-label="اتصل أو راسلنا">
+        <!-- Car from the fleet page of almaskry.com, same cutout treatment as every car on the site. -->
+        <div class="cut"><img src="../img/suv-white.webp" width="1557" height="894" alt="سيارة دفع رباعي بيضاء من صفحة أسطول المسكري" fetchpriority="high"></div>
+        <p class="intro__cap">دفع رباعي، من صفحة أسطولنا. باليوم أو الأسبوع أو الشهر.</p>
+        <div class="svc__acts"><a class="btn k-btn" href="tel:+96899438661" data-k-magnetic="0.25"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>اتصل <bdi>9943 8661</bdi></a><a class="plain k-link" href="https://wa.me/96899438661?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%A6%D8%AC%D8%A7%D8%B1%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9."><svg class="wa-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> راسلنا على واتساب</a></div>
+      </aside>
     </div>
   </section>
 
@@ -51,7 +59,7 @@
       <div class="svc__body">
         <p data-reveal>يمكنك استئجار السيارة باليوم أو الأسبوع أو الشهر. اختر من موديلات متعددة، من سيارات الصالون إلى الدفع الرباعي، وصولاً إلى السيارات التنفيذية والفاخرة والبيك أب التجارية.</p>
         <p data-reveal>تختلف الأسعار حسب الموديل ومدة الإيجار. اتصل بنا أو راسلنا بتواريخك ونخبرك بالمتوفر. ويمكننا توصيل السيارة إليك واستلامها منك.</p>
-        <div class="cars cars--2"><figure data-reveal><div class="cut"><img src="../img/saloon-liana.webp" width="640" height="426" alt="سيارة صالون زرقاء داكنة" loading="lazy"></div><figcaption>صالون</figcaption></figure><figure data-reveal><div class="cut"><img src="../img/saloon-accent.webp" width="640" height="426" alt="سيارة صالون فضية" loading="lazy"></div><figcaption>صالون</figcaption></figure><figure data-reveal><div class="cut"><img src="../img/saloon-sunny.webp" width="640" height="422" alt="سيارة صالون ذهبية فاتحة" loading="lazy"></div><figcaption>صالون</figcaption></figure><figure data-reveal><div class="cut"><img src="../img/saloon-chevrolet.webp" width="640" height="411" alt="سيارة صالون رمادية" loading="lazy"></div><figcaption>صالون</figcaption></figure></div>
+        <div class="cars cars--2" data-reveal tabindex="0" role="region" aria-label="سيارات صالون من صفحة أسطولنا"><figure><div class="cut"><img src="../img/saloon-liana.webp" width="548" height="237" alt="سيارة صالون زرقاء داكنة" loading="lazy"></div><figcaption>صالون</figcaption></figure><figure><div class="cut"><img src="../img/saloon-accent.webp" width="581" height="322" alt="سيارة صالون فضية" loading="lazy"></div><figcaption>صالون</figcaption></figure><figure><div class="cut"><img src="../img/saloon-gold.webp" width="556" height="222" alt="سيارة صالون ذهبية فاتحة" loading="lazy"></div><figcaption>صالون</figcaption></figure><figure><div class="cut"><img src="../img/saloon-chevrolet.webp" width="600" height="297" alt="سيارة صالون رمادية" loading="lazy"></div><figcaption>صالون</figcaption></figure></div><p class="cars__hint">اسحب لرؤية المزيد من السيارات.</p>
         <div class="svc__acts"><a class="btn k-btn" href="tel:+96899438661"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>اتصل <bdi>9943 8661</bdi></a><a class="plain k-link" href="https://wa.me/96899438661?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%A6%D8%AC%D8%A7%D8%B1%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9."><svg class="wa-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> راسلنا على واتساب</a></div>
       </div>
     </section>
@@ -176,7 +184,7 @@
     </div>
     <div>
       <h2>اتصل</h2>
-      <ul><li><a href="tel:+96899438661"><bdi>+968 9943 8661</bdi></a></li><li><a href="tel:+96899381524"><bdi>+968 9938 1524</bdi></a></li><li><a href="tel:+96824595241"><bdi>+968 2459 5241</bdi></a></li><li><span>فاكس:&nbsp;<bdi>+968 2459 1538</bdi></span></li></ul>
+      <ul><li><a href="tel:+96899438661"><bdi>+968 9943 8661</bdi></a></li><li><a href="tel:+96899381524"><bdi>+968 9938 1524</bdi></a></li><li><a href="tel:+96824595241"><bdi>+968 2459 5241</bdi></a></li><li><span>فاكس: <bdi>+968 2459 1538</bdi></span></li></ul>
     </div>
     <div>
       <h2>راسلنا</h2>

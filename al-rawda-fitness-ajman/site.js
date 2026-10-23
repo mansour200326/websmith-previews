@@ -1,4 +1,4 @@
-/* Al Rawda Fitness concept: live day ribbon (Dubai time), today's hours row, mobile action bar. */
+/* Al Rawda Fitness concept: day ribbon with a now-marker (Dubai time), today's hours row, mobile action bar. */
 (function(){
   var d=document.documentElement,AR=d.lang==='ar';
   // Dubai time now
@@ -12,15 +12,24 @@
   else if(h<2&&day>=2)state='open'; // Tue..Sat early hours, plus Sun 00:00–02:00 (Saturday night)
   else if(h<2&&day===0)state='open';
   else state='shut';
-  var T=AR?{open:'مفتوح الآن',shut:'مغلق الآن',ask:'الأحد: اسألنا على واتساب',closes:'نغلق الساعة 2 فجرًا',opens:'نفتح الساعة 5 فجرًا',now:'الساعة الآن في عجمان '}
-          :{open:'Open now',shut:'Closed now',ask:'Sunday: ask us on WhatsApp',closes:'closes at 2am',opens:'opens at 5am',now:'Ajman time '};
-  var pad=function(n){return(n<10?'0':'')+n};
+  var T=AR?{open:'مفتوح الآن · حتى 2 فجرًا',shut:'مغلق الآن · نفتح 5 فجرًا',ask:'الأحد: اسألنا على واتساب'}
+          :{open:'Open now · closes 2am',shut:'Closed now · opens 5am',ask:'Sunday: ask on WhatsApp'};
   document.querySelectorAll('[data-day-ribbon]').forEach(function(r){
     r.classList.add(state==='open'?'is-open':state==='shut'?'is-shut':'is-ask','has-now');
+    if(h<5)r.classList.add('is-early'); // marker sits in or beside the closed gap: let the tag speak
     r.style.setProperty('--now',(now/24*100)+'%');
-    var s=r.querySelector('[data-day-state]');
-    if(s)s.textContent=state==='open'?T.open+' · '+T.closes:state==='shut'?T.shut+' · '+T.opens:T.ask;
-    var n=r.querySelector('[data-day-now]');if(n)n.textContent=T.now+pad(h)+':'+pad(m);
+    var s=r.querySelector('[data-day-state]'),bar=r.querySelector('.day__bar');
+    if(s){
+      s.textContent=T[state];
+      if(bar)bar.setAttribute('aria-label',bar.getAttribute('aria-label')+(AR?'. ':'. ')+T[state]);
+      // anchor left of the marker past 75% of the bar (or when the tag would run off the end), right of it otherwise
+      var place=function(){
+        var bw=bar.getBoundingClientRect().width,x=now/24*bw,tw=s.getBoundingClientRect().width+8;
+        r.classList.toggle('is-flip',now/24>.75||(x+tw>bw&&x>bw-x));
+      };
+      place();addEventListener('resize',place);
+      if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);
+    }
     if(!matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('js-fill');
   });
   var row=document.querySelector('.hrs tr[data-day="'+day+'"]');if(row)row.classList.add('is-today');

@@ -36,12 +36,20 @@
 </header>
 <main id="main">
   <section class="intro">
-    <div class="wrap">
+    <div class="wrap intro__grid">
+      <div>
       <h1 data-reveal="lines">Cars and services</h1>
       <p class="lede" data-reveal>Car hire by the day, week or month, longer leases, buses for groups, and the travel services around them. Everything on this page is offered from our head office in Al Ghubra.</p>
       <nav class="jump" aria-label="On this page" data-reveal>
         <a class="k-link" href="#hire">Car hire</a><a class="k-link" href="#leasing">Leasing</a><a class="k-link" href="#transport">Buses</a><a class="k-link" href="#travel">Travel and tours</a><a class="k-link" href="#cover">Insurance</a><a class="k-link" href="#terms">Rental terms</a><a class="k-link" href="#tips">Driving tips</a>
       </nav>
+    </div>
+      <aside class="intro__side" data-reveal data-reveal-delay="200" aria-label="Call or message us">
+        <!-- Car from the fleet page of almaskry.com, same cutout treatment as every car on the site. -->
+        <div class="cut"><img src="img/suv-white.webp" width="1557" height="894" alt="White four-wheel drive from the Al Maskry fleet page" fetchpriority="high"></div>
+        <p class="intro__cap">Four-wheel drive, from our fleet page. By the day, week or month.</p>
+        <div class="svc__acts"><a class="btn k-btn" href="tel:+96899438661" data-k-magnetic="0.25"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call <bdi>9943 8661</bdi></a><a class="plain k-link" href="https://wa.me/96899438661?text=Hello%20Al%20Maskry%2C%20I%27d%20like%20to%20hire%20a%20car."><svg class="wa-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> WhatsApp us</a></div>
+      </aside>
     </div>
   </section>
 
@@ -51,7 +59,7 @@
       <div class="svc__body">
         <p data-reveal>Cars can be hired on a daily, weekly or monthly basis. Choose from a range of models, from saloon cars to four-wheel drives, up to executive and luxury cars and commercial pick-ups.</p>
         <p data-reveal>Prices vary with the model and the length of hire. Call or message us with your dates and we'll tell you what's available. We can deliver the car and collect it again.</p>
-        <div class="cars cars--2"><figure data-reveal><div class="cut"><img src="img/saloon-liana.webp" width="640" height="426" alt="Dark blue saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure><figure data-reveal><div class="cut"><img src="img/saloon-accent.webp" width="640" height="426" alt="Silver saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure><figure data-reveal><div class="cut"><img src="img/saloon-sunny.webp" width="640" height="422" alt="Champagne saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure><figure data-reveal><div class="cut"><img src="img/saloon-chevrolet.webp" width="640" height="411" alt="Grey saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure></div>
+        <div class="cars cars--2" data-reveal tabindex="0" role="region" aria-label="Saloons from our fleet page"><figure><div class="cut"><img src="img/saloon-liana.webp" width="548" height="237" alt="Dark blue saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure><figure><div class="cut"><img src="img/saloon-accent.webp" width="581" height="322" alt="Silver saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure><figure><div class="cut"><img src="img/saloon-gold.webp" width="556" height="222" alt="Champagne saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure><figure><div class="cut"><img src="img/saloon-chevrolet.webp" width="600" height="297" alt="Grey saloon" loading="lazy"></div><figcaption>Saloon</figcaption></figure></div><p class="cars__hint">Swipe for more cars.</p>
         <div class="svc__acts"><a class="btn k-btn" href="tel:+96899438661"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call <bdi>9943 8661</bdi></a><a class="plain k-link" href="https://wa.me/96899438661?text=Hello%20Al%20Maskry%2C%20I%27d%20like%20to%20hire%20a%20car."><svg class="wa-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> WhatsApp us</a></div>
       </div>
     </section>

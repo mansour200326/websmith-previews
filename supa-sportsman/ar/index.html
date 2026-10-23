@@ -11,7 +11,7 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Barlow+Condensed:wght@700;800&family=Noto+Kufi+Arabic:wght@500;600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Barlow+Condensed:wght@700;800&family=Noto+Kufi+Arabic:wght@500;600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Yellowtail&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../site.css">
 <link rel="icon" href="../img/emblem.webp">
 </head>
@@ -46,13 +46,22 @@
     <p class="hero__fade" style="--i:1">أدوات رياضية ومعدات لياقة بدنية في مسقط منذ 1975. صالتا عرض متعددتا العلامات، وثلاثة متاجر لأديداس، وفريق مشاريع يخطط صالات الرياضة ويجهّزها للفنادق والأندية والدفاع المدني والجهات العسكرية.</p>
     <div class="hero__acts hero__fade" style="--i:3">
       <a class="btn" href="tel:+96824834825" data-k-magnetic="0.25">اتصل بصالة العرض في روي <span class="arr" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a class="tlink" href="#branches">فروعنا</a>
+      <a class="tlink hero__mlink" href="#branches">فروعنا</a>
+    </div>
+    <div class="hero__find hero__fade" style="--i:4">
+      <p class="hero__find-h">فروعنا</p>
+      <ul>
+        <li><a href="tel:+96824834825"><span><b>الحمرية، روي</b><small>المكتب الرئيسي وصالة العرض الرئيسية، قرب دوار الحمرية</small></span><span class="ltr">2483 4825</span></a></li>
+        <li><a href="tel:+96824602963"><span><b>المسا مول، السروج</b><small>صالة عرض متعددة العلامات، بجوار فندق رمادا</small></span><span class="ltr">2460 2963</span></a></li>
+        <li><a href="#branches"><span><b>متاجر أديداس</b><small>سيتي سنتر مسقط، سيتي سنتر القرم، مسقط جراند مول</small></span><span class="hero__find-go">الخريطة <svg class="dir" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a></li>
+      </ul>
     </div>
   </div>
   <figure class="hero__photo">
-    <div class="hero__clip"><img src="../img/gym-2.webp" alt="صالة رياضية مجهزة بأجهزة أوزان ومقاعد وكرة تمارين على أرضية خشبية" width="2400" height="1393" fetchpriority="high"></div>
+    <div class="hero__clip"><img src="../img/gym-2.webp" alt="صالة رياضية مجهزة بأجهزة أوزان ومقاعد وكرة تمارين على أرضية خشبية" width="1860" height="1080" fetchpriority="high"></div>
     <figcaption class="hero__fade" style="--i:4"><span>معدات الصالات الرياضية</span><span>أجهزة أوزان ومقاعد</span></figcaption>
   </figure>
+  <p class="hero__slogan hero__fade" style="--i:3"><img src="../img/emblem.webp" alt="" width="64" height="64"><span lang="en" dir="ltr">The Choice<br> of Champions...</span></p>
 </section>
 
 <section class="sec" id="brands" aria-labelledby="brands-h">
@@ -83,22 +92,29 @@
   </div>
 </section>
 
-<section class="proj k-drag" data-k-drag aria-labelledby="proj-h">
-  <div class="k-drag__head">
-    <div>
+<section class="work" aria-labelledby="proj-h">
+  <div class="wrap">
+    <div class="work__head">
       <h2 class="h2" id="proj-h" data-reveal="lines">صالات رياضية وملاعب وساونا</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">نرسم المخطط، ونورّد المعدات ونركّبها، ونواصل صيانتها بعد التسليم بفريقنا الخاص.</p>
+      <p class="lede" data-reveal data-reveal-delay="150">للفنادق والأندية والدفاع المدني والجهات العسكرية. فريق واحد يرافق الصالة من أول مخطط إلى سنوات من الصيانة.</p>
     </div>
-    <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="المشاريع السابقة">&rarr;</button><button type="button" data-k-drag-next aria-label="المشاريع التالية">&larr;</button></div>
+    <div class="work__grid">
+      <figure class="work__a"><a class="k-zoom" href="services.html#gyms" data-reveal="clip"><img src="../img/gym-4.webp" alt="مخطط علوي لصالة رياضية يوضح مكان كل جهاز" width="2400" height="1393" loading="lazy"></a><figcaption><span>مخطط صالة رياضية</span><span>منظر علوي</span></figcaption></figure>
+      <div class="work__side">
+      <ol class="work__steps" data-reveal-stagger="110">
+        <li data-reveal><span class="work__n">01</span><div><b>نرسم المخطط</b><p>مكان كل جهاز وكل رف وكل مقعد، نعتمده قبل وصول أي معدات.</p></div></li>
+        <li data-reveal><span class="work__n">02</span><div><b>نورّد المعدات</b><p><span lang="en" dir="ltr">Life Fitness, Paramount, Body-Solid, Concept2, LeMond</span> وأرضيات <span lang="en" dir="ltr">Pavigym</span>.</p></div></li>
+        <li data-reveal><span class="work__n">03</span><div><b>نركّبها</b><p>ونسلّم في الموعد.</p></div></li>
+        <li data-reveal><span class="work__n">04</span><div><b>فريقنا يتولى الصيانة</b><p>الصيانة مستمرة بعد التسليم بوقت طويل.</p></div></li>
+      </ol>
+        <p class="work__more" data-reveal>ومن أعمالنا أيضاً ملاعب التنس والاسكواش، وغرف الساونا والبخار والدش. <a class="tlink" href="services.html">كل المشاريع والخدمات <svg class="dir" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></p>
+      </div>
+      <div class="work__pair">
+      <figure class="work__c"><a class="k-zoom" href="services.html#courts" data-reveal="clip"><img src="../img/football-ground.webp" alt="ملعب كرة قدم بعشب صناعي أخضر وخطوط بيضاء داخل سور" width="2400" height="1393" loading="lazy"></a><figcaption><span>ملعب كرة قدم</span></figcaption></figure>
+      <figure class="work__b"><a class="k-zoom" href="services.html#gyms" data-reveal="clip" data-reveal-delay="120"><img src="../img/gym-bike.webp" alt="رجل على دراجة تمارين بجانب صف من أجهزة المشي تحت نوافذ مقوّسة" width="980" height="735" loading="lazy"></a><figcaption><span>صالة كارديو، دراجات وأجهزة مشي</span></figcaption></figure>
+      </div>
+    </div>
   </div>
-  <div class="k-drag__track" tabindex="0" role="region" aria-label="صور المشاريع، اسحب جانبياً">
-    <a class="k-drag__card" href="services.html#gyms"><div class="k-drag__fig"><img src="../img/gym-bike.webp" alt="دراجة تمارين وأجهزة مشي وجهاز أوزان في صالة رياضية بنوافذ مقوّسة" width="1392" height="1032" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>معدات الصالات الرياضية</h3><span>أجهزة مشي ودراجات</span></div></a>
-    <a class="k-drag__card" href="services.html#courts"><div class="k-drag__fig"><img src="../img/tennis-court.webp" alt="ملعب تنس خارجي بأرضية حمراء وخضراء" width="2400" height="1393" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>ملاعب التنس</h3><span>ملاعب</span></div></a>
-    <a class="k-drag__card" href="services.html#gyms"><div class="k-drag__fig"><img src="../img/gym-4.webp" alt="مخطط علوي لصالة رياضية يوضح مكان كل جهاز" width="2400" height="1393" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>مخطط صالة رياضية</h3><span>منظر علوي</span></div></a>
-    <a class="k-drag__card" href="services.html#courts"><div class="k-drag__fig"><img src="../img/squash-1.webp" alt="ملعب اسكواش أبيض بخطوط حمراء وأرضية خشبية" width="1204" height="820" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>ملاعب الاسكواش</h3><span>ملاعب</span></div></a>
-    <a class="k-drag__card" href="services.html#sauna"><div class="k-drag__fig"><img src="../img/sauna.webp" alt="غرفة ساونا خشبية بمقاعد منحنية" width="2400" height="1393" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>ساونا</h3><span>ساونا وبخار ودش</span></div></a>
-  </div>
-  <div class="k-drag__bar" aria-hidden="true"><i></i></div>
 </section>
 
 <section class="sec hist" aria-labelledby="hist-h">

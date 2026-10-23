@@ -7,6 +7,13 @@
   var hd=document.querySelector('.hd');
   if(hd){var on=function(){hd.classList.toggle('is-scrolled',scrollY>8)};addEventListener('scroll',on,{passive:true});on()}
 
+  /* r3, home pages: the header word fades in once the big PARALLEL wordmark has scrolled past (always on under reduced motion) */
+  var wx=document.querySelector('.home .word-xl');
+  if(wx){
+    if(RM||!('IntersectionObserver' in window))document.body.classList.add('word-past');
+    else new IntersectionObserver(function(es){es.forEach(function(e){document.body.classList.toggle('word-past',!e.isIntersecting&&e.boundingClientRect.top<0)})},{rootMargin:'-'+(hd?hd.offsetHeight:68)+'px 0px 0px 0px'}).observe(wx);
+  }
+
   /* hero: wordmark letters rise, // draws, photos wipe in opposite directions */
   requestAnimationFrame(function(){requestAnimationFrame(function(){
     document.querySelectorAll('.word-xl,.mark--draw,.wipe-d,.wipe-u').forEach(function(e){e.classList.add('is-in')});

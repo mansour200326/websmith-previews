@@ -11,7 +11,7 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Barlow+Condensed:wght@700;800&family=Noto+Kufi+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Barlow+Condensed:wght@700;800&family=Noto+Kufi+Arabic:wght@500;600&family=Yellowtail&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="img/emblem.webp">
 </head>
@@ -46,13 +46,22 @@
     <p class="hero__fade" style="--i:1">Sports goods and fitness equipment in Muscat since 1975. Two multi-brand showrooms, three Adidas brand stores, and a projects team that lays out and equips gyms for hotels, clubs, civil defence and the military.</p>
     <div class="hero__acts hero__fade" style="--i:3">
       <a class="btn" href="tel:+96824834825" data-k-magnetic="0.25">Call the Ruwi showroom <span class="arr" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a class="tlink" href="#branches">Find a branch</a>
+      <a class="tlink hero__mlink" href="#branches">Find a branch</a>
+    </div>
+    <div class="hero__find hero__fade" style="--i:4">
+      <p class="hero__find-h">Find a branch</p>
+      <ul>
+        <li><a href="tel:+96824834825"><span><b>Al Hamriya, Ruwi</b><small>Head office and main showroom, near Hamriya roundabout</small></span><span class="ltr">2483 4825</span></a></li>
+        <li><a href="tel:+96824602963"><span><b>Al Masa Mall, Al Sarooj</b><small>Multi-brand showroom, next to Ramada Hotel</small></span><span class="ltr">2460 2963</span></a></li>
+        <li><a href="#branches"><span><b>Adidas brand stores</b><small>Muscat City Centre, Qurum City Centre, Muscat Grand Mall</small></span><span class="hero__find-go">Map <svg class="dir" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a></li>
+      </ul>
     </div>
   </div>
   <figure class="hero__photo">
-    <div class="hero__clip"><img src="img/gym-2.webp" alt="A gym fitted with weight machines, benches and an exercise ball on a wooden floor" width="2400" height="1393" fetchpriority="high"></div>
+    <div class="hero__clip"><img src="img/gym-2.webp" alt="A gym fitted with weight machines, benches and an exercise ball on a wooden floor" width="1860" height="1080" fetchpriority="high"></div>
     <figcaption class="hero__fade" style="--i:4"><span>Gym equipment</span><span>Weight machines and benches</span></figcaption>
   </figure>
+  <p class="hero__slogan hero__fade" style="--i:3"><img src="img/emblem.webp" alt="" width="64" height="64"><span>The Choice<br> of Champions...</span></p>
 </section>
 
 <section class="sec" id="brands" aria-labelledby="brands-h">
@@ -83,22 +92,29 @@
   </div>
 </section>
 
-<section class="proj k-drag" data-k-drag aria-labelledby="proj-h">
-  <div class="k-drag__head">
-    <div>
+<section class="work" aria-labelledby="proj-h">
+  <div class="wrap">
+    <div class="work__head">
       <h2 class="h2" id="proj-h" data-reveal="lines">Gyms, courts and saunas</h2>
-      <p class="lede" data-reveal data-reveal-delay="150">We draw the layout, supply the equipment, install it, and keep servicing it after handover with our own team.</p>
+      <p class="lede" data-reveal data-reveal-delay="150">For hotels, clubs, civil defence and the military. One team takes a gym from the first drawing to years of servicing.</p>
     </div>
-    <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous projects">&larr;</button><button type="button" data-k-drag-next aria-label="Next projects">&rarr;</button></div>
+    <div class="work__grid">
+      <figure class="work__a"><a class="k-zoom" href="services.html#gyms" data-reveal="clip"><img src="img/gym-4.webp" alt="Top-view layout drawing of a gym floor with every machine placed" width="2400" height="1393" loading="lazy"></a><figcaption><span>Layout drawing</span><span>Plan view</span></figcaption></figure>
+      <div class="work__side">
+      <ol class="work__steps" data-reveal-stagger="110">
+        <li data-reveal><span class="work__n">01</span><div><b>We draw the layout</b><p>Where every machine, rack and bench goes, settled before any equipment arrives.</p></div></li>
+        <li data-reveal><span class="work__n">02</span><div><b>We supply the equipment</b><p>Life Fitness, Paramount, Body-Solid, Concept2, LeMond, Pavigym flooring.</p></div></li>
+        <li data-reveal><span class="work__n">03</span><div><b>We install it</b><p>And we deliver on time.</p></div></li>
+        <li data-reveal><span class="work__n">04</span><div><b>Our own team services it</b><p>Maintenance carries on long after handover.</p></div></li>
+      </ol>
+        <p class="work__more" data-reveal>Also tennis and squash courts, and sauna, steam and shower rooms. <a class="tlink" href="services.html">All projects &amp; services <svg class="dir" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></p>
+      </div>
+      <div class="work__pair">
+      <figure class="work__c"><a class="k-zoom" href="services.html#courts" data-reveal="clip"><img src="img/football-ground.webp" alt="Green artificial football pitch with white markings inside a walled ground" width="2400" height="1393" loading="lazy"></a><figcaption><span>Football ground</span></figcaption></figure>
+      <figure class="work__b"><a class="k-zoom" href="services.html#gyms" data-reveal="clip" data-reveal-delay="120"><img src="img/gym-bike.webp" alt="A man on an exercise bike beside a row of treadmills under arched windows" width="980" height="735" loading="lazy"></a><figcaption><span>Cardio room, bikes and treadmills</span></figcaption></figure>
+      </div>
+    </div>
   </div>
-  <div class="k-drag__track" tabindex="0" role="region" aria-label="Project photos, scroll sideways">
-    <a class="k-drag__card" href="services.html#gyms"><div class="k-drag__fig"><img src="img/gym-bike.webp" alt="Exercise bike, treadmills and a weight machine in a gym with arched windows" width="1392" height="1032" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Gym equipment</h3><span>Treadmills and bikes</span></div></a>
-    <a class="k-drag__card" href="services.html#courts"><div class="k-drag__fig"><img src="img/tennis-court.webp" alt="Outdoor tennis court with a red and green surface and a net" width="2400" height="1393" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Tennis courts</h3><span>Courts</span></div></a>
-    <a class="k-drag__card" href="services.html#gyms"><div class="k-drag__fig"><img src="img/gym-4.webp" alt="Top-view layout drawing of a gym floor with every machine placed" width="2400" height="1393" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Gym layout</h3><span>Plan view</span></div></a>
-    <a class="k-drag__card" href="services.html#courts"><div class="k-drag__fig"><img src="img/squash-1.webp" alt="White squash court with red court lines and a wooden floor" width="1204" height="820" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Squash courts</h3><span>Courts</span></div></a>
-    <a class="k-drag__card" href="services.html#sauna"><div class="k-drag__fig"><img src="img/sauna.webp" alt="Wooden sauna room with curved benches" width="2400" height="1393" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Sauna</h3><span>Sauna, steam &amp; shower</span></div></a>
-  </div>
-  <div class="k-drag__bar" aria-hidden="true"><i></i></div>
 </section>
 
 <section class="sec hist" aria-labelledby="hist-h">

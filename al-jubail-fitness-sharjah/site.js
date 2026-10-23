@@ -137,17 +137,20 @@
       if(!first)ck.querySelectorAll('.d>span').forEach(function(e){e.style.animation='none';e.style.transform='none'});
     };
     paint(true);
-    if(cap&&cap.getAttribute('data-live'))cap.innerHTML=cap.getAttribute('data-live');
-    var wait=(60-new Date().getSeconds())*1000;
-    setTimeout(function(){paint(false);setInterval(function(){paint(false)},60000)},wait);
+    var day=document.querySelector('[data-clock-day]');
+    if(day){var ar=document.documentElement.lang==='ar';var wd=new Intl.DateTimeFormat(ar?'ar-AE':'en-GB',{timeZone:'Asia/Dubai',weekday:'long'}).format(new Date());day.textContent=ar?wd+' · الشارقة':wd+' · Sharjah, GMT+4';}
+    if(cap&&cap.getAttribute('data-live'))cap.textContent=cap.getAttribute('data-live');
   }
   // dial: mark the current hour
   var dial=document.querySelector('[data-dial]');
   if(dial){
-    var h=+now().h,seg=dial.querySelector('.seg[data-h="'+h+'"]');if(seg)seg.classList.add('is-now');
-    var out=dial.querySelector('[data-dial-now]');if(out)out.textContent=now().h+':00';
-    var lab=dial.querySelector('[data-dial-lab]');if(lab&&lab.getAttribute('data-live'))lab.textContent=lab.getAttribute('data-live');
+    var dpaint=function(){var t=now();dial.querySelectorAll('.seg.is-now').forEach(function(x){x.classList.remove('is-now')});
+      var seg=dial.querySelector('.seg[data-h="'+(+t.h)+'"]');if(seg)seg.classList.add('is-now');};
+    dpaint();
   }
+  // hero clock + the dial's lit hour tick together, on the minute
+  if(ck||dial){var tick=function(){if(ck)paint(false);if(dial)dpaint()};
+    setTimeout(function(){tick();setInterval(tick,60000)},(60-new Date().getSeconds())*1000);}
   // reveal helpers for dial + band (own classes, not data-reveal)
   var watch=[].slice.call(document.querySelectorAll('[data-dial],.band'));
   if(RM||!('IntersectionObserver' in window)){watch.forEach(function(e){e.classList.add('is-in')});return}
