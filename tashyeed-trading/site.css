@@ -222,8 +222,7 @@ a{color:inherit}
   .work figure:nth-child(5){grid-column:5/9;grid-row:span 3}
   .work figure:nth-child(6){grid-column:9/13;grid-row:span 3}}
 .work figure{position:relative;overflow:hidden;background:#dfe2e3;min-height:160px}
-.work figure:first-child{grid-column:1/-1;aspect-ratio:4/3}
-@media (min-width:900px){.work figure:first-child{aspect-ratio:auto}}
+@media (max-width:899px){.work figure:first-child,.work figure:last-child{grid-column:1/-1;aspect-ratio:4/3}}
 .work img{width:100%;height:100%;object-fit:cover}
 .work figcaption{position:absolute;inset-inline-start:0;bottom:0;background:var(--k-paper);font:400 .76rem/1.3 var(--k-mono);padding:7px 10px}
 
@@ -390,7 +389,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 /* ---- round 2 ---- */
 .k-visit dd{min-width:0;overflow-wrap:anywhere}
 @media (max-width:600px){.k-visit dl div{grid-template-columns:5em 1fr}}
-[lang=ar] .hd__tel::before{content:"اتصل";font-family:"IBM Plex Sans Arabic",sans-serif}
+@media (max-width:980px){[lang=ar] .hd__tel::before{content:"اتصل";font-family:"IBM Plex Sans Arabic",sans-serif}}
 @media (max-width:440px){.brand b{font-size:1.12rem}.hd__tools{gap:5px}.hd__menu,.hd__lang,.hd__tel{padding-inline:11px}}
 /* phones: headline up over the sky, sub + CTA at the foot, so the welders stay visible in between */
 @media (max-width:899px){
@@ -399,3 +398,16 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .k-kb h1{margin-bottom:auto;padding-bottom:28px}
   .k-kb__media::after{background:linear-gradient(180deg,rgba(8,12,16,.62) 0,rgba(8,12,16,.18) 26%,rgba(8,12,16,0) 42%,rgba(8,12,16,.3) 60%,rgba(8,12,16,.88) 100%)}
 }
+
+/* ---- round 4 (Fannan r3 fixes) ---- */
+/* drag strip: one height, different widths, captions on one line */
+.k-drag{--h:clamp(300px,38vw,520px)}
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:auto;width:calc(var(--h)*1.25);max-width:86vw}
+.k-drag__card:nth-child(3n+2){width:calc(var(--h)*.8)}
+.k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:auto;height:var(--h)}
+/* MMA preview: swatch tiles are 480px crops, never show them bigger */
+.mma__view{max-width:440px;width:100%}
+@media (min-width:900px){.mma{grid-template-columns:440px 1fr;gap:clamp(40px,6vw,100px)}}
+/* Fannan r4 non-blocking fixes */
+[dir=rtl] bdi[dir=ltr]{white-space:nowrap}
+@media (max-width:899px){.mma__view{max-width:min(440px,72vw)}}
