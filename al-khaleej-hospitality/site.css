@@ -401,3 +401,36 @@ html{overflow-x:clip}
   .events .h2{letter-spacing:0}
   .ring svg{inset:-6px -4px;width:calc(100% + 8px)}
 }
+
+/* ---- rescue after round 4 (2026-10-24) ---- */
+/* 1. hero: wide full-width crops (stage-10 first, stage-22 lower crop); framed on the stage, not the ceiling */
+.k-seq__frame img{object-position:50% 58%}
+/* 2. desktop end state keeps a 2% overhang so the -1.5% drift never shows a dark strip at the right edge */
+@media (min-width:701px){.k-seq__frame.is-on img{transform:scale(1.04) translate3d(-1.5%,0,0)}}
+@media (min-width:701px) and (prefers-reduced-motion:reduce){.k-seq__frame img,.k-seq__frame.is-on img{transform:scale(1.04)!important}}
+/* 3. Bodoni optical size: sturdier hairlines at text-ish display sizes */
+.lede,.gm blockquote{font-variation-settings:"opsz" 18}
+@media (max-width:700px){
+  .h2,.events .h2,.k-gal__head h2,.k-story__head h2,.k-visit h2,.band h2,.svc__body h2,.svc h2,.ph h1{font-variation-settings:"opsz" 18}
+}
+/* mobile hero: wide crops need less zoom; 4. a real scrim behind the name */
+@media (max-width:700px){
+  .k-seq__frame img{object-position:50% 50%;transform-origin:50% 60%;transform:scale(1.1)}
+  .k-seq__frame.is-on img{transform:scale(1.04) translate3d(-1.5%,0,0)}
+  .k-seq__ui::before,[dir=rtl] .k-seq__ui::before{inset:-110px 0 0;background:linear-gradient(180deg,rgba(16,12,17,0) 0,rgba(16,12,17,.55) 110px,rgba(16,12,17,.78) 34%,var(--night) 62%)}
+}
+@media (max-width:700px) and (prefers-reduced-motion:reduce){.k-seq__frame img,.k-seq__frame.is-on img{transform:scale(1.04)!important}}
+/* 5. AR events: the drifting photo stays above the paragraph, the paragraph sits on top */
+.events__head p{position:relative;z-index:3}
+@media (min-width:1100px){[dir=rtl] .events__float--a{width:150px;height:140px;top:-150px}}
+/* 6. services weddings band: lower crop of the candle stage */
+.svc-hero>figure img{object-position:50% 55%}
+@media (min-width:701px){.svc-hero>figure img{object-position:0% 55%}[dir=rtl] .svc-hero>figure img{object-position:100% 55%}}
+/* 7. gallery: two big tiles (1 and 7) break the even grid */
+.k-gal__item--big{grid-column:span 2;aspect-ratio:4/3}
+@media (min-width:700px){.k-gal__item--big{grid-row:span 2;aspect-ratio:auto}}
+/* 8. story: steps keep a 60vh pitch, less dead space around them */
+@media (min-width:900px){.k-story__steps{padding:10vh 0 20vh}.k-story__step{min-height:60vh}}
+/* tap targets: 44px minimum width on short words */
+.k-gal__filters button,.ft li a,.nav a{min-width:44px;text-align:center}
+.ft li a{text-align:start}

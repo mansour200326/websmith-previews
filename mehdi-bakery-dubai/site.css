@@ -233,6 +233,14 @@ a{color:inherit}
 .ft__note{margin-top:50px;padding-top:20px;border-top:1px solid var(--k-line);font-size:.82rem;color:var(--k-mute);display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
 .ft__note p{color:var(--k-mute);font-size:.82rem}
 @media (min-width:760px){.ft__grid{grid-template-columns:repeat(4,1fr)}}
-img[src$="regag-tawa.webp"]{object-position:50% 62%}
+img[src$="regag-tawa.webp"]{object-position:50% 50%}
 /* Latin words on Arabic pages keep the Latin pair */
 [lang=en]:not(html){--k-display:"DM Serif Display",Georgia,serif;--k-body:"DM Sans",system-ui,sans-serif}
+/* 44px tap targets on phones */
+.brand{min-height:44px;justify-content:center}
+.phones a,.ft a{min-height:44px;display:inline-flex;align-items:center}
+.ft li{padding-block:0}
+.hero__or a,.how a{display:inline-block;padding-block:10px}
+.ft a{min-width:44px}
+.menu .k-menu__name .ar,.menu .k-menu__name .en{display:block;margin-inline-start:0;margin-top:2px;font-size:1rem}
+.menu.k-menu{padding-top:clamp(28px,4vw,56px)}

@@ -76,8 +76,12 @@
     el.classList.add('k-rv-ready');
   }
   var lineEls=[].slice.call(document.querySelectorAll('[data-reveal=lines]'));
+  // first-screen blocks (hero, services page head) play on load, not on scroll: the CTA must never wait for a scroll
+  var heroEls=[].slice.call(document.querySelectorAll('.hero [data-reveal],.phead [data-reveal]')),heroDone=false;
+  function heroIn(){if(heroDone)return;heroDone=true;heroEls.forEach(function(e){e.classList.add('is-in')})}
   if(!RM){
-    var ready=function(){lineEls.forEach(split)};
+    var ready=function(){lineEls.forEach(split);requestAnimationFrame(function(){requestAnimationFrame(heroIn)})};
+    setTimeout(heroIn,1500);
     if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ready);else ready();
     var rw=innerWidth;addEventListener('resize',function(){if(Math.abs(innerWidth-rw)>40){rw=innerWidth;lineEls.forEach(function(e){var on=e.classList.contains('is-in');split(e);if(on)e.classList.add('is-in')})}});
   }
@@ -86,6 +90,7 @@
   if(RM||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-in')});return}
   // clip reveals are fully clipped (zero visible area), which IntersectionObserver never reports, so watch their parent
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){(e.target.__kRv||[e.target]).forEach(function(x){x.classList.add('is-in')});io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px',threshold:0});
+  els=[].filter.call(els,function(e){return heroEls.indexOf(e)<0});
   els.forEach(function(e){var t=e.getAttribute('data-reveal')==='clip'&&e.parentElement?e.parentElement:e;(t.__kRv=t.__kRv||[]).push(e);io.observe(t)});
   // parallax
   var px=[].slice.call(document.querySelectorAll('[data-speed]'));
@@ -116,7 +121,7 @@
   function render(fig){
     var img=fig.querySelector('img'),dith=fig.getAttribute('data-k-fx')==='dither',W=fig.clientWidth,H=fig.clientHeight;
     if(!W||!H||!img.naturalWidth)return;
-    var cell=+fig.getAttribute('data-k-fx-cell')||(dith?2:7);cell=dith?Math.max(1.5,cell*Math.min(1,W/700)):Math.min(cell,Math.max(4,W/110));
+    var cell=+fig.getAttribute('data-k-fx-cell')||(dith?2:7);cell=dith?Math.max(1.5,cell*Math.min(1,W/700)):Math.min(cell,Math.max(6,W/40));
     var k=+fig.getAttribute('data-k-fx-contrast')||(dith?1.4:1.25),ink=fig.getAttribute('data-k-fx-ink')||'#1b1b1b',paper=fig.getAttribute('data-k-fx-paper')||'#f1ebde';
     var cols=Math.ceil(W/cell),rows=Math.ceil(H/cell),s=document.createElement('canvas');s.width=cols;s.height=rows;
     var sx=s.getContext('2d',{willReadFrequently:true});sx.imageSmoothingQuality='high';
@@ -142,7 +147,14 @@
     if(fig.dataset.kReady)return;fig.dataset.kReady=1;var img=fig.querySelector('img');if(!img)return;
     var go=function(){render(fig)};if(img.complete&&img.naturalWidth)go();else img.addEventListener('load',go);
     var lw=fig.clientWidth,rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(fig.clientWidth!==lw){lw=fig.clientWidth;go();}},200)});
-    if(fig.hasAttribute('data-k-fx-peek'))fig.addEventListener('click',function(){fig.classList.toggle('is-peek')});
+    if(fig.hasAttribute('data-k-fx-peek')){
+      fig.addEventListener('click',function(){fig.classList.toggle('is-peek')});
+      // touch screens: the print turns into the real photo by itself once half of it is in view (tap stays as a fallback)
+      if(matchMedia('(hover:none)').matches&&'IntersectionObserver' in window){
+        var pt;fig.classList.add('k-fx-auto');
+        new IntersectionObserver(function(e){clearTimeout(pt);if(e[0].intersectionRatio>=.5){pt=setTimeout(function(){fig.classList.add('is-peek')},RM?0:1500)}else if(!e[0].isIntersecting){fig.classList.remove('is-peek')}},{threshold:[0,.5]}).observe(fig);
+      }
+    }
     if(RM){fig.classList.add('is-in');return;}
     var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){fig.classList.add('is-in');io.disconnect();}},{threshold:.25});io.observe(fig);
   });

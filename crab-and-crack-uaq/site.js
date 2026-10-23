@@ -43,9 +43,10 @@
   document.querySelectorAll('[data-idx]').forEach(function(root){
     var stage=root.querySelector('.idx__stage');if(!stage)return;
     var imgs=stage.querySelectorAll('img'),cap=stage.querySelector('figcaption'),rows=root.querySelectorAll('.idx__row');
-    function on(i){rows.forEach(function(r,j){r.classList.toggle('is-on',i===j)});imgs.forEach(function(m,j){m.classList.toggle('is-on',i===j)});if(cap&&imgs[i])cap.textContent=imgs[i].getAttribute('data-cap')||''}
+    function on(i,mark){rows.forEach(function(r,j){r.classList.toggle('is-on',mark!==false&&i===j)});imgs.forEach(function(m,j){m.classList.toggle('is-on',i===j)});if(cap&&imgs[i])cap.textContent=imgs[i].getAttribute('data-cap')||''}
     rows.forEach(function(r,i){var a=r.querySelector('a');a.addEventListener('mouseenter',function(){on(i)});a.addEventListener('focus',function(){on(i)})});
-    on(0);
+    /* r2: open on the boat photo (data-idx-start), no row marked until hover/focus */
+    on(+root.getAttribute('data-idx-start')||0,false);
   });
 
   /* kit 07: marquee */
