@@ -11,7 +11,7 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=Readex+Pro:wght@500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero-camel.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/t-musandam.webp" fetchpriority="high">
 <link rel="stylesheet" href="kit.css">
 <link rel="stylesheet" href="site.css">
 </head>
@@ -32,29 +32,31 @@
     <a class="hd__lang" href="ar/" hreflang="ar" lang="ar">عربي</a>
   </div>
   <nav class="hd__sub" aria-label="Main (mobile)">
-    <a href="#tours">Tours</a><a href="services.html">Services</a><a href="services.html#packages">Packages</a><a href="about.html">About</a><a href="#find">Find us</a>
-  </nav>
+    <a href="#tours">Tours</a><a href="services.html">Services</a><a href="services.html#packages">Packages</a><a href="#find">Find us</a>
+  <a class="hd__sublang" href="ar/" hreflang="ar" lang="ar">عربي</a></nav>
 </header>
 
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero__top">
-    <h1 id="hero-h" data-reveal="lines">Desert safaris, UAE tours and holidays abroad, booked from our office in Sharjah.</h1>
-    <div class="hero__side" data-reveal data-reveal-delay="300">
-      <p class="hero__ar" lang="ar">الكنز للسياحة</p>
-      <a class="k-btn" data-k-magnetic href="tel:+97165393325">Call 06 539 3325 <span class="k-arrow" aria-hidden="true">→</span></a>
-      <p>Or mobile <a href="tel:+971551401665">055 140 1665</a>, or email <a href="mailto:info@alkanztours.com">info@alkanztours.com</a></p>
-    </div>
-  </div>
   <!-- Photos: alkanztours.com slider and the Dibba Musandam flyer, upscaled 4x -->
-  <div class="k-seq hero__seq" data-k-seq data-k-seq-ms="4600" role="region" aria-label="Photos of our tours">
-    <figure class="k-seq__frame is-on" data-k-seq-frame data-cap="Dubai City Tour"><img src="img/hero-camel.webp" alt="A camel resting on the beach with the Dubai Marina towers behind" width="2400" height="1084" fetchpriority="high"></figure>
-    <figure class="k-seq__frame" data-k-seq-frame data-cap="Dibba Musandam Cruise"><img src="img/t-musandam.webp" alt="Two dhows anchored in a clear blue bay in Musandam, swimmers in the water" width="1600" height="944" loading="lazy"></figure>
+  <div class="k-seq hero__seq" data-k-seq data-k-seq-ms="4600">
+    <figure class="k-seq__frame is-on" data-k-seq-frame data-cap="Dibba Musandam Cruise"><img src="img/t-musandam.webp" alt="Two dhows anchored in a clear blue bay in Musandam, swimmers in the water" width="2400" height="1416" fetchpriority="high"></figure>
     <figure class="k-seq__frame" data-k-seq-frame data-cap="Desert safari"><img src="img/hero-desert.webp" alt="4x4s crossing the red dunes" width="2400" height="1084" loading="lazy"></figure>
+    <figure class="k-seq__frame" data-k-seq-frame data-cap="Dubai City Tour"><img src="img/hero-camel.webp" alt="A camel resting on the beach with the Dubai Marina towers behind" width="2400" height="1084" loading="lazy"></figure>
     <figure class="k-seq__frame" data-k-seq-frame data-cap="Hotel and resort bookings, UAE and worldwide"><img src="img/hero-resort.webp" alt="A beach resort pool with palm trees and a thatched restaurant" width="2400" height="1084" loading="lazy"></figure>
     <div class="k-seq__ui">
-      <div class="k-seq__cap" aria-live="polite"><span data-k-seq-cap>Dubai City Tour</span><span class="k-seq__count" data-k-seq-count>01 / 04</span></div>
+      <div class="hero__copy">
+        <div>
+          <h1 id="hero-h" data-reveal="lines">Desert safaris, UAE tours and holidays abroad.</h1>
+          <p class="hero__sub" data-reveal data-reveal-delay="250">Booked from our office in Industrial Area 17, Sharjah.</p>
+        </div>
+        <div class="hero__act" data-reveal data-reveal-delay="400">
+          <p class="hero__ar" lang="ar">الكنز للسياحة</p>
+          <a class="k-btn" data-k-magnetic href="tel:+97165393325">Call 06 539 3325 <span class="k-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="k-seq__cap" aria-live="polite"><span data-k-seq-cap>Dibba Musandam Cruise</span><span class="k-seq__count" data-k-seq-count>01 / 04</span></div>
       <div class="k-seq__bars" data-k-seq-bars></div>
     </div>
   </div>
@@ -63,7 +65,6 @@
 <section class="wrap intro" aria-label="About Alkanz Tours">
   <figure class="intro__ph intro__ph--a" data-reveal="clip"><img src="img/t-dhow.webp" alt="A dhow lit up for the dinner cruise" width="1200" height="900" loading="lazy" data-speed="-0.06"></figure>
   <figure class="intro__ph intro__ph--b" data-reveal="clip" data-reveal-delay="150"><img src="img/t-hatta.webp" alt="A 4x4 splashing through a wadi near Hatta" width="1200" height="900" loading="lazy"></figure>
-  <figure class="intro__ph intro__ph--c" data-reveal="clip" data-reveal-delay="250"><img src="img/t-eastcoast.webp" alt="Palm trees on an East Coast beach" width="1200" height="900" loading="lazy"></figure>
   <div class="intro__text">
     <p data-reveal>We plan cultural, historical, adventure, desert safari, city and sport tours of <em>Dubai, Abu Dhabi and the Northern Emirates</em>. We book hotels in the UAE and anywhere in the world, and we handle UAE visas for your family and friends.</p>
     <a class="k-link k-link--under" href="about.html" data-reveal data-reveal-delay="150">About Alkanz Tours <span class="k-arrow" aria-hidden="true">→</span></a>
@@ -80,12 +81,12 @@
       <li><a href="services.html#tours" data-img="img/t-dubai.webp"><img class="tix__th" src="img/t-dubai.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">01</span><span class="tix__t">Dubai City Tour</span><span class="tix__k">City · Dubai <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-sharjah.webp"><img class="tix__th" src="img/t-sharjah.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">02</span><span class="tix__t">Sharjah City Tour</span><span class="tix__k">City · Sharjah <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-abudhabi.webp"><img class="tix__th" src="img/t-abudhabi.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">03</span><span class="tix__t">Abu Dhabi City Tour</span><span class="tix__k">City · Abu Dhabi <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
-      <li><a class="no-th" href="services.html#tours"><span class="tix__n">04</span><span class="tix__t">Al Ain Oasis Tour</span><span class="tix__k">Day trip · Al Ain <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
+      <li><a href="services.html#tours"><span class="tix__th tix__th--n" aria-hidden="true">04</span><span class="tix__n">04</span><span class="tix__t">Al Ain Oasis Tour</span><span class="tix__k">Day trip · Al Ain <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="#safari" data-img="img/t-safari.webp"><img class="tix__th" src="img/t-safari.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">05</span><span class="tix__t">Desert Safari, half day or with dinner</span><span class="tix__k">Desert <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-liwa.webp"><img class="tix__th" src="img/t-liwa.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">06</span><span class="tix__t">Liwa Safari</span><span class="tix__k">Desert · Liwa <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-buggy.webp"><img class="tix__th" src="img/t-buggy.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">07</span><span class="tix__t">Dune Buggy Tour</span><span class="tix__k">Desert <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-dhow.webp"><img class="tix__th" src="img/t-dhow.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">08</span><span class="tix__t">Dhow Dinner Cruise</span><span class="tix__k">Sea · evening <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
-      <li><a href="services.html#tours" data-img="img/t-musandam.webp"><img class="tix__th" src="img/t-musandam.webp" alt="" width="1600" height="944" loading="lazy"><span class="tix__n">09</span><span class="tix__t">Dibba Musandam Cruise</span><span class="tix__k">Sea · full day <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
+      <li><a href="services.html#tours" data-img="img/t-musandam.webp"><img class="tix__th" src="img/t-musandam.webp" alt="" width="2400" height="1416" loading="lazy"><span class="tix__n">09</span><span class="tix__t">Dibba Musandam Cruise</span><span class="tix__k">Sea · full day <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-eastcoast.webp"><img class="tix__th" src="img/t-eastcoast.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">10</span><span class="tix__t">East Coast Tour</span><span class="tix__k">Day trip · East Coast <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-hatta.webp"><img class="tix__th" src="img/t-hatta.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">11</span><span class="tix__t">Hatta Wadi Trek</span><span class="tix__k">Mountains · Hatta <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="services.html#tours" data-img="img/t-fishing.webp"><img class="tix__th" src="img/t-fishing.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">12</span><span class="tix__t">Fishing Trip</span><span class="tix__k">Sea <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
@@ -247,8 +248,10 @@
       <a class="k-visit__call" data-k-magnetic href="tel:+97165393325">Call 06 539 3325</a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Al+Reem+Building+Industrial+Area+17+Muwailah+Sharjah&amp;z=15&amp;output=embed">
-    <button type="button">Show the map</button>
+  <div class="k-visit__map" style="--k-map-poster:url(img/map.webp)" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Al+Reem+Building+Industrial+Area+17+Muwailah+Sharjah&amp;z=15&amp;output=embed">
+    <span class="map__tag" aria-hidden="true">Industrial Area 17 · Maliha Road</span>
+    <button type="button">Show the live map</button>
+    <small class="map__credit">Map © OpenStreetMap contributors</small>
   </div>
 </section>
 

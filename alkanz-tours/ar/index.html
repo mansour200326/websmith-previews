@@ -11,7 +11,7 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Hanken+Grotesk:wght@500;600&family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../img/hero-camel.webp" fetchpriority="high">
+<link rel="preload" as="image" href="../img/t-musandam.webp" fetchpriority="high">
 <link rel="stylesheet" href="../kit.css">
 <link rel="stylesheet" href="../site.css">
 </head>
@@ -32,29 +32,31 @@
     <a class="hd__lang" href="../" hreflang="en" lang="en">EN</a>
   </div>
   <nav class="hd__sub" aria-label="القائمة (الجوال)">
-    <a href="#tours">الجولات</a><a href="#safari">السفاري</a><a href="#packages">باقات السفر</a><a href="#services">خدماتنا</a><a href="#find">موقعنا</a>
-  </nav>
+    <a href="#tours">الجولات</a><a href="#safari">السفاري</a><a href="#packages">الباقات</a><a href="#find">موقعنا</a>
+  <a class="hd__sublang" href="../" hreflang="en" lang="en">EN</a></nav>
 </header>
 
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero__top">
-    <h1 id="hero-h" data-reveal="lines">رحلات سفاري وجولات في الإمارات وعطلات في الخارج، نرتّبها لكم من مكتبنا في الشارقة.</h1>
-    <div class="hero__side" data-reveal data-reveal-delay="300">
-      <p class="hero__ar" lang="en" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.03em">Alkanz Tours</p>
-      <a class="k-btn" data-k-magnetic href="tel:+97165393325">اتصل <bdi dir="ltr">06 539 3325</bdi> <span class="k-arrow" aria-hidden="true">→</span></a>
-      <p>أو الموبايل <a href="tel:+971551401665"><bdi dir="ltr">055 140 1665</bdi></a>، أو البريد <a href="mailto:info@alkanztours.com">info@alkanztours.com</a></p>
-    </div>
-  </div>
   <!-- Photos: alkanztours.com slider and the Dibba Musandam flyer, upscaled 4x -->
-  <div class="k-seq hero__seq" data-k-seq data-k-seq-ms="4600" role="region" aria-label="صور من رحلاتنا">
-    <figure class="k-seq__frame is-on" data-k-seq-frame data-cap="جولة مدينة دبي"><img src="../img/hero-camel.webp" alt="جمل على الشاطئ وخلفه أبراج دبي مارينا" width="2400" height="1084" fetchpriority="high"></figure>
-    <figure class="k-seq__frame" data-k-seq-frame data-cap="رحلة دبا مسندم البحرية"><img src="../img/t-musandam.webp" alt="مركبان من الداو في خليج صافٍ في مسندم" width="1600" height="944" loading="lazy"></figure>
+  <div class="k-seq hero__seq" data-k-seq data-k-seq-ms="4600">
+    <figure class="k-seq__frame is-on" data-k-seq-frame data-cap="رحلة دبا مسندم البحرية"><img src="../img/t-musandam.webp" alt="مركبان من الداو في خليج صافٍ في مسندم" width="2400" height="1416" fetchpriority="high"></figure>
     <figure class="k-seq__frame" data-k-seq-frame data-cap="سفاري الصحراء"><img src="../img/hero-desert.webp" alt="سيارات دفع رباعي على الكثبان" width="2400" height="1084" loading="lazy"></figure>
+    <figure class="k-seq__frame" data-k-seq-frame data-cap="جولة مدينة دبي"><img src="../img/hero-camel.webp" alt="جمل على الشاطئ وخلفه أبراج دبي مارينا" width="2400" height="1084" loading="lazy"></figure>
     <figure class="k-seq__frame" data-k-seq-frame data-cap="حجز الفنادق والمنتجعات داخل الإمارات وحول العالم"><img src="../img/hero-resort.webp" alt="مسبح منتجع على البحر بين النخيل" width="2400" height="1084" loading="lazy"></figure>
     <div class="k-seq__ui">
-      <div class="k-seq__cap" aria-live="polite"><span data-k-seq-cap>جولة مدينة دبي</span><span class="k-seq__count" data-k-seq-count>01 / 04</span></div>
+      <div class="hero__copy">
+        <div>
+          <h1 id="hero-h" data-reveal="lines">سفاري الصحراء، جولات في الإمارات وعطلات في الخارج.</h1>
+          <p class="hero__sub" data-reveal data-reveal-delay="250">نرتّبها لكم من مكتبنا في المنطقة الصناعية 17، الشارقة.</p>
+        </div>
+        <div class="hero__act" data-reveal data-reveal-delay="400">
+          <p class="hero__ar hero__ar--en" lang="en">Alkanz Tours</p>
+          <a class="k-btn" data-k-magnetic href="tel:+97165393325">اتصل <bdi dir="ltr">06 539 3325</bdi> <span class="k-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="k-seq__cap" aria-live="polite"><span data-k-seq-cap>رحلة دبا مسندم البحرية</span><span class="k-seq__count" data-k-seq-count>01 / 04</span></div>
       <div class="k-seq__bars" data-k-seq-bars></div>
     </div>
   </div>
@@ -63,7 +65,6 @@
 <section class="wrap intro" aria-label="عن الكنز للسياحة">
   <figure class="intro__ph intro__ph--a" data-reveal="clip"><img src="../img/t-dhow.webp" alt="مركب داو مضاء لرحلة العشاء" width="1200" height="900" loading="lazy" data-speed="-0.06"></figure>
   <figure class="intro__ph intro__ph--b" data-reveal="clip" data-reveal-delay="150"><img src="../img/t-hatta.webp" alt="سيارة دفع رباعي تعبر واديًا قرب حتا" width="1200" height="900" loading="lazy"></figure>
-  <figure class="intro__ph intro__ph--c" data-reveal="clip" data-reveal-delay="250"><img src="../img/t-eastcoast.webp" alt="نخيل على شاطئ الساحل الشرقي" width="1200" height="900" loading="lazy"></figure>
   <div class="intro__text">
     <p data-reveal>ننظّم جولات ثقافية وتاريخية ومغامرات وسفاري صحراوي وجولات في المدن ورحلات رياضية في <em>دبي وأبوظبي والإمارات الشمالية</em>. ونحجز لكم الفنادق داخل الدولة وفي أي مكان في العالم، ونتابع تأشيرات الإمارات لأهلكم وأصدقائكم.</p>
   </div>
@@ -79,12 +80,12 @@
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-dubai.webp"><img class="tix__th" src="../img/t-dubai.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">01</span><span class="tix__t">جولة مدينة دبي</span><span class="tix__k">مدينة · دبي <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-sharjah.webp"><img class="tix__th" src="../img/t-sharjah.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">02</span><span class="tix__t">جولة مدينة الشارقة</span><span class="tix__k">مدينة · الشارقة <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-abudhabi.webp"><img class="tix__th" src="../img/t-abudhabi.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">03</span><span class="tix__t">جولة مدينة أبوظبي</span><span class="tix__k">مدينة · أبوظبي <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
-      <li><a class="no-th" href="../services.html#tours" hreflang="en"><span class="tix__n">04</span><span class="tix__t">جولة واحة العين</span><span class="tix__k">رحلة يوم · العين <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
+      <li><a href="../services.html#tours" hreflang="en"><span class="tix__th tix__th--n" aria-hidden="true">04</span><span class="tix__n">04</span><span class="tix__t">جولة واحة العين</span><span class="tix__k">رحلة يوم · العين <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="#safari" data-img="../img/t-safari.webp"><img class="tix__th" src="../img/t-safari.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">05</span><span class="tix__t">سفاري الصحراء، نصف يوم أو مع العشاء</span><span class="tix__k">صحراء <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-liwa.webp"><img class="tix__th" src="../img/t-liwa.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">06</span><span class="tix__t">سفاري ليوا</span><span class="tix__k">صحراء · ليوا <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-buggy.webp"><img class="tix__th" src="../img/t-buggy.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">07</span><span class="tix__t">جولة الدون باغي</span><span class="tix__k">صحراء <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-dhow.webp"><img class="tix__th" src="../img/t-dhow.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">08</span><span class="tix__t">عشاء على متن الداو</span><span class="tix__k">بحر · مساءً <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
-      <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-musandam.webp"><img class="tix__th" src="../img/t-musandam.webp" alt="" width="1600" height="944" loading="lazy"><span class="tix__n">09</span><span class="tix__t">رحلة دبا مسندم البحرية</span><span class="tix__k">بحر · يوم كامل <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
+      <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-musandam.webp"><img class="tix__th" src="../img/t-musandam.webp" alt="" width="2400" height="1416" loading="lazy"><span class="tix__n">09</span><span class="tix__t">رحلة دبا مسندم البحرية</span><span class="tix__k">بحر · يوم كامل <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-eastcoast.webp"><img class="tix__th" src="../img/t-eastcoast.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">10</span><span class="tix__t">جولة الساحل الشرقي</span><span class="tix__k">رحلة يوم <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-hatta.webp"><img class="tix__th" src="../img/t-hatta.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">11</span><span class="tix__t">رحلة وادي حتا</span><span class="tix__k">جبال · حتا <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
       <li><a href="../services.html#tours" hreflang="en" data-img="../img/t-fishing.webp"><img class="tix__th" src="../img/t-fishing.webp" alt="" width="1200" height="900" loading="lazy"><span class="tix__n">12</span><span class="tix__t">رحلة صيد السمك</span><span class="tix__k">بحر <span class="k-arrow" aria-hidden="true">→</span></span></a></li>
@@ -245,8 +246,10 @@
       <a class="k-visit__call" data-k-magnetic href="tel:+97165393325">اتصل <bdi dir="ltr">06 539 3325</bdi></a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Al+Reem+Building+Industrial+Area+17+Muwailah+Sharjah&amp;z=15&amp;output=embed">
-    <button type="button">اعرض الخريطة</button>
+  <div class="k-visit__map" style="--k-map-poster:url(../img/map.webp)" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Al+Reem+Building+Industrial+Area+17+Muwailah+Sharjah&amp;z=15&amp;output=embed">
+    <span class="map__tag" aria-hidden="true">المنطقة الصناعية 17 · شارع مليحة</span>
+    <button type="button">اعرض الخريطة التفاعلية</button>
+    <small class="map__credit" lang="en" dir="ltr">Map © OpenStreetMap contributors</small>
   </div>
 </section>
 

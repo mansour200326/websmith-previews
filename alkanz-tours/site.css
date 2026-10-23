@@ -1,7 +1,7 @@
 /* Alkanz Tours concept, Websmith. Kit base in kit.css; everything below restyles it for Alkanz. */
 :root{
   --k-bg:#fff;--k-ink:#161412;--k-mute:#5c5752;--k-line:#e6e1db;
-  --k-accent:#c3102f;--k-on-accent:#fff;--red:#d41438;--red-logo:#ec1840;--sand:#f4efe8;
+  --k-accent:#c3102f;--k-on-accent:#fff;--red:#d41438;--red-logo:#ec1840;--tint:#fcf0f2;
   --k-display:"Bricolage Grotesque",system-ui,sans-serif;--k-body:"Hanken Grotesk",system-ui,sans-serif;
   --k-ease:cubic-bezier(.16,1,.3,1);
   --pad:clamp(20px,4.4vw,64px);--max:1440px;
@@ -51,7 +51,7 @@ a{color:inherit}
 /* ---------- hero ---------- */
 .hero{padding-top:clamp(28px,4.5vw,64px)}
 .hero__top{display:grid;grid-template-columns:1fr;gap:26px;align-items:end;margin-bottom:clamp(26px,3.6vw,48px)}
-.hero h1{font:700 clamp(2.4rem,5.6vw,5.9rem)/.95 var(--k-display);letter-spacing:-.04em;font-variation-settings:"wdth" 92;max-width:14.5em}
+.hero h1{font:700 clamp(2.4rem,5.6vw,5.9rem)/.95 var(--k-display);letter-spacing:-.03em;font-variation-settings:"wdth" 92;max-width:14.5em}
 .hero__side{display:grid;gap:16px;justify-items:start}
 .hero__side .hero__ar{font:600 clamp(2rem,3.4vw,3.2rem)/1 "Readex Pro",sans-serif;color:var(--red)}
 .hero__side p{color:var(--k-mute);font-size:.98rem;max-width:22em}
@@ -77,7 +77,7 @@ a{color:inherit}
 
 /* ---------- section heads ---------- */
 .sec{padding-block:clamp(72px,10vw,150px)}
-.h2{font:700 clamp(2.4rem,6vw,5.4rem)/.94 var(--k-display);letter-spacing:-.04em;font-variation-settings:"wdth" 92}
+.h2{font:700 clamp(2.4rem,6vw,5.4rem)/.94 var(--k-display);letter-spacing:-.032em;font-variation-settings:"wdth" 95}
 .h3{font:650 clamp(1.5rem,2.6vw,2.2rem)/1.05 var(--k-display);letter-spacing:-.025em}
 .lead{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--k-mute);max-width:34em}
 .sec__head{display:grid;gap:18px;margin-bottom:clamp(34px,5vw,64px)}
@@ -179,9 +179,9 @@ a{color:inherit}
 @media (min-width:980px){.svc{grid-template-columns:1fr 1.35fr}.svc__aside{position:sticky;top:110px}}
 
 /* ---------- groups ---------- */
-.grp{background:var(--sand)}
+.grp{background:var(--tint)}
 .grp__grid{display:grid;grid-template-columns:1fr;gap:0}
-.grp__grid div{padding:24px 0;border-top:1px solid #d9d1c6}
+.grp__grid div{padding:24px 0;border-top:1px solid #ecd3d8}
 .grp__grid dt{font:650 1.3rem/1.15 var(--k-display);letter-spacing:-.02em;margin-bottom:6px}
 .grp__grid dd{color:var(--k-mute)}
 @media (min-width:800px){.grp__grid{grid-template-columns:repeat(2,1fr);column-gap:50px}}
@@ -206,7 +206,7 @@ a{color:inherit}
 .k-visit h2{font-variation-settings:"wdth" 92}
 .k-visit__addr{font-weight:500}
 .k-visit__land b{color:var(--k-ink)}
-.k-visit__map{background:var(--sand)}
+.k-visit__map{background:#e8e4df var(--k-map-poster,none) center/cover}
 .k-visit__go{background:var(--k-accent)}
 .k-visit__go:hover{background:var(--k-ink)}
 .visit__dl{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;margin:4px 0 28px;font-size:1rem}
@@ -237,7 +237,7 @@ a{color:inherit}
 
 /* ---------- inner pages ---------- */
 .pgintro{padding-block:clamp(50px,8vw,120px) clamp(40px,6vw,80px)}
-.pgintro h1{font:700 clamp(2.8rem,8vw,7.6rem)/.9 var(--k-display);letter-spacing:-.05em;font-variation-settings:"wdth" 90;margin-bottom:28px}
+.pgintro h1{font:700 clamp(2.8rem,8vw,7.6rem)/.92 var(--k-display);letter-spacing:-.035em;font-variation-settings:"wdth" 96;margin-bottom:28px}
 .pgintro .lead{font-size:clamp(1.15rem,1.8vw,1.45rem);color:var(--k-ink);max-width:32em}
 .pgnav{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:34px}
 .pgnav a{font-weight:600;padding-block:8px}
@@ -304,3 +304,58 @@ a{color:inherit}
   .pgnav a,.intro__text .k-link,.tours__more a,.svc__aside .k-link{display:inline-flex;align-items:center;min-height:44px}
   .visit__dl a{display:inline-flex;align-items:center;min-height:44px}
 }
+.hd__sub .hd__sublang{display:none}
+@media (max-width:860px){
+  .hd__in{height:58px;padding-inline-end:16px}
+  .hd__in>.hd__lang{display:none}
+  .hd__sub .hd__sublang{display:inline-flex;align-items:center;margin-inline-start:auto;font-family:"Readex Pro",sans-serif}
+  .hd__tel b{white-space:nowrap}
+}
+
+/* ---------- round 2: full-bleed hero ---------- */
+.hero{padding-top:0}
+.k-seq.hero__seq{height:calc(100svh - 77px);min-height:560px;max-height:1000px}
+.k-seq.hero__seq::after{background:linear-gradient(180deg,rgba(0,0,0,.1) 0,transparent 22%,rgba(0,0,0,.28) 48%,rgba(0,0,0,.78) 100%)}
+.hero__seq .k-seq__ui{padding-inline:var(--pad)}
+.hero__copy{display:grid;gap:22px;align-items:end;margin-bottom:clamp(22px,4vh,40px)}
+.hero__seq h1{font:700 clamp(2.6rem,7vw,7.5rem)/.92 var(--k-display);letter-spacing:-.03em;font-variation-settings:"wdth" 96;max-width:10.5em;margin:0;color:#fff}
+.hero__sub{font-size:1.1rem;font-weight:500;margin-top:14px;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.hero__act{display:grid;gap:14px;justify-items:start}
+.hero__act .hero__ar{font:600 clamp(1.8rem,3vw,2.8rem)/1 "Readex Pro",sans-serif;color:#fff;margin:0;text-shadow:0 1px 18px rgba(0,0,0,.35)}
+.hero__act .hero__ar--en{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.03em}
+.hero__act .k-btn{background:var(--k-accent)}
+.hero__act .k-btn::before{background:#fff}
+.hero__act .k-btn:hover{color:var(--k-ink)}
+.hero__seq .k-seq__cap{border-top:1px solid rgba(255,255,255,.35);padding-top:12px}
+@media (min-width:1000px){.hero__copy{grid-template-columns:1fr auto;gap:50px}.hero__act{justify-items:end}}
+@media (max-width:860px){.k-seq.hero__seq{height:calc(100svh - 104px);min-height:520px}.hero__seq img{object-position:58% 50%}}
+[lang=ar] .hero__seq h1{font-size:clamp(2.2rem,5.6vw,5.8rem);font-weight:600;line-height:1.15;letter-spacing:0;font-variation-settings:normal;max-width:12em}
+/* intro tighter, two photos */
+.intro{padding-block:clamp(64px,9vw,130px)}
+.intro__ph--a{grid-column:1 / span 4}
+.intro__ph--b{grid-column:10 / span 3;margin-top:20%}
+.intro__text{grid-column:5 / span 5;grid-row:1}
+@media (max-width:860px){.intro__ph--a{grid-column:1 / span 3}.intro__ph--b{grid-column:4 / span 3;margin-top:30%}.intro__text{grid-row:2}}
+/* small text up */
+.tix__k,.svc__list p,.grp__grid dd,.book__small,.pkc__meta,.ft ul,.ft address,.safari__note,.tgrid figcaption span{font-size:max(15px,.95rem)}
+.tix__k{color:var(--k-mute)}
+.tix__th--n{display:none}
+@media (max-width:700px){.tix__th--n{display:grid;place-items:center;background:var(--k-accent);color:#fff;font:700 1.1rem var(--k-display)}}
+/* map tag */
+.k-visit__map{min-height:420px}
+.map__tag{position:absolute;left:44%;top:48%;transform:translate(-50%,-100%);background:var(--k-accent);color:#fff;font-weight:600;font-size:.92rem;padding:8px 12px;border-radius:2px;white-space:nowrap;box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}
+.map__tag::after{content:"";position:absolute;left:50%;bottom:-7px;margin-left:-7px;border:7px solid transparent;border-bottom:0;border-top-color:var(--k-accent)}
+.k-visit__map button{margin-top:160px}
+.map__credit{position:absolute;right:8px;bottom:6px;font-size:.72rem;background:rgba(255,255,255,.85);padding:2px 6px;color:#333}
+.k-visit__map.is-loaded .map__tag,.k-visit__map.is-loaded .map__credit{display:none}
+/* services pgnav: one scroll row on phones */
+@media (max-width:860px){.pgnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent)}.pgnav a{flex:none;font-size:15px}}
+/* sub-nav edge fade */
+@media (max-width:860px){.hd__sub{-webkit-mask:linear-gradient(90deg,#000 90%,transparent);mask:linear-gradient(90deg,#000 90%,transparent)}[dir=rtl] .hd__sub{-webkit-mask:linear-gradient(270deg,#000 90%,transparent);mask:linear-gradient(270deg,#000 90%,transparent)}}
+@media (max-width:860px){.k-seq.hero__seq::after{background:linear-gradient(180deg,rgba(0,0,0,.1) 0,transparent 15%,rgba(0,0,0,.35) 40%,rgba(0,0,0,.8) 100%)}}
+/* round 3 */
+@media (max-width:860px){.intro__text{grid-column:1 / -1;grid-row:2;padding-block:24px 0}}
+.k-seq__count{direction:ltr;unicode-bidi:isolate}
+.about__top{aspect-ratio:4/5}
+@media (min-width:1200px){.pgintro h1{letter-spacing:-.028em}}
+@media (max-width:860px){.hero__seq .k-seq__frame:first-child img{object-position:40% 35%}}
