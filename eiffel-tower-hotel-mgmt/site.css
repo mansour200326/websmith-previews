@@ -438,8 +438,7 @@ bdi,.ltr{unicode-bidi:isolate}
 .phones a{font-weight:500;text-decoration:none;font-variant-numeric:tabular-nums;padding-block:6px;white-space:nowrap}
 .k-visit__go{background:var(--ink)}
 .k-visit__go:hover{background:var(--red)}
-.k-visit__map{background:#dfe3ea}
-.k-visit__map::before{content:"";position:absolute;inset:0;background:url(img/tower-pair.webp) center/cover;opacity:.35;filter:grayscale(1)}
+.k-visit__map{background:var(--ink)}
 .k-visit__acts a{min-height:52px}
 
 /* ---------- footer ---------- */
@@ -529,7 +528,6 @@ a[href^="tel:"],bdi{white-space:nowrap;unicode-bidi:isolate}
 .hd__logo b{white-space:nowrap}
 @media (max-width:420px){[dir=rtl] .hd__logo b{font-size:1.4rem}}
 .hero__pic--e picture{display:block;width:100%;height:100%}
-@media (max-width:420px){[dir=rtl] .hd__lang{display:none}}
 [dir=rtl] .hero h1 a:nth-child(3) small{margin-top:30px}
 
 /* rescue 2026-10-23: sharp listing photos lead; 2006 photos only at sizes they hold */
@@ -619,3 +617,9 @@ main img{filter:none}
 /* services jump nav: two even rows of three instead of a lone "Photos" */
 .pg__jump{display:grid;grid-template-columns:repeat(3,max-content);gap:0 32px}
 @media (max-width:520px){.pg__jump{grid-template-columns:repeat(2,max-content);gap:0 24px}}
+
+/* pre-publish fixes after round 5 (2026-10-24) */
+.hotel__row figure:nth-child(3)>div{aspect-ratio:3/2}
+@media (max-width:800px){.band__img img{object-position:right center}}
+@media (max-width:480px){.k-visit__acts{display:grid;grid-template-columns:1fr;gap:10px}.k-visit__acts a{width:100%;justify-content:center}}
+@media (max-width:420px){[dir=rtl] .hd__acts{gap:6px}[dir=rtl] .hd__menu{padding-inline:10px}}
