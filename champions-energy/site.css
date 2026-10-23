@@ -900,3 +900,68 @@ img[src*="heras-panels"]{object-position:50% 30%}
 .photo-pair--wide{grid-template-columns:1fr;gap:20px;padding-block:clamp(40px,6vw,80px) 0}
 @media (min-width:700px){.photo-pair--wide{grid-template-columns:1fr 1fr}}
 .photo-pair--wide img{aspect-ratio:4/3}
+
+/* ===== rescue after round 4 (2026-10-24) ===== */
+/* One grade: the plum duotone is baked into every catalogue file (img/*.webp), so no extra CSS filters stack on top.
+   The hero (hesco-wall.webp) stays in its original colour. */
+.item__fig img,.k-drag__fig img,.k-acc__float img,.k-acc__body img,.photo-pair img,.wide-photo img,.ph__photo img,.hero__photo img,img[src*="hoarding-blue"]{filter:none!important}
+
+/* bollards: studio shot on white, so a white box + multiply (no grey panel) */
+.item__fig:has(img[src*="bollards"]){background:#fff;box-shadow:inset 0 0 0 1px var(--k-line)}
+.item__fig img[src*="bollards"],.k-acc__float img[src*="bollards"],.k-acc__body img[src*="bollards"]{object-fit:contain;padding:8%;background:#fff;mix-blend-mode:multiply}
+.k-acc__float{background:#fff}
+
+/* blast-wall-cell is a small source: never shown wider than 420px */
+img[src*="blast-wall-cell"]{max-width:420px}
+.photo-pair figure:has(img[src*="blast-wall-cell"]){max-width:420px}
+
+/* mobile hero: crop on the receding wall run, Ken Burns ends at 1.22 */
+@media (max-width:599px){
+  .hero__photo img,[dir=rtl] .hero__photo img{object-position:62% 100%;transform-origin:62% 100%}
+  .k-js .hero__photo img{transform:scale(1.32);animation:ce-kb-m 9s cubic-bezier(.2,.7,.2,1) .35s forwards}
+  .hero__photo img{transform:scale(1.22)}
+}
+@keyframes ce-kb-m{to{transform:scale(1.22)}}
+@media (max-width:599px) and (prefers-reduced-motion:reduce){.k-js .hero__photo img,.hero__photo img{animation:none;transform:scale(1.22)}}
+
+/* the "full product list" link: underline sits on the text, not 10px under a padded box */
+.prod__head p a{display:inline;padding:0;background:none;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em;color:var(--k-ink);font-weight:600;transition:color .3s,text-underline-offset .4s var(--k-ease)}
+.prod__head p a:hover{color:var(--k-accent);text-underline-offset:.32em;animation:none}
+
+/* type-led: "Where it goes" as a run of big words instead of a ruled two-column list */
+.sectors{padding-block:clamp(60px,9vw,130px);border-top:1px solid var(--k-ink)}
+.sectors__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 30px;margin-bottom:clamp(22px,3vw,40px)}
+.sectors__head h2{font-size:clamp(1.9rem,3.2vw,2.6rem)}
+.sectors__head p{color:var(--k-mute)}
+.sectors__run{display:flex;flex-wrap:wrap;align-items:baseline;font:600 clamp(1.9rem,4.6vw,4.4rem)/1.04 var(--k-display);text-transform:uppercase;letter-spacing:-.01em}
+.sectors__run li{display:inline}
+.sectors__run li:nth-child(even){color:var(--k-mute)}
+.sectors__run li:not(:last-child)::after{content:"/";color:var(--k-accent);font-weight:500;margin-inline:.28em}
+[dir=rtl] .sectors__run{font:600 clamp(1.5rem,3.4vw,3rem)/1.5 "Readex Pro",sans-serif;text-transform:none;letter-spacing:0}
+[dir=rtl] .sectors__run li:not(:last-child)::after{content:"،";margin-inline:.1em .4em}
+[dir=rtl] .sectors__head h2{font-family:"Readex Pro",sans-serif;line-height:1.3}
+
+/* About: what we take on as a stacked type list, no rules */
+.stack{font:700 clamp(2.3rem,5.6vw,5.4rem)/.94 var(--k-display);text-transform:uppercase;letter-spacing:-.015em}
+.stack li span{color:var(--k-mute)}
+.stack li{transition:color .3s,transform .6s var(--k-ease)}
+@media (hover:hover){.stack li:hover{color:var(--k-accent);transform:translateX(10px)}.stack li:hover span{color:inherit}}
+
+/* About: finishes as material swatches */
+.swatch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}
+@media (min-width:760px){.swatch{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.swatch li{display:grid;gap:10px;align-content:start;font-size:1rem;line-height:1.35}
+.sw{display:block;aspect-ratio:1/1;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.sw--gi{background:linear-gradient(115deg,#c4c9ce 0 22%,#b3b9bf 22% 41%,#ccd1d5 41% 63%,#aeb4ba 63% 80%,#c0c5ca 80%)}
+.sw--ral{background:var(--k-accent)}
+.sw--pvc{background:#2e5a3c}
+.sw--poly{background:#383e42}
+.sw--blast{background:radial-gradient(#6f747a 1px,transparent 1.4px) 0 0/5px 5px,radial-gradient(#a9adb1 1px,transparent 1.4px) 2px 3px/6px 6px,#8a8f95}
+.sw--epoxy{background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 40%),#6b7780}
+.sw--ss{background:repeating-linear-gradient(90deg,#d3d7da 0 2px,#c0c5c9 2px 3px,#dadde0 3px 5px)}
+.sw--alu{background:#e2e5e8}
+@media (prefers-reduced-motion:reduce){.stack li{transition:none}.stack li:hover{transform:none}}
+
+/* About: places as one big run */
+.placerun{display:flex;flex-wrap:wrap;font:700 clamp(2.2rem,5.4vw,5.2rem)/1 var(--k-display);text-transform:uppercase;letter-spacing:-.015em}
+.placerun li:not(:last-child)::after{content:"";display:inline-block;width:.22em;height:.22em;background:var(--k-accent);transform:rotate(45deg) translateY(-.1em);margin-inline:.3em .32em;vertical-align:middle}
