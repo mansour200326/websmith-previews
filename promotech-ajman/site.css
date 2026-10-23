@@ -277,3 +277,17 @@ html[lang=ar] .mono,html[lang=ar] .k-seq__cap,html[lang=ar] .px__k,html[lang=ar]
 html[lang=ar] .spec__list li b{font-size:.9rem}
 .hd__logo{min-width:0}
 @media (max-width:699px){.hd{gap:8px}.hd__logo b{font-size:1.3rem}}
+
+.hd__call{flex:none;display:inline-grid;place-items:center;width:44px;height:44px;color:#03181c;background:var(--el);border-radius:2px}
+.hd__call svg{width:20px;height:20px}
+.hd__wa{display:none}
+@media (min-width:1000px){.hd__call{display:none}.hd__wa{display:inline-grid}}
+.nw{white-space:nowrap}
+.k-seq__count{white-space:nowrap}
+@media (max-width:999px){
+  .hero .k-seq{height:40svh;min-height:280px}
+  .hero__type{padding-top:26px;gap:20px}
+  .hero h1{font-size:clamp(2.9rem,13vw,4.2rem)}
+  .hero__lead{font-size:1rem;line-height:1.55}
+  html[lang=ar] .hero h1{font-size:clamp(2.2rem,10vw,3.2rem)}
+}
