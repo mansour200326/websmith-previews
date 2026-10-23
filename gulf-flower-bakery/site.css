@@ -57,7 +57,7 @@ html:lang(ar) .mark__ar{font-size:1.2rem;color:var(--red);order:1}
   .head{gap:8px;flex-wrap:wrap;padding-bottom:0}
   .head__call{display:inline-grid;margin-inline-start:auto}
   .nav{order:9;flex:1 0 100%;margin:4px calc(-1*var(--pad)) 0;padding:0 var(--pad);gap:6px 22px;border-top:1px solid var(--line)}
-  .nav a{font-size:15px;min-height:44px;display:inline-flex;align-items:center;padding:0}
+  .nav a{font-size:15px;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:0}
   .nav a[aria-current=page]::after{inset:auto 0 0 0}
   html{scroll-padding-top:130px}
 }
@@ -278,12 +278,11 @@ html:lang(ar) .foot__name{text-transform:uppercase}
 @media (max-width:860px){.foot li a,.foot p a{padding-block:11px;min-height:44px;min-width:44px}.call,.idx__go,.more,.jump a{min-height:44px;display:inline-flex;align-items:center}.call{gap:.35em}}
 
 /* ---------- round 2 ---------- */
-html:lang(ar) .hero__name .lede-short{display:none}
 @media (max-width:959px){
   html:lang(ar) .hero__name{font-size:clamp(2.9rem,14vw,4.4rem);line-height:1.2}
   html:lang(ar) .hero__en{font-size:clamp(1.8rem,8.6vw,2.6rem)}
 }
-.stamp text.ar{font:600 10.4px "IBM Plex Sans Arabic",sans-serif;text-transform:none;letter-spacing:0}
+.stamp text.ar{font:600 9.7px "IBM Plex Sans Arabic",sans-serif;text-transform:none;letter-spacing:0}
 /* services: first-screen CTA + full-width cake strip */
 .phead__acts{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-top:24px}
 .phead p.phead__lede{max-width:30em}
@@ -313,3 +312,7 @@ html:lang(ar) .hero__name .lede-short{display:none}
 .cat--band .cat__ph img{aspect-ratio:4/5;height:auto}
 @media (max-width:959px){.cat--band{padding-inline-start:var(--pad)}.cat--band .cat__ph{margin-inline-start:calc(-1*var(--pad))}.cat--band .cat__ph img{aspect-ratio:4/3}}
 @media (min-width:960px){.cat--band{grid-template-columns:1fr 1.15fr;padding-block:0}.cat--band .cat__txt{padding-block:clamp(70px,9vw,120px)}.cat--band .cat__ph img{aspect-ratio:auto;height:100%;min-height:720px;object-fit:cover}}
+/* the kit's slow drift moved the photo 1.5% left at scale 1, uncovering a dark strip on the right edge: keep it covered */
+.hero .k-seq__frame.is-on img{transform:scale(1.05) translate3d(-1.5%,0,0)}
+.hero .k-seq__frame img{transform:scale(1.1)}
+@media (prefers-reduced-motion:reduce){.hero .k-seq__frame img,.hero .k-seq__frame.is-on img{transform:none}}

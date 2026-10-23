@@ -531,3 +531,54 @@ a[href^="tel:"],bdi{white-space:nowrap;unicode-bidi:isolate}
 .hero__pic--e picture{display:block;width:100%;height:100%}
 @media (max-width:420px){[dir=rtl] .hd__lang{display:none}}
 [dir=rtl] .hero h1 a:nth-child(3) small{margin-top:30px}
+
+/* rescue 2026-10-23: sharp listing photos lead; 2006 photos only at sizes they hold */
+/* hero: wider sharp facade tile, gold sign + tower as small prints, chandelier tile */
+.hero__pic--a{top:-12%;width:22vw;aspect-ratio:16/9}
+.hero__pic--b{top:34%;width:9.4vw;aspect-ratio:8/7;box-shadow:0 14px 30px -16px rgba(18,23,42,.5)}
+.hero__pic--c{top:60%;width:9vw;aspect-ratio:3/4}
+.hero__pic--c img{object-position:50% 20%}
+.hero__pic--e{left:46vw;width:15vw;aspect-ratio:4/3}
+[dir=rtl] .hero__pic--e{right:46vw}
+@media (max-width:900px){
+  .hero__pics{grid-template-columns:repeat(3,1fr)}
+  .hero__pic--a{grid-row:auto;grid-column:1/-1;aspect-ratio:16/9!important;height:auto}
+  .hero__pic--e{grid-column:auto;aspect-ratio:1}
+  .hero__pic--b{box-shadow:none}
+  .hero__pic--b,.hero__pic--c,.hero__pic--e{aspect-ratio:1!important}
+  .hero__pic--c figcaption{display:none}
+}
+/* the one full-bleed photo: the lounge (2400px original) */
+.band{position:relative;margin:0 0 clamp(70px,9vw,140px)}
+.band__img{overflow:hidden;aspect-ratio:21/9;background:#e3e5e9}
+.band__img img{width:100%;height:116%;object-fit:cover;object-position:50% 60%}
+.band figcaption{position:absolute;inset-inline-start:var(--pad);bottom:clamp(16px,2.4vw,34px);color:#fff;font-size:.92rem;background:rgba(18,23,42,.72);padding:10px 16px;border-radius:2px}
+.band figcaption b{font:400 1.35rem/1 var(--display);margin-inline-end:.6em}
+@media (max-width:800px){.band__img{aspect-ratio:4/3}.band__img img{object-position:38% 60%}}
+/* 2006 photos as small prints: white border, capped width */
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:min(64vw,300px)}
+.k-drag__card:nth-child(3n+1){flex-basis:min(70vw,340px)}
+.k-drag__fig{background:#fff;padding:7px;border-radius:1px;aspect-ratio:auto!important}
+.k-drag__fig img{width:100%;margin:0;aspect-ratio:4/3;height:auto}
+.k-drag__card:nth-child(3n+2) .k-drag__fig img{aspect-ratio:1}
+.cw__tower{max-width:400px}
+.cw__trio{max-width:560px}
+.cw__trio figure>div{aspect-ratio:1}
+.gas__pics{max-width:460px;justify-self:end;width:100%}
+.trips .k-zoom{max-width:330px}
+.k-gal__grid{columns:2 150px}
+@media (min-width:700px){.k-gal__grid{columns:4}}
+@media (min-width:1200px){.k-gal__grid{columns:5}}
+.pg__pics{max-width:560px;justify-self:end;width:100%}
+.ft li a,.tlink{min-width:44px;text-align:center}
+.ft li a{text-align:start}
+/* rescue: on phones the 2006 photos stay small (2-up prints, narrower tower) */
+@media (max-width:699px){
+  .trips{grid-template-columns:1fr 1fr;gap:26px 12px}
+  .trips li:nth-child(even){margin-top:40px}
+  .trips h3{font-size:1.45rem}
+  .trips p{font-size:.92rem}
+  .cw__tower{max-width:72%}
+  .gas__pics figure:first-child>div{aspect-ratio:4/3}
+}
+.ft__en{display:block;font-family:"Italiana",serif;font-size:.5em;color:var(--night-mute);margin-top:12px;unicode-bidi:isolate;text-align:right}

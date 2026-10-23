@@ -420,3 +420,61 @@ a:hover .roll>span{transform:translateY(-50%)}
 @media (min-width:960px){.story--solo .story__txt{margin-inline-start:calc(21% + 40px);max-width:760px}}
 
 .slip__foot .tlink{display:inline;padding-block:2px;background-position:0 100%}
+
+/* ===== Rescue (2026-10-23): cyan-flooded type-led hero, /01-/08 value rows on pale tint, tighter rhythm ===== */
+:root{--tint:#e4f3f9}
+/* hero flooded in the logo cyan (header stays white). Ink on #17a2cf = 5.0:1, night = 5.4:1; no white text on cyan */
+.hero--flood{background:var(--cyan);color:var(--night);position:relative}
+.hero--flood h1{color:var(--ink)}
+.hero--flood .hero__lede{color:var(--night)}
+.hero--flood .hero__lede b{color:var(--night);font-weight:700}
+.hero--flood .tlink{color:var(--night)}
+.hero--flood :focus-visible{outline-color:var(--night)}
+.hero--flood .btn--ink{background:var(--night);color:#fff}
+.hero--flood .btn--ink::before{background:var(--ink)}
+.hero--flood .btn--ink:hover,.hero--flood .btn--ink:focus-visible{box-shadow:0 0 0 2px var(--night)}
+.hero--flood .slip{border:0;border-top:6px solid var(--night);box-shadow:0 44px 70px -30px rgba(8,36,48,.55),0 3px 0 rgba(8,36,48,.08)}
+.hero--flood .stamp{color:var(--ink)}
+/* the clinic photo as a small white-bordered print, sized for its 295px original */
+.hero--flood .room figure{background:#fff;padding:8px 8px 8px;border-radius:2px;box-shadow:0 24px 40px -24px rgba(8,36,48,.6);transform:rotate(-1.6deg)}
+.hero--flood .room img{border-radius:1px}
+.hero--flood .room .label{color:var(--night)}
+.k-js .hero--flood .room figure{animation:none;transform:translateY(22px) rotate(3deg);transition:transform 1.2s var(--ease);transition-delay:calc(var(--k-rv-delay,0ms) + 120ms)}
+.k-js .hero--flood .room.is-in figure{transform:rotate(-1.6deg)}
+/* faint logo hands in the corner of the flood, multiplied so it reads as a darker cyan; clipped by .hero overflow */
+.hero--flood::after{content:"";position:absolute;left:-4%;bottom:-14%;width:min(46vw,620px);aspect-ratio:1;background:url(img/mark.webp) no-repeat center/contain;mix-blend-mode:multiply;opacity:.16;filter:grayscale(1) contrast(1.6);pointer-events:none}
+.hero--flood>.wrap{position:relative;z-index:1}
+.hero--flood{overflow:clip}
+@media (min-width:1000px){.hero--flood::after{left:auto;right:-6%;bottom:-24%}}
+.hero--flood+.gist{border-top:0}
+@media (prefers-reduced-motion:reduce){.k-js .hero--flood .room figure{animation:none!important;transform:rotate(-1.6deg)}}
+
+/* value band on the pale tint, HEVA-style slashed numerals, no icons */
+.flood--pale{background:var(--tint)}
+.flood--pale .flood__mark{filter:none;mix-blend-mode:normal;opacity:.09}
+@media (max-width:899px){.flood--pale .flood__mark{display:none}}
+.flood--pale .vlist{display:grid;grid-template-columns:minmax(0,1fr);border-top:2px solid var(--ink)}
+.flood--pale .vlist li{display:grid;grid-template-columns:3.4rem minmax(0,1fr);gap:12px;align-items:baseline;padding:18px 0;border-bottom:1px solid rgba(8,36,48,.2);font:600 1.12rem/1.35 var(--display);letter-spacing:-.01em;color:var(--ink)}
+.flood--pale .vlist__n{font:500 .98rem/1 var(--display);color:var(--deep);font-variant-numeric:tabular-nums;letter-spacing:0}
+.flood--pale .vlist li.vlist__big{font:700 1.5rem/1.2 var(--display);letter-spacing:-.025em;padding:26px 0}
+.flood--pale .vlist li.vlist__big .vlist__n{font-size:1.05rem}
+@media (min-width:900px){
+  .flood--pale .vlist{grid-template-columns:repeat(6,minmax(0,1fr));column-gap:40px}
+  .flood--pale .vlist li{grid-column:span 6;grid-template-columns:minmax(0,1fr) minmax(0,3fr);padding:16px 0}
+  .flood--pale .vlist li.vlist__big{grid-column:span 2;grid-template-columns:1fr;gap:28px;padding:28px 0 34px;align-content:start;border-bottom:2px solid var(--ink)}
+  .flood--pale .vlist li:not(.vlist__big) .vlist__t{grid-column:2}
+}
+@media (min-width:1200px){.flood--pale .vlist li:not(.vlist__big){grid-template-columns:calc((100% - 80px)/3 + 40px - 12px) minmax(0,1fr)}}
+
+/* rhythm: no dead band between the numbers and the services list */
+.nums:has(+.svc){padding-bottom:0}
+.nums+.svc{padding-top:72px}
+
+/* services mobile: the section index reads as a swipe row */
+@media (max-width:999px){
+  .toc ol{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 56px),transparent);padding-inline-end:40px}
+  .toc ol.is-end{-webkit-mask-image:none;mask-image:none}
+}
+.hero--flood .stamp svg circle:nth-of-type(1){fill:#fff}
+.hero--flood .stamp svg{filter:drop-shadow(0 6px 10px rgba(8,36,48,.18))}
+.hero--flood::after{opacity:.12}

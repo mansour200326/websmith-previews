@@ -11,7 +11,7 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Schibsted+Grotesk:wght@400;500;600&family=Amiri&display=swap">
-<link rel="preload" as="image" href="img/semiramis-front.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/hotel-facade.webp" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -53,14 +53,15 @@
   <div class="hero__stage">
   <h1>
     <a href="#hotel" data-for="p-front">Semiramis Hotel<small><i lang="ar">سميراميس</i>Forty guest rooms in Manama, 15 minutes from the airport</small></a>
-    <a href="#dining" data-for="p-neon">Le Ancian Cafe<small><i lang="ar">المقهى العتيق</i>Ground floor of the Semiramis. Lunch, dinner and shisha</small></a>
+    <a href="#dining" data-for="p-sign">Le Ancian Cafe<small><i lang="ar">المقهى العتيق</i>Ground floor of the Semiramis. Lunch, dinner and shisha</small></a>
     <a href="#causeway" data-for="p-tower">Causeway Restaurant<small>A tower in the middle of the sea, on the causeway to Saudi Arabia</small></a>
   </h1>
   <div class="hero__pics">
-    <figure class="hero__pic hero__pic--a" id="p-front" data-drift=".05"><img src="img/semiramis-front.webp" alt="The entrance of the Semiramis Hotel at night, with its red sign in English and Arabic" width="940" height="808" fetchpriority="high"><figcaption>Semiramis Hotel, Manama</figcaption></figure>
-    <figure class="hero__pic hero__pic--b" id="p-neon" data-drift=".12"><img src="img/le-neon.webp" alt="The neon sign of Le Ancian Cafe, a shisha in red and green" width="896" height="596"></figure>
-    <figure class="hero__pic hero__pic--c" id="p-tower" data-drift=".08"><img src="img/tower-top.webp" alt="The Causeway restaurant tower against a clear sky" width="956" height="600"><figcaption>The causeway tower</figcaption></figure>
-    <figure class="hero__pic hero__pic--e" id="p-boat" data-drift=".1"><picture><source media="(max-width:900px)" srcset="img/le-street.webp"><img src="img/tours-boat.webp" alt="From the group: a Gulf Tours boat at sea, or on phones the Le Ancian Cafe street front at night" width="940" height="600"></picture></figure>
+    <!-- Hotel photos marked hotel-*: the property's current listing photos (Hotelbeds/GIATA 907755, "OYO 112 Semiramis Hotel"), see NOTES.md. Older photos are from their own 2006 site. -->
+    <figure class="hero__pic hero__pic--a" id="p-front" data-drift=".05"><img src="img/hotel-facade.webp" alt="The front of the Semiramis Hotel, its name in green letters in English and Arabic along the roof" width="1600" height="900" fetchpriority="high"><figcaption>Semiramis Hotel, Manama</figcaption></figure>
+    <figure class="hero__pic hero__pic--b" id="p-sign" data-drift=".12"><img src="img/le-sign.webp" alt="The gold sign over the door of Le Ancian Cafe, in English and Arabic" width="888" height="784"></figure>
+    <figure class="hero__pic hero__pic--c" id="p-tower" data-drift=".08"><img src="img/tower-top.webp" alt="The Causeway restaurant tower against a clear sky" width="944" height="592"><figcaption>The causeway tower</figcaption></figure>
+    <figure class="hero__pic hero__pic--e" id="p-recep" data-drift=".1"><img src="img/hotel-reception.webp" alt="Brass chandeliers over the reception desk of the Semiramis Hotel" width="1100" height="826"></figure>
   </div>
   </div>
   <div class="hero__foot">
@@ -78,15 +79,17 @@
     </div>
   </div>
   <ol class="idx" data-reveal-stagger>
-    <li data-reveal><a href="#hotel" data-img="img/semiramis-front-2.webp"><img class="idx__th" src="img/semiramis-front-2.webp" alt="" loading="lazy" width="956" height="600"><span class="idx__n">01</span><span class="idx__t">Semiramis Hotel<span class="ar" lang="ar">سميراميس</span></span><span class="idx__w"><b>Manama</b>15 minutes from Bahrain International Airport</span><span class="idx__d">40 guest rooms, eight outlets, the 24-hour Al Basha Coffee Shop and the Al Nile night club</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#dining" data-img="img/le-sign.webp"><img class="idx__th" src="img/le-sign.webp" alt="" loading="lazy" width="896" height="796"><span class="idx__n">02</span><span class="idx__t">Le Ancian Cafe<span class="ar" lang="ar">المقهى العتيق</span></span><span class="idx__w"><b>Ground floor, Semiramis Hotel</b>Tel 17 311622</span><span class="idx__d">Lunch and dinner for over a hundred people, with a shisha section</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#causeway" data-img="img/causeway-diners.webp"><img class="idx__th" src="img/causeway-diners.webp" alt="" loading="lazy" width="776" height="484"><span class="idx__n">03</span><span class="idx__t">Causeway Restaurant</span><span class="idx__w"><b>King Fahad Causeway</b>Between Bahrain and Saudi Arabia</span><span class="idx__d">A first-class restaurant in the tower, in the middle of the sea</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#tours" data-img="img/tours-coach.webp"><img class="idx__th" src="img/tours-coach.webp" alt="" loading="lazy" width="896" height="512"><span class="idx__n">04</span><span class="idx__t">Gulf Tours<span class="ar" lang="ar">الخليج للسياحة</span></span><span class="idx__w"><b>Two offices</b>Semiramis Hotel complex, and the jetty by Funland Centre</span><span class="idx__d">Land tours, sea trips to Jeradah and the Hawar Islands, parties and weddings</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#gas" data-img="img/gas-truck.webp"><img class="idx__th" src="img/gas-truck.webp" alt="" loading="lazy" width="900" height="600"><span class="idx__n">05</span><span class="idx__t">Gulf Gas<span class="ar" lang="ar">غاز الخليج</span></span><span class="idx__w"><b>Almost every part of Bahrain</b>Our own fleet of vehicles</span><span class="idx__d">LPG cylinders delivered within a few hours of your call; cooking ranges sold and repaired</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#hotel" data-img="img/hotel-entrance.webp"><img class="idx__th" src="img/hotel-entrance.webp" alt="" loading="lazy" width="1100" height="880"><span class="idx__n">01</span><span class="idx__t">Semiramis Hotel<span class="ar" lang="ar">سميراميس</span></span><span class="idx__w"><b>Manama</b>15 minutes from Bahrain International Airport</span><span class="idx__d">40 guest rooms, eight outlets, the 24-hour Al Basha Coffee Shop and the Al Nile night club</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#dining" data-img="img/le-sign.webp"><img class="idx__th" src="img/le-sign.webp" alt="" loading="lazy" width="888" height="784"><span class="idx__n">02</span><span class="idx__t">Le Ancian Cafe<span class="ar" lang="ar">المقهى العتيق</span></span><span class="idx__w"><b>Ground floor, Semiramis Hotel</b>Tel 17 311622</span><span class="idx__d">Lunch and dinner for over a hundred people, with a shisha section</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#causeway" data-img="img/causeway-diners.webp"><img class="idx__th" src="img/causeway-diners.webp" alt="" loading="lazy" width="768" height="472"><span class="idx__n">03</span><span class="idx__t">Causeway Restaurant</span><span class="idx__w"><b>King Fahad Causeway</b>Between Bahrain and Saudi Arabia</span><span class="idx__d">A first-class restaurant in the tower, in the middle of the sea</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#tours" data-img="img/tours-coach.webp"><img class="idx__th" src="img/tours-coach.webp" alt="" loading="lazy" width="888" height="584"><span class="idx__n">04</span><span class="idx__t">Gulf Tours<span class="ar" lang="ar">الخليج للسياحة</span></span><span class="idx__w"><b>Two offices</b>Semiramis Hotel complex, and the jetty by Funland Centre</span><span class="idx__d">Land tours, sea trips to Jeradah and the Hawar Islands, parties and weddings</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#gas" data-img="img/gas-truck.webp"><img class="idx__th" src="img/gas-truck.webp" alt="" loading="lazy" width="888" height="584"><span class="idx__n">05</span><span class="idx__t">Gulf Gas<span class="ar" lang="ar">غاز الخليج</span></span><span class="idx__w"><b>Almost every part of Bahrain</b>Our own fleet of vehicles</span><span class="idx__d">LPG cylinders delivered within a few hours of your call; cooking ranges sold and repaired</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
   </ol>
 </section>
 
-<!-- SEMIRAMIS HOTEL -->
+<!-- SEMIRAMIS HOTEL: the one full-bleed photo (2880px listing original, so it holds up) -->
+<figure class="band" aria-labelledby="band-cap"><div class="band__img" data-reveal="clip"><img src="img/hotel-lounge.webp" alt="The ground-floor lobby of the Semiramis Hotel, the lounge and reception under a brass chandelier" loading="lazy" width="2400" height="1026" data-speed="-0.08"></div><figcaption id="band-cap"><b>The lobby</b> Lounge and reception, ground floor</figcaption></figure>
+
 <section class="sec wrap" id="hotel" aria-labelledby="hotel-h" style="padding-top:0">
   <div class="split">
     <p class="label"><b>01 · Semiramis Hotel</b><span class="ar" lang="ar">فندق سميراميس</span></p>
@@ -103,10 +106,10 @@
     </div>
   </div>
   <div class="hotel__row">
-    <figure><div data-reveal="clip"><img src="img/semiramis-front-2.webp" alt="Glass doors and marble lobby of the Semiramis Hotel" loading="lazy" width="956" height="600" data-speed="-0.06"></div><figcaption>The front door</figcaption></figure>
-    <figure><div data-reveal="clip"><img src="img/reception.webp" alt="Two receptionists behind the curved marble front desk" loading="lazy" width="896" height="808"></div><figcaption>Reception</figcaption></figure>
-    <figure><div data-reveal="clip"><img src="img/room-single.webp" alt="A single room with a blue bedspread and reading lamp" loading="lazy" width="776" height="484"></div><figcaption>Single room</figcaption></figure>
-    <figure><div data-reveal="clip"><img src="img/room-twin.webp" alt="A twin room with two beds and a red armchair" loading="lazy" width="776" height="484"></div><figcaption>Twin room</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="img/hotel-entrance.webp" alt="The front of the Semiramis Hotel with the entrance under its name sign" loading="lazy" width="1100" height="880" data-speed="-0.06"></div><figcaption>The front</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="img/hotel-reception.webp" alt="The reception desk under brass chandeliers" loading="lazy" width="1100" height="826"></div><figcaption>Reception</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="img/hotel-room.webp" alt="A guest room with a dark wood headboard, wardrobe and TV" loading="lazy" width="1200" height="960"></div><figcaption>A guest room</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="img/hotel-twin.webp" alt="A twin room with two beds and a bedside lamp" loading="lazy" width="1200" height="960"></div><figcaption>A twin room</figcaption></figure>
   </div>
   <!-- kit 06: real numbers from their Semiramis page -->
   <div class="k-stats" aria-label="The hotel in numbers">
@@ -159,14 +162,14 @@
       <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous photos">←</button><button type="button" data-k-drag-next aria-label="Next photos">→</button></div>
     </div>
     <div class="k-drag__track" tabindex="0" role="region" aria-label="Photos of Le Ancian Cafe and the hotel's coffee shop and night club, scroll sideways">
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-sign.webp" alt="The gold entrance sign of Le Ancian Cafe in English and Arabic" loading="lazy" draggable="false" width="896" height="796"></div><div class="k-drag__meta"><h3>The front</h3><span>Le Ancian Cafe</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-lounge.webp" alt="Cane armchairs and a low table under palms" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>The lounge</h3><span>Le Ancian Cafe</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-counter.webp" alt="Staff in waistcoats behind the cafe counter" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>The counter</h3><span>Le Ancian Cafe</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-majlis.webp" alt="Low seating with cushions in an arched alcove" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>Low seating</h3><span>Le Ancian Cafe</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-street.webp" alt="The copper-coloured street front of the cafe at night" loading="lazy" draggable="false" width="940" height="596"></div><div class="k-drag__meta"><h3>At night</h3><span>Le Ancian Cafe</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/coffee-shop.webp" alt="Tables with blue cloths in the hotel coffee shop" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>Coffee shop</h3><span>Semiramis Hotel</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/night-club.webp" alt="The Galaxy Band on stage with tables in front" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>Galaxy Band</h3><span>Semiramis Hotel</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/dining-hall.webp" alt="The Al Nile night club with tables laid in white" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>Al Nile Night Club</h3><span>Semiramis Hotel</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-sign.webp" alt="The gold entrance sign of Le Ancian Cafe in English and Arabic" loading="lazy" draggable="false" width="888" height="784"></div><div class="k-drag__meta"><h3>The front</h3><span>Le Ancian Cafe</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-lounge.webp" alt="Cane armchairs and a low table under palms" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>The lounge</h3><span>Le Ancian Cafe</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-counter.webp" alt="Staff in waistcoats behind the cafe counter" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>The counter</h3><span>Le Ancian Cafe</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-majlis.webp" alt="Low seating with cushions in an arched alcove" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>Low seating</h3><span>Le Ancian Cafe</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/le-street.webp" alt="The copper-coloured street front of the cafe at night" loading="lazy" draggable="false" width="928" height="584"></div><div class="k-drag__meta"><h3>At night</h3><span>Le Ancian Cafe</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/coffee-shop.webp" alt="Tables with blue cloths in the hotel coffee shop" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>Coffee shop</h3><span>Semiramis Hotel</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/night-club.webp" alt="The Galaxy Band on stage with tables in front" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>Galaxy Band</h3><span>Semiramis Hotel</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="img/dining-hall.webp" alt="The Al Nile night club with tables laid in white" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>Al Nile Night Club</h3><span>Semiramis Hotel</span></div></div>
     </div>
     <div class="k-drag__bar" aria-hidden="true"><i></i></div>
   </div>
@@ -175,16 +178,16 @@
 <!-- CAUSEWAY -->
 <section class="sec wrap" id="causeway" aria-labelledby="cw-h">
   <div class="cw">
-    <figure class="cw__tower" data-reveal="clip"><img src="img/tower-top.webp" alt="The round restaurant at the top of the causeway tower" loading="lazy" width="956" height="600" data-speed="-0.1"><figcaption>The tower on the causeway</figcaption></figure>
+    <figure class="cw__tower" data-reveal="clip"><img src="img/tower-top.webp" alt="The round restaurant at the top of the causeway tower" loading="lazy" width="944" height="592" data-speed="-0.1"><figcaption>The tower on the causeway</figcaption></figure>
     <div>
       <p class="label"><b>03 · Causeway Restaurant</b><span>King Fahad Causeway</span></p>
       <h2 class="statement" id="cw-h" style="margin-top:22px" data-reveal="lines">A restaurant in the middle of the sea.</h2>
       <p class="body" data-reveal data-reveal-delay="150">We run the first-class restaurant on the causeway that connects Bahrain and Saudi Arabia. Thousands of visitors come every year, most of all in the festival seasons. It is quiet and away from town, so it also works well for business meetings.</p>
       <p class="cw__view" data-reveal>From the top of the tower you can see the Arabian Sea and the border of Bahrain and Saudi Arabia.</p>
       <div class="cw__trio" data-reveal-stagger>
-        <figure data-reveal><div class="k-zoom"><img src="img/causeway-diners.webp" alt="A family at lunch by the tower's sloping windows" loading="lazy" width="776" height="484"></div><figcaption>Lunch by the windows</figcaption></figure>
-        <figure data-reveal><div class="k-zoom"><img src="img/causeway-hall.webp" alt="Tables laid under arched windows" loading="lazy" width="776" height="484"></div><figcaption>The dining room</figcaption></figure>
-        <figure data-reveal><div class="k-zoom"><img src="img/causeway-window.webp" alt="Guests sitting at the window looking out to sea" loading="lazy" width="940" height="596"></div><figcaption>The view</figcaption></figure>
+        <figure data-reveal><div class="k-zoom"><img src="img/causeway-diners.webp" alt="A family at lunch by the tower's sloping windows" loading="lazy" width="768" height="472"></div><figcaption>Lunch by the windows</figcaption></figure>
+        <figure data-reveal><div class="k-zoom"><img src="img/causeway-hall.webp" alt="Tables laid under arched windows" loading="lazy" width="768" height="472"></div><figcaption>The dining room</figcaption></figure>
+        <figure data-reveal><div class="k-zoom"><img src="img/causeway-window.webp" alt="Guests sitting at the window looking out to sea" loading="lazy" width="928" height="568"></div><figcaption>The view</figcaption></figure>
       </div>
     </div>
   </div>
@@ -200,10 +203,10 @@
     </div>
   </div>
   <ol class="trips" data-reveal-stagger>
-    <li data-reveal><div class="k-zoom"><img src="img/tours-coach.webp" alt="A Gulf Tours coach" loading="lazy" width="896" height="512"></div><span class="n">01</span><h3>Land Tour</h3><p>Luxury coaches to the archaeological sites of the Kingdom.</p></li>
-    <li data-reveal><div class="k-zoom"><img src="img/tours-boat.webp" alt="A Gulf Tours boat cruising off the coast" loading="lazy" width="940" height="600"></div><span class="n">02</span><h3>Sea Trips</h3><p>Cruise around the island on one of our boats, or out to Jeradah and the Hawar Islands.</p></li>
-    <li data-reveal><div class="k-zoom"><img src="img/causeway-flowers.webp" alt="A waiter and flowers in the causeway restaurant" loading="lazy" width="776" height="484"></div><span class="n">03</span><h3>Causeway lunch</h3><p>A snack or the buffet lunch at the King Fahad Causeway Restaurant, with a view of one of the longest sea bridges in the world.</p></li>
-    <li data-reveal><div class="k-zoom"><img src="img/tours-boarding.webp" alt="A group gathering on the quay to board" loading="lazy" width="776" height="484"></div><span class="n">04</span><h3>Parties</h3><p>Birthdays, weddings and other special occasions, arranged by us.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="img/tours-coach.webp" alt="A Gulf Tours coach" loading="lazy" width="888" height="584"></div><span class="n">01</span><h3>Land Tour</h3><p>Luxury coaches to the archaeological sites of the Kingdom.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="img/tours-boat.webp" alt="A Gulf Tours boat cruising off the coast" loading="lazy" width="928" height="584"></div><span class="n">02</span><h3>Sea Trips</h3><p>Cruise around the island on one of our boats, or out to Jeradah and the Hawar Islands.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="img/causeway-flowers.webp" alt="A waiter and flowers in the causeway restaurant" loading="lazy" width="768" height="472"></div><span class="n">03</span><h3>Causeway lunch</h3><p>A snack or the buffet lunch at the King Fahad Causeway Restaurant, with a view of one of the longest sea bridges in the world.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="img/tours-boarding.webp" alt="A group gathering on the quay to board" loading="lazy" width="768" height="472"></div><span class="n">04</span><h3>Parties</h3><p>Birthdays, weddings and other special occasions, arranged by us.</p></li>
   </ol>
   <div class="where" data-reveal>
     <div><b>Main office</b><span>Semiramis Hotel complex, Manama</span></div>
@@ -226,9 +229,9 @@
       <div class="act"><a class="btn" href="tel:+97317291444" data-k-magnetic="0.25">Order gas · 17 291444 <span class="k-arrow">→</span></a></div>
     </div>
     <div class="gas__pics">
-      <figure><div data-reveal="clip"><img src="img/gas-truck.webp" alt="A Gulf Gas delivery truck marked Quick Delivery in English and Arabic" loading="lazy" width="900" height="600"></div><figcaption>"Quick delivery" on the side of the truck</figcaption></figure>
-      <figure><div data-reveal="clip"><img src="img/gas-cylinders.webp" alt="Pink Gulf Gas LPG cylinders" loading="lazy" width="948" height="596"></div><figcaption>Gulf Gas cylinders</figcaption></figure>
-      <figure><div data-reveal="clip"><img src="img/gas-depot.webp" alt="The Gulf Gas depot with trucks parked outside" loading="lazy" width="956" height="596"></div><figcaption>The depot</figcaption></figure>
+      <figure><div data-reveal="clip"><img src="img/gas-truck.webp" alt="A Gulf Gas delivery truck marked Quick Delivery in English and Arabic" loading="lazy" width="888" height="584"></div><figcaption>"Quick delivery" on the side of the truck</figcaption></figure>
+      <figure><div data-reveal="clip"><img src="img/gas-cylinders.webp" alt="Pink Gulf Gas LPG cylinders" loading="lazy" width="936" height="584"></div><figcaption>Gulf Gas cylinders</figcaption></figure>
+      <figure><div data-reveal="clip"><img src="img/gas-depot.webp" alt="The Gulf Gas depot with trucks parked outside" loading="lazy" width="944" height="584"></div><figcaption>The depot</figcaption></figure>
     </div>
   </div>
 </section>

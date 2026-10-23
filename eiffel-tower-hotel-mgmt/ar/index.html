@@ -11,7 +11,7 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Alexandria:wght@300;400;500&family=Italiana&display=swap">
-<link rel="preload" as="image" href="../img/semiramis-front.webp" fetchpriority="high">
+<link rel="preload" as="image" href="../img/hotel-facade.webp" fetchpriority="high">
 <link rel="stylesheet" href="../site.css">
 </head>
 <body>
@@ -52,14 +52,15 @@
   <div class="hero__stage">
   <h1>
     <a href="#hotel" data-for="p-front">فندق سميراميس<small><i lang="en">Semiramis Hotel</i>أربعون غرفة في المنامة، على بعد ربع ساعة من المطار</small></a>
-    <a href="#dining" data-for="p-neon">المقهى العتيق<small><i lang="en">Le Ancian Cafe</i>في الطابق الأرضي من سميراميس. غداء وعشاء وشيشة</small></a>
+    <a href="#dining" data-for="p-sign">المقهى العتيق<small><i lang="en">Le Ancian Cafe</i>في الطابق الأرضي من سميراميس. غداء وعشاء وشيشة</small></a>
     <a href="#causeway" data-for="p-tower">مطعم الجسر<small>برج في وسط البحر، على الجسر بين البحرين والسعودية</small></a>
   </h1>
   <div class="hero__pics">
-    <figure class="hero__pic hero__pic--a" id="p-front" data-drift=".05"><img src="../img/semiramis-front.webp" alt="مدخل فندق سميراميس ليلاً ولافتته الحمراء بالعربية والإنجليزية" width="940" height="808" fetchpriority="high"><figcaption>فندق سميراميس، المنامة</figcaption></figure>
-    <figure class="hero__pic hero__pic--b" id="p-neon" data-drift=".12"><img src="../img/le-neon.webp" alt="لافتة النيون للمقهى العتيق على شكل شيشة" width="896" height="596"></figure>
-    <figure class="hero__pic hero__pic--c" id="p-tower" data-drift=".08"><img src="../img/tower-top.webp" alt="برج مطعم الجسر في سماء صافية" width="956" height="600"><figcaption>برج الجسر</figcaption></figure>
-    <figure class="hero__pic hero__pic--e" id="p-boat" data-drift=".1"><picture><source media="(max-width:900px)" srcset="../img/le-street.webp"><img src="../img/tours-boat.webp" alt="من المجموعة: قارب الخليج للسياحة، أو واجهة المقهى العتيق ليلاً على الهاتف" width="940" height="600"></picture></figure>
+    <!-- صور hotel-*: صور العقار الحالية من قوائم الحجز (Hotelbeds/GIATA 907755)، انظر NOTES.md -->
+    <figure class="hero__pic hero__pic--a" id="p-front" data-drift=".05"><img src="../img/hotel-facade.webp" alt="واجهة فندق سميراميس واسمه بأحرف خضراء بالعربية والإنجليزية على السطح" width="1600" height="900" fetchpriority="high"><figcaption>فندق سميراميس، المنامة</figcaption></figure>
+    <figure class="hero__pic hero__pic--b" id="p-sign" data-drift=".12"><img src="../img/le-sign.webp" alt="اللافتة الذهبية فوق باب المقهى العتيق بالعربية والإنجليزية" width="888" height="784"></figure>
+    <figure class="hero__pic hero__pic--c" id="p-tower" data-drift=".08"><img src="../img/tower-top.webp" alt="برج مطعم الجسر في سماء صافية" width="944" height="592"><figcaption>برج الجسر</figcaption></figure>
+    <figure class="hero__pic hero__pic--e" id="p-recep" data-drift=".1"><img src="../img/hotel-reception.webp" alt="ثريات نحاسية فوق مكتب الاستقبال في فندق سميراميس" width="1100" height="826"></figure>
   </div>
   </div>
   <div class="hero__foot">
@@ -74,13 +75,15 @@
     <div><h2 class="statement" id="group-h" data-reveal="lines">فندق، ومطعمان، وشركة سياحة، وتوزيع غاز، تحت اسم واحد في البحرين.</h2></div>
   </div>
   <ol class="idx" data-reveal-stagger>
-    <li data-reveal><a href="#hotel" data-img="../img/semiramis-front-2.webp"><img class="idx__th" src="../img/semiramis-front-2.webp" alt="" loading="lazy" width="956" height="600"><span class="idx__n">01</span><span class="idx__t">فندق سميراميس</span><span class="idx__w"><b>المنامة</b>ربع ساعة من مطار البحرين الدولي</span><span class="idx__d">40 غرفة، وثمانية منافذ، منها مقهى الباشا على مدار الساعة وملهى النيل</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#dining" data-img="../img/le-sign.webp"><img class="idx__th" src="../img/le-sign.webp" alt="" loading="lazy" width="896" height="796"><span class="idx__n">02</span><span class="idx__t">المقهى العتيق</span><span class="idx__w"><b>الطابق الأرضي، فندق سميراميس</b>هاتف <bdi>17 311622</bdi></span><span class="idx__d">غداء وعشاء لأكثر من مئة شخص، مع قسم للشيشة</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#causeway" data-img="../img/causeway-diners.webp"><img class="idx__th" src="../img/causeway-diners.webp" alt="" loading="lazy" width="776" height="484"><span class="idx__n">03</span><span class="idx__t">مطعم الجسر</span><span class="idx__w"><b>جسر الملك فهد</b>بين البحرين والسعودية</span><span class="idx__d">مطعم درجة أولى في البرج، في وسط البحر</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#tours" data-img="../img/tours-coach.webp"><img class="idx__th" src="../img/tours-coach.webp" alt="" loading="lazy" width="896" height="512"><span class="idx__n">04</span><span class="idx__t">الخليج للسياحة</span><span class="idx__w"><b>مكتبان</b>مجمع فندق سميراميس، والمرسى بجانب فن لاند</span><span class="idx__d">رحلات برية، ورحلات بحرية إلى جرادة وجزر حوار، وحفلات وأعراس</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
-    <li data-reveal><a href="#gas" data-img="../img/gas-truck.webp"><img class="idx__th" src="../img/gas-truck.webp" alt="" loading="lazy" width="900" height="600"><span class="idx__n">05</span><span class="idx__t">غاز الخليج</span><span class="idx__w"><b>أغلب مناطق البحرين</b>بأسطول سياراتنا</span><span class="idx__d">توصيل أسطوانات الغاز خلال ساعات من اتصالك، وبيع وصيانة الطباخات</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#hotel" data-img="../img/hotel-entrance.webp"><img class="idx__th" src="../img/hotel-entrance.webp" alt="" loading="lazy" width="1100" height="880"><span class="idx__n">01</span><span class="idx__t">فندق سميراميس</span><span class="idx__w"><b>المنامة</b>ربع ساعة من مطار البحرين الدولي</span><span class="idx__d">40 غرفة، وثمانية منافذ، منها مقهى الباشا على مدار الساعة وملهى النيل</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#dining" data-img="../img/le-sign.webp"><img class="idx__th" src="../img/le-sign.webp" alt="" loading="lazy" width="888" height="784"><span class="idx__n">02</span><span class="idx__t">المقهى العتيق</span><span class="idx__w"><b>الطابق الأرضي، فندق سميراميس</b>هاتف <bdi>17 311622</bdi></span><span class="idx__d">غداء وعشاء لأكثر من مئة شخص، مع قسم للشيشة</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#causeway" data-img="../img/causeway-diners.webp"><img class="idx__th" src="../img/causeway-diners.webp" alt="" loading="lazy" width="768" height="472"><span class="idx__n">03</span><span class="idx__t">مطعم الجسر</span><span class="idx__w"><b>جسر الملك فهد</b>بين البحرين والسعودية</span><span class="idx__d">مطعم درجة أولى في البرج، في وسط البحر</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#tours" data-img="../img/tours-coach.webp"><img class="idx__th" src="../img/tours-coach.webp" alt="" loading="lazy" width="888" height="584"><span class="idx__n">04</span><span class="idx__t">الخليج للسياحة</span><span class="idx__w"><b>مكتبان</b>مجمع فندق سميراميس، والمرسى بجانب فن لاند</span><span class="idx__d">رحلات برية، ورحلات بحرية إلى جرادة وجزر حوار، وحفلات وأعراس</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
+    <li data-reveal><a href="#gas" data-img="../img/gas-truck.webp"><img class="idx__th" src="../img/gas-truck.webp" alt="" loading="lazy" width="888" height="584"><span class="idx__n">05</span><span class="idx__t">غاز الخليج</span><span class="idx__w"><b>أغلب مناطق البحرين</b>بأسطول سياراتنا</span><span class="idx__d">توصيل أسطوانات الغاز خلال ساعات من اتصالك، وبيع وصيانة الطباخات</span><span class="idx__go k-arrow" aria-hidden="true">→</span></a></li>
   </ol>
 </section>
+
+<figure class="band" aria-labelledby="band-cap"><div class="band__img" data-reveal="clip"><img src="../img/hotel-lounge.webp" alt="بهو فندق سميراميس في الطابق الأرضي، الصالة والاستقبال تحت ثريا نحاسية" loading="lazy" width="2400" height="1026" data-speed="-0.08"></div><figcaption id="band-cap"><b>البهو</b> الصالة والاستقبال في الطابق الأرضي</figcaption></figure>
 
 <section class="sec wrap" id="hotel" aria-labelledby="hotel-h" style="padding-top:0">
   <div class="split">
@@ -96,10 +99,10 @@
     </div>
   </div>
   <div class="hotel__row">
-    <figure><div data-reveal="clip"><img src="../img/semiramis-front-2.webp" alt="أبواب فندق سميراميس الزجاجية وبهو الرخام" loading="lazy" width="956" height="600"></div><figcaption>المدخل</figcaption></figure>
-    <figure><div data-reveal="clip"><img src="../img/reception.webp" alt="موظفتا الاستقبال خلف مكتب الرخام" loading="lazy" width="896" height="808"></div><figcaption>الاستقبال</figcaption></figure>
-    <figure><div data-reveal="clip"><img src="../img/room-single.webp" alt="غرفة مفردة بغطاء سرير أزرق" loading="lazy" width="776" height="484"></div><figcaption>غرفة مفردة</figcaption></figure>
-    <figure><div data-reveal="clip"><img src="../img/room-twin.webp" alt="غرفة بسريرين وكرسي أحمر" loading="lazy" width="776" height="484"></div><figcaption>غرفة مزدوجة</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="../img/hotel-entrance.webp" alt="واجهة فندق سميراميس والمدخل تحت لافتة الاسم" loading="lazy" width="1100" height="880" data-speed="-0.06"></div><figcaption>الواجهة</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="../img/hotel-reception.webp" alt="مكتب الاستقبال تحت الثريات النحاسية" loading="lazy" width="1100" height="826"></div><figcaption>الاستقبال</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="../img/hotel-room.webp" alt="غرفة نزلاء بلوح سرير خشبي داكن وخزانة وتلفزيون" loading="lazy" width="1200" height="960"></div><figcaption>غرفة نزلاء</figcaption></figure>
+    <figure><div data-reveal="clip"><img src="../img/hotel-twin.webp" alt="غرفة بسريرين ومصباح بينهما" loading="lazy" width="1200" height="960"></div><figcaption>غرفة بسريرين</figcaption></figure>
   </div>
   <div class="k-stats" aria-label="الفندق بالأرقام">
     <div class="k-stats__row"><span class="k-stats__num"><span data-k-count="40">40</span></span><p class="k-stats__txt"><b>غرفة،</b> مفردة ومزدوجة، وفي كل منها تلفزيون فضائي.</p></div>
@@ -138,14 +141,14 @@
       <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="الصور السابقة">←</button><button type="button" data-k-drag-next aria-label="الصور التالية">→</button></div>
     </div>
     <div class="k-drag__track" tabindex="0" role="region" aria-label="صور المقهى العتيق ومقهى الفندق والملهى، تمرير أفقي">
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-sign.webp" alt="لافتة المقهى العتيق الذهبية" loading="lazy" draggable="false" width="896" height="796"></div><div class="k-drag__meta"><h3>الواجهة</h3><span>المقهى العتيق</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-lounge.webp" alt="كراسي خيزران وطاولة منخفضة" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>الجلسة</h3><span>المقهى العتيق</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-counter.webp" alt="الموظفون خلف الكاونتر" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>الكاونتر</h3><span>المقهى العتيق</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-majlis.webp" alt="جلسة أرضية بالمساند" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>جلسة أرضية</h3><span>المقهى العتيق</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-street.webp" alt="واجهة المقهى ليلاً" loading="lazy" draggable="false" width="940" height="596"></div><div class="k-drag__meta"><h3>في الليل</h3><span>المقهى العتيق</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/coffee-shop.webp" alt="طاولات بمفارش زرقاء في مقهى الفندق" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>المقهى</h3><span>فندق سميراميس</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/night-club.webp" alt="فرقة جالكسي على المسرح" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>فرقة جالكسي</h3><span>فندق سميراميس</span></div></div>
-      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/dining-hall.webp" alt="ملهى النيل بطاولات مفروشة بالأبيض" loading="lazy" draggable="false" width="776" height="484"></div><div class="k-drag__meta"><h3>ملهى النيل</h3><span>فندق سميراميس</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-sign.webp" alt="لافتة المقهى العتيق الذهبية" loading="lazy" draggable="false" width="888" height="784"></div><div class="k-drag__meta"><h3>الواجهة</h3><span>المقهى العتيق</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-lounge.webp" alt="كراسي خيزران وطاولة منخفضة" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>الجلسة</h3><span>المقهى العتيق</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-counter.webp" alt="الموظفون خلف الكاونتر" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>الكاونتر</h3><span>المقهى العتيق</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-majlis.webp" alt="جلسة أرضية بالمساند" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>جلسة أرضية</h3><span>المقهى العتيق</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/le-street.webp" alt="واجهة المقهى ليلاً" loading="lazy" draggable="false" width="928" height="584"></div><div class="k-drag__meta"><h3>في الليل</h3><span>المقهى العتيق</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/coffee-shop.webp" alt="طاولات بمفارش زرقاء في مقهى الفندق" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>المقهى</h3><span>فندق سميراميس</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/night-club.webp" alt="فرقة جالكسي على المسرح" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>فرقة جالكسي</h3><span>فندق سميراميس</span></div></div>
+      <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/dining-hall.webp" alt="ملهى النيل بطاولات مفروشة بالأبيض" loading="lazy" draggable="false" width="768" height="472"></div><div class="k-drag__meta"><h3>ملهى النيل</h3><span>فندق سميراميس</span></div></div>
     </div>
     <div class="k-drag__bar" aria-hidden="true"><i></i></div>
   </div>
@@ -153,16 +156,16 @@
 
 <section class="sec wrap" id="causeway" aria-labelledby="cw-h">
   <div class="cw">
-    <figure class="cw__tower" data-reveal="clip"><img src="../img/tower-top.webp" alt="المطعم الدائري في أعلى برج الجسر" loading="lazy" width="956" height="600" data-speed="-0.1"><figcaption>البرج على الجسر</figcaption></figure>
+    <figure class="cw__tower" data-reveal="clip"><img src="../img/tower-top.webp" alt="المطعم الدائري في أعلى برج الجسر" loading="lazy" width="944" height="592" data-speed="-0.1"><figcaption>البرج على الجسر</figcaption></figure>
     <div>
       <p class="label"><b>03 · مطعم الجسر</b><span>جسر الملك فهد</span></p>
       <h2 class="statement" id="cw-h" style="margin-top:22px" data-reveal="lines">مطعم في وسط البحر.</h2>
       <p class="body" data-reveal data-reveal-delay="150">نحن ندير المطعم الراقي على الجسر الذي يربط البحرين بالسعودية. يزوره آلاف السياح كل سنة، وأكثرهم في مواسم الأعياد. المكان هادئ وبعيد عن زحمة المدينة، فهو مناسب أيضاً لاجتماعات العمل.</p>
       <p class="cw__view" data-reveal>من أعلى البرج ترى الخليج العربي والحدود بين البحرين والسعودية.</p>
       <div class="cw__trio" data-reveal-stagger>
-        <figure data-reveal><div class="k-zoom"><img src="../img/causeway-diners.webp" alt="عائلة على الغداء بجانب نوافذ البرج" loading="lazy" width="776" height="484"></div><figcaption>غداء عند النوافذ</figcaption></figure>
-        <figure data-reveal><div class="k-zoom"><img src="../img/causeway-hall.webp" alt="طاولات تحت النوافذ المقوسة" loading="lazy" width="776" height="484"></div><figcaption>صالة الطعام</figcaption></figure>
-        <figure data-reveal><div class="k-zoom"><img src="../img/causeway-window.webp" alt="ضيوف يجلسون عند النافذة المطلة على البحر" loading="lazy" width="940" height="596"></div><figcaption>الإطلالة</figcaption></figure>
+        <figure data-reveal><div class="k-zoom"><img src="../img/causeway-diners.webp" alt="عائلة على الغداء بجانب نوافذ البرج" loading="lazy" width="768" height="472"></div><figcaption>غداء عند النوافذ</figcaption></figure>
+        <figure data-reveal><div class="k-zoom"><img src="../img/causeway-hall.webp" alt="طاولات تحت النوافذ المقوسة" loading="lazy" width="768" height="472"></div><figcaption>صالة الطعام</figcaption></figure>
+        <figure data-reveal><div class="k-zoom"><img src="../img/causeway-window.webp" alt="ضيوف يجلسون عند النافذة المطلة على البحر" loading="lazy" width="928" height="568"></div><figcaption>الإطلالة</figcaption></figure>
       </div>
     </div>
   </div>
@@ -177,10 +180,10 @@
     </div>
   </div>
   <ol class="trips" data-reveal-stagger>
-    <li data-reveal><div class="k-zoom"><img src="../img/tours-coach.webp" alt="حافلة الخليج للسياحة" loading="lazy" width="896" height="512"></div><span class="n">01</span><h3>الرحلة البرية</h3><p>حافلات فاخرة إلى المواقع الأثرية في المملكة.</p></li>
-    <li data-reveal><div class="k-zoom"><img src="../img/tours-boat.webp" alt="قارب في البحر" loading="lazy" width="940" height="600"></div><span class="n">02</span><h3>الرحلات البحرية</h3><p>جولة حول الجزيرة على أحد قواربنا، أو إلى جرادة وجزر حوار.</p></li>
-    <li data-reveal><div class="k-zoom"><img src="../img/causeway-flowers.webp" alt="نادل وزهور في مطعم الجسر" loading="lazy" width="776" height="484"></div><span class="n">03</span><h3>غداء على الجسر</h3><p>وجبة خفيفة أو بوفيه الغداء في مطعم جسر الملك فهد، مع إطلالة على واحد من أطول الجسور البحرية في العالم.</p></li>
-    <li data-reveal><div class="k-zoom"><img src="../img/tours-boarding.webp" alt="مجموعة تتجمع على الرصيف" loading="lazy" width="776" height="484"></div><span class="n">04</span><h3>الحفلات</h3><p>أعياد الميلاد والأعراس والمناسبات الخاصة، نرتبها لك.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="../img/tours-coach.webp" alt="حافلة الخليج للسياحة" loading="lazy" width="888" height="584"></div><span class="n">01</span><h3>الرحلة البرية</h3><p>حافلات فاخرة إلى المواقع الأثرية في المملكة.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="../img/tours-boat.webp" alt="قارب في البحر" loading="lazy" width="928" height="584"></div><span class="n">02</span><h3>الرحلات البحرية</h3><p>جولة حول الجزيرة على أحد قواربنا، أو إلى جرادة وجزر حوار.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="../img/causeway-flowers.webp" alt="نادل وزهور في مطعم الجسر" loading="lazy" width="768" height="472"></div><span class="n">03</span><h3>غداء على الجسر</h3><p>وجبة خفيفة أو بوفيه الغداء في مطعم جسر الملك فهد، مع إطلالة على واحد من أطول الجسور البحرية في العالم.</p></li>
+    <li data-reveal><div class="k-zoom"><img src="../img/tours-boarding.webp" alt="مجموعة تتجمع على الرصيف" loading="lazy" width="768" height="472"></div><span class="n">04</span><h3>الحفلات</h3><p>أعياد الميلاد والأعراس والمناسبات الخاصة، نرتبها لك.</p></li>
   </ol>
   <div class="where" data-reveal>
     <div><b>المكتب الرئيسي</b><span>مجمع فندق سميراميس، المنامة</span></div>
@@ -198,9 +201,9 @@
       <div class="act"><a class="btn" href="tel:+97317291444" data-k-magnetic="0.25">اطلب الغاز · <bdi>17 291444</bdi> <span class="k-arrow">→</span></a></div>
     </div>
     <div class="gas__pics">
-      <figure><div data-reveal="clip"><img src="../img/gas-truck.webp" alt="شاحنة غاز الخليج مكتوب عليها توصيل سريع" loading="lazy" width="900" height="600"></div><figcaption>«توصيل سريع» على جانب الشاحنة</figcaption></figure>
-      <figure><div data-reveal="clip"><img src="../img/gas-cylinders.webp" alt="أسطوانات غاز الخليج الوردية" loading="lazy" width="948" height="596"></div><figcaption>أسطوانات غاز الخليج</figcaption></figure>
-      <figure><div data-reveal="clip"><img src="../img/gas-depot.webp" alt="مستودع غاز الخليج والشاحنات أمامه" loading="lazy" width="956" height="596"></div><figcaption>المستودع</figcaption></figure>
+      <figure><div data-reveal="clip"><img src="../img/gas-truck.webp" alt="شاحنة غاز الخليج مكتوب عليها توصيل سريع" loading="lazy" width="888" height="584"></div><figcaption>«توصيل سريع» على جانب الشاحنة</figcaption></figure>
+      <figure><div data-reveal="clip"><img src="../img/gas-cylinders.webp" alt="أسطوانات غاز الخليج الوردية" loading="lazy" width="936" height="584"></div><figcaption>أسطوانات غاز الخليج</figcaption></figure>
+      <figure><div data-reveal="clip"><img src="../img/gas-depot.webp" alt="مستودع غاز الخليج والشاحنات أمامه" loading="lazy" width="944" height="584"></div><figcaption>المستودع</figcaption></figure>
     </div>
   </div>
 </section>
@@ -229,7 +232,7 @@
 </main>
 
 <footer class="ft">
-  <p class="ft__name">شركة برج إيفل لإدارة الفنادق ذ.م.م<span lang="en" style="font-family:Italiana,serif">Eiffel Tower Hotel Management Co. W.L.L.</span></p>
+  <p class="ft__name">شركة برج إيفل لإدارة الفنادق ذ.م.م<span class="ft__en" lang="en" dir="ltr">Eiffel Tower Hotel Management Co. W.L.L.</span></p>
   <div class="ft__cols">
     <div><h3>المجموعة</h3><ul><li><a class="k-link" href="#hotel">فندق سميراميس</a></li><li><a class="k-link" href="#dining">المقهى العتيق</a></li><li><a class="k-link" href="#causeway">مطعم الجسر</a></li><li><a class="k-link" href="#tours">الخليج للسياحة</a></li><li><a class="k-link" href="#gas">غاز الخليج</a></li></ul></div>
     <div><h3>الصفحات</h3><ul><li><a class="k-link" href="services.html">الغرف والخدمات</a></li><li><a class="k-link" href="#contact">اتصل بنا</a></li><li><a class="k-link" href="../" lang="en">English</a></li></ul></div>

@@ -20,6 +20,7 @@
       frames[i].classList.remove('is-on');i=(n+frames.length)%frames.length;
       var img=frames[i].querySelector('img');if(img&&img.loading==='lazy')img.loading='eager';
       frames[i].classList.add('is-on');
+      frames.forEach(function(f,k){if(k===i)f.removeAttribute('aria-hidden');else f.setAttribute('aria-hidden','true')});
       btns.forEach(function(b,k){b.classList.toggle('is-done',k<i);b.classList.remove('is-on')});
       void btns[i].offsetWidth;btns[i].classList.add('is-on');
       if(cap)cap.textContent=frames[i].getAttribute('data-cap')||'';
@@ -109,9 +110,10 @@
   document.querySelectorAll('[data-reveal-delay]').forEach(function(e){e.style.setProperty('--k-rv-delay',e.getAttribute('data-reveal-delay')+'ms')});
   function split(el){
     if(!el.dataset.kTxt)el.dataset.kTxt=el.innerHTML;
-    el.innerHTML=el.dataset.kTxt;el.setAttribute('aria-label',el.textContent.trim().replace(/\s+/g,' '));
+    /* keep authored <br> as forced line breaks */
+    el.innerHTML=el.dataset.kTxt.replace(/<br\s*\/?>/gi,' \u00b6\u00b6 ');el.setAttribute('aria-label',el.textContent.replace(/\u00b6\u00b6/g,' ').trim().replace(/\s+/g,' '));
     var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
-    var words=el.textContent.trim().split(/\s+/);el.innerHTML=words.map(function(w){return'<span class="k-rv-w">'+esc(w)+'</span>'}).join(' ');
+    var words=el.textContent.trim().split(/\s+/);el.innerHTML=words.map(function(w){return w==='\u00b6\u00b6'?'<br>':'<span class="k-rv-w">'+esc(w)+'</span>'}).join(' ');
     var lines=[],top=null;[].forEach.call(el.querySelectorAll('.k-rv-w'),function(w){var t=w.offsetTop;if(t!==top){lines.push([]);top=t}lines[lines.length-1].push(w.textContent)});
     el.innerHTML=lines.map(function(l,i){return'<span class="k-rv-line" aria-hidden="true"><span style="--l:'+i+'">'+esc(l.join(' '))+'</span></span>'}).join('');
     el.classList.add('k-rv-ready');

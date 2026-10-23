@@ -89,6 +89,9 @@
     var b=root.querySelector('.badge');if(b){b.hidden=false;b.classList.add(open?'is-open':'is-shut');b.querySelector('span').textContent=open?'Open now':lunch?'Lunch break, back at 1.30pm':'Closed now'}
   });
 
+  /* services page (mobile): drop the right-edge fade once the index row is scrolled to its end */
+  document.querySelectorAll('.toc ol').forEach(function(ol){var f=function(){ol.classList.toggle('is-end',ol.scrollLeft+ol.clientWidth>=ol.scrollWidth-4)};ol.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()});
+
   /* services page: highlight the section in view */
   var toc=[].slice.call(document.querySelectorAll('.toc a'));
   if(toc.length&&'IntersectionObserver' in window){var map={};toc.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});

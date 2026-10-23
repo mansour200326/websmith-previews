@@ -163,7 +163,7 @@ $$('[data-k-map]').forEach(function(m){
     var k=+fig.getAttribute('data-k-fx-contrast')||1.25,ink=fig.getAttribute('data-k-fx-ink')||'#1b1b1b',paper=fig.getAttribute('data-k-fx-paper')||'#f1f0eb';
     var cols=Math.ceil(W/cell),rows=Math.ceil(H/cell),s=document.createElement('canvas');s.width=cols;s.height=rows;
     var sx=s.getContext('2d',{willReadFrequently:true});sx.imageSmoothingQuality='high';
-    var sc=Math.max(cols/img.naturalWidth,rows/img.naturalHeight),dw=img.naturalWidth*sc,dh=img.naturalHeight*sc;sx.drawImage(img,(cols-dw)/2,(rows-dh)/2,dw,dh);
+    var sc=Math.max(cols/img.naturalWidth,rows/img.naturalHeight),dw=img.naturalWidth*sc,dh=img.naturalHeight*sc;var oy=fig.hasAttribute('data-k-fx-y')?+fig.getAttribute('data-k-fx-y'):.5;sx.drawImage(img,(cols-dw)/2,(rows-dh)*oy,dw,dh);
     var dd;try{dd=sx.getImageData(0,0,cols,rows).data}catch(e){return}
     var inv=lum(paper)<lum(ink),L=new Float32Array(cols*rows);
     for(var i=0;i<L.length;i++){var l=(.2126*dd[i*4]+.7152*dd[i*4+1]+.0722*dd[i*4+2])/255;l=Math.min(1,Math.max(0,(l-.5)*k+.5));L[i]=inv?1-l:l}

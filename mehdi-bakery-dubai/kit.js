@@ -276,7 +276,7 @@
   function split(el){
     if(!el.dataset.kTxt)el.dataset.kTxt=el.innerHTML;
     el.innerHTML=el.dataset.kTxt;el.setAttribute('aria-label',el.textContent.trim());
-    var words=el.textContent.trim().split(/\s+/);el.innerHTML=words.map(function(w){return'<span class="k-rv-w">'+w.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span>'}).join(' ');
+    var words=el.textContent.trim().split(/[ \t\n\r\f]+/);el.innerHTML=words.map(function(w){return'<span class="k-rv-w">'+w.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span>'}).join(' ');
     var lines=[],top=null;[].forEach.call(el.querySelectorAll('.k-rv-w'),function(w){var t=w.offsetTop;if(t!==top){lines.push([]);top=t}lines[lines.length-1].push(w.textContent)});
     var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
     el.innerHTML=lines.map(function(l,i){return'<span class="k-rv-line" aria-hidden="true"><span style="--l:'+i+'">'+esc(l.join(' '))+'</span></span>'}).join('');
