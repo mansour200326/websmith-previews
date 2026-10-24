@@ -14,7 +14,9 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="stylesheet" href="../site.css">
 <style>
-.hero__word{font-family:"Libre Franklin",sans-serif}
+.hero__word--ar{font-size:calc(100cqi / 3.43)!important}
+.hero__word--ar .lt--d{display:none}
+@media (min-width:900px){.hero__word--ar{font-size:calc(100cqi / 4.41)!important}.hero__word--ar .lt--m{display:none}.hero__word--ar .lt--d{display:inline-block}}
 .hero__ar{font-family:"Readex Pro",sans-serif}
 .prod__big{font-family:"Libre Franklin",sans-serif}
 .prod__big.ar{font-family:"Readex Pro",sans-serif;font-weight:700;letter-spacing:0;line-height:1.1}
@@ -40,12 +42,14 @@
 </header>
 
 <main id="main">
-<!-- Water texture in the letters: Unsplash ambience, Bernd Dittrich, https://unsplash.com/photos/a-pool-with-blue-water-is-shown-from-above-vvmw_4AirYo, Unsplash License. Not the business's own. -->
+<!-- Water texture in the word: Unsplash ambience, Bernd Dittrich, https://unsplash.com/photos/a-pool-with-blue-water-is-shown-from-above-vvmw_4AirYo, Unsplash License,
+     re-toned to the KHATT lid blue (img/amb-caustics-blue.webp). Not the business's own.
+     The word is خط from their shop sign, stretched with kashida (tatweel) the way the sign stretches it. The tagline «صحتكم همّنا» is our translation of their logo slogan "Your health is our concern". -->
 <section class="hero">
   <div class="wrap">
-    <p class="hero__line" data-reveal="fade"><span class="hero__ar">خط</span><span class="hero__rule" aria-hidden="true"></span><span class="hero__slogan" lang="en" dir="ltr">“Your health is our concern”</span></p>
+    <p class="hero__line" data-reveal="fade"><span class="hero__en" lang="en" dir="ltr">KHATT</span><span class="hero__rule" aria-hidden="true"></span><span class="hero__slogan">«صحتكم همّنا»</span></p>
     <div class="hero__grid">
-      <h1 class="hero__word" dir="ltr" data-drift><span class="sr">KHATT Water System</span><span aria-hidden="true"><span class="lt" style="--i:0">K</span><span class="lt" style="--i:1">H</span><span class="lt" style="--i:2">A</span><span class="lt" style="--i:3">T</span><span class="lt" style="--i:4">T</span></span></h1>
+      <h1 class="hero__word hero__word--ar" data-drift><span class="sr">خط لتحلية المياه، KHATT Water System</span><span aria-hidden="true"><span class="lt lt--m" style="--i:0;--bx:40%;--bs:140%">خــــــــــــــــــــــط</span><span class="lt lt--d" style="--i:0;--bx:40%;--bs:120%">خــــــــــــــــــــــــــــــــــط</span></span></h1>
       <div class="hero__meta">
         <p class="hero__lead" data-reveal data-reveal-delay="150">مياه شرب من <b>رأس الخيمة</b>. ننقّيها ونعبّئها ونوصلها مجاناً إلى المنازل والمكاتب في رأس الخيمة والشارقة والفجيرة منذ عام 1993.</p>
         <div class="hero__acts" data-reveal data-reveal-delay="300">
@@ -140,7 +144,7 @@
   </div>
 </section>
 
-<!-- Photo: KHATT Sweet Water LLC shopfront, Google Maps listing (contributor "Razaa Khan", Jul 2026), cropped square and 4x upscaled. Real premises, max 440px wide. -->
+<!-- Photo: KHATT Sweet Water LLC shopfront, Google Maps listing (contributor "Razaa Khan", Jul 2026), cropped 5:4 at native size (920x736, road cut, +8% contrast, +4% saturation). Real premises, max 440px wide. -->
 <section class="sec" id="region">
   <div class="wrap region">
     <div>
@@ -154,8 +158,8 @@
         <li data-reveal><b>الفجيرة</b><span>توصيل</span></li>
       </ul>
     </div>
-    <figure class="plate plate--lg">
-      <div class="plate__img" data-reveal="clip"><img src="../img/shopfront.webp" width="1600" height="1600" loading="lazy" alt="واجهة خط لتحلية المياه في رأس الخيمة: مظلة زرقاء تحت لافتة Khatt وعليها رقما الهاتف 07 2221124 و 07 2227173"></div>
+    <figure class="plate plate--lg plate--wide">
+      <div class="plate__img" data-reveal="clip"><img src="../img/shopfront-54.webp" width="920" height="736" loading="lazy" alt="واجهة خط لتحلية المياه في رأس الخيمة: مظلة زرقاء تحت لافتة Khatt وعليها رقما الهاتف 07 2221124 و 07 2227173"></div>
       <figcaption class="plate__cap"><span class="mono">2</span> مكتبنا في رأس الخيمة، وعلى اللافتة اسمنا: خط لتحلية المياه.</figcaption>
     </figure>
   </div>
@@ -166,6 +170,7 @@
     <h2 class="h2" id="visit-h" data-reveal="lines">موقعنا</h2>
     <p class="k-visit__addr" data-reveal>شارع المنتصر، النخيل، رأس الخيمة</p>
     <p class="k-visit__land" data-reveal>ص.ب <bdi>5409</bdi>، رأس الخيمة، الإمارات العربية المتحدة</p>
+    <p class="k-visit__pin" data-reveal><span class="mono">على الخريطة</span><span>مكتبنا على خرائط Google: الحديبة، بجانب شارع الديوان (رمز الموقع <bdi>RX2G+3Q</bdi>).</span></p>
     <dl data-reveal>
       <dt>المكتب</dt><dd><a class="k-link" href="tel:+97172221124"><bdi>07 222 1124</bdi></a></dd>
       <dt>المكتب</dt><dd><a class="k-link" href="tel:+97172227173"><bdi>07 222 7173</bdi></a></dd>
@@ -177,8 +182,8 @@
       <a class="btn btn--light" style="box-shadow:inset 0 0 0 2px var(--k-ink)" href="https://www.google.com/maps/search/?api=1&amp;query=KHATT+Sweet+Water+LLC+Ras+Al+Khaimah" target="_blank" rel="noopener">الاتجاهات</a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-title="خريطة شارع المنتصر، النخيل، رأس الخيمة" data-src="https://www.google.com/maps?q=KHATT+Sweet+Water+LLC,+Ras+Al+Khaimah&amp;z=16&amp;hl=ar&amp;output=embed">
-    <svg width="40" height="52" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50S4 30 4 19a16 16 0 0 1 32 0c0 11-16 31-16 31z" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="19" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg><p style="color:var(--k-mute)">شارع المنتصر · النخيل · رأس الخيمة</p><button type="button">اعرض الخريطة</button>
+  <div class="k-visit__map" data-k-map data-title="خريطة: خط لتحلية المياه، الحديبة، رأس الخيمة" data-src="https://www.google.com/maps?q=KHATT+Sweet+Water+LLC,+Ras+Al+Khaimah&amp;z=16&amp;hl=ar&amp;output=embed">
+    <svg width="40" height="52" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50S4 30 4 19a16 16 0 0 1 32 0c0 11-16 31-16 31z" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="19" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg><p style="color:var(--k-mute)">خط لتحلية المياه · الحديبة · رأس الخيمة</p><button type="button">اعرض الخريطة</button>
   </div>
 </section>
 </main>

@@ -379,3 +379,112 @@ bdi{white-space:nowrap}
 .prod__item .prod__big{color:var(--k-accent)}
 .plate__cap,.prod__top .plate--sm .plate__cap{display:block}
 .plate__cap .mono{margin-inline-end:8px}
+
+/* ---------- rescue 2 (after Fannan round 4), 2026-10-24 ---------- */
+/* water level inside the letters: rises once on load, like a bottle on the filling line */
+@property --lvl{syntax:'<percentage>';inherits:false;initial-value:100%}
+.hero__word .lt{
+  padding-inline:.06em;margin-inline:-.06em;   /* fix 1: the A's foot is no longer sliced by the background box */
+  background-image:linear-gradient(to top,transparent var(--lvl),#7f9be0 var(--lvl),#7f9be0 calc(var(--lvl) + 1.2%),#d9e2f7 calc(var(--lvl) + 1.2%)),url(img/amb-caustics-blue.webp);
+  background-size:100% 100%,var(--bs,320%) auto;background-repeat:no-repeat,repeat;
+  background-position:0 0,calc(var(--bx,30%) + var(--drift,0%)) calc(45% + var(--drifty,0%));
+}
+.k-js .hero__word .lt{animation:ltRise 1.1s var(--ease) both,ltSettle2 2.4s var(--ease) both,ltFill 1.7s cubic-bezier(.3,.6,.25,1) both;
+  animation-delay:calc(var(--i)*80ms + 100ms),calc(var(--i)*80ms + 100ms),calc(var(--i)*110ms + 450ms)}
+@keyframes ltSettle2{from{background-size:100% 100%,400% auto}to{background-size:100% 100%,var(--bs,320%) auto}}
+@keyframes ltFill{from{--lvl:0%}to{--lvl:100%}}
+
+/* fix 2: the desktop first screen is the hero; the lead and the call sit together at the bottom */
+@media (min-width:900px){
+  .hero{min-height:calc(100svh - 77px);display:flex;flex-direction:column}
+  .hero>.wrap{flex:1;display:flex;flex-direction:column;width:100%}
+  .hero__grid{flex:1;align-content:space-between}
+  .hero__meta{grid-template-columns:minmax(0,600px) auto!important;justify-content:start;column-gap:48px;align-items:end;padding-top:clamp(20px,2.4vw,32px);border-top:1px solid var(--k-line)}
+  .hero__acts{justify-content:flex-start;padding-bottom:4px}
+}
+
+/* fix 4: the Arabic hero is the Arabic word from their sign, stretched with kashida like the sign itself */
+.hero__word--ar{font-family:"Readex Pro",sans-serif!important;font-weight:700;letter-spacing:0;line-height:1.02;margin-inline-start:0;padding-bottom:.02em}
+.hero__word--ar .lt{padding-inline:.04em;margin-inline:-.04em;padding-top:.06em}
+.hero__line .hero__en{font:900 clamp(1.5rem,2.8vw,2.3rem)/1 "Libre Franklin",sans-serif;letter-spacing:-.03em;color:var(--k-accent)}
+[lang=ar] .hero__line .hero__slogan{font-style:normal;font-weight:600;font-family:"Readex Pro",sans-serif}
+
+/* fix 5: shopfront at 5:4, native pixels */
+.plate--wide .plate__img img{aspect-ratio:5/4}
+
+/* fix 6 + services layout: products as a pair, delivery as a route band, minerals + safety as a split */
+.svx{border-top:2px solid var(--k-ink)}
+.svx__pair{display:grid;grid-template-columns:minmax(0,1fr)}
+.svx__cell{display:grid;gap:14px;align-content:start;padding-block:clamp(30px,4vw,56px);min-width:0}
+.svx__cell+.svx__cell{border-top:1px solid var(--k-line)}
+.svx__head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:6px}
+.svx__n{font:400 .9rem/1 var(--k-mono);color:var(--k-accent)}
+.svx__mark{font:900 clamp(5rem,12vw,10.5rem)/.8 var(--k-display);letter-spacing:-.05em;color:var(--k-accent)}
+.svx__mark small{font-size:.3em;letter-spacing:-.02em;font-weight:800;margin-inline-start:.1em}
+.svx__mark--sm{font-size:clamp(3.4rem,7vw,6rem)}
+[lang=ar] .svx__mark{letter-spacing:0}
+[lang=ar] .svx__mark small{font-family:"Readex Pro",sans-serif;letter-spacing:0}
+.svx h2{font:700 clamp(1.8rem,3.4vw,2.8rem)/1.1 var(--k-display);letter-spacing:-.03em}
+[lang=ar] .svx h2{letter-spacing:0;line-height:1.35}
+.svx p,.svx li{color:var(--k-ink);max-width:36em}
+.svx ul{list-style:none;display:grid;gap:8px}
+.svx li{display:flex;gap:12px;align-items:baseline}
+.svx li::before{content:"";flex:none;width:14px;height:2px;background:var(--k-accent);transform:translateY(-4px)}
+.svx__act a{font-weight:700;text-decoration:none;display:inline-flex;gap:8px;align-items:center;min-height:44px;color:var(--k-accent)}
+.svx__pair--b{border-top:2px solid var(--k-ink)}
+@media (min-width:900px){
+  .svx__pair{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:clamp(40px,6vw,100px)}
+  .svx__pair--b{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:0}
+  .svx__cell+.svx__cell{border-top:0}
+  .svx__pair--b .svx__cell+.svx__cell{border-inline-start:1px solid var(--k-line);padding-inline-start:clamp(30px,5vw,80px)}
+  .svx__pair--b .svx__cell:first-child{padding-inline-end:clamp(30px,5vw,80px)}
+}
+/* 03 Free delivery: full-bleed paper band with the route RAK - SHJ - FUJ drawing in */
+.route{background:var(--k-paper);padding-block:clamp(60px,8vw,120px);margin-block:clamp(10px,2vw,30px) clamp(40px,5vw,70px)}
+.route__grid{display:grid;gap:clamp(30px,5vw,60px)}
+@media (min-width:900px){.route__grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center}}
+.route__free{font:900 clamp(5rem,12vw,10.5rem)/.8 var(--k-display);letter-spacing:-.05em;color:var(--k-accent);margin-bottom:10px}
+[lang=ar] .route__free{letter-spacing:0;line-height:1.05}
+.route__map{position:relative;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:44px}
+.route__map::before{content:"";position:absolute;top:12px;inset-inline:7px 7px;height:3px;background:var(--k-accent);transform-origin:left;border-radius:2px}
+[dir=rtl] .route__map::before{transform-origin:right}
+.k-js .route__map::before{transform:scaleX(0);transition:transform 1.6s var(--ease) .3s}
+.k-js .route__map.is-in::before{transform:none}
+.route__map li{position:relative;display:grid;gap:6px;align-content:start;max-width:none}
+.route__map li::before{content:"";position:absolute;top:-39px;inset-inline-start:0;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--k-accent);transform:none}
+.route__map li:first-child::before{background:var(--k-accent)}
+.route__map b{font:900 clamp(2.3rem,6vw,5.2rem)/.9 var(--k-display);letter-spacing:-.04em;color:var(--k-ink)}
+[lang=ar] .route__map b{font-size:clamp(1.35rem,3.2vw,2.6rem);letter-spacing:0;line-height:1.3}
+.route__map span{font:400 .82rem/1.35 var(--k-mono);color:var(--k-mute)}
+[lang=ar] .route__map span{font-family:"Readex Pro",sans-serif}
+.route__map li:first-child b{color:var(--k-accent)}
+
+/* fix 7: the line that matches the map pin */
+.k-visit__pin{display:flex;gap:10px;align-items:baseline;margin:-14px 0 26px;font-size:.98rem;color:var(--k-ink);max-width:34em}
+.k-visit__pin .mono{flex:none;font-size:.78rem;color:#fff;background:var(--k-accent);padding:3px 7px;border-radius:2px}
+[lang=ar] .k-visit__pin .mono{font-family:"Readex Pro",sans-serif}
+
+@media (prefers-reduced-motion:reduce){
+  .k-js .hero__word .lt{animation:none!important;--lvl:100%}
+  .k-js .route__map::before{transform:none!important;transition:none!important}
+  .hero__word .lt{--drift:0%!important;--drifty:0%!important}
+}
+.svx .svx__mark,.svx .svx__n,.route .svx__n{color:var(--k-accent);max-width:none}
+.svx__head .plate--sm{display:flex;flex-direction:column;align-items:flex-end}
+.svx__head .plate--sm .plate__img{width:100%}
+.svx__head .plate--sm .plate__cap{text-align:end}
+.route p{color:var(--k-ink)}
+@media (min-width:900px){
+  .hero__grid{display:contents}
+  .hero__line{margin-top:auto}
+  .hero__meta{margin-top:auto}
+  .hero__word{margin-bottom:clamp(36px,4vw,60px)}
+  .hero{padding-top:clamp(20px,2.4vw,36px)}
+}
+.route .route__free{color:var(--k-accent)}
+.svx__vis{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;min-height:clamp(96px,10.5vw,152px)}
+.svx__vis .plate--sm{display:flex;flex-direction:column;align-items:flex-end}
+.svx__vis .plate--sm .plate__img{width:100%}
+.svx__vis .plate--sm .plate__cap{text-align:end}
+.svx__mark--ar{font-family:"Readex Pro",sans-serif;font-weight:700;line-height:1.05;font-size:clamp(3.6rem,8vw,7rem)}
+.svx__head{margin-bottom:0}

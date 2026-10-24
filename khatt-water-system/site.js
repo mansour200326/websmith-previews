@@ -36,9 +36,9 @@
   if(!RM&&matchMedia('(min-width:900px) and (pointer:fine)').matches&&px.length){var tk=false;var upd=function(){tk=false;var vh=innerHeight;px.forEach(function(e){var r=e.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;var c=(r.top+r.height/2-vh/2);e.style.transform='translate3d(0,'+(c*(+e.getAttribute('data-speed'))).toFixed(1)+'px,0)'})};
     addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();}
 
-  /* hero: the water inside KHATT drifts a little as you scroll (fine pointers only) */
+  /* hero: the water inside the letters moves with the scroll, on phones too (scroll is the gesture there) */
   var dr=document.querySelector('[data-drift]');
-  if(dr&&!RM&&matchMedia('(pointer:fine)').matches){var dt=false;var dup=function(){dt=false;var y=Math.min(scrollY,900);dr.style.setProperty('--drift',(y/900*-14).toFixed(2)+'%')};
+  if(dr&&!RM){var dt=false,sp=matchMedia('(max-width:899px)').matches?600:900;var dup=function(){dt=false;var k=Math.min(scrollY,sp)/sp;dr.querySelectorAll('.lt').forEach(function(l){l.style.setProperty('--drift',(k*-22).toFixed(2)+'%');l.style.setProperty('--drifty',(k*30).toFixed(2)+'%')})};
     addEventListener('scroll',function(){if(!dt){dt=true;requestAnimationFrame(dup)}},{passive:true});}
 
   /* the pipe: water line fills as you scroll through the steps; each step lights when reached */
