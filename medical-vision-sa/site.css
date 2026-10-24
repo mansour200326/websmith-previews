@@ -424,3 +424,123 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 @media (max-width:700px){.pintro__jump{gap:0 18px;margin-top:18px}.pintro__jump a{font-size:1rem;padding:10px 0;min-height:44px}}
 @media (min-width:960px){.hero__grid{align-items:start}.hero__grid .stage{aspect-ratio:auto;height:min(calc(100svh - 470px),520px);min-height:380px}}
 .k-seq__frame{display:block}
+
+/* ---------- rescue (2026-10-24): catalogue-as-design ---------- */
+/* hero: one muted line instead of the facts table */
+.hero__meta{margin-top:18px;font-size:.95rem;color:var(--mute)}
+/* stage: every product contained, max 82% tall, centred on the paper ground */
+.k-seq__frame{display:grid;place-items:center}
+.k-seq__frame img{width:100%;height:100%;max-height:82%;object-fit:contain;object-position:50% 50%;mix-blend-mode:multiply}
+/* catalogue plates: one white ground, one margin, hairline grid like a printed catalogue page */
+.plates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (min-width:900px){.plates{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.plate{margin:0;background:#fff;display:flex;flex-direction:column;min-width:0}
+.plate__img{aspect-ratio:4/3;overflow:hidden;background:#fff}
+.plate__img img{width:100%;height:100%;object-fit:contain;transition:transform 1.2s var(--ease)}
+@media (hover:hover){.plate:hover .plate__img img{transform:scale(1.05)}}
+.plate figcaption{display:grid;gap:4px;padding:14px clamp(14px,1.6vw,22px) 22px;border-top:1px solid var(--line);flex:1;align-content:start}
+.plate__mk{font-family:var(--mono);font-size:.74rem;color:var(--mute)}
+.plate figcaption b{font:600 clamp(1.1rem,1.5vw,1.35rem)/1.15 var(--display);letter-spacing:-.02em}
+.plate figcaption span:last-child{font-size:.92rem;line-height:1.45;color:var(--mute)}
+.plate--type{background:var(--ink);color:#fff;padding:clamp(18px,2.2vw,30px);justify-content:space-between;gap:24px;min-height:200px}
+.plate--type .num{color:var(--orange);font-size:.9rem}
+.plate--type h3{font:700 clamp(1.9rem,3.4vw,3.3rem)/.95 var(--display);letter-spacing:-.045em;overflow-wrap:anywhere}
+.plate--type p{font-size:.95rem;color:#fff;max-width:16em}
+.plate--note{background:var(--blue-pale);padding:clamp(18px,2.2vw,30px);justify-content:flex-end;gap:12px}
+.plate--note b{font:600 1.3rem/1.15 var(--display);letter-spacing:-.02em}
+.plate--note p{font-size:.95rem;color:var(--mute)}
+.plate--note a{font-weight:600;color:var(--blue-deep);min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:560px){.plate figcaption{padding:12px 12px 16px}.plate figcaption span:last-child{font-size:.86rem}.plate--type{min-height:0}.plate--type h3{font-size:1.75rem}}
+.cat__all{margin-top:28px;font-weight:600;color:var(--blue-deep)}
+.cat__all a{display:inline-flex;align-items:center;min-height:44px}
+.more li span{display:block}
+.ft__arname{display:block;font-family:"Readex Pro",sans-serif;color:rgba(255,255,255,.85);margin-top:4px}
+[dir=rtl] .plate figcaption b,[dir=rtl] .plate--type h3,[dir=rtl] .plate--note b{font-family:"Readex Pro",sans-serif;letter-spacing:0;line-height:1.25}
+[dir=rtl] .plate--type h3{font-weight:600}
+[dir=rtl] .plate__mk{font-family:var(--mono)}
+/* services: first-screen photo cropped (grey line gone) */
+.pintro__fig{padding:0;aspect-ratio:4/3}
+.pintro__fig img{object-fit:cover;object-position:50% 35%;aspect-ratio:4/3}
+/* services: maintenance as one full-width dark panel */
+.mpanel{display:grid;gap:clamp(28px,4vw,56px);background:#0D1A24;color:#fff;padding:clamp(32px,5vw,72px) clamp(22px,4vw,64px);margin-block:clamp(48px,6vw,96px);border-radius:4px}
+.mpanel .num{color:var(--orange)}
+.mpanel h2{font:700 clamp(2.4rem,5vw,4.4rem)/.94 var(--display);letter-spacing:-.045em;margin-top:16px}
+.mpanel p{font-size:1.25rem;line-height:1.5;color:#fff;margin-top:20px;max-width:24em}
+.mpanel__figs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mpanel figure{margin:0;background:#fff;border-radius:3px;overflow:hidden}
+.mpanel figure div{aspect-ratio:4/3}
+.mpanel figure img{width:100%;height:100%;object-fit:contain}
+.mpanel figcaption{color:var(--ink);font-size:.86rem;padding:10px 14px 12px;border-top:1px solid var(--line)}
+@media (min-width:960px){.mpanel{grid-template-columns:5fr 7fr;align-items:center}}
+[dir=rtl] .mpanel h2{font-family:"Readex Pro",sans-serif;letter-spacing:0;line-height:1.2;font-weight:600}
+.k-seq__frame{display:flex;align-items:center;justify-content:center}
+.k-seq__frame img{width:100%;height:82%;max-height:82%;flex:none}
+.brand{min-width:44px}
+[dir=rtl] .plate figcaption>[dir=ltr]{text-align:right}
+
+/* ---------- rescue round 4 fixes ---------- */
+@media (max-width:959px){.hero__meta{display:none}}
+@media (max-width:700px){.hero__grid .stage{aspect-ratio:4/3;height:auto}}
+.hero__word .w{padding-inline-end:.08em;margin-inline-end:-.08em}
+.pintro__fig{background:#fff;border:1px solid var(--line)}
+.pintro__fig img{object-fit:contain;padding:6%;mix-blend-mode:normal}
+@media (min-width:900px){
+  .panel{min-height:clamp(260px,26vw,340px)}
+  .panel__img{background:#fff;border-radius:3px;padding:12px;width:clamp(280px,28vw,400px);aspect-ratio:4/3;object-fit:contain;height:auto}
+  .panel h3{font-size:clamp(2.4rem,4.4vw,3.8rem)}
+}
+@media (max-width:700px){.pintro__fig img{padding:14%}}
+
+/* ---------- rescue 2: after independent round 6 (2026-10-24) ---------- */
+/* 1. department tabs: whole words only */
+.plate--type h3{overflow-wrap:normal;word-break:normal;hyphens:manual}
+@media (max-width:560px){.plate--type{padding:16px 14px}.plate--type h3{font-size:1.45rem;line-height:1}}
+/* 3. every department tab starts a new row; the tab widens so each row is full (no empty cells) */
+.plates>.plate--type,.plates>.plate--note{grid-column-start:1}
+.plates>.plate--n4,.plates>.plate--row{grid-column:1 / -1}
+.plate--n4,.plate--row{min-height:0}
+@media (min-width:900px){
+  .plates>.plate--n1{grid-column:1 / span 3}
+  .plate--n1 p,.plate--n4 p{max-width:28em}
+  .plate--n4{flex-direction:row;align-items:flex-end;flex-wrap:wrap;column-gap:clamp(24px,4vw,64px)}
+  .plate--n4 .num{flex-basis:100%}
+}
+.plate--note .num{color:var(--orange-ink)}
+.plate--row{flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:clamp(16px,3vw,40px);row-gap:6px;justify-content:flex-start}
+.plate--row p{max-width:40em;flex:1 1 20em}
+/* 4. services Installation: one 4:3 plate with a caption */
+.svc__fig--plate{aspect-ratio:4/3;padding:0;margin-bottom:0}
+.svc__fig--plate img{object-fit:contain}
+.svc__plate{margin-bottom:26px}
+.svc__plate figcaption{font-size:.92rem;color:var(--mute);margin-top:10px}
+.svc__plate figcaption b{font:600 1.05rem var(--display);color:var(--ink)}
+/* 5. home stack panels: the product and the heading, no empty colour block */
+.stack .panel{min-height:0;gap:20px;align-content:start;padding:22px}
+.stack .panel__top{flex-direction:column;align-items:flex-start;gap:14px;height:auto}
+.stack .panel__n{font-size:3rem}
+.stack .panel__img{width:100%;max-width:440px;height:auto;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:3px;padding:10px}
+.stack .panel h3{margin-bottom:12px}
+@media (min-width:900px){
+  .stack .panel{grid-template-columns:minmax(0,6fr) minmax(0,6fr);align-items:end;padding:clamp(24px,2.6vw,40px);margin-bottom:28px}
+  .stack .panel:nth-child(4){margin-bottom:0}
+  .stack .panel__top{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:24px}
+  .stack .panel__n{font-size:clamp(4rem,7vw,6.4rem)}
+  .stack .panel__img{width:clamp(240px,24vw,340px)}
+  .stack .panel h3{margin-bottom:16px}
+}
+/* 6. services maker wall: optical sizing, text tiles, 2 columns on phones */
+.logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:561px){.logos{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.logos li{aspect-ratio:3/2;padding:0}
+.logos img{width:var(--w,50%);max-width:78%;max-height:62%;height:auto;object-fit:contain;filter:grayscale(1) contrast(1.1);opacity:1;mix-blend-mode:multiply}
+.logos li.logos__txt{font:700 clamp(1.2rem,1.9vw,1.7rem)/1.05 var(--display);letter-spacing:-.025em;padding:0 10%;text-align:center}
+/* 9. about divisions: one 5-cell grid, ours spans the top row */
+.divs{grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-top:1px solid var(--ink)}
+.divs li{background:var(--paper);flex-direction:column;align-items:flex-start;gap:10px;padding:18px 16px 22px;border:0;min-height:124px;overflow-wrap:normal}
+.divs li .num{width:auto}
+.divs li.is-us{grid-column:1 / -1;background:#fff}
+.divs li.is-us small{margin-inline-start:0}
+@media (min-width:800px){.divs{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:1px}.divs li.is-us{grid-column:span 2;grid-row:auto}.divs li{padding:22px 22px 26px;min-height:150px}}
+@media (max-width:560px){.plate--type p{font-size:.88rem;line-height:1.45}}
+@media (min-width:900px){.stack .panel{column-gap:clamp(32px,4vw,64px)}}
+.divs li.is-us{font-size:clamp(1.5rem,2.4vw,2.2rem);letter-spacing:-.025em}

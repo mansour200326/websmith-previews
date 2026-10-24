@@ -123,7 +123,7 @@
 (function(){
   var list=document.querySelector('[data-brands]');if(!list)return;
   if(!matchMedia('(hover:hover) and (pointer:fine)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var fl=document.createElement('div');fl.className='brandfloat';fl.setAttribute('aria-hidden','true');var im=document.createElement('img');im.alt='';fl.appendChild(im);document.body.appendChild(fl);
+  var fl=document.createElement('div');fl.className='brandfloat';fl.setAttribute('aria-hidden','true');var im=document.createElement('img');im.alt='';var f0=list.querySelector('[data-logo]');if(f0)im.src=f0.getAttribute('data-logo');fl.appendChild(im);document.body.appendChild(fl);
   var x=0,y=0,tx=0,ty=0,raf=0;
   function loop(){x+=(tx-x)*.18;y+=(ty-y)*.18;fl.style.transform='translate3d('+x+'px,'+y+'px,0)';raf=Math.abs(tx-x)+Math.abs(ty-y)>.5?requestAnimationFrame(loop):0}
   list.querySelectorAll('[data-logo]').forEach(function(r){

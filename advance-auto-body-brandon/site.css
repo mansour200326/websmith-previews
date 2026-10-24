@@ -1,0 +1,392 @@
+/* Advance Auto Body & Glass - concept by Websmith. Restyles kit.css (loaded first). */
+:root{
+  --red:#b3000f;--red-deep:#8e000c;--ink:#111;--mute:#555;--line:#e1e1df;--grey:#f1f1f0;--dark:#121212;
+  --k-bg:#fff;--k-ink:#111;--k-mute:#555;--k-line:#e1e1df;--k-accent:#b3000f;--k-on-accent:#fff;
+  --k-display:"Barlow Condensed",Impact,sans-serif;--k-body:"Inter Tight",system-ui,sans-serif;--k-ease:cubic-bezier(.16,1,.3,1);
+  --pad:clamp(20px,4.4vw,64px);--max:1440px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.6 var(--k-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:100;background:#fff;padding:10px 14px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.disp{font-family:var(--k-display);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:.86}
+
+/* ---------- header ---------- */
+.hd{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.hd__in{display:flex;align-items:center;gap:28px;height:78px}
+.hd__logo{display:block;flex:none;width:clamp(150px,15vw,210px)}
+.hd__nav{display:flex;gap:26px;margin-inline-start:auto;font-weight:500;font-size:.98rem}
+.hd__nav a{text-decoration:none;padding-block:8px}
+.hd__nav a[aria-current=page]{color:var(--red);box-shadow:inset 0 -2px 0 var(--red)}
+.hd__call{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:0 20px;height:48px;font-variant-numeric:tabular-nums;transition:background .3s}
+.hd__call:hover{background:var(--red)}
+.hd__call svg{width:16px;height:16px;flex:none}
+.hd__menu{display:none}
+@media (max-width:980px){
+  .hd__in{height:66px;gap:12px}
+  .hd__nav{display:none}
+  .hd__call{margin-inline-start:auto;padding:0 14px;height:44px;font-size:.92rem}
+  .hd__menu{display:block;position:relative}
+  .hd__menu summary{list-style:none;width:44px;height:44px;display:grid;place-items:center;cursor:pointer;border:1px solid var(--ink)}
+  .hd__menu summary::-webkit-details-marker{display:none}
+  .hd__menu summary span{width:18px;height:2px;background:var(--ink);box-shadow:0 -6px 0 var(--ink),0 6px 0 var(--ink)}
+  .hd__menu nav{position:absolute;right:0;top:54px;background:#fff;border:1px solid var(--ink);min-width:230px;padding:8px 0}
+  .hd__menu nav a{display:block;padding:12px 20px;text-decoration:none;font-weight:600}
+  .hd__menu nav a[aria-current=page]{color:var(--red)}
+}
+@media (max-width:980px){.hd__call .k-roll{display:none}.hd__logo{width:150px}}
+
+/* ---------- hero (kit 02 restyled; VOSS-style split, photo bleeds right) ---------- */
+.hero{border-bottom:1px solid var(--line);overflow:hidden}
+.hero__type{display:grid;grid-template-columns:1fr;padding:clamp(24px,5vw,40px) var(--pad) 34px;gap:22px}
+.hero h1{font:italic 800 clamp(3.3rem,8.2vw,8.6rem)/.84 var(--k-display);text-transform:uppercase;letter-spacing:-.012em;color:var(--ink)}
+.hero h1 .k-split__line{display:block;overflow:hidden;padding:0 .06em .04em 0}
+.hero__lead{font-size:clamp(1.05rem,1.3vw,1.2rem);max-width:30em;color:#2c2c2c}
+.hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;margin-top:22px}
+.hero__acts .k-btn{background:var(--red);font-size:1.05rem;padding:20px 26px}
+.hero__acts .tlink{font-weight:600;text-decoration:none}
+.hero__line{margin-top:22px;font-size:.95rem;color:#333;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.hero__line .k-visit__badge{margin:0;border-radius:0;font-size:.85rem}
+/* rescue: photo only at a size its 546px source supports (3:2, <=600px wide, static img) */
+.hero__side{display:flex;flex-direction:column;width:calc(100% + 2*var(--pad));margin-inline:calc(-1*var(--pad))}
+.hero__photo{position:relative;overflow:hidden;background:#ddd;margin:0}
+.hero__photo img{position:static;width:100%;height:auto;aspect-ratio:3/2}
+.hero__ink{display:none}
+@media (min-width:1000px){
+  .hero__type{grid-template-columns:minmax(0,1.25fr) min(600px,calc((100% - 56px)/2.25));grid-template-rows:1fr auto;align-content:stretch;gap:0 56px;padding:0 0 0 var(--pad);min-height:min(calc(100svh - 78px),760px);max-width:none}
+  .hero h1{grid-column:1;grid-row:1;align-self:end;font-size:clamp(3.3rem,7.2vw,8.2rem);padding-top:40px}
+  .hero__body{grid-column:1;grid-row:2;margin-top:2.4rem;padding-bottom:44px}
+  .hero__line{display:none}
+  .hero__side{grid-column:2;grid-row:1/3;width:auto;margin:0;align-self:stretch}
+  .hero__ink{display:flex;flex-direction:column;justify-content:space-between;flex:1;position:relative;overflow:hidden;isolation:isolate;background:var(--ink);color:#fff;padding:32px 32px 28px;min-height:220px}
+  .hero__ink::before{content:"1807";position:absolute;right:-.06em;bottom:-.2em;z-index:-1;font:italic 800 clamp(9rem,15vw,15rem)/.8 var(--k-display);color:#222;letter-spacing:-.02em;pointer-events:none}
+  .hero__plate{display:block;background:#fff;padding:14px 18px;width:min(280px,70%)}
+  .hero__where{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+  .hero__where p{font-size:.95rem;line-height:1.55;color:#d8d8d5}
+  .hero__where b{color:#fff;font-weight:600;font-size:1.05rem}
+  .hero__where .k-visit__badge{margin:0;border-radius:0;font-size:.85rem}
+}
+@keyframes hero-rise{to{transform:none}}
+@keyframes hero-clip{to{clip-path:inset(0 0 0 0)}}
+@keyframes hero-settle{to{transform:scale(1)}}
+@keyframes hero-fade{to{opacity:1;transform:none}}
+.k-js .hero h1 .k-split__line>span{display:block;transform:translateY(108%);animation:hero-rise 1.1s var(--k-ease) forwards;animation-delay:calc(.12s + var(--i,0)*.09s)}
+.k-js .hero__photo{clip-path:inset(0 0 0 100%);animation:hero-clip 1.35s var(--k-ease) .35s forwards}
+.k-js .hero__photo img{transform:scale(1.14);animation:hero-settle 2.4s var(--k-ease) .3s forwards}
+.k-js .hero .fade{opacity:0;transform:translateY(14px);animation:hero-fade .9s var(--k-ease) forwards;animation-delay:calc(.55s + var(--i,0)*.08s)}
+@media (prefers-reduced-motion:reduce){
+  .k-js .hero h1 .k-split__line>span,.k-js .hero__photo,.k-js .hero__photo img,.k-js .hero .fade{animation:none;transform:none;opacity:1;clip-path:none}
+}
+
+/* ---------- marquee ---------- */
+.mq{border-block:0;background:var(--ink);color:#fff;padding:16px 0}
+.mq .k-mq-word{font:italic 800 clamp(1.9rem,4.4vw,3.6rem)/1 var(--k-display);text-transform:uppercase;letter-spacing:0}
+.mq .k-mq-word:nth-child(even){color:#fff;-webkit-text-stroke:0}
+.mq .k-mq-dot{width:.34em;height:.34em;border-radius:0;transform:skewX(-12deg);background:var(--red);font-size:2rem;align-self:center}
+
+/* ---------- section heads ---------- */
+.sec{padding-block:clamp(70px,10vw,140px)}
+.sec__head{display:grid;grid-template-columns:1fr;gap:18px 60px;align-items:end;margin-bottom:clamp(30px,4vw,56px)}
+.sec__head h2,.h2{font:italic 800 clamp(3rem,7.4vw,7rem)/.86 var(--k-display);text-transform:uppercase;letter-spacing:-.01em}
+.sec__head p{max-width:34em;color:#333}
+@media (min-width:900px){.sec__head{grid-template-columns:1.1fr 1fr}}
+
+/* ---------- services accordion (kit 11 restyled) ---------- */
+.k-acc{padding:0;max-width:none}
+.k-acc__list{border-top:2px solid var(--ink)}
+.k-acc__row{border-bottom:1px solid #cfcfcd}
+.k-acc__row summary{grid-template-columns:4.2em 1fr auto;padding:clamp(18px,2.2vw,28px) 0}
+.k-acc__n{font:italic 700 1.2rem var(--k-display);color:var(--red)}
+.k-acc__t{font:italic 800 clamp(2rem,4.6vw,3.9rem)/.92 var(--k-display);text-transform:uppercase;letter-spacing:0}
+.k-acc__t small{font:400 1rem/1.45 var(--k-body);text-transform:none;color:var(--mute);margin-top:8px}
+.k-acc__body{padding-inline-start:calc(4.2em + 10px)}
+.k-acc__body li{border-bottom:1px solid var(--line);font-size:1rem}
+.k-acc__body p{font-size:1rem;color:#333}
+.k-acc__body a{color:var(--red)}
+@media (min-width:900px){.k-acc__body{grid-template-columns:1.4fr 1fr}}
+.allsvc{display:inline-flex;margin-top:34px;font-weight:600;text-decoration:none;font-size:1.05rem}
+
+/* ---------- accident guide (dark, Forge-style) ---------- */
+.acc{position:relative;background:var(--dark);color:#f2f2f0;overflow:hidden;isolation:isolate}
+.acc__tex{position:absolute;inset:0;z-index:-1;opacity:.16;filter:grayscale(1) contrast(1.1)}
+.acc__tex img{width:100%;height:100%;object-fit:cover}
+.acc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--dark) 30%,rgba(18,18,18,.82))}
+.acc__grid{display:grid;grid-template-columns:1fr;gap:48px}
+.acc__side{align-self:start}
+.acc h2{font:italic 800 clamp(3.4rem,8vw,7.6rem)/.84 var(--k-display);text-transform:uppercase;color:#fff}
+.acc__side p{color:#c9c9c6;margin-top:22px;max-width:28em}
+.acc__side .k-btn{margin-top:28px;background:var(--red)}
+.acc__side .k-btn::before{background:#fff}
+.acc__side .k-btn:hover{color:var(--ink)}
+.steps{list-style:none;padding:0;counter-reset:s;border-top:1px solid #3a3a3a}
+.steps li{display:grid;grid-template-columns:3.4rem 1fr;gap:4px 18px;padding:24px 0;border-bottom:1px solid #3a3a3a}
+.steps li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:italic 800 1.9rem/1 var(--k-display);color:#ff4d55;grid-row:span 2}
+.steps h3{font:700 1.2rem/1.25 var(--k-body);color:#fff}
+.steps p{color:#c9c9c6;font-size:.98rem}
+.acc__more{margin-top:30px;font-weight:600;text-decoration:none;color:#fff;display:inline-flex}
+@media (min-width:980px){.acc__grid{grid-template-columns:.9fr 1.1fr;gap:80px}.acc__side{position:sticky;top:120px}}
+
+/* ---------- courtesy car band (HB-style flood) ---------- */
+.band{background:var(--red);color:#fff;display:grid;grid-template-columns:1fr}
+.band__type{padding:clamp(56px,8vw,120px) var(--pad);display:flex;flex-direction:column;justify-content:center;gap:24px}
+.band h2{font:italic 800 clamp(3.4rem,8.6vw,8.4rem)/.84 var(--k-display);text-transform:uppercase}
+.band p{font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:30em;color:#fff}
+.band .k-btn{background:#fff;color:var(--red);align-self:flex-start}
+.band .k-btn::before{background:var(--ink)}
+.band .k-btn:hover{color:#fff}
+/* rescue: photo framed inside the red at 3:2, max 640px (590px source) */
+.band__photo{position:relative;margin:0 var(--pad) clamp(48px,7vw,90px)}
+.band__photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.band__photo figcaption{margin-top:12px;font-size:.88rem;color:#fff;opacity:.92}
+@media (min-width:1000px){
+  .band{grid-template-columns:minmax(0,1fr) min(640px,calc(50% - var(--pad)));align-items:center;padding-inline-end:var(--pad)}
+  .band__photo{margin:clamp(56px,8vw,110px) 0}
+}
+.band__photo--cap{max-width:none}
+@media (min-width:1000px){.band:has(.band__photo--cap){grid-template-columns:minmax(0,1fr) min(620px,calc(50% - var(--pad)))}}
+
+/* ---------- numbers (kit 06 restyled, HB-style ruled columns) ---------- */
+.nums{display:grid;grid-template-columns:1fr;border-top:2px solid var(--ink)}
+.nums__c{padding:28px 0 34px;border-bottom:1px solid var(--line)}
+.nums__n{display:block;font:italic 800 clamp(6rem,15vw,13rem)/.8 var(--k-display);color:var(--ink);letter-spacing:-.02em;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.nums__n small{font-size:.42em;color:var(--red);vertical-align:.95em;margin-inline-start:.04em}
+.nums__t{margin-top:18px;max-width:24em;color:#333}
+.nums__t b{color:var(--ink)}
+@media (min-width:900px){
+  .nums{grid-template-columns:repeat(3,1fr)}
+  .nums__c{border-bottom:0;padding:34px 36px 10px;border-inline-start:1px solid var(--line)}
+  .nums__c:first-child{border-inline-start:0;padding-inline-start:0}
+}
+
+/* ---------- paint / glass split ---------- */
+.split2{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.split2>div{padding:clamp(40px,5vw,70px) 0}
+.split2 h3{font:italic 800 clamp(2.2rem,4.2vw,3.6rem)/.9 var(--k-display);text-transform:uppercase;margin-bottom:16px}
+.split2 p{color:#333;max-width:32em}
+.split2 p+p{margin-top:12px}
+.split2 a{font-weight:600;text-decoration:none;display:inline-flex;margin-top:18px;color:var(--red)}
+@media (min-width:900px){.split2{grid-template-columns:1fr 1fr;gap:70px}.split2>div+div{border-inline-start:1px solid var(--line);padding-inline-start:70px}}
+
+/* ---------- visit (kit 16 restyled) ---------- */
+.k-visit{border-top:0;background:var(--grey)}
+.k-visit h2{font:italic 800 clamp(3rem,7vw,6.6rem)/.86 var(--k-display);text-transform:uppercase;letter-spacing:0}
+.k-visit__addr{font-weight:600}
+.k-visit__land{color:#444}
+.k-visit__badge{border-radius:0}
+.k-visit tr.is-today td{color:var(--red)}
+.k-visit__acts a{border-radius:0;min-height:48px}
+.k-visit__go{background:var(--ink)}
+.k-visit__go:hover{background:var(--red)}
+.k-visit__map{background:var(--ink);color:#fff;overflow:hidden;min-height:420px}
+.k-visit__map::before{content:"1807";position:absolute;left:-.04em;bottom:-.12em;font:italic 800 clamp(9rem,26vw,24rem)/.8 var(--k-display);color:#232323;pointer-events:none}
+.k-visit__map::after{content:"Pacific Ave. \2014  foot of the 18th Street Bridge";position:absolute;left:clamp(20px,3vw,40px);top:clamp(20px,3vw,40px);font:600 .9rem var(--k-body);color:#bdbdba;pointer-events:none}
+.k-visit__map button{background:var(--red);color:#fff;box-shadow:none}
+.k-visit__map button{border-radius:0;min-height:48px}
+.k-visit__mail{display:block;margin:-10px 0 26px;font-weight:600}
+
+/* ---------- page intro (inner pages) ---------- */
+.pi{padding-block:clamp(50px,8vw,110px) clamp(30px,4vw,50px);border-bottom:1px solid var(--line)}
+.pi h1{font:italic 800 clamp(4rem,12vw,11rem)/.82 var(--k-display);text-transform:uppercase;letter-spacing:-.01em}
+.pi h1 .r{color:var(--red)}
+.pi p{margin-top:26px;max-width:38em;font-size:clamp(1.05rem,1.4vw,1.2rem);color:#333}
+
+/* ---------- services page ---------- */
+.pi__split{display:grid;grid-template-columns:1fr;gap:20px 70px;align-items:end}
+@media (min-width:960px){.pi__split{grid-template-columns:1.2fr 1fr}.pi__split p{margin:0 0 .6em}}
+.chips{position:sticky;top:78px;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+.chips__in{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:10px}
+.chips__in::-webkit-scrollbar{display:none}
+.chips a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #cfcfcd;text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.chips a:hover,.chips a.is-on{background:var(--ink);color:#fff;border-color:var(--ink)}
+@media (max-width:980px){.chips{top:66px}}
+.svc__item{display:grid;grid-template-columns:1fr;gap:26px 80px;padding-block:clamp(48px,6vw,90px);border-bottom:1px solid var(--line);scroll-margin-top:150px}
+@media (min-width:960px){.svc__item{grid-template-columns:5fr 6fr}}
+.svc__n{display:block;font:italic 800 1.3rem/1 var(--k-display);color:var(--red);margin-bottom:12px}
+.svc__item h2{font:italic 800 clamp(2.8rem,5.4vw,5.4rem)/.86 var(--k-display);text-transform:uppercase;margin-bottom:22px}
+.svc__item h3{font:700 1.08rem/1.3 var(--k-body);margin:26px 0 10px}
+.svc__r>h3:first-child{margin-top:0}
+.svc__item p{max-width:40em;color:#333}
+.svc__item p+p{margin-top:12px}
+.svc__big{font-size:clamp(1.2rem,1.8vw,1.5rem);line-height:1.45;color:var(--ink)!important}
+@media (min-width:960px){.svc__r{padding-top:34px}}
+.ruled{list-style:none;padding:0;border-top:2px solid var(--ink);max-width:40em}
+.ruled li{padding:11px 0;border-bottom:1px solid var(--line);color:#333}
+.howto{list-style:none;padding:0;counter-reset:h;border-top:2px solid var(--ink)}
+.howto li{counter-increment:h;display:grid;grid-template-columns:2.4em 1fr;padding:10px 0;border-bottom:1px solid var(--line);color:#333}
+.howto li::before{content:counter(h,decimal-leading-zero);font:italic 800 1.2rem/1.3 var(--k-display);color:var(--red)}
+.svc__pair{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--line)}
+.svc__item--half{display:block;border-bottom:0}
+.svc__item--half h2{font-size:clamp(2.4rem,4vw,4rem)}
+.svc__pair .svc__item--half+.svc__item--half{border-top:1px solid var(--line)}
+@media (min-width:960px){.svc__pair{grid-template-columns:1fr 1fr;gap:0 80px}.svc__pair .svc__item--half+.svc__item--half{border-top:0;border-inline-start:1px solid var(--line);padding-inline-start:80px}}
+.svc__act{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:30px}
+.svc__act .k-btn{background:var(--ink);padding:16px 22px}
+.svc__act .k-btn::before{background:var(--red)}
+.svc__fig{overflow:hidden;align-self:center;max-width:640px;margin:0}
+.svc__fig img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.svc__fig figcaption{margin-top:10px;font-size:.88rem;color:var(--mute)}
+.safety{background:var(--red);color:#fff;padding-block:clamp(70px,10vw,140px)}
+.safety__t{font:italic 800 clamp(3.6rem,8.4vw,8rem)/.84 var(--k-display);text-transform:uppercase;max-width:12em}
+.safety small{display:block;margin-top:24px;font-size:1rem}
+
+/* ---------- about ---------- */
+.pi--about{padding-block:clamp(50px,7vw,100px)}
+.ab{display:grid;grid-template-columns:1fr;gap:36px 80px;align-items:start}
+@media (min-width:960px){.ab__txt{padding-top:14px}}
+.pi .ab__big,.ab__big{font:italic 800 clamp(3.2rem,6.4vw,7rem)/.86 var(--k-display);text-transform:uppercase}
+.ab__txt p{color:#333;max-width:36em}
+.ab__txt p+p{margin-top:14px}
+@media (min-width:960px){.ab{grid-template-columns:1.6fr 1fr}}
+.mis{display:grid;grid-template-columns:1fr;gap:30px 80px}
+@media (min-width:960px){.mis{grid-template-columns:.8fr 1.2fr}.mis .h2{position:sticky;top:120px;align-self:start}}
+.steps--light{border-top:2px solid var(--ink)}
+.steps--light li{border-bottom:1px solid var(--line)}
+.steps--light li::before{color:var(--red)}
+.steps--light h3{color:var(--ink);font:italic 800 clamp(1.8rem,3vw,2.6rem)/1 var(--k-display);text-transform:uppercase}
+.steps--light p{color:#333;font-size:1.02rem}
+.slogan{background:var(--ink);color:#fff;padding-block:clamp(70px,10vw,140px)}
+.slogan__grid{display:grid;grid-template-columns:1fr;gap:40px 60px;align-items:end}
+.slogan__t{font:italic 800 clamp(4.2rem,11vw,11rem)/.82 var(--k-display);text-transform:uppercase}
+.slogan__plate{background:#fff;color:var(--ink);padding:28px 28px 24px;max-width:460px}
+.slogan__plate p{margin-top:18px;font-size:.95rem;line-height:1.6}
+@media (min-width:1000px){.slogan__grid{grid-template-columns:1.5fr 1fr}}
+
+/* ---------- accident page ---------- */
+.lists{display:grid;grid-template-columns:1fr;gap:50px 70px}
+.lists h2{font:italic 800 clamp(2.4rem,4.4vw,3.8rem)/.9 var(--k-display);text-transform:uppercase;margin-bottom:18px}
+.lists ul{list-style:none;padding:0;border-top:2px solid var(--ink)}
+.lists li{padding:12px 0;border-bottom:1px solid var(--line);color:#333}
+@media (min-width:900px){.lists{grid-template-columns:1fr 1fr}}
+
+/* ---------- footer ---------- */
+.ft{background:var(--dark);color:#d6d6d3;padding-top:clamp(60px,8vw,100px);font-size:.95rem}
+.ft__top{display:grid;grid-template-columns:1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid #333}
+.ft__name{font:italic 800 clamp(3rem,7vw,6rem)/.84 var(--k-display);text-transform:uppercase;color:#fff}
+.ft h3{font:600 .82rem var(--k-body);color:#9a9a97;margin-bottom:12px}
+.ft a{color:#fff;text-decoration:none}
+.ft ul{list-style:none;padding:0}
+.ft li a{display:inline-block;padding-block:6px}
+.ft address{font-style:normal;line-height:1.7}
+.ft__phone{font:italic 800 2rem/1 var(--k-display);display:inline-block;margin-top:12px;padding-block:6px}
+.ft__bot{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;padding-block:24px 30px;font-size:.84rem;color:#a9a9a6}
+@media (min-width:900px){.ft__top{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+.k-visit__map iframe{z-index:2}
+
+.hd__logo{padding-block:7px}
+.hero__acts .tlink,.allsvc,.acc__more,.split2 a,.k-visit__mail{padding-block:10px}
+.ft li a{padding-block:10px}
+.ft__bot a,.ft p a{display:inline-block;padding-block:10px}
+@media (max-width:980px){.svc__item p a.k-link{display:inline;padding:0}}
+.pi p a.k-link{display:inline;padding:0;line-height:inherit}
+.svc__n{display:block;font:italic 800 1.3rem/1 var(--k-display);color:var(--red);margin-bottom:12px}
+
+h1,h2,.ft__name{text-wrap:balance}
+/* map: real map loads on desktop; poster on phones */
+.k-visit__map::before{font-size:clamp(10rem,30vw,28rem);color:#262626}
+.k-visit__map::after{content:"Pacific Ave., at the foot of the 18th Street Bridge";color:#fff;font-size:1rem}
+@media (min-width:900px){.k-visit__map{min-height:560px;align-self:stretch}}
+/* "What we fix": own hover pattern, red sweep from the left, number slides */
+.k-acc__row summary{position:relative;isolation:isolate;padding-inline:0 12px}
+.k-acc__row summary::before{content:"";position:absolute;inset:0 -14px;z-index:-1;background:var(--red);transform:scaleX(0);transform-origin:0 50%;transition:transform .55s var(--k-ease)}
+.k-acc__n{transition:transform .5s var(--k-ease),color .3s}
+.k-acc__plus{width:auto;height:auto}
+.k-acc__plus::before,.k-acc__plus::after{display:none}
+.k-acc__plus{font:italic 800 1.8rem/1 var(--k-display);transition:transform .45s var(--k-ease)}
+.k-acc__plus:empty::after{display:inline;content:"\2192";position:static;width:auto;height:auto;margin:0;background:none;transform:none}
+.k-acc__row[open] .k-acc__plus{transform:rotate(90deg)}
+@media (hover:hover) and (pointer:fine){
+  .k-acc__row summary:hover{padding-inline-start:0;color:#fff}
+  .k-acc__row summary:hover::before{transform:scaleX(1)}
+  .k-acc__row summary:hover .k-acc__n{transform:translateX(14px);color:#fff}
+  .k-acc__row summary:hover .k-acc__t small{color:#fff}
+}
+@media (prefers-reduced-motion:reduce){.k-acc__row summary::before,.k-acc__n,.k-acc__plus{transition:none}}
+@media (min-width:900px){.k-visit__map{min-height:0;margin:clamp(40px,6vw,96px) var(--pad) clamp(40px,6vw,96px) 0}}
+
+/* rescue (2026-10-24): about - mission starts in the first screen on desktop */
+@media (min-width:960px){
+  .pi--about{padding-block:clamp(44px,5vw,72px) clamp(36px,4vw,56px)}
+  .pi--about .ab__big{font-size:clamp(3rem,5.6vw,6.2rem)}
+  .sec--mis{padding-top:clamp(48px,5vw,72px)}
+}
+@media (min-width:1000px){.hero__ink::before{right:22px;bottom:-.14em;font-size:clamp(8rem,11.5vw,12.5rem);color:#242424}}
+
+.skip{padding:12px 16px}
+.ft li a{min-width:44px}
+/* rescue: ink block = the address as the design element (no repeat of the header logo) */
+.hero__ink::before{content:none}
+@media (min-width:1000px){
+  .hero__ink{justify-content:space-between;gap:24px;padding:34px 36px 30px}
+  .hero__addr{display:flex;flex-direction:column;gap:10px}
+  .hero__num{font:italic 800 clamp(7rem,10.5vw,11rem)/.78 var(--k-display);letter-spacing:-.02em;color:#fff}
+  .hero__st{font:italic 800 clamp(1.6rem,2.3vw,2.3rem)/1 var(--k-display);text-transform:uppercase;color:#fff;border-top:2px solid var(--red);padding-top:12px;align-self:flex-start}
+  .hero__where{flex-direction:row;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
+  .hero__where p{flex:1 1 240px}
+  .hero__where .k-visit__badge{flex-basis:100%;max-width:max-content}
+  .hero__dir{color:#fff;font-weight:600;text-decoration:none;padding-block:10px}
+}
+
+/* ===== rescue 2 (after Fannan round 4, 2026-10-24) ===== */
+/* 1. "What we fix": sticky left head, rows tagged with the real systems */
+.fix{display:grid;grid-template-columns:1fr}
+.sec__head.fix__head{display:block}
+.fix__head p{margin-top:18px}
+.fix__icar{font-size:1.08rem;color:var(--ink)!important}
+.fix__head .k-btn{margin-top:28px;background:var(--red)}
+.fix .k-acc__row summary{grid-template-columns:3.4em minmax(0,1fr) auto auto;align-items:center;gap:10px 18px}
+.fix .k-acc__t{font-size:clamp(2rem,3.3vw,3.2rem)}
+.fix__tag{font:600 .84rem/1 var(--k-body);white-space:nowrap;color:#2c2c2c;border:1px solid #b9b9b6;padding:9px 11px;transition:color .3s,border-color .3s}
+.fix .k-acc__row[open] .fix__tag{border-color:var(--ink);background:var(--ink);color:#fff}
+@media (hover:hover) and (pointer:fine){.fix .k-acc__row summary:hover .fix__tag{color:#fff;border-color:#fff;background:transparent}}
+@media (max-width:640px){
+  .fix .k-acc__row summary{grid-template-columns:2.6em minmax(0,1fr) auto;gap:10px 12px}
+  .fix__tag{grid-column:2;grid-row:2;justify-self:start;margin-top:-2px}
+  .fix .k-acc__plus{grid-column:3;grid-row:1}
+}
+@media (min-width:980px){
+  .fix{grid-template-columns:.8fr 1.2fr;gap:0 clamp(48px,6vw,100px);align-items:start}
+  .sec__head.fix__head{position:sticky;top:120px;margin-bottom:0;border-top:2px solid var(--ink);padding-top:26px}
+  .fix__head h2{font-size:clamp(3.6rem,6.6vw,7rem)}
+}
+
+/* 2. Find the shop: the landmark as the display line, hours as two big lines */
+.vis__land{font:italic 800 clamp(2.3rem,4.2vw,4.2rem)/.92 var(--k-display);color:var(--ink);max-width:12em;text-wrap:balance}
+.vis__addr{margin-top:16px;font-weight:600;font-size:1.05rem}
+.vis__hrs{margin:34px 0 26px;border-top:2px solid var(--ink);padding-top:18px;max-width:520px}
+.vis__hrs .k-visit__badge{margin:0 0 14px}
+.vis__l{font:italic 700 clamp(2rem,3.2vw,2.5rem)/1.08 var(--k-display);text-transform:uppercase;color:var(--ink)}
+.vis__l.is-today{color:var(--red)}
+.vis__l.is-today::after{content:"today";font:600 .82rem var(--k-body);text-transform:none;font-style:normal;margin-inline-start:12px;vertical-align:.5em}
+.k-visit h2{margin-bottom:14px}
+
+/* 3. accident page: heading starts on the same rule as step 01 */
+@media (min-width:980px){
+  .acc--page .acc__grid{align-items:start}
+  .acc--page .acc__side{border-top:1px solid #3a3a3a;padding-top:24px}
+}
+
+/* 4. about: call + open badge on the first screen, less padding under it */
+.ab__act{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:28px}
+.ab__act .k-btn{background:var(--red)}
+.ab__act .k-visit__badge{margin:0}
+.pi--about{padding-bottom:32px}
+@media (min-width:960px){.pi--about{padding-bottom:clamp(24px,2.6vw,36px)}.sec--mis{padding-top:clamp(40px,4vw,60px)}}
+
+/* 5. h3 reads as a sub-head, not another h2 */
+.split2 h3{font:700 clamp(1.45rem,2vw,1.8rem)/1.2 var(--k-body);text-transform:none;letter-spacing:-.015em;margin-bottom:14px}
+.split2 h3::before{content:"";display:block;width:30px;height:3px;background:var(--red);margin-bottom:16px}
+.steps--light h3{font:700 clamp(1.2rem,1.5vw,1.4rem)/1.25 var(--k-body);text-transform:none;letter-spacing:-.01em}
+.k-visit .k-visit__mail{display:inline-block}
+.k-visit h2{margin-bottom:22px}
+/* overflow:hidden made .acc the sticky scroll box (side column sat 120px low); clip keeps the crop without that */
+.acc--page{overflow:clip}
+
+/* r5 must-fixes (Qaed 2026-10-24): zoomed reveal images must not widen the mobile layout */
+.band__photo,.k-js [data-reveal=clip]{overflow:clip}

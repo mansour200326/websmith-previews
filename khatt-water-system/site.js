@@ -36,6 +36,11 @@
   if(!RM&&matchMedia('(min-width:900px) and (pointer:fine)').matches&&px.length){var tk=false;var upd=function(){tk=false;var vh=innerHeight;px.forEach(function(e){var r=e.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;var c=(r.top+r.height/2-vh/2);e.style.transform='translate3d(0,'+(c*(+e.getAttribute('data-speed'))).toFixed(1)+'px,0)'})};
     addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();}
 
+  /* hero: the water inside KHATT drifts a little as you scroll (fine pointers only) */
+  var dr=document.querySelector('[data-drift]');
+  if(dr&&!RM&&matchMedia('(pointer:fine)').matches){var dt=false;var dup=function(){dt=false;var y=Math.min(scrollY,900);dr.style.setProperty('--drift',(y/900*-14).toFixed(2)+'%')};
+    addEventListener('scroll',function(){if(!dt){dt=true;requestAnimationFrame(dup)}},{passive:true});}
+
   /* the pipe: water line fills as you scroll through the steps; each step lights when reached */
   document.querySelectorAll('[data-pipe]').forEach(function(p){
     if(RM){p.classList.add('is-static');return}
@@ -58,6 +63,8 @@
     var btn=m.querySelector('button');
     function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title=m.getAttribute('data-title')||'Map';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');if(btn)btn.remove()};m.appendChild(f)}
     if(btn)btn.addEventListener('click',load);
+    /* load on its own when the section comes near, so the map is simply there */
+    if('IntersectionObserver' in window){var mo=new IntersectionObserver(function(es){if(es[0].isIntersecting){load();mo.disconnect()}},{rootMargin:'600px 0px'});mo.observe(m)}
   });
 
   /* kit 19: magnetic main buttons */

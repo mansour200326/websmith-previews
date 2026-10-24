@@ -436,3 +436,173 @@ html:lang(ar) .wordmark{line-height:.78!important;letter-spacing:-.05em!importan
 .hero__photo picture{display:block;width:100%;height:100%}
 @media (min-width:900px){.hero__photo img{object-position:50% 55%}}
 @media (min-width:700px){.cat li.cat--nd{flex-direction:row;align-items:center;justify-content:flex-start;gap:8px 24px;padding:24px;min-height:0}.cat li.cat--nd b{font-size:1.4rem}.cat li.cat--nd a{margin-inline-start:auto}}
+
+/* ===================== rescue 2026-10-24 ===================== */
+/* --- type: one system. Space Grotesk (variable 400–700) for display, Work Sans for reading, Space Mono only for
+       numbers, tags and the care label. Space Grotesk has no width axis, so the old "wdth" settings are dropped. --- */
+h1,h2,h3{text-wrap:balance}
+p,dd,li{text-wrap:pretty}
+.h2,.idx__name,.deco__item h3,.step h3,.cat b,.sv h3,.pi h1,.ft__brand,.dir__row a,.dir__row span.v,.k-mq-word,.wordmark{font-variation-settings:normal}
+.h2{font-weight:700;line-height:.96;letter-spacing:-.038em}
+.idx__name{font-weight:600;letter-spacing:-.03em;line-height:1}
+.deco__item h3{font-weight:600;letter-spacing:-.015em}
+.step h3{font-weight:600;letter-spacing:-.02em}
+.sv h3{font-weight:700;letter-spacing:-.03em}
+.cat b{font-weight:600;letter-spacing:-.01em}
+.dir__row a,.dir__row span.v{font-weight:600;letter-spacing:-.02em}
+.pi h1{font-weight:700;letter-spacing:-.045em;line-height:.9}
+.mono{font-size:.8rem;letter-spacing:0}
+.idx__for.mono{font-family:var(--k-body);font-size:1rem;line-height:1.45;letter-spacing:0;color:var(--mute)}
+.hero__strip,.hero__strip a{font-family:var(--k-body);font-weight:500;letter-spacing:0}
+.ct__mapnote{font-size:.8rem}
+.ft h3{font-size:.8rem}
+.hd__tel,.tlink,.dir__row a,.ft li a{font-variant-numeric:tabular-nums lining-nums}
+.sec__note{font-size:1.06rem;line-height:1.55;color:#4b5666}
+body{line-height:1.6}
+
+/* --- hero: type-led, the stitch line is the rail --- */
+.hero{padding-top:clamp(18px,2.6vw,34px)}
+.rail{position:relative;margin-top:clamp(8px,1vw,14px)}
+.rail__in{position:relative}
+.rail .stitch{margin-top:0;position:relative;z-index:2}
+.rail__items{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0 clamp(8px,1.6vw,26px);margin-top:-3px;--gh:clamp(170px,calc(30vh - 10px),290px)}
+.hang{position:relative}
+.hang a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink);transform-origin:50% 0;transition:transform .9s var(--ease)}
+.hang__thread{position:relative;display:block;width:2px;height:clamp(18px,2.2vw,32px);background:repeating-linear-gradient(180deg,var(--maroon) 0 6px,transparent 6px 10px)}
+.hang__thread::before{content:"";position:absolute;top:-4px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;border:1.5px solid var(--ink);background:#fff}
+.hang__img{display:block;width:100%;height:var(--gh)}
+.hang__img img{width:100%;height:100%;object-fit:contain;object-position:50% 0;transition:transform 1s var(--ease)}
+.hang__tag{display:block;margin-top:12px;font:500 .98rem/1.25 var(--k-body);text-align:center;transition:color .3s}
+.hang__tag .mono{display:block;font-size:.78rem;color:var(--maroon);margin-bottom:3px}
+.hang a:hover,.hang a:focus-visible{transform:rotate(-2.2deg)}
+[dir=rtl] .hang a:hover,[dir=rtl] .hang a:focus-visible{transform:rotate(2.2deg)}
+.hang a:hover .hang__tag{color:var(--maroon)}
+.k-js .hang{opacity:0;transform:translateY(-28px);transition:opacity .7s ease calc(1.2s + var(--i)*90ms),transform 1.2s var(--ease) calc(1.2s + var(--i)*90ms)}
+.k-js .is-loaded .hang{opacity:1;transform:none}
+.k-js .hang__thread{transform:scaleY(0);transform-origin:50% 0;transition:transform .6s var(--ease) calc(1.15s + var(--i)*90ms)}
+.k-js .is-loaded .hang__thread{transform:none}
+.hero__foot{display:grid;grid-template-columns:1fr;gap:24px;margin-top:clamp(22px,3vw,40px)}
+.hero .hero__panel{position:static;width:auto;background:none;padding:0}
+.hero .label{position:relative;inset:auto;display:none;align-self:end}
+.hero__lede{font-size:clamp(1.12rem,1.5vw,1.36rem);line-height:1.45;max-width:30em}
+.hero__strip{margin-top:clamp(24px,3vw,38px);border-top:1px solid var(--line)}
+@media (min-width:900px){
+  .hero__foot{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:40px}
+  .hero .label{display:block;margin:0}
+  .hero__strip{justify-content:space-between;border-top:1px solid var(--line)}
+}
+@media (max-width:899px){
+  .rail{margin-inline:calc(-1 * var(--pad));overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;scroll-snap-type:x proximity;scroll-padding-inline:var(--pad)}
+  .rail::-webkit-scrollbar{display:none}
+  .rail__in{width:max-content;padding-inline:var(--pad)}
+  .rail__items{grid-template-columns:repeat(7,118px);gap:0 14px;--gh:168px}
+  .hang{scroll-snap-align:start}
+  .hang__tag{font-size:.92rem}
+  .hero__strip{margin-top:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  .k-js .hang,.k-js .hang__thread{opacity:1!important;transform:none!important;transition:none!important}
+  .hang a,.hang__img img{transition:none!important}.hang a:hover{transform:none!important}
+}
+
+/* --- catalogue spec cards --- */
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink);border-inline-start:1px solid var(--line)}
+.spec{display:flex;flex-direction:column;padding:20px 20px 24px;border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .35s}
+.spec:hover{background:#fafbfc}
+.spec__img{display:block;aspect-ratio:1/1;margin-bottom:18px;overflow:hidden}
+.spec__img img{width:100%;height:100%;object-fit:contain;padding:4%;transition:transform 1.1s var(--ease)}
+.spec:hover .spec__img img{transform:scale(1.05)}
+.spec__sec{color:var(--maroon)}
+.spec h3{font:600 1.5rem/1.08 var(--k-display);letter-spacing:-.025em;margin:4px 0 14px}
+.spec dl{display:grid;grid-template-columns:3.6rem 1fr;gap:6px 12px;font-size:.93rem;line-height:1.45;color:#2d3a4c}
+.spec dt{font:400 .78rem/1.85 var(--mono);color:var(--mute)}
+.chips{margin-top:auto;padding-top:18px;display:flex;flex-direction:column;gap:9px}
+.chips__row{display:flex;flex-wrap:wrap;gap:3px}
+.chips__row i{display:block;width:15px;height:15px;background:var(--c);box-shadow:inset 0 0 0 1px rgba(19,34,54,.16)}
+.chips__n{font:400 .8rem/1.3 var(--mono);color:var(--mute)}
+.spec__ask{margin-top:28px;font-size:1.06rem}
+.spec__ask .tlink{min-height:44px}
+@media (min-width:1000px){.specs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:599px){
+  .specs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+    margin-inline:calc(-1 * var(--pad));padding-inline:var(--pad);scroll-padding-inline:var(--pad);border-inline-start:0}
+  .specs::-webkit-scrollbar{display:none}
+  .spec{scroll-snap-align:start;border-inline-start:1px solid var(--line);border-inline-end:0}
+  .spec:last-child{border-inline-end:1px solid var(--line)}
+}
+
+/* --- services: catalogue lists + thumbs --- */
+.sv__cat{margin-top:20px;padding-top:16px;border-top:1px dashed #c3c9d1}
+.sv__cath{color:var(--maroon);margin-bottom:6px}
+.sv__catl{font-size:.98rem;max-width:40em}
+.sv__thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px;max-width:560px}
+.sv__thumbs figure{border:1px solid var(--line);padding:10px 8px 8px;background:#fff;transition:border-color .3s}
+.sv__thumbs figure:hover{border-color:var(--ink)}
+.sv__thumbs img{width:100%;aspect-ratio:1/1;object-fit:contain}
+.sv__thumbs figcaption{font-size:.8rem;line-height:1.3;margin-top:6px;color:var(--mute);text-align:center}
+.ct__dir{margin-top:22px}
+
+/* --- Arabic --- */
+html:lang(ar) .hang__tag,html:lang(ar) .hang__tag .mono,html:lang(ar) .spec__sec,html:lang(ar) .spec dt,html:lang(ar) .chips__n,html:lang(ar) .sv__cath,html:lang(ar) .idx__for.mono{font-family:"Readex Pro",system-ui,sans-serif;letter-spacing:0}
+html:lang(ar) .spec h3{font-family:"Readex Pro",system-ui,sans-serif;font-weight:600;line-height:1.3;letter-spacing:0}
+html:lang(ar) .spec dl{grid-template-columns:3.8rem 1fr;line-height:1.7}
+html:lang(ar) .hero__lede{line-height:1.75}
+html:lang(ar) .h2,html:lang(ar) .idx__name,html:lang(ar) .deco__item h3,html:lang(ar) .step h3,html:lang(ar) .pi h1,html:lang(ar) .sv h3,html:lang(ar) .cat b{font-weight:600;letter-spacing:0}
+html:lang(ar) .h2{line-height:1.2}
+.hang__img img,.spec__img img,.sv__thumbs img{mix-blend-mode:multiply}
+.spec dd.fab span{display:block}
+.spec__ask{display:flex;flex-wrap:wrap;align-items:flex-end;gap:0 .45em}
+@media (max-width:599px){.k-js .specs .spec[data-reveal]{opacity:1;transform:none;transition:none}}
+.sv__thumbs img{height:auto}
+.ct__map:has(iframe.is-on) .ct__mapnote{display:none}
+.pi__stitch{margin-top:clamp(18px,2.4vw,30px);max-width:none}
+
+/* ===================== rescue 2 (after Fannan round 4), 2026-10-24 ===================== */
+/* 1. Arabic line-reveal mask: room for Readex Pro descenders/dots (ج ب إ ي) and marks above */
+html:lang(ar) .k-rv-line{padding-bottom:.5em;margin-bottom:-.5em;padding-top:.12em;margin-top:-.12em}
+
+/* 2. hero rail: cut-outs are now alpha with a shared shoulder/waistband line, so every garment is set to the same
+      height. Each hanger's width = its aspect (--a) x the rail height; flex-shrink scales all of them together. */
+.hang__img img,.spec__img img,.sv__thumbs img{mix-blend-mode:normal}
+.rail__items{display:flex;justify-content:space-between;align-items:flex-start;gap:0 clamp(10px,1.6vw,26px);--gh:clamp(170px,calc(30vh - 10px),290px)}
+.hang{flex:0 1 calc(var(--a) * var(--gh));min-width:0}
+.hang__img{height:auto;width:100%}
+.hang__img img{width:100%;height:auto;object-fit:fill}
+@media (max-width:899px){
+  .rail__items{display:flex;justify-content:flex-start;gap:0 18px;--gh:172px}
+  .hang{flex:none;width:max(96px,calc(var(--a) * var(--gh)))}
+  .hang__img{width:calc(var(--a) * var(--gh));margin-inline:auto}
+}
+
+/* 4. visible caption under the rail */
+.rail__cap{margin-top:clamp(12px,1.4vw,18px);font:400 .8rem/1.4 var(--mono);color:var(--mute);display:flex;align-items:center;gap:10px}
+.rail__cap::before{content:"";width:22px;height:0;border-top:1px dashed var(--maroon);flex:none}
+html:lang(ar) .rail__cap{font-family:"Readex Pro",system-ui,sans-serif;font-size:.85rem}
+
+/* 5. opaque white header */
+.hd{background:#fff}
+
+/* 3. services: sector rows without catalogue thumbs are compact; copy and links on one row from 900px */
+.sv:not(:has(.sv__thumbs)){padding-block:40px}
+@media (min-width:900px){
+  .sv:not(:has(.sv__thumbs)){align-items:center}
+  .sv:not(:has(.sv__thumbs)) .sv__b{display:flex;align-items:center;gap:12px 40px}
+  .sv:not(:has(.sv__thumbs)) .sv__b p{flex:1 1 auto}
+  .sv:not(:has(.sv__thumbs)) .sv__acts{flex:none;margin-top:0}
+}
+
+/* 6. services intro on phones: the call link on its own line, 48px tall */
+@media (max-width:899px){.pi__jump .pi__call{flex-basis:100%;min-height:48px;display:flex;align-items:center}}
+
+/* 7. footer on phones: two columns, brand block across both */
+@media (max-width:899px){
+  .ft__top{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+  .ft__top>div:first-child{grid-column:1/-1}
+  .ft li a{overflow-wrap:anywhere}
+}
+/* keep the inquiry button inside the first desktop screen with the caption added */
+.rail__cap+.hero__foot{margin-top:clamp(18px,1.8vw,26px)}
+@media (min-width:900px){.rail__cap{margin-top:10px}}
+/* 1b. the revealed state kept clip-path:inset(0) on every [data-reveal], which clipped glyphs hanging below a
+       heading's box (the dots of ي on one-line Arabic headings). Only the clip-wipe type needs a clip. */
+.k-js [data-reveal]:not([data-reveal=clip]).is-in{clip-path:none}
