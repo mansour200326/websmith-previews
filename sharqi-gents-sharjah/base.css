@@ -1,0 +1,66 @@
+/* Sharqi Gents Salon concept, Websmith. Palette from their own shop: warm concrete walls, red pipe lamps,
+   black-and-white checker floor, warm Edison light. Type: Unbounded (wide geometric caps, like their sign) +
+   Geist / Geist Mono; Arabic: Rubik. */
+:root{
+  --k-bg:#1c1a17;--k-ink:#f0ebe3;--k-mute:#b3aba0;--k-line:#3a3631;
+  --k-accent:#f2694f;--k-on-accent:#fff;
+  --red:#e0452b;--red-band:#c4341b;--red-lt:#f2694f;--panel:#24211d;--bulb:#f3c98b;
+  --k-display:"Unbounded",system-ui,sans-serif;--k-body:"Geist",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;
+  --k-ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,4vw,56px)
+}
+:root:lang(ar){--k-display:"Rubik",system-ui,sans-serif;--k-body:"Rubik",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--k-bg)}
+body{margin:0;background:var(--k-bg);color:var(--k-ink);font:400 17px/1.6 var(--k-body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+html:lang(ar) body{font-size:18px;line-height:1.85}
+h1,h2,h3,p,ul,figure{margin:0}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bulb);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mono{font-family:var(--mono);font-size:.82rem;letter-spacing:0}
+.wa-ico{width:20px;height:20px;flex:none}
+
+/* ---------- header ---------- */
+.hd{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;gap:18px;padding:14px var(--pad);
+  transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+.hd.is-solid{background:rgba(28,26,23,.94);border-color:var(--k-line);padding-block:10px}
+.hd__logo{display:flex;align-items:baseline;gap:10px;text-decoration:none;margin-inline-end:auto;min-height:44px;align-items:center}
+.hd__word{font:900 1.3rem/1 var(--k-display);letter-spacing:.02em}
+html:lang(ar) .hd__word{font-weight:900;font-size:1.45rem}
+.hd__ar{font:500 .95rem/1 "Rubik",sans-serif;color:var(--k-mute)}
+.hd__nav{display:flex;gap:4px}
+.hd__nav a{text-decoration:none;padding:12px 12px;font-weight:500;font-size:.95rem;color:var(--k-mute);transition:color .25s}
+.hd__nav a:hover,.hd__nav a[aria-current=page]{color:var(--k-ink)}
+.hd__nav a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--red)}
+.hd__tel{font:500 .95rem var(--mono);text-decoration:none;padding:12px 6px;color:var(--k-ink)}
+.hd__lang{display:inline-grid;place-items:center;min-width:44px;min-height:44px;padding:0 10px;text-decoration:none;font:500 1rem/1 "Rubik",sans-serif;border:1px solid var(--k-line);color:var(--k-ink);transition:border-color .25s}
+.hd__lang:hover{border-color:var(--k-ink)}
+.hd__wa{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;background:var(--red-band);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;transition:background .3s}
+.hd__wa:hover{background:#a82a14}
+@media (max-width:899px){.hd__tel,.hd__nav .opt{display:none}.hd__ar{display:none}.hd{gap:8px}.hd__wa span{display:none}.hd__wa{padding:0 12px}.hd__nav a{padding:12px 8px}}
+
+/* ---------- mobile dock (two plain square buttons, not a floating bubble) ---------- */
+.dock{display:none}
+@media (max-width:899px){
+  .dock{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset:auto 0 0;z-index:49;background:var(--k-bg);border-top:1px solid var(--k-line)}
+  .dock a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;text-decoration:none;font-weight:600}
+  .dock a:first-child{background:var(--red-band);color:#fff}
+  body{padding-bottom:56px}
+}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 24px;text-decoration:none;font:600 1rem/1 var(--k-body);position:relative;overflow:hidden;isolation:isolate;transition:color .4s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateY(101%);transition:transform .55s var(--k-ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn--red{background:var(--red-band);color:#fff}.btn--red::before{background:#8f230f}
+.btn--line{box-shadow:inset 0 0 0 1px var(--k-ink);color:var(--k-ink)}.btn--line::before{background:var(--k-ink)}.btn--line:hover{color:var(--k-bg)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- checker floor band ---------- */
+.checker{height:clamp(28px,4vw,48px);background:conic-gradient(#0f0e0d 90deg,#e9e4dc 0 180deg,#0f0e0d 0 270deg,#e9e4dc 0) 0 0/calc(2*clamp(28px,4vw,48px)) calc(2*clamp(28px,4vw,48px))}
+
+/* ---------- sections ---------- */
+.wrap{max-width:1400px;margin:0 auto;padding-inline:var(--pad)}
+.h2{font:700 clamp(2.2rem,5.4vw,4.6rem)/.98 var(--k-display);letter-spacing:-.03em}
+html:lang(ar) .h2{font-weight:800;line-height:1.2}
