@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/bay-m3s.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/bay-m3s.webp" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/unit5-m3s.webp" media="(max-width:700px)" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="img/mark.png">
 </head>
@@ -45,7 +46,7 @@
 
 <section class="k-kb" aria-label="Introduction">
   <div class="k-kb__media">
-    <img class="k-kb__img" src="img/bay-m3s.webp" alt="Inside The Workshop at Unit 5, Haines Park: a yellow BMW M3 in the bay and a white M3 up on the blue lift" fetchpriority="high" width="2400" height="1801">
+    <picture><source media="(max-width:700px)" srcset="img/unit5-m3s.webp"><img class="k-kb__img" src="img/bay-m3s.webp" alt="A yellow and a white BMW M3 at The Workshop, Unit 5, Haines Park" fetchpriority="high" width="2400" height="1801"></picture>
   </div>
   <div class="k-kb__body">
     <h1><span class="k-line-mask"><span class="k-kb__line" style="--i:0">The Workshop,</span></span><span class="k-line-mask"><span class="k-kb__line" style="--i:1">Leeds</span></span></h1>
