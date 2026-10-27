@@ -249,3 +249,14 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;letter-spacing:-.03em;line
 .k-visit__nums a,.svc__acts .k-link,.ig a.k-link{display:inline-flex;align-items:center;min-height:44px}
 .k-visit__nums li{align-items:center;padding:2px 0}
 @media (max-width:899px){.ft li a{min-height:44px}}
+/* compact programmes row (services) */
+.minis__grid{display:grid;gap:clamp(18px,3vw,40px)}
+@media (min-width:800px){.minis__grid{grid-template-columns:repeat(3,1fr)}}
+.mini h2{font-size:clamp(1.7rem,2.6vw,2.3rem);margin-bottom:10px}
+.mini p:not(.svc__num){color:var(--mute);margin-bottom:8px}
+.mini__img{aspect-ratio:4/3;border-radius:clamp(14px,2vw,24px);overflow:hidden;margin-bottom:18px;background:var(--tint)}
+.mini__img img{width:100%;height:100%;object-fit:cover}
+.mini__img--dots{display:grid;place-items:center;background:var(--tint)}
+.mini__img--dots .dots{gap:12px}.mini__img--dots .dots i{width:34px;height:34px}
+.mini .k-link{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:600px){.chart span{display:none}.chart b{font-size:1.5rem}}

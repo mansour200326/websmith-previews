@@ -45,43 +45,42 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;line-height:1.02;letter-sp
 }
 @media (max-width:640px){
   .brand b{font-size:.92rem}.brand small{display:none}.brand img{width:40px}
-  .top__tel .lbl{display:none}
+  .top__tel .k-roll{display:none}
+  .brand b{max-width:9.5em}
   .top__apply{padding:0 12px!important}
   .top__acts a.hide-s{display:none}
 }
 
 /* ---------- hero: type-led name + panorama band ---------- */
-.hero{padding-top:clamp(28px,5vw,64px);position:relative}
-.hero__grid{display:grid;grid-template-columns:1fr;gap:18px 40px;align-items:end}
-.hero__name{font:700 clamp(5.2rem,19vw,15.5rem)/.8 var(--k-display);letter-spacing:-.055em;color:var(--royal);margin-inline-start:-.05em}
-.hero__name .light{font-weight:300;font-style:italic;letter-spacing:-.04em;color:var(--k-ink);font-size:.42em;display:block;margin-top:.22em;line-height:1}
-.hero__side{padding-bottom:.6em;max-width:30em}
-.hero__ar{font:500 clamp(1.25rem,2.1vw,1.6rem)/1.5 "Readex Pro",sans-serif;color:var(--royal);margin-bottom:12px}
-.hero__lead{font-size:clamp(1.06rem,1.4vw,1.22rem);color:var(--k-ink);margin-bottom:22px}
-.hero__acts{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 24px;background:var(--royal);color:#fff;text-decoration:none;font-weight:600;border-radius:2px;position:relative;overflow:hidden;isolation:isolate}
+.hero{display:grid;grid-template-columns:minmax(var(--pad),1fr) minmax(0,calc(var(--max) - 2*var(--pad))) minmax(var(--pad),1fr);padding-top:clamp(22px,4vw,54px);row-gap:0}
+.hero__name{grid-column:2;grid-row:1;font:700 clamp(5rem,13.5vw,11.5rem)/.8 var(--k-display);letter-spacing:-.055em;color:var(--royal);margin-inline-start:-.04em;align-self:end}
+.hero__name .light{font-weight:300;font-style:italic;letter-spacing:-.02em;color:var(--k-ink);font-size:.3em;display:block;margin-top:.3em;line-height:1.05}
+.hero__side{grid-column:2;grid-row:3;max-width:34em;padding-top:26px}
+.hero__ar{font:500 clamp(1.2rem,1.9vw,1.5rem)/1.5 "Readex Pro",sans-serif;color:var(--royal);margin-bottom:10px}
+.hero__lead{font-size:clamp(1.04rem,1.3vw,1.17rem);margin-bottom:22px}
+.hero__acts{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
+.pano{grid-column:1/-1;grid-row:2;position:relative;margin:clamp(22px,3vw,36px) 0 0;height:clamp(250px,31vw,470px);overflow:hidden;clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}
+@media (min-width:960px){.hero__side{grid-row:1;justify-self:end;align-self:end;padding:0 0 .4em}}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 24px;background:var(--royal);color:#fff;text-decoration:none;font-weight:600;border-radius:2px;position:relative;overflow:hidden;isolation:isolate;white-space:nowrap}
 .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--k-ink);transform:translateY(101%);transition:transform .55s var(--k-ease)}
 .btn:hover::before,.btn:focus-visible::before{transform:none}
 .tlink{font-weight:600;text-decoration:none;color:var(--royal);background:linear-gradient(currentColor,currentColor) no-repeat 0 100%/100% 1.5px;padding:10px 0 3px}
 .tlink:hover{animation:k-relink .7s var(--k-ease)}
 [dir=rtl] .tlink{background-position:100% 100%}
-@media (min-width:960px){.hero__grid{grid-template-columns:auto 1fr}.hero__side{justify-self:end}}
-
-.pano{position:relative;margin-top:clamp(26px,4vw,48px);height:clamp(300px,42vw,560px);overflow:hidden;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
 .pano img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;transform-origin:50% 50%}
-.pano::after{content:"";position:absolute;inset:clamp(10px,1.4vw,18px);border:1px solid rgba(255,255,255,.7);pointer-events:none}
-.pano figcaption{position:absolute;inset-inline-start:clamp(22px,2.6vw,36px);bottom:clamp(44px,7vw,92px);color:#fff;font-size:.86rem;font-weight:600;background:rgba(15,29,69,.72);padding:6px 10px}
-.k-js .pano{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);animation:pano-open 1.3s var(--k-ease) .35s forwards}
-.k-js .pano img{animation:kb 20s ease-out .35s both}
-@keyframes pano-open{to{clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}}
-@keyframes kb{from{transform:scale(1.14)}to{transform:scale(1)}}
-.hl{display:block;overflow:hidden;padding-bottom:.04em}
+.pano::after{content:"";position:absolute;inset:clamp(10px,1.4vw,18px);border:1px solid rgba(255,255,255,.75);pointer-events:none}
+.pano figcaption{position:absolute;inset-inline-start:clamp(22px,2.6vw,36px);bottom:clamp(40px,6vw,80px);color:#fff;font-size:.86rem;font-weight:600;background:rgba(15,29,69,.75);padding:6px 10px}
+.k-js .pano{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);animation:pano-open 1.3s var(--k-ease) .3s forwards}
+.k-js .pano img{animation:kb 20s ease-out .3s both}
+@keyframes pano-open{to{clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hl{display:block;overflow:hidden;padding-bottom:.06em}
 .hl>span{display:block}
 .k-js .hl>span{transform:translateY(105%);animation:rise 1.1s var(--k-ease) forwards;animation-delay:calc(.1s + var(--i,0)*.12s)}
 .k-js .hero__side{opacity:0;animation:fadeup 1s var(--k-ease) .55s forwards}
 @keyframes rise{to{transform:none}}
 @keyframes fadeup{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@media (max-width:640px){.pano{height:46vh;min-height:280px}}
+@media (max-width:640px){.pano{height:36vh;min-height:240px}.pano figcaption{font-size:.78rem}}
 
 /* notice line under hero */
 .notice{display:grid;grid-template-columns:1fr;gap:10px 40px;padding-block:clamp(26px,4vw,44px) clamp(40px,6vw,80px)}
@@ -182,7 +181,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;line-height:1.02;letter-sp
 .letter cite b{color:var(--k-ink);font-weight:600}
 
 /* ---------- admissions steps ---------- */
-.steps{display:grid;gap:0;counter-reset:s;border-top:1px solid var(--k-line);margin-top:30px}
+.steps{display:grid;gap:0;padding:0;border-top:1px solid var(--k-line);margin-top:30px}
 @media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr);border-top:0;gap:0 40px}}
 .steps li{list-style:none;padding:24px 0;border-bottom:1px solid var(--k-line)}
 @media (min-width:900px){.steps li{border-top:2px solid var(--royal);border-bottom:0}}
@@ -209,8 +208,8 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;line-height:1.02;letter-sp
 .foot{background:var(--k-ink);color:#cdd5ea;margin-top:clamp(64px,10vw,130px);padding-block:clamp(50px,7vw,90px) 30px}
 .foot a{color:#fff;text-decoration:none;display:inline-block;padding-block:6px}
 .foot a:hover{text-decoration:underline}
-.foot__big{font:700 clamp(2.6rem,9vw,8rem)/.85 var(--k-display);letter-spacing:-.05em;color:#fff;margin-bottom:clamp(30px,5vw,60px)}
-.foot__big span{display:block;font:400 clamp(1.1rem,2vw,1.6rem)/1.6 "Readex Pro",sans-serif;letter-spacing:0;color:#cdd5ea;margin-top:14px}
+.foot .foot__big{font:700 clamp(2.6rem,9vw,8rem)/.85 var(--k-display);letter-spacing:-.05em;color:#fff;margin-bottom:clamp(30px,5vw,60px)}
+.foot .foot__big span{display:block;font:400 clamp(1.1rem,2vw,1.6rem)/1.6 "Readex Pro",sans-serif;letter-spacing:0;color:#cdd5ea;margin-top:14px}
 .foot__grid{display:grid;gap:30px 40px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.18)}
 .foot h2{font:600 .95rem/1.3 var(--k-body);letter-spacing:0;color:#fff;margin-bottom:10px}
 .foot ul{list-style:none;padding:0}
@@ -253,7 +252,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;line-height:1.02;letter-sp
 
 /* reduced motion */
 @media (prefers-reduced-motion:reduce){
-  .k-js .pano,.k-js .pano img,.k-js .hl>span,.k-js .hero__side{animation:none!important;transform:none!important;opacity:1!important;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)!important}
+  .k-js .pano,.k-js .pano img,.k-js .hl>span,.k-js .hero__side{animation:none!important;transform:none!important;opacity:1!important;clip-path:polygon(0 0,100% 0,100% 86%,0 100%)!important}
   .idx h3,.idx__ph{transition:none!important}
 }
 
@@ -266,3 +265,6 @@ html:lang(ar) .phead h1{line-height:1.15}
 html:lang(ar) .letter blockquote{font-size:clamp(1.3rem,2.3vw,1.9rem);line-height:1.7}
 html:lang(ar) .sec__h,html:lang(ar) .strip .k-drag__head h2,html:lang(ar) .k-story__head h2{line-height:1.2}
 html:lang(ar) .k-drag__meta h3,html:lang(ar) .k-story__step h3{font-family:"Readex Pro",sans-serif;line-height:1.35}
+
+.top__tel .k-roll{white-space:nowrap}
+@media (max-width:640px){.brand .bn-long{display:none}}

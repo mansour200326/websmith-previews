@@ -477,7 +477,6 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 html:lang(ar) body{font-size:17px;line-height:1.8}
 html:lang(ar) h1,html:lang(ar) h2,html:lang(ar) h3{letter-spacing:0!important;line-height:1.25!important;font-weight:700}
 /* B) in-page swap */
-html:lang(en) [lang=ar]:not(html):not(.k-lang *),html:lang(ar) [lang=en]:not(html):not(.k-lang *){display:none!important}
 .k-swap-fade body{animation:k-langfade .45s ease}
 @keyframes k-langfade{from{opacity:.2}}
 /* toggle */
