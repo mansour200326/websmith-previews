@@ -19,7 +19,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="hd">
   <div class="wrap hd__in">
-    <a href="./" aria-current="page"><span class="logo" role="img" aria-label="Al Ain Juniors School, home"></span></a>
+    <a href="./" aria-current="page"><svg class="logo" viewBox="0 0 900 325" role="img" aria-label="Al Ain Juniors School, home"><filter id="lf"><feFlood flood-color="#1f3a8f"/><feComposite in2="SourceAlpha" operator="in"/></filter><image href="img/logo.webp" width="900" height="325" filter="url(#lf)"/></svg></a>
     <nav class="hd__nav" aria-label="Main">
       <a class="k-link" href="./" aria-current="page">Home</a>
       <a class="k-link" href="services.html">Our schools</a>
@@ -32,7 +32,7 @@
       <a href="#visit">Visit</a>
     </div>
     <a class="hd__tel" href="tel:+97137810077"><span class="k-roll"><span data-text="03 781 0077">03 781 0077</span></span></a>
-    <a class="hd__lang" href="ar/" lang="ar" hreflang="ar" aria-label="عربي, Arabic version">عربي</a>
+    <a class="hd__lang" href="ar/" hreflang="ar" aria-label="عربي, Arabic version">عربي</a>
     <a class="hd__call" href="tel:+97137810077" aria-label="Call 03 781 0077"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="currentColor"/></svg></a>
     <details class="nav-m"><summary aria-label="Menu"><span></span></summary>
       <nav class="nav-m__panel" aria-label="Main, phone">
@@ -46,33 +46,30 @@
 <main id="main">
 <!-- HERO: type-led, offset italic second line (Brighton College), photo opens in a clip wipe with a slow zoom -->
 <section class="hero" aria-labelledby="hero-h">
-  <div class="wrap">
+  <div class="hero__head">
     <h1 id="hero-h"><span class="ln"><span style="--i:0">Al Ain Juniors</span></span><span class="ln ln--2"><span style="--i:1">School <small>since 1989</small></span></span></h1>
-    <div class="hero__row">
-      <div>
-        <p class="hero__lead fade" style="--i:0">British (Cambridge) and Indian (CBSE) schooling from KG to Grade 12, and our own nursery for children from 2 to 4. One campus in Falaj Hazza, just behind Schools Road.</p>
-        <div class="hero__acts fade" style="--i:1">
-          <a class="btn" data-k-magnetic="0.25" href="tel:+97137810077">Call admissions 03 781 0077</a>
-          <a class="tlink k-link" href="services.html">See the three schools <span class="k-arrow" aria-hidden="true">&#8594;</span></a>
-        </div>
+    <div class="hero__side">
+      <p class="hero__lead fade" style="--i:0">British (Cambridge) and Indian (CBSE) schooling from KG to Grade 12, and our own nursery for children from 2 to 4. One campus in Falaj Hazza, just behind Schools Road.</p>
+      <div class="hero__acts fade" style="--i:1">
+        <a class="btn" data-k-magnetic="0.25" href="tel:+97137810077">Call admissions 03 781 0077</a>
+        <a class="tlink k-link" href="services.html">See the three schools <span class="k-arrow" aria-hidden="true">&#8594;</span></a>
       </div>
-      <dl class="hero__facts">
-        <div class="fade" style="--i:2"><dt>ADEK inspection</dt><dd>Rated Good</dd></div>
-        <div class="fade" style="--i:3"><dt>Cambridge</dt><dd>Accreditation AE187</dd></div>
-        <div class="fade" style="--i:4"><dt>CBSE</dt><dd>Affiliation 6630040</dd></div>
-        <div class="fade" style="--i:5"><dt>Students from</dt><dd>25+ nationalities</dd></div>
-      </dl>
     </div>
   </div>
   <figure class="hero__photo"><img src="img/hero.webp" alt="Four Al Ain Juniors students in the British System uniform, smiling in a corridor at school" fetchpriority="high" width="2400" height="1201"></figure>
-  <p class="hero__cap"><span>British System students</span><span>Falaj Hazza, Al Ain</span></p>
+  <ul class="hero__cap" aria-label="Recognition">
+    <li class="fade" style="--i:2"><span>ADEK inspection</span> Rated Good</li>
+    <li class="fade" style="--i:3"><span>Cambridge</span> AE187</li>
+    <li class="fade" style="--i:4"><span>CBSE</span> 6630040</li>
+    <li class="fade" style="--i:5"><span>Students from</span> 25+ nationalities</li>
+  </ul>
 </section>
 
 <!-- THREE SCHOOLS: kit 11 accordion, restyled as a serif index -->
 <section class="sec schools" aria-labelledby="schools-h">
   <div class="wrap">
     <div class="split-head">
-      <h2 class="h2" id="schools-h" data-reveal="lines">Two curricula and a nursery, <em>side by side</em></h2>
+      <h2 class="h2" id="schools-h"><span class="vh">Two curricula and a nursery, side by side</span><span class="hl" aria-hidden="true" data-reveal="lines">Two curricula and a nursery,</span> <em class="hl" aria-hidden="true" data-reveal="lines" data-reveal-delay="120">side by side</em></h2>
       <p class="intro" data-reveal data-reveal-delay="150">The British and Indian systems run in two separate wings of the same campus, each with its own reception, science and computer labs, library and hall. Pick the one that fits your child, then call us or come and see it.</p>
     </div>
     <div class="k-acc" data-k-acc>
@@ -115,7 +112,7 @@
   <div class="k-stats">
     <h2 class="band__h" id="band-h" data-reveal>Thirty-seven years in Al Ain. Our founder still sits on the board.</h2>
     <div class="k-stats__row" data-reveal>
-      <span class="k-stats__num"><span data-k-count="1989" data-k-count-from="1950">1989</span></span>
+      <span class="k-stats__num"><span>1989</span></span>
       <p class="k-stats__txt"><b>Mrs Tanveer Arshad opens a small nursery in Al Ain.</b> Primary, secondary and senior classes followed, one grade a year.</p>
     </div>
     <div class="k-stats__row" data-reveal>
@@ -210,7 +207,7 @@
 
 <section class="sec close" aria-labelledby="close-h">
   <div class="wrap">
-    <h2 class="h2" id="close-h" data-reveal="lines">Places go early. <em>Start with a call.</em></h2>
+    <h2 class="h2" id="close-h"><span class="vh">Places go early. Start with a call.</span><span class="hl" aria-hidden="true" data-reveal="lines">Places go early.</span> <em class="hl" aria-hidden="true" data-reveal="lines" data-reveal-delay="120">Start with a call.</em></h2>
     <p data-reveal>We're one of the most asked-for schools in the city and places are limited, so we encourage parents to start the admission process as early as they can. Siblings of current students get priority.</p>
     <div class="close__acts" data-reveal>
       <a class="btn btn--w" data-k-magnetic="0.25" href="tel:+97137810077">Call 03 781 0077</a>
@@ -225,9 +222,9 @@
 <footer class="ft">
   <div class="wrap">
     <div class="ft__top">
-      <div><span class="logo logo--w" role="img" aria-label="Al Ain Juniors School, a member of AJ Group of Schools"></span><p style="margin-top:18px">British (Cambridge) and Indian (CBSE) school, KG to Grade 12, with Al Ain Juniors Nursery. Part of AJ Group of Schools.</p></div>
+      <div><img class="logo logo--w" src="img/logo.webp" alt="Al Ain Juniors School, a member of AJ Group of Schools" width="900" height="325" loading="lazy"><p style="margin-top:18px">British (Cambridge) and Indian (CBSE) school, KG to Grade 12, with Al Ain Juniors Nursery. Part of AJ Group of Schools.</p></div>
       <div><h3>Visit</h3><p>Falaj Hazza, Al Ain<br>Abu Dhabi, UAE</p><p><a href="tel:+97137810077">03 781 0077</a><br><a href="tel:+97137810043">03 781 0043</a></p></div>
-      <div><h3>Pages</h3><ul><li><a href="./">Home</a></li><li><a href="services.html">Our schools</a></li><li><a href="services.html#admissions">Admissions</a></li><li><a href="about.html">About</a></li><li><a href="ar/" lang="ar">بالعربي</a></li></ul></div>
+      <div><h3>Pages</h3><ul><li><a href="./">Home</a></li><li><a href="services.html">Our schools</a></li><li><a href="services.html#admissions">Admissions</a></li><li><a href="about.html">About</a></li><li><a href="ar/">بالعربي</a></li></ul></div>
       <div><h3>Follow</h3><ul><li><a href="https://www.instagram.com/alainjuniorsschool/">Instagram</a></li><li><a href="https://www.facebook.com/ajschoolalain">Facebook</a></li><li><a href="https://www.youtube.com/channel/UCdix1_WsAux52hetGgz3vdQ">YouTube</a></li><li><a href="https://www.linkedin.com/company/al-ain-juniors-school">LinkedIn</a></li></ul></div>
     </div>
     <p class="ft__name" aria-hidden="true">Al Ain <i>Juniors</i></p>
