@@ -402,7 +402,7 @@ h2{font-size:clamp(2.8rem,7vw,6rem);text-transform:uppercase}
 .k-quotes__slide blockquote::before{color:var(--orange);font-size:3em;line-height:.7}
 .k-quotes__who span{color:var(--k-mute)}
 .k-quotes__btns button{border-color:var(--k-ink)}
-.k-quotes__dots button[aria-current=true]{background-color:var(--orange)}
+.k-quotes__dots button[aria-current=true]{background:var(--orange);background-clip:content-box}
 
 /* team (kit 13) */
 .k-team{max-width:var(--max)}
