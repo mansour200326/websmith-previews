@@ -374,3 +374,12 @@ html:lang(ar) .foot .foot__big{line-height:1.25;font-size:clamp(2.2rem,7vw,6.5re
 @media (max-width:640px){html:lang(ar) .foot .foot__big{font-size:clamp(1.9rem,8.6vw,8rem)}}
 html:lang(ar) .foot .foot__big .en-tag{display:block;margin-top:4px;font-family:var(--k-body)}
 .foot__note .note-en{display:block}
+/* live-review fixes (Fannan 2026-10-27) */
+.pano::after{content:none;display:none}
+.hero__name .nw{display:inline;white-space:nowrap}
+@media (min-width:900px){
+  .k-story__grid{grid-template-columns:minmax(0,600px) 1fr}
+  .k-story__media{max-width:600px;width:100%;height:auto;aspect-ratio:4/5;max-height:82vh;top:9vh}
+  .k-story__step{min-height:55vh}
+  .k-story__step h3{font-size:clamp(1.8rem,2.6vw,2.4rem)}
+}

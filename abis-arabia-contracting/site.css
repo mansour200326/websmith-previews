@@ -406,3 +406,16 @@ h2{font-size:clamp(2.6rem,6.4vw,5.6rem);text-transform:uppercase}
 .ab-photo{margin-top:0}
 @media (min-width:900px){.ab-photo{width:62%;margin-inline-start:auto}}
 .trades{columns:2 150px}
+/* live-review fixes (Fannan 2026-10-27) */
+.hero__vend{font-family:"Familjen Grotesk",var(--k-body),sans-serif;font-size:15px;color:var(--ink);white-space:nowrap}
+[dir=rtl] .hero__vend{font-family:"Cairo",system-ui,sans-serif}
+.hero__photo img{object-position:50% 58%}
+@media (max-width:700px){
+  .hero__photo img{object-position:42% 60%}
+  .hero__meta{flex-direction:column;gap:4px}
+  .hero__vend{white-space:normal;font-size:14px;line-height:1.45}
+}
+/* one grade for the whole photo set */
+.hero__photo img,.s__ph img,.fleet__ph img,.nums__ph img,.k-acc__body img,.k-acc__float img,.ab-photo img{filter:saturate(.85) contrast(1.05)}
+.hero__photo,.s__ph,.fleet__ph,.nums__ph{position:relative}
+.hero__photo::after,.s__ph::after,.fleet__ph::after,.nums__ph::after,.k-acc__float::after{content:"";position:absolute;inset:0;background:var(--navy);mix-blend-mode:multiply;opacity:.12;pointer-events:none;z-index:1}

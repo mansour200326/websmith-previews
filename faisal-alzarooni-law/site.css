@@ -880,3 +880,9 @@ bdi,.ltr{unicode-bidi:isolate;direction:ltr}
   .hero__stage{margin-top:-6px;min-height:min(112vw,600px)}
   .hero__name{top:2%}
 }
+/* live-review nits (Fannan 2026-10-27) */
+.find .k-visit__map{background:linear-gradient(rgba(122,26,31,.6),rgba(122,26,31,.6)),url(img/seal-white.webp) center/min(62%,240px) no-repeat,var(--ox)}
+@media (max-width:899px){
+  .hero__name--ar{font-size:17vw;justify-content:flex-start;padding-inline-start:5vw}
+  [dir=rtl] .hero__man{inset-inline-end:-18%}
+}
