@@ -24,7 +24,7 @@ a{color:inherit}
 /* ---------- header ---------- */
 .hd{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;gap:18px;padding:14px var(--pad);
   transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
-.hd.is-solid{background:rgba(28,26,23,.94);border-color:var(--k-line);padding-block:10px}
+.hd.is-solid{background:#1c1a17;border-color:var(--k-line);padding-block:10px}
 .hd__logo{display:flex;align-items:baseline;gap:10px;text-decoration:none;margin-inline-end:auto;min-height:44px;align-items:center}
 .hd__word{font:900 1.3rem/1 var(--k-display);letter-spacing:.02em}
 html:lang(ar) .hd__word{font-weight:900;font-size:1.45rem}

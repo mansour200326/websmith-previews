@@ -55,7 +55,7 @@
   /* open now (Abu Dhabi time). Shifts from their Fresha listing; hours past 24 run into the next morning. */
   var S={0:[14,26],1:[12,24],3:[12,24],4:[12,24],5:[14,26],6:[14,26]};
   var DAYS=AR?['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت']:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  function hr(h){h=h%24;if(AR){return h===0?'12 منتصف الليل':h===12?'12 الظهر':h<12?h+' الفجر':(h-12)+' العصر'}return h===0?'12am':h===12?'12pm':h<12?h+'am':(h-12)+'pm'}
+  function hr(h){h=h%24;if(AR){return h===0?'12 منتصف الليل':h===12?'12 الظهر':h<12?h+' الفجر':h<16?(h-12)+' الظهر':(h-12)+' العصر'}return h===0?'12am':h===12?'12pm':h<12?h+'am':(h-12)+'pm'}
   try{
     var parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Dubai',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
     var g=function(t){return(parts.find(function(p){return p.type===t})||{}).value};

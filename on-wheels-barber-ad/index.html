@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Overpass:wght@400;600;700&family=Overpass+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/van-open.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-desk.webp" media="(min-width:861px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/van-open.webp" media="(max-width:860px)" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -31,16 +32,21 @@
     <a href="ar/" lang="ar" hreflang="ar">العربية</a>
   </nav>
   <p class="hd__status" data-ow-status hidden><span class="dot"></span><span></span></p>
-  <a class="hd__tel" href="tel:+971547797729"><svg class="tel-ic" aria-hidden="true"><use href="#tel"/></svg><span class="hd__tel-t sr">Call </span><span class="hd__tel-t k-roll" style="margin-inline-start:8px"><span data-text="054 779 7729">054 779 7729</span></span></a>
+  <a class="hd__tel" href="tel:+971547797729" aria-label="Call 054 779 7729"><svg class="tel-ic" aria-hidden="true"><use href="#tel"/></svg><span class="hd__tel-t k-roll"><span data-text="054 779 7729">054 779 7729</span></span></a>
   <a class="hd__wa" href="https://wa.me/971547797729?text=Hi%20On%20Wheels%2C%20I%27d%20like%20a%20home%20visit.%0AArea%3A%20%0ADay%20and%20time%3A%20%0AService%3A%20"><svg class="wa-ic" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
 </header>
+<nav class="subnav" aria-label="Main (mobile)">
+    <a href="./" aria-current="page">Home</a>
+    <a href="services.html">Services &amp; prices</a>
+    <a href="ar/" lang="ar" hreflang="ar">العربية</a>
+  </nav>
 
 <main>
 <section class="hero" aria-labelledby="hero-h">
   <h1 class="hero__h" id="hero-h">
     <span class="hl"><span style="--i:0">The barber</span></span>
-    <span class="hl"><span style="--i:1">comes to</span></span>
-    <span class="hl hl--tab"><span>your door.</span></span>
+    <span class="hl"><span style="--i:1">comes to<span class="y-d"> your</span></span></span>
+    <span class="hl hl--tab"><span><span class="y-m">your </span>door.</span></span>
   </h1>
   <div class="hero__aside">
     <span class="pole" aria-hidden="true"></span>
@@ -53,7 +59,7 @@
     </div>
   </div>
   <figure class="hero__photo" style="margin-inline:0">
-    <img src="img/van-open.webp" width="2400" height="1350" fetchpriority="high" alt="The black On Wheels van parked with its side door open: a barber's chair, counter and warm lights inside.">
+    <picture><source media="(min-width:861px)" srcset="img/hero-desk.webp" width="1950" height="1350"><img src="img/van-open.webp" width="2400" height="1350" fetchpriority="high" alt="The black On Wheels van parked with its side door open: a barber's chair, counter and warm lights inside."></picture>
     <figcaption class="hero__cap">Door open: the chair, basin and lights are inside.</figcaption>
   </figure>
 </section>
@@ -88,7 +94,7 @@
 </section>
 
 <section class="sec inside" aria-labelledby="inside-h" style="padding-top:0">
-  <div>
+  <div class="inside__a">
     <h2 class="h2" id="inside-h" data-reveal="lines">Inside the van</h2>
     <p class="lede" data-reveal data-reveal-delay="150">Everything you'd find in a good barbershop, fitted into a van. You step in from the pavement and sit down.</p>
     <ol class="legend" data-reveal data-reveal-delay="250">
@@ -97,19 +103,21 @@
       <li data-pin="3"><span class="n">03</span><span><b>Steriliser cabinet</b><span class="t">Combs and tools are kept in a UV steriliser.</span></span></li>
       <li data-pin="4"><span class="n">04</span><span><b>Lit wood-slat walls</b><span class="t">Bright inside at night too: the van is out until 2am on weekend nights.</span></span></li>
     </ol>
+  </div>
+  <div class="inside__b">
+  <figure class="inside__fig">
+      <img src="img/interior.webp" width="2400" height="1350" loading="lazy" alt="Inside the van: a black barber's chair, a black wash basin in a white counter, a UV steriliser cabinet and wood-slat walls.">
+      <span class="pin" data-n="1" style="--x:65%;--mx:63%;--y:74%;--i:0" aria-hidden="true">1</span>
+      <span class="pin" data-n="2" style="--x:30%;--mx:17%;--y:59%;--i:1" aria-hidden="true">2</span>
+      <span class="pin" data-n="3" style="--x:64%;--mx:62%;--y:34%;--i:2" aria-hidden="true">3</span>
+      <span class="pin" data-n="4" style="--x:87%;--mx:92%;--y:50%;--i:3" aria-hidden="true">4</span>
+    </figure>
     <blockquote class="say" data-reveal data-reveal-delay="350">
       <p lang="ar" dir="rtl">المكان وايد نظيف الخدمه ممتازه</p>
       <p class="tr">"The place is very clean, the service is excellent."</p>
       <cite>Ahmed, on Fresha, August 2026</cite>
     </blockquote>
   </div>
-  <figure class="inside__fig">
-    <img src="img/interior.webp" width="2400" height="1350" loading="lazy" alt="Inside the van: a black barber's chair, a black wash basin in a white counter, a UV steriliser cabinet and wood-slat walls.">
-    <span class="pin" data-n="1" style="--x:65%;--y:74%;--i:0" aria-hidden="true">1</span>
-    <span class="pin" data-n="2" style="--x:30%;--y:59%;--i:1" aria-hidden="true">2</span>
-    <span class="pin" data-n="3" style="--x:64%;--y:34%;--i:2" aria-hidden="true">3</span>
-    <span class="pin" data-n="4" style="--x:87%;--y:50%;--i:3" aria-hidden="true">4</span>
-  </figure>
 </section>
 
 <section class="sec board" aria-labelledby="price-h">
@@ -132,10 +140,11 @@
 </section>
 
 <section class="sec score" aria-labelledby="rev-h">
-  <div>
+  <div class="score__l">
     <h2 class="sr" id="rev-h">Reviews</h2>
     <p class="big" data-reveal>5.0</p>
     <p data-reveal data-reveal-delay="150">Rated on Fresha from <span class="mono" data-count="84">84</span> reviews, in Arabic and English.</p>
+    <p class="score__more"><a class="k-link" href="https://www.fresha.com/a/on-wheels-mobile-barbershop-abu-dhabi-abu-dhabi-mobile-barbershop-l6t99dmw" rel="noopener">Read all 84 reviews on Fresha <span class="k-arrow" aria-hidden="true">&rarr;</span></a></p>
   </div>
   <div>
     <div class="quotes">
@@ -193,8 +202,8 @@
     <p class="hours__note">Home visits in Abu Dhabi. Late slots on Friday, Saturday and Sunday nights.</p>
   </div>
   <figure class="hours__fig" data-reveal="clip">
-    <img src="img/van-dusk.webp" width="2400" height="1350" loading="lazy" alt="The On Wheels van parked at sunset, lights on under the roof awning.">
-    <figcaption>Out at sunset, Abu Dhabi.</figcaption>
+    <img src="img/door.webp" width="1000" height="1350" loading="lazy" alt="The van's side door open, with the barber's chair and lit wood-slat walls inside." style="object-position:50% 55%">
+    <figcaption>Door open, chair ready.</figcaption>
   </figure>
 </section>
 </main>

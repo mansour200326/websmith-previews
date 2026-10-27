@@ -128,3 +128,15 @@
     chips.forEach(function(c){c.addEventListener('click',function(){set(c)})});
   }
 })();
+
+/* story: when the reader is above the first step, show step 0 (the observer alone never goes back) */
+(function(){
+  document.querySelectorAll('[data-k-story]').forEach(function(root){
+    var steps=[].slice.call(root.querySelectorAll('[data-k-story-step]')),media=[].slice.call(root.querySelectorAll('[data-k-story-media]')),box=root.querySelector('.k-story__media');
+    if(!steps.length)return;var tk=false;
+    function chk(){tk=false;if(steps[0].getBoundingClientRect().top>innerHeight*.55){
+      steps.forEach(function(s,k){s.classList.toggle('is-on',k===0)});media.forEach(function(m,k){m.classList.toggle('is-on',k===0)});
+      if(box)box.style.setProperty('--k-story-p',(1/steps.length).toFixed(3));}}
+    addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(chk)}},{passive:true});chk();
+  });
+})();

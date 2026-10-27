@@ -495,9 +495,6 @@
 
 /* Groomify extras: mobile action bar after the hero, services index highlight */
 (function(){
-  var bar=document.querySelector('.mbar'),hero=document.querySelector('[data-hero]');
-  if(bar&&hero&&'IntersectionObserver' in window){new IntersectionObserver(function(e){bar.classList.toggle('is-on',!e[0].isIntersecting)},{threshold:0}).observe(hero)}
-  else if(bar)bar.classList.add('is-on');
   var links=[].slice.call(document.querySelectorAll('.idx a[href^="#"]'));
   if(links.length){var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('is-on')});var a=map[e.target.id];if(a)a.classList.add('is-on')}})},{rootMargin:'-30% 0px -60% 0px'});
@@ -505,5 +502,5 @@
 })();
 /* fit the hero wordmark to the column width */
 (function(){var w=document.querySelector('.hero__wm [data-fit]');if(!w)return;var h=w.parentNode;
-  function fit(){h.style.fontSize='';var cs=parseFloat(getComputedStyle(h).fontSize),avail=h.clientWidth,ww=w.getBoundingClientRect().width;if(ww>0)h.style.fontSize=Math.min(cs*avail/ww,320)+'px'}
+  function fit(){h.style.fontSize='';var cs=parseFloat(getComputedStyle(h).fontSize),avail=h.clientWidth,ww=w.getBoundingClientRect().width;if(ww>0){var f=Math.min(cs*avail/ww,320);h.style.fontSize=f+'px';document.documentElement.style.setProperty('--wmfs',f+'px')}}
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);fit();addEventListener('resize',fit)})();

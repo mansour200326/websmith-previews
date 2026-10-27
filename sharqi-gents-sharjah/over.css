@@ -142,7 +142,7 @@ html:lang(ar) .band figcaption{font-family:var(--k-body)}
 
 /* Arabic snippets inside English pages */
 [lang=ar]{font-family:"Rubik",system-ui,sans-serif;letter-spacing:0}
-@media (min-width:900px){.k-mask__word{font-size:clamp(3.3rem,19vw,19rem)}}
+@media (min-width:701px){.k-mask__word{font-size:clamp(3.3rem,19vw,19rem)}}
 
 /* phones: word in the top third, the lounge photo in an inset frame below that opens to full screen on scroll */
 @media (max-width:700px){
@@ -162,3 +162,75 @@ html:lang(ar) .band figcaption{font-family:var(--k-body)}
 .ft li a,.ft p a{padding-block:10px;min-height:44px}
 .ft li a{min-width:44px}
 html:lang(ar) .k-mask__word{padding:.05em .05em .2em}
+
+/* ===== Fannan round 1 ===== */
+.k-mask{height:170svh}
+.k-mask__full{pointer-events:none}
+.k-mask__word{background-position:50% 62%;animation:sh-pan 1.2s cubic-bezier(.16,1,.3,1) both}
+@keyframes sh-pan{from{background-position:44% 62%}to{background-position:50% 62%}}
+.k-mask__lead{display:none}
+@media (min-width:701px){
+  .k-mask__stick{place-items:end start}
+  .k-mask__word{margin-bottom:110px;margin-inline-start:var(--pad)}
+  .k-mask__lead{display:grid;gap:18px;justify-items:start;position:absolute;top:110px;inset-inline-start:var(--pad);max-width:24em;opacity:calc(1 - var(--p) * 3);z-index:2}
+  .k-mask__lead p{font:500 1.25rem/1.45 var(--k-body)}
+}
+@media (max-width:700px){
+  .k-mask__word span{display:block}
+  .k-mask__word{font-size:25vw;line-height:.82;margin-top:12svh;text-align:center}
+  html:lang(ar) .k-mask__word{font-size:29vw;margin-top:12svh}
+  .k-mask__full{clip-path:inset(calc((12svh + 43vw + 24px) * (1 - var(--p))) calc(20px - var(--p) * 20px) calc(150px * (1 - var(--p))) calc(20px - var(--p) * 20px))}
+  html:lang(ar) .k-mask__full{clip-path:inset(calc((12svh + 41vw + 24px) * (1 - var(--p))) calc(20px - var(--p) * 20px) calc(150px * (1 - var(--p))) calc(20px - var(--p) * 20px))}
+  .k-mask__full img{object-position:30% 35%;transform:none}
+}
+@media (prefers-reduced-motion:reduce){.k-mask__word{animation:none}}
+@media (prefers-reduced-motion:reduce) and (min-width:701px){.k-mask__lead{position:relative;top:auto;inset-inline-start:auto;opacity:1;padding:0 var(--pad) 40px;text-align:start}.k-mask__stick{padding-top:110px}}
+.k-fx-hover{display:none}
+@media (hover:hover){.k-fx-hover{display:inline}}
+@media (max-width:700px){.k-cta h2{font-size:clamp(2.4rem,11vw,3.4rem)}}
+.k-visit__addr{line-height:1.35;margin-bottom:12px}
+.intro__h{max-width:14em}
+.today__hrs{display:flex;flex-direction:column}
+.beard{padding-bottom:96px}
+.k-acc{padding-bottom:96px}
+.k-drag{padding-bottom:96px}
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:min(82vw,560px)}
+.k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/3}
+.ph__fig figcaption{font:500 .8rem var(--mono);color:var(--k-mute);margin-top:10px}
+
+/* ===== Fannan round 2 ===== */
+@media (min-width:701px) and (max-width:899px){.k-mask__meta{bottom:76px}}
+@media (min-width:900px){
+  html:lang(en) .k-mask__full{opacity:1;clip-path:inset(calc(100px * (1 - var(--p))) calc(var(--pad) * (1 - var(--p))) calc((138px + 17.7vw) * (1 - var(--p))) calc(46% * (1 - var(--p))))}
+  html:lang(en) .k-mask__full img{object-position:75% 30%}
+}
+@media (prefers-reduced-motion:reduce){html:lang(en) .k-mask__full{clip-path:none}html:lang(en) .k-mask__full img{object-position:center}}
+.k-stats{padding-bottom:64px}
+.k-drag{padding-top:96px}
+.beard{padding-top:96px}
+.k-visit__map{background-position:85% 50%}
+.k-visit__map button{position:absolute;inset-inline-start:24px;bottom:24px}
+/* strip: clip the box itself, scale only the photo (the kit's 1.15 scale on .k-mask__full stretched the clip) */
+@media (min-width:701px){
+  html:lang(en) .k-mask__full{opacity:1;transform:none}
+  html:lang(en) .k-mask__full img{transform:scale(calc(1.08 - var(--p) * .08))}
+}
+@media (min-width:701px) and (max-width:899px){
+  .k-mask__full{opacity:1;transform:none;clip-path:inset(calc(270px * (1 - var(--p))) calc(var(--pad) * (1 - var(--p))) calc((150px + 17.7vw) * (1 - var(--p))) calc(var(--pad) * (1 - var(--p))))}
+  .k-mask__full img{object-position:75% 30%}
+  html:lang(ar) .k-mask__word{font-size:25vw}
+  html:lang(ar) .k-mask__full{clip-path:inset(calc(250px * (1 - var(--p))) calc(var(--pad) * (1 - var(--p))) calc((160px + 30vw) * (1 - var(--p))) calc(var(--pad) * (1 - var(--p))))}
+}
+@media (prefers-reduced-motion:reduce){.k-mask__full{clip-path:none!important}.k-mask__full img{transform:none!important}}
+.k-visit__sign{margin-top:0}
+
+/* ===== Fannan round 3 polish ===== */
+.k-cta__bg{gap:0}
+@keyframes sh-pan-ar{from{background-position:44% 30%}to{background-position:50% 30%}}
+@media (max-width:700px){html:lang(ar) .k-mask__word{background-position:50% 30%;animation-name:sh-pan-ar}}
+@media (min-width:900px){
+  html:lang(ar) .k-mask__word{font-size:clamp(4.8rem,28.8vw,25rem);margin-bottom:78px}
+  html:lang(en) .k-mask__full img{object-position:80% 25%}
+}
+.beard{padding-top:0;padding-bottom:0}
+.k-stats{padding-top:64px}

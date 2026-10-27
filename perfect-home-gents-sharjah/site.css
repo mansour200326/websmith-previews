@@ -52,9 +52,11 @@ html:lang(ar) .hd__mark b[lang=en]{font-family:"Syne",sans-serif;font-weight:800
 .k-seq__frame.is-on{opacity:1}
 .k-seq__frame.is-on img{transform:scale(1) translate3d(-1.5%,0,0);transition:transform 7s linear}
 .k-seq::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,13,.55),rgba(10,11,13,.1) 26%,rgba(10,11,13,.2) 48%,rgba(10,11,13,.92));pointer-events:none}
+.k-seq::before{content:"";position:absolute;inset:0 0 auto;height:22%;background:linear-gradient(180deg,rgba(16,18,21,.75),transparent);z-index:1;pointer-events:none}
 .k-seq__ui{position:absolute;inset:auto 0 0 0;z-index:2;padding:0 var(--pad) clamp(22px,4vh,40px)}
 .k-seq__cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:.9rem;min-height:1.6em;margin-bottom:12px;color:#d9dee2}
 .k-seq__count{font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:520px){.k-seq .hero__name{font-size:15.8vw}}
 @media (max-width:600px){.k-seq__cap{font-size:.8rem}.hero__sub{font-size:1rem}.hero__row{margin-bottom:20px;gap:16px}.hero__acts{gap:4px 20px}}
 .k-seq__bars{display:flex;gap:6px}
 .k-seq__bar{flex:1;height:44px;margin-block:-20.5px;border:0;padding:0;background:none;cursor:pointer;position:relative}
@@ -126,11 +128,11 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .say__big{font:700 clamp(2rem,4.7vw,4.6rem)/1.04 var(--display);letter-spacing:-.035em;max-width:17em}
 html:lang(ar) .say__big{font-weight:600;line-height:1.4!important;max-width:19em}
 .say__foot{display:grid;gap:28px;align-items:end}
-.say__inset{position:relative;overflow:hidden;aspect-ratio:4/3;max-width:440px}
-.say__inset img{width:100%;height:100%;object-fit:cover}
+.say__inset{position:relative;overflow:hidden;aspect-ratio:4/3;max-width:560px}
+.say__inset img{width:100%;height:100%;object-fit:cover;object-position:20% 50%}
 .say__note{max-width:28em;color:var(--steel)}
 .say__note b{color:var(--ink);font-weight:500}
-@media (min-width:900px){.say__foot{grid-template-columns:minmax(0,440px) 1fr;gap:clamp(40px,6vw,96px)}.say__note{padding-bottom:6px}}
+@media (min-width:900px){.say__foot{grid-template-columns:minmax(0,560px) 1fr;gap:clamp(40px,6vw,96px)}.say__note{padding-bottom:6px}}
 
 /* ---------- 2. the shelf: services as lit niches (from their own shelving) ---------- */
 .shelf{background:var(--niche);color:var(--niche-ink);padding:clamp(70px,10vw,140px) var(--pad) clamp(60px,9vw,120px)}
@@ -141,14 +143,15 @@ html:lang(ar) .shelf h2{font-size:clamp(2.8rem,8vw,6.8rem);line-height:1.1!impor
 .shelf__ar[lang=en]{font-family:var(--display)}
 .shelf__intro{flex-basis:100%;max-width:34em;color:var(--niche-mute);margin-top:12px}
 .shelf__unit{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px;background:var(--niche-frame);list-style:none;margin:0}
+@media (max-width:759px){.shelf__unit>li{display:flex}.shelf__unit .niche{flex:1}}
 @media (min-width:760px){.shelf__unit{grid-template-columns:repeat(4,1fr);gap:10px;padding:10px}}
-.niche{position:relative;display:flex;flex-direction:column;min-height:clamp(190px,22vw,280px);padding:clamp(16px,2vw,26px);padding-top:clamp(26px,3vw,36px);text-decoration:none;color:var(--niche-ink);
+.niche{position:relative;display:flex;flex-direction:column;min-height:clamp(170px,16vw,220px);padding:clamp(16px,2vw,26px);padding-top:clamp(26px,3vw,36px);text-decoration:none;color:var(--niche-ink);
   background:linear-gradient(180deg,var(--niche-hi) 0,#e6e9ec 34%,#d9dee2 100%);box-shadow:inset 0 14px 22px -16px rgba(0,0,0,.35),inset 0 -1px 0 rgba(0,0,0,.08);transition:background .5s var(--ease)}
 .niche::before{content:"";position:absolute;inset:0 14% auto;height:3px;background:#fff;box-shadow:0 2px 14px 2px rgba(255,255,255,.95);opacity:.95;transition:inset .6s var(--ease)}
 .niche:hover::before,.niche:focus-visible::before{inset-inline:4%}
 .niche:hover{background:linear-gradient(180deg,#fff 0,#eef1f3 40%,#dfe3e6 100%)}
 .niche__n{font:600 .9rem/1 var(--body);font-variant-numeric:tabular-nums;color:var(--niche-mute)}
-.niche h3{font:700 clamp(1.25rem,2vw,1.75rem)/1.05 var(--display);letter-spacing:-.025em;margin-top:auto}
+.niche h3{font:700 clamp(1.4rem,2.2vw,2rem)/1.05 var(--display);letter-spacing:-.025em;margin-top:auto}
 html:lang(ar) .niche h3{font-weight:600;line-height:1.3!important;font-size:clamp(1.3rem,2.1vw,1.85rem)}
 .niche__alt{font:500 1.02rem/1.4 "Changa",sans-serif;color:var(--niche-mute);margin-top:6px}
 .niche__alt[lang=en]{font-family:var(--body);font-size:.9rem}
@@ -159,12 +162,12 @@ html:lang(ar) .niche h3{font-weight:600;line-height:1.3!important;font-size:clam
 
 /* ---------- 3. numbers + lounge (kit 06, editorial) ---------- */
 .proof{display:grid;gap:clamp(36px,5vw,80px);padding:clamp(80px,12vw,170px) var(--pad);align-items:center}
-.proof__fig{font:800 clamp(7rem,24vw,21rem)/.78 var(--display);letter-spacing:-.06em;font-variant-numeric:tabular-nums;margin-inline-start:-.04em}
+.proof__fig{font:800 clamp(7rem,22vw,17rem)/.9 var(--display);letter-spacing:-.06em;font-variant-numeric:tabular-nums;margin-inline-start:-.04em}
 html:lang(ar) .proof__fig{font-family:"Syne",sans-serif;line-height:.9!important}
-.proof__line{font-size:clamp(1.15rem,1.8vw,1.45rem);max-width:20em;margin-top:22px}
+.proof__line{font-size:clamp(1.15rem,1.8vw,1.45rem);max-width:20em;margin-top:clamp(28px,3vw,48px)}
 .proof__line small{display:block;font-size:.88rem;color:var(--steel);margin-top:6px}
 .proof__two{display:flex;align-items:baseline;gap:18px;margin-top:clamp(36px,5vw,60px);padding-top:22px;border-top:1px solid var(--frame)}
-.proof__two b{font:800 clamp(3rem,6vw,5rem)/.9 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.proof__two b{font:800 clamp(3rem,6vw,5rem)/.9 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap;flex:none}
 html:lang(ar) .proof__two b{font-family:"Syne",sans-serif}
 .proof__two span{max-width:16em;color:var(--steel)}
 .proof__ph{position:relative;overflow:hidden;aspect-ratio:4/5}
@@ -186,8 +189,8 @@ html:lang(ar) .inside h2{line-height:1.2!important}
   .inside h2{grid-column:1/6;grid-row:1}
   .inside__txt{grid-column:1/5;grid-row:2;align-self:end}
   .inside__a{grid-column:6/13;grid-row:1/3}
-  .inside__b{grid-column:3/9;grid-row:3;margin-top:-6vw}
-  .inside__b+.cap{grid-column:9/12;grid-row:3;align-self:end}
+  .inside__b{grid-column:5/11;grid-row:3;margin-top:-6vw}
+  .inside__b+.cap{grid-column:1/5;grid-row:3;align-self:end}
 }
 
 /* ---------- 5. grooms line ---------- */
@@ -234,10 +237,13 @@ html:lang(ar) .visit h2{line-height:1.2!important}
 .visit td:last-child{text-align:end;font-variant-numeric:tabular-nums}
 .visit__acts{display:flex;flex-wrap:wrap;gap:12px}
 .visit__map{position:relative;min-height:380px;background:var(--wall);display:grid;place-items:center;overflow:hidden;border-inline-start:1px solid var(--frame)}
-.visit__map::before{content:attr(data-word);position:absolute;inset:auto -2% 6% -2%;font:800 clamp(3rem,9vw,8rem)/.8 var(--display);letter-spacing:-.05em;color:#23282e;white-space:nowrap;text-align:center}
+.visit__map::before{content:attr(data-word);position:absolute;inset:auto 0 6% 0;font:800 clamp(3rem,7vw,6.5rem)/.8 var(--display);letter-spacing:-.05em;color:#23282e;white-space:nowrap;text-align:center}
 .visit__map button{position:relative;z-index:1;background:var(--ink);color:var(--graphite);border:0;min-height:52px;padding:0 24px;font:600 1rem var(--body);border-radius:2px;cursor:pointer}
 .visit__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .8s;filter:grayscale(.6) contrast(1.05)}
 .visit__map iframe.is-on{opacity:1}
+.visit__go{position:absolute;z-index:2;inset:auto auto 18px 18px;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;background:var(--graphite);color:var(--ink);text-decoration:none;font-weight:600;border:1px solid var(--frame)}
+[dir=rtl] .visit__go{inset:auto 18px 18px auto}
+.visit__go:hover{color:var(--reef)}
 @media (min-width:900px){.visit{grid-template-columns:1fr 1.1fr}.visit__map{min-height:100%}}
 
 /* ---------- services page ---------- */
@@ -275,9 +281,11 @@ html:lang(ar) .svc h3{font-weight:600;line-height:1.35!important}
 .svc__acts{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center}
 .svc__acts a{font-weight:600;display:inline-flex;align-items:center;gap:.3em;min-height:44px;min-width:44px}
 .svc__acts a.wa{color:var(--reef)}
+.svc__acts a.svc__call{font-weight:500;color:var(--steel);white-space:nowrap}
+.grp--bath .svc__acts a.svc__call{color:var(--niche-mute)}
+@media (max-width:899px){.svc__acts a.svc__call{display:none}}
 @media (min-width:760px){.svc{grid-template-columns:60px 1fr 1.2fr auto;align-items:start}.svc__acts{flex-direction:column;align-items:flex-end}}
-.grp--bath{background:var(--niche);color:var(--niche-ink);margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad)}
-@media (min-width:1000px){.grp--bath{margin-inline:0 calc(var(--pad)*-1);padding-inline:clamp(28px,4vw,56px) var(--pad)}}
+.grp--bath{background:var(--niche);color:var(--niche-ink);margin-inline:0;padding-inline:clamp(24px,3vw,48px)}
 .grp--bath .grp__head p,.grp--bath .svc p{color:var(--niche-mute)}
 .grp--bath .svc{border-color:#aab1b8}
 .grp--bath .svc__n,.grp--bath .svc__alt{color:var(--niche-mute)}
@@ -287,7 +295,9 @@ html:lang(ar) .svc h3{font-weight:600;line-height:1.35!important}
 .ft{background:#0b0c0e;padding:clamp(70px,9vw,120px) var(--pad) 30px;border-top:1px solid var(--frame)}
 .ft__name{font:800 clamp(3.4rem,12vw,11rem)/.8 var(--display);letter-spacing:-.055em;margin-bottom:clamp(40px,6vw,70px);color:#e3e7ea}
 html:lang(ar) .ft__name{font-family:"Syne",sans-serif;letter-spacing:-.055em!important}
-.ft__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:34px;margin-bottom:56px}
+.ft__cols{display:grid;grid-template-columns:1fr 1fr;gap:34px 24px;margin-bottom:56px}
+@media (min-width:900px){.ft__cols{grid-template-columns:repeat(4,1fr)}}
+.ft li a{overflow-wrap:anywhere}
 .ft h3{font:600 .95rem/1.3 var(--body);color:var(--steel);margin-bottom:12px}
 html:lang(ar) .ft h3{font-size:1rem}
 .ft ul{list-style:none;margin:0;padding:0}
@@ -312,3 +322,5 @@ html:lang(ar) .ft h3{font-size:1rem}
   .k-visit__badge.is-open i::after{animation:none}.niche::before{transition:none}.book__now.is-swap span{animation:none}
 }
 @media (hover:none){[data-k-magnetic]{transform:none!important}.k-roll>span::after{display:none}a:hover .k-roll>span{transform:none}}
+
+.nw{white-space:nowrap}

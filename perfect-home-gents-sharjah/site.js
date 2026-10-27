@@ -1,4 +1,14 @@
 /* Perfect Home concept. Motion from the Websmith kit (03 sequence, 06 counter, 16 hours/map, 18 reveals, 19 micro). */
+/* Narrow screens: start the hero on the lounge + reef frame (frame 1 crops to an empty pillar on a phone) */
+(function(){
+  if(!matchMedia('(max-width:520px)').matches)return;
+  var seq=document.querySelector('[data-k-seq]');if(!seq)return;
+  var f=seq.querySelectorAll('[data-k-seq-frame]');if(f.length<2)return;
+  var a=f[0],b=f[1],ai=a.querySelector('img'),bi=b.querySelector('img');
+  seq.insertBefore(b,a);a.classList.remove('is-on');b.classList.add('is-on');
+  bi.loading='eager';bi.setAttribute('fetchpriority','high');ai.loading='lazy';ai.removeAttribute('fetchpriority');
+})();
+
 /* 03-hero-sequence.html */
 (function(){
   var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
