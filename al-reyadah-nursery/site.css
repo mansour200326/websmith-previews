@@ -260,3 +260,4 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;letter-spacing:-.03em;line
 .mini__img--dots .dots{gap:12px}.mini__img--dots .dots i{width:34px;height:34px}
 .mini .k-link{display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:600px){.chart span{display:none}.chart b{font-size:1.5rem}}
+@media (max-width:520px){.brand small{display:none}.brand b{font-size:1rem;white-space:nowrap}.brand img{width:36px}.hd__acts{gap:0}.hd__in{gap:10px}}
