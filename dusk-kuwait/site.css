@@ -304,7 +304,7 @@ html:lang(ar) .hero__name .light{font-weight:400}
 .three ul{padding-inline-start:1.1em;margin-top:10px}
 .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}
 @media (min-width:900px){.mosaic{grid-template-columns:1.1fr .9fr 1fr;grid-template-rows:260px 260px}.mosaic figure:first-child{grid-row:span 2}}
-.mosaic figure{margin:0;position:relative;overflow:hidden;min-height:200px;max-height:540px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;min-height:180px;max-height:520px}
 .mosaic img{width:100%;height:100%;object-fit:cover}
 .mosaic figcaption{position:absolute;bottom:0;inset-inline-start:0;background:#fff;padding:8px 14px 0 0;font-size:.9rem;font-weight:600}
 [dir=rtl] .mosaic figcaption{padding:8px 0 0 14px}
@@ -342,3 +342,35 @@ html:lang(ar) .hero__name .light{font-weight:400}
 .accr .big-sub{font-size:1rem;color:var(--k-mute);margin-top:14px}
 .row6 .person .ph{border-radius:50%;aspect-ratio:4/5;box-shadow:0 0 0 1px var(--gold)}
 @media (max-width:640px){.cap-long{display:none}}
+
+/* round 2 fixes */
+.hero__pics{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr;margin-top:clamp(22px,3vw,36px)}
+.hero__pics .pano{margin:0}
+.hero__kid{display:none;margin:0;overflow:hidden;aspect-ratio:4/5;position:relative}
+.hero__kid img{width:100%;height:100%;object-fit:cover;object-position:32% 50%}
+.hero__kid figcaption{position:absolute;bottom:0;inset-inline-start:0;background:#fff;padding:8px 12px 0 0;font-size:.82rem;color:var(--k-mute)}
+[dir=rtl] .hero__kid figcaption{padding:8px 0 0 12px}
+@media (min-width:900px){
+  .hero__pics{grid-template-columns:28fr 68fr;column-gap:4%;align-items:start}
+  .hero__kid{display:block;margin-top:60px}
+  .hero__pics .pano{grid-column:2;grid-row:1;height:clamp(240px,25vw,360px)}
+  .hero__kid{grid-column:1;grid-row:1}
+}
+.k-js .hero__kid{clip-path:inset(100% 0 0 0);animation:kid-open 1.3s var(--k-ease) .5s forwards}
+.k-js .hero__kid img{animation:kb 20s ease-out .5s both}
+@keyframes kid-open{to{clip-path:inset(0 0 0 0)}}
+.pano::after{inset:clamp(10px,1.4vw,18px) clamp(10px,1.4vw,18px) 17% clamp(10px,1.4vw,18px)}
+@media (prefers-reduced-motion:reduce){.k-js .hero__kid,.k-js .hero__kid img{animation:none!important;clip-path:none!important;transform:none!important}}
+html:lang(ar) .hl{padding-bottom:.3em;margin-bottom:-.24em}
+html:lang(ar) .k-rv-line{padding-bottom:.3em;margin-bottom:-.24em}
+html:lang(ar) .hero__name .light{margin-top:0}
+html:lang(ar) .hero{padding-top:clamp(16px,2.4vw,32px)}
+html:lang(ar) .hero__name{font-size:clamp(4rem,11vw,9.5rem)}
+.foot .foot__big span{text-wrap:balance}
+.vision blockquote::first-letter{color:var(--gold-dk)}
+.mosaic{grid-template-columns:1fr 1fr}
+@media (min-width:900px){.mosaic{grid-template-columns:2fr 1fr 1fr;grid-template-rows:250px 250px}.mosaic figure:first-child{grid-row:span 2}}
+html:lang(ar) .foot .foot__big{line-height:1.25;font-size:clamp(2.2rem,7vw,6.5rem)}
+@media (max-width:640px){html:lang(ar) .foot .foot__big{font-size:clamp(1.9rem,8.6vw,8rem)}}
+html:lang(ar) .foot .foot__big .en-tag{display:block;margin-top:4px;font-family:var(--k-body)}
+.foot__note .note-en{display:block}
