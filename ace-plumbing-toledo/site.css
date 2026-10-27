@@ -493,3 +493,4 @@ a{color:inherit}
   .hero__pic::before,.hero__pic::after{left:-20px;right:-20px}
 }
 @media (max-width:700px){.nl-x{display:none}}
+.nl-x{margin-left:.28em}

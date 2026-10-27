@@ -257,3 +257,6 @@ h1,h2,h3{font-family:var(--k-display);font-weight:500;letter-spacing:-.02em;line
 .k-split__type h1 .k-mask{height:auto;background:none;position:static}
 html body .hdr .hdr__acts a.hdr__lang[lang]{display:inline-flex!important}
 html body .ftr .ftr__big span.ar[lang]{display:block!important}
+
+[dir=rtl] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
+[dir=rtl] .ftr__big span.ar{font-family:"Nunito Sans",sans-serif}
