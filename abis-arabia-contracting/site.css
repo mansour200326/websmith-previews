@@ -415,7 +415,37 @@ h2{font-size:clamp(2.6rem,6.4vw,5.6rem);text-transform:uppercase}
   .hero__meta{flex-direction:column;gap:4px}
   .hero__vend{white-space:normal;font-size:14px;line-height:1.45}
 }
-/* one grade for the whole photo set */
-.hero__photo img,.s__ph img,.fleet__ph img,.nums__ph img,.k-acc__body img,.k-acc__float img,.ab-photo img{filter:saturate(.85) contrast(1.05)}
-.hero__photo,.s__ph,.fleet__ph,.nums__ph{position:relative}
-.hero__photo::after,.s__ph::after,.fleet__ph::after,.nums__ph::after,.k-acc__float::after{content:"";position:absolute;inset:0;background:var(--navy);mix-blend-mode:multiply;opacity:.12;pointer-events:none;z-index:1}
+/* one grade for the whole photo set (r3: stronger, identical on every photo) */
+:root{--grade:saturate(.35) contrast(1.1) brightness(.95)}
+.hero__photo img,.s__ph img,.nums__ph img,.acc-ph img,.k-acc__float img,.ab-photo img{filter:var(--grade)}
+.hero__photo,.s__ph,.nums__ph,.acc-ph,.k-acc__float{position:relative}
+.k-acc__float{position:fixed}
+.hero__photo::before,.s__ph::before,.nums__ph::before,.acc-ph::before,.k-acc__float::before{content:"";position:absolute;inset:0;background:#3d5a80;mix-blend-mode:color;opacity:.42;pointer-events:none;z-index:2}
+.hero__photo::after,.s__ph::after,.nums__ph::after,.acc-ph::after,.k-acc__float::after{content:"";position:absolute;inset:0;background:var(--navy);mix-blend-mode:multiply;opacity:.16;pointer-events:none;z-index:2}
+.acc-ph{display:block;width:100%;max-width:420px;overflow:hidden;border-radius:2px}
+.acc-ph img{display:block;max-width:none}
+@media (min-width:900px){.acc-ph{display:none}}
+
+/* r3: cranes parallax - overscale, centred, so no strip opens at either edge */
+.nums__ph{position:relative;overflow:hidden}
+.nums__ph img{position:absolute;left:0;top:-12%;width:100%;height:124%;object-fit:cover}
+
+/* r3: equipment block - type-led, no photo */
+.fleet__card{background:var(--navy);color:#fff;padding:clamp(22px,3vw,40px);display:grid;gap:0;aspect-ratio:16/10;align-content:center}
+.fleet__row{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:clamp(14px,2vw,28px);padding:clamp(14px,2vw,24px) 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.fleet__row:first-child{border-top:1px solid rgba(255,255,255,.55)}
+.fleet__row b{font:800 clamp(4rem,8vw,7.5rem)/.8 "Barlow Condensed",sans-serif;letter-spacing:-.02em;color:#fff;min-width:1.9ch}
+.fleet__row span{font-size:1.05rem;line-height:1.4;color:#d4dae6;max-width:18em;padding-bottom:.3em}
+.fleet__card{min-width:0}
+.fleet__card--s{aspect-ratio:auto;align-self:start;min-height:clamp(260px,26vw,380px)}
+.fleet__card--s .fleet__row b{font-size:clamp(3.6rem,6vw,6rem)}
+@media (max-width:700px){.fleet__card{aspect-ratio:auto}.fleet__row b{font-size:4.2rem}}
+
+/* r3: Arabic wordmark - keep the last A inside the frame */
+[dir=rtl] .hero__word{font-size:calc((min(100vw,var(--max)) - 2*var(--pad)) / 4.62)}
+[dir=rtl] .hero__word .k-rv-line{padding-right:.05em}
+@media (min-width:900px){.s:nth-of-type(even) .fleet__card--s{order:2}}
+.k-js .fleet__card .fleet__row{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform 1s var(--ease)}
+.k-js .fleet__card.is-in .fleet__row{opacity:1;transform:none;transition-delay:.35s}
+.k-js .fleet__card.is-in .fleet__row+.fleet__row{transition-delay:.5s}
+@media (prefers-reduced-motion:reduce){.k-js .fleet__card .fleet__row{opacity:1;transform:none;transition:none}}
