@@ -20,3 +20,9 @@
     document.querySelectorAll('.dep[id]').forEach(function(d){so.observe(d)});
   }
 })();
+/* map poster: drop it once the real map has loaded */
+(function(){
+  document.querySelectorAll('[data-k-map]').forEach(function(m){
+    new MutationObserver(function(){var f=m.querySelector('iframe');if(f&&f.classList.contains('is-on'))m.classList.add('is-loaded')}).observe(m,{subtree:true,attributes:true,childList:true});
+  });
+})();

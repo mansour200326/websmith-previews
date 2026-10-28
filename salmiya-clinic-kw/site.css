@@ -455,3 +455,60 @@ html[lang=ar] .ft .ft__word{font-size:clamp(2.8rem,11.5vw,12.5rem);transform:tra
   .k-split__type h1{font-size:clamp(4.2rem,19vw,5.6rem)}
   .hero__ar{margin-top:10px}
 }
+
+/* ===== round 3 fixes (Fannan, independent) ===== */
+/* hero: tighter grid, meta from the top, fits a 900px screen */
+@media (min-width:900px){
+  .k-split{grid-template-columns:1.05fr .85fr .42fr;min-height:0;max-height:none;padding-block:clamp(24px,3vw,40px)}
+  .k-split__type h1{font-size:clamp(4.6rem,10vw,9.6rem)}
+  .k-split__photo{min-height:0;max-height:calc(900px - 67px - 64px)}
+  .k-split__meta{align-self:start;padding-top:1.2rem}
+}
+/* mobile hero portrait: no more than ~1.3x its source, framed on the face */
+@media (max-width:899px){
+  .k-split__photo{aspect-ratio:16/11;width:calc(100% + 2*var(--pad));max-width:none;margin-inline:calc(var(--pad)*-1)}
+  .k-split__photo img{object-position:50% 30%}
+}
+/* team photo: contained, caption in its own column */
+.team{padding-block:clamp(40px,6vw,90px) 0}
+.team__fig{display:grid;gap:16px}
+.team__img{overflow:hidden;background:var(--sea)}
+.team__img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.team__fig figcaption{font-size:1rem;color:var(--k-mute);max-width:22em}
+.team__fig figcaption b{display:block;font:500 clamp(1.5rem,2.4vw,2.2rem)/1.15 var(--k-display);color:var(--k-ink);margin-bottom:8px}
+html[lang=ar] .team__fig figcaption b{font-family:var(--ar);font-weight:700}
+@media (min-width:900px){.team__fig{grid-template-columns:minmax(0,960px) 1fr;align-items:end;gap:clamp(24px,3vw,48px)}}
+/* map: static poster with the button on top until tapped */
+.k-visit__map{background-color:var(--sea);background-image:var(--k-map-poster,none);background-size:cover;background-position:center}
+.k-visit__map.is-loaded{background-image:none}
+/* balanced lines in the red band */
+.flood__q,.flood__ar,.flood h2{text-wrap:balance}
+/* about: first screen */
+.ah{display:grid;gap:clamp(30px,5vw,80px);padding-block:clamp(40px,7vw,100px) clamp(20px,3vw,40px)}
+.ah h1{font:500 clamp(6rem,14vw,11rem)/.82 var(--k-display);letter-spacing:-.05em;font-variation-settings:"opsz" 60}
+.ah__since{display:block;font:600 clamp(1.1rem,1.6vw,1.4rem)/1 var(--k-body);letter-spacing:0;color:var(--k-accent);margin-bottom:14px}
+.ah__l p{font-size:clamp(1.05rem,1.4vw,1.22rem);color:var(--k-mute);max-width:30em;margin:26px 0 28px}
+.ah__r .ecg{margin:0 0 18px}
+.ah__ms{list-style:none;padding:0;border-top:1px solid var(--k-ink)}
+.ah__ms li{display:grid;grid-template-columns:5.5rem 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--k-line);align-items:baseline}
+.ah__ms b{font:500 1.9rem/1 var(--k-display);letter-spacing:-.02em}
+.ah__ms span{color:var(--k-mute)}
+@media (min-width:900px){.ah{grid-template-columns:1.1fr 1fr;align-items:end}}
+.ab__ph img{aspect-ratio:4/3}
+/* about: values */
+.vq{display:grid;grid-template-columns:repeat(12,1fr);gap:0 clamp(16px,2vw,30px)}
+.vq__q{grid-column:1/-1;font:400 clamp(2.4rem,5.4vw,5.2rem)/1.02 var(--k-display);letter-spacing:-.035em;margin:0;text-wrap:balance;font-variation-settings:"opsz" 60}
+.vq__src{grid-column:1/-1;color:var(--k-mute);margin:18px 0 clamp(36px,5vw,64px)}
+.vq__list{grid-column:1/-1;list-style:none;padding:0;counter-reset:v;border-top:1px solid var(--k-ink)}
+.vq__list li{counter-increment:v;display:grid;grid-template-columns:3rem 1fr;padding:18px 0;border-bottom:1px solid var(--k-line);font-size:1.05rem;color:var(--k-mute)}
+.vq__list li::before{content:counter(v,decimal-leading-zero);font-weight:700;color:var(--k-accent)}
+.vq__list b{color:var(--k-ink)}
+@media (min-width:900px){.vq__q{grid-column:1/9}.vq__src{grid-column:1/9}.vq__list{grid-column:5/-1}}
+/* header must never push the page sideways (Arabic "English" link is wider) */
+@media (max-width:1060px){
+  .hd__logo{flex:0 1 auto;min-width:0}
+  .hd__logo img{width:auto;max-width:100%;height:auto;max-height:38px}
+  .hd__in{gap:8px}
+  html[lang=ar] .hd__lang{font-size:.92rem}
+}
+.k-visit__map{place-items:end start;padding:clamp(16px,2.4vw,32px);background-position:68% 50%}
