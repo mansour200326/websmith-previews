@@ -51,17 +51,17 @@ a{color:inherit}
 
 /* ---------- hero (split, the name crosses from the white panel into the skyline photo) ---------- */
 .hero{position:relative;display:grid;grid-template-columns:1fr;min-height:calc(100svh - var(--hdr))}
-.hero__photo{position:relative;overflow:hidden;height:50svh;min-height:340px;background:#d9dde0}
+.hero__photo{position:relative;overflow:hidden;height:44svh;min-height:0;background:#d9dde0}
 .hero__photo img{width:100%;height:100%;object-fit:cover;object-position:58% 50%}
 .hero__photo::after{content:"";position:absolute;inset:55% 0 0;display:none;background:linear-gradient(transparent,rgba(30,20,15,.42));pointer-events:none}
 .hero__cap{display:none;position:absolute;z-index:1;color:#fff;font:400 italic clamp(1.05rem,1.6vw,1.35rem)/1.35 var(--serif);max-width:20em;text-shadow:0 1px 18px rgba(0,0,0,.35)}
-.hero__panel{display:flex;flex-direction:column;justify-content:flex-end;gap:26px;padding:calc(13vw + 30px) var(--pad) var(--pad)}
+.hero__panel{display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:calc(12vw + 18px) var(--pad) var(--pad)}
 .hero__lead{font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.5;max-width:25em}
 .hero__facts{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;font-size:.98rem;border-top:1px solid var(--line);padding-top:18px;max-width:30em}
 .hero__facts dt{color:var(--mute)}
 .hero__facts dd{margin:0}
 .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
-.hero__name{position:absolute;z-index:3;inset-inline:0;top:calc(50svh - 12.5vw);pointer-events:none;font:300 25vw/1 var(--k-display);letter-spacing:-.045em;white-space:nowrap;text-align:center;margin:0}
+.hero__name{position:absolute;z-index:3;inset-inline:0;top:calc(44svh - 12.5vw);pointer-events:none;font:300 25vw/1 var(--k-display);letter-spacing:-.045em;white-space:nowrap;text-align:center;margin:0}
 .hero__name span.layer{display:block}
 .hero__name .on-photo{position:absolute;inset:0;color:var(--ink);clip-path:inset(0 0 50% 0)}
 .hero__name .on-paper{color:var(--copper);clip-path:inset(50% 0 0 0)}
@@ -70,7 +70,7 @@ a{color:inherit}
   .hero{grid-template-columns:1fr 1fr;min-height:max(620px,calc(100svh - var(--hdr)))}
   .hero__photo{order:2;height:auto;min-height:0}
   .hero__photo::after{display:block}
-  .hero__panel{order:1;padding:var(--pad);padding-bottom:clamp(36px,5vw,64px);justify-content:flex-end}
+  .hero__panel{order:1;gap:26px;padding:var(--pad);padding-bottom:clamp(36px,5vw,64px);justify-content:flex-end}
   .hero__cap{display:block;inset:auto clamp(28px,3vw,48px) clamp(36px,5vw,64px) clamp(28px,3vw,48px)}
   .hero__name{top:26%;font-size:min(17.5vw,30svh);line-height:1}
   .hero__name .on-photo{clip-path:inset(0 0 0 50%)}
@@ -271,7 +271,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .k-js .k-drag.is-in .k-drag__card{opacity:1;transform:none}
 
 /* ---------- inner pages ---------- */
-.ph-head{padding:clamp(60px,9vw,130px) var(--pad) clamp(40px,5vw,70px);display:grid;gap:22px;max-width:1440px;margin:0 auto}
+.ph-head{padding:clamp(40px,6vw,90px) var(--pad) clamp(40px,5vw,70px);display:grid;gap:22px;max-width:1440px;margin:0 auto}
 .ph-head h1{font:300 clamp(3.2rem,10vw,9rem)/.9 var(--k-display);letter-spacing:-.05em}
 .ph-head p{max-width:34em;font-size:1.15rem}
 .svc{display:grid;grid-template-columns:1fr;gap:24px clamp(30px,5vw,80px);padding:clamp(50px,7vw,100px) var(--pad);border-top:1px solid var(--line);max-width:1440px;margin:0 auto}
@@ -291,7 +291,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .principles h3{font:400 clamp(1.5rem,2.4vw,2.1rem)/1.1 var(--k-display);letter-spacing:-.02em}
 .principles p{color:var(--mute);max-width:34em}
 @media (min-width:900px){.principles{grid-template-columns:1fr 1fr;column-gap:80px}}
-.wide-ph{margin:0;overflow:hidden;height:min(78vh,760px)}
+.wide-ph{margin:0;overflow:hidden;height:min(64vh,640px)}
 .wide-ph img{width:100%;height:118%;object-fit:cover}
 
 /* ---------- footer ---------- */
@@ -312,13 +312,16 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 html[lang=ar]{--k-display:"Readex Pro",system-ui,sans-serif;--k-body:"Readex Pro",system-ui,sans-serif;--serif:"Readex Pro",system-ui,sans-serif}
 html[lang=ar] :is(.h2,.h3,.k-acc__t,.doc h3,.k-story__step h3,.ph-head h1,.svc h2,.principles h3,.call .h2){letter-spacing:0;line-height:1.25}
 html[lang=ar] .say,html[lang=ar] .hero__cap{font-style:normal}
-html[lang=ar] .hero__name{font-weight:300;letter-spacing:0;line-height:1.3;top:calc(50svh - 16.25vw)}
+html[lang=ar] .hero__name{font-weight:300;letter-spacing:0;line-height:1.3;top:calc(44svh - 16.25vw)}
 html[lang=ar] .hero__name .ch{padding-inline:.04em}
 @media (min-width:900px){
-  html[dir=rtl] .hero__name{top:22%}
+  html[dir=rtl] .hero__name{top:16%;font-size:min(15vw,26svh)}
   html[dir=rtl] .hero__name .on-photo{clip-path:inset(0 50% 0 0)}
   html[dir=rtl] .hero__name .on-paper{clip-path:inset(0 0 0 50%)}
 }
+/* short laptop screens: keep the Arabic word's dots clear of the lead */
+@media (min-width:900px) and (max-height:820px){.hero__name{top:12%;font-size:min(17.5vw,22svh)}}
+@media (min-width:900px) and (max-height:820px){html[dir=rtl] .hero__name{top:10%;font-size:min(15vw,20svh)}}
 @media (prefers-reduced-motion:reduce) and (min-width:900px){
   html[dir=rtl].k-js .hero__name .on-photo{clip-path:inset(0 50% 0 0)!important}
   html[dir=rtl].k-js .hero__name .on-paper{clip-path:inset(0 0 0 50%)!important}
