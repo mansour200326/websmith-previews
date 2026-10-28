@@ -1,0 +1,22 @@
+# Hyphen Wellness & Pilates - facts (Fresha listing, fetched 2026-10-28)
+- Source: https://www.fresha.com/a/hyphen-wellness-pilates-dubai-21-14b-st-al-qouz-ind-third-uo5x0jqf
+- Phone (business line on Fresha listing): +971 58 642 9972
+- Category: Wellness studio (pilates, red-light/contrast therapy, massage); Emirate: Dubai; Area: Al Quoz Industrial 3 (21 14B St) (21 14B St - Al Qouz Ind.third)
+- Instagram: none listed on Fresha
+- Website: none listed on Fresha; none found by web search; obvious .com/.ae slugs did not resolve to their own site
+- Rating: 4.8/5 from 71 Fresha reviews; newest review dates: 2026-10-03, 2026-09-26, 2026-09-12, 2026-09-09
+- Hours: Mon-Sun 08:00-22:00
+- Price range: AED 12-384
+- Language of listing: English (Fresha ['en-ae']); reviews also in Arabic where noted
+- Services listed: Red Light Therapy, Contrast Therapy, Massage Therapy, Yoga and Pilates Services, Combo Service, Signature Massages, Hair Care, Nails Services, Threading and Waxing, Signature Beauty Membership, Blowout Club, Day passes
+- Fresha description: Hyphen Wellness & Pilates is a fitness & recovery at 21 14B St - Al Qouz Ind.third , Dubai, Dubai. The team of 9+ practitioners offers Red Light Therapy, Contrast Therapy, Massage Therapy, Yoga and Pilates Services, Combo Service. Rated 4.8/5 from 71 reviews. Open Mon-Sun 08:00-22:00; Instant confirmation, Pay by app, Kid-friendly.
+## Own-gallery image URLs (each checked with curl: HTTP 200, image/*, >5 KB)
+- https://images.fresha.com/locations/location-profile-images/2761151/6461322/c036a232-685f-4a68-900e-8d90b6bb1c5c-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461323/b2c14a63-8787-47ef-aaf2-5bd967793500-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461324/98d3dfc9-0268-41fe-b1ce-b6a67eec7e55-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461325/fc923042-d4d7-49fd-b6ce-2643774468e9-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461326/1d6868cb-6b1b-413a-8384-562b66a2ee24-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461327/cd2679be-6a3e-4c49-b443-16b6870c9314-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461328/fef9baae-b308-434d-a726-1c3968b3d383-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461329/b1481712-7fed-4f5e-8b5f-f6ecf527a442-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/2761151/6461330/83f4a792-24ff-43f6-8c71-82f033c2b08b-HyphenWellnessPilates-AE-Dubai-Dubai-AlQuoz-Fresha.jpg

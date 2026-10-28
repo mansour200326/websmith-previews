@@ -1,0 +1,21 @@
+# Weamour Fz LLC (distance healing) - facts (Fresha listing, fetched 2026-10-28)
+- Source: https://www.fresha.com/a/weamour-fz-llc-dubai-distance-healing-t97qgj4k
+- Phone (business line on Fresha listing): +971 55 684 6841
+- Category: Distance healing / holistic sessions by phone; Emirate: Dubai; Area: Phone sessions (Dubai-based) (Distance Healing Via the phone)
+- Instagram: none listed on Fresha
+- Website: none listed on Fresha; none found by web search; obvious .com/.ae slugs did not resolve to their own site
+- Rating: 4.9/5 from 70 Fresha reviews; newest review dates: 2026-10-13, 2026-09-27, 2026-08-09, 2026-07-13
+- Hours: Mon/Tue/Wed/Thu/Fri 09:00-18:00
+- Price range: not stated
+- Language of listing: English (Fresha ['en-ae']); reviews also in Arabic where noted
+- Services listed: see Fresha page
+- Fresha description: Weamour Fz LLC is a other at Distance Healing, Dubai, Dubai. Rated 4.9/5 from 70 reviews. Open Mon-Fri 09:00-18:00; Instant confirmation, Pay by app, Kid-friendly.
+## Own-gallery image URLs (each checked with curl: HTTP 200, image/*, >5 KB)
+- https://images.fresha.com/locations/location-profile-images/16776/2416825/221d2d11-4db7-4d06-9228-1d9b8185c500-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416826/8a6ba126-82b7-43f9-986a-0eac94d288f2-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416827/d49c65f3-5340-45e2-a876-8c00906b5f75-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416828/e4193919-7511-4eed-8a26-8b0ea758e287-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416829/930804d1-18ca-4219-a439-ce0654c79d08-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416830/de0c7930-da18-420e-ad80-2fab5fe3c1ff-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416831/8ff82577-adb1-4b4e-9a68-1ca2af29ad79-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
+- https://images.fresha.com/locations/location-profile-images/16776/2416832/9aa00cee-9e7e-48b6-aaee-d8331bcf66bd-IAmMore-AE-Dubai-Dubai-18BStreetUmmSuqeim-Fresha.jpg
