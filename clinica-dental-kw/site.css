@@ -220,7 +220,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 
 /* ---------- copper call band ---------- */
 .call{background:var(--copper);color:#fff;padding:clamp(70px,10vw,140px) var(--pad);display:grid;gap:28px}
-.call .h2{color:#fff;max-width:11em}
+.call .h2{color:#fff;max-width:11em;text-wrap:balance}
 .call__num{font:300 clamp(4rem,17vw,11rem)/1 var(--k-display);letter-spacing:-.04em;text-decoration:none;color:#fff;font-variant-numeric:tabular-nums;display:inline-block;padding-block:6px}
 .call p{max-width:32em;color:#fbeee7}
 .call__row{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
@@ -348,7 +348,8 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .k-js [data-reveal=clip]>img{transform:scale(1.15);transition:transform 1.8s var(--k-ease);transition-delay:var(--k-rv-delay,0ms)}
 .k-js [data-reveal=lines]{opacity:0;transform:none}
 .k-js [data-reveal=lines].k-rv-ready{opacity:1}
-.k-js [data-reveal].is-in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+.k-js [data-reveal].is-in{opacity:1;transform:none}
+.k-js [data-reveal=clip].is-in{clip-path:inset(0 0 0 0)}
 .k-js [data-reveal=clip].is-in>img{transform:none}
 .k-rv-line{display:block;overflow:hidden;padding-bottom:.22em;margin-bottom:-.22em}
 .k-rv-line>span{display:block;transform:translateY(105%);transition:transform 1.1s var(--k-ease);transition-delay:calc(var(--k-rv-delay,0ms) + var(--l)*90ms)}
