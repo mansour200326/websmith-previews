@@ -151,9 +151,16 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .doc ul{list-style:none;padding:0;margin-top:14px;border-top:1px solid var(--line)}
 .doc li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.98rem}
 .doc li a{padding-block:8px}
+.docs__more{grid-column:1/-1;display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,64px) clamp(24px,3vw,48px)}
+.doc--sm{align-content:start}
+.doc--sm .doc__ph{max-width:420px}
+.doc--sm h3{font-size:clamp(1.9rem,2.6vw,2.6rem)}
+.doc--sm li{font-size:.94rem}
+@media (min-width:600px) and (max-width:899px){.docs__more{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.docs__more{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:900px){
   .docs{grid-template-columns:.8fr 1fr 1fr;align-items:start}
-  .doc:nth-of-type(2){margin-top:clamp(80px,12vw,180px)}
+  .docs>.doc:nth-of-type(2){margin-top:clamp(80px,12vw,180px)}
   .docs__head{position:sticky;top:calc(var(--hdr) + 40px)}
 }
 
@@ -214,10 +221,13 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 /* ---------- copper call band ---------- */
 .call{background:var(--copper);color:#fff;padding:clamp(70px,10vw,140px) var(--pad);display:grid;gap:28px}
 .call .h2{color:#fff;max-width:11em}
-.call__num{font:300 clamp(3rem,10vw,9.5rem)/1 var(--k-display);letter-spacing:-.04em;text-decoration:none;color:#fff;font-variant-numeric:tabular-nums;display:inline-block;padding-block:6px}
+.call__num{font:300 clamp(4rem,17vw,11rem)/1 var(--k-display);letter-spacing:-.04em;text-decoration:none;color:#fff;font-variant-numeric:tabular-nums;display:inline-block;padding-block:6px}
 .call p{max-width:32em;color:#fbeee7}
 .call__row{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
 .call__row a.k-link{color:#fff}
+.call__side{display:grid;gap:22px;align-content:end}
+@media (min-width:900px){.call__num{font-size:min(11rem,9.4vw);white-space:nowrap}.call{grid-template-columns:1.6fr 1fr;column-gap:clamp(40px,6vw,120px);align-items:end}.call__main{display:grid;gap:28px;justify-items:start}}
+@media (max-width:899px){.call__main{display:grid;gap:28px}}
 
 /* ---------- visit / map (kit 16 restyled) ---------- */
 .k-visit{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
@@ -293,6 +303,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 @media (min-width:900px){.principles{grid-template-columns:1fr 1fr;column-gap:80px}}
 .wide-ph{margin:0;overflow:hidden;height:min(64vh,640px)}
 .wide-ph img{width:100%;height:118%;object-fit:cover}
+@media (max-width:899px){.wide-ph{height:auto;aspect-ratio:4/3}.wide-ph img{object-position:0% 50%}}
 
 /* ---------- footer ---------- */
 .ftr{background:var(--ink);color:#e9e0da;padding:clamp(60px,8vw,110px) var(--pad) 30px}
@@ -339,7 +350,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .k-js [data-reveal=lines].k-rv-ready{opacity:1}
 .k-js [data-reveal].is-in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
 .k-js [data-reveal=clip].is-in>img{transform:none}
-.k-rv-line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.k-rv-line{display:block;overflow:hidden;padding-bottom:.22em;margin-bottom:-.22em}
 .k-rv-line>span{display:block;transform:translateY(105%);transition:transform 1.1s var(--k-ease);transition-delay:calc(var(--k-rv-delay,0ms) + var(--l)*90ms)}
 [data-reveal=lines].is-in .k-rv-line>span{transform:none}
 [data-speed]{will-change:transform}
