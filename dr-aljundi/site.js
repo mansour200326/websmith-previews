@@ -11,7 +11,7 @@
   function split(el){
     if(!el.dataset.kTxt)el.dataset.kTxt=el.innerHTML;
     el.innerHTML=el.dataset.kTxt;el.setAttribute('aria-label',el.textContent.trim());
-    var words=el.textContent.trim().split(/\s+/);var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
+    var words=el.textContent.trim().split(/[ \t\n\r]+/);var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')};
     el.innerHTML=words.map(function(w){return'<span class="k-rv-w">'+esc(w)+'</span>'}).join(' ');
     var lines=[],top=null;[].forEach.call(el.querySelectorAll('.k-rv-w'),function(w){var t=w.offsetTop;if(t!==top){lines.push([]);top=t}lines[lines.length-1].push(w.textContent)});
     el.innerHTML=lines.map(function(l,i){return'<span class="k-rv-line" aria-hidden="true"><span style="--l:'+i+'">'+esc(l.join(' '))+'</span></span>'}).join('');
@@ -90,7 +90,7 @@
   });
   document.querySelectorAll('[data-k-map]').forEach(function(m){
     var btn=m.querySelector('button');
-    function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title=m.getAttribute('data-title')||'Map';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');if(btn)btn.remove()};m.appendChild(f)}
+    function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title=m.getAttribute('data-title')||'Map';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');setTimeout(function(){if(btn)btn.remove()},800)};if(btn){btn.textContent=btn.getAttribute('data-loading')||'Loading the map…'}m.appendChild(f)}
     if(btn)btn.addEventListener('click',load);
     if(matchMedia('(min-width:900px)').matches&&'IntersectionObserver' in window)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();load()}},{rootMargin:'200px'}).observe(m);
   });
