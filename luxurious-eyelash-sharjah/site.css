@@ -515,12 +515,9 @@ html:lang(ar) .k-quotes__slide blockquote::before{content:"“"}
 .k-quotes__slide blockquote::before{font-family:Georgia,"Times New Roman",serif!important;font-size:3.2em;line-height:.7;height:.45em}
 /* r2: map placeholder (own photo, espresso overlay, label card) */
 .k-visit__map{overflow:hidden}
-.k-visit__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.k-visit__map::after{content:"";position:absolute;inset:0;background:rgba(42,25,19,.35);z-index:0}
 .k-visit__label{position:relative;z-index:1;display:grid;justify-items:center;gap:14px;padding:20px}
 .k-visit__label p{background:#fff;color:var(--k-ink);padding:12px 16px;font-weight:600;font-size:.95rem;text-align:center;box-shadow:0 10px 30px -12px rgba(0,0,0,.4)}
 .k-visit__map iframe{z-index:2}
-@media (max-width:899px){.k-visit__map{min-height:0;aspect-ratio:4/3}}
 /* r2: about head with tall photo; chair strip */
 .pg-head--img{align-items:start}
 .pg-head__txt{display:grid;gap:26px}
@@ -529,8 +526,6 @@ html:lang(ar) .k-quotes__slide blockquote::before{content:"“"}
 .pg-fig img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
 @media (min-width:900px){.pg-head--img{grid-template-columns:1.25fr 1fr}}
 @media (max-width:899px){.pg-fig{aspect-ratio:4/3}}
-.about-photo{aspect-ratio:4/1}
-@media (max-width:700px){.about-photo{aspect-ratio:2/1}}
 /* r2: book box photo + ask line */
 .book__box figure{aspect-ratio:4/3;margin:-24px -24px 20px;overflow:hidden}
 .book__box figure img{width:100%;height:100%;object-fit:cover}
@@ -538,3 +533,61 @@ html:lang(ar) .k-quotes__slide blockquote::before{content:"“"}
 .book__ask{font-size:.92rem;color:var(--k-mute);padding-inline:4px}
 /* r2: inactive review words fully hidden (not 12% grey) so nothing low-contrast is ever on screen */
 .k-js .k-quotes__slide:not(.is-on) .k-w{opacity:0}
+
+/* ===== r3 (Fannan round 2) ===== */
+/* 1 map cover: type-led espresso block, "Muwaileh" bleeding off the bottom like the hero wordmark */
+.k-visit__map{background:var(--velvet-deep)!important;overflow:hidden}
+.k-visit__word{position:absolute;z-index:0;inset-inline-start:var(--pad);bottom:-.08em;margin:0;font:italic 500 clamp(5rem,11vw,10rem)/.8 "Bodoni Moda",Georgia,serif;letter-spacing:-.04em;color:#fff;white-space:nowrap;pointer-events:none}
+html:lang(ar) .k-visit__word{font:700 clamp(5rem,11vw,10rem)/1 "Noto Naskh Arabic",serif;letter-spacing:0;bottom:-.1em}
+@media (max-width:899px){.k-visit__map{min-height:0;aspect-ratio:1/1}.k-visit__word{font-size:18vw}}
+/* 2 desktop hero: two columns, photo near native size on one side, wordmark across both (ink over white, white over photo) */
+.hero__mark--ink{display:none}
+@media (min-width:1024px){
+  .hero.k-kb{display:grid;grid-template-columns:42% 58%;min-height:max(88vh,700px);background:#fff;overflow:hidden}
+  .hero .k-kb__media{position:relative;inset:auto;grid-column:2;grid-row:1;z-index:2;overflow:hidden}
+  .hero .k-kb__media{align-self:stretch;min-height:100%}
+  .hero .k-kb__img{position:absolute;inset:0;width:100%;height:100%}
+  .hero .k-kb__media::after{background:linear-gradient(180deg,rgba(35,21,16,0) 60%,rgba(35,21,16,.35) 100%)}
+  .hero .k-kb__img{object-position:60% 55%}
+  .hero__card{position:relative;grid-column:1;grid-row:1;top:auto;inset-inline-start:auto;width:auto;background:none;box-shadow:none;padding:clamp(40px,7vh,72px) clamp(28px,3vw,56px) 0 var(--pad);align-self:start}
+  html:lang(ar) .hero__card{padding-inline:var(--pad) clamp(28px,3vw,56px)}
+  .hero__card h1{font-size:clamp(2.8rem,4vw,4rem);line-height:1;margin-bottom:12px}
+  .hero__card p.hero__sub{font-size:1.25rem}
+  .hero__mark{font-size:16.5vw}
+  .hero__mark--ink{display:block;z-index:1;color:var(--k-ink)}
+  .hero .k-kb__media .hero__mark{inset-inline-start:calc(var(--pad) - 72.414%)}
+  html:lang(ar) .hero .k-kb__media .hero__mark{inset-inline-start:auto;right:calc(var(--pad) - 72.414%)}
+  html:lang(ar) .hero__mark--ink{inset-inline-start:auto;right:var(--pad)}
+}
+/* 4 mobile wordmark fits inside the gutter */
+@media (max-width:760px){.hero__mark{font-size:20.5vw}}
+/* 3 about chair strip: keep the teddy's face */
+.about-photo{aspect-ratio:3/1}
+.about-photo img{object-position:50% 25%}
+@media (max-width:760px){.about-photo{aspect-ratio:16/9}}
+/* 6 fixed bar call button */
+.tel-ico{width:18px;height:18px;flex:none;fill:currentColor}
+@media (max-width:979px){.bar a{padding-inline:14px;font-size:15px;gap:6px}}
+@media (max-width:420px){.bar__num{display:none}}
+/* 7 teddy nail nearer the centre */
+.art__b img{object-position:50% 70%}
+/* 8 services: slim photo strip under the intro */
+.svc-strip{max-width:1500px;margin:0 var(--pad) clamp(40px,5vw,64px);aspect-ratio:21/9;overflow:hidden}
+@media (min-width:1628px){.svc-strip{margin-inline:auto}}
+.svc-strip img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+
+/* r4 polish */
+.k-visit__label{position:absolute;inset-block-start:var(--pad);inset-inline-start:var(--pad);inset-inline-end:var(--pad);justify-items:start;padding:0}
+.k-visit__label p{text-align:start}
+@media (max-width:760px){
+  .k-cta__row{display:grid;grid-template-columns:2fr 1fr;gap:10px;width:100%}
+  .k-cta__row .k-cta__btn{width:100%;justify-content:center;padding-inline:12px;font-size:1rem}
+  .k-cta__meta{grid-column:1/-1}
+  .k-visit__acts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .k-visit__acts a{width:100%;justify-content:center;text-align:center;padding-inline:10px;font-size:15px}
+}
+@media (max-width:760px){
+  .k-cta__btn bdi,.k-visit__acts bdi{display:none}
+  .k-cta__row,.k-visit__acts{align-items:stretch}
+  .k-cta__row .k-cta__btn,.k-visit__acts a{display:flex;align-items:center;min-height:56px}
+}

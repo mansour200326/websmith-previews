@@ -467,3 +467,32 @@ ul{list-style:none}
 @media (max-width:959px){.ab .ab__fig{order:2}.ab .ab__txt{order:1}}
 @media (prefers-reduced-motion:reduce){.k-js .hero .k-seq{animation:none;clip-path:none}}
 @media (min-width:960px){.ab{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+/* ===== Fannan round 2 fixes ===== */
+/* story: 1:1 detail crops */
+.k-story__step .k-story__inline{aspect-ratio:1/1}
+@media (min-width:900px){.k-story__media{height:auto!important;aspect-ratio:1/1;max-height:80vh;top:calc(var(--hh) + 4vh)!important}}
+/* services: hair | threading pair */
+.pair{display:grid;gap:0;padding-block:clamp(50px,7vw,100px);border-top:1px solid var(--line)}
+.pair__col+.pair__col{border-top:1px solid #dcc6cf;margin-top:40px;padding-top:40px}
+.pair .items{margin-bottom:24px}
+@media (min-width:960px){.pair{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px)}.pair__col+.pair__col{border-top:0;margin-top:0;padding-top:0}}
+/* services opening: type band then 21:9 photo */
+.svc-hd__row{display:grid;gap:22px;padding-block:clamp(40px,6vw,80px) clamp(30px,4vw,56px)}
+.svc-hd h1{font-size:clamp(4rem,16vw,11rem);color:var(--berry)}
+.svc-hd__txt p{font-size:clamp(1.05rem,1.3vw,1.2rem);max-width:30em}
+.svc-hd__txt p+p{color:var(--mute);font-size:1rem;margin-top:12px}
+.svc-hd__ph{overflow:hidden;aspect-ratio:4/3;background:var(--tint)}
+.svc-hd__ph img{width:100%;height:100%;object-fit:cover;object-position:52% 45%}
+@media (min-width:960px){.svc-hd__row{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end;gap:clamp(30px,5vw,80px)}.svc-hd__txt{padding-bottom:1.2rem}.svc-hd__ph{aspect-ratio:21/9}}
+/* AR hero name inside its column */
+@media (min-width:960px){[dir=rtl] .hero h1{font-size:min(17rem,15.8vw);margin-inline:0}}
+/* balanced headings */
+.h2,.disp,.row__t{text-wrap:balance}
+/* intro photo aligned to the heading and stretched */
+@media (min-width:960px){
+  .intro{align-items:stretch}
+  .intro__fig{margin-top:.4rem;display:flex;flex-direction:column}
+  .intro__ph{aspect-ratio:auto;flex:1;min-height:420px}
+  .intro__ph img{height:100%}
+}

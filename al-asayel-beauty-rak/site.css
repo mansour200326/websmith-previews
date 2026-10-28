@@ -493,3 +493,60 @@ html:lang(ar) .hero__name .m{padding-bottom:.16em;margin-bottom:-.12em}
 html:lang(ar) .hero__sub{font-weight:600}
 .band__pic{max-width:620px}.band__pic img{object-position:50% 62%}@media (min-width:900px){.band__in{grid-template-columns:1.1fr .9fr}}
 .cat__body.has-pic .k-menu__items{display:block}
+
+/* ================= round 2 (Fannan) ================= */
+/* 1. mobile stamp sits on the capsule's top end, clear of the sub line */
+@media (max-width:899px){.stamp{width:92px!important;height:92px!important;top:-10px!important;bottom:auto!important;inset-inline-end:6px!important;inset-inline-start:auto!important}.stamp span{font-size:.72rem}.stamp [lang=ar]{font-size:.82rem}}
+/* 2. map panel, type-led */
+.visit__look{position:relative;display:grid;justify-items:center;gap:6px;text-align:center;padding:40px 0;isolation:isolate}
+.visit__look::before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:min(300px,70vw);aspect-ratio:1;transform:translate(-50%,-50%);border:2px dashed var(--gold);border-radius:50%}
+.visit__shop{font:900 clamp(4rem,9vw,8rem)/.95 "Red Hat Display",sans-serif;letter-spacing:-.05em;color:var(--ink)}
+html:lang(ar) .visit__shop{font:700 clamp(4rem,9vw,8rem)/1.2 "Readex Pro",sans-serif;letter-spacing:0}
+.visit__street{font-size:1.1rem;font-weight:500;color:var(--ink)}
+/* 3/5. team lines and Arabic names */
+.mate__for{color:var(--mute);font-size:.95rem;margin-top:10px}
+html:lang(ar) .mate h3{font:700 2rem/1.35 "Readex Pro",sans-serif;letter-spacing:0}
+.mate__latin{font:400 .85rem/1.4 "Red Hat Text",sans-serif;color:var(--mute);margin-top:2px}
+/* 4. lounge tile: crop the glass door stickers off the top */
+.m-a img{object-position:50% 78%}
+@media (max-width:899px){.m-a{aspect-ratio:16/10!important}}
+@media (min-width:900px){.m-a{aspect-ratio:auto}}
+/* 6. ink block */
+.block p{text-wrap:balance}
+@media (max-width:599px){.m-f{grid-column:1/-1!important}.m-f p{font-size:1.5rem!important}.block__go{white-space:nowrap}}
+/* 7. balanced section headings */
+.h2,.close h2,.pghead h1{text-wrap:balance}
+/* 8. about: text column starts at the top of the arch */
+.split2>.prose{align-self:start}
+@media (min-width:900px){
+  .m-a{grid-column:1/8!important;grid-row:1/4!important}
+  .m-f{grid-column:1/8!important;grid-row:4/8!important}
+  .m-b{grid-column:8/10!important;grid-row:2/7!important}
+  .m-c{grid-column:10/13!important;grid-row:1/4!important}
+  .m-e{grid-column:10/13!important;grid-row:4/8!important}
+}
+.m-a img{object-position:50% 100%}
+@media (max-width:899px){
+  .m-a{aspect-ratio:2/1!important}
+  .m-c{order:1;grid-column:1/-1;min-height:0}
+  .m-b{order:2}.m-e{order:3}.m-f{order:4;grid-column:1/-1}
+  .m-b,.m-e{aspect-ratio:1/1.35!important}
+  .m-e{border-radius:999px}
+}
+@media (max-width:899px){.m-a{aspect-ratio:2.4/1!important}.m-c.block--half{border-radius:28px 28px 0 0}}
+
+/* ================= pre-publish polish ================= */
+@media (min-width:900px){
+  .visit__look::before{width:clamp(320px,34vw,500px)}
+  .visit__shop{font-size:clamp(4rem,6vw,5.6rem)}
+  .visit__map button{margin-top:32px}
+}
+.hero__sub,.hero__lead{text-wrap:pretty}
+@media (min-width:900px){
+  .visit__look{width:clamp(340px,32vw,460px);aspect-ratio:1;align-content:center;padding:0}
+  .visit__look::before{inset:0;left:0;top:0;width:auto;transform:none}
+  .visit__shop{font-size:clamp(3.6rem,5vw,4.8rem)}
+  .visit__map button{margin-top:28px}
+}
+.hero__sub{text-wrap:wrap}
+.nw{white-space:nowrap}
