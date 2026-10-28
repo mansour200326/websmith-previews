@@ -920,3 +920,4 @@ em,i.it{font-style:italic}
 .hd__logo{min-height:44px;display:flex;align-items:center}
 .ft li a,.ft p a{padding-block:10px;min-height:44px}
 .bill__foot a,.book__more a{display:inline-block;padding-block:10px}
+@media (max-width:999px){.hd__in{gap:10px}.hd__logo{width:min(170px,42vw)}}
