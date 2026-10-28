@@ -510,9 +510,9 @@
     var g=function(t){return(p.find(function(x){return x.type===t})||{}).value};
     var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),now=(+g('hour')%24)+(+g('minute'))/60,txt='';
     for(var k=0;k<8&&!txt;k++){var day=(d+k)%7,s=hrs[day];if(!s||s.length!==2)continue;
-      if(k===0&&now<s[0])txt=ar?'مغلق الآن، نفتح '+fmt(s[0])+' اليوم':'Closed now, opens '+fmt(s[0])+' today';
-      else if(k===1)txt=ar?'مغلق الآن، نفتح غداً '+fmt(s[0]):'Closed now, opens tomorrow '+fmt(s[0]);
-      else if(k>1)txt=ar?'مغلق الآن، نفتح '+dn[day]+' '+fmt(s[0]):'Closed now, opens '+dn[day]+' '+fmt(s[0]);}
+      if(k===0&&now<s[0])txt=ar?'نفتح '+fmt(s[0])+' اليوم':'Opens '+fmt(s[0])+' today';
+      else if(k===1)txt=ar?'نفتح غداً '+fmt(s[0]):'Opens tomorrow '+fmt(s[0]);
+      else if(k>1)txt=ar?'نفتح '+dn[day]+' '+fmt(s[0]):'Opens '+dn[day]+' '+fmt(s[0]);}
     if(txt)b.querySelector('span').textContent=txt;
   });
 })();
