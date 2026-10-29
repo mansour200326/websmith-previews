@@ -417,7 +417,7 @@ html:lang(ar) .rev blockquote p::after{content:"\00BB"}
 .k-visit__acts a{min-height:52px}
 .k-visit__map{background:#dfe5eb}
 .k-visit__thumb{margin:0 0 26px;max-width:420px}
-.k-visit__thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
+.k-visit__thumb img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
 .k-visit__thumb figcaption{font-size:.85rem;color:var(--mute);margin-top:8px}
 .k-visit__badge.is-open i::after{animation-iteration-count:3}
 .k-visit .ram{font-size:.92rem;color:var(--mute);margin:-14px 0 26px}
