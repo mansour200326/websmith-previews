@@ -338,7 +338,7 @@ a{color:inherit}
 /* ---------- First visit ---------- */
 .visit1{display:grid;gap:clamp(30px,5vw,80px);max-width:var(--max);margin:0 auto;padding:0 var(--pad) clamp(70px,10vw,140px);align-items:center}
 .visit1__ph{overflow:hidden;aspect-ratio:4/5;position:relative}
-.visit1__ph img{width:100%;height:115%;object-fit:cover;object-position:50% 20%;filter:saturate(.8) contrast(1.04)}
+.visit1__ph img{width:100%;height:115%;object-fit:cover;object-position:50% 20%}
 .visit1 h2{font:400 clamp(2.2rem,5vw,4.2rem)/1 var(--k-display);letter-spacing:-.03em;max-width:12em}
 .steps{list-style:none;padding:0;margin-top:30px;counter-reset:s}
 .steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:6px 14px;padding:20px 0;border-top:1px solid var(--k-line)}
@@ -446,8 +446,10 @@ a{color:inherit}
   .topbar__hrs .long{display:none}
 }
 @media (min-width:960px){.topbar__hrs .short{display:none}}
-.k-story__media figure.story-seal,.k-story__inline.story-seal{background:var(--soft);display:grid;place-items:center}
-.k-story__media .story-seal img,.k-story__inline.story-seal img{width:min(55%,340px);height:auto;object-fit:contain;mix-blend-mode:multiply}
+.k-story__media figure.story-seal{background:var(--soft);display:grid;place-items:center}
+.k-story__media .story-seal img{width:min(40%,280px);height:auto;object-fit:contain;mix-blend-mode:multiply}
+@media (max-width:899px){.k-story__inline.story-seal{background:var(--soft);display:grid;place-items:center}.k-story__inline.story-seal img{width:min(40%,280px);height:auto;object-fit:contain;mix-blend-mode:multiply}}
+@media (min-width:900px){.k-story__step .k-story__inline.story-seal{display:none}}
 .tx__side>p{margin-top:12px}
 .tx h3{margin-bottom:14px}
 
@@ -473,3 +475,72 @@ html:lang(ar) .hero__h{font-size:clamp(2.6rem,6.6vw,6.2rem)}
 html:lang(ar) .hero__h .w{white-space:nowrap}
 .hero__ring{stroke-linecap:round}
 html:not(.k-js) .roll>span:not(:first-child){display:none}
+
+/* ===== Fannan round 1 fixes ===== */
+/* (1) red only on crescent, CTA, desk band, small labels */
+.hero__h .w--2{color:var(--k-ink)}
+.roll{vertical-align:baseline;height:auto;padding-bottom:.32em;margin-bottom:-.32em}
+.roll>span{color:var(--k-ink);text-decoration:underline 2px var(--red);text-decoration-skip-ink:none;text-underline-offset:.18em}
+html:lang(ar) .roll{height:auto}
+.since .since__yr{color:var(--k-ink)}
+.phead h1 em{color:var(--k-ink)}
+/* (3) desktop hero: big disc pushing past the gutter, top on the cap height */
+.hero__sq{position:relative;aspect-ratio:1;width:100%}
+.hero__ph{aspect-ratio:auto}
+.hero__ph figcaption{position:static;display:inline-block;margin-top:10px;margin-inline-start:11%;border:0;padding:0;background:none}
+.hero__disc img{object-position:38% 28%}
+@media (min-width:960px){
+  .hero{grid-template-columns:minmax(0,1fr) 44vw;align-items:start;padding-top:clamp(40px,6vw,90px);min-height:0}
+  .hero__ph{width:44vw;max-width:none;justify-self:end;margin-inline-end:-40px;margin-top:calc(.1 * clamp(3.3rem,10.2vw,9.6rem) - 4.84vw)}
+}
+@media (min-width:1500px){.hero{grid-template-columns:minmax(0,1fr) 660px}.hero__ph{width:660px;margin-top:calc(15px - 72px)}}
+/* (2) phones/tablets: name, rolling line, Call, disc, lead */
+@media (max-width:959px){
+  .hero__h{order:1}.hero__roll{order:2}.hero__acts{order:3}.hero__ph{order:4;width:min(72vw,520px);margin:30px auto 0}.hero__lead{order:5;margin-top:26px}
+  .hero__acts{margin-top:22px;flex-direction:column;align-items:stretch;gap:2px}
+  .hero__acts .k-btn{width:100%;min-height:56px;justify-content:center;font-size:1.05rem}
+  .hero__acts .txtlink{align-self:flex-start}
+  .hero__ph figcaption{margin-inline-start:0}
+  .hero{padding-top:22px}
+}
+/* (7) type */
+.phead h1{font-size:clamp(3.4rem,10vw,9rem)}
+.nw,.k-roll,.hd__call,.desk__num,.k-visit__call,.k-btn{white-space:nowrap}
+.hero__lead{text-wrap:pretty;max-width:36ch}
+html:lang(ar) .hero__h{font-weight:500}
+html:lang(ar) .hero__lead{max-width:40ch}
+/* (5) map: same height as the info column on desktop */
+@media (min-width:900px){.k-visit{align-items:stretch}.k-visit__map{min-height:0;height:auto}}
+/* (6) images */
+.grp__ph{max-width:620px;aspect-ratio:16/10}
+.visit1__ph{max-width:520px;width:100%}
+@media (min-width:960px){.visit1__ph{margin-inline-start:0;justify-self:start}}
+.desk__ph{max-width:440px;aspect-ratio:4/5}
+.desk__ph img{object-position:50% 70%}
+.k-team__ph{max-width:220px}
+/* (8) treatments: two columns of four on wide screens */
+@media (min-width:1024px){
+  .k-acc__list{display:grid;grid-auto-flow:column;grid-template-rows:repeat(4,auto);grid-template-columns:1fr 1fr;column-gap:56px;align-items:start}
+  .k-acc__t{font-size:2rem}
+  .k-acc__row summary{padding:22px 0}
+  .k-acc__body{padding-inline-start:0;grid-template-columns:1fr}
+}
+/* (9) phone nav strip fades at the edge so it reads as scrollable */
+@media (max-width:960px){.nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+  [dir=rtl] .nav{-webkit-mask-image:linear-gradient(270deg,#000 85%,transparent);mask-image:linear-gradient(270deg,#000 85%,transparent)}}
+@media (max-width:959px){.hero__ph{width:min(92vw,600px)}}
+.hero__h .w{white-space:nowrap}
+@media (min-width:960px){
+  .hero{--h1:clamp(3.3rem,7.2vw,8.6rem)}
+  .hero__h{font-size:var(--h1)}
+  .hero__ph{margin-top:calc(.1 * var(--h1) - 4.84vw)}
+  html:lang(ar) .hero__h{font-size:clamp(2.6rem,6vw,6rem)}
+}
+@media (min-width:1500px){.hero__ph{margin-top:calc(.1 * var(--h1) - 72px)}}
+.hero__h .w--2{white-space:normal}
+@media (min-width:960px){
+  .hero{--h1:min(7.2vw,5.8rem)}
+  html:lang(ar) .hero{--h1:min(6vw,5.4rem)}
+  html:lang(ar) .hero__h{font-size:var(--h1)}
+}
+@media (min-width:960px){html:lang(ar) .hero__ph{margin-top:calc(.26 * var(--h1) - 4.84vw)}}
