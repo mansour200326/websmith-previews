@@ -537,10 +537,24 @@ html:lang(ar) .hero__lead{max-width:40ch}
   html:lang(ar) .hero__h{font-size:clamp(2.6rem,6vw,6rem)}
 }
 @media (min-width:1500px){.hero__ph{margin-top:calc(.1 * var(--h1) - 72px)}}
-.hero__h .w--2{white-space:normal}
+.hero__h .w--2{white-space:nowrap}
 @media (min-width:960px){
-  .hero{--h1:min(7.2vw,5.8rem)}
+  .hero{--h1:clamp(3.3rem,8.4vw,8rem)}
   html:lang(ar) .hero{--h1:min(6vw,5.4rem)}
   html:lang(ar) .hero__h{font-size:var(--h1)}
 }
 @media (min-width:960px){html:lang(ar) .hero__ph{margin-top:calc(.26 * var(--h1) - 4.84vw)}}
+
+/* ===== Fannan round 2 fixes ===== */
+/* (1) one grade for every secondary photo */
+.visit1__ph img,.grp__ph img,.desk__ph img{filter:grayscale(1) contrast(1.08) brightness(1.04)}
+/* (2) front-desk/band photo square */
+.desk__ph{aspect-ratio:1/1}
+.desk__ph img{object-position:50% 80%}
+/* (3) source portraits are 183px: keep the circles small on desktop */
+@media (min-width:800px){.k-team__ph{max-width:200px}}
+/* (4) bigger desktop name, overlapping the disc edge */
+.hero__type{position:relative;z-index:2}
+/* (5) no placeholder arc over the live map */
+.k-visit__map:has(iframe.is-on)::before,.k-visit__map:has(iframe.is-on)::after{display:none}
+.hero__h .m{overflow:visible clip}
