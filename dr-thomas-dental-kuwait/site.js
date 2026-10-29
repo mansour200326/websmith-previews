@@ -187,4 +187,6 @@
   var fl=document.querySelectorAll('.flood');
   if(fl.length&&'IntersectionObserver' in window){var o2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');o2.unobserve(e.target)}})},{threshold:.25});fl.forEach(function(f){o2.observe(f)})}
   else fl.forEach(function(f){f.classList.add('is-in')});
+  // desktop: the map is there straight away (after the page has loaded, so the hero stays fast)
+  if(matchMedia('(min-width:980px)').matches)addEventListener('load',function(){document.querySelectorAll('[data-k-map] button').forEach(function(b){b.click()})});
 })();
