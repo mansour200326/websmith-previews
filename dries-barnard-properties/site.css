@@ -230,7 +230,7 @@ a{color:inherit}
 .agent h3{font:500 1.5rem/1.1 var(--k-display)}
 .agent p{font-size:.88rem;color:var(--k-mute);margin-top:4px}
 .agent ul{margin-top:12px;font-weight:600;font-size:.98rem}
-.agent li a{display:inline-block;padding-block:6px;text-decoration:none}
+.agent li a{display:inline-block;padding-block:10px;text-decoration:none}
 .based{margin-top:22px;color:var(--k-mute);max-width:30em}
 
 /* ---------- footer ---------- */
@@ -366,7 +366,7 @@ a{color:inherit}
 .auc{background:var(--clay);color:#fff;padding-block:clamp(48px,6vw,84px)}
 .auc__in{display:grid;gap:22px}
 @media (min-width:980px){.auc__in{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;align-items:end}}
-.auc .svc__n{color:#fff;opacity:.85}
+.auc .svc__n{color:#fff}
 .auc h2{font:500 clamp(2rem,3.8vw,3.4rem)/1 var(--k-display);letter-spacing:-.025em}
 .auc__cred{font:500 clamp(2rem,4.6vw,4.2rem)/1.02 var(--k-display);letter-spacing:-.025em;max-width:18ch}
 .auc__cred span{display:block}
