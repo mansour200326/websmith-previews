@@ -138,7 +138,7 @@ a{color:inherit}
 .arch .k-story__n{font:400 .85rem var(--mono);color:var(--red)}
 .arch .k-story__step h3{font:400 clamp(2.4rem,4.6vw,4rem)/1 var(--display);letter-spacing:-.025em}
 .arch .k-story__step p{color:var(--ink-2)}
-@media (min-width:900px){.arch .k-story__step:not(.is-on) :is(h3,.k-story__n){color:#7b817d}}
+@media (min-width:900px){.arch .k-story__step:not(.is-on) :is(h3,.k-story__n){color:#5f6661}}
 @media (max-width:899px){.arch .k-story__inline{aspect-ratio:auto!important;background:var(--fog);padding:18px;display:grid;place-items:center}}
 .arch .k-story__inline img{max-height:340px;width:auto!important;height:auto!important;object-fit:contain!important}
 .arch .k-story__step .cap{display:block;color:var(--mute);margin-top:10px}
@@ -210,7 +210,7 @@ a{color:inherit}
 .ft__big a{text-decoration:none;color:#fff}
 .ft__grid{display:grid;gap:34px;margin-top:clamp(44px,6vw,80px);padding-block:36px;border-top:1px solid rgba(233,239,233,.2)}
 @media (min-width:800px){.ft__grid{grid-template-columns:1.2fr 1fr 1fr 1fr}}
-.ft h4{font:400 .78rem var(--mono);color:var(--on-green-mute);margin-bottom:12px;font-weight:400}
+.ft h3{font:400 .78rem var(--mono);color:var(--on-green-mute);margin-bottom:12px;font-weight:400}
 .ft p,.ft li{font-size:.95rem;line-height:1.55}
 .ft ul{list-style:none;padding:0}
 .ft li a,.ft p a{display:inline-block;padding-block:6px;text-decoration:none;color:#fff}
@@ -283,11 +283,16 @@ html:lang(ar) .brand__t b{font-family:"Noto Naskh Arabic",serif;font-weight:700}
 html:lang(ar) .brand__t span{font-family:var(--body);font-size:.78rem}
 html:lang(ar) .year{direction:ltr;justify-content:flex-end}
 html:lang(ar) .k-acc__n,html:lang(ar) .svc__n{font-family:var(--mono)}
-html:lang(ar) :is(.mono,.off h3 small,.off dt,.ft h4,.areas h3 span,.arch .k-story__n,.founder blockquote cite,.toc h2,.grp>h2,.hero__cap){font-family:var(--body)!important;letter-spacing:0}
-html:lang(ar) :is(.off dt,.ft h4,.founder blockquote cite,.toc h2,.grp>h2){font-size:.9rem}
+html:lang(ar) :is(.mono,.off h3 small,.off dt,.ft h3,.areas h3 span,.arch .k-story__n,.founder blockquote cite,.toc h2,.grp>h2,.hero__cap){font-family:var(--body)!important;letter-spacing:0}
+html:lang(ar) :is(.off dt,.ft h3,.founder blockquote cite,.toc h2,.grp>h2){font-size:.9rem}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 
 @media (prefers-reduced-motion:reduce){
   .k-js .hero h1 .ln>span,.k-js .hero__fade,.k-js .hero__photo,.k-js .hero__photo img,.k-js .year span,.k-js .pghead h1 .ln>span{animation:none!important;transform:none!important;opacity:1!important;clip-path:none!important}
   .ppl__ph img,.ring__c{transition:none}
+}
+
+@media (max-width:899px){
+  .off dd a,.ft li a,.ft p a{min-height:44px;min-width:44px;display:inline-flex;align-items:center}
+  .ft__bar a{padding-block:12px}
 }
