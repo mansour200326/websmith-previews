@@ -856,3 +856,8 @@ html:lang(ar) .mono{font-family:"IBM Plex Sans Arabic",var(--mono)}
 [dir=rtl] .hd__tel::after{content:"اتصل"}
 html:lang(ar) .hero__corner,html:lang(ar) .sec__idx,html:lang(ar) .sheet,html:lang(ar) .sheet h3,html:lang(ar) .k-drag__meta span,html:lang(ar) .ft h3,html:lang(ar) .tc__list li span{font-family:"IBM Plex Sans Arabic",var(--k-body)}
 html:lang(ar) .sheet{font-size:.95rem}
+@media (max-width:900px){.hd__logo span{display:block;position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+.hd__logo,.hd__tel,.hd nav .hd__lang.k-lang{min-width:44px;justify-content:center}
+.skip{transition:none}
+.k-link{display:inline-block;padding-block:4px}
+.hero h1 .g{color:var(--navy)}
