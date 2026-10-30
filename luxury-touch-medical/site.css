@@ -479,3 +479,58 @@ html:lang(ar) .faqw .k-faq__q summary{font-weight:600;font-size:1.1rem}
 @media (min-width:960px){.smile__ph{height:min(82vh,780px)}}
 html:lang(ar) .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
 @media (max-width:959px){.ft li a{padding-block:11px}}
+
+/* ===== Fannan round 2 fixes ===== */
+/* 1. italic is the only accent in page headlines */
+.hero h1 em,.pintro h1 em{color:#fff}
+/* 2. mobile hero: portrait crop, lighter overlay, short lede */
+.hero__media picture{display:block;width:100%;height:100%}
+.hero__lede--m{display:none}
+@media(max-width:700px){
+  .hero__media img{object-position:50% 78%;transform-origin:50% 40%}
+  .hero__media{bottom:auto;height:calc(100svh - 112px)}
+  .hero__media::after{background:linear-gradient(180deg,rgba(0,0,0,.45) 0,rgba(0,0,0,.2) 30%,rgba(0,0,0,.08) 50%,rgba(0,0,0,.2) 70%,rgba(0,0,0,.62) 86%,#000 100%)}
+  .hero__body{align-content:space-between;padding-bottom:24px}
+  .hero__lede--m{display:block;max-width:22em}
+  .hero__lede--d{display:none}
+  .hero__row{margin-top:auto;padding-top:clamp(170px,32vh,300px)}
+}
+/* 3. services intro with photo column */
+.pintro__in{display:grid;gap:clamp(30px,4vw,60px)}
+.pintro__ph{margin:0;overflow:hidden;background:#141310;aspect-ratio:4/3}
+.pintro__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+@media(min-width:960px){
+  .pintro__in{grid-template-columns:minmax(0,1fr) 45%;align-items:stretch;padding-inline-end:0;max-width:none;padding-inline-start:max(var(--pad),calc((100vw - 1500px)/2 + var(--pad)))}
+  .pintro__ph{aspect-ratio:auto;height:calc(100% + clamp(60px,9vw,120px) + clamp(40px,6vw,70px));min-height:520px;margin-block:calc(-1 * clamp(60px,9vw,120px)) calc(-1 * clamp(40px,6vw,70px))}
+  .pintro__txt{align-self:end}
+}
+/* 4. doctors: one portrait, three rule-line rows */
+.docs__grid{display:grid;gap:clamp(28px,4vw,64px);align-items:start}
+.docs__lead{margin:0;overflow:hidden;aspect-ratio:4/5;background:#141310}
+.docs__lead img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.docs__list{border-top:1px solid var(--k-ink)}
+.docs__row{display:grid;gap:4px;padding:clamp(20px,2.6vw,32px) 0;border-bottom:1px solid var(--k-line)}
+.docs__row h3{font:400 clamp(1.7rem,3vw,2.6rem)/1.05 var(--k-display);letter-spacing:-.015em}
+.docs__row p{color:var(--k-mute)}
+.docs__row--lead h3{font-size:clamp(2rem,3.6vw,3.1rem)}
+@media(min-width:900px){.docs__grid{grid-template-columns:40% 1fr}.docs__lead{position:sticky;top:100px}.docs__list{align-self:end}}
+html:lang(ar) .docs__row h3{letter-spacing:0;line-height:1.3}
+/* 5. cases: tight crop already baked into the files */
+/* 6. services mobile jump grid */
+@media(max-width:700px){
+  .jump{display:grid;grid-template-columns:1fr 1fr;border-top:0}
+  .jump a,.jump a+a,.jump a:last-child{padding:16px 16px 16px 0;border-top:1px solid #34312b;border-inline-end:0;border-inline-start:0}
+  .jump a:nth-child(even){padding-inline-start:16px;border-inline-start:1px solid #34312b}
+}
+/* 7. map poster + lotus stacked above the button */
+.k-visit__map{background:linear-gradient(rgba(0,0,0,.74),rgba(0,0,0,.74)),url(img/laser-room.webp) 18% 40%/cover no-repeat #000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.k-visit__lotus{width:110px;height:auto;position:relative;z-index:1}
+/* 8. breathing room between treatments and doctors */
+.docs .k-team{padding-top:clamp(40px,5vw,70px)}
+/* 9. facial/derma photos */
+.dsec__side .ph--room img{object-position:12% 40%}
+.dsec__side .ph--face img{object-position:50% 34%}
+/* 10. FAQ heading + questions */
+.k-faq__sub{display:block;font:500 1rem/1.4 var(--k-body);color:var(--k-mute);margin-top:12px}
+.faqw .k-faq__q summary{font-size:clamp(1.4rem,2vw,1.6rem);font-weight:500}
+html:lang(ar) .faqw .k-faq__q summary{font-size:1.25rem}

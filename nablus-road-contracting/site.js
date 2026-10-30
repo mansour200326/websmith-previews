@@ -510,3 +510,15 @@
   addEventListener('pointermove',function(e){tx=e.clientX+190;ty=e.clientY},{passive:true});
   function loop(){if(!run)return;x+=(tx-x)*.14;y+=(ty-y)*.14;fl.style.left=x+'px';fl.style.top=y+'px';requestAnimationFrame(loop)}
 })();
+
+/* Nablus: hero photo column, cross-fade palm > meydan > jafza every 5s (paused off-screen, off under reduced motion) */
+(function(){
+  var s=[].slice.call(document.querySelectorAll('.hero__slide'));if(s.length<2)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var i=0,t=0,vis=true;
+  var wide=matchMedia('(min-width: 800px)');
+  function go(){if(!wide.matches)return;s[i].classList.remove('is-on');i=(i+1)%s.length;s[i].classList.add('is-on')}
+  function start(){if(!t)t=setInterval(function(){if(vis&&!document.hidden)go()},5000)}
+  var io=new IntersectionObserver(function(e){vis=e[0].isIntersecting});io.observe(s[0].parentNode);
+  start();
+})();

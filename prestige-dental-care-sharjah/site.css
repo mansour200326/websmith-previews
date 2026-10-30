@@ -818,3 +818,64 @@ html[lang=ar] .k-split__word{transform-origin:100% 100%}
 @media (max-width:899px){.hd__nav .k-lang a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}.hd__nav .k-lang{padding-block:0}}
 .hd__nav .k-lang a{min-width:44px;justify-content:center}
 html[lang=ar] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
+
+/* ===== round 2 (Fannan) ===== */
+/* hero: navy price panel replaces the stock photo */
+.hero .k-split__photo--price{background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:clamp(24px,3vw,40px);aspect-ratio:4/5}
+.pp__n{font:800 clamp(7rem,13vw,12rem)/.82 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.05em;color:var(--gold);white-space:nowrap}
+@media (min-width:900px){
+  .hero.k-split{grid-template-columns:1.05fr .85fr .42fr}
+  .hero .k-split__photo--price{aspect-ratio:auto}
+  .pp__n span{display:block}
+}
+.pp__t{font-size:16px;line-height:1.45;color:rgba(255,255,255,.8);max-width:22em}
+.hero .k-split__meta{align-self:start;padding-top:.32em}
+@media (min-width:900px){.hero .k-split__meta{padding-top:calc(clamp(4rem,7.4vw,8.6rem)*.12)}}
+/* "Also" line under the price board */
+.prices__also{margin-top:14px;font-size:1rem;color:#dbe2ef;max-width:40em}
+.prices__also a{color:var(--gold);font-weight:600;text-decoration:none;padding-block:10px;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 6px)/0 1px no-repeat;transition:background-size .5s var(--k-ease)}
+.prices__also a:hover{background-size:100% 1px}
+[dir=rtl] .prices__also a{background-position:100% calc(100% - 6px)}
+/* stock photos: duotone navy, never read as the clinic's own */
+.visit1__fig,.tx__fig.amb{background:#142c5f}
+.visit1__fig img,.tx__fig.amb img{filter:grayscale(1) contrast(1.05);mix-blend-mode:luminosity;opacity:.9}
+/* CTA */
+#cta-h{text-wrap:balance}
+/* footer wordmark: their logo + name in gold */
+.ft{background:var(--navy);color:#e3e8f2}
+.ft__big{display:flex;align-items:center;gap:clamp(16px,3vw,32px);font:inherit;letter-spacing:0;color:inherit}
+.ft__big img{width:120px;height:120px;border-radius:50%;flex:none;background:#fff}
+.ft__big span{margin:0;font:600 clamp(1rem,1.6vw,1.3rem)/1.35 var(--k-body);color:var(--gold)}
+.ft__big b{display:block;font:800 clamp(1.7rem,4.2vw,3.4rem)/1 var(--k-display);letter-spacing:-.03em;color:var(--gold);margin-bottom:8px}
+html[lang=ar] .ft__big b{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.ft h3{color:var(--gold)}
+.ft a{color:#fff}
+.ft__cols{border-bottom-color:rgba(255,255,255,.18)}
+.ft__base{color:#b9c3d8}
+@media (max-width:520px){.ft__big{flex-direction:column;align-items:flex-start}.ft__big img{width:96px;height:96px}}
+/* mobile header: one 64px row */
+.hd__lang{display:none}
+@media (max-width:700px){
+  .hd{grid-template-columns:auto 1fr auto auto;height:64px;padding-block:0;gap:0 10px}
+  .hd__nav{display:none}
+  .hd__logo{gap:8px}
+  .hd__logo img{width:36px;height:36px}
+  .hd__logo{min-width:44px;min-height:44px}
+  .hd__logo span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .hd__tel{grid-column:2;justify-self:start;align-items:flex-start;font-size:1rem}
+  .hd__lang{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 6px;font-weight:600;color:var(--navy);text-decoration:none;font-size:.95rem}
+  .hd__lang[hreflang=ar]{font-family:"Readex Pro",system-ui,sans-serif}
+  .hd__wa{width:44px;height:44px}
+  .hero .k-split__photo,.hero .k-split__photo--price{aspect-ratio:16/10}
+  .hero .k-split__type{display:contents}
+  .hero .k-split__type h1{order:1}
+  .hero .k-split__photo{order:2}
+  .hero .k-split__lead{order:3;margin-top:0}
+  .hero__acts{order:4;margin-top:0}
+  .hero .k-split__meta{order:5}
+  .hero.k-split{gap:22px;padding-top:28px}
+  .hero .k-split__photo--price{padding:20px;gap:10px}
+  .pp__n{font-size:clamp(4.4rem,21vw,7rem)}
+  .pp__t{font-size:15px}
+}
+[dir=rtl] .pp__n{text-align:right}
