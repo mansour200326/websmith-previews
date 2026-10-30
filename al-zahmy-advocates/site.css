@@ -20,8 +20,8 @@ img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:99}
-.skip:focus{left:8px}
+.skip{position:absolute;left:8px;top:-80px;background:var(--ink);color:#fff;padding:10px 14px;z-index:99}
+.skip:focus{top:8px}
 .mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.01em;line-height:1.5}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
@@ -66,7 +66,7 @@ a{color:inherit}
 .ring:hover .ring__c{transform:scale(1.08);background:var(--on-green)}
 .ring small{display:block;font:400 .82rem/1.3 var(--mono);color:var(--on-green-mute)}
 .hero__wa{color:#fff;font-size:.98rem;padding-block:12px}
-.year{font:200 clamp(7.5rem,34vw,21rem)/.78 var(--display);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(233,239,233,.5);display:flex;user-select:none;margin-inline-start:-.04em}
+.year{font:200 clamp(7.5rem,34vw,21rem)/.78 var(--display);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(233,239,233,.5);display:flex;user-select:none;margin-inline-start:-.04em;margin-top:28px;padding-top:.08em}
 .year span{display:inline-block}
 .hero__meta{display:flex;justify-content:space-between;align-items:end;gap:16px;border-top:1px solid rgba(233,239,233,.22);padding-top:14px;color:var(--on-green-mute)}
 @media (min-width:900px){
@@ -102,8 +102,8 @@ a{color:inherit}
 .courts ol{padding:0}
 .courts b{font:400 clamp(1.3rem,2.4vw,1.9rem)/1.2 var(--display);letter-spacing:-.01em}
 .courts .mono{color:var(--mute)}
-.courts li>.mono:last-child{grid-column:2}
-@media (min-width:900px){.intro__grid{grid-template-columns:1.7fr 1fr}.courts li{grid-template-columns:5rem 1fr auto}.courts li>.mono:last-child{grid-column:auto}}
+.courts li>span:last-child{grid-column:2;color:var(--mute)}
+@media (min-width:900px){.intro__grid{grid-template-columns:1.7fr 1fr}.courts li{grid-template-columns:5rem 1fr auto}.courts li>span:last-child{grid-column:auto}}
 
 /* practice areas */
 .areas{background:var(--white);border-block:1px solid var(--line)}
@@ -272,7 +272,9 @@ a{color:inherit}
 html:lang(ar){--display:"Noto Naskh Arabic","Spectral",serif;--body:"Tajawal",system-ui,sans-serif}
 html:lang(ar) body{font-size:18px;line-height:1.85}
 html:lang(ar) :is(.hero h1,.h2,.lead,.pghead h1,.svc h3,.off h3,.founder h3,.k-story__step h3,.ft__big,.areas .k-acc__t,.courts b,.values h3){letter-spacing:0!important;line-height:1.4!important;font-weight:600}
-html:lang(ar) .hero h1{font-size:clamp(2rem,4.2vw,3.9rem)}
+html:lang(ar) .hero h1{font-size:clamp(1.9rem,3.5vw,3.3rem)}
+html:lang(ar) .hero h1 .ln{white-space:normal}
+html:lang(ar) .year{font-size:clamp(7rem,30vw,17rem)}
 html:lang(ar) .pghead h1{font-size:clamp(2.6rem,7vw,6rem);font-weight:500}
 html:lang(ar) .lead{font-weight:500;font-size:clamp(1.35rem,2.4vw,2rem)}
 html:lang(ar) .founder blockquote{font-style:normal;font-weight:500}
@@ -281,6 +283,8 @@ html:lang(ar) .brand__t b{font-family:"Noto Naskh Arabic",serif;font-weight:700}
 html:lang(ar) .brand__t span{font-family:var(--body);font-size:.78rem}
 html:lang(ar) .year{direction:ltr;justify-content:flex-end}
 html:lang(ar) .k-acc__n,html:lang(ar) .svc__n{font-family:var(--mono)}
+html:lang(ar) :is(.mono,.off h3 small,.off dt,.ft h4,.areas h3 span,.arch .k-story__n,.founder blockquote cite,.toc h2,.grp>h2,.hero__cap){font-family:var(--body)!important;letter-spacing:0}
+html:lang(ar) :is(.off dt,.ft h4,.founder blockquote cite,.toc h2,.grp>h2){font-size:.9rem}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 
 @media (prefers-reduced-motion:reduce){

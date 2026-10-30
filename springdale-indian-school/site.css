@@ -946,3 +946,9 @@ bdi,.ltr{unicode-bidi:isolate}
   .hero__acts{margin-top:24px}
 }
 @media (max-width:600px){.notice__long{display:none}.notice .wrap{padding-block:6px}}
+:lang(ar) .hero h1{font-size:clamp(2.2rem,3.5vw,3.8rem);line-height:1.25}
+:lang(ar) .sh h2,:lang(ar) .moments .k-drag__head h2,:lang(ar) .adm h2,:lang(ar) .visit .k-visit h2{line-height:1.2}
+.hd__tel{min-width:44px;justify-content:center}
+.menu-btn{flex:none}
+@media (max-width:600px){.notice a{padding-block:12px}.notice .wrap{padding-block:0}}
+.ft li a{min-height:32px}
