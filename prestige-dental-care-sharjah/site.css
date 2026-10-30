@@ -817,3 +817,4 @@ html[lang=ar] .k-split__word{transform-origin:100% 100%}
 .hd__logo{min-height:44px}
 .ft li a{padding-block:10px;min-height:44px;display:inline-flex;align-items:center}
 @media (max-width:899px){.hd__nav .k-lang a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}.hd__nav .k-lang{padding-block:0}}
+.hd__nav .k-lang a{min-width:44px;justify-content:center}
