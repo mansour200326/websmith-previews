@@ -61,7 +61,7 @@ a{color:inherit}
 .hero__cap{position:absolute;inset-inline-start:12px;bottom:10px;color:#fff;background:rgba(11,38,29,.85);padding:4px 8px;max-width:80%;font-size:.7rem}
 .hero__txt{position:relative;padding:clamp(28px,5vw,72px) var(--pad) clamp(30px,5vw,64px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;z-index:1}
 .hero__txt{container-type:inline-size}
-.hero h1{font:400 clamp(2.6rem,min(6vw,10cqi),6.2rem)/.98 var(--display);letter-spacing:-.03em;color:#fff}
+.hero h1{font:400 clamp(2.6rem,min(6vw,10.8cqi),6.2rem)/.98 var(--display);letter-spacing:-.03em;color:#fff}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .ln>span{display:block}
 @media (min-width:900px){.hero h1 .ln{white-space:nowrap}}
@@ -76,7 +76,7 @@ a{color:inherit}
 .year span{display:inline-block}
 .hero__meta{display:flex;justify-content:space-between;align-items:end;gap:16px;border-top:1px solid rgba(233,239,233,.22);padding-top:14px;color:var(--on-green-mute)}
 @media (min-width:900px){
-  .hero__grid{grid-template-columns:minmax(0,1.22fr) minmax(0,1fr)}
+  .hero__grid{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
   .hero__photo{order:2;height:auto;min-height:100%}
   .hero__photo img{object-position:28% 50%}
   .hero__txt{order:1}
@@ -237,6 +237,8 @@ a{color:inherit}
 .pghead{padding-block:clamp(56px,8vw,120px) clamp(40px,5vw,70px);border-bottom:1px solid var(--line)}
 .pghead h1{font:300 clamp(3rem,8vw,7.4rem)/.95 var(--display);letter-spacing:-.035em;text-wrap:balance}
 .pghead__grid{display:grid;gap:clamp(36px,5vw,64px)}
+.pghead__grid>div:first-child{container-type:inline-size}
+.pghead__grid h1{font-size:clamp(3rem,min(8vw,17cqi),7.4rem)}
 @media (min-width:900px){.pghead__grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:end}}
 .pghead__print{max-width:420px;justify-self:end;width:100%;margin:0}
 .pghead__print img{max-height:440px;width:auto}
@@ -326,3 +328,4 @@ html:lang(ar) :is(.off dt,.ft h3,.founder blockquote cite,.toc h2,.grp>h2){font-
 
 .off,.off dl,.off dd{min-width:0}
 .off dd a{overflow-wrap:anywhere}
+.pghead__call p.mono{font-size:.85rem}
