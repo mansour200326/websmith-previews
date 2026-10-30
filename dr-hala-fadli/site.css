@@ -416,7 +416,11 @@ html:lang(ar) .tx__name{letter-spacing:0;line-height:1.45}
 .k-visit__go{background:var(--ink);color:#fff}
 .k-visit__go:hover{background:var(--green)}
 .k-visit__call{border-color:var(--ink);color:var(--ink)}
-.k-visit__map{background:#e7eaee url(img/hallway.webp) center 50%/cover}
+.k-visit__map{background:#fbfbf9;border-inline-start:1px solid var(--line);place-items:end center;padding:28px 20px;overflow:hidden}
+.map-ph{position:absolute;inset:0;width:100%;height:100%;display:block}
+.map-cap{position:absolute;left:50%;top:calc(50% + 14px);transform:translateX(-50%);margin:0;white-space:nowrap;font-size:.92rem;font-weight:600;color:var(--ink);background:#fbfbf9;padding:4px 10px;border-radius:3px}
+.k-visit__map button{background:var(--ink);color:#fff;min-height:48px}
+.k-visit__map button:hover{background:var(--green)}
 .k-visit__info{max-width:720px}
 .k-visit__mail{display:inline-block;margin-top:18px;color:var(--mute);font-size:.95rem}
 .k-visit__mail a{color:var(--ink);font-weight:600}
@@ -480,3 +484,30 @@ html:lang(ar) .intro__big{letter-spacing:0;line-height:1.5}
 [dir=rtl] .hero-acts a:first-child{padding-inline-start:0}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 html:lang(ar) .k-rv-line{padding-bottom:.25em;margin-bottom:-.25em}
+
+/* ---------- R3 (Fannan) ---------- */
+@media (min-width:900px){
+  .k-split__type h1{font-size:clamp(4.5rem,10vw,11rem)}
+  html:lang(ar) .k-split__type h1{font-size:clamp(3.6rem,8vw,8.8rem)}
+  .hero-copy{align-self:start;padding-top:clamp(24px,3vw,44px)}
+  .k-split__photo{aspect-ratio:16/10}
+  .chip{bottom:auto;top:16px;inset-inline-start:16px}
+  .k-story__step{min-height:42vh}
+  .k-story__steps{padding:8vh 0 20vh}
+  .k-story__media{top:clamp(90px,12vh,140px);height:min(72vh,640px)}
+}
+/* about: bilingual lockup + portrait on the first screen */
+.pi__grid{display:grid;gap:28px}
+.pi .about-lockup{margin:0}
+.pi .about-lockup span{display:block}
+.pi .about-lockup .k-mask{overflow:hidden;padding-bottom:.08em}
+@media (prefers-reduced-motion:reduce){.k-js .about-lockup .k-split__word{animation:none;transform:none}}
+.pi .about-lockup .lockup__ar{font-size:.8em;text-align:right;line-height:1.25;margin-top:.08em}
+.pi__photo .doc__photo{margin:0}
+@media (min-width:900px){
+  .pi__grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
+  .pi__text{grid-column:1/9}
+  .pi__photo{grid-column:9/13}
+  .pi__photo .doc__photo,.pi__photo .doc__cap{max-width:300px;margin-inline-start:auto}
+  .doc__grid--solo .doc__text{grid-column:2}
+}

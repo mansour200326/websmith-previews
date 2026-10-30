@@ -17,7 +17,9 @@
 :root{--k-display:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;--k-body:"IBM Plex Sans Arabic",system-ui,sans-serif}
 body{font-size:17.5px;line-height:1.85}
 h1,h2,h3,.k-acc__t,.k-menu__name,.ins__list li,.ft .ft__name{letter-spacing:0!important;line-height:1.3}
-.hero__name{font-family:"Lora",serif;letter-spacing:-.04em!important;line-height:.9!important}
+.hero__name{font-family:"Readex Pro","IBM Plex Sans Arabic",sans-serif;font-weight:500;letter-spacing:0!important;line-height:1.05!important;padding-top:.08em}
+.hero__latin{display:block;font-family:"Lora",serif;font-size:clamp(1rem,1.4vw,1.25rem);letter-spacing:.01em;color:var(--green);line-height:1.2;margin-top:.1em}
+@media (min-width:980px){.hero__latin{text-align:end}}
 .hero__kind{font-style:normal;font-weight:500;font-size:clamp(1.6rem,3.2vw,2.8rem)}
 .ft .ft__name{font-family:"Lora",serif;letter-spacing:-.04em!important;line-height:.85}
 .ft .ft__name small{font-family:var(--k-body);font-style:normal}
@@ -48,7 +50,7 @@ em{font-style:normal}
 <nav class="subnav" aria-label="الصفحات"><a href="./" aria-current="page">الرئيسية</a><a href="#prices">الأسعار</a><a href="#doctor">الطبيب</a><a href="#visit">موقعنا</a></nav>
 <main id="main">
 <section class="hero" aria-label="مقدمة">
-  <h1><span class="m"><span class="w hero__name" style="--i:0" lang="en">Dalma</span></span><span class="m"><span class="w hero__kind" style="--i:1">مركز دلما للعلاج الأيورفيدي والتأهيل</span></span></h1>
+  <h1><span class="m"><span class="w hero__name" style="--i:0">دلما</span></span><span class="m"><span class="w hero__latin" style="--i:1" lang="en">Dalma</span></span><span class="m"><span class="w hero__kind" style="--i:2">مركز للعلاج الأيورفيدي والتأهيل</span></span></h1>
   <div class="hero__body">
     <p class="hero__lead fd" style="--i:1">أيورفيدا كيرالا في الشارقة. يقابلك الطبيب أولاً، يقرأ النبض، ثم يضع لك برنامجاً علاجياً للظهر أو المفاصل أو التوتر أو الوزن أو البشرة.<span class="hero__more"> الجلسات يومية في غرفنا بساحة الزهراء.</span></p>
     <div class="hero__acts fd" style="--i:2">
@@ -58,7 +60,7 @@ em{font-style:normal}
     <p class="hero__ins fd" style="--i:3"><a href="#insurance">نقبل تأمين Daman وAXA وBupa وNeuron وNextCare و20 شركة أخرى</a></p>
   </div>
   <figure class="hero__arch">
-    <div class="frame"><img class="own" src="../img/room-green.webp" alt="إحدى غرف العلاج في دلما: سرير الدروني الخشبي المنحوت ووعاء الدارا النحاسي وصندوق البخار العشبي أمام جدار أخضر" width="2400" height="1351" fetchpriority="high"></div>
+    <div class="frame"><img class="own" src="../img/room-green.webp" alt="إحدى غرف العلاج في دلما: سرير الدروني الخشبي المنحوت ووعاء الدارا النحاسي وصندوق البخار العشبي أمام جدار أخضر" width="2000" height="1126" fetchpriority="high"></div>
   </figure>
 </section>
 
@@ -98,7 +100,7 @@ em{font-style:normal}
         <li class="k-menu__item"><div class="k-menu__line"><span class="k-menu__name">شيرودارا <small lang="en">Sirodhara</small></span><span class="k-menu__dots"></span><span class="k-menu__price">200 <small>درهم</small></span></div><p class="k-menu__desc">ساعة. زيت ينساب بخيط متواصل على الجبهة.</p></li>
         <li class="k-menu__item"><div class="k-menu__line"><span class="k-menu__name">ناسيا <small lang="en">Nasya</small></span><span class="k-menu__dots"></span><span class="k-menu__price">50 <small>درهم</small></span></div><p class="k-menu__desc">30 دقيقة. زيت طبي للأنف والجيوب.</p></li>
       </ul>
-      <figure class="k-menu__feat"><img src="../img/steam-box.webp" alt="صندوق البخار العشبي الخشبي في إحدى غرف دلما" loading="lazy"><figcaption>صندوق البخار العشبي لدينا</figcaption></figure>
+      <figure class="k-menu__feat"><img src="../img/room-steam.webp" alt="مراجع داخل صندوق البخار العشبي بجانب سرير الدروني في دلما" loading="lazy"><figcaption>صندوق البخار العشبي: تجلس داخله ورأسك خارجه</figcaption></figure>
     </div>
     <div class="k-menu__panel" role="tabpanel" data-panel="course" hidden>
       <ul class="k-menu__items">
@@ -113,7 +115,7 @@ em{font-style:normal}
         <li class="k-menu__item"><div class="k-menu__line"><span class="k-menu__name">الذهبية<span class="k-menu__tag">سنة</span></span><span class="k-menu__dots"></span><span class="k-menu__price">5,000 <small>درهم</small></span></div><p class="k-menu__desc">50 تدليكاً عشبياً مع حمام بخار، 2 شيرودارا، 2 تنظيف بشرة عشبي، استشارات غير محدودة.</p></li>
         <li class="k-menu__item"><div class="k-menu__line"><span class="k-menu__name">البلاتينية<span class="k-menu__tag">سنة</span></span><span class="k-menu__dots"></span><span class="k-menu__price">7,500 <small>درهم</small></span></div><p class="k-menu__desc">75 تدليكاً عشبياً مع حمام بخار، 5 شيرودارا، 5 تنظيف بشرة عشبي، استشارات غير محدودة، وشهر يوغا مجاناً.</p></li>
       </ul>
-      <figure class="k-menu__feat"><img src="../img/room-steam.webp" alt="صندوق البخار العشبي وسرير العلاج في دلما" loading="lazy"><figcaption>كل تدليك في العضوية يشمل حمام البخار</figcaption></figure>
+      <figure class="k-menu__feat"><img src="../img/t-pizhichil-oil.webp" alt="زيت طبي دافئ يُسكب أثناء التدليك" loading="lazy"><figcaption>كل تدليك في العضوية يشمل حمام البخار</figcaption></figure>
     </div>
   </div>
   <p style="margin-top:34px"><a class="k-link k-link--under" href="../services.html" hreflang="en">تفاصيل كل علاج (بالإنجليزية) <span class="k-arrow" aria-hidden="true">→</span></a></p>

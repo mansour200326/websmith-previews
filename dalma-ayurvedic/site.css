@@ -255,8 +255,10 @@ em{font-style:italic}
 /* ===== hero: wide arch, the name crossing its lower-left edge ===== */
 .hero{--name:clamp(3.6rem,19vw,5rem);display:flex;flex-direction:column;padding:14px var(--pad) clamp(40px,6vw,80px);max-width:1560px;margin:0 auto}
 .hero__arch{order:-1;position:relative;margin:0}
-.hero__arch .frame{overflow:hidden;height:34vh;border-radius:50% 50% 4px 4px/34% 34% 4px 4px;background:#2a1d10}
+.hero__arch .frame{position:relative;overflow:hidden;height:34vh;border-radius:50% 50% 4px 4px/34% 34% 4px 4px;background:#2a1d10}
 .hero__arch img{width:100%;height:100%;object-fit:cover;object-position:30% 60%}
+/* paper fade under the name so "ma" reads where it crosses the photo */
+.hero__arch .frame::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(to top,rgba(250,248,244,.92),rgba(250,248,244,0));pointer-events:none}
 .hero h1{position:relative;z-index:2;font-weight:500;margin-top:calc(var(--name)*-.36)}
 .hero h1 .m{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .w{display:block}
@@ -280,7 +282,7 @@ em{font-style:italic}
   .hero h1{grid-column:1/8;grid-row:2;margin-top:calc(var(--name)*-.49)}
   .hero__name{text-align:end;padding-inline-start:0}
   .hero__kind{margin-top:.2em}
-  .hero__body{grid-column:1/6;grid-row:1;align-self:end;padding-bottom:calc(var(--name)*.55);padding-inline-end:12px}
+  .hero__body{grid-column:1/6;grid-row:1;align-self:start;padding-top:clamp(80px,9vw,140px);padding-inline-end:12px}
   .hero__lead{margin-top:0}
   .hero__more{display:inline}
   .hero__acts{margin-top:26px}
@@ -299,7 +301,7 @@ em{font-style:italic}
 @keyframes k-ping{to{transform:scale(2.8);opacity:0}}
 
 /* one grade for all own-premises photos */
-img[src*="room-"],img[src*="steam-box"],img[src*="opening-"],img[src*="dr-tinu"]{filter:saturate(.9) contrast(1.04) sepia(.06)}
+img[src*="room-"],img[src*="steam-box"],img[src*="opening-"],img[src*="dr-tinu"]{filter:saturate(.88) contrast(1.02) brightness(.98)}
 
 /* ===== section heads ===== */
 .sec{padding:clamp(70px,10vw,150px) var(--pad);max-width:1560px;margin:0 auto}
@@ -428,7 +430,7 @@ img[src*="room-"],img[src*="steam-box"],img[src*="opening-"],img[src*="dr-tinu"]
 
 .k-visit__map{background-size:cover;background-position:center}
 .k-visit__map{background-image:none!important}
-.k-visit__map::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(18,48,31,.35),rgba(18,48,31,.35)),var(--k-map-poster,none) center/cover;filter:saturate(.9) contrast(1.04) sepia(.06)}
+.k-visit__map::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(18,48,31,.35),rgba(18,48,31,.35)),var(--k-map-poster,none) center/cover;filter:saturate(.88) contrast(1.02) brightness(.98)}
 .k-visit__map button{min-height:48px}
 
 /* ===== inner page intro ===== */

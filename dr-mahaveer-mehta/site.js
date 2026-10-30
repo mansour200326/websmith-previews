@@ -5,13 +5,13 @@
   function onScroll(){if(hd)hd.classList.toggle('is-scrolled',scrollY>8)}
   addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  // career spine: the navy line grows with scroll, dots fill as you pass them
+  // career spine: the navy line grows with scroll; items reveal once (add-only) as they enter
   var tl=document.querySelector('.tl__list');
   if(tl&&!RM){
     var items=[].slice.call(tl.querySelectorAll('.tl__item'));var tk=false;
     function upd(){tk=false;var r=tl.getBoundingClientRect(),vh=innerHeight,mid=vh*.62;
       var p=Math.max(0,Math.min(1,(mid-r.top)/r.height));tl.style.setProperty('--p',p.toFixed(4));
-      items.forEach(function(it){it.classList.toggle('is-in',it.getBoundingClientRect().top<mid)})}
+      items.forEach(function(it){if(it.getBoundingClientRect().top<vh*.88)it.classList.add('is-in')})}
     tl.style.setProperty('--p',0);
     addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();
   }else if(tl){tl.querySelectorAll('.tl__item').forEach(function(i){i.classList.add('is-in')})}

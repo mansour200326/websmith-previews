@@ -12,3 +12,4 @@
     Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
   }
 })();
+(function(){document.querySelectorAll('.mapbox [data-k-map] button').forEach(function(b){b.addEventListener('click',function(){b.parentNode.classList.add('is-open')})})})();

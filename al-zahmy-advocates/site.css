@@ -213,9 +213,11 @@ a{color:inherit}
 .btn--line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
 .btn--line:hover{background:var(--ink);color:#fff}
 .mapbox{margin-top:clamp(36px,5vw,60px)}
-.mapbox .k-visit__map{min-height:clamp(220px,30vw,420px);background:var(--fog);border:1px solid var(--line)}
-.mapbox .k-visit__map button{background:var(--green);color:#fff;box-shadow:none;border-radius:2px;padding:14px 22px}
-.mapbox .k-visit__map button{min-height:48px;font-family:var(--body)}
+.mapbox .k-visit__map{min-height:64px;height:64px;background:transparent;border:1px solid var(--line);display:block;transition:height .7s var(--ease)}
+.mapbox .k-visit__map.is-open{height:clamp(300px,34vw,440px);background:var(--fog)}
+.mapbox .k-visit__map button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;height:64px;padding:0 clamp(18px,2.4vw,28px);background:transparent;color:var(--ink);box-shadow:none;border-radius:0;font:500 1rem var(--body);text-align:start}
+.mapbox .k-visit__map button:hover,.mapbox .k-visit__map button:focus-visible{background:var(--fog)}
+.mapbox .k-visit__map button .k-arrow{color:var(--green)}
 .note{color:var(--mute);font-size:.92rem;margin-top:22px;max-width:44em}
 
 /* ---------- footer ---------- */
@@ -313,10 +315,13 @@ html:lang(ar) .brand__t>span{font-family:var(--body);font-size:.78rem}
 html:lang(ar) .year{direction:ltr;justify-content:flex-end}
 html:lang(ar) .k-acc__n,html:lang(ar) .svc__n{font-family:var(--mono)}
 html:lang(ar) :is(.mono,.off h3 small,.off dt,.ft h3,.areas h3 span,.arch .k-story__n,.founder blockquote cite,.toc h2,.grp>h2,.hero__cap){font-family:var(--body)!important;letter-spacing:0}
+html:lang(ar) .mono{font-family:"Tajawal",sans-serif;letter-spacing:0}
+html:lang(ar) :is(.ring small,.toc a span,.mnav a.mono){font-family:"Tajawal",sans-serif!important;letter-spacing:0}
+html:lang(ar) .ltr{font-family:var(--mono)!important;letter-spacing:.01em;direction:ltr;unicode-bidi:isolate}
 html:lang(ar) :is(.off dt,.ft h3,.founder blockquote cite,.toc h2,.grp>h2){font-size:.9rem}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 
-@media (prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion:reduce){.mapbox .k-visit__map{transition:none}
   .k-js .hero h1 .ln>span,.k-js .hero__fade,.k-js .hero__photo,.k-js .hero__photo img,.k-js .year span,.k-js .pghead h1 .ln>span{animation:none!important;transform:none!important;opacity:1!important;clip-path:none!important}
   .ppl__ph img,.ring__c,.founder__ph img{transition:none}
 }

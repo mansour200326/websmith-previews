@@ -182,8 +182,8 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
   .tl__item:nth-child(even){margin-inline-start:50%;padding-inline-end:0;padding-inline-start:clamp(40px,5vw,90px);text-align:start}
   .tl__item:nth-child(even) p,.tl__item:nth-child(even) .tl__fig{margin-inline-start:0}
   .tl__item:nth-child(even)::before{inset-inline-end:auto;inset-inline-start:-5px}
-  .tl__item:nth-child(n+2){margin-top:-140px}
-  .tl__item{min-height:300px} /* keeps same-side items clear of each other at the -140px interlock */
+  .tl__item:nth-child(n+2){margin-top:-100px}
+  .tl__item:has(.tl__fig){min-height:300px} /* only photo items need the extra room at the -100px interlock */
 }
 
 /* ---------- spot and stop ---------- */
@@ -210,7 +210,15 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .k-visit__go{background:var(--navy)}
 .k-visit__go:hover{background:var(--navy-deep)}
 /* poster kept at <=600px wide: the AI upscale garbles the small shop lettering when shown larger */
-.k-visit__map{--k-map-poster:url(img/al-ghurair.webp);min-height:440px;background-color:var(--wall);background-size:min(600px,calc(100% - 40px)) auto;background-repeat:no-repeat;background-position:50% 38%;align-content:end;padding-bottom:clamp(24px,4vw,48px)}
+.k-visit__map{--k-map-poster:url(img/al-ghurair.webp);background-color:var(--wall);aspect-ratio:16/10;min-height:0;background-size:cover;background-position:50% 50%;padding:0;align-items:end;margin-bottom:28px}
+.k-visit__map button{transform:translateY(50%)}
+.k-visit__fig{display:none}
+@media (min-width:900px){
+  .k-visit__map{aspect-ratio:auto;min-height:100%;background-image:none;margin-bottom:0}
+  .k-visit__fig{display:block;max-width:420px;margin:0 0 26px}
+  .k-visit__fig img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover}
+  .k-visit__fig figcaption{font-size:.84rem;color:var(--mute);margin-top:8px}
+}
 .k-visit__map button{border-radius:2px;min-height:48px}
 .k-visit__note{font-size:.86rem;color:var(--mute);margin:-14px 0 26px;max-width:30em}
 .k-visit__badge{border-radius:2px}
@@ -219,7 +227,7 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .ft{background:var(--ink);color:#d9dfe8;padding:clamp(60px,9vw,120px) 0 30px}
 .ft a{color:#fff;text-decoration:none}
 .ft__name{font:400 clamp(2.6rem,7.4vw,7rem)/.95 var(--display);letter-spacing:-.035em;color:#fff;margin-bottom:clamp(36px,5vw,70px)}
-.ft__name em{color:#a9bbe8}
+.ft__name em{color:#fff;font-style:normal;font-family:var(--display)}
 .ft__grid{display:grid;gap:30px;grid-template-columns:1fr;font-size:.95rem}
 @media (min-width:760px){.ft__grid{grid-template-columns:1.3fr 1fr 1fr 1fr}}
 .ft h3{font:600 .8rem/1 var(--body);letter-spacing:0;color:#a6b1c2;margin-bottom:14px}
