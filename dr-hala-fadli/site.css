@@ -305,7 +305,7 @@ html:lang(ar) .lockup__en{font-size:.8em;text-align:left}
   /* 12-col grid; photo cols 6/-1 bleeding to the window edge (~800px at 1440), copy cols 1-5 on the photo's bottom line */
   .k-split{max-width:none;margin:0;grid-template-columns:repeat(5,minmax(0,1fr)) repeat(7,minmax(0,1.1fr));grid-template-areas:none;column-gap:12px;row-gap:clamp(16px,1.6vw,26px);align-items:end;
     padding-top:clamp(14px,1.6vw,26px);padding-inline-start:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));padding-inline-end:max(0px,calc((100vw - 1440px)/2))}
-  .k-split__type{grid-column:1/-1;grid-row:1;padding-inline-end:var(--pad)}
+  .k-split__type{grid-column:1/-1;grid-row:1;padding-inline-end:calc(max(var(--pad),calc((100vw - var(--max))/2 + var(--pad))) - max(0px,calc((100vw - 1440px)/2)))}
   .k-split__type h1{font-size:clamp(4rem,8vw,10rem)}
   .hero-copy{grid-column:1/6;grid-row:2;align-self:end;padding-inline-end:clamp(12px,2.4vw,40px)}
   .k-split__photo{grid-column:6/-1;grid-row:2;aspect-ratio:3/2;border-radius:var(--r-big) 0 0 0}
