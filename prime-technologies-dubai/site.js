@@ -507,3 +507,14 @@
     r.addEventListener('pointermove',function(e){tx=e.clientX+28;ty=e.clientY-160;if(!raf)raf=requestAnimationFrame(loop)});
   });
 })();
+
+/* Prime: Find us map, inserted below the buttons only after a tap */
+(function(){
+  document.querySelectorAll('[data-map-show]').forEach(function(b){
+    var box=document.getElementById(b.getAttribute('aria-controls'));if(!box)return;
+    b.addEventListener('click',function(){
+      if(!box.querySelector('iframe')){var f=document.createElement('iframe');f.src=box.getAttribute('data-src');f.title='Map of Prime Technologies, Al Quoz Industrial Area 4';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';box.appendChild(f)}
+      var open=box.hidden;box.hidden=!open;b.setAttribute('aria-expanded',String(open));b.textContent=open?'Hide the map':'Show the map';
+    });
+  });
+})();
