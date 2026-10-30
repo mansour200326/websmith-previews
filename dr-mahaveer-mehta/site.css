@@ -183,7 +183,8 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
   .tl__item:nth-child(even) p,.tl__item:nth-child(even) .tl__fig{margin-inline-start:0}
   .tl__item:nth-child(even)::before{inset-inline-end:auto;inset-inline-start:-5px}
   .tl__item:nth-child(n+2){margin-top:-100px}
-  .tl__item:has(.tl__fig){min-height:300px} /* only photo items need the extra room at the -100px interlock */
+  .tl__item:has(.tl__fig){min-height:300px}
+  .tl__item:has(.tl__fig)+.tl__item{margin-top:-280px} /* the next item tucks up beside the photo instead of leaving a hole on the other side */ /* only photo items need the extra room at the -100px interlock */
 }
 
 /* ---------- spot and stop ---------- */
