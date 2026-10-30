@@ -88,11 +88,14 @@ bdi,.ltr{unicode-bidi:isolate}
   .hero__mark{display:none}
   .hero__top{padding-top:28px;padding-bottom:44px;gap:0}
   .hero__lead{font-size:1.1rem}
+  .hero__hours .sep{display:none}
+  .hero__hours .tlink{display:table;margin-top:8px;font-size:1.05rem;color:#fff}
 }
 @media (max-width:560px){
   .brand small{display:none}
   .brand b{font-size:1rem;line-height:1.08;max-width:6.2em}
   .brand{gap:9px;min-width:0}
+  html[lang=ar] .brand b{max-width:4.6em}
   .brand img{width:44px}
   .hd__in{gap:8px}
 }
@@ -291,6 +294,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .ft ul li:has(a){padding:0}
 .ft__brand p span{display:block}
 .ft__brand p span[lang=ar]{font:500 1.02rem/1.6 "IBM Plex Sans Arabic",sans-serif;color:#e6e1d6;margin-bottom:6px;text-align:start}
+html[dir=ltr] .ft__brand p span[lang=ar]{text-align:left}
 .ft__brand img{height:auto;margin-bottom:18px}
 .ft__brand p{color:var(--mute-d);max-width:26em}
 .ft h2{font:500 .95rem var(--body);color:var(--gold);margin-bottom:12px}

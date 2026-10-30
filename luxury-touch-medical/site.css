@@ -487,9 +487,10 @@ html:lang(ar) .k-visit tr.is-today td:first-child::after{content:" · اليوم
 .hero__media picture{display:block;width:100%;height:100%}
 .hero__lede--m{display:none}
 @media(max-width:700px){
-  .hero__media img{object-position:50% 78%;transform-origin:50% 40%}
-  .hero__media{bottom:auto;height:calc(100svh - 112px)}
-  .hero__media::after{background:linear-gradient(180deg,rgba(0,0,0,.45) 0,rgba(0,0,0,.2) 30%,rgba(0,0,0,.08) 50%,rgba(0,0,0,.2) 70%,rgba(0,0,0,.62) 86%,#000 100%)}
+  .hero__media img{object-position:50% 78%}
+  .hero__media picture{position:absolute;left:50%;top:clamp(40px,8svh,80px);width:175%;height:auto;transform:translateX(-50%)}
+  .hero__media picture img{height:auto;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 24%,#000 80%,transparent 100%)}
+  .hero__media::after{background:linear-gradient(180deg,rgba(0,0,0,.45) 0,rgba(0,0,0,.2) 18%,rgba(0,0,0,.2) 100%)}
   .hero__body{align-content:space-between;padding-bottom:24px}
   .hero__lede--m{display:block;max-width:22em}
   .hero__lede--d{display:none}

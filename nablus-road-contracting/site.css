@@ -260,7 +260,7 @@ h2.disp{font-size:clamp(3rem,8vw,7.5rem)}
 /* ---------- about page ---------- */
 .hist{padding-block:clamp(80px,11vw,160px);background:var(--paper)}
 .hist__grid{display:grid;gap:40px}
-.hist__big{font-size:clamp(2.8rem,5.5vw,5.5rem);color:var(--navy)}
+h2.hist__big{font-size:clamp(2.8rem,5.5vw,5.5rem);color:var(--navy)}
 .hist__txt p+p{margin-top:1em}
 @media (min-width:900px){.hist__grid{grid-template-columns:1fr 1fr;gap:80px;align-items:start}.hist__txt{position:sticky;top:120px}}
 .route{list-style:none;margin-top:clamp(50px,7vw,90px);display:grid;gap:0;position:relative}
