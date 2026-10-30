@@ -976,7 +976,7 @@ bdi,.ltr{unicode-bidi:isolate}
 .band figcaption{max-width:var(--max);margin-inline:auto;padding:14px var(--pad) 0;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;color:var(--mute);font-size:.93rem}
 .band__tag{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font:700 1rem/1 var(--k-display);padding:12px 16px}
 .band__tag::before{content:"";width:22px;height:22px;flex:none;border-radius:50%;background:#fff url(img/logo.webp) center/18px no-repeat}
-.band--svc .band__ph img{object-position:50% 55%}
+.band--svc .band__ph img{object-position:50% 88%}
 .band--about .band__ph img{object-position:50% 40%}
 @media (min-width:900px){.band--svc figcaption{justify-content:flex-end}}
 
@@ -1014,3 +1014,8 @@ bdi,.ltr{unicode-bidi:isolate}
 
 /* r2: wider type column for the larger headline */
 @media (min-width:901px){.hero{grid-template-columns:minmax(0,7.4fr) minmax(0,4.6fr);max-height:none}}
+@media (max-width:600px){
+  [dir=rtl] .brand__name b{font-size:clamp(.8rem,3.5vw,.95rem)}[dir=rtl] .brand__name span{font-size:.7rem}[dir=rtl] .brand{gap:8px}
+  .hd__in{gap:8px}
+}
+@media (max-width:700px){.band__ph{height:auto;aspect-ratio:3/2}}
