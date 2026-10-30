@@ -1019,3 +1019,20 @@ bdi,.ltr{unicode-bidi:isolate}
   .hd__in{gap:8px}
 }
 @media (max-width:700px){.band__ph{height:auto;aspect-ratio:3/2}}
+
+/* r3 (Fannan round 3): investiture hero, voices pager, mobile hero fit, services band */
+.hero__ph img{object-position:52% 45%}
+@media (max-width:900px){
+  .hero__ph .ph{aspect-ratio:4/3;max-height:56svh}
+  .hero__ph img{object-position:50% 45%}
+  .hero__ph figcaption{font-size:13px;line-height:1.4;padding-block:7px 8px;margin:0}
+}
+.voices.sec{padding-top:0}
+.voices .k-quotes__slide blockquote::before{content:none;display:none}
+.voices .k-quotes__dots button[aria-current=true]{background:var(--red);background-clip:content-box;width:56px}
+.band--svc .band__ph img{object-position:50% 70%}
+@media (max-width:900px){
+  .hero__type{padding-top:18px;padding-bottom:24px}
+  .hero__lead{margin-top:12px}
+  .hero__acts{margin-top:16px}
+}
