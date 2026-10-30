@@ -310,7 +310,7 @@ html[lang=ar] .h2 i,html[lang=ar] .ph h1 i,html[lang=ar] .quote i{font-style:nor
 html[lang=ar] .case__n,html[lang=ar] .k-acc__n,html[lang=ar] .sitem__n{font-style:normal;font-family:"Bodoni Moda",serif}
 html[lang=ar] .hero__name{font:600 clamp(3.4rem,12vw,12rem)/1.15 "IBM Plex Sans Arabic",sans-serif;letter-spacing:0;margin-bottom:-.05em}
 html[lang=ar] .hero__name .ln--sm{font-style:normal;font-size:.36em;margin-bottom:.1em;font-weight:500}
-@media (max-width:899px){html[lang=ar] .hero__name{font-size:clamp(3rem,19vw,7rem);line-height:1.15}}
+@media (max-width:899px){html[lang=ar] .hero__name{font-size:clamp(3rem,19vw,7rem);line-height:1.28}}
 html[lang=ar] .ph h1{font:600 clamp(2.8rem,8vw,7rem)/1.2 "IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
 html[lang=ar] .brand b{font:600 1rem/1.3 "IBM Plex Sans Arabic",sans-serif}
 html[lang=ar] .mq-w{font:600 clamp(2rem,5.4vw,5rem)/1.4 "IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
@@ -336,3 +336,6 @@ html[lang=ar] .hero__name .ln--sm{padding-inline-start:0}
   .ft ul li a,.ct__row a,.socials a,.toc a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
   .socials a{min-width:44px;justify-content:center}
 }
+/* Arabic: give the mask room for dots below the baseline */
+html[lang=ar] .hero__name .ln,html[lang=ar] .ph h1 .ln{padding-bottom:.28em;margin-bottom:-.24em}
+html[lang=ar] .k-rv-line{padding-bottom:.3em;margin-bottom:-.3em}

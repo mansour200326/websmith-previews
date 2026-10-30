@@ -814,3 +814,6 @@ html[lang=ar] .k-split__word{transform-origin:100% 100%}
 .k-visit__map button{background:var(--navy);color:#fff;min-height:48px}
 .k-visit__map iframe{z-index:2}
 @media (max-width:899px){.hd__nav .nav-home{display:none}.hd__nav{gap:18px}}
+.hd__logo{min-height:44px}
+.ft li a{padding-block:10px;min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:899px){.hd__nav .k-lang a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}.hd__nav .k-lang{padding-block:0}}
