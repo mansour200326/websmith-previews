@@ -825,4 +825,34 @@ html:lang(ar) .hero h1,html:lang(ar) .sec h2,html:lang(ar) .pg-hd h1,html:lang(a
 html:lang(ar) .hero h1{font-size:clamp(3rem,9vw,8rem)}
 html:lang(ar) .k-acc__t,html:lang(ar) .tc__list li,html:lang(ar) .hero__div a .t{text-transform:none;letter-spacing:0;line-height:1.3}
 html:lang(ar) .mono{font-family:"IBM Plex Sans Arabic",var(--mono)}
-[dir=rtl] .k-arrow,[dir=rtl] .flip{display:inline-block;transform:scaleX(-1)}
+[dir=rtl] .flip{display:inline-block;transform:scaleX(-1)}
+/* fixes r1 */
+.hero h1 .k-line-mask{display:block;overflow:hidden;padding-bottom:.02em}
+.hero h1 .k-kb__line{display:block}
+.hero__top{position:relative}
+@media (min-width:980px){.hero__top{display:block}.hero__side{position:absolute;top:0;inset-inline-end:var(--pad);width:min(30em,40%)}}
+.hero__seq .k-seq__frame.is-on img{transform:scale(1.04) translate3d(-1.5%,0,0)}
+.k-drag__head{padding:0 var(--pad)}
+.k-drag__btns button{width:48px;height:48px}
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:min(82vw,560px)}
+.k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/3}
+.ft .ft__big{font:700 clamp(2.6rem,9vw,8rem)/.85 var(--k-display);text-transform:uppercase;letter-spacing:-.03em;color:#fff}
+.mapph{flex-direction:column;gap:14px;display:flex;align-items:center;justify-content:center}
+.mapph .mono{color:var(--k-mute)}
+.hero__addr{display:block;color:var(--k-mute);line-height:1.7}
+@media (min-width:980px){.hero__top{display:grid}.hero__side{position:static;width:auto}}
+@media (min-width:1200px){
+  .hero__top{display:block}
+  .hero__side{position:absolute;top:0;inset-inline-end:var(--pad);width:min(30em,36%)}
+  .hero__addr{position:absolute;bottom:.4em;inset-inline-end:var(--pad);width:16em}
+}
+.hero__seq .k-seq__frame img{object-position:30% 50%}
+.hd nav .hd__lang.k-lang{border:0;border-radius:2px;padding:12px 10px;display:inline-flex;font:600 1rem/1 "IBM Plex Sans Arabic",var(--k-body)}
+.ft li.k-lang{display:list-item;border:0;border-radius:0;padding:0;font:inherit}
+.ft li.k-lang a{padding:6px 0;color:inherit;border-radius:0;font:600 1rem "IBM Plex Sans Arabic",var(--k-body)}
+.skip{left:12px;top:8px;transform:translateY(-200%);transition:transform .2s}
+.skip:focus{left:12px;top:8px;transform:none}
+[dir=rtl] .skip{left:auto;right:12px}
+[dir=rtl] .hd__tel::after{content:"اتصل"}
+html:lang(ar) .hero__corner,html:lang(ar) .sec__idx,html:lang(ar) .sheet,html:lang(ar) .sheet h3,html:lang(ar) .k-drag__meta span,html:lang(ar) .ft h3,html:lang(ar) .tc__list li span{font-family:"IBM Plex Sans Arabic",var(--k-body)}
+html:lang(ar) .sheet{font-size:.95rem}
