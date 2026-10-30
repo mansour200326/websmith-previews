@@ -236,7 +236,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .bookline__t{font:500 clamp(1.1rem,1.5vw,1.3rem)/1.7 "IBM Plex Sans Arabic",sans-serif}
 .bookline__t a{text-decoration:none;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.35em;text-decoration-color:color-mix(in srgb,currentColor 30%,transparent)}
 @media (min-width:700px){.bookline__t a{white-space:nowrap}}
-@media (max-width:699px){.bookline__t a{display:block;padding-block:6px}.bookline__t .sep{display:none}}
+@media (max-width:699px){.bookline__t a{display:block;padding-block:8px;min-height:44px}.bookline__t .sep{display:none}}
 .bookline__t a:hover{color:var(--gold-deep)}
 .bookline__t .sep{color:var(--gold-deep);margin-inline:.5em}
 .books__grid{display:grid;gap:22px;margin-top:clamp(40px,5vw,70px);grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
