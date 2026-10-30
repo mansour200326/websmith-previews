@@ -292,3 +292,6 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .ft li a,.ft p a{padding-block:10px}
 .ft p{line-height:1.5}
 .hero__or a,.why__note a,.acc__more a,.tl p>a{display:inline-flex;align-items:center;min-height:44px}
+[dir=rtl] .hero .k-split__type h1{font-size:clamp(2.7rem,5.4vw,6rem)}
+[dir=rtl] .hero .k-split__type h1 .k-mask{padding-bottom:.12em}
+@media (min-width:900px){[dir=rtl] .hero.k-split{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr) minmax(190px,.42fr)}}
