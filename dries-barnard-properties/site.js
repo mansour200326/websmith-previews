@@ -14,7 +14,7 @@
     mn.addEventListener('click',function(e){if(e.target.closest('a')){mn.classList.remove('is-open');mb.setAttribute('aria-expanded','false')}});
   }
   // listings index: town filter
-  var fs=[].slice.call(document.querySelectorAll('.ix__f')),rows=[].slice.call(document.querySelectorAll('.ix__row')),cnt=document.querySelector('[data-ix-count]'),lbl=document.querySelector('[data-ix-label]');
+  var ix=document.querySelector('.ix'),fs=[].slice.call(document.querySelectorAll('.ix__f')),rows=[].slice.call(document.querySelectorAll('.ix__row')),cnt=document.querySelector('[data-ix-count]'),lbl=document.querySelector('[data-ix-label]');
   fs.forEach(function(b){b.addEventListener('click',function(){
     var was=b.getAttribute('aria-pressed')==='true';
     fs.forEach(function(x){x.setAttribute('aria-pressed','false')});
@@ -22,7 +22,11 @@
     var n=0;rows.forEach(function(r){var s=!t||r.dataset.town===t;r.hidden=!s;if(s)n++});
     if(cnt)cnt.textContent=n;
     if(lbl)lbl.textContent=t?('For sale around '+t):'Farms and smallholdings for sale';
+    if(ix)ix.classList.toggle('is-filtered',!!t);
   })});
+  // listings index on phones: first 8 rows, then "Show all"
+  var more=document.querySelector('[data-ix-more]');
+  if(more&&ix)more.addEventListener('click',function(){ix.classList.add('is-all');var r=rows[8];if(r){var s=r.querySelector('summary');s&&s.focus({preventScroll:true})}});
   // listings index: photo that follows the cursor (desktop, fine pointer only)
   var peek=document.querySelector('.ix__peek');
   if(peek&&!RM&&matchMedia('(hover:hover) and (pointer:fine) and (min-width:1000px)').matches){

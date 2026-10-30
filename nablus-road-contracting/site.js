@@ -262,7 +262,8 @@
     function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title='Map';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');if(btn)btn.remove()};m.appendChild(f)}
     if(btn)btn.addEventListener('click',load);
     // desktop: load automatically when near; phones: wait for tap (data + scroll-trap)
-    if(!m.hasAttribute('data-k-map-tap')&&matchMedia('(min-width:900px)').matches)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();load()}},{rootMargin:'200px'}).observe(m);
+    // data-k-map-tap means "tap to load on phones only": from 900px up it still loads itself on scroll-into-view
+    if(matchMedia('(min-width:900px)').matches)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();load()}},{rootMargin:'200px'}).observe(m);
   });
 })();
 
@@ -517,7 +518,8 @@
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var i=0,t=0,vis=true;
   var wide=matchMedia('(min-width: 800px)');
-  function go(){if(!wide.matches)return;s[i].classList.remove('is-on');i=(i+1)%s.length;s[i].classList.add('is-on')}
+  var ix=[].slice.call(document.querySelectorAll('.hero__idx li'));
+  function go(){if(!wide.matches)return;s[i].classList.remove('is-on');if(ix[i])ix[i].classList.remove('is-on');i=(i+1)%s.length;s[i].classList.add('is-on');if(ix[i]){void ix[i].offsetWidth;ix[i].classList.add('is-on')}}
   function start(){if(!t)t=setInterval(function(){if(vis&&!document.hidden)go()},5000)}
   var io=new IntersectionObserver(function(e){vis=e[0].isIntersecting});io.observe(s[0].parentNode);
   start();

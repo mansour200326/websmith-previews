@@ -149,7 +149,8 @@ html:lang(ar) .intro__big{letter-spacing:0;line-height:1.5}
 .letter{padding:clamp(80px,11vw,160px) 0}
 .letter__grid{display:grid;gap:36px}
 .letter__img{overflow:hidden;aspect-ratio:5/4;max-width:600px;background:var(--k-mist)}
-.letter__img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.letter__img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(.8)}
+.pic img[src$="principal.webp"]{filter:saturate(.8)}
 .letter blockquote p{font:500 clamp(1.7rem,3.3vw,2.9rem)/1.14 var(--k-display);letter-spacing:-.025em}
 html:lang(ar) .letter blockquote p{letter-spacing:0;line-height:1.5}
 .letter footer{margin-top:24px;color:var(--k-mute);max-width:32em}
@@ -178,7 +179,7 @@ html:lang(ar) .letter blockquote p{letter-spacing:0;line-height:1.5}
 .k-visit td:first-child{padding-inline-end:18px}
 .k-visit td:last-child{white-space:nowrap}
 .k-visit__acts a{min-height:50px}
-.k-visit__map{min-height:420px;background:#dfe6df url(img/hero-basketball.webp) center/cover}
+.k-visit__map{min-height:420px;background:#dfe6df url(img/blue-day.webp) 50% 40%/cover}
 .k-visit__map::before{content:"";position:absolute;inset:0;background:rgba(15,26,19,.35)}
 .k-visit__more{margin-top:18px;color:var(--k-mute);font-size:.94rem}
 .k-visit__more a{font-weight:600;color:var(--k-ink)}
@@ -191,7 +192,7 @@ html:lang(ar) .letter blockquote p{letter-spacing:0;line-height:1.5}
 .ftr__name{font:700 clamp(2rem,4.4vw,3.6rem)/1 var(--k-display);letter-spacing:-.04em;color:#fff;max-width:11em}
 html:lang(ar) .ftr__name{letter-spacing:0;line-height:1.3}
 .ftr__ar{font-family:"Tajawal",sans-serif;font-size:1.15rem;margin-top:14px;color:#cfdad2}
-html:lang(en) .ftr__ar{text-align:start;width:fit-content}
+html:lang(en) .ftr__ar{text-align:left;width:fit-content}
 .ftr__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px}
 .ftr h3{font:600 .95rem/1.3 var(--k-body);letter-spacing:0;color:#9fb6a6;margin-bottom:10px}
 .ftr ul{list-style:none}
@@ -218,6 +219,7 @@ html:lang(ar) .phead h1{line-height:1.2;letter-spacing:0}
 .block__grid{display:grid;gap:30px}
 @media (min-width:980px){.block__grid{grid-template-columns:minmax(0,.75fr) minmax(0,2fr);gap:clamp(40px,6vw,100px)}}
 .block h2{font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:-.04em}
+#docs-h{font-size:clamp(2.4rem,4.2vw,3.6rem)}
 .block__aside p{color:var(--k-mute);margin-top:14px;max-width:24em}
 .block__aside{align-self:start}
 @media (min-width:980px){.block__aside{position:sticky;top:calc(var(--hdr) + 30px)}}

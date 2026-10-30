@@ -600,8 +600,8 @@ html:lang(ar) .k-consent{font-size:1rem;line-height:1.75}
 /* ===== Prime Technologies concept (Websmith) ===== */
 :root{
   --k-bg:#ffffff;--k-ink:#0f2340;--k-mute:#55627a;--k-line:#d6dce4;--k-accent:#0b7a2c;--k-on-accent:#fff;
-  --k-display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
-  --k-body:"IBM Plex Sans",system-ui,sans-serif;
+  --k-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --k-body:"Barlow",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --k-ease:cubic-bezier(.16,1,.3,1);
   --green:#0b7a2c;--green-d:#075c20;--navy:#0f2340;--paper:#f3f5f7;
@@ -861,3 +861,85 @@ html:lang(ar) .sheet{font-size:.95rem}
 .skip{transition:none}
 .k-link{display:inline-block;padding-block:4px}
 .hero h1 .g{color:var(--navy)}
+/* ===== round 2 (Fannan r1 fixes) ===== */
+/* type: Barlow Condensed display, Barlow body, Plex Mono only on datasheet labels */
+.mono,.sec__idx,.hd__logo span small,.hero__corner,.k-drag__meta span,.ft h3,.toc a,.svc__item ul,.brands-inline,.hero__seq .k-seq__count,.tc__list li span{font-family:var(--k-body)}
+.mono{font-size:.9rem}
+.sec__idx{font-size:.88rem}
+.hero__corner{font-size:.88rem;font-weight:500}
+.hd__logo span small{font-size:.76rem;font-weight:500}
+.ft h3{font-size:.88rem;font-weight:600}
+.svc__item ul{font-size:.94rem;font-weight:400;color:#2b3a52}
+.hero__div a .n,.k-acc__n{font:600 .95rem var(--k-display);font-variant-numeric:tabular-nums}
+.hd__tel{font:600 1.08rem/1 var(--k-display);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.hero h1,.pg-hd h1,.sec h2,.svc h2,.ft__big,.ft .ft__big,.quote-motto{letter-spacing:-.015em}
+.office h3,.mapbox__info h3,.k-drag__meta h3,.svc__item h3,.pidx h3,.pidx td.nm,.brands td.b{text-transform:none;letter-spacing:0}
+.mapbox__info h3{text-wrap:balance;line-height:1}
+.brands td.b{font-size:1.2rem}
+.svc__item h3{font-size:1.4rem}
+/* header: name beside logo and the number on phones */
+@media (max-width:900px){
+  .hd__logo span{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:block;font-size:.95rem;line-height:1;max-width:6.6em}
+  .hd__logo span small{display:none}
+  .hd__logo{gap:8px}
+}
+.hd__tel .k-roll{display:inline-block!important}
+.hd__tel::after,[dir=rtl] .hd__tel::after{content:none!important}
+@media (max-width:700px){.hd nav .opt-m{display:none}.hd__tel{padding:0 12px}}
+/* hero: tighter top, shorter sequence so caption and bars sit in the first screen */
+.hero{padding-top:clamp(14px,2.2vw,32px)}
+.k-seq.hero__seq{height:clamp(300px,48vh,520px)}
+.hero__seq .k-seq__frame img{object-position:50% 50%}
+.hero__short{display:none}
+.hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:22px}
+.hero__cta .btn{font-size:1.05rem}
+.hero__mail{font-weight:600;color:var(--navy);background-size:100% 1.5px;padding-block:12px 2px}
+.hero__mail:hover{color:var(--green-d)}
+@media (max-width:700px){
+  .hero__long{display:none}
+  .hero__short{display:block;font-size:1.05rem}
+  .hero__top{gap:14px;margin-bottom:18px}
+  .hero__cta{margin-top:16px}
+  .k-seq.hero__seq{height:52svh;min-height:300px}
+}
+/* T&C band: full-width headline, lede beside the TAB sheet */
+.tc__tag{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;border-top:1px solid rgba(255,255,255,.7);padding-top:.7em;font-size:.92rem;color:#dff0e3}
+.tc__tag b{color:#fff;font-weight:600}
+.tc__tag a{color:#fff;text-decoration:none}
+.tc .tc__h{max-width:none;font-size:clamp(3rem,7vw,7rem);line-height:.88;margin:clamp(24px,3.4vw,48px) 0 0;text-wrap:balance}
+.tc .tc__cols{margin-top:clamp(30px,4vw,56px);align-items:start}
+.tc__cols .lede{max-width:34em}
+.tc__cols .tc__list{margin-top:clamp(24px,3vw,36px)}
+.tc__list li{text-transform:none;letter-spacing:0;font-size:clamp(1.1rem,1.5vw,1.35rem)}
+/* brands: full-width paper band, sentence-case headline */
+.brandsec{background:var(--paper)}
+.brandsec__head{display:grid;grid-template-columns:1fr;gap:14px 48px;align-items:end;border-top:1px solid var(--navy);padding-top:clamp(18px,2vw,26px)}
+@media (min-width:900px){.brandsec__head{grid-template-columns:auto minmax(0,30em);justify-content:space-between}}
+.brandsec h2{text-transform:none;font-size:clamp(2.6rem,5vw,4rem);line-height:.95;letter-spacing:-.01em;margin:0}
+.brandsec .lede{font-size:1.08rem}
+.brandsec .brands tbody tr:hover{background:#fff}
+.brandsec .brands td{font-size:1.02rem}
+html:lang(ar) .brandsec h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+/* one editorial facts line */
+.factline{padding-block:clamp(56px,8vw,112px)}
+.factline p{font:700 clamp(1.9rem,4.4vw,4.2rem)/1.05 var(--k-display);color:var(--navy);letter-spacing:-.01em;text-wrap:balance;max-width:24em}
+.factline i{font-style:normal;color:var(--green);margin-inline:.18em}
+html:lang(ar) .factline p{line-height:1.35;letter-spacing:0;font-size:clamp(1.7rem,3.6vw,3.2rem)}
+/* project index: tower photo on every row */
+.pidx td.pn{width:122px;white-space:nowrap;vertical-align:middle;padding-block:10px}
+.pidx td.pn img{display:inline-block;vertical-align:middle;width:72px;height:96px;object-fit:cover;background:var(--paper);transition:transform .6s var(--k-ease)}
+.pidx td.pn span{display:inline-block;vertical-align:middle;margin-inline-start:16px;font:500 .8rem var(--mono);color:var(--k-mute)}
+.pidx tr[data-pimg] td{vertical-align:middle}
+.pidx tr[data-pimg]:hover td.pn img{transform:scale(1.06)}
+@media (max-width:700px){.pidx td.pn{width:92px}.pidx td.pn img{width:56px;height:74px}.pidx td.pn span{margin-inline-start:10px}}
+/* services: numbered jump list, T&C scroller */
+.toc a span{font:500 .78rem var(--mono);color:var(--k-mute);margin-inline-end:10px}
+.toc a:hover span{color:#cfd8e4}
+@media (max-width:700px){
+  .toc{flex-direction:column;flex-wrap:nowrap;gap:0;border-top:1px solid var(--navy)}
+  .toc a{border:0;border-bottom:1px solid var(--k-line);border-radius:0;padding:0;min-height:52px;font:600 1.1rem var(--k-body)}
+  .toc a span{width:2.6em;margin:0}
+  .toc a:hover{background:none;color:var(--green-d)}
+}
+.svc__drag{margin-top:clamp(40px,5vw,72px)}
+.svc__draglbl{font-size:.92rem;color:var(--k-mute)}

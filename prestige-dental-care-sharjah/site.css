@@ -879,3 +879,30 @@ html[lang=ar] .ft__big b{font-family:"Bricolage Grotesque",system-ui,sans-serif}
   .pp__t{font-size:15px}
 }
 [dir=rtl] .pp__n{text-align:right}
+
+/* ===== round 3 (Fannan) ===== */
+/* stock photos: true navy duotone (screen blend, no lavender cast) */
+.visit1__fig,.tx__fig.amb{background:#142c5f}
+.visit1__fig img,.tx__fig.amb img{filter:grayscale(1) contrast(1.2) brightness(1.1);mix-blend-mode:screen;opacity:1}
+@media (min-width:701px){.visit1__fig{max-width:440px;aspect-ratio:4/5}}
+@media (max-width:700px){
+  .visit1__body{display:contents}
+  .visit1 .sh{order:1}
+  .visit1__fig{order:2;aspect-ratio:16/9;max-height:none}
+  .visit1 .steps{order:3;margin-top:0}
+}
+/* hero price panel */
+.hero .k-split__photo--price{justify-content:space-between}
+.pp__top{display:flex;justify-content:space-between;gap:12px;font:600 14px/1.3 var(--k-body);color:#c9a44c;letter-spacing:0}
+.pp__n .pp__cur{display:block;font-size:.4em;line-height:1;letter-spacing:-.02em;margin-bottom:.12em}
+html[lang=ar] .pp__n .pp__cur{font-family:"Readex Pro",system-ui,sans-serif;font-weight:700;color:#c9a44c;letter-spacing:0}
+@media (min-width:900px){.pp__n{font-size:clamp(10rem,19vw,17rem)}}
+/* services: "Price on WhatsApp" label link */
+.tx__ask{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:inherit}
+.tx__ask small{margin:0;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--k-ease)}
+.tx__ask:hover small,.tx__ask:focus-visible small{background-size:100% 1px}
+@media (max-width:700px){.hero .k-split__photo--price{aspect-ratio:auto;min-height:clamp(260px,62vw,340px)}}
+/* clinic name under the h1 on phones (desktop has it at the start of the lead) */
+.hero__name{display:none;font:600 22px/1.25 "Bricolage Grotesque",system-ui,sans-serif;color:var(--navy);margin:0}
+html[lang=ar] .hero__name{font-family:"Readex Pro",system-ui,sans-serif}
+@media (max-width:700px){.hero__name{display:block;order:1;margin-top:-10px}}
