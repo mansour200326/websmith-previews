@@ -648,7 +648,6 @@ a{color:inherit}
 /* hero (kit 02 restyled) */
 .hero.k-split{min-height:auto;padding-block:clamp(36px,6vw,80px) clamp(40px,6vw,72px);align-content:start}
 .hero .k-split__type h1{font:800 clamp(3.3rem,15vw,5rem)/.9 var(--k-display);letter-spacing:-.045em;color:var(--k-ink)}
-.hero .k-split__type h1 .ln:nth-child(2) .k-split__word{color:var(--navy)}
 .hero .k-split__lead{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--k-mute);max-width:31em}
 .hero .k-split__lead strong{color:var(--k-ink);font-weight:600}
 .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:30px}
@@ -818,3 +817,4 @@ html[lang=ar] .k-split__word{transform-origin:100% 100%}
 .ft li a{padding-block:10px;min-height:44px;display:inline-flex;align-items:center}
 @media (max-width:899px){.hd__nav .k-lang a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}.hd__nav .k-lang{padding-block:0}}
 .hd__nav .k-lang a{min-width:44px;justify-content:center}
+html[lang=ar] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}

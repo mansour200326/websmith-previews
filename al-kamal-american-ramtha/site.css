@@ -109,7 +109,7 @@ html:lang(ar) .intro__big{letter-spacing:0;line-height:1.5}
 @media (hover:none),(prefers-reduced-motion:reduce){.gpeek{display:none}}
 
 /* ---------- Cognia band (the one flooded section) ---------- */
-.band{background:var(--k-accent);color:#fff;--k-ink:#fff;--k-mute:#d9eedf;--k-line:rgba(255,255,255,.3);--k-accent:#fff}
+.band{background:#17733a;color:#fff;--k-ink:#fff;--k-mute:#d9eedf;--k-line:rgba(255,255,255,.3);--k-accent:#fff}
 .band__top{padding:clamp(70px,10vw,140px) 0 0;display:grid;gap:26px}
 .band__top h2{font-size:clamp(2.5rem,6.4vw,5.6rem);letter-spacing:-.045em;max-width:9em}
 .band__top p{font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:30em;color:#eef7f0}
@@ -143,7 +143,7 @@ html:lang(ar) .intro__big{letter-spacing:0;line-height:1.5}
 /* ---------- principal ---------- */
 .letter{padding:clamp(80px,11vw,160px) 0}
 .letter__grid{display:grid;gap:36px}
-.letter__img{overflow:hidden;aspect-ratio:1/1;max-width:520px;background:var(--k-mist)}
+.letter__img{overflow:hidden;aspect-ratio:5/4;max-width:600px;background:var(--k-mist)}
 .letter__img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .letter blockquote p{font:500 clamp(1.7rem,3.3vw,2.9rem)/1.14 var(--k-display);letter-spacing:-.025em}
 html:lang(ar) .letter blockquote p{letter-spacing:0;line-height:1.5}
