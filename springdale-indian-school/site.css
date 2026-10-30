@@ -1027,7 +1027,7 @@ bdi,.ltr{unicode-bidi:isolate}
   .hero__ph img{object-position:50% 45%}
   .hero__ph figcaption{font-size:13px;line-height:1.4;padding-block:7px 8px;margin:0}
 }
-.voices.sec{padding-top:0}
+.voices.sec{padding-top:clamp(32px,3.4vw,48px)}
 .voices .k-quotes__slide blockquote::before{content:none;display:none}
 .voices .k-quotes__dots button[aria-current=true]{background:var(--red);background-clip:content-box;width:56px}
 .band--svc .band__ph img{object-position:50% 70%}
@@ -1036,3 +1036,4 @@ bdi,.ltr{unicode-bidi:isolate}
   .hero__lead{margin-top:12px}
   .hero__acts{margin-top:16px}
 }
+.band--about .band__ph img{object-position:50% 62%}
