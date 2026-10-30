@@ -950,3 +950,9 @@ html:lang(ar) .factline p{line-height:1.35;letter-spacing:0;font-size:clamp(1.7r
   .hero__addr{position:static;width:auto}
   .hero h1{font-size:clamp(3.4rem,9.2vw,9.2rem)}
 }
+.factline p{max-width:none}
+@media (min-width:701px){.factline p>span{white-space:nowrap}}
+.brandsec .brands td.b{font-size:1.25rem}
+.ft li a,.ft p a,.office a,.office .k-link,.tc__tag a,.hero__mail{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
+.ft p br,.office p br{display:none}
+.ft p a,.office p a,.office p span{display:flex;width:max-content;max-width:100%}
