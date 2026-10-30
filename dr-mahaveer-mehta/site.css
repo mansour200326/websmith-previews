@@ -1,10 +1,10 @@
 /* Dr. Mahaveer Mehta Medical Center, concept by Websmith.
    Palette from the doctor's own portrait: the pale grey-blue studio wall, white coat, the navy tie and AAD crest.
-   Type: Newsreader (display) + Figtree (text); Arabic: Readex Pro. */
+   Type: Newsreader (display) + Nunito Sans (text); Arabic: Readex Pro. */
 :root{
   --bg:#f3f5f8;--paper:#fff;--wall:#e7ecf2;--ink:#0d1726;--mute:#4d596a;--line:#d3dae3;
   --navy:#1b3a8a;--navy-deep:#0e2152;--on-navy:#fff;--soft-navy:#c9d5f2;
-  --display:"Newsreader",Georgia,serif;--body:"Figtree",system-ui,sans-serif;
+  --display:"Newsreader",Georgia,serif;--body:"Nunito Sans",system-ui,sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);
   /* kit tokens */
   --k-bg:var(--bg);--k-ink:var(--ink);--k-mute:var(--mute);--k-line:var(--line);--k-accent:var(--navy);--k-on-accent:#fff;
@@ -37,11 +37,12 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .nav a[aria-current=page]{background-size:100% 1px}
 .hd__tel{display:none;text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums;padding-block:12px}
 .hd__wa,.hd__lang{display:inline-grid;place-items:center;min-width:44px;min-height:44px;text-decoration:none;font-size:.95rem}
-.hd__wa svg{width:21px;height:21px}
+.hd__wa svg,.hd__ph svg{width:21px;height:21px}
+.hd__ph{display:inline-grid;place-items:center;min-width:44px;min-height:44px;color:var(--ink)}
 .hd__lang{font-family:"Readex Pro",var(--body);border-inline-start:1px solid var(--line);padding-inline-start:14px}
 .hd__book{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;border-radius:2px;transition:background .3s}
 .hd__book:hover{background:var(--navy-deep)}
-@media (min-width:960px){.nav{display:flex}.hd__tel{display:inline-block}}
+@media (min-width:960px){.nav{display:flex}.hd__tel{display:inline-block}.hd__ph{display:none}}
 @media (max-width:520px){.hd__book{display:none}.brand b{font-size:1.12rem}}
 
 /* ---------- hero (kit 02, restyled) ---------- */
@@ -50,13 +51,13 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .hero .k-split__word{white-space:nowrap}
 .hero .k-split__type h1 .k-mask:nth-child(2){padding-inline-start:.9em}
 .hero .k-split__type h1 .k-mask:nth-child(3){padding-inline-start:1.9em}
-.hero .k-split__type h1 em{font-style:italic;color:var(--navy)}
+.hero .k-split__type h1 em{font-style:normal;color:var(--ink);font-size:.6em;letter-spacing:-.02em}
 .hero .k-split__lead{color:var(--ink);font-size:clamp(1.08rem,1.4vw,1.25rem);max-width:28em;margin-top:clamp(22px,3vw,40px)}
 .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:28px}
 .k-btn{border-radius:2px;font-weight:600;padding:18px 24px}
 .k-btn svg{width:18px;height:18px}
-.hero__or{font-size:.98rem;color:var(--mute)}
-.hero__or a{color:var(--ink);font-weight:600;text-decoration:none}
+.hero__call{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--ink);font-weight:600;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.hero__call svg{width:17px;height:17px;color:var(--navy);flex:none}
 .hero .k-split__photo{background:var(--wall);border-radius:0;overflow:visible;aspect-ratio:3/4}
 .hero .k-split__photo .ph{position:absolute;inset:0;overflow:hidden}
 .hero .k-split__photo img{object-position:50% 22%}
@@ -74,18 +75,38 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .hero .k-split__meta dd small{display:block;font:400 .82rem/1.35 var(--body);letter-spacing:0;color:var(--mute);margin-top:6px}
 .hero .k-split__meta a{text-decoration:none}
 @media (max-width:899px){
-  .hero.k-split{gap:22px;min-height:0}
-  .hero .k-split__photo{order:-1;aspect-ratio:4/4.2;margin-inline:calc(var(--pad) * -1)}
-  .badge{inset-inline-start:auto;inset-inline-end:16px;bottom:-40px;width:116px;height:116px;font-size:.74rem}
-  .badge b{font-size:1.45rem}
-  .hero .k-split__type{padding-top:18px}
-  .hero .k-split__meta{column-gap:20px}
+  .hero.k-split{gap:18px;min-height:0;padding-top:0}
+  .hero .k-split__photo{order:-1;aspect-ratio:3/2;margin-inline:calc(var(--pad) * -1)}
+  .hero .k-split__photo img{object-position:50% 18%}
+  .badge{inset-inline-start:auto;inset-inline-end:14px;bottom:14px;width:96px;height:96px;font-size:.66rem;padding:10px}
+  .badge b{font-size:1.2rem}
+  .hero .k-split__type{padding-top:4px}
+  .hero .k-split__type h1{font-size:clamp(2.4rem,11vw,3rem)}
+  .hero .k-split__lead{margin-top:16px;font-size:1.05rem}
+  .lede-more{display:none}
+  .hero__acts{flex-wrap:nowrap;gap:16px;margin-top:20px}
+  .hero .k-btn{padding:15px 16px;font-size:.95rem;white-space:nowrap}
+  .hero__call{font-size:.95rem}
+  .hero .k-split__meta{display:none}
 }
+@media (max-width:359px){.hero .k-btn .k-arrow{display:none}.hero__acts{gap:10px}}
 @media (min-width:900px){
-  .hero.k-split{grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr) minmax(180px,.42fr);align-items:end}
-  .hero .k-split__photo{aspect-ratio:auto;align-self:stretch;min-height:560px;max-height:calc(100svh - 140px)}
+  .hero.k-split{grid-template-columns:minmax(0,1fr) min(560px,39vw) minmax(170px,.3fr);grid-template-rows:minmax(calc(100svh - 72px),auto);align-content:stretch;align-items:end;padding-block:0;gap:clamp(24px,2.6vw,40px)}
+  .hero .k-split__type{position:relative;z-index:3}
+  .hero .k-split__type h1 .k-mask{overflow:visible;clip-path:inset(0 -60vw -.1em -60vw)}
+  .hero .k-split__type,.hero .k-split__meta{padding-block:clamp(28px,4vw,56px)}
+  .hero .k-split__type h1{font-size:clamp(4rem,8vw,8.5rem)}
+  .hero .k-split__photo{aspect-ratio:auto;align-self:stretch;min-height:520px}
+  .badge{inset-inline-start:-46px;bottom:48px}
   .hero .k-split__meta{grid-template-columns:1fr}
 }
+/* mobile facts list, below the conditions index */
+.facts{margin-top:clamp(40px,6vw,60px);border-top:1px solid var(--ink)}
+.facts>div{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--mute);font-size:.95rem}
+.facts dd{font:400 1.7rem/1 var(--display);letter-spacing:-.02em}
+[dir=rtl] .facts dd{font-family:"Readex Pro",var(--body);font-size:1.4rem;letter-spacing:0}
+@media (min-width:900px){.facts{display:none}}
 
 /* ---------- conditions index ---------- */
 .why{padding-block:clamp(80px,12vw,170px) clamp(60px,8vw,110px)}
@@ -143,13 +164,14 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .tl__list{list-style:none;padding:0;position:relative;--p:1}
 .tl__list::before{content:"";position:absolute;inset-block:0;inset-inline-start:7px;width:1px;background:var(--line)}
 .tl__list::after{content:"";position:absolute;top:0;inset-inline-start:7px;width:1px;height:100%;background:var(--navy);transform-origin:top;transform:scaleY(var(--p))}
-.tl__item{position:relative;padding-inline-start:44px;padding-bottom:clamp(40px,6vw,80px)}
+.tl__item{position:relative;padding-inline-start:44px;padding-bottom:clamp(24px,3vw,40px)}
+.k-js .tl__item[data-reveal]{transition-duration:.6s,var(--k-rv-dur),1.3s}
 .tl__item::before{content:"";position:absolute;inset-inline-start:2px;top:.55em;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--navy);z-index:1;transition:background .5s}
 .tl__item.is-in::before{background:var(--navy)}
 .tl__when{font:400 clamp(2.4rem,5vw,4.4rem)/1 var(--display);letter-spacing:-.03em;color:var(--navy);display:block}
 .tl__where{font-weight:600;margin-top:10px;display:block}
 .tl__item p{color:var(--mute);max-width:30em;margin-top:6px}
-.tl__fig{margin-top:18px;max-width:400px}
+.tl__fig{margin-top:18px;max-width:320px}
 .tl__fig img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .tl__fig figcaption{font-size:.84rem;color:var(--mute);margin-top:8px}
 @media (min-width:900px){
@@ -160,7 +182,8 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
   .tl__item:nth-child(even){margin-inline-start:50%;padding-inline-end:0;padding-inline-start:clamp(40px,5vw,90px);text-align:start}
   .tl__item:nth-child(even) p,.tl__item:nth-child(even) .tl__fig{margin-inline-start:0}
   .tl__item:nth-child(even)::before{inset-inline-end:auto;inset-inline-start:-5px}
-  .tl__item:nth-child(n+2){margin-top:-60px}
+  .tl__item:nth-child(n+2){margin-top:-140px}
+  .tl__item{min-height:300px} /* keeps same-side items clear of each other at the -140px interlock */
 }
 
 /* ---------- spot and stop ---------- */
@@ -186,7 +209,8 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .k-visit__acts a{border-radius:2px;min-height:48px}
 .k-visit__go{background:var(--navy)}
 .k-visit__go:hover{background:var(--navy-deep)}
-.k-visit__map{--k-map-poster:url(img/al-ghurair.webp);min-height:440px}
+/* poster kept at <=600px wide: the AI upscale garbles the small shop lettering when shown larger */
+.k-visit__map{--k-map-poster:url(img/al-ghurair.webp);min-height:440px;background-color:var(--wall);background-size:min(600px,calc(100% - 40px)) auto;background-repeat:no-repeat;background-position:50% 38%;align-content:end;padding-bottom:clamp(24px,4vw,48px)}
 .k-visit__map button{border-radius:2px;min-height:48px}
 .k-visit__note{font-size:.86rem;color:var(--mute);margin:-14px 0 26px;max-width:30em}
 .k-visit__badge{border-radius:2px}
@@ -291,7 +315,9 @@ h2{font-size:clamp(2.4rem,5.6vw,4.9rem)}
 .ab-hero h1{font:400 clamp(3rem,7vw,6.6rem)/.95 var(--display);letter-spacing:-.035em;margin-bottom:10px}
 .ft li a,.ft p a{padding-block:10px}
 .ft p{line-height:1.5}
-.hero__or a,.why__note a,.acc__more a,.tl p>a{display:inline-flex;align-items:center;min-height:44px}
+.why__note a,.acc__more a,.tl p>a{display:inline-flex;align-items:center;min-height:44px}
 [dir=rtl] .hero .k-split__type h1{font-size:clamp(2.7rem,5.4vw,6rem)}
 [dir=rtl] .hero .k-split__type h1 .k-mask{padding-bottom:.12em}
-@media (min-width:900px){[dir=rtl] .hero.k-split{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr) minmax(190px,.42fr)}}
+@media (min-width:900px){[dir=rtl] .hero.k-split{grid-template-columns:minmax(0,1fr) min(560px,39vw) minmax(180px,.3fr)}[dir=rtl] .hero .k-split__type h1{font-size:clamp(3.4rem,6.4vw,7rem)}}
+@media (max-width:899px){[dir=rtl] .hero .k-split__type h1{font-size:clamp(2.2rem,10vw,2.8rem)}}
+.hero .k-split__meta dd a{white-space:nowrap;font-size:.86em}

@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="en" href="https://preview.websmith.ae/dr-hala-fadli/">
 <link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/dr-hala-fadli/ar/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Noto+Kufi+Arabic:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Noto+Kufi+Arabic:wght@500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/villa.webp" fetchpriority="high">
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="stylesheet" href="site.css">
@@ -37,7 +37,8 @@
 <!-- HERO · kit 02, restyled. Facts column after Institute of Health (Awwwards HM 2026); text-link actions after Royal Clinic -->
 <section class="k-split" aria-label="Dr Hala Fadli">
   <div class="k-split__type">
-    <h1><span class="k-mask"><span class="k-split__word" style="--i:0"><span class="dr">Dr</span> Hala</span></span><span class="k-mask"><span class="k-split__word" style="--i:1">Fadli</span></span></h1>
+    <!-- bilingual lockup, as on the villa sign -->
+    <h1 class="lockup"><span class="k-mask lockup__en"><span class="k-split__word" style="--i:0">Dr Hala Fadli</span></span><span class="k-mask lockup__ar" lang="ar" dir="rtl"><span class="k-split__word" style="--i:1">د. هالة فضلي</span></span></h1>
   </div>
   <div class="hero-copy">
     <p class="k-split__lead k-split__fade" style="--i:1">Clinical and cosmetic dermatology in a villa on Al Wasl Road, Umm Suqeim. Skin, hair and nails, and every patient starts with a consultation with Dr Fadli.</p>
@@ -51,14 +52,6 @@
     <img src="img/villa.webp" alt="The clinic villa on Al Wasl Road, with the sign 'Dr. Hala Fadli Dermatology & Laser Clinic' in English and Arabic" fetchpriority="high" width="2000" height="1340">
     <p class="chip" data-chip hidden><i></i><span>Open</span></p>
   </figure>
-  <div class="creds">
-  <dl>
-    <div class="k-split__fade" style="--i:3"><dt>Diploma in Dermatology</dt><dd>1996</dd></div>
-    <div class="k-split__fade" style="--i:4"><dt>MSc Dermatological Sciences</dt><dd>1997</dd></div>
-    <div class="k-split__fade" style="--i:5"><dt>PhD in Dermatology</dt><dd>2003</dd></div>
-  </dl>
-    <p class="creds__src k-split__fade" style="--i:6">All three from the University of Wales College of Medicine, Cardiff.</p>
-  </div>
 </section>
 
 <!-- INTRO -->
@@ -72,41 +65,32 @@
   </div>
 </section>
 
-<!-- TREATMENTS · kit 11, restyled (no hover photos: no real treatment photos to show) -->
-<section class="k-acc" data-k-acc aria-labelledby="tr-h">
-  <div class="acc-head">
-    <h2 class="h2" id="tr-h" data-reveal="lines">Treatments</h2>
-    <a class="tlink" href="services.html">Every treatment, explained <span class="k-arrow" aria-hidden="true">→</span></a>
-  </div>
-  <div class="k-acc__list" data-reveal-stagger="70">
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">01</span><span class="k-acc__t">Skin checks and moles<small>A full skin exam once a year, more often if you have had skin cancer</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Full skin examination</li><li>Mole checks and mole removal</li><li>Sun damage</li><li>Skin cancer</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#skin-exam">How the skin check works</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">02</span><span class="k-acc__t">Acne and acne scars<small>Long-term treatment, planned around how much it affects you</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Creams and gels</li><li>Tablets, including isotretinoin where it suits</li><li>Chemical peels for scarring</li><li>Dermaroller and PRP for scarring</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#acne">More on acne</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">03</span><span class="k-acc__t">Psoriasis, eczema, rosacea<small>And herpes, bacterial and fungal skin infections</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Psoriasis: creams, light treatment, tablets under supervision</li><li>Eczema</li><li>Rosacea and facial redness</li><li>Herpes, bacterial and fungal infections</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#psoriasis">More on these conditions</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">04</span><span class="k-acc__t">Hair loss and nails<small>Finding the cause first, then treating it</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Hair loss</li><li>Mesotherapy for hair loss</li><li>PRP (platelet rich plasma)</li><li>Nail conditions</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#hair">More on hair and nails</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">05</span><span class="k-acc__t">Botox and fillers<small>Lines, lips, under the eyes, the nose without surgery</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Botox for lines, and for excessive sweating</li><li>Fillers: Juvéderm, Restylane, Teosyal, Radiesse</li><li>Lips and dark circles under the eyes</li><li>Non-surgical nose job, hand filler, thread lift</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#botox">More on Botox and fillers</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">06</span><span class="k-acc__t">Skin renewal<small>Peels, microdermabrasion, dermaroller, PRP, facials</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Chemical peels</li><li>Microdermabrasion</li><li>Dermaroller skin rejuvenation</li><li>Freckles and age spots</li><li>Mesotherapy and PRP for the skin</li><li>Facials, including the sheep placenta facial</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#peels">More on skin renewal</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">07</span><span class="k-acc__t">Laser hair removal and fat freezing<small>Soprano XL laser and Cryolipolysis</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Soprano XL laser hair removal</li><li>Cryolipolysis (CoolSculpting type fat freezing)</li></ul><p class="acts"><a class="k-link k-link--under" href="services.html#laser">More on laser and Cryolipolysis</a></p></div>
-    </details>
+<!-- TREATMENTS · two-column index split Clinical | Cosmetic, as on halafadli.com -->
+<section class="tx" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="acc-head">
+      <h2 class="h2" id="tr-h" data-reveal="lines">Treatments</h2>
+      <a class="tlink" href="services.html">Every treatment, explained <span class="k-arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="tx__cols">
+      <div class="tx__col">
+        <h3 class="tx__h" data-reveal>Clinical</h3>
+        <ul class="tx__list" data-reveal-stagger="70">
+          <li data-reveal><a href="services.html#skin-exam"><span class="tx__n">01</span><span class="tx__name">Skin checks and moles <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">A full skin exam once a year, more often if you have had skin cancer</span></a></li>
+          <li data-reveal><a href="services.html#acne"><span class="tx__n">02</span><span class="tx__name">Acne and acne scars <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">Creams, tablets, peels, dermaroller and PRP for scarring</span></a></li>
+          <li data-reveal><a href="services.html#psoriasis"><span class="tx__n">03</span><span class="tx__name">Psoriasis, eczema, rosacea <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">And herpes, bacterial and fungal skin infections</span></a></li>
+          <li data-reveal><a href="services.html#hair"><span class="tx__n">04</span><span class="tx__name">Hair loss and nails <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">Finding the cause first, then mesotherapy or PRP</span></a></li>
+        </ul>
+      </div>
+      <div class="tx__col">
+        <h3 class="tx__h" data-reveal>Cosmetic</h3>
+        <ul class="tx__list" data-reveal-stagger="70">
+          <li data-reveal><a href="services.html#botox"><span class="tx__n">05</span><span class="tx__name">Botox and fillers <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">Lines, lips, under the eyes, the nose without surgery</span></a></li>
+          <li data-reveal><a href="services.html#peels"><span class="tx__n">06</span><span class="tx__name">Skin renewal <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">Peels, microdermabrasion, dermaroller, PRP, facials</span></a></li>
+          <li data-reveal><a href="services.html#laser"><span class="tx__n">07</span><span class="tx__name">Laser hair removal and fat freezing <span class="k-arrow" aria-hidden="true">→</span></span><span class="tx__note">Soprano XL laser and Cryolipolysis</span></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -128,6 +112,7 @@
       <article class="k-story__step is-on" data-k-story-step>
         <div class="k-story__inline"><img src="img/entrance.webp" alt="The clinic's front door, with flowers either side" loading="lazy"></div>
         <span class="k-story__n">01</span><h3>Call to book</h3><p>Ring the clinic on 04 346 5542 or email manager@halafadli.com. We are open Sunday to Friday; the villa is opposite Choitram supermarket on Al Wasl Road.</p>
+        <p class="story-call"><a class="k-link k-link--under" href="tel:+97143465542">Call 04 346 5542 <span class="k-arrow" aria-hidden="true">→</span></a></p>
       </article>
       <article class="k-story__step" data-k-story-step>
         <div class="k-story__inline"><img src="img/consult-room.webp" alt="Dr Fadli's consultation room" loading="lazy"></div>
@@ -161,24 +146,26 @@
         <li data-reveal><b>1996</b><span>Diploma in Dermatology, University of Wales College of Medicine, Cardiff</span></li>
         <li data-reveal><b>1997</b><span>Masters in Dermatological Sciences, same university</span></li>
         <li data-reveal><b>2003</b><span>PhD in Dermatology, same university</span></li>
-        <li data-reveal><b>2014</b><span>Advisory board, Neutrogena (Johnson &amp; Johnson); Dubai Derma congress</span></li>
+        <li data-reveal><b>2014</b><span>Dubai Derma congress</span></li>
+        <li data-reveal><b></b><span>Neutrogena advisory board (Johnson &amp; Johnson)</span></li>
       </ol>
       <a class="tlink" href="about.html">More about Dr Fadli <span class="k-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- MEDIA · navy flood. Topics are the titles of her own Dubai TV clips (videos page) -->
+<!-- MEDIA · HF green flood. Topics are the titles of her own Dubai TV clips (videos page) -->
 <section class="media" aria-labelledby="media-h">
   <div class="wrap media__grid">
     <div class="media__text">
       <h2 class="h2" id="media-h" data-reveal="lines">On Dubai TV</h2>
-      <p data-reveal>Arabic-speaking viewers know Dr Fadli from Dubai TV's Friday programme <span lang="ar">ظهيرة الجمعة</span>, where she has answered questions on skin, hair and nails for years. She has also spoken on Sky News about stress and psoriasis, and written for Zahrat Al Khaleej and A&amp;E magazine.</p>
+      <p data-reveal>Arabic-speaking viewers know Dr Fadli from Dubai TV's Friday programme <span lang="ar">ظهيرة الجمعة</span>, where she has regularly answered questions on skin, hair and nails. She has also spoken on Sky News about stress and psoriasis, and written for Zahrat Al Khaleej and A&amp;E magazine.</p>
       <ul class="media__list" data-reveal-stagger="70">
         <li data-reveal>EADV Congress<span>Istanbul 2013</span></li>
         <li data-reveal>EADV Congress<span>Prague</span></li>
         <li data-reveal>Dubai Derma<span>2014</span></li>
-        <li data-reveal>Neutrogena advisory board<span>2014</span></li>
+        <li data-reveal>Neutrogena advisory board<span>Johnson &amp; Johnson</span></li>
+        <li data-reveal>Visibly Clear launch<span>Johnson &amp; Johnson · 2014</span></li>
       </ul>
       <p data-reveal><a class="k-link k-link--under" href="https://www.youtube.com/watch?v=-juFCNIPEcg" target="_blank" rel="noopener">Watch her on <span lang="ar">ظهيرة الجمعة</span> (YouTube)</a></p>
     </div>
@@ -187,16 +174,17 @@
       <figure data-reveal data-reveal-delay="150"><div class="ph" data-reveal="clip"><img src="img/magazine.webp" alt="A magazine article by Dr Fadli on healthy skin" loading="lazy"></div><figcaption>In print, on healthy skin</figcaption></figure>
     </div>
   </div>
-  <div class="k-marquee" data-k-marquee data-k-marquee-speed="55" aria-label="Topics Dr Fadli has covered on television">
+  <!-- marquee: her real Dubai TV episode titles, as listed on halafadli.com/videos.php -->
+  <div class="k-marquee" data-k-marquee data-k-marquee-speed="60" lang="ar" dir="rtl" aria-label="عناوين حلقاتها على تلفزيون دبي (Her Dubai TV episode titles)">
     <div class="k-marquee__track">
-      <span class="k-mq-word">Acne scars and PRP</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">Moles</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">Skin and stress</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">Facial redness</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">Nail conditions</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">Summer skin</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">Collagen</span><span class="k-mq-dot"></span>
-      <span class="k-mq-word">The eye area</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">اسباب احمرار الوجه وعلاجه</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">امراض الاظافر وعلاجاتها</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">علاج البلازما للبشرة</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">تجميل العين</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">الامراض الجلدية في الصيف</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">علاج الديرمارولر للبشرة والشعر</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">حبوب وشراب الكولاجين</span><span class="k-mq-dot"></span>
+      <span class="k-mq-word">الامراض الجلدية والرياضة</span><span class="k-mq-dot"></span>
     </div>
   </div>
 </section>
@@ -211,12 +199,11 @@
     <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous photo">←</button><button type="button" data-k-drag-next aria-label="Next photo">→</button></div>
   </div>
   <div class="k-drag__track" tabindex="0" role="region" aria-label="Photos of the clinic, scroll sideways">
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/villa.webp" alt="The clinic villa and its bilingual sign" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>The villa</h3><span>929 Al Wasl Road</span></div></div>
+    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/staircase.webp" alt="Curved staircase under a chandelier" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Staircase</h3><span>Inside the villa</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/entrance.webp" alt="Front entrance of the clinic" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Front door</h3><span>Off the courtyard</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/waiting.webp" alt="Waiting room with white leather sofas" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Waiting room</h3><span>Inside the villa</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/consult-room.webp" alt="Consultation room with a desk and cabinet" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Consultation room</h3><span>Where you meet Dr Fadli</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/hallway.webp" alt="Arched hallway leading to the stairs" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Hallway</h3><span>Inside the villa</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/staircase.webp" alt="Curved staircase under a chandelier" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Staircase</h3><span>Inside the villa</span></div></div>
   </div>
   <div class="k-drag__bar" aria-hidden="true"><i></i></div>
 </section>
