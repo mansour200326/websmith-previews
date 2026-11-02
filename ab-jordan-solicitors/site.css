@@ -117,9 +117,6 @@ a{color:inherit}
 .people{max-width:var(--max);margin-inline:auto;padding:clamp(80px,11vw,150px) var(--pad)}
 .people__grid{display:grid;gap:clamp(40px,5vw,72px);margin-top:clamp(36px,5vw,64px)}
 .person{display:grid;gap:22px;align-content:start}
-.person__mono{aspect-ratio:16/7;background:var(--tint);display:grid;place-items:center;position:relative;overflow:hidden}
-.person__mono span{font:300 clamp(5rem,11vw,9rem)/1 var(--k-display);color:var(--k-accent);letter-spacing:-.04em;font-style:italic}
-.person__mono small{position:absolute;left:16px;bottom:12px;font-size:.8rem;color:var(--k-mute)}
 .person h3{font:400 clamp(1.8rem,3vw,2.5rem)/1 var(--k-display);letter-spacing:-.02em}
 .person .role{color:var(--k-accent);font-weight:600;margin-top:6px;font-size:.98rem}
 .person p.bio{color:var(--k-mute);max-width:34em}
@@ -142,9 +139,6 @@ a{color:inherit}
 .k-visit__go{background:var(--k-accent);color:#fff}
 .k-visit__go:hover{background:var(--k-ink)}
 .k-visit__map{min-height:420px;background:var(--k-accent);color:#fff;overflow:hidden}
-.k-visit__map::before{content:"Carlow";position:absolute;left:-.04em;bottom:-.16em;font:italic 300 clamp(7rem,17vw,16rem)/1 var(--k-display);letter-spacing:-.05em;color:rgba(255,255,255,.13);pointer-events:none}
-.k-visit__map::after{content:"52.8415° N, 6.9252° W";position:absolute;top:22px;left:24px;font-size:.85rem;color:#cfe6f4;letter-spacing:.02em}
-.k-visit__map:has(iframe.is-on)::before,.k-visit__map:has(iframe.is-on)::after{display:none}
 .k-visit__map button{border-radius:0;min-height:48px;font-family:var(--k-body)}
 
 /* ---------- footer ---------- */
@@ -222,13 +216,60 @@ a{color:inherit}
 /* tap targets on phones */
 .tel{min-width:44px;justify-content:center}
 @media (max-width:860px){.ft li a,.ft address a{padding-block:11px}.lines dd a{padding-block:8px}.lines dt,.lines dd{padding:4px 0}.area__who a,.hero__acts .k-link{display:inline-flex;min-height:44px;align-items:center}}
-.hero__name{font-size:clamp(4.9rem,18vw,20rem)}
-@media (max-width:760px){
-  .hero{gap:28px;padding-top:22px}
-  .hero>div:last-child{order:-1}
-  .hero__name{font-size:21.5vw}
-  .hero__foot{border-bottom:0;padding-bottom:0;gap:10px 28px}
-  .hero__foot .hero__where{padding-bottom:0}
-  .hero__say{justify-self:start;border-top:1px solid var(--k-ink);padding-top:22px}
-  .hero__say p{font-size:1.32rem}
+
+/* ===== Fannan round 1 ===== */
+/* 1. display type: room for ascenders inside the line masks */
+.hero__name .ln,.intro h1 .ln{padding-top:.14em;margin-top:-.14em}
+
+/* 3. hero: meta top-left, statement top-right, name across the full container, photo up into the first screen */
+.hero{grid-template-columns:1fr;grid-template-areas:"name" "meta" "say";gap:26px;padding-top:clamp(18px,3.4vh,40px);padding-bottom:0}
+.hero__meta{grid-area:meta;display:flex;flex-wrap:wrap;gap:12px 36px}
+.hero__meta .hero__where{padding-bottom:0}
+.hero__say{grid-area:say;justify-self:start}
+.hero__name{grid-area:name;font-size:21vw;margin-top:4px}
+@media (min-width:761px){
+  .hero{grid-template-columns:1fr 1fr;grid-template-areas:"meta say" "name name";column-gap:48px;row-gap:clamp(18px,3vh,34px)}
+  .hero__meta{flex-direction:column;align-self:end;gap:18px}
+  .hero__say{justify-self:end}
+  .hero__say p{font-size:clamp(1.3rem,1.9vw,1.7rem)}
+  .hero__acts{margin-top:22px}
+  .hero__name{font-size:clamp(4.9rem,20.5vw,22rem);border-bottom:1px solid var(--k-ink);padding-bottom:.02em}
 }
+@media (max-width:760px){.hero__say{border-top:1px solid var(--k-ink);padding-top:22px}.hero__say p{font-size:1.32rem}}
+
+/* 2. courthouse: once, contained, caption beside */
+.band{max-width:var(--max);margin:clamp(22px,3vw,34px) auto 0;padding-inline:var(--pad);display:grid;gap:14px;align-items:end}
+.band__img{aspect-ratio:2.4/1;max-width:960px;width:100%;margin:0}
+.band__cap{margin:0;padding:0;display:block;max-width:18rem;font-size:.9rem;color:var(--k-mute)}
+@media (min-width:1000px){.band{grid-template-columns:960px 1fr;gap:32px}}
+@media (max-width:700px){.band{padding-inline:0}.band__img{aspect-ratio:1.7/1}.band__cap{padding-inline:var(--pad)}}
+
+/* 4. people: type only, side by side, top aligned */
+.people__grid .person:nth-child(2){margin-top:0}
+.person{gap:14px}
+.person h3{font:400 clamp(2.6rem,4.6vw,4.4rem)/.95 var(--k-display);letter-spacing:-.035em}
+.person .role{margin-top:0}
+.person p.bio{font-size:1.05rem;margin-top:8px}
+.year{margin-top:28px;padding-top:18px}
+@media (min-width:1000px){.people__grid{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* 5. map: static OpenStreetMap poster under the button */
+.k-visit__map{background:#e7ecef}
+.k-visit__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+.k-visit__map button{box-shadow:0 14px 34px -12px rgba(19,32,42,.45)}
+.k-visit__map iframe{z-index:2}
+@media (max-width:899px){.k-visit__map{min-height:280px}.k-visit__map button{margin-top:0;align-self:end;margin-bottom:18px}}
+@media (min-width:900px){.k-visit__map button{margin-top:0;align-self:end;margin-bottom:32px}}
+
+/* 6. mobile header: one row */
+.mark b{white-space:nowrap}
+@media (max-width:399px){.hd .mark small{display:none}.hd__in{min-height:64px}}
+
+/* 7. footer mark in white type */
+.mark--ft{color:#fff;margin:0}
+.mark--ft svg{color:#7cc0e8;width:38px;height:38px}
+.mark--ft b{font-size:1.6rem}
+.mark--ft small{color:#aebbc5}
+.ft__osm{font-size:.8rem;color:#aebbc5;margin-top:18px}
+@media (min-width:761px){.hero{row-gap:clamp(26px,4vh,40px)}.hero__name .ln{padding-bottom:0}.hero__name{padding-bottom:0;line-height:.86}}
+.year b{line-height:.95}.year{padding-top:22px}
