@@ -9,6 +9,8 @@
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjIJFJpc.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/hankengrotesk/v12/ieVn2YZDLWuGJpnzaiwFXS9tYtpd59CxCis4.woff2" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/courthouse.webp">
 <link rel="stylesheet" href="kit.css">
@@ -45,11 +47,11 @@
         <a class="k-link k-link--under" href="mailto:solicitors@abjordan.ie">solicitors@abjordan.ie</a>
       </div>
     </div>
-    <h1 class="hero__name" id="hero-h"><span class="ln"><span style="--i:0">AB Jordan</span></span><span class="vh"> Solicitors, Carlow</span></h1>
+    <h1 class="hero__name" id="hero-h"><span class="ln"><span style="--i:0">AB</span></span> <span class="ln"><span style="--i:1">Jordan</span></span><span class="vh"> Solicitors, Carlow</span></h1>
   </section>
 
   <figure class="band">
-    <div class="band__img" data-reveal="clip"><img src="img/courthouse.webp" width="2288" height="816" alt="Carlow Courthouse, the granite portico with eight columns and wide steps, under a blue sky" fetchpriority="high"></div>
+    <div class="band__img" data-reveal="clip" data-reveal-delay="500"><img src="img/courthouse.webp" width="2288" height="816" alt="Carlow Courthouse, the granite portico with eight columns and wide steps, under a blue sky" fetchpriority="high"></div>
     <figcaption class="band__cap">Carlow Courthouse, where the Circuit and District Courts sit for the county.</figcaption>
   </figure>
 
@@ -121,7 +123,8 @@
       <article class="person" data-reveal>
         <h3>Charlotte Egan</h3>
         <p class="role">Solicitor · BA</p>
-        <p class="bio">Before joining the firm Charlotte worked as a legal executive in a large Dublin office. Here she works with individuals and voluntary organisations, especially on the administration of estates, residential conveyancing and District Court licensing.</p>
+        <p class="bio">Before joining the firm Charlotte gained experience as a legal executive in a large Dublin office. Since joining, she has worked with individuals and voluntary organisations, and in particular has assisted with:</p>
+        <ul class="lines lines--list"><li>Administration of estates</li><li>Residential conveyancing</li><li>District Court licensing matters</li></ul>
         <p><a class="k-link k-link--under" href="about.html">More about the firm <span class="k-arrow" aria-hidden="true">→</span></a></p>
       </article>
     </div>

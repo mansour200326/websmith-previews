@@ -273,3 +273,21 @@ a{color:inherit}
 .ft__osm{font-size:.8rem;color:#aebbc5;margin-top:18px}
 @media (min-width:761px){.hero{row-gap:clamp(26px,4vh,40px)}.hero__name .ln{padding-bottom:0}.hero__name{padding-bottom:0;line-height:.86}}
 .year b{line-height:.95}.year{padding-top:22px}
+
+/* ===== Fannan round 2 ===== */
+.tel{white-space:nowrap;flex-shrink:0}
+.mark{min-width:0}
+.hero__name .ln{display:inline-block;vertical-align:top}
+.hero__name .ln>span{animation-delay:calc(.12s + var(--i,0)*.13s)}
+@media (min-width:761px){.hero{padding-top:clamp(10px,2vh,22px);row-gap:clamp(20px,3vh,30px)}}
+.band{margin-top:clamp(14px,1.6vw,20px)}
+.band__img{max-width:720px}
+@media (min-width:1000px){.band{grid-template-columns:720px minmax(0,20rem);gap:32px}}
+.lines--list{display:block;list-style:none;padding:0;margin:28px 0 8px;border-top:1px solid var(--k-ink);max-width:30rem}
+.lines--list li{padding:12px 0;border-bottom:1px solid var(--k-line);font:400 clamp(1.25rem,1.8vw,1.5rem)/1.25 var(--k-display)}
+@media (min-width:1000px){
+  .people__grid{grid-template-rows:repeat(5,auto);row-gap:0}
+  .people__grid .person{grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+  .people__grid .person>*{margin-block:0 14px}
+  .people__grid .person .year,.people__grid .person .lines--list{margin-top:28px;align-self:start}
+}
