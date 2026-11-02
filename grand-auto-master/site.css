@@ -860,3 +860,16 @@ a{color:inherit}
 html:lang(en) a.hd__lang[lang=ar],html:lang(ar) a.hd__lang[lang=en]{display:inline-grid!important}
 html:lang(en) a.ft__ar[lang=ar],html:lang(ar) a.ft__ar[lang=en]{display:inline-block!important}
 html:lang(ar) .ft__en[lang=en]{display:inline!important}
+@media (max-width:959px){
+  .hero{gap:18px}
+  .hero__type{display:contents}
+  .hero h1{order:1}
+  .hero .k-seq{order:2;aspect-ratio:4/4.6}
+  .hero__lead{order:3;margin-top:4px}
+  .hero__acts{order:4;margin-top:4px}
+  .hero__plate{order:5;margin-top:10px}
+}
+.k-seq__count{white-space:nowrap}
+.ft__nav a{padding-block:4px}
+.contact-list a,.hero__plate a,.ft__cols a{display:inline-flex;align-items:center;min-height:44px}
+.ft__cols p{line-height:1.3}
