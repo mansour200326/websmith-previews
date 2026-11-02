@@ -38,7 +38,7 @@
 <section class="hero" aria-labelledby="hero-h">
   <div class="hero__media"><img src="img/building.webp" alt="The Ultra Medical Center building in Al Jimi, with its UMC sign, the pharmacy on the right and UAE flags on the front" width="2400" height="1600" fetchpriority="high"></div>
   <div class="hero__top">
-    <h1 id="hero-h"><span class="k-line-mask"><span class="rise" style="--i:0">Your family's doctors,</span></span><span class="k-line-mask"><span class="rise" style="--i:1">at the Al Jimi roundabout.</span></span></h1>
+    <h1 id="hero-h"><span class="k-line-mask"><span class="rise" style="--i:0">Your family's doctors,</span></span><span class="k-line-mask"><span class="rise" style="--i:1">at the Al&nbsp;Jimi roundabout.</span></span></h1>
   </div>
   <div class="hero__low">
     <div>
@@ -66,10 +66,6 @@
         <span><b>Wheelchair</b> entrance and parking</span>
       </div>
     </div>
-    <figure>
-      <div class="intro__ph"><img data-reveal="clip" src="img/entrance.webp" alt="The UMC sign over the main entrance, with the phone number 03 762 5552" width="1400" height="1004" loading="lazy"></div>
-      <figcaption class="cap">The front of the building, Sheikh Mubarak (Al Jimi) Roundabout.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -99,6 +95,7 @@
       <a class="ix__row" data-reveal href="services.html#radiology"><span class="ix__n">15</span><span class="ix__name">Radiology</span><span class="ix__what">Digital X-ray, ultrasound and Doppler, dental panoramic X-ray</span><span class="ix__go k-arrow" aria-hidden="true">→</span></a>
       <a class="ix__row" data-reveal href="services.html#homecare"><span class="ix__n">16</span><span class="ix__name">Home Care</span><span class="ix__what">We come to you: wound care, injections, diabetes care, care after surgery</span><span class="ix__go k-arrow" aria-hidden="true">→</span></a>
       <a class="ix__row" data-reveal href="services.html#pharmacy"><span class="ix__n">17</span><span class="ix__name">Pharmacy</span><span class="ix__what">Ground floor: medicines, vaccines, supports, baby formula, most insurance cards</span><span class="ix__go k-arrow" aria-hidden="true">→</span></a>
+      <a class="ix__all" href="services.html">All 17 clinics and what they treat <span class="k-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -155,7 +152,7 @@
 <section class="sec px" aria-labelledby="px-h">
   <div class="wrap">
     <h2 class="sr" id="px-h">Pharmacy and X-ray in the same building</h2>
-    <div class="px__ph"><img data-reveal="clip" src="img/pharmacy.webp" alt="The Ultra Medical Center Pharmacy sign on the ground floor, in Arabic and English" width="1800" height="859" loading="lazy"></div>
+    <div class="px__ph" data-reveal="clip"><img src="img/pharmacy.webp" alt="The Ultra Medical Center Pharmacy sign on the ground floor, in Arabic and English" width="1800" height="859" loading="eager" decoding="async"></div>
     <div class="px__cols">
       <div data-reveal>
         <h3>The pharmacy downstairs</h3>
@@ -221,7 +218,7 @@
     </div>
   </div>
   <div class="k-visit__map" data-k-map data-src="https://www.google.com/maps?q=Ultra+Medical+Center+Al+Jimi+Al+Ain&amp;z=15&amp;output=embed">
-    <button type="button">Show the map</button>
+    <div class="map-panel"><p class="map-panel__addr">Sheikh Mubarak<br>(Al&nbsp;Jimi) Roundabout,<br>Al&nbsp;Ain</p><p class="map-panel__land">Opposite the ministry complex · next to Al Jimi Mall</p><button type="button">Show the map</button></div>
   </div>
 </section>
 </main>
