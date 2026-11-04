@@ -345,3 +345,36 @@ html:lang(ar) .mapcard__a{font-weight:500;line-height:1.3;letter-spacing:0}
 .k-menu__tabs[hidden]{display:none}
 .dept h2{min-height:44px;display:flex;align-items:center}
 .foot li a{min-width:44px}
+/* ---------- round 3 ---------- */
+/* hero: bigger name, photo capped so the facts row lands inside a 900px first screen; photo capped at 1280 wide */
+.hero{--h1:clamp(3.2rem,8.2vw,7rem);--lh:.9;--nameh:calc(var(--h1)*var(--lh) + var(--h1)*.08 + clamp(14px,2vw,24px) + clamp(14px,1.4vw,22px))}
+html:lang(ar) .hero{--lh:1.2}
+.hero h1{font-size:var(--h1)}
+@media (min-width:900px){
+  .hero{--hdr:70px;--h1:clamp(5rem,10vw,10.5rem);--rowh:172px;--ph:clamp(380px,min(560px,calc(100svh - var(--hdr) - var(--nameh) - var(--rowh))),560px)}
+  html:lang(ar) .hero{--h1:clamp(4.4rem,8.4vw,8.8rem);--rowh:182px}
+  .hero__name{padding-block:clamp(10px,1.2vw,18px) clamp(8px,1vw,16px)}
+  .hero__photo{max-width:1280px;margin-inline:auto}
+  .hero__cell{padding-block:20px 22px}
+  .hero__lead{font-size:clamp(1rem,1.15vw,1.1rem)}
+}
+@keyframes kb-in{from{transform:scale(1.06)}to{transform:scale(1.03)}}
+@keyframes kb-slow{from{transform:scale(1.03)}to{transform:scale(1)}}
+/* find us panel: street + pin in the top 55% (pin ~30% down), address anchored to the bottom */
+.mapcard{justify-content:flex-end;padding:28px}
+@media (min-width:900px){.mapcard{padding:clamp(28px,4vw,56px)}}
+.mapcard__st{top:0;bottom:auto;height:55%}
+.mapcard__a{font-size:clamp(1.75rem,3.6vw,3.6rem)}
+.mapcard__s{margin-bottom:10px}
+@media (max-width:899px){.k-visit__map{min-height:420px}}
+/* mobile subnav: all four links fit at 390; fade on the trailing edge if it ever scrolls */
+.subnav{gap:0;padding-inline:calc(var(--pad) - 8px)}
+.subnav a{padding:10px 8px;font-size:.92rem}
+@media (max-width:380px){.subnav{-webkit-mask-image:linear-gradient(to left,transparent 0,#000 24px);mask-image:linear-gradient(to left,transparent 0,#000 24px)}
+  html[dir=rtl] .subnav{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 24px);mask-image:linear-gradient(to right,transparent 0,#000 24px)}}
+/* arabic header: name and sub-line breathe */
+html:lang(ar) .brand b{line-height:1.45}
+html:lang(ar) .brand small{margin-top:3px}
+/* call link: number never breaks; short label on small phones */
+.tlink .num{white-space:nowrap}
+@media (max-width:419px){.tlink .w-on{display:none}.hero__cell--book .tlink .k-link{white-space:nowrap}}
