@@ -103,6 +103,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
   .hero .k-seq{aspect-ratio:4/3.4}
   .sticker{inset-inline-start:auto;inset-inline-end:-6px;bottom:-62px;width:112px}
   .sticker b{font-size:.9rem}.sticker b small{font-size:.62rem}
+  .hero .k-seq__count{visibility:hidden}
 }
 /* ---------- marquee ---------- */
 .mq{border-block:0;background:var(--soft);padding:22px 0}
