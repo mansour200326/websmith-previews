@@ -130,7 +130,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .room h3{font-size:1.6rem;line-height:1.05}
 .room p{font-size:1rem;line-height:1.55;max-width:30em}
 .room__ratio{display:inline-flex;align-items:baseline;gap:.4em;margin-top:6px;padding-top:12px;border-top:1px solid rgba(255,255,255,.35);font-size:.95rem}
-.room__ratio b{font:800 1.7rem/1 var(--k-display)}
+.room__ratio b{font:800 1.7rem/1 var(--k-display);white-space:nowrap;flex:none}
 .room__tab{display:none}
 @media (min-width:900px){
   .k-js .rooms__row{display:flex;height:620px;gap:10px}
