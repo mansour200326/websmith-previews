@@ -922,7 +922,7 @@ html:lang(ar) .hero h1.latin{letter-spacing:-.058em!important;line-height:.86!im
 .hero__ph .k-split__photo img{object-position:20% 40%}
 .hero__frame{position:relative}
 .hero__clip{position:absolute;left:-28px;bottom:24px;width:38%;aspect-ratio:1/1;background:#fff;border:6px solid #fff;box-shadow:0 14px 34px -14px rgba(20,14,20,.45);z-index:1}
-[dir=rtl] .hero__clip{left:auto;right:-28px}
+[dir=rtl] .hero__clip{left:-28px;right:auto}
 .hero__clip img{width:100%;height:100%;object-fit:cover;display:block}
 .k-js .hero__clip{opacity:0;transform:translateY(18px);animation:k-sw 1s var(--k-ease) .65s forwards}
 .hero__ph figcaption span:first-child{padding-inline-start:0}
