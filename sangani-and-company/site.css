@@ -905,3 +905,13 @@ html:lang(ar) .hero h1.latin{letter-spacing:-.058em!important;line-height:.86!im
 .svc-more a,.k-story__step a,.person a,.k-acc__go a{display:inline-flex;align-items:center;min-height:44px}
 .ft li a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
 .k-cta__meta a{display:inline-flex;align-items:center;min-height:44px}
+.k-visit{grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.k-visit{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}}
+.contacts div{grid-template-columns:6.5em minmax(0,1fr)}
+.contacts dd{min-width:0;overflow-wrap:anywhere}
+.k-cta__mail{overflow-wrap:anywhere}
+/* ledger as a letterhead table, not stat boxes */
+.ledger{grid-template-columns:1fr;max-width:34em}
+.ledger div,[dir=rtl] .ledger div,.ledger div:nth-child(even){display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:12px;padding:11px 0;border-inline-end:0!important;align-items:baseline}
+.ledger dt{margin:0}
+.hero__rule{margin-top:clamp(34px,3.8vw,56px)}
