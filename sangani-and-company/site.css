@@ -894,3 +894,14 @@ html body header.hd a.hd__lang[lang],html body footer.ft a[lang]{display:inline-
 .ft .ft__ar.ft__ar[lang]{display:inline-block!important;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
 .k-stats__num{font:300 clamp(5rem,15vw,13.5rem)/.82 var(--k-display);letter-spacing:-.065em;font-variant-numeric:tabular-nums lining-nums}
 .k-visit__map{background:#ece8eb}
+/* r1 fixes */
+img{height:auto}
+.founder img,.pp img{height:auto}
+html:lang(ar) .brand small{font-family:var(--k-body);font-size:.78rem}
+html:lang(ar) .hero h1.latin{letter-spacing:-.058em!important;line-height:.86!important}
+/* a11y fixes */
+@media (min-width:900px){.k-story__step:not(.is-on) :is(h3,.k-story__n){color:#68636c}}
+.contacts dd a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
+.svc-more a,.k-story__step a,.person a,.k-acc__go a{display:inline-flex;align-items:center;min-height:44px}
+.ft li a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
+.k-cta__meta a{display:inline-flex;align-items:center;min-height:44px}

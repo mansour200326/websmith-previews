@@ -24,7 +24,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .hd.is-scrolled{border-bottom-color:var(--line)}
 .hd__in{display:flex;align-items:center;gap:clamp(14px,2.4vw,36px);padding:12px var(--pad);max-width:1600px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
-.brand img{width:40px;height:46px;object-fit:contain}
+.brand img{width:40px;height:40px;object-fit:contain}
 .brand span{font:400 1.05rem/1.05 var(--display);letter-spacing:.08em;text-transform:uppercase}
 html:lang(ar) .brand span{letter-spacing:0;font-weight:600}
 .nav{display:flex;gap:clamp(14px,2vw,30px);margin-inline-start:auto}
