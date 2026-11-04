@@ -983,3 +983,83 @@ a:hover .k-arrow{transform:translateX(5px)}
 @media (min-width:861px){.yard__pic{position:sticky;top:110px}}
 @media (prefers-reduced-motion:reduce){.k-js .arch .k-seq{animation:none;clip-path:none}}
 [dir=rtl] .arch .k-seq__frame img{margin-left:0;margin-right:-3%}
+
+/* ===== round-3 fixes (Fannan R2 -> R3) ===== */
+/* 1. hero, desktop: arch bleeds to the right edge, ~48vw, near full height */
+@media (min-width:861px){
+  .hero{--bleed:calc(var(--pad) + max(0px,(100vw - var(--max)) / 2));padding-block:20px clamp(56px,7vw,100px)}
+  .hero__grid{grid-template-columns:minmax(0,1fr) calc(48vw - var(--bleed));align-items:center;gap:clamp(28px,4vw,64px)}
+  .hero h1{font-size:clamp(3.4rem,10.5vw,11rem)}
+  .arch{margin-inline-end:calc(-1 * var(--bleed))}
+  .arch .k-seq{aspect-ratio:auto;height:calc(100svh - 118px);min-height:520px;max-height:1100px;border-radius:50% 0 0 0 / 34% 0 0 0}
+  [dir=rtl] .arch .k-seq{border-radius:0 50% 0 0 / 0 34% 0 0}
+  .k-js .arch .k-seq{clip-path:inset(100% 0 0 0);animation:bb-clip-d 1.5s var(--k-ease) .3s forwards}
+  .arch .k-seq__ui{padding:0 clamp(24px,3vw,44px) 22px}
+}
+@keyframes bb-clip-d{to{clip-path:inset(0 0 0 0)}}
+/* 1. hero, mobile: tighter rhythm, CTA pair on one row, bigger photo */
+@media (max-width:860px){
+  .hero{padding-top:20px}
+  .hero h1{margin-bottom:16px}
+  .hero__lead{margin-bottom:20px}
+  .hero__khda{margin-top:6px}
+  .hero__acts{flex-wrap:nowrap;gap:0 16px;margin-bottom:24px}
+  .hero__acts .k-btn{flex:none;white-space:nowrap;padding:15px 16px;font-size:.98rem;gap:.5em}
+  .hero .callink{flex-direction:column;align-items:flex-start;justify-content:center;line-height:1.2;font-size:.95rem;white-space:nowrap}
+  .arch .k-seq{aspect-ratio:1/1;max-height:none}
+}
+@media (max-width:359px){.hero__acts{flex-wrap:wrap;gap:6px 16px}.hero .callink{flex-direction:row}}
+/* 2. services yard list: one column on phones */
+@media (max-width:599px){
+  .yardnames{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+  .yardnames li{display:grid;grid-template-columns:2.2rem 1fr;align-items:baseline;gap:0}
+  .yardnames li small{grid-column:2}
+}
+/* 3. map poster: button bottom-start so the gate sign reads */
+.k-visit__map{display:block}
+.k-visit__map button{position:absolute;left:20px;bottom:20px;right:auto;top:auto;transform:none}
+[dir=rtl] .k-visit__map button{left:auto;right:20px}
+/* 4. footer email on phones */
+@media (max-width:419px){.ft__top .ft__contact{grid-column:1/-1}}
+/* 5. about photo */
+.about-dome{aspect-ratio:21/9;border-radius:999px 999px 18px 18px}
+.about-dome img{object-position:50% 45%}
+@media (max-width:860px){.about-dome{aspect-ratio:4/3;border-radius:50% 50% 18px 18px / 34% 34% 18px 18px}}
+/* 6. services: quiet text links in place of repeated button pairs */
+.svc__more{margin-top:24px}
+.svc__link{display:inline-flex;align-items:center;gap:.5em;min-height:44px;font-weight:700;color:var(--berry);text-decoration:none}
+.svc__link:hover .k-link--under{animation:k-relink .7s var(--k-mi-ease)}
+.svc__link:hover{color:var(--berry-deep)}
+/* 7. services h1 */
+.pghead h1{line-height:1}
+/* 8. services: hanging outlined numerals, tag as photo caption */
+.svc:nth-of-type(even) .svc__pic{order:0}
+.svc:nth-of-type(even) .svc__media{order:-1}
+.svc__hd{display:flex;align-items:baseline}
+.svc__hd h2{min-width:0}
+.svc__n{flex:none;display:block;margin:0;font:400 4.2rem/1 var(--k-display);font-variation-settings:"SOFT" 100,"WONK" 0;letter-spacing:-.02em;font-variant-numeric:lining-nums;color:transparent;-webkit-text-stroke:2px var(--berry);opacity:.25}
+[lang=ar] .svc__n{font-family:var(--k-display)}
+.svc__tag{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.92rem;font-weight:700;color:var(--k-mute)}
+.svc__tag::before{content:"";width:22px;height:2px;background:var(--berry);flex:none}
+.svc__tag--wide{margin-top:0;padding-top:14px}
+.svc__tag--text{margin:-6px 0 18px}
+@media (min-width:861px){
+  .svc__txt{padding-inline-start:6.4rem}
+  .svc__n{width:6.4rem;margin-inline-start:-6.4rem}
+}
+@media (max-width:860px){
+  .svc:nth-of-type(even) .svc__media{order:0}
+  .svc__n{font-size:3rem;margin-inline-end:14px}
+}
+@media (max-width:860px){
+  .hero{padding-top:14px}
+  .hero__grid{grid-template-columns:minmax(0,1fr);row-gap:22px}
+  .hero__grid>*{min-width:0}
+  .hero__acts{margin-bottom:0}
+  .hero__acts .k-btn{font-size:.92rem;padding:15px 14px}
+  .hero .callink{font-size:.92rem}
+  [lang=ar] .hero h1 .ln:first-child{display:inline-block;margin-inline-end:.22em}
+  [lang=ar] .hero h1 .ln:nth-child(2){display:inline-block}
+}
+@media (max-width:389px){.hero__acts .k-btn .k-arrow{display:none}}
+@media (max-width:860px){.hero__grid{row-gap:0}.arch{margin-top:24px}}

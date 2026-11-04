@@ -49,8 +49,13 @@
 <!-- Hero: type-led, built on the 1950 story (no clinic photos published on their site or listings we could use).
      Portrait: Dr. Bayan H. Mahboubi, from drmahboubiclinics.com/our_doctors.php (500x636, 4x upscaled). -->
 <section class="hero2" aria-labelledby="hero-h">
-  <h1 id="hero-h" class="hero2__h"><span class="k-mask"><span class="k-split__word" style="--i:0">Mahboubi</span></span><span class="k-mask"><span class="k-split__word hero2__l2" style="--i:1">Dentists in Dubai since <em>1950</em></span></span></h1>
+  <div class="hero2__top">
+    <h1 id="hero-h" class="hero2__h"><span class="k-mask"><span class="k-split__word" style="--i:0">Mahboubi</span></span><span class="k-mask"><span class="k-split__word hero2__l2" style="--i:1">Dentists in Dubai<span class="vh"> since 1950</span></span></span></h1>
+    <p class="hero2__yr" aria-hidden="true"><span class="k-mask"><span class="k-split__word" style="--i:1">1950</span></span></p>
+  </div>
   <div class="hero2__row">
+    <!-- Caption from drmahboubiclinics.com/about.php: "Dr. Hussan Mahboubi was the dentist of late president Sheikh Zayed Bin Sultan Al Nahyan." -->
+    <p class="hero2__cap k-split__fade" style="--i:2">Founded by Dr. Hussain Mahboubi, dentist to the late Sheikh Zayed.</p>
     <figure class="hero2__ph"><div class="k-split__photo"><img src="img/dr-bayan.webp" alt="Dr. Bayan H. Mahboubi, orthodontist and head of the clinics" width="1258" height="1600" fetchpriority="high"></div><figcaption><b>Dr. Bayan H. Mahboubi</b>Senior Specialist Orthodontist, head of the clinics</figcaption></figure>
     <div class="hero2__txt k-split__fade" style="--i:2">
       <p class="hero2__lead">Check-ups, braces, implants, root canals and gum treatment for the whole family, at Villa 176 on Al Wasl Road in Jumeirah 1, and in Deira.</p>
@@ -75,67 +80,27 @@
   </div>
 </section>
 
-<!-- Treatments: kit 11 accordion, restyled. No hover photos (their service images are stock). -->
-<section class="k-acc treat" data-k-acc aria-labelledby="treat-h">
-  <div class="treat__top">
+<!-- Treatments: compact two-column index; the detail lives on services.html. -->
+<section class="treat2" aria-labelledby="treat-h">
+  <div class="treat2__top">
     <h2 id="treat-h" class="h2" data-reveal="lines">Treatments</h2>
-    <p class="lede" data-reveal>Every treatment starts with a consultation, so the doctor can see what is going on and plan it with you. Tap a treatment to read more.</p>
+    <a class="tlink k-link" href="services.html">Every treatment in detail <span class="k-arrow" aria-hidden="true">→</span></a>
   </div>
-  <div class="k-acc__list" data-reveal-stagger>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">01</span><span class="k-acc__t">Check-up and consultation<small>The first visit, before any treatment</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><p>We look at your teeth and gums, find any problems and explain the treatment you need and the plan for it.</p><p><a href="services.html#checkup">More about check-ups →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">02</span><span class="k-acc__t">Scaling and polishing<small>Cleaning off tartar that brushing can't</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><p>Removes hard tartar, trapped food and plaque, the cause of tooth decay and gum disease.</p><p><a href="https://wa.me/971559667333?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20(scaling%20and%20polishing).">Book a cleaning on WhatsApp →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">03</span><span class="k-acc__t">Orthodontics<small>Braces and retainers, our first speciality</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Crowded teeth, gaps, overbites and underbites</li><li>Fixed braces and retainers</li><li>Guiding jaw growth in children</li><li>With Dr. Bayan Mahboubi, Senior Specialist Orthodontist</li></ul><p><a href="services.html#orthodontics">More about braces →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">04</span><span class="k-acc__t">Cosmetic dentistry<small>Whitening, veneers, white fillings</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Tooth whitening</li><li>Porcelain and composite veneers, Lumineers</li><li>Tooth-coloured composite fillings</li><li>Porcelain inlays and onlays</li></ul><p><a href="services.html#cosmetic">More about cosmetic work →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">05</span><span class="k-acc__t">Root canal treatment<small>Endodontics, to save a damaged tooth</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><p>When a crack or deep cavity reaches the nerve, a root canal treatment cleans and seals the tooth so it doesn't need to come out.</p><p><a href="tel:+97143458686">Toothache? Call 04 345 8686 →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">06</span><span class="k-acc__t">Dental implants<small>Replacing the whole tooth, root and crown</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><p>Placed and restored by Dr. Kamran A. Khorrami, implantologist and oral and maxillofacial specialist. No need to cut down the teeth next to the gap.</p><p><a href="services.html#implants">More about implants →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">07</span><span class="k-acc__t">Crowns, bridges and dentures<small>Prosthodontics</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Crowns (caps) for broken or badly chipped teeth</li><li>Bridges to fill a gap</li><li>Partial and complete dentures</li><li>Crowns, bridges or overdentures on implants</li></ul><p><a href="services.html#prosthodontics">More about crowns and dentures →</a></p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">08</span><span class="k-acc__t">Gum treatment<small>Periodontics: gingivitis and periodontitis</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><p>Bleeding or swollen gums can come from smoking, some medicines or hormone changes in pregnancy. We treat the gum disease and keep it from coming back.</p></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">09</span><span class="k-acc__t">Oral surgery<small>Wisdom teeth, sinus and bone work</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Wisdom tooth removal</li><li>Sinus lift and ridge augmentation</li><li>Nerve repositioning</li><li>With Dr. Kamran A. Khorrami, Oral &amp; Maxillofacial Surgeon</li></ul></div>
-    </details>
-    <details class="k-acc__row" data-reveal>
-      <summary><span class="k-acc__n">10</span><span class="k-acc__t">Jaw joint pain (TMD)<small>Pain and clicking in the jaw muscles and joints</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><p>Not dangerous, but it can wear you down when it lasts. Tell us what you feel when you chew or open wide, and we'll look at it.</p></div>
-    </details>
-  </div>
-  <p class="treat__more"><a class="btn" data-k-magnetic="0.25" href="services.html">All treatments in detail <span class="k-arrow" aria-hidden="true">→</span></a></p>
+  <nav class="idx idx--home" aria-label="Treatments"><ol data-reveal-stagger><li data-reveal><a href="services.html#checkup"><span class="idx__n">01</span><span class="idx__t">Check-up and consultation</span></a></li><li data-reveal><a href="services.html#cleaning"><span class="idx__n">02</span><span class="idx__t">Scaling and polishing</span></a></li><li data-reveal><a href="services.html#orthodontics"><span class="idx__n">03</span><span class="idx__t">Orthodontics</span></a></li><li data-reveal><a href="services.html#cosmetic"><span class="idx__n">04</span><span class="idx__t">Cosmetic dentistry</span></a></li><li data-reveal><a href="services.html#root-canal"><span class="idx__n">05</span><span class="idx__t">Root canal treatment</span></a></li><li data-reveal><a href="services.html#implants"><span class="idx__n">06</span><span class="idx__t">Dental implants</span></a></li><li data-reveal><a href="services.html#prosthodontics"><span class="idx__n">07</span><span class="idx__t">Crowns, bridges and dentures</span></a></li><li data-reveal><a href="services.html#gums"><span class="idx__n">08</span><span class="idx__t">Gum treatment</span></a></li><li data-reveal><a href="services.html#surgery"><span class="idx__n">09</span><span class="idx__t">Oral surgery</span></a></li><li data-reveal><a href="services.html#tmd"><span class="idx__n">10</span><span class="idx__t">Jaw joint pain (TMD)</span></a></li></ol></nav>
+  <p class="treat2__note">Every treatment starts with a consultation, so the doctor can see what is going on and plan it with you.</p>
 </section>
 
 <!-- Doctors: kit 13, restyled. All four photos and titles from drmahboubiclinics.com/our_doctors.php. -->
 <div class="docs" id="doctors">
 <section class="k-team" aria-labelledby="doc-h">
-  <div class="k-team__head"><h2 id="doc-h" class="h2" data-reveal="lines">Our doctors</h2><p class="lede" data-reveal>Ask for any of them by name when you call. Our team speaks eight languages, so you can explain the problem the way you'd say it at home.</p></div>
+  <div class="k-team__head"><h2 id="doc-h" class="h2" data-reveal="lines">Our doctors</h2></div>
   <div class="k-team__grid" data-reveal-stagger>
     <article class="k-team__card" data-reveal><div class="k-team__ph"><img src="img/dr-bayan.webp" alt="Dr. Bayan H. Mahboubi" width="1258" height="1600" loading="lazy"><p class="k-team__more">Trained at the University of Gothenburg, Sweden. Heads the clinics.</p></div><h3>Dr. Bayan H. Mahboubi</h3><p class="role">Senior Specialist Orthodontist</p><p class="q">B.D.S., M.S.Odont, S.B.O.S.</p></article>
     <article class="k-team__card" data-reveal><div class="k-team__ph"><img src="img/dr-kamran.webp" alt="Dr. Kamran A. Khorrami" width="1258" height="1600" loading="lazy"><p class="k-team__more">Places and restores dental implants.</p></div><h3>Dr. Kamran A. Khorrami</h3><p class="role">Oral &amp; Maxillofacial Surgeon</p><p class="q">Implantologist</p></article>
     <article class="k-team__card" data-reveal><div class="k-team__ph"><img src="img/dr-nuno.webp" alt="Dr. Nuno Sarmento" width="1258" height="1600" loading="lazy"><p class="k-team__more">Ask for Dr. Nuno when you call.</p></div><h3>Dr. Nuno Sarmento</h3><p class="role">General &amp; Cosmetic Dentist</p></article>
     <article class="k-team__card" data-reveal><div class="k-team__ph"><img src="img/dr-marie.webp" alt="Dr. Marie V. Riveros" width="1258" height="1600" loading="lazy"><p class="k-team__more">Ask for Dr. Marie when you call.</p></div><h3>Dr. Marie V. Riveros</h3><p class="role">General Dentist</p></article>
   </div>
+  <p class="docs__lede" data-reveal>Ask for any of them by name when you call. Our team speaks eight languages, so you can explain the problem the way you'd say it at home.</p>
 </section>
 </div>
 
@@ -143,7 +108,7 @@
 <section class="hist" aria-labelledby="hist-h">
   <div class="sec">
     <div class="hist__side">
-      <h2 id="hist-h" class="h2" data-reveal="lines">Our story</h2>
+      <div class="hist__head"><span class="hist__yr" aria-hidden="true">1950</span><h2 id="hist-h" class="h2" data-reveal="lines">Our story</h2></div>
       <p data-reveal>Dr. Hussain Mahboubi brought local anaesthesia, permanent fillings, crowns and bridges to his patients in Dubai, with materials from Germany and the USA.</p>
     </div>
     <ol data-reveal-stagger>
@@ -202,14 +167,18 @@
       <p>Our second clinic, on the Deira side of the Creek. Call ahead for the day's hours and which doctor is in.</p>
       <a class="big k-link" href="tel:+97142221615">04 222 1615</a>
     </div>
-    <div class="tile tile--photo" data-reveal>
-      <!-- Ambience photo: "Dental mirror in clinical office" by Katarzyna Zygnerska on Unsplash, https://unsplash.com/photos/dental-mirror-in-clinical-office-rubu_NvklJE, Unsplash License. Not the clinic's own. -->
-      <img src="img/amb-mirror.webp" alt="" width="2000" height="3000" loading="lazy">
-      <p class="cap">Due a check-up?<br><a href="https://wa.me/971559667333?text=Hello%2C%20I%27d%20like%20to%20book%20a%20check-up.">Book on WhatsApp →</a></p>
-    </div>
+    <a class="tile tile--wa" data-reveal href="https://wa.me/971559667333?text=Hello%2C%20I%27d%20like%20to%20book%20a%20check-up.">
+      <span class="wa__q">Due a check-up?</span>
+      <span class="wa__go">Book on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></span>
+      <span class="wa__n">055 966 7333</span>
+    </a>
     <div class="tile tile--first" data-reveal>
-      <h3>First visit?</h3>
-      <p class="small">You fill in a short form at reception; your details stay private. The doctor checks your teeth, gums and jaw, takes X-rays if needed, then talks you through any treatment. We keep to appointment times, so the wait is short.</p>
+      <h3>Your first visit</h3>
+      <ol class="steps">
+        <li><b>1</b><span><strong>A short form</strong> at reception. Your details stay private.</span></li>
+        <li><b>2</b><span><strong>Check-up and X-rays.</strong> Teeth, gums and jaw; X-rays only if needed.</span></li>
+        <li><b>3</b><span><strong>The plan.</strong> The doctor talks you through any treatment you need.</span></li>
+      </ol>
     </div>
   </div>
 </section>
