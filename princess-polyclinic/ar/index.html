@@ -10,8 +10,8 @@
 <link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/princess-polyclinic/ar/">
 <link rel="icon" href="../img/mark.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../img/glass.webp">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../img/rediet.webp" fetchpriority="high">
 <link rel="stylesheet" href="../site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -24,50 +24,60 @@
     <nav class="nav" aria-label="القائمة الرئيسية">
       <a href="./" aria-current="page">الرئيسية</a>
       <a href="services.html">العلاجات والأسعار</a>
-      <a href="../about.html" hreflang="en">العيادة (EN)</a>
+      <a href="about.html">العيادة</a>
       <a href="#visit">موقعنا</a>
     </nav>
     <div class="hd__acts">
       <a class="hd__tel" href="tel:+971543109662" aria-label="اتصل 054 310 9662"><span class="k-roll"><span data-text="054 310 9662"><bdi>054 310 9662</bdi></span></span></a>
       <a class="hd__wa" href="https://wa.me/971543109662?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF." aria-label="واتساب برنسيس بوليكلينك"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
       <a class="hd__lang" href="../" hreflang="en" lang="en">EN</a>
+      <button class="hd__menu" type="button" popovertarget="menu" aria-haspopup="dialog">القائمة</button>
     </div>
   </div>
-  <nav class="mnav" aria-label="الصفحات">
-    <a href="./" aria-current="page">الرئيسية</a><a href="services.html">العلاجات والأسعار</a><a href="../about.html" hreflang="en">العيادة (EN)</a><a href="#visit">موقعنا</a>
-  </nav>
+  <div class="sheet" id="menu" popover aria-label="القائمة">
+    <div class="sheet__top"><span>برنسيس بوليكلينك</span><button class="sheet__close" type="button" popovertarget="menu" popovertargetaction="hide">إغلاق</button></div>
+    <nav class="sheet__nav" aria-label="الصفحات"><a href="./" aria-current="page">الرئيسية<small dir="ltr">01</small></a><a href="services.html">العلاجات والأسعار<small dir="ltr">02</small></a><a href="about.html">العيادة<small dir="ltr">03</small></a><a href="#visit">موقعنا<small dir="ltr">04</small></a></nav>
+    <div class="sheet__contact">
+      <a href="tel:+971543109662"><span>موبايل</span><bdi>054 310 9662</bdi></a>
+      <a href="tel:+97145759002"><span>العيادة</span><bdi>04 575 9002</bdi></a>
+      <a href="https://wa.me/971543109662?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF."><span>واتساب</span>احجز عبر واتساب</a>
+      <a href="../" hreflang="en" lang="en"><span lang="ar">اللغة</span>English</a>
+    </div>
+  </div>
 </header>
 
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-h">
-  <h1 class="hero__name" id="hero-h" data-reveal="lines">برنسيس بوليكلينك</h1>
   <div class="hero__grid">
-    <div class="hero__left">
-      <p class="hero__addr" data-reveal data-reveal-delay="250"><strong>مكتب 312، بلو تاور</strong>شارع الشيخ زايد، المركز التجاري 1، دبي.<br>الطابق الثالث.</p>
-      <div class="hero__rate" data-reveal data-reveal-delay="400"><b>4.7</b><span><span class="star" aria-hidden="true">★</span> على Google<br>من 171 تقييم</span></div>
-    </div>
+    <h1 class="hero__name" id="hero-h" data-reveal="lines">برنسيس بوليكلينك</h1>
 
     <div class="hero__seqwrap" data-reveal="clip" data-reveal-delay="150">
       <div class="seq" data-k-seq data-k-seq-ms="4200" role="region" aria-label="داخل العيادة">
-        <figure class="k-seq__frame is-on" data-k-seq-frame data-cap="الجدار الزجاجي إلى غرف العلاج"><img src="../img/glass.webp" alt="شعار العيادة على الجدار الزجاجي" fetchpriority="high" style="object-position:44% 50%" width="2200" height="1237"></figure>
-        <figure class="k-seq__frame" data-k-seq-frame data-cap="غرفة الليزر"><img src="../img/laser.webp" alt="جهاز ليزر في غرفة العلاج" loading="lazy" width="2200" height="1237"></figure>
-        <figure class="k-seq__frame" data-k-seq-frame data-cap="أجهزة نحت الجسم وشد البشرة"><img src="../img/machines.webp" alt="أجهزة نحت الجسم وشد البشرة" loading="lazy" width="2200" height="1237"></figure>
-        <figure class="k-seq__frame" data-k-seq-frame data-cap="فريق العيادة في بلو تاور"><img src="../img/team.webp" alt="فريق برنسيس بوليكلينك أمام لوحة الاستقبال" loading="lazy" width="2200" height="1237"></figure>
+        <figure class="k-seq__frame is-on" data-k-seq-frame data-cap="د. ريديت، المديرة الطبية"><img src="../img/rediet.webp" alt="د. ريديت بالمعطف الأبيض أثناء علاج مريضة في العيادة" fetchpriority="high" style="object-position:50% 22%" width="995" height="1600"></figure>
+        <figure class="k-seq__frame" data-k-seq-frame data-cap="فريق العيادة في بلو تاور" aria-hidden="true"><img src="../img/team.webp" alt="فريق برنسيس بوليكلينك أمام لوحة الاستقبال" loading="lazy" width="2200" height="1237"></figure>
+        <figure class="k-seq__frame" data-k-seq-frame data-cap="محلول وريدي بجانب النافذة" aria-hidden="true"><img src="../img/drip.webp" alt="ممرضة تجهز محلولاً وريدياً لمريض بجانب النافذة" loading="lazy" style="object-position:60% 40%" width="1440" height="1600"></figure>
+        <figure class="k-seq__frame" data-k-seq-frame data-cap="غرفة الليزر" aria-hidden="true"><img src="../img/laser.webp" alt="جهاز ليزر في غرفة العلاج" loading="lazy" width="2200" height="1237"></figure>
         <div class="k-seq__ui">
-          <div class="k-seq__cap" aria-live="polite"><span data-k-seq-cap>الجدار الزجاجي إلى غرف العلاج</span><span class="k-seq__count" data-k-seq-count dir="ltr">01 / 04</span></div>
+          <div class="k-seq__cap" aria-live="polite"><span data-k-seq-cap>د. ريديت، المديرة الطبية</span><span class="k-seq__count" data-k-seq-count dir="ltr">01 / 04</span></div>
           <div class="k-seq__bars" data-k-seq-bars></div>
         </div>
       </div>
     </div>
 
-    <div class="hero__text">
-      <p class="lead" data-reveal data-reveal-delay="350">علاجات البشرة، البوتوكس والفيلر، الليزر، نحت الجسم والمحاليل الوريدية، وقبل أي علاج استشارة مع الطبيبة. على شارع الشيخ زايد، المركز التجاري 1.</p>
-      <div class="hero__acts" data-reveal data-reveal-delay="480">
-        <a class="k-btn" data-k-magnetic="0.25" href="https://wa.me/971543109662?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9.">احجز عبر واتساب <span class="k-arrow" aria-hidden="true">→</span></a>
-        <a class="k-btn k-btn--line" href="tel:+97145759002">اتصل <bdi>04 575 9002</bdi></a>
-      </div>
-      <p class="hero__pay" data-reveal data-reveal-delay="560">الاستشارة 99 درهم. ادفع لاحقاً عبر تابي أو تمارا.</p>
+    <div class="hero__acts" data-reveal data-reveal-delay="300">
+      <a class="k-btn" data-k-magnetic="0.25" href="https://wa.me/971543109662?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9.">احجز عبر واتساب <span class="k-arrow" aria-hidden="true">→</span></a>
+      <a class="hero__call" href="tel:+97145759002"><span class="k-link k-link--under">أو اتصل على <span class="k-roll"><span data-text="04 575 9002"><bdi>04 575 9002</bdi></span></span></span></a>
+    </div>
+
+    <div class="hero__text" data-reveal data-reveal-delay="380">
+      <p class="lead">علاجات البشرة، البوتوكس والفيلر، الليزر، نحت الجسم والمحاليل الوريدية، وقبل أي علاج استشارة مع الطبيبة.</p>
+      <p class="hero__pay">الاستشارة 99 درهم. ادفع لاحقاً عبر تابي أو تمارا.</p>
+    </div>
+
+    <div class="hero__left" data-reveal data-reveal-delay="250">
+      <p class="hero__addr"><strong>مكتب 312، بلو تاور</strong>شارع الشيخ زايد، المركز التجاري 1، دبي. الطابق الثالث.</p>
+      <div class="hero__rate"><b>4.7</b><span><span class="star" aria-hidden="true">★</span> على Google<br>من 171 تقييم</span></div>
     </div>
   </div>
 </section>
@@ -165,9 +175,9 @@
     </div>
     <div class="mosaic">
       <figure class="m1"><div class="ph k-zoom" data-reveal="clip"><img src="../img/welcome.webp" alt="لوحة الترحيب والبالونات الذهبية عند مدخل العيادة" loading="lazy" data-speed="-0.05"></div><figcaption>عند مدخل العيادة.</figcaption></figure>
-      <figure class="m2"><div class="ph k-zoom" data-reveal="clip" data-reveal-delay="120"><img src="../img/room.webp" alt="غرفة علاج فيها سرير وعربة أدوات" loading="lazy"></div><figcaption>غرفة علاج.</figcaption></figure>
+      <figure class="m2"><div class="ph k-zoom" data-reveal="clip" data-reveal-delay="120"><img src="../img/chair.webp" alt="كرسي العلاج وخلفه جهاز الليزر" loading="lazy"></div><figcaption>كرسي الليزر.</figcaption></figure>
       <figure class="m3"><div class="ph k-zoom" data-reveal="clip" data-reveal-delay="220"><img src="../img/hydra.webp" alt="جهاز Hydra Beauty" loading="lazy"></div><figcaption>جهاز تنظيف البشرة.</figcaption></figure>
-      <figure class="m4"><div class="ph k-zoom" data-reveal="clip"><img src="../img/laser.webp" alt="جهاز ليزر بجانب سرير العلاج" loading="lazy"></div><figcaption>غرفة الليزر.</figcaption></figure>
+      <figure class="m4"><div class="ph k-zoom" data-reveal="clip"><img src="../img/machines.webp" alt="أجهزة نحت الجسم وشد البشرة" loading="lazy"></div><figcaption>أجهزة نحت الجسم والترددات الراديوية.</figcaption></figure>
       <figure class="m5"><div class="ph k-zoom" data-reveal="clip" data-reveal-delay="150"><img src="../img/painting.webp" alt="لوحة شجرة ذهبية تحت القمر في العيادة" loading="lazy"></div><figcaption>في الممر.</figcaption></figure>
     </div>
     <div class="team">
@@ -184,7 +194,7 @@
 
 <section class="sec band" aria-labelledby="rf-h">
   <div class="wrap band__in">
-    <h2 class="h2" id="rf-h" data-reveal="lines">جيب صديقتك، <em>وخصم 50% لكما</em></h2>
+    <h2 class="h2" id="rf-h" data-reveal="lines">جيبي صديقتك، وخصم 50% لكما</h2>
     <div data-reveal data-reveal-delay="150">
       <p class="lead" style="margin-bottom:22px">صديقتك تحصل على خصم 50% على أقل جلسة سعراً، وأنتِ تحصلين على 50% عن كل صديقة تشتري باقة.</p>
       <a class="k-btn" data-k-magnetic="0.25" href="https://wa.me/971543109662?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D9%86%20%D8%A3%D8%AD%D9%8A%D9%84%20%D8%B5%D8%AF%D9%8A%D9%82%D8%A9.">اسأل عن الإحالة <span class="k-arrow" aria-hidden="true">→</span></a>
@@ -207,7 +217,7 @@
       <a class="k-btn k-btn--line" href="https://wa.me/971543109662">واتساب</a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Princess+Polyclinic+Blue+Tower+Sheikh+Zayed+Road+Dubai&amp;z=16&amp;output=embed&amp;hl=ar" style="background-image:url(../img/glass.webp)">
+  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Princess+Polyclinic+Blue+Tower+Sheikh+Zayed+Road+Dubai&amp;z=16&amp;output=embed&amp;hl=ar" style="background-image:url(../img/sign.webp)">
     <button type="button">اعرض الخريطة</button>
   </div>
 </section>
@@ -238,7 +248,7 @@
       <ul>
         <li><a href="./">الرئيسية</a></li>
         <li><a href="services.html">العلاجات والأسعار</a></li>
-        <li><a href="../about.html" hreflang="en">العيادة (English)</a></li>
+        <li><a href="about.html">العيادة</a></li>
         <li><a href="../" hreflang="en" lang="en">English</a></li>
       </ul>
     </div>

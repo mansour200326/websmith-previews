@@ -61,6 +61,7 @@
       frames[i].classList.remove('is-on');i=(n+frames.length)%frames.length;
       var img=frames[i].querySelector('img');if(img&&img.loading==='lazy')img.loading='eager';
       frames[i].classList.add('is-on');
+      frames.forEach(function(f,k){if(k===i)f.removeAttribute('aria-hidden');else f.setAttribute('aria-hidden','true')});
       btns.forEach(function(b,k){b.classList.toggle('is-done',k<i);b.classList.remove('is-on')});
       void btns[i].offsetWidth;btns[i].classList.add('is-on');
       if(cap)cap.textContent=frames[i].getAttribute('data-cap')||'';
@@ -124,6 +125,8 @@
 /* site */
 (function(){
   var hd=document.querySelector('.hd');
+  var sh=document.getElementById('menu');
+  if(sh&&sh.hidePopover)[].forEach.call(sh.querySelectorAll('a'),function(x){x.addEventListener('click',function(){try{sh.hidePopover()}catch(e){}})});
   if(hd){var f=function(){hd.classList.toggle('is-scrolled',scrollY>8)};addEventListener('scroll',f,{passive:true});f();}
   var links=[].slice.call(document.querySelectorAll('.svc__idx a'));
   if(links.length&&'IntersectionObserver' in window){

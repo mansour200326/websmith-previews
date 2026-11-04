@@ -906,3 +906,79 @@ a:hover .k-arrow{transform:translateX(5px)}
 [dir=rtl] .arch .k-seq__frame img{margin-right:0}
 [lang=ar] .hero h1{line-height:1.02}
 @media (max-width:860px){.ft li a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}}
+
+/* ===== round-2 fixes (Fannan R2) ===== */
+/* 1. footer: no overflow on phones */
+.ft__top>*{min-width:0}
+.ft a[href^="mailto"]{overflow-wrap:anywhere;max-width:100%}
+.arch .k-seq{overflow:hidden}
+@media (max-width:860px){
+  .ft .ft__name{font-size:clamp(2rem,10vw,2.6rem)}
+  .ft__name i{display:block}
+}
+/* 2 + 9. hero: one-line lead, CTA above the fold on phones */
+.hero__khda{display:block;margin-top:10px;font-weight:700;font-size:.92em;color:var(--k-ink)}
+@media (max-width:860px){
+  .hero h1{order:1}
+  .hero__lead{order:2;margin-bottom:18px}
+  .hero__acts{order:3;margin-bottom:30px;gap:4px 22px}
+  .arch{order:4;margin-bottom:0;max-width:none}
+  .arch .k-seq{aspect-ratio:4/3;max-height:46svh;border-radius:50% 50% 22px 22px / 30% 30% 22px 22px}
+  .k-js .arch .k-seq{clip-path:inset(100% 0 0 0 round 50% 50% 22px 22px / 30% 30% 22px 22px);animation-name:bb-clip-m}
+  .arch .k-seq__ui{padding:0 20px 14px}
+}
+@keyframes bb-clip-m{to{clip-path:inset(0 0 0 0 round 50% 50% 22px 22px / 30% 30% 22px 22px)}}
+/* 4. phone header: number beside the WhatsApp mark */
+@media (max-width:960px){
+  .brand{gap:9px}
+  .brand img{width:44px;height:44px}
+  .brand small{display:none}
+  .brand b{font-size:1.04rem;line-height:1.05;max-width:5.2em}
+  .hd__tools{gap:4px}
+  .hd__wa{padding:0 12px;gap:7px}
+  .hd__wa .num{display:inline;font-size:.95rem;white-space:nowrap}
+}
+/* 5. services first screen: wide photo + one scrolling row of links */
+.pghead--pic{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);column-gap:clamp(30px,5vw,80px);align-items:start}
+.pghead--pic>h1,.pghead--pic>p,.pghead--pic>.toc{grid-column:1}
+.pghead--pic>h1{font-size:clamp(3rem,6.4vw,6.6rem)}
+.pghead__pic{grid-column:2;grid-row:1 / span 3;align-self:center;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#eadede}
+.pghead__pic img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+@media (max-width:860px){
+  .pghead--pic{display:block;padding-top:28px}
+  .pghead--pic>h1{margin-bottom:16px}
+  .pghead__pic{margin-top:20px}
+  .toc{flex-wrap:nowrap;overflow-x:auto;gap:8px;margin-top:20px;margin-inline:calc(-1 * var(--pad));padding-inline:var(--pad);scroll-padding-inline:var(--pad);scrollbar-width:none;overscroll-behavior-x:contain}
+  .toc::-webkit-scrollbar{display:none}
+  .toc a{flex:none;min-height:40px;height:40px;padding:0 14px;white-space:nowrap}
+}
+/* 6. outdoor play areas: full width */
+.svc-wide{border-top:1px solid var(--k-line);padding-bottom:clamp(50px,7vw,100px)}
+.svc-wide__pic{aspect-ratio:21/8;overflow:hidden;background:#eadede}
+.svc-wide__pic img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+.svc-wide__body{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);padding-top:clamp(40px,6vw,80px);align-items:start}
+.svc-wide h2{font-size:clamp(2.2rem,4.6vw,4rem);line-height:.98;letter-spacing:-.035em;margin-bottom:20px}
+.yardnames{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-auto-flow:column;column-gap:clamp(18px,3vw,44px);counter-reset:y;border-top:1px solid var(--k-ink)}
+.yardnames li{counter-increment:y;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;padding:15px 0;border-bottom:1px solid var(--k-line);font:500 clamp(1.08rem,1.8vw,1.5rem)/1.15 var(--k-display);font-variation-settings:"SOFT" 100;letter-spacing:-.015em;min-width:0}
+.yardnames li::before{content:counter(y,decimal-leading-zero);font:600 .85rem var(--k-body);color:var(--berry);letter-spacing:0}
+.yardnames small{font:400 .85rem var(--k-body);color:var(--k-mute);letter-spacing:0}
+[lang=ar] .yardnames li,[lang=ar] .svc-wide h2{font-family:"Readex Pro",system-ui,sans-serif;letter-spacing:0;font-variation-settings:normal;line-height:1.35}
+[lang=ar] .svc-wide h2{font-weight:700;line-height:1.15}
+@media (max-width:860px){
+  .svc-wide__pic{aspect-ratio:4/3}
+  .svc-wide__body{grid-template-columns:1fr}
+  .yardnames li{padding:12px 0;gap:8px}
+}
+/* 6b. teachers: plain text */
+.svc--text{grid-template-columns:1fr}
+.svc--text__cols{columns:2 22em;column-gap:clamp(28px,5vw,80px);max-width:66em}
+.svc--text__cols p{break-inside:avoid;margin-bottom:14px}
+.svc .svc--text__cols p+p{margin-top:0}
+/* 7. kids-town shown small */
+.svc__pic--sm{max-width:480px}
+/* 8. timeline: four steps */
+.miles{grid-template-columns:repeat(4,1fr)}
+@media (max-width:760px){.miles{grid-template-columns:1fr}}
+/* 11. desktop yard photo stays in view */
+@media (min-width:861px){.yard__pic{position:sticky;top:110px}}
+@media (prefers-reduced-motion:reduce){.k-js .arch .k-seq{animation:none;clip-path:none}}

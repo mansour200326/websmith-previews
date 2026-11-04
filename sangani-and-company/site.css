@@ -915,3 +915,39 @@ html:lang(ar) .hero h1.latin{letter-spacing:-.058em!important;line-height:.86!im
 .ledger div,[dir=rtl] .ledger div,.ledger div:nth-child(even){display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:12px;padding:11px 0;border-inline-end:0!important;align-items:baseline}
 .ledger dt{margin:0}
 .hero__rule{margin-top:clamp(34px,3.8vw,56px)}
+/* r2 fixes */
+/* hero: SAIF 2014 portrait with the 1999 ICAI clipping laid over its corner */
+.hero__ph{position:relative}
+.hero__ph .k-split__photo{aspect-ratio:4/5;background:#d9d4d0}
+.hero__ph .k-split__photo img{object-position:20% 40%}
+.hero__frame{position:relative}
+.hero__clip{position:absolute;left:-28px;bottom:24px;width:38%;aspect-ratio:1/1;background:#fff;border:6px solid #fff;box-shadow:0 14px 34px -14px rgba(20,14,20,.45);z-index:1}
+[dir=rtl] .hero__clip{left:auto;right:-28px}
+.hero__clip img{width:100%;height:100%;object-fit:cover;display:block}
+.k-js .hero__clip{opacity:0;transform:translateY(18px);animation:k-sw 1s var(--k-ease) .65s forwards}
+.hero__ph figcaption span:first-child{padding-inline-start:0}
+.hero__strip{display:none}
+.services-boardroom img,img[src$="training-2.webp"],img[src$="hero-boardroom.webp"]{filter:saturate(.85)}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:minmax(0,1fr) clamp(300px,25vw,390px);align-items:start;column-gap:clamp(60px,7vw,120px)}
+  .hero .ledger{max-width:none}
+  .hero__ph figcaption{flex-direction:column;gap:2px}
+}
+@media (max-width:699px){
+  .hero__ph{display:none}
+  .hero__strip{display:block;aspect-ratio:16/9;max-height:200px;width:100%;border-radius:0;margin-bottom:18px;background:#d9d4d0}
+  .hero__strip img{object-fit:cover;object-position:45% 35%}
+}
+@media (prefers-reduced-motion:reduce){.k-js .hero__clip{animation:none;opacity:1;transform:none}}
+/* email links: break only after the @ */
+a.em{overflow-wrap:normal!important;word-break:normal!important}
+.contacts dd:has(a.em){overflow-wrap:normal}
+/* founder link on its own line */
+.person a.founder-more{display:inline-flex;margin-top:.6rem;gap:.4em}
+.person p:has(.founder-more){display:block}
+/* about: team photo opens the page */
+.wide-ph--top{margin-top:clamp(18px,2.4vw,30px)}
+.wide-ph--top .k-split__photo{aspect-ratio:auto;height:56vh;min-height:240px;border-radius:0;background:#d9d4d0}
+@media (max-width:699px){.wide-ph--top .k-split__photo{height:auto;aspect-ratio:4/3}}
+/* memberships: all set as type */
+.mark b{display:block}

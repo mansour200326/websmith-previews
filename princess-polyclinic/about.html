@@ -7,10 +7,10 @@
 <title>The clinic | Princess Polyclinic, Blue Tower, Dubai</title>
 <meta name="description" content="Princess Polyclinic, room 312, Blue Tower, Sheikh Zayed Road: owner Jonalyn Cordova Pagal, Medical Director Dr. Rediet, and the rooms inside.">
 <link rel="alternate" hreflang="en" href="https://preview.websmith.ae/princess-polyclinic/about.html">
-<link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/princess-polyclinic/ar/">
+<link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/princess-polyclinic/ar/about.html">
 <link rel="icon" href="img/mark.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -29,12 +29,20 @@
     <div class="hd__acts">
       <a class="hd__tel" href="tel:+971543109662" aria-label="Call 054 310 9662"><span class="k-roll"><span data-text="054 310 9662">054 310 9662</span></span></a>
       <a class="hd__wa" href="https://wa.me/971543109662?text=Hello%20Princess%20Polyclinic%2C%20I%27d%20like%20to%20book%20an%20appointment." aria-label="WhatsApp Princess Polyclinic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
-      <a class="hd__lang" href="ar/" hreflang="ar" lang="ar">عربي</a>
+      <a class="hd__lang" href="ar/about.html" hreflang="ar" lang="ar">عربي</a>
+      <button class="hd__menu" type="button" popovertarget="menu" aria-haspopup="dialog">Menu</button>
     </div>
   </div>
-  <nav class="mnav" aria-label="Pages">
-    <a href="./">Home</a><a href="services.html">Treatments &amp; prices</a><a href="about.html" aria-current="page">The clinic</a><a href="index.html#visit">Find us</a>
-  </nav>
+  <div class="sheet" id="menu" popover aria-label="Menu">
+    <div class="sheet__top"><span>Princess Polyclinic</span><button class="sheet__close" type="button" popovertarget="menu" popovertargetaction="hide">Close</button></div>
+    <nav class="sheet__nav" aria-label="Pages"><a href="./">Home<small>01</small></a><a href="services.html">Treatments &amp; prices<small>02</small></a><a href="about.html" aria-current="page">The clinic<small>03</small></a><a href="index.html#visit">Find us<small>04</small></a></nav>
+    <div class="sheet__contact">
+      <a href="tel:+971543109662"><span>Mobile</span>054 310 9662</a>
+      <a href="tel:+97145759002"><span>Clinic</span>04 575 9002</a>
+      <a href="https://wa.me/971543109662?text=Hello%20Princess%20Polyclinic%2C%20I%27d%20like%20to%20book%20an%20appointment."><span>WhatsApp</span>Book on WhatsApp</a>
+      <a href="ar/about.html" hreflang="ar" lang="ar"><span lang="en">Language</span>العربية</a>
+    </div>
+  </div>
 </header>
 
 <main id="main">
@@ -46,7 +54,7 @@
 
 <section class="wrap" style="padding-bottom:clamp(70px,9vw,140px)" aria-labelledby="st-h">
   <div class="story">
-    <div class="story__ph" data-reveal="clip"><img src="img/glass.webp" alt="The Princess Polyclinic logo on the frosted glass wall at the clinic" loading="lazy" style="object-position:30% 50%"></div>
+    <div class="story__ph" data-reveal="clip"><img src="img/sign.webp" alt="The Princess Polyclinic sign at reception" loading="lazy" style="object-position:50% 50%"></div>
     <div class="story__txt">
       <h2 class="h2" id="st-h" data-reveal="lines">Who we are</h2>
       <p class="lead" data-reveal>Princess Polyclinic is owned and run by Jonalyn Cordova Pagal, who has worked in this field for five years.</p>
@@ -72,7 +80,7 @@
     </div>
     <div class="strip" data-reveal-stagger="100">
       <figure data-reveal><div class="ph k-zoom"><img src="img/welcome.webp" alt="Welcome banner at the clinic entrance" loading="lazy" style="object-position:20% 50%"></div><figcaption class="mute">The entrance.</figcaption></figure>
-      <figure data-reveal><div class="ph k-zoom"><img src="img/room.webp" alt="A treatment room with a bed and trolley" loading="lazy"></div><figcaption class="mute">A treatment room.</figcaption></figure>
+      <figure data-reveal><div class="ph k-zoom"><img src="img/drip.webp" alt="A nurse setting up an IV drip for a patient" loading="lazy" style="object-position:60% 40%"></div><figcaption class="mute">An IV drip by the window.</figcaption></figure>
       <figure data-reveal><div class="ph k-zoom"><img src="img/chair.webp" alt="Treatment chair with a laser machine behind it" loading="lazy"></div><figcaption class="mute">The laser chair.</figcaption></figure>
       <figure data-reveal><div class="ph k-zoom"><img src="img/hydra.webp" alt="Hydra Beauty facial machine" loading="lazy"></div><figcaption class="mute">The facial machine.</figcaption></figure>
     </div>
@@ -123,7 +131,7 @@
         <li><a href="./">Home</a></li>
         <li><a href="services.html">Treatments &amp; prices</a></li>
         <li><a href="about.html">The clinic</a></li>
-        <li><a href="ar/" hreflang="ar" lang="ar">العربية</a></li>
+        <li><a href="ar/about.html" hreflang="ar" lang="ar">العربية</a></li>
       </ul>
     </div>
   </div>
