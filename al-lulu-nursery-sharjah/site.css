@@ -400,3 +400,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
   .sticker svg{transform:none!important}
   .room,.room__body,.room__ph{transition:none!important}
 }
+
+/* balance page-hero h1 (Fannan r3 polish) */
+.page-hero h1,main > section:first-child h1{text-wrap:balance}
+h1[data-reveal]{text-wrap:balance}
