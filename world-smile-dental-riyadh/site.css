@@ -44,18 +44,65 @@ html:lang(ar) .brand b{font-weight:600;font-size:1.12rem}
 @media (min-width:900px){.nav{display:flex}.subnav{display:none}}
 @media (max-width:520px){.bar__tel .lbl{display:none}.brand small{display:none}.brand img{width:52px}}
 
-/* ---------- hero: name set full width, facts in a hairline row, then the building ---------- */
-.hero{padding-top:clamp(18px,3vw,40px)}
-.hero h1{font:400 clamp(3.6rem,17.4vw,19.5rem)/.86 var(--k-display);letter-spacing:-.055em;color:var(--navy);padding-inline:calc(var(--pad) - .04em);white-space:nowrap}
-html:lang(ar) .hero h1{font-weight:500;font-size:clamp(3.4rem,15vw,15rem);line-height:1.12!important;letter-spacing:0;padding-bottom:.02em}
+/* ---------- hero: name band, the building full-bleed (the three signs), two signs as entry points, facts row ---------- */
+.hero{--hdr:65px;--nameh:calc(clamp(3.2rem,8.2vw,7rem)*.98 + clamp(30px,3.4vw,48px));--ph:clamp(480px,calc(100svh - var(--hdr) - var(--nameh)),860px)}
+@media (max-width:899px){.hero{--hdr:118px}}
+.hero__name{display:flex;align-items:center;justify-content:space-between;gap:12px 30px;padding:clamp(14px,2vw,24px) var(--pad) clamp(14px,1.4vw,22px)}
+.hero h1{font:400 clamp(3.2rem,8.2vw,7rem)/.9 var(--k-display);letter-spacing:-.05em;color:var(--navy);white-space:nowrap;margin-inline-start:-.04em}
+html:lang(ar) .hero h1{font-weight:500;line-height:1.2;letter-spacing:0}
 .hero h1 .k-line-mask{padding-bottom:.08em}
-.hero__row{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);margin-top:clamp(14px,2vw,26px)}
-.hero__cell{padding:20px var(--pad);border-bottom:1px solid var(--line)}
+.hero__ar{font:500 clamp(1.3rem,2.4vw,2.4rem)/1.2 "Readex Pro",sans-serif;color:var(--amber-ink);padding-bottom:.3em;white-space:nowrap}
+html:lang(ar) .hero__ar{font-weight:400;letter-spacing:-.02em}
+@media (max-width:599px){.hero__ar{display:none}}
+.hero__photo{position:relative;margin:0;overflow:hidden;background:var(--sand);height:var(--ph)}
+.hero__stage{position:absolute;left:50%;top:42%;width:max(100%,calc(var(--ph)*1.6211));aspect-ratio:1540/950;translate:-50% -42%}
+.hero__stage img{width:100%;height:100%;max-width:none;object-fit:cover}
+.hot{position:absolute;top:42%;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink);translate:-50% 0;direction:ltr}
+.hot--l{left:34.2%}.hot--r{left:72.5%}
+.hot i{width:2px;height:clamp(16px,2.6vw,36px);background:#fff}
+.hot>span{display:inline-flex;align-items:center;gap:.45em;min-height:44px;background:#fff;padding:6px 14px;font:600 .9rem/1.2 var(--k-body);white-space:nowrap;box-shadow:0 10px 26px -12px rgba(0,0,0,.45);transition:background .35s var(--k-ease),color .35s var(--k-ease)}
+html[dir=rtl] .hot>span{direction:rtl}
+.hot b{font:700 1.02rem/1 "Tajawal",sans-serif;color:var(--navy);transition:color .35s}
+.hot--l b{color:var(--amber-ink)}
+.hot:hover>span,.hot:focus-visible>span{background:var(--navy);color:#fff}
+.hot:hover b,.hot:focus-visible b{color:#fff}
+@media (max-width:599px){.hot--r{translate:calc(-100% + 22px) 0;align-items:flex-end}.hot--r i{margin-inline-end:20px}.hot>span{padding:6px 11px;font-size:.84rem}}
+.k-js .hero__photo{clip-path:inset(100% 0 0 0);animation:k-clip 1.5s var(--k-ease) .45s forwards}
+.k-js .hero__stage{animation:kb-in 2.4s var(--k-ease) .45s both,kb-slow 22s linear 2.8s both}
+.k-js .hot{opacity:0;animation:hot-in .9s var(--k-ease) forwards;animation-delay:1.75s}
+.k-js .hot--r{animation-delay:1.9s}
+@keyframes hot-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes kb-in{from{transform:scale(1.14)}to{transform:scale(1.04)}}
+@keyframes kb-slow{from{transform:scale(1.04)}to{transform:scale(1)}}
+.k-js .hero h1 .ln{display:block;transform:translateY(108%);animation:k-rise 1.15s var(--k-ease) .12s forwards}
+.k-js .hero .fd{opacity:0;transform:translateY(14px);animation:fd .9s var(--k-ease) forwards;animation-delay:calc(.55s + var(--i,0)*.1s)}
+@keyframes fd{to{opacity:1;transform:none}}
+@keyframes k-clip{to{clip-path:inset(0 0 0 0)}}
+.hero__row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line)}
+.hero__cell{padding:18px var(--pad);min-width:0}
 .hero__cell p{max-width:31em}
-.hero__lead{font-size:clamp(1.06rem,1.35vw,1.22rem);line-height:1.5}
+.hero__lead{font-size:clamp(1rem,1.3vw,1.18rem);line-height:1.5}
 .hero__lead [lang=ar]{font-family:"Tajawal",sans-serif;display:block;color:var(--mute);font-size:.95em;margin-top:6px}
-.hours-mini{font-size:.98rem;color:var(--mute)}
+.hours-mini{font-size:.95rem;color:var(--mute)}
 .hours-mini b{color:var(--ink);font-weight:600}
+@media (max-width:899px){
+  .hero__cell--book{order:-2;padding-inline-end:12px}
+  .hero__cell--hours{order:-1}
+  .hero__cell--hours{border-inline-start:1px solid var(--line);padding-inline-start:16px}
+  .hero__cell--lead{grid-column:1/-1;border-top:1px solid var(--line)}
+  .hero__cell--book .acts{flex-direction:column;align-items:flex-start;gap:4px}
+  .hero__cell--book .k-btn{white-space:normal;padding:13px 18px}
+  .hero__cell--book .lg{display:none}
+  .hero{--ph:clamp(300px,96vw,520px)}
+}
+@media (max-width:899px) and (min-width:600px){.hero{--ph:clamp(420px,calc(100svh - var(--hdr) - var(--nameh) - 130px),640px)}}
+@media (max-width:340px){.hero__row{grid-template-columns:minmax(0,1fr)}.hero__cell--hours{border-inline-start:0;border-top:1px solid var(--line);padding-inline-start:var(--pad)}}
+@media (min-width:900px){
+  .hero__row{grid-template-columns:minmax(0,1.25fr) minmax(0,.8fr) minmax(0,1fr)}
+  .hero__cell{padding-block:24px 28px}
+  .hero__cell+.hero__cell{border-inline-start:1px solid var(--line);padding-inline-start:28px}
+  .hero__cell--book{display:flex;align-items:flex-start;justify-content:flex-end}
+}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;padding:5px 12px;border-radius:30px;background:#e5f4ea;color:#14603a;margin-bottom:10px}
 .badge i{width:8px;height:8px;border-radius:50%;background:currentColor;position:relative}
 .badge.is-open i::after{content:"";position:absolute;inset:0;border-radius:50%;background:currentColor;animation:k-ping 2s ease-out infinite}
@@ -67,25 +114,15 @@ html:lang(ar) .hero h1{font-weight:500;font-size:clamp(3.4rem,15vw,15rem);line-h
 .tlink{font-weight:600;text-decoration:none;color:var(--navy);min-height:44px;display:inline-flex;align-items:center;gap:.4em}
 .tlink .k-link{background-size:100% 1px}
 .tlink:hover .k-link{background-size:0 1px}
-@media (min-width:900px){
-  .hero__row{grid-template-columns:1.25fr .8fr 1fr}
-  .hero__cell{border-bottom:0;padding-block:24px 28px}
-  .hero__cell+.hero__cell{border-inline-start:1px solid var(--line);padding-inline-start:28px}
-  .hero__cell:last-child{display:flex;align-items:flex-start;justify-content:flex-end}
+@media (prefers-reduced-motion:reduce){
+  .k-js .hero h1 .ln{transform:none;animation:none}
+  .k-js .hero__photo{clip-path:none;animation:none}
+  .k-js .hero__photo img,.k-js .hero__stage{animation:none;transform:none}
+  .k-js .hero .fd{opacity:1;transform:none;animation:none}
+  .k-js .hot{opacity:1;transform:none;animation:none}
+  .hot>span,.hot b{transition:none}
+  .badge.is-open i::after{animation:none}
 }
-.hero__photo{position:relative;margin:0;overflow:hidden;background:var(--sand);aspect-ratio:2400/1013;max-height:78svh;width:100%}
-.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
-.hero__photo figcaption{position:absolute;inset-inline-start:var(--pad);bottom:16px;background:#fff;color:var(--ink);font-size:.85rem;padding:7px 12px;max-width:calc(100% - 2*var(--pad))}
-.hero__photo figcaption [lang=ar]{font-family:"Tajawal",sans-serif;font-weight:700}
-@media (max-width:700px){.hero__photo{aspect-ratio:4/3}.hero__photo img{object-position:42% 60%}.hero__photo figcaption{position:static;max-width:none;padding:10px var(--pad);background:var(--sand)}}
-.k-js .hero__photo{clip-path:inset(100% 0 0 0);animation:k-clip 1.5s var(--k-ease) .45s forwards}
-.k-js .hero__photo img{animation:kb-in 2.4s var(--k-ease) .45s both,kb-slow 22s linear 2.8s both}
-@keyframes kb-in{from{transform:scale(1.18)}to{transform:scale(1.06)}}
-@keyframes kb-slow{from{transform:scale(1.06)}to{transform:scale(1)}}
-.k-js .hero h1 .ln{display:block;transform:translateY(108%);animation:k-rise 1.15s var(--k-ease) .12s forwards}
-.k-js .hero .fd{opacity:0;transform:translateY(14px);animation:fd .9s var(--k-ease) forwards;animation-delay:calc(.55s + var(--i,0)*.1s)}
-@keyframes fd{to{opacity:1;transform:none}}
-@keyframes k-clip{to{clip-path:inset(0 0 0 0)}}
 
 /* ---------- index layout: a narrow index column + content ---------- */
 .sec{padding:clamp(64px,9vw,140px) var(--pad);max-width:1600px;margin:0 auto}
@@ -140,7 +177,6 @@ html:lang(ar) .k-team__card h3 span{font-family:var(--k-body)}
 .k-team__more{background:linear-gradient(transparent,rgba(14,34,66,.88))}
 .team-note{margin-top:30px;color:var(--mute);font-size:.95rem;max-width:44em}
 @media (min-width:800px){.k-team__card:nth-child(4n+2),.k-team__card:nth-child(4n+4){margin-top:0}.k-team__card:nth-child(even){transform:translateY(48px)}.k-team__grid{padding-bottom:48px}}
-@media (hover:none){.k-team__ph img{filter:grayscale(.25)}}
 
 /* ---------- marquee ---------- */
 .k-marquee{border-color:var(--line);padding:22px 0}
@@ -254,21 +290,58 @@ html:lang(ar) .k-menu__name{font-family:var(--k-body);font-weight:500;font-size:
 }
 .hero__lead [lang=en]{display:block;unicode-bidi:isolate;color:var(--mute);font-size:.95em;margin-top:6px}
 .k-menu{padding-top:clamp(36px,4vw,56px)}
-@media (max-width:899px){
-  .hero{display:flex;flex-direction:column}
-  .hero h1{order:1}.hero__photo{order:2;margin-top:14px}.hero__row{order:3;margin-top:0}
-  .hero__row{grid-template-columns:1fr 1fr}
-  .hero__cell:first-child{grid-column:1/-1}
-  .hero__cell:nth-child(2){border-inline-end:1px solid var(--line)}
-  .hero__cell:nth-child(3) .acts{flex-direction:column;align-items:flex-start;gap:6px}
-  .hero__cell:nth-child(3) .k-btn{padding:14px 16px;font-size:.95rem}
-}
-@media (max-width:520px){.bar__tel{border-inline-start:1px solid var(--line);padding-inline-start:10px;margin-inline-start:2px}
-  .hero__lead{font-size:1rem}.hero__cell{padding-block:16px}}
-@media (max-width:360px){.hero__row{grid-template-columns:1fr}.hero__cell:nth-child(2){border-inline-end:0}}
-.k-btn{white-space:nowrap}
-.brand{min-width:0}.brand>span{min-width:0}
-@media (max-width:440px){.brand img{display:none}.bar__in{padding-inline:16px}.bar__lang{padding-inline:8px}}
 .k-btn{min-height:48px}
+.brand{min-width:0}.brand>span{min-width:0}
 .foot li a{padding-block:10px}
-@media (max-width:899px){.hours-mini{white-space:nowrap;font-size:.92rem}}
+@media (max-width:440px){.brand img{width:32px}.bar__in{padding-inline:14px}.bar__lang{padding-inline:7px}}
+/* ---------- round 2 ---------- */
+html{overflow-x:clip}
+.clinic__go{margin-top:14px}
+/* navy band: EN left, AR right at the same display size, pay row full width below */
+@media (min-width:900px){
+  .flood blockquote{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);max-width:none;align-items:start}
+  .flood blockquote>p{margin:0}
+  .flood blockquote [lang=ar]{margin-top:0;font:400 clamp(2rem,4.2vw,4.1rem)/1.4 "Readex Pro",sans-serif}
+  html:lang(ar) .flood blockquote{max-width:none}
+}
+.flood blockquote [lang=ar]{text-align:right}
+html:lang(ar) .flood blockquote [lang=en]{display:block;text-align:left;font:300 clamp(1.6rem,3.8vw,3.9rem)/1.15 var(--k-body);font-family:"Readex Pro",sans-serif;letter-spacing:-.025em;color:var(--amber);margin-top:22px}
+@media (min-width:900px){html:lang(ar) .flood blockquote [lang=en]{margin-top:.2em}}
+/* find us: flat navy panel with a drawn street */
+.k-visit__map{--k-map-poster:none;background:var(--navy);min-height:420px;display:block;overflow:hidden}
+.k-visit__map::before{content:none}
+.mapcard{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:10px;padding:clamp(24px,4vw,56px);color:#fff}
+.mapcard__st{position:absolute;inset:0;width:100%;height:100%}
+.mapcard__st .rd{stroke:#fff;stroke-opacity:.16;stroke-width:30;fill:none}
+.mapcard__st .rd-c{stroke:#fff;stroke-opacity:.55;stroke-width:1.5;stroke-dasharray:12 12;fill:none}
+.mapcard__st .rp{stroke:#fff;stroke-opacity:.14;stroke-width:14;fill:none}
+.mapcard__st .dot{fill:var(--amber)}
+.mapcard__st .dot-r{fill:none;stroke:var(--amber);stroke-width:2;stroke-opacity:.7}
+.mapcard__a{position:relative;font:400 clamp(2rem,3.6vw,3.6rem)/1.05 var(--k-display);letter-spacing:-.025em;max-width:13ch}
+html:lang(ar) .mapcard__a{font-weight:500;line-height:1.3;letter-spacing:0}
+.mapcard__a span{color:var(--amber)}
+.mapcard__s{position:relative;color:#c6cfdd;margin-bottom:14px}
+.mapcard button{position:relative}
+/* services: two clinic groups above the tabs */
+.sgroups{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-bottom:14px}
+.sgroup{display:flex;flex-direction:column;align-items:flex-start;gap:0;text-align:start;border:0;cursor:pointer;padding:clamp(12px,2vw,24px) clamp(14px,2.4vw,30px);background:var(--sand);color:var(--ink);font:inherit;transition:background .45s var(--k-ease),color .45s var(--k-ease)}
+.sgroup__w{font:500 clamp(2.4rem,7vw,6rem)/1.3 "Readex Pro",sans-serif;color:var(--navy);transition:color .45s}
+.sgroup--am .sgroup__w{color:var(--amber-ink)}
+.sgroup__l{font-weight:600;font-size:1rem;line-height:1.3}
+.sgroup__l small{display:inline-block;font-weight:400;font-size:.9rem}
+.sgroup:hover{background:var(--sand-2)}
+.sgroup[aria-pressed=true]{background:var(--navy);color:#fff}
+.sgroup[aria-pressed=true] .sgroup__w{color:#fff}
+.sgroup--am[aria-pressed=true]{background:var(--amber);color:var(--navy-2)}
+.sgroup--am[aria-pressed=true] .sgroup__w{color:var(--navy-2)}
+@media (max-width:520px){.sgroup__l small{display:block}}
+.k-menu.is-search .sgroups{display:none}
+.dept h2 a.dept__go{color:inherit;font-weight:inherit;text-decoration:none;display:inline-flex;gap:.35em;align-items:baseline;min-height:44px}
+.dept h2 a.dept__go:hover{text-decoration:underline;text-underline-offset:4px}
+.k-menu__tabs{position:sticky}
+/* doctors: one grade everywhere, names fit on phones */
+@media (max-width:420px){.k-team__card h3{font-size:1rem}}
+@media (prefers-reduced-motion:reduce){.sgroup,.sgroup__w{transition:none}}
+.k-menu__tabs[hidden]{display:none}
+.dept h2{min-height:44px;display:flex;align-items:center}
+.foot li a{min-width:44px}
