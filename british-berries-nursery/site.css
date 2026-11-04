@@ -1063,3 +1063,4 @@ a:hover .k-arrow{transform:translateX(5px)}
 }
 @media (max-width:389px){.hero__acts .k-btn .k-arrow{display:none}}
 @media (max-width:860px){.hero__grid{row-gap:0}.arch{margin-top:24px}}
+.svc__n::before{content:attr(data-n)}

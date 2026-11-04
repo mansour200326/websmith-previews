@@ -369,7 +369,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .find__map{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:none;object-position:50% 50%}
 .find__pin{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 0 0 8px rgba(198,47,42,.25),0 6px 16px rgba(0,0,0,.35)}
 .find .k-visit__map button{position:absolute;bottom:16px;inset-inline-start:16px;box-shadow:0 10px 30px -10px rgba(0,0,0,.45)}
-.find__credit{position:absolute;bottom:0;inset-inline-end:0;background:rgba(255,255,255,.88);color:#333;font-size:.72rem;line-height:1;padding:5px 8px;border-start-start-radius:8px;text-decoration:none}
+.find__credit{position:absolute;bottom:0;inset-inline-end:0;background:rgba(255,255,255,.88);color:#333;font-size:.72rem;line-height:1;padding:0 10px;min-height:28px;display:inline-flex;align-items:center;border-start-start-radius:8px;text-decoration:none}
 @media (min-width:900px){
   .find{align-items:center}
   .find .k-visit__map{height:420px;min-height:0;margin:clamp(20px,3vw,40px);margin-inline-start:0}
@@ -385,6 +385,9 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .little__card h3{font-size:clamp(2rem,3.4vw,3rem);margin-bottom:16px}
 @media (min-width:900px){.little__grid{grid-template-columns:1fr 1fr}}
 .svc-hall{scroll-margin-top:70px}
+.little__body .svc__age,.svc-hall .svc__age{justify-self:start;width:max-content}
+.svc-hall h2{font-size:clamp(3rem,6.6vw,6.2rem);text-wrap:balance}
+.svc-hall .svc__txt{max-width:38em}
 .svc-hall .svc__age{background:#fff;color:var(--green)}
 .svc-hall .svc__txt{color:#fff}
 .svc-hall .k-btn{background:#fff;color:var(--k-ink)}
