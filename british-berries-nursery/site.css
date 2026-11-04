@@ -982,3 +982,4 @@ a:hover .k-arrow{transform:translateX(5px)}
 /* 11. desktop yard photo stays in view */
 @media (min-width:861px){.yard__pic{position:sticky;top:110px}}
 @media (prefers-reduced-motion:reduce){.k-js .arch .k-seq{animation:none;clip-path:none}}
+[dir=rtl] .arch .k-seq__frame img{margin-left:0;margin-right:-3%}

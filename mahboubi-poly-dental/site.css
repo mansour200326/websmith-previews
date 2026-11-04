@@ -97,7 +97,7 @@ a{color:inherit}
 /* ---------- hero: type-led, the 1950 story (after round-2 review) ---------- */
 .hero2{max-width:1500px;margin:0 auto;padding:clamp(18px,4vw,56px) var(--pad) 0}
 .hero2__h{font-weight:800;font-family:var(--k-display);color:var(--k-ink)}
-.hero2__h .k-mask{display:block;overflow:hidden;padding-bottom:.06em}
+.hero2__h .k-mask{display:block;overflow:hidden;padding-bottom:.06em;height:auto;background:none;position:static}
 .hero2__h .k-mask:first-child .k-split__word{font-size:clamp(4rem,11vw,11rem);line-height:.86;letter-spacing:-.055em}
 .hero2__l2{font-weight:500;font-size:clamp(1.55rem,4.6vw,4.6rem);line-height:1.02;letter-spacing:-.03em;padding-top:.12em}
 .hero2__l2 em{font:500 1em/1 var(--serif);font-style:normal;color:var(--blue);letter-spacing:-.02em}
@@ -124,10 +124,12 @@ a{color:inherit}
   .hero2__facts{grid-column:3;grid-row:1;grid-template-columns:1fr;border-inline-start:1px solid var(--k-line);padding-inline-start:24px}
   .hero2 .hero__act{margin-top:26px}
 }
-html[lang=ar] .hero2__h .k-mask:first-child .k-split__word{letter-spacing:0;line-height:1.15;font-weight:700;font-size:clamp(3.6rem,10vw,9.5rem)}
+html[lang=ar] .hero2__h .k-mask:first-child .k-split__word{letter-spacing:0;line-height:1.15;font-weight:700;font-size:clamp(3.6rem,10vw,9.5rem);line-height:1}
 html[lang=ar] .hero2__l2{letter-spacing:0;line-height:1.35}
 html[lang=ar] .hero2__l2 em{font-family:"Lora",serif}
 html[lang=ar] .hero2__h .k-mask{padding-bottom:.12em}
+html[lang=ar] .hero2__h .k-mask:first-child{padding-bottom:.3em;margin-bottom:-.1em}
+.nw{white-space:nowrap}
 
 /* ---------- section scaffolding ---------- */
 .sec{padding:clamp(64px,9vw,140px) var(--pad);max-width:1500px;margin:0 auto}
@@ -162,6 +164,7 @@ html[lang=ar] .hero2__h .k-mask{padding-bottom:.12em}
 @media (min-width:1000px){.docs .k-team__head{grid-template-columns:1fr 1fr;align-items:end}}
 .docs .k-team__grid{grid-template-columns:repeat(2,1fr)}
 .docs .k-team__grid{align-items:start}
+.docs .k-team__card{margin-top:0!important}
 @media (min-width:1000px){.docs .k-team__grid{grid-template-columns:repeat(4,1fr)}}
 .docs .k-team__ph{background:#fff;border-radius:2px;aspect-ratio:4/5}
 .docs .k-team__ph img{filter:none;mix-blend-mode:normal}
@@ -200,7 +203,7 @@ html[lang=ar] .hero2__h .k-mask{padding-bottom:.12em}
 .bento{display:grid;gap:14px;grid-template-columns:1fr}
 @media (min-width:760px){.bento{grid-template-columns:repeat(2,1fr)}}
 .bento{grid-auto-rows:min-content}
-@media (min-width:1100px){.bento{grid-template-columns:1.3fr 1fr 1fr}.tile--deira{grid-column:2;grid-row:1}.tile--first{grid-column:2;grid-row:2}.tile--photo{grid-column:3;grid-row:1 / span 2}}
+@media (min-width:1100px){.bento{grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:min-content 1fr}.tile--deira{grid-column:2;grid-row:1}.tile--first{grid-column:2;grid-row:2}.tile--photo{grid-column:3;grid-row:1 / span 2}}
 .tile{border-radius:6px;padding:clamp(22px,2.6vw,36px);background:var(--mist);position:relative;overflow:hidden}
 .tile h3{font-size:clamp(1.5rem,2.4vw,2.1rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:12px}
 .tile--jum{background:var(--deep);color:#fff}
