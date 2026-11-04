@@ -58,7 +58,7 @@ a{color:inherit}
 @media (min-width:900px){.nav{display:flex}.hd__tel{display:block}.hd__call{display:none}}
 .mnav{display:flex;gap:2px;overflow-x:auto;padding:0 var(--pad) 10px;scrollbar-width:none}
 .mnav::-webkit-scrollbar{display:none}
-.mnav a{flex:none;text-decoration:none;font-size:.88rem;font-weight:500;padding:10px;min-height:44px;border-radius:4px;display:inline-flex;align-items:center}
+.mnav a{flex:none;text-decoration:none;font-size:.88rem;font-weight:500;padding:10px;min-height:44px;min-width:44px;justify-content:center;border-radius:4px;display:inline-flex;align-items:center}
 .mnav{justify-content:space-between;gap:0}
 @media (max-width:899px){.bl-long{display:none}}
 .mnav a[aria-current=page]{background:var(--mist);color:var(--blue-ink)}
@@ -232,7 +232,7 @@ html[lang=ar] .hero2__h .k-mask:first-child{padding-bottom:.3em;margin-bottom:-.
 .jum__foot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:.9rem;line-height:1.55}
 .tile--jum .jum__foot{color:#c9d4e5}
 .jum__foot b{color:#fff;font-weight:700;letter-spacing:.01em}
-.jum__foot a{color:#fff;display:inline-block;padding-block:10px;text-underline-offset:4px;word-break:break-all}
+.jum__foot a{color:#fff;display:inline-block;padding-block:12px;text-underline-offset:4px;word-break:break-all}
 .tile .small{font-size:.92rem;color:var(--k-mute)}
 .k-visit__badge{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:700;padding:6px 12px;border-radius:4px;background:rgba(255,255,255,.1)}
 .k-visit__badge i{width:8px;height:8px;border-radius:50%;background:#9aa8bd}
@@ -343,6 +343,7 @@ html[lang=ar] .k-acc__t,html[lang=ar] .tile h3{letter-spacing:0;line-height:1.25
 .brand{min-height:44px}
 .hero .k-split__meta a{padding:10px 0}
 .ft p a,.ft li a{padding-block:10px}
-.tile--photo .cap a,.tile--deira .big{padding-block:12px}
+.tile--photo .cap a,.tile--deira .big{padding-block:13px}
 .story__txt .btn{font-family:var(--k-body);font-size:1rem}
 @media (max-width:699px){.jump{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad)}.jump::-webkit-scrollbar{display:none}.jump a{flex:none}}
+.ft li a{min-width:44px}
