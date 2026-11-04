@@ -337,8 +337,8 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 
 /* ---------- r3: learning story, type-led numbered row ---------- */
 .k-story--type{padding-block:clamp(70px,10vw,140px)}
-.k-story--type .k-story__head{margin-inline:auto;max-width:var(--max)}
-.story3{max-width:var(--max);margin:0 auto;padding:0;display:grid;gap:clamp(34px,4vw,60px);counter-reset:none}
+.k-story--type .k-story__head{margin-inline:auto;max-width:calc(var(--max) - 2*var(--pad))}
+.story3{max-width:calc(var(--max) - 2*var(--pad));margin:0 auto;padding:0;display:grid;gap:clamp(34px,4vw,60px);counter-reset:none}
 .story3__step{list-style:none;border-top:2px solid var(--k-ink);padding-top:22px;display:grid;gap:14px;align-content:start}
 .story3__n{font:800 4rem/.8 var(--k-display);color:var(--red);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .story3__step h3{font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1.02;text-wrap:balance;margin-top:6px}
