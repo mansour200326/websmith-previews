@@ -882,3 +882,27 @@ a:hover .k-arrow{transform:translateX(5px)}
   .yard__frame img{transition:none}
   .k-arrow,a:hover .k-arrow{transition:none}
 }
+
+/* round-1 self fixes */
+.hero h1 .ln--it{padding-bottom:.16em;margin-bottom:-.12em}
+.arch .k-seq__frame img{width:104%;max-width:none}
+.ft .ft__name{font:600 clamp(2.4rem,5vw,4.4rem)/.92 var(--k-display);color:#fff}
+.k-quotes__dots button[aria-current=true]{background:var(--k-ink);background-clip:content-box}
+.prog__body{grid-template-rows:auto 1fr;align-items:start}
+.nav--m a{text-decoration:none}
+@media (max-width:860px){
+  .hero__grid>div:first-child{display:contents}
+  .hero h1{order:1;margin-bottom:22px;font-size:clamp(3.4rem,15vw,5.4rem)}
+  .arch{order:2;margin-bottom:26px}
+  .arch .k-seq{aspect-ratio:1/1}
+  .hero__lead{order:3}.hero__acts{order:4}.facts{order:5}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}
+  .facts li+li::before{display:none}
+  .inside__list li{flex-direction:column;gap:2px}
+}
+.skip{left:auto;inset-inline-start:8px;top:-60px}
+.skip:focus{left:auto;top:8px}
+.arch .k-seq__frame img{width:106%;margin-left:-3%}
+[dir=rtl] .arch .k-seq__frame img{margin-right:0}
+[lang=ar] .hero h1{line-height:1.02}
+@media (max-width:860px){.ft li a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}}

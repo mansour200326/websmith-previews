@@ -657,7 +657,7 @@ a{color:inherit}
 /* ---------- hero: the letterhead ---------- */
 .hero{padding-top:clamp(26px,4.5vw,64px);padding-bottom:clamp(40px,6vw,90px)}
 .hero h1{font:600 clamp(3.3rem,9.55vw,9.6rem)/.86 var(--k-display);letter-spacing:-.058em;margin-inline-start:-.04em;color:var(--k-ink)}
-.hero h1 .k-mask{display:inline-block;overflow:hidden;padding-bottom:.06em;vertical-align:top}
+.hero h1 .hm{display:inline-block;overflow:hidden;padding-bottom:.06em;vertical-align:top}
 .hero h1 .amp{font-weight:300;color:var(--plum)}
 .hero__rule{height:1px;background:var(--k-ink);margin:clamp(18px,2.4vw,30px) 0 0;transform-origin:0 50%}
 [dir=rtl] .hero__rule{transform-origin:100% 50%}
@@ -879,10 +879,19 @@ a{color:inherit}
 html:lang(ar){--k-display:"IBM Plex Sans Arabic",system-ui,sans-serif;--k-body:"IBM Plex Sans Arabic",system-ui,sans-serif}
 html:lang(ar) body{font-size:17.5px;line-height:1.85}
 html:lang(ar) .hero h1{font-size:clamp(3rem,8.6vw,8.6rem);line-height:1.12!important;letter-spacing:0;font-weight:600}
-html:lang(ar) .hero h1 .k-mask{padding-bottom:.12em}
+html:lang(ar) .hero h1 .hm{padding-bottom:.12em}
 html:lang(ar) .head h2,html:lang(ar) .k-cta h2,html:lang(ar) .k-visit h2,html:lang(ar) .ph h1{letter-spacing:0;line-height:1.2!important}
 html:lang(ar) .sect-list{letter-spacing:0;line-height:1.45}
 html:lang(ar) .k-acc__t,html:lang(ar) .k-story__step h3,html:lang(ar) .person h3{letter-spacing:0;line-height:1.35}
 html:lang(ar) .ledger dt,html:lang(ar) .contacts dt,html:lang(ar) .ft h3,html:lang(ar) .mark span,html:lang(ar) .k-story__step .cap,html:lang(ar) .hero__ph figcaption,html:lang(ar) .partners__ph figcaption,html:lang(ar) .person .cred,html:lang(ar) .svc-for,html:lang(ar) .k-stats__src{font-family:var(--k-body);font-size:.84rem}
 [dir=rtl] .k-split__word{transform-origin:100% 100%}
 .ltr{direction:ltr;unicode-bidi:isolate}
+/* the kit's in-page language swap hides [lang=ar] on English pages; our links are real page links */
+html body header.hd a.hd__lang[lang],html body footer.ft a[lang]{display:inline-flex!important}
+/* r0 fixes */
+.hero h1{font-size:clamp(3.3rem,11.15vw,10.1rem)}
+.hero h1 .hm{padding-bottom:.2em;margin-bottom:-.2em}
+.ft__brand img{height:auto}
+.ft .ft__ar.ft__ar[lang]{display:inline-block!important;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
+.k-stats__num{font:300 clamp(5rem,15vw,13.5rem)/.82 var(--k-display);letter-spacing:-.065em;font-variant-numeric:tabular-nums lining-nums}
+.k-visit__map{background:#ece8eb}

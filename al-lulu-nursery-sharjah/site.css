@@ -22,7 +22,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid transparent;transition:border-color .3s}
 .hd.is-scrolled{border-color:var(--k-line)}
 .hd__in{display:flex;align-items:center;gap:20px;min-height:76px}
-.hd__logo{display:flex;align-items:center;flex:none}
+.hd__logo{display:flex;align-items:center;flex:none;min-height:48px}
 .hd__logo img{height:46px;width:auto}
 .hd__nav{display:none;gap:4px;margin-inline-start:auto}
 .hd__nav a{text-decoration:none;font-weight:500;font-size:.98rem;padding:12px 12px;border-radius:8px;transition:background .25s}
@@ -97,11 +97,11 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
   .hero__type{display:contents}
   .hero__grid{gap:0}
   .hero h1{order:1;margin-bottom:22px}
-  .hero__frame{order:2;margin-bottom:46px}
+  .hero__frame{order:2;margin-bottom:72px}
   .hero__lede{order:3;font-size:1.05rem;margin-bottom:20px}
   .hero__acts{order:4}
   .hero .k-seq{aspect-ratio:4/3.4}
-  .sticker{inset-inline-start:auto;inset-inline-end:-6px;bottom:-40px;width:112px}
+  .sticker{inset-inline-start:auto;inset-inline-end:-6px;bottom:-62px;width:112px}
   .sticker b{font-size:.9rem}.sticker b small{font-size:.62rem}
 }
 /* ---------- marquee ---------- */
@@ -171,7 +171,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .k-story__step p{color:#4a5060}
 .k-story__step .k-story__inline,.k-story__media{border-radius:24px}
 .k-story__media{background:#dfe1e7}
-.k-story__step:not(.is-on) :is(h3,.k-story__n){color:#6b7080}
+.k-story__step:not(.is-on) :is(h3,.k-story__n){color:#555a69}
 .k-story__media .k-story__prog{background:var(--red);height:6px}
 
 /* ---------- hall (green flood) ---------- */
@@ -213,7 +213,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .find dl{display:grid;gap:16px}
 .find dt{font-size:.9rem;color:#c3c7d3}
 .find dd{font-size:1.15rem;font-weight:600}
-.find dd a{text-decoration:none;display:inline-block;padding-block:4px}
+.find dd a{text-decoration:none;display:inline-block;padding-block:8px}
 .find__acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
 .find .k-btn--ghost{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8)}
 .find .k-btn--ghost::before{background:#fff}
@@ -232,14 +232,14 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 .ft h3{font:600 .95rem/1.2 var(--k-body);color:var(--k-mute);margin-bottom:10px;letter-spacing:0}
 .ft ul{padding:0;display:grid;gap:2px}
 .ft li{list-style:none}
-.ft li a{display:inline-block;padding-block:6px;text-decoration:none}
+.ft li a{display:inline-block;padding-block:10px;text-decoration:none}
 .ft p{color:var(--k-mute);font-size:.98rem}
 .ft__note{margin-top:40px;padding-top:18px;border-top:1px solid var(--k-line);font-size:.85rem;color:var(--k-mute);display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
 
 /* ---------- inner pages ---------- */
 .pi{padding-block:clamp(40px,6vw,90px) clamp(30px,4vw,60px)}
 .pi__crumb{font-size:.95rem;color:var(--k-mute);margin-bottom:18px}
-.pi__crumb a{text-decoration:none;display:inline-block;padding-block:6px}
+.pi__crumb a{text-decoration:none;display:inline-block;padding-block:12px}
 .pi h1{font-size:clamp(3.2rem,9vw,8rem);line-height:.86;letter-spacing:-.025em;max-width:10em}
 .pi__lede{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--k-mute);max-width:36em;margin-top:24px}
 .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;padding:0}
@@ -294,7 +294,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.95;letter-spa
 [dir=rtl] .sh h2,[dir=rtl] .k-story__head h2{line-height:1.1}
 [dir=rtl] .home__q{line-height:1.15}
 [dir=rtl] .ft .ft__big{color:var(--k-ink);line-height:1}
-[dir=rtl] .sticker text{font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0;font-size:15px}
+[dir=rtl] .sticker text{font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0;font-size:21px;font-weight:600}
 [dir=rtl] .k-btn{font-family:"IBM Plex Sans Arabic",sans-serif}
 .ltr{direction:ltr;unicode-bidi:isolate}
 
