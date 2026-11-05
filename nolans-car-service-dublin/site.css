@@ -23,7 +23,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.92;letter-spa
 .prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--red);transform-origin:0 50%;transform:scaleX(var(--p,0));z-index:60;pointer-events:none}
 
 /* header */
-.hd{position:sticky;top:0;z-index:50;background:rgba(244,244,241,.97);border-bottom:1px solid var(--line)}
+.hd{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
 .hd__in{max-width:var(--max);margin:0 auto;padding:10px var(--pad);display:flex;align-items:center;gap:28px}
 .brand{display:flex;flex-direction:column;text-decoration:none;line-height:1;min-height:44px;justify-content:center}
 .brand b{font:900 2.05rem/.8 var(--k-display);letter-spacing:-.01em;color:var(--red)}
