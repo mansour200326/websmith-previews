@@ -310,3 +310,14 @@ h1,h2,h3{font-family:var(--k-display);font-weight:800;line-height:.92;letter-spa
 @media (min-width:900px){.k-story__step:last-child{min-height:auto;padding-bottom:0}.k-story__steps{padding-bottom:0}}
 .k-story{padding-bottom:clamp(40px,6vw,80px)}
 @media (max-width:899px){.hero{gap:18px;padding-top:14px}.hero__text p.lead{font-size:1.06rem;margin-bottom:18px}.hero h1 small{font-size:1.5rem}}
+/* round 3: hero on a dark full-bleed ground */
+.hero{background:#151515;box-shadow:0 0 0 100vmax #151515;clip-path:inset(0 -100vmax);color:#f3f3ef}
+.hero h1{color:#e0453c}
+.hero h1 small,.hero__text p.lead{color:#f3f3ef}
+.hero__facts dt{color:#a9a9a3}
+.hero__facts dd{color:#f3f3ef}
+.hero .ulink{color:#fff}
+.hero .k-btn::before{background:#fff}
+.hero .k-btn:hover,.hero .k-btn:focus-visible{color:#151515}
+.hero :focus-visible{outline-color:#fff}
+@media (min-width:900px){.k-story__step{min-height:55vh}}
