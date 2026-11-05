@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="kit.css">
 <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="is-home">
 <a class="skip" href="#main">Skip to content</a>
 <div class="prog" aria-hidden="true"></div>
 
@@ -43,23 +43,24 @@
 <main id="main">
 
 <section class="hero" aria-label="Nolan's Car Service Centre">
-  <h1><span class="m"><span class="w" style="--i:0">nolan's</span></span><span class="m"><small class="w" style="--i:1">car service centre, Clonshaugh, Dublin 17</small></span></h1>
+  <h1><span class="m m--word"><span class="w" style="--i:0">nolan's</span></span><span class="m"><small class="w" style="--i:1">car service centre, Clonshaugh, Dublin 17</small></span></h1>
+  <div class="hero__media">
     <figure class="hero__photo">
       <img src="img/paul-nolan.webp" width="1140" height="820" alt="Paul Nolan smiling at the door of the garage, next to the Nolan's sign and the opening hours, Monday to Friday 8.30 to 5.30">
     </figure>
-    <div class="hero__text">
-      <p class="lead fade" style="--i:0">We service all makes and models of cars, from new to old. Oil, general and full services, timing belts, clutches, diagnostics and the rest, at a fair price, in the Port Tunnel Business Park.</p>
-      <div class="acts fade" style="--i:1">
-        <a class="k-btn" data-k-magnetic href="tel:+35318478504">Call 01 847 8504 <span class="k-arrow" aria-hidden="true">→</span></a>
-        <a class="ulink" href="mailto:info@nolanscars.ie?subject=Booking%20a%20service&amp;body=Hi%20Paul%2C%0D%0A%0D%0ACar%20(make%2C%20model%2C%20year)%3A%20%0D%0AReg%3A%20%0D%0AWhat%20it%20needs%3A%20%0D%0APreferred%20day%20and%20time%3A%20%0D%0APhone%3A%20">Email to book a service</a>
-      </div>
-
+    <dl class="hero__facts fade" style="--i:3" data-k-hours='{"1":[8.5,17.5],"2":[8.5,17.5],"3":[8.5,17.5],"4":[8.5,17.5],"5":[8.5,17.5]}' data-k-tz="Europe/Dublin">
+      <div><dt>Open</dt><dd>Mon to Fri, 8.30 to 5.30 <span class="badge" data-k-badge hidden><i></i><span>Open now</span></span></dd></div>
+      <div><dt>Where</dt><dd>Unit 29, Block 3, Port Tunnel Business Park</dd></div>
+      <div><dt>Parts</dt><dd>Genuine or top quality O.E., fully guaranteed</dd></div>
+    </dl>
+  </div>
+  <div class="hero__text">
+    <p class="lead fade" style="--i:0">We service all makes and models of cars, from new to old. Oil, general and full services, timing belts, clutches, diagnostics and the rest, at a fair price, in the Port Tunnel Business Park.</p>
+    <div class="acts fade" style="--i:1">
+      <a class="k-btn" data-k-magnetic href="tel:+35318478504">Call 01 847 8504 <span class="k-arrow" aria-hidden="true">→</span></a>
+      <a class="ulink" href="mailto:info@nolanscars.ie?subject=Booking%20a%20service&amp;body=Hi%20Paul%2C%0D%0A%0D%0ACar%20(make%2C%20model%2C%20year)%3A%20%0D%0AReg%3A%20%0D%0AWhat%20it%20needs%3A%20%0D%0APreferred%20day%20and%20time%3A%20%0D%0APhone%3A%20">Email to book a service</a>
     </div>
-      <dl class="hero__facts fade" style="--i:3" data-k-hours='{"1":[8.5,17.5],"2":[8.5,17.5],"3":[8.5,17.5],"4":[8.5,17.5],"5":[8.5,17.5]}' data-k-tz="Europe/Dublin">
-        <div><dt>Open</dt><dd>Mon to Fri, 8.30 to 5.30 <span class="badge" data-k-badge hidden><i></i><span>Open now</span></span></dd></div>
-        <div><dt>Where</dt><dd>Unit 29, Block 3, Port Tunnel Business Park</dd></div>
-        <div><dt>Parts</dt><dd>Genuine or top quality O.E., fully guaranteed</dd></div>
-      </dl>
+  </div>
 </section>
 
 <section class="makes" aria-labelledby="makes-h">
@@ -111,7 +112,7 @@
           <summary><span class="k-acc__n">02</span><span class="k-acc__t">Clutches<small>Slipping, hard to select gears, noisy or juddering</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
           <div class="k-acc__body"><ul><li>Normal wear and tear: the clutch is worn out and slipping</li><li>Gears are hard to select</li><li>Noisy release bearing when you press the clutch</li><li>Juddering, usually oil leaking onto the clutch lining</li></ul><p><a href="tel:+35318478504">Ring about a clutch <span class="k-arrow" aria-hidden="true">→</span></a></p></div>
         </details>
-        <details class="k-acc__row" data-img="img/workshop-lifts.webp">
+        <details class="k-acc__row">
           <summary><span class="k-acc__n">03</span><span class="k-acc__t">Suspension<small>Shocks and suspension parts, checked at every service</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
           <div class="k-acc__body"><div><p>Suspension keeps the tyres gripping the road, keeps the steering stable and the passengers comfortable. When we service the car we report any repairs the shocks or suspension need, and replace parts as you ask.</p></div></div>
         </details>
@@ -162,20 +163,20 @@
   </div>
   <div class="k-story__grid">
     <div class="k-story__media" aria-hidden="true">
-      <figure class="is-on" data-k-story-media><img src="img/paul-nolan.webp" alt="" loading="lazy"></figure>
-      <figure data-k-story-media><img src="img/unit-29.webp" alt="" loading="lazy"></figure>
+      <figure class="is-on" data-k-story-media><img src="img/unit-29.webp" alt="" loading="lazy"></figure>
+      <figure data-k-story-media><img class="crop-door" src="img/unit-29.webp" alt="" loading="lazy"></figure>
       <figure data-k-story-media><img src="img/workshop-lifts.webp" alt="" loading="lazy"></figure>
       <figure data-k-story-media><img src="img/under-the-bonnet.webp" alt="" loading="lazy"></figure>
       <span class="k-story__prog"></span>
     </div>
     <div class="k-story__steps">
       <article class="k-story__step is-on" data-k-story-step>
-        <div class="k-story__inline"><img src="img/paul-nolan.webp" alt="Paul Nolan at the garage door" loading="lazy"></div>
+        <div class="k-story__inline"><img src="img/unit-29.webp" alt="Unit 29 from the car park, customers' cars parked outside" loading="lazy"></div>
         <span class="k-story__n">01</span><h3>Pick a day and time</h3>
         <p>Call <a href="tel:+35318478504">01 847 8504</a> or email <a href="mailto:info@nolanscars.ie">info@nolanscars.ie</a> with your car and the day you'd like. We book from 8.30 in the morning to 5.30 in the evening, Monday to Friday.</p>
       </article>
       <article class="k-story__step" data-k-story-step>
-        <div class="k-story__inline"><img src="img/unit-29.webp" alt="The front of Unit 29 with customers' cars parked outside and the red Nolan's sign" loading="lazy"></div>
+        <div class="k-story__inline"><img class="crop-door" src="img/unit-29.webp" alt="The door of Unit 29 under the red Nolan's sign" loading="lazy"></div>
         <span class="k-story__n">02</span><h3>Drop it to Unit 29</h3>
         <p>Block 3, Port Tunnel Business Park, in the Clonshaugh Industrial Estate. Look for the red Nolan's sign over the door.</p>
         <p>Need a car for the day? We have a loan car, as long as you have fully comprehensive insurance.</p>
@@ -211,10 +212,6 @@
         <p data-reveal><a class="k-link k-link--under" href="about.html">More about Paul and the garage <span class="k-arrow" aria-hidden="true">→</span></a></p>
       </div>
     </div>
-    <figure class="paul__photo" data-reveal="clip">
-      <img src="img/unit-29.webp" width="1980" height="944" alt="Unit 29 at the Port Tunnel Business Park: grey cladding, the red Nolan's car service centre sign, cars parked outside" loading="lazy">
-    </figure>
-    <p class="cap">Unit 29, Block 3, Port Tunnel Business Park.</p>
   </div>
 </section>
 
@@ -228,7 +225,7 @@
   </div>
   <div class="k-quotes__track" tabindex="0" role="region" aria-label="Customer letters, scroll sideways">
     <figure class="k-quotes__slide" aria-label="Letter 1"><blockquote>Paul fixed the exhaust there and then … He even made me a cup of tea with a chocolate biscuit while I was waiting!</blockquote><figcaption class="k-quotes__who"><b>Anne Marie Graham</b><span>Healthforce Ltd.</span></figcaption></figure>
-    <figure class="k-quotes__slide" aria-label="Letter 2"><blockquote>An honest and competent mechanic is very difficult to find. Paul always completes all work on time, and always impresses me with his ability to diagnose problems quickly.</blockquote><figcaption class="k-quotes__who"><b>Adrian Graham</b><span>a customer for almost 10 years</span></figcaption></figure>
+    <figure class="k-quotes__slide" aria-label="Letter 2"><blockquote>An honest and competent mechanic is very difficult to find. Paul always completes all work on time, and always impresses me with his ability to diagnose problems quickly.</blockquote><figcaption class="k-quotes__who"><b>Adrian Graham</b><span>mychildcare.ie</span></figcaption></figure>
     <figure class="k-quotes__slide" aria-label="Letter 3"><blockquote>Paul and his team made short work of identifying and resolving the issue and the car has been back on the road ever since leaving Paul's spotless workshop.</blockquote><figcaption class="k-quotes__who"><b>Mark Ryan</b><span>FX3 Kitchens &amp; Bedrooms</span></figcaption></figure>
     <figure class="k-quotes__slide" aria-label="Letter 4"><blockquote>The work was completed to a high level and was competitively priced. Mr. Nolan also completed various other tasks and explained in a clear manner why they were required.</blockquote><figcaption class="k-quotes__who"><b>Ronan D. Reynolds</b><span>ACS Limited</span></figcaption></figure>
     <figure class="k-quotes__slide" aria-label="Letter 5"><blockquote>Paul provided loan cars for the day and went beyond the call of duty by delivering the cars to our home after 8pm.</blockquote><figcaption class="k-quotes__who"><b>Tom Molloy</b><span>Flux Web Design</span></figcaption></figure>
