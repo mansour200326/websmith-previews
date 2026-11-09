@@ -26,3 +26,5 @@
   // index children for staggered CSS
   document.querySelectorAll('[data-index]').forEach(function(p){[].forEach.call(p.children,function(c,k){c.style.setProperty('--i',k)})});
 })();
+/* r3: fade the mobile nav edge only when it actually overflows */
+(function(){var n=document.querySelector('.mnav');if(!n)return;function f(){n.classList.toggle('is-over',n.scrollWidth>n.clientWidth+1)}f();addEventListener('resize',f);if(document.fonts)document.fonts.ready.then(f)})();

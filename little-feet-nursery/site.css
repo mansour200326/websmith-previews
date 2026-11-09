@@ -418,3 +418,41 @@ html[lang=ar] .nav a[aria-current=page]::after{left:12px;right:12px}
 @media (max-width:899px){.doors{scroll-padding-inline:var(--pad)}}
 @media (max-width:899px){.util .util__wa{order:-1;margin-inline-start:0;border-inline-start:0;border-inline-end:1px solid #2c3a52;padding-inline:0 18px}.util a:nth-child(1){padding-inline-start:18px}}
 @media (min-width:900px){.k-story__step{min-height:50vh}}
+
+/* ---- r3 (Fannan round 2 fixes) ---- */
+/* FAQ on the site grid, real weights, sticky head clears the header */
+.k-faq{max-width:var(--max);padding-inline:var(--pad)}
+.k-faq h2{font-weight:400;letter-spacing:-.03em}
+.k-faq__q summary{font-weight:400}
+@media (min-width:900px){.k-faq__head{top:calc(var(--hdr-h,84px) + 24px)}}
+html[lang=ar] .k-faq h2{font-weight:600;letter-spacing:0}
+html[lang=ar] .k-faq__q summary{font-weight:500}
+/* utility bar: "Call a branch" only on phones */
+.util__call{display:none!important}
+@media (max-width:600px){
+  .util .wrap{overflow:visible;justify-content:space-between}
+  .util a:not(.util__wa):not(.util__call){display:none}
+  .util .util__call{display:inline-flex!important;border-inline-end:0;padding-inline:14px 0;margin-inline-start:auto}
+  .util .util__wa{padding-inline:0 14px}
+}
+/* mobile nav: five fit at 390px, fade hint if not */
+@media (max-width:1020px){
+  .mnav{gap:0}
+  .mnav.is-over{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+  [dir=rtl] .mnav.is-over{-webkit-mask-image:linear-gradient(270deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(270deg,#000 calc(100% - 28px),transparent)}
+  .mnav a{padding:12px 9px;font-size:.9rem}
+}
+.en-tag{font:600 .62rem/1 var(--body);font-family:"Instrument Sans",system-ui,sans-serif;letter-spacing:.04em;border:1px solid currentColor;border-radius:3px;padding:2px 4px;margin-inline-start:5px;vertical-align:.15em;opacity:.7}
+/* desktop hero: fill the first screen */
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(30px,3.4vw,52px);margin-top:clamp(12px,1vw,16px)}
+  .door__img{aspect-ratio:3/4.1}
+  .hero__text{padding-bottom:58px}
+}
+/* no orphans */
+.h2,.k-story__step h3,.intro h1,.big,.k-story__head h2,.k-quotes__head h2,.k-faq h2{text-wrap:balance}
+/* branches: action rows line up */
+.br__addr{min-height:3.2em}
+/* office hours: closed days */
+.hours tr.is-shut td{color:var(--mute)}
+@media (max-width:420px){.mnav{padding-inline:14px}.mnav a{padding:12px 6px;font-size:.86rem}.mnav a:last-child{padding-inline-end:0}}
