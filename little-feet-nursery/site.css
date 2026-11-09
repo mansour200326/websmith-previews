@@ -416,3 +416,5 @@ html[lang=ar] .nav a[aria-current=page]::after{left:12px;right:12px}
   html[lang=ar] .hero h1{font-size:clamp(2.8rem,11.6vw,11.5rem)}
 }
 @media (max-width:899px){.doors{scroll-padding-inline:var(--pad)}}
+@media (max-width:899px){.util .util__wa{order:-1;margin-inline-start:0;border-inline-start:0;border-inline-end:1px solid #2c3a52;padding-inline:0 18px}.util a:nth-child(1){padding-inline-start:18px}}
+@media (min-width:900px){.k-story__step{min-height:50vh}}
