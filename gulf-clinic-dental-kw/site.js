@@ -18,6 +18,7 @@
   chips.forEach(function(c){c.addEventListener('click',function(){
     var f=c.getAttribute('data-doc-filter'),n=0;
     chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});
+    var g=document.querySelector('.docs__grid');if(g)g.classList.toggle('is-filtered',f!=='all');
     docs.forEach(function(d,i){
       var on=f==='all'||(' '+d.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1;
       if(on){n++;if(d.hidden){d.hidden=false;if(!RM){d.style.opacity=0;d.style.transform='translateY(16px)';requestAnimationFrame(function(){requestAnimationFrame(function(){d.style.opacity='';d.style.transform=''})})}}}
@@ -30,7 +31,7 @@
   var st=document.querySelector('.lab__stamp');
   if(st&&!RM){
     var tick=false;
-    function turn(){tick=false;var r=st.getBoundingClientRect(),p=(r.top+r.height/2)/innerHeight-.5;st.style.transform='rotate('+(p*-28).toFixed(2)+'deg)'}
+    function turn(){tick=false;var r=st.getBoundingClientRect(),p=(r.top+r.height/2)/innerHeight-.5;st.style.transform='rotate('+Math.max(-10,Math.min(10,p*-20)).toFixed(2)+'deg)'}
     addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(turn)}},{passive:true});turn();
   }
 
