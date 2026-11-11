@@ -1,0 +1,219 @@
+/* Easy Dental Center (Farwaniya, Kuwait) concept. Palette from the gold logo and the plum chairs in their clinic. */
+:root{
+  --k-bg:#fbfaf9;--k-ink:#221628;--k-mute:#5d5363;--k-line:#e4dee6;
+  --k-accent:#7d5c17;--k-on-accent:#fff;--k-ease:cubic-bezier(.16,1,.3,1);
+  --k-display:"Schibsted Grotesk",system-ui,sans-serif;--k-body:"Lato",system-ui,sans-serif;
+  --plum:#2b1735;--plum-2:#3a2147;--gold:#d4ad55;--gold-ink:#7d5c17;
+  --pad:clamp(20px,4.5vw,64px);
+}
+:root:lang(ar){--k-display:"Noto Kufi Arabic",system-ui,sans-serif;--k-body:"Noto Sans Arabic",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--k-bg);color:var(--k-ink);font:400 1.06rem/1.65 var(--k-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+:lang(ar) body,body:lang(ar){font-size:1.12rem;line-height:1.85}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-ink);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+/* ---------- running line (address + hours) ---------- */
+.topline{background:var(--plum);color:#efe6f2;font-size:.86rem}
+.topline.k-marquee{border:0;padding:9px 0;--gap:46px}
+.topline .k-mq-word{font:500 .86rem/1.3 var(--k-body);letter-spacing:0;color:#efe6f2;-webkit-text-stroke:0}
+.topline .k-mq-dot{width:5px;height:5px;background:var(--gold);font-size:1rem}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:40;background:rgba(251,250,249,.94);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--k-line)}
+.hdr__in{display:flex;align-items:center;gap:clamp(14px,2.4vw,36px);padding:12px var(--pad);max-width:1480px;margin:0 auto}
+.mark{display:flex;align-items:baseline;gap:.45em;text-decoration:none;color:var(--k-ink);line-height:1;padding:6px 0}
+.mark b{font:800 1.45rem/1 "Schibsted Grotesk",system-ui,sans-serif;letter-spacing:.02em;color:var(--gold-ink)}
+.mark i{font:700 1.3rem/1 "Noto Kufi Arabic",sans-serif;font-style:normal;color:var(--gold-ink)}
+.mark small{font:500 .78rem/1 var(--k-body);color:var(--k-mute);letter-spacing:.01em}
+.nav{display:flex;gap:clamp(14px,2vw,28px);margin-inline-start:auto;font-size:.95rem}
+.nav a{text-decoration:none;padding:12px 0}
+.nav a[aria-current=page]{color:var(--gold-ink);font-weight:700}
+.hdr__tel{font-weight:700;text-decoration:none;font-variant-numeric:tabular-nums;padding:12px 0;white-space:nowrap}
+.hdr__wa{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;font-size:.92rem;padding:11px 14px;border:1px solid var(--k-ink);border-radius:3px;min-height:44px}
+.hdr__wa svg{width:16px;height:16px}
+.lang{font-weight:700;text-decoration:none;min-width:44px;min-height:44px;display:inline-grid;place-items:center;border-inline-start:1px solid var(--k-line);padding-inline-start:14px}
+.lang:lang(ar),.lang[lang=ar]{font-family:"Noto Kufi Arabic",sans-serif}
+@media (max-width:980px){.nav{display:none}.hdr__tel .k-roll{display:none}.hdr__wa{margin-inline-start:auto}}
+@media (max-width:980px){.hdr__tel{display:none}}
+.mnav{display:none}
+@media (max-width:980px){
+  .mnav{display:flex;gap:4px 18px;overflow-x:auto;padding:0 var(--pad) 6px;font-size:.92rem;scrollbar-width:none}
+  .mnav::-webkit-scrollbar{display:none}
+  .mnav a{text-decoration:none;white-space:nowrap;padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
+  .mnav a[aria-current=page]{color:var(--gold-ink);font-weight:700}
+}
+
+/* ---------- hero (kit 02, restyled) ---------- */
+.hero.k-split{min-height:auto;padding-block:clamp(28px,5vw,64px) clamp(40px,6vw,80px);max-width:1480px;margin:0 auto;padding-inline:var(--pad);align-items:end}
+.hero .k-split__type h1{font:800 clamp(4.2rem,15vw,13.5rem)/.82 var(--k-display);letter-spacing:-.06em;color:var(--k-ink)}
+.hero .k-split__type h1 .k-mask:nth-child(2) .k-split__word{color:var(--gold-ink)}
+.hero .k-split__type h1 small{display:block;font:500 clamp(1.05rem,1.6vw,1.35rem)/1.3 var(--k-body);letter-spacing:0;margin-top:.9em;color:var(--k-mute)}
+.hero .k-split__lead{font-size:clamp(1.08rem,1.4vw,1.25rem);color:var(--k-ink);max-width:31em}
+.hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:30px}
+.hero__acts .k-btn{background:var(--plum);color:#fff}
+.hero__acts .k-btn::before{background:var(--gold-ink)}
+.hero__call{font-weight:700;text-decoration:none;padding:12px 0}
+.hero .k-split__photo{aspect-ratio:4/5;border-radius:0}
+.hero .k-split__photo img{object-position:56% 30%}
+.hero figcaption{position:absolute;inset:auto 0 0 0;padding:40px 16px 14px;color:#fff;font-size:.84rem;line-height:1.4;background:linear-gradient(transparent,rgba(20,10,25,.78))}
+.hero .k-split__meta{font-size:.95rem}
+.hero .k-split__meta dt{color:var(--k-mute);font-size:.8rem}
+.hero .k-split__meta dd{font-weight:600}
+.hero .k-split__meta dd a{text-decoration:none}
+@media (min-width:1000px){
+  .hero.k-split{grid-template-columns:1.25fr .78fr .42fr}
+  .hero .k-split__photo{aspect-ratio:3/4}
+}
+@media (min-width:1000px){[dir=rtl] .hero .k-split__type h1{font-size:clamp(4rem,11vw,10rem);line-height:1.05;letter-spacing:0}}
+[dir=rtl] .hero .k-split__type h1{letter-spacing:0;line-height:1.1}
+[dir=rtl] .k-split__word{transform-origin:100% 100%}
+
+/* ---------- section scaffolding ---------- */
+.sec{padding:clamp(70px,10vw,140px) var(--pad);max-width:1480px;margin:0 auto}
+.h2{font:700 clamp(2.4rem,6vw,5.2rem)/.95 var(--k-display);letter-spacing:-.04em}
+[dir=rtl] .h2{letter-spacing:0;line-height:1.2}
+.lede{font-size:clamp(1.08rem,1.4vw,1.22rem);max-width:34em;color:var(--k-mute)}
+.more{display:inline-flex;gap:.5em;align-items:center;font-weight:700;text-decoration:none;color:var(--gold-ink);padding:12px 0}
+
+/* ---------- plum flood: comfort / equipment ---------- */
+.calm{background:var(--plum);color:#f4eef6}
+.calm__in{display:grid;gap:clamp(36px,5vw,90px);padding:clamp(80px,11vw,160px) var(--pad);max-width:1480px;margin:0 auto}
+.calm .h2{color:#fff;max-width:11em}
+.calm__aim{margin-top:28px;max-width:28em;color:#d8cbdc;font-size:1.1rem}
+.calm__list{list-style:none;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.calm__list li{display:grid;grid-template-columns:3.4rem 1fr;gap:6px 18px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.calm__list .n{font:700 1rem/1.6 var(--k-display);color:var(--gold);font-variant-numeric:tabular-nums}
+.calm__list h3{font:700 clamp(1.35rem,2.3vw,1.9rem)/1.15 var(--k-display);letter-spacing:-.02em;color:#fff}
+[dir=rtl] .calm__list h3{letter-spacing:0;line-height:1.5}
+.calm__list p{grid-column:2;color:#d8cbdc;max-width:36em}
+@media (min-width:1000px){.calm__in{grid-template-columns:.9fr 1.1fr}.calm__head{position:sticky;top:120px;align-self:start}}
+
+/* ---------- 8 clinics ---------- */
+.eight{display:grid;gap:clamp(20px,4vw,70px);align-items:center}
+.eight__n{font:800 clamp(10rem,30vw,26rem)/.78 var(--k-display);letter-spacing:-.08em;color:var(--gold-ink)}
+.eight__txt .h2{max-width:12em;margin-bottom:22px}
+.eight__txt p{max-width:34em;color:var(--k-mute);margin-bottom:12px}
+@media (min-width:900px){.eight{grid-template-columns:auto 1fr}}
+
+/* ---------- treatments (kit 11) ---------- */
+.k-acc{max-width:1480px;padding-inline:var(--pad)}
+.k-acc h2{font-size:clamp(2.4rem,6vw,5.2rem)}
+.acc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:clamp(24px,4vw,48px)}
+.acc-head h2{margin:0}
+.k-acc__row summary:hover{color:var(--gold-ink)}
+.k-acc__t{font-size:clamp(1.5rem,3.6vw,2.9rem)}
+[dir=rtl] .k-acc__t{letter-spacing:0;line-height:1.35}
+.k-acc__body p{max-width:38em;color:var(--k-mute)}
+.k-acc__body a{color:var(--gold-ink)}
+
+/* ---------- doctors (kit 13) ---------- */
+.k-team{max-width:1480px;padding-inline:var(--pad);border-top:1px solid var(--k-line)}
+.k-team__grid{grid-template-columns:repeat(2,1fr)}
+@media (min-width:900px){.k-team__grid{grid-template-columns:repeat(5,1fr)}.k-team__card:nth-child(4n+2),.k-team__card:nth-child(4n+4){margin-top:0}.k-team__card:nth-child(even){margin-top:64px}}
+.k-team__ph img{filter:grayscale(.6) contrast(1.03)}
+.k-team__card p.role{color:var(--gold-ink)}
+.k-team__head h2{font-size:clamp(2.4rem,6vw,5.2rem)}
+[dir=rtl] .k-team__head h2,[dir=rtl] .k-acc h2,[dir=rtl] .k-visit h2{letter-spacing:0;line-height:1.2}
+
+/* ---------- patients (kit 14) ---------- */
+.k-quotes{background:#f3eff4;border-block:1px solid var(--k-line)}
+.k-quotes__slide blockquote{font-weight:500;max-width:24em}
+.k-quotes__slide blockquote::before{color:var(--gold-ink)}
+.quotes-title{padding:0 clamp(20px,6vw,90px);margin-bottom:34px}
+[dir=rtl] .k-quotes__slide blockquote{letter-spacing:0;line-height:1.55;font-size:clamp(1.5rem,3.4vw,2.8rem)}
+
+/* ---------- visit (kit 16) ---------- */
+.k-visit{max-width:1480px;margin:0 auto}
+.k-visit__info{padding-inline:var(--pad)}
+.k-visit tr.is-today td{color:var(--gold-ink)}
+.k-visit__go{background:var(--plum);color:#fff}
+.k-visit__map{min-height:420px;background:#ece6ee}
+.k-visit__map button{font:700 1rem var(--k-body);padding:16px 22px;border:1px solid var(--k-ink);background:var(--k-bg);color:var(--k-ink);border-radius:3px;cursor:pointer;min-height:44px}
+
+/* ---------- page intro (services / about) ---------- */
+.pintro{padding:clamp(50px,8vw,120px) var(--pad) clamp(30px,5vw,60px);max-width:1480px;margin:0 auto;display:grid;gap:24px}
+.pintro h1{font:800 clamp(3.4rem,11vw,9.5rem)/.86 var(--k-display);letter-spacing:-.055em}
+[dir=rtl] .pintro h1{letter-spacing:0;line-height:1.15;font-size:clamp(3rem,9vw,7.5rem)}
+.pintro p{max-width:36em;font-size:clamp(1.08rem,1.4vw,1.25rem);color:var(--k-mute)}
+.toc{display:flex;flex-wrap:wrap;gap:4px 22px;padding:18px var(--pad);max-width:1480px;margin:0 auto;border-block:1px solid var(--k-line);font-size:.95rem}
+.toc a{text-decoration:none;padding:10px 0;display:inline-block}
+
+/* ---------- service detail blocks ---------- */
+.svc{display:grid;gap:clamp(24px,4vw,64px);padding:clamp(60px,8vw,110px) var(--pad);max-width:1480px;margin:0 auto;border-bottom:1px solid var(--k-line);scroll-margin-top:90px}
+.svc__n{font:700 .95rem var(--k-display);color:var(--gold-ink);font-variant-numeric:tabular-nums;margin-bottom:12px}
+.svc h2{font:700 clamp(2.1rem,4.6vw,3.9rem)/1 var(--k-display);letter-spacing:-.035em;margin-bottom:20px}
+[dir=rtl] .svc h2{letter-spacing:0;line-height:1.35}
+.svc__main>p{max-width:38em;margin-bottom:14px}
+.svc h3{font:700 1.15rem/1.3 var(--k-display);margin:28px 0 8px}
+.svc ul,.svc ol{padding-inline-start:1.2em;max-width:38em}
+.svc li{padding:4px 0}
+.svc__side{align-self:start}
+.svc__who{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;padding:16px 0;border-block:1px solid var(--k-line);margin-bottom:22px}
+.svc__who img{width:96px;height:96px;object-fit:cover;object-position:50% 25%;border-radius:50%}
+.svc__who b{display:block;font-family:var(--k-display)}
+.svc__who span{font-size:.9rem;color:var(--k-mute)}
+.svc__facts{list-style:none;padding:0!important;margin-bottom:24px}
+.svc__facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0!important;border-bottom:1px dashed var(--k-line);font-size:.97rem}
+.svc__facts b{font-weight:700;text-align:end}
+.svc__wa{display:inline-flex;align-items:center;gap:.6em;font-weight:700;text-decoration:none;background:var(--plum);color:#fff;padding:16px 22px;border-radius:3px;min-height:44px}
+.svc__wa:hover{background:var(--gold-ink)}
+@media (min-width:1000px){.svc{grid-template-columns:1.5fr 1fr}.svc__side{position:sticky;top:110px}}
+.svc--flood{background:var(--plum);color:#f4eef6;max-width:none;border:0}
+.svc--flood>*{max-width:1480px}
+.svc--flood .svc__n{color:var(--gold)}
+.svc--flood .svc__facts li{border-color:rgba(255,255,255,.2)}
+.svc--flood .svc__who{border-color:rgba(255,255,255,.2)}
+.svc--flood .svc__who span{color:#d8cbdc}
+.svc--flood .svc__wa{background:var(--gold);color:var(--plum)}
+.price{font:800 clamp(2.4rem,5vw,4rem)/1 var(--k-display);letter-spacing:-.03em;color:var(--gold);margin:6px 0 4px}
+.steps{counter-reset:s;list-style:none;padding:0!important}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2.2em 1fr;gap:10px;padding:10px 0!important;border-bottom:1px solid var(--k-line)}
+.steps li::before{content:counter(s);font:700 1rem var(--k-display);color:var(--gold-ink)}
+
+/* ---------- about ---------- */
+.ab{display:grid;gap:clamp(30px,5vw,80px);padding:clamp(60px,9vw,130px) var(--pad);max-width:1480px;margin:0 auto;border-top:1px solid var(--k-line)}
+.ab p{max-width:38em;margin-bottom:14px}
+.ab .h2{max-width:10em}
+@media (min-width:1000px){.ab{grid-template-columns:.9fr 1.1fr}}
+.ab figure{overflow:hidden}
+.ab figure img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.ab figcaption{font-size:.86rem;color:var(--k-mute);margin-top:10px}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--plum);color:#e9e0ec;padding:clamp(60px,8vw,110px) var(--pad) 28px}
+.ftr__in{max-width:1480px;margin:0 auto;display:grid;gap:40px}
+.ftr__name{font:800 clamp(3rem,10vw,8rem)/.85 var(--k-display);letter-spacing:-.055em;color:#fff}
+.ftr__name span{display:block;font:700 clamp(1.6rem,4vw,3rem)/1.4 "Noto Kufi Arabic",sans-serif;letter-spacing:0;color:var(--gold)}
+.ftr__cols{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.ftr h3{font:700 .95rem var(--k-display);color:var(--gold);margin-bottom:10px}
+.ftr ul{list-style:none;padding:0}
+.ftr li a,.ftr p a{display:inline-block;padding-block:6px;text-decoration:none}
+.ftr li a:hover{color:#fff;text-decoration:underline}
+.ftr__note{border-top:1px solid rgba(255,255,255,.16);padding-top:20px;font-size:.84rem;color:#cbbccf;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* intro panel (kit 17) in plum, bilingual name */
+.k-intro{background:var(--plum)}
+.k-intro__name{font-family:"Schibsted Grotesk",sans-serif}
+
+@media (prefers-reduced-motion:reduce){.svc__wa,.k-btn{transition:none}}
+
+/* kit 02 .k-mask collides with kit 04 .k-mask (220svh): reset inside the hero */
+.hero .k-mask{height:auto;background:none;position:relative;--p:0}
+@media (max-width:440px){.mark small{display:none}.hdr__wa{padding-inline:12px}}
+[dir=rtl] .ftr__name span{display:block;font:800 clamp(2.6rem,8vw,6.5rem)/1.25 "Noto Kufi Arabic",sans-serif;color:#fff}
+[dir=rtl] .ftr__name bdi{display:block;font:700 clamp(1.4rem,3.5vw,2.6rem)/1.2 "Schibsted Grotesk",sans-serif;letter-spacing:-.03em;color:var(--gold);margin-top:.3em}
+[dir=rtl] .ftr__name{letter-spacing:0}
+[dir=rtl] .eight__n{letter-spacing:0;line-height:1}
+[dir=rtl] .mark small{font-family:var(--k-body)}
+[dir=rtl] .k-intro__name{font-family:"Noto Kufi Arabic",sans-serif}
+[dir=rtl] .hero .k-split__type h1 small{font-family:var(--k-body)}
+[lang=ar] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
+[dir=rtl] .calm .h2{font-size:clamp(2rem,4.2vw,3.6rem);line-height:1.35;max-width:13em}
+[dir=rtl] .eight__txt .h2{font-size:clamp(2rem,4.6vw,4rem)}
+.mark{min-height:44px;align-items:center}
