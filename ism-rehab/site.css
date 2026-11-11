@@ -249,12 +249,65 @@ h1,h2,h3{font-family:var(--k-display);font-stretch:72%;font-weight:700;letter-sp
 .hero__where a{white-space:nowrap}
 @media (min-width:421px){.hd__logo img{height:50px}}
 .hd__book{white-space:nowrap}
-.k-team__ph img{filter:grayscale(.25)}
 .k-visit__map{--k-map-poster:url(img/view-panorama.webp)}
 .pg h1 .hl{display:block;overflow:hidden;padding-bottom:.05em}
 .k-js .pg .k-split__word{display:block;transform:translateY(110%) rotate(2deg);transform-origin:0 100%;animation:k-sw 1.15s var(--k-ease) .1s forwards}
 @media (prefers-reduced-motion:reduce){.k-js .pg .k-split__word{animation:none;transform:none}}
 .hd__logo{display:flex;align-items:center;min-height:44px}
 .ft__cols li a,.ft__cols p a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
-.k-quotes__dots button{min-width:44px}
 .svc__body ul.docs{columns:auto}
+
+/* ---------- Fannan round 1 ---------- */
+h1,h2,h3{word-spacing:.12em}
+.k-acc .sec__h{font-stretch:68%}
+.hero__where{margin-top:26px}
+.hero__lead{margin-top:16px}
+.hero__badge{font-stretch:75%;font-size:clamp(1rem,1.2vw,1.12rem);line-height:1.2}
+.hero__badge b{font-size:2.4em}
+/* header call (phones) */
+.hd__call{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 10px 0 4px;font-weight:600;text-decoration:none;margin-inline-start:auto;white-space:nowrap}
+.hd__call svg{width:44px;height:44px;padding:12px;border-radius:50%;background:var(--lime-soft);color:#2F5A0B;flex:none}
+.hd__call+.hd__book{margin-inline-start:0}
+@media (min-width:1000px){.hd__call{display:none}.hd__call+.hd__book{margin-inline-start:0}}
+@media (max-width:999px){
+  .hd__in{gap:8px}
+  .hero h1{order:1}
+  .hero__where{order:2;margin-top:16px;font-size:.98rem;line-height:1.5}
+  .hero__fig{order:3;margin-top:22px}
+  .hero__lead{order:4;margin-top:44px}
+  .hero__acts{order:5}
+  .lead-more{display:none}
+}
+@media (max-width:420px){.hd__logo img{height:32px}.hd__call span{display:none}.hd__call{padding:0}.hd__book{padding:0 12px;font-size:.9rem}}
+/* review dots */
+.k-quotes__dots button{min-width:44px;min-height:44px;width:44px;height:44px;margin:0;padding:0;background:transparent;color:var(--k-ink);position:relative}
+.k-quotes__dots button::before{content:"";position:absolute;left:8px;top:50%;width:28px;height:3px;margin-top:-1.5px;background:currentColor;opacity:.25;transition:opacity .3s}
+.k-quotes__dots button[aria-current]::before,.k-quotes__dots button[aria-current=true]::before{opacity:1}
+.k-quotes__dots button[aria-current=true]{width:44px;background:transparent}
+/* team: one grade, colour on hover/focus, even grid */
+.k-team__ph{aspect-ratio:4/5}
+.k-team__ph img{filter:grayscale(1) contrast(1.05)!important;object-position:50% 25%!important;transition:filter .5s ease,transform 1.2s var(--k-ease)}
+.k-team__card:hover .k-team__ph img,.k-team__card:focus-within .k-team__ph img{filter:none!important}
+@media (min-width:800px){.k-team__card:nth-child(4n+2),.k-team__card:nth-child(4n+4){margin-top:0}}
+@media (prefers-reduced-motion:reduce){.k-team__ph img{transition:none}}
+/* panorama/view */
+@media (max-width:699px){
+  .view{height:auto;aspect-ratio:auto;overflow:visible;background:none}
+  .view img{position:relative;inset:auto;height:auto;aspect-ratio:4/3;width:100%;transform:none!important}
+  .view figcaption{position:static;background:none;color:var(--k-mute);font-size:.84rem;padding:10px var(--pad) 0;max-width:none}
+}
+/* inner page heroes */
+.pg--split{display:grid;gap:clamp(30px,4vw,64px)}
+@media (min-width:1000px){.pg--split{grid-template-columns:1.35fr 1fr;align-items:center}}
+.pg__fig{margin:0;border-radius:clamp(60px,10vw,160px) clamp(60px,10vw,160px) 10px 10px;overflow:hidden;aspect-ratio:5/6;background:#d9ddd6}
+.pg__fig img{width:100%;height:100%;object-fit:cover}
+@media (max-width:999px){.pg__fig{aspect-ratio:4/3;max-height:60vh}}
+.idx{margin-top:34px;max-width:560px}
+.idx ol{list-style:none;border-top:1px solid var(--k-ink)}
+.idx li{border-bottom:1px solid var(--k-line)}
+.idx a{display:flex;align-items:baseline;gap:18px;min-height:48px;padding:10px 0;text-decoration:none;font:700 1.4rem/1.15 var(--k-display);font-stretch:70%;transition:padding .45s var(--k-ease),color .3s}
+.idx a span{font:600 .9rem var(--k-body);color:var(--k-accent);font-variant-numeric:tabular-nums;min-width:1.8em}
+.idx a:hover,.idx a:focus-visible{padding-inline-start:12px;color:var(--k-accent)}
+@media (prefers-reduced-motion:reduce){.idx a{transition:none}}
+.pg__award{font:italic 400 clamp(1.8rem,3.4vw,3.1rem)/1.2 var(--serif);max-width:13em;border-top:3px solid var(--lime);padding-top:22px}
+.pg__award span{display:block;font-size:.55em;color:var(--k-mute);margin-top:12px}
