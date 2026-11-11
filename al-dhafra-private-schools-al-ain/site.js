@@ -1,4 +1,9 @@
 (function(){var h=document.querySelector(".hd");if(!h)return;function f(){document.documentElement.style.setProperty("--hd",h.offsetHeight+"px")}f();addEventListener("resize",f)})();
+(function(){var w=document.querySelector('.k-mask__word');if(!w)return;
+  function fit(){w.style.fontSize='';var s=parseFloat(getComputedStyle(w).fontSize),pw=w.parentNode.clientWidth,ww=w.scrollWidth;if(!ww)return;
+    w.style.fontSize=Math.min(s*pw*.995/ww,innerHeight*.62)+'px'}
+  var t;function later(){clearTimeout(t);t=setTimeout(fit,150)}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);fit();addEventListener('load',fit);addEventListener('resize',later);})();
 /* Al Dhafra concept: kit 04, 06, 09, 11, 16 (map only), 18, 19 */
 (function(){
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
