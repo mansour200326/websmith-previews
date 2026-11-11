@@ -372,3 +372,83 @@ html[lang=ar] .h2{font-size:clamp(2.1rem,5.2vw,4.4rem)}
   .br__info .ph a,.crumbs a,.ftr li a,.ftr .ftr__b a{min-height:44px}
   .br__info .ph a{padding-inline:2px}
 }
+
+/* ---------- round 1 fixes (Fannan) ---------- */
+/* 1. inner page heads with media */
+.intro{display:grid;grid-template-columns:1fr;gap:28px;padding-top:clamp(28px,4.4vw,64px)}
+.intro__media{margin:0}
+.intro__media .ph{overflow:hidden;border-radius:6px;height:60vw;max-height:520px}
+.intro__media img{width:100%;height:100%;object-fit:cover}
+.intro__media figcaption{font-size:.88rem;color:var(--mute);margin-top:10px}
+@media (min-width:960px){
+  .intro{grid-template-columns:1.1fr .9fr;align-items:end;column-gap:clamp(40px,5vw,90px)}
+  .intro__media .ph{height:auto;max-height:none;aspect-ratio:4/5;max-width:480px;margin-inline-start:auto}
+  .intro__media figcaption{max-width:480px;margin-inline-start:auto}
+}
+.intro__media .ph[style] img{object-fit:contain;padding:9%}
+/* 2. doctors panel */
+.doc--lead{margin-bottom:28px}
+.doc-ask{grid-column:1/-1;background:var(--deep);color:#d3e8e9;border-radius:6px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.doc-ask h3{font:800 clamp(1.6rem,2.6vw,2.4rem)/1.05 var(--display);letter-spacing:-.035em;color:#fff}
+html[lang=ar] .doc-ask h3{letter-spacing:0;line-height:1.35}
+.doc-ask p{font-size:.98rem;max-width:30em}
+.doc-ask ul{border-top:1px solid #2f6a70}
+.doc-ask a{display:flex;justify-content:space-between;align-items:center;min-height:52px;border-bottom:1px solid #2f6a70;color:#fff;text-decoration:none;font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums;transition:padding .4s var(--ease),color .3s}
+.doc-ask a span{font-weight:500;color:#9fd8db;font-size:.95rem}
+.doc-ask a:hover{color:var(--aqua);padding-inline:6px}
+@media (min-width:1000px){.doc-ask{grid-column:span 2}}
+/* 3. lounge band height */
+.calm__ph{height:clamp(340px,42vw,560px)}
+/* 4. hero: tighter, strip in first screen */
+.hero__photo img{object-position:50% 15%}
+@media (min-width:960px){
+  .hero{padding-top:clamp(16px,2.6vw,36px);row-gap:22px}
+  .hero__type h1{font-size:clamp(4rem,8.2vw,8.6rem)}
+  .hero__photo .frame{aspect-ratio:4/4.6;max-height:calc(100vh - 250px);margin-inline-start:auto}
+  .hero__lead{font-size:clamp(1.05rem,1.4vw,1.25rem)}
+  .hero__cta{margin-top:20px}
+  .strip{margin-top:28px}
+  .strip li{padding-block:14px}
+  .strip .hrs{padding-block:10px}
+}
+/* 5. header phone never wraps */
+.k-roll,.hdr__tel,.hdr__tel .k-roll>span{white-space:nowrap}
+/* 6. map closed state */
+.map{min-height:220px;align-content:center;gap:12px;padding:24px;text-align:center}
+.map__addr{font-size:.95rem;color:var(--ink);max-width:26em}
+.map iframe{z-index:2}
+.map:has(iframe){min-height:380px}
+@media (min-width:960px){.map{min-height:220px}.map:has(iframe){min-height:400px}}
+/* 7. about mission / vision */
+.mv{display:grid;grid-template-columns:1fr;gap:clamp(28px,5vw,80px)}
+.mv__h{font:800 clamp(1.8rem,3vw,2.6rem)/1 var(--display);letter-spacing:-.035em;margin-bottom:16px}
+html[lang=ar] .mv__h{letter-spacing:0}
+.mv p{font-size:1.25rem;line-height:1.55;color:var(--ink)}
+.mv__vals{margin-top:clamp(30px,4vw,56px);padding-top:20px;border-top:1px solid #bcd9da;color:var(--mute);max-width:52em}
+.mv__vals b{color:var(--ink)}
+@media (min-width:900px){.mv{grid-template-columns:1fr 1fr}}
+@media (max-width:440px){
+  .hdr__in{gap:6px}
+  .hdr__logo img{height:32px}
+  .hdr__tel{padding:0 8px;font-size:.95rem}
+  .hdr__menu{padding:0 4px}
+  .hdr__lang{padding:0 4px}
+}
+/* 3b. calm: type-led aqua-soft block with a tight crop of the lounge (the clean left side) */
+.calm{background:var(--aqua-soft);display:grid;grid-template-columns:1fr;padding:clamp(70px,9vw,130px) var(--pad);gap:clamp(24px,4vw,64px);align-items:center;max-width:none}
+.calm__ph{grid-row:1;height:62vw;max-height:440px;border-radius:6px}
+.calm__ph img{height:100%;margin:0;object-position:12% 60%}
+.calm__cap{display:none}
+.calm__card{position:static;margin:0;max-width:none;background:none;box-shadow:none;padding:0;border-radius:0}
+.calm__card h2{font-size:clamp(2.3rem,5vw,4.4rem)}
+.calm__card p{font-size:1.1rem;max-width:34em}
+@media (min-width:960px){
+  .calm{grid-template-columns:1.15fr .85fr;max-width:1440px;margin:0 auto;border-radius:0}
+  .calm__ph{grid-row:auto;grid-column:2;height:clamp(340px,36vw,520px);max-height:none}
+  .calm__card{grid-column:1;grid-row:1;position:static}
+}
+.calm-wrap{background:var(--aqua-soft)}
+/* doctors panel spacing */
+.doc-ask{justify-content:flex-start}
+.doc-ask ul{margin-top:auto}
+.doc--lead .doc__ph img{filter:none;object-position:50% 12%}

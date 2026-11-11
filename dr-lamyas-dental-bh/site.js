@@ -97,7 +97,7 @@
       document.querySelectorAll('.br__row').forEach(function(r){r.classList.remove('is-on')});
       document.querySelectorAll('[data-branch]').forEach(function(x){x.setAttribute('aria-pressed','false')});
       btn.closest('.br__row').classList.add('is-on');btn.setAttribute('aria-pressed','true');
-      if(!map)return;map.setAttribute('data-src',btn.getAttribute('data-branch'));
+      if(!map)return;map.setAttribute('data-src',btn.getAttribute('data-branch'));var ad=map.querySelector('[data-map-addr]');if(ad&&btn.getAttribute('data-addr'))ad.innerHTML=btn.getAttribute('data-addr');
       var fr=map.querySelector('iframe');
       if(fr){fr.src=btn.getAttribute('data-branch')}else{var mb=map.querySelector('button');if(mb)mb.click()}
     });
