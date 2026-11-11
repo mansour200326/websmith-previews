@@ -3,7 +3,7 @@
   --bg:#ffffff;--paper:#fff;--ink:#0e2e33;--mute:#4a6266;--line:#d3e2e3;
   --aqua:#3bbfc4;--aqua-ink:#0b6f75;--aqua-soft:#e6f5f5;--deep:#0c3a3f;--deep-2:#0f4a50;--lily:#d8558c;
   --display:"Figtree",system-ui,sans-serif;--body:"Figtree",system-ui,sans-serif;
-  --ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,4.4vw,64px);--max:1360px;
+  --ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,4.4vw,64px);--max:1440px;
   /* kit tokens */
   --k-bg:var(--bg);--k-ink:var(--ink);--k-mute:var(--mute);--k-line:var(--line);--k-accent:var(--aqua-ink);--k-on-accent:#fff;--k-display:var(--display);--k-body:var(--body);--k-ease:var(--ease)
 }
@@ -92,7 +92,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .hero__type h1 .m{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.06em}
 .hero__type h1 .m>span{display:block}
 .hero__type h1 .ap{color:var(--lily)}
-.hero__type h1 .sub{font-weight:300;letter-spacing:-.035em;color:var(--aqua-ink)}
+.hero__type h1 .sub{font-weight:300;letter-spacing:-.035em;color:var(--ink)}
 .hero__lead{font-size:clamp(1.1rem,1.6vw,1.4rem);line-height:1.5;max-width:30em;color:var(--ink)}
 .hero__lead b{font-weight:700}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:26px;align-items:center}
@@ -268,8 +268,9 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 
 /* ---------- page intro (inner pages) ---------- */
 .intro{max-width:1440px;margin:0 auto;padding:clamp(40px,7vw,100px) var(--pad) clamp(30px,5vw,60px)}
-.intro h1{font:800 clamp(3rem,9vw,8rem)/.9 var(--display);letter-spacing:-.055em}
-.intro h1 .lt{font-weight:300;color:var(--aqua-ink)}
+.intro h1{font:800 clamp(2.9rem,7vw,6.6rem)/.92 var(--display);letter-spacing:-.05em;max-width:12em}
+.intro h1 .lt{display:block}
+.intro h1 .lt{font-weight:300}
 .intro p{margin-top:24px;max-width:36em;font-size:clamp(1.08rem,1.5vw,1.3rem);color:var(--mute)}
 .crumbs{font-size:.9rem;color:var(--mute);margin-bottom:18px}
 .crumbs a{color:var(--aqua-ink);display:inline-flex;min-height:32px;align-items:center}
@@ -364,3 +365,10 @@ html[lang=ar] .hero__type h1{font-size:clamp(3rem,9.4vw,8.4rem);line-height:1.12
 html[lang=ar] .h2,html[lang=ar] .intro h1,html[lang=ar] .call h2,html[lang=ar] .calm__card h2,html[lang=ar] .br__row h3,html[lang=ar] .k-acc__t,html[lang=ar] .tx__list .nm,html[lang=ar] .mach h3,html[lang=ar] .years .y,html[lang=ar] .doc h3{letter-spacing:0;line-height:1.25}
 html[lang=ar] .h2{font-size:clamp(2.1rem,5.2vw,4.4rem)}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+/* tap targets on phones */
+.hdr__logo{min-height:44px;display:flex;align-items:center}
+.k-acc__body .h4{font:700 .95rem var(--body);margin-bottom:8px}
+@media (max-width:899px){
+  .br__info .ph a,.crumbs a,.ftr li a,.ftr .ftr__b a{min-height:44px}
+  .br__info .ph a{padding-inline:2px}
+}
