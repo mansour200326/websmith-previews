@@ -469,3 +469,30 @@ html:lang(ar) .spanel__t{letter-spacing:-.02em}
 .hd .wrap{min-width:0}.hd__logo{min-width:0;flex:0 1 auto}
 html:lang(ar) bdi{white-space:nowrap}
 .hd__logo{display:flex;align-items:center;min-height:44px}
+
+/* ---- Fannan round 2 fixes ---- */
+/* 1. about staff photo on phones: 4:3 front-row crop */
+@media (max-width:640px){.wide img.staffimg{height:auto;aspect-ratio:4/3;object-position:50% 50%}}
+/* 2. Arabic hero: room for descenders */
+html:lang(ar) .k-kb h1{line-height:1.35}
+html:lang(ar) .k-line-mask{padding:.3em 0 .12em;margin-top:-.3em}
+/* 3. hero mobile: two-line motto, short lede */
+.lede-m{display:none}
+.hero__cap{margin-bottom:.6em}
+@media (max-width:640px){
+  html:lang(en) .k-kb h1{font-size:clamp(4.6rem,21vw,7rem);line-height:.92}
+  html:lang(en) .k-kb h1 em{display:block}
+  .lede-d{display:none}.lede-m{display:inline}
+}
+/* 4/5. panels */
+.spanel p.spanel__q{line-height:1;font-style:italic}
+html:lang(ar) .spanel p.spanel__t,html:lang(ar) .spanel p.spanel__s{font-family:"Readex Pro",system-ui,sans-serif;font-weight:500;font-style:normal;letter-spacing:0}
+html:lang(ar) .spanel p.spanel__t{line-height:1.25}
+.latin-cap{font-size:.85rem!important;color:var(--mute);margin:-6px 0 12px!important;font-family:var(--k-body)}
+/* 6. services band + accordion images on phones */
+.wide img.bandimg{aspect-ratio:auto;height:clamp(320px,48vh,560px);object-position:50% 70%}
+.k-acc__body .acc-panel{aspect-ratio:4/3;max-width:440px;display:flex}
+@media (min-width:900px){.k-acc__body .acc-panel{display:none}}
+@media (max-width:899px){.k-acc__body img{display:block}}
+@media (max-width:1024px){.wide img.staffimg{height:auto;aspect-ratio:4/3;object-position:50% 50%}}
+html:lang(ar) .spanel p.spanel__t[dir=ltr]{text-align:right;font-size:clamp(2.6rem,5vw,5rem);line-height:1.1}
