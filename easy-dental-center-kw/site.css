@@ -217,3 +217,79 @@ a{color:inherit}
 [dir=rtl] .calm .h2{font-size:clamp(2rem,4.2vw,3.6rem);line-height:1.35;max-width:13em}
 [dir=rtl] .eight__txt .h2{font-size:clamp(2rem,4.6vw,4rem)}
 .mark{min-height:44px;align-items:center}
+
+/* ===== Round 2 (Fannan r1) ===== */
+/* hero: type-led, plum block with the late hours instead of a floating portrait */
+.hero__block{background:var(--plum)!important;color:#f4eef6;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(20px,2.4vw,34px);aspect-ratio:4/5;border-radius:0;position:relative;overflow:hidden}
+.hero__block .k-visit__badge{align-self:flex-start;margin:0;background:rgba(255,255,255,.1);color:#fff}
+.hero__block .k-visit__badge.is-open{background:#e7f6ec;color:#17643a}
+.hero__block .k-visit__badge.is-shut{background:rgba(255,255,255,.12);color:#f3d9de}
+.hero__big{font:700 clamp(2.2rem,4.2vw,4.4rem)/1 var(--k-display);letter-spacing:-.035em;color:#fff}
+.hero__big b{display:block;font-weight:800;font-size:1.5em;letter-spacing:-.05em;color:var(--gold)}
+.hero__small{font-size:.98rem;color:#d8cbdc;max-width:20em;position:relative}
+.hero__ar{position:absolute;inset-block-end:-.15em;inset-inline-end:-.05em;font:800 clamp(5rem,9vw,9rem)/1 "Noto Kufi Arabic",sans-serif;color:rgba(212,173,85,.16);pointer-events:none}
+[dir=rtl] .hero__ar{font-family:"Schibsted Grotesk",sans-serif;letter-spacing:-.05em}
+[dir=rtl] .hero__big{letter-spacing:0;line-height:1.3}
+[dir=rtl] .hero__big b{letter-spacing:0;font-size:1.3em}
+@media (min-width:1000px){
+  .hero.k-split{grid-template-columns:1.05fr 1fr .36fr;align-items:stretch}
+  .hero .k-split__type{align-self:end}
+  .hero .hero__block{aspect-ratio:auto;min-height:100%}
+  .hero .k-split__meta{align-self:start}
+}
+@media (max-width:999px){
+  .hero.k-split{gap:18px;padding-top:22px}
+  .hero .k-split__type{display:contents}
+  .hero .k-split__type h1{order:1;font-size:clamp(5.2rem,29vw,13.5rem)}
+  .hero .hero__block{order:2;aspect-ratio:16/10;max-height:240px;padding:18px 20px}
+  .hero .k-split__lead{order:3;margin-top:0}
+  .hero__acts{order:4;margin-top:0}
+  .hero .k-split__meta{order:5}
+  .hero__more{display:none}
+  .hero__big{font-size:clamp(1.7rem,7vw,2.4rem)}
+  .hero__ar{font-size:5rem}
+  .hero .k-split__type h1 small{margin-top:.5em}
+}
+/* rtl: keep the dots under ي inside the mask */
+[dir=rtl] .hero .k-mask,[dir=rtl] .pintro h1 .k-rv-line{padding-bottom:.2em;margin-bottom:-.2em}
+[dir=rtl] .hero .k-split__type h1{line-height:1.25}
+[dir=rtl] .pintro h1{line-height:1.3}
+@media (max-width:999px){[dir=rtl] .hero .k-split__type h1{font-size:clamp(4.4rem,22vw,10rem)}}
+
+/* doctors: one treatment */
+.k-team__ph{aspect-ratio:4/5;background:#ece6ee}
+.k-team__ph img{filter:grayscale(1) contrast(1.05);mix-blend-mode:multiply;transform:scale(var(--z,1));transform-origin:var(--o,50% 30%);object-position:var(--o,50% 30%)}
+.k-team__card:hover .k-team__ph img{filter:none;transform:scale(calc(var(--z,1) * 1.04))}
+@media (hover:none){.k-team__ph img{filter:grayscale(1) contrast(1.05)}}
+@media (prefers-reduced-motion:reduce){.k-team__card:hover .k-team__ph img{transform:scale(var(--z,1))}}
+
+/* quote dots: keep the clip on the active one */
+.k-quotes__dots button[aria-current=true]{background:none;background-color:var(--k-ink);background-clip:content-box}
+
+/* about: equipment (plum), guarantee statement, Gulf visitors */
+.eq{background:var(--plum);color:#f4eef6}
+.eq__in{max-width:1480px;margin:0 auto;padding:clamp(80px,10vw,150px) var(--pad)}
+.eq .h2{color:#fff;max-width:13em}
+.eq__lede{color:#d8cbdc;margin:18px 0 clamp(30px,4vw,56px);font-size:1.1rem}
+.eq__table{border-top:1px solid rgba(255,255,255,.2)}
+.eq__table>div{display:grid;gap:4px 30px;padding:clamp(16px,2vw,26px) 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.eq__table dt{font:500 1rem var(--k-body);color:var(--gold)}
+.eq__table dd{margin:0;font:700 clamp(1.6rem,3.6vw,3rem)/1.1 var(--k-display);letter-spacing:-.03em;color:#fff}
+[dir=rtl] .eq__table dd{letter-spacing:0;line-height:1.4}
+@media (min-width:800px){.eq__table>div{grid-template-columns:16rem 1fr;align-items:baseline}}
+.more--gold{color:var(--gold);margin-top:22px}
+.guar{max-width:1480px;margin:0 auto;padding:clamp(80px,11vw,170px) var(--pad);border-bottom:1px solid var(--k-line)}
+.guar__k{font:700 1rem var(--k-display);color:var(--gold-ink);margin-bottom:18px}
+.guar__big{font:800 clamp(3.2rem,10vw,9rem)/.92 var(--k-display);letter-spacing:-.055em;max-width:9em}
+[dir=rtl] .guar__big{letter-spacing:0;line-height:1.3;font-size:clamp(2.8rem,8vw,7rem)}
+.guar__sub{margin-top:28px;max-width:34em;color:var(--k-mute);font-size:1.1rem}
+.gulf{max-width:1480px;margin:0 auto;padding:clamp(70px,10vw,140px) var(--pad);display:grid;gap:22px;justify-items:start}
+.gulf__cap{font:500 clamp(1.5rem,3vw,2.5rem)/1.25 var(--k-display);letter-spacing:-.02em;max-width:22em}
+[dir=rtl] .gulf__cap{letter-spacing:0;line-height:1.6}
+.gulf__txt{color:var(--k-mute);max-width:34em}
+
+/* mobile nav: fade at the scrolling edge */
+@media (max-width:980px){.mnav{-webkit-mask:linear-gradient(to right,#000 85%,transparent);mask:linear-gradient(to right,#000 85%,transparent);padding-inline-end:40px}
+[dir=rtl] .mnav{-webkit-mask:linear-gradient(to left,#000 85%,transparent);mask:linear-gradient(to left,#000 85%,transparent)}}
+.mnav bdi{margin-inline-start:.3em}
+@media (max-width:999px){.hero__ar{display:none}}

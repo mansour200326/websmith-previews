@@ -353,7 +353,7 @@
 /* 3px bar, 44px tall hit area (padding + content-box background); negative margin keeps the layout */
 .k-quotes__dots button{width:28px;height:44px;margin-block:-20.5px;border:0;padding:20.5px 0;background:var(--k-line);background-clip:content-box;cursor:pointer;transition:background .3s,width .4s var(--k-ease)}
 .k-quotes__track:focus-visible{outline:2px solid var(--k-accent);outline-offset:-2px}
-.k-quotes__dots button[aria-current=true]{background:var(--k-ink);width:56px}
+.k-quotes__dots button[aria-current=true]{background-color:var(--k-ink);width:56px}
 .k-js .k-quotes__slide .k-w{display:inline-block;opacity:.12;transform:translateY(.25em);transition:opacity .6s ease,transform .8s var(--k-ease);transition-delay:calc(var(--w)*22ms)}
 .k-js .k-quotes__slide.is-on .k-w{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.k-js .k-quotes__slide .k-w{opacity:1;transform:none;transition:none}}
