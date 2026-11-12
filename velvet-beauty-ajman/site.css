@@ -1,0 +1,384 @@
+/* Velvet Beauty Salon, Ajman. Concept by Websmith.
+   Palette from their logo (gold V on black) and the salon itself (brass mirror frames, greige walls, taupe velvet chairs).
+   Type: Gloock (heavy high-contrast serif, close to the letters on their shopfront) + Schibsted Grotesk.
+   Arabic: Reem Kufi (display) + Readex Pro (text). Kit base in kit.css. */
+
+:root{
+  --night:#110e0c;          /* logo black, warmed */
+  --night-2:#1b1714;
+  --brass:#c9a35c;          /* logo gold: large type, rules, icons */
+  --brass-pale:#e8d9b8;     /* big wordmark on dark */
+  --brass-ink:#76571d;      /* small gold text on light (AA) */
+  --stone:#f4f1ec;          /* light sections, solid (wall greige lifted) */
+  --stone-2:#e7e1d8;
+  --taupe:#8b7a68;          /* their velvet chairs */
+  --ink:#191411;
+  --mute:#5f564d;
+  --mute-d:#b9ad9c;         /* muted text on dark (AA on --night) */
+  --line:#d6cec2;
+  --line-d:#3a322b;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --k-ease:var(--ease);
+  --k-bg:var(--stone);--k-ink:var(--ink);--k-mute:var(--mute);--k-line:var(--line);
+  --k-accent:var(--brass-ink);--k-on-accent:#fff;
+  --k-display:"Gloock",Georgia,serif;--k-body:"Schibsted Grotesk",system-ui,sans-serif;
+  --pad:clamp(20px,4.5vw,72px);
+  --hdr:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hdr) + 12px)}
+body{font:400 17px/1.6 var(--k-body);color:var(--ink);background:var(--stone);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ar{font-family:"Reem Kufi","Readex Pro",sans-serif;letter-spacing:0}
+bdi,.ltr{direction:ltr;unicode-bidi:isolate}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;height:var(--hdr);background:var(--night);display:flex;align-items:center;gap:20px;padding:0 var(--pad);color:#f3ece0;transition:background .5s var(--ease),box-shadow .5s,height .4s var(--ease)}
+.hdr.is-solid{background:rgba(17,14,12,.94);box-shadow:0 1px 0 var(--line-d)}
+.hdr__brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto;min-height:44px}
+.hdr__brand img{width:auto;height:36px;mix-blend-mode:lighten}
+.hdr__brand b{font:400 1.3rem/1 var(--k-display);letter-spacing:.01em}
+.hdr__brand small{display:block;font:500 .72rem/1.2 var(--k-body);color:var(--mute-d);margin-top:3px}
+.hdr nav{display:none;gap:4px}
+.hdr nav a{text-decoration:none;font-size:.95rem;padding:12px 12px;color:#e5dccd;display:inline-flex;align-items:center;min-height:44px}
+.hdr nav a[aria-current=page]{color:var(--brass)}
+.hdr__tel{display:none;text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums;color:var(--brass);min-height:44px;align-items:center}
+.hdr__lang{text-decoration:none;font:500 1rem/1 "Reem Kufi",sans-serif;padding:0 10px;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;color:#e5dccd}
+.hdr__lang[lang=en]{font:500 .9rem/1 var(--k-body)}
+.hdr__wa{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;background:var(--brass);color:var(--night);text-decoration:none;font-weight:600;font-size:.95rem;border-radius:2px;transition:background .3s}
+.hdr__wa:hover{background:var(--brass-pale)}
+.hdr__wa svg{width:18px;height:18px;flex:none}
+@media (min-width:980px){.hdr nav{display:flex}.hdr__tel{display:inline-flex}}
+@media (max-width:420px){.hdr__brand small{display:none}.hdr__wa span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.hdr__wa{padding:0 13px}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--night);color:#f3ece0;padding:calc(var(--hdr) + clamp(8px,2vw,24px)) var(--pad) clamp(40px,6vw,80px);position:relative;overflow:hidden}
+.hero__word{font:400 clamp(6.4rem,25vw,21rem)/.8 var(--k-display);letter-spacing:-.045em;color:var(--brass-pale);margin-inline-start:-.04em}
+.hero__word .v-mask{display:block;overflow:hidden;padding-bottom:.06em}
+.hero__word .k-split__word{display:block}
+.hero__top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 40px}
+.hero__ar{font:500 clamp(1.3rem,2.6vw,2.3rem)/1.4 "Reem Kufi",sans-serif;color:var(--brass);padding-bottom:.6em;text-align:end}
+.hero__ar small{display:block;font:400 clamp(.85rem,1.1vw,1rem)/1.5 var(--k-body);color:var(--mute-d);direction:ltr}
+@media (max-width:899px){.hero__ar{text-align:start;padding-bottom:0;margin-top:-.3em}.hero__photo{order:-1}.hero__lead{font-size:1.55rem}.hero__grid{margin-top:18px}}
+.hero__grid{display:grid;gap:28px;margin-top:clamp(18px,3vw,36px)}
+.hero__photo{position:relative;overflow:hidden;aspect-ratio:16/10;background:var(--night-2);border-radius:2px}
+.hero__photo img{width:100%;height:100%;object-fit:cover}
+.k-js .hero__photo img{transform:scale(1.15);animation:k-settle 2.2s var(--ease) .35s both,v-drift 22s cubic-bezier(.25,.1,.25,1) 2.4s forwards}
+@keyframes v-drift{from{transform:scale(1)}to{transform:scale(1.07) translate3d(-1%,0,0)}}
+.hero__cap{position:absolute;inset:auto auto 0 0;padding:10px 14px;font-size:.8rem;color:#efe6d6;background:rgba(17,14,12,.72)}
+.hero__lead{font:400 clamp(1.5rem,2.6vw,2.15rem)/1.18 var(--k-display);letter-spacing:-.01em;max-width:15em}
+.hero__lead em{font-style:normal;color:inherit}
+.hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:28px}
+.btn{position:relative;display:inline-flex;align-items:center;gap:.7em;padding:18px 24px;min-height:52px;font:600 1rem/1 var(--k-body);text-decoration:none;border-radius:2px;overflow:hidden;isolation:isolate;cursor:pointer;border:0}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateY(101%);transition:transform .55s var(--ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn svg{width:20px;height:20px;flex:none}
+.btn--brass{background:var(--brass);color:var(--night)}
+.btn--brass::before{background:var(--brass-pale)}
+.btn--night{background:var(--night);color:#f3ece0}
+.btn--night::before{background:#3a2f26}
+.telink{font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums;display:inline-flex;gap:.4em;align-items:center;min-height:44px}
+.telink span.l{font-weight:400;opacity:.8}
+.hero__today{margin-top:26px;padding-top:16px;border-top:1px solid var(--line-d);display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.92rem;color:var(--mute-d)}
+.hero__today b{color:#f3ece0;font-weight:600}
+.hdr__v{width:44px;height:32px;flex:none}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7fbf8e;margin-inline-end:7px;vertical-align:1px}
+.dot.is-shut{background:var(--brass)}
+.k-js .hero .k-split__fade{opacity:0;transform:translateY(12px);animation:k-sw .9s var(--ease) forwards;animation-delay:calc(.6s + var(--i,0)*.08s)}
+.k-js .hero__photo{clip-path:inset(0 0 100% 0);animation:k-clip 1.4s var(--ease) .35s forwards}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:minmax(300px,4fr) 8fr;align-items:end;gap:clamp(30px,4vw,64px)}
+  .hero__text{padding-bottom:6px}
+  .hero__photo{aspect-ratio:16/8.4}
+}
+@media (prefers-reduced-motion:reduce){.k-js .hero__photo,.k-js .hero__photo img,.k-js .hero .k-split__fade{animation:none;clip-path:none;opacity:1;transform:none}}
+
+/* ---------- intro / facts ---------- */
+.intro{padding:clamp(70px,10vw,150px) var(--pad);display:grid;gap:40px;max-width:1500px;margin:0 auto}
+.intro__say{font:400 clamp(1.9rem,4vw,3.5rem)/1.1 var(--k-display);letter-spacing:-.02em;max-width:17em}
+.intro__say span{color:inherit}
+.intro__side{display:grid;gap:28px;align-content:start}
+.facts{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.facts li span:last-child{color:var(--mute);text-align:end}
+.intro__sign{position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:2px}
+.intro__sign img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.intro__sign figcaption{position:absolute;inset:auto 0 0;padding:28px 14px 12px;color:#fff;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+@media (min-width:900px){.intro{grid-template-columns:7fr 4fr;gap:clamp(40px,7vw,120px);align-items:start}.intro__side{padding-top:14px}}
+
+/* ---------- services (accordion, dark) ---------- */
+.svc{background:var(--night);color:#efe7da;--k-ink:#efe7da;--k-mute:var(--mute-d);--k-line:var(--line-d);--k-accent:var(--brass)}
+.svc .k-acc{max-width:1500px;padding-inline:var(--pad)}
+.svc__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 40px;margin-bottom:clamp(26px,4vw,52px)}
+.svc .k-acc h2,.svc__head h2{font:400 clamp(3rem,8vw,7rem)/.9 var(--k-display);letter-spacing:-.04em;margin:0;color:var(--brass-pale)}
+.svc__head p{max-width:24em;color:var(--mute-d)}
+.svc .k-acc__list{border-top-color:var(--brass)}
+.svc .k-acc__t{font-weight:400;letter-spacing:-.025em}
+.svc .k-acc__n{font-family:var(--k-body);color:var(--brass)}
+.svc .k-acc__from{font:500 .95rem/1 var(--k-body);color:var(--brass);white-space:nowrap;align-self:center;margin-inline-end:18px}
+.svc .k-acc__row summary{grid-template-columns:3.2em 1fr auto auto;min-height:44px}
+.svc .k-acc__body li{display:flex;justify-content:space-between;gap:12px;border-bottom-style:solid}
+.svc .k-acc__body li b{font-weight:500;color:#efe7da}
+.svc .k-acc__body li span{color:var(--mute-d);font-variant-numeric:tabular-nums;white-space:nowrap}
+.svc .k-acc__body p{color:var(--mute-d);font-size:.95rem;max-width:34em}
+.svc .k-acc__body a{color:var(--brass)}
+.svc__all{display:flex;justify-content:flex-end;padding-top:28px}
+.svc__all a{color:var(--brass);font-weight:600;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:.5em}
+@media (max-width:600px){.svc .k-acc__row summary{grid-template-columns:2.4em 1fr auto}.svc .k-acc__from{display:block;grid-column:2;grid-row:2;margin:4px 0 0;font-size:.9rem}.svc .k-acc__plus{grid-column:3;grid-row:1}}
+
+/* ---------- marquee ---------- */
+.mq{background:var(--brass);color:var(--night);padding:16px 0;overflow:hidden}
+.mq .k-mq-word{font:400 clamp(1.6rem,3.4vw,2.6rem)/1.1 var(--k-display);letter-spacing:-.01em;padding:0 .5em}
+.mq .k-mq-dot{width:.32em;height:.32em;background:var(--night);border-radius:50%;display:inline-block;align-self:center;font-size:clamp(1.6rem,3.4vw,2.6rem)}
+
+/* ---------- rating + reviews ---------- */
+.rev{padding:clamp(70px,10vw,150px) 0 clamp(50px,7vw,100px);max-width:1500px;margin:0 auto}
+.rev__top{display:grid;gap:18px;padding:0 var(--pad);align-items:end}
+.rev__num{font:400 clamp(7rem,20vw,16rem)/.78 var(--k-display);letter-spacing:-.05em;color:var(--ink);font-variant-numeric:tabular-nums}
+.rev__num small{font-size:.22em;letter-spacing:0;color:var(--brass-ink);vertical-align:.25em;margin-inline-start:.15em}
+.rev__txt{max-width:24em;font-size:1.05rem}
+.rev__txt b{display:block;font:400 1.6rem/1.15 var(--k-display);margin-bottom:6px}
+.rev__txt a{color:var(--brass-ink);font-weight:600}
+@media (min-width:900px){.rev__top{grid-template-columns:auto 1fr;gap:clamp(30px,5vw,80px)}}
+.rev .k-quotes{padding:clamp(30px,5vw,70px) 0 0}
+.rev .k-quotes__slide blockquote{font:500 clamp(1.45rem,3vw,2.5rem)/1.55 "Reem Kufi",sans-serif;letter-spacing:0;max-width:26em}
+.rev .k-quotes__slide blockquote::before{content:"”";color:var(--brass);font-family:var(--k-display)}
+.rev .k-quotes__en{margin-top:16px;color:var(--mute);font-size:1rem;max-width:44em}
+.rev .k-quotes__en i{font-style:normal;font-size:.82rem;display:block;color:var(--brass-ink);margin-bottom:2px;font-weight:600}
+.rev .k-quotes__stars{color:var(--brass-ink)}
+.rev .k-quotes__head{padding-inline:var(--pad)}
+.rev .k-quotes__slide{padding-inline:var(--pad)}
+.rev .k-quotes__dots{padding-inline:var(--pad)}
+.rev .k-quotes__btns button{min-width:48px;min-height:48px}
+
+/* ---------- team ---------- */
+.team{background:var(--stone-2)}
+.team .k-team{max-width:1500px;padding-inline:var(--pad)}
+.team .k-team__head{grid-template-columns:1fr;align-items:end}
+.team .k-team__head h2{font-weight:400;letter-spacing:-.04em}
+@media (min-width:900px){.team .k-team__head{grid-template-columns:1fr 1fr}}
+.team .k-team__grid{grid-template-columns:1fr;gap:14px}
+@media (min-width:700px){.team .k-team__grid{grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,28px)}.team .k-team__card:nth-child(n){margin-top:0}.team .k-team__card:nth-child(4n+4){margin-top:0}}
+.team .k-team__card.is-mono .k-team__ph{background:var(--night);aspect-ratio:5/4;border-radius:2px}
+.team .k-team__card.is-mono .k-team__ph::before{color:var(--brass);font-weight:400;font-size:clamp(4rem,9vw,7rem)}
+.team .k-team__card h3{font:400 1.7rem/1.1 var(--k-display)}
+.team .k-team__card p.role{color:var(--brass-ink);font-size:.95rem}
+.team .k-team__card .bk{display:inline-flex;align-items:center;gap:.4em;margin-top:6px;font-weight:600;text-decoration:none;min-height:44px}
+
+/* ---------- inside (gallery) ---------- */
+.inside{background:var(--night);color:#efe7da;padding:clamp(70px,10vw,150px) var(--pad)}
+.inside__in{max-width:1500px;margin:0 auto}
+.inside h2{font:400 clamp(3rem,8vw,7rem)/.9 var(--k-display);letter-spacing:-.04em;color:var(--brass-pale);margin-bottom:clamp(26px,4vw,52px)}
+.inside__grid{display:grid;gap:clamp(12px,1.6vw,22px)}
+.inside figure{position:relative}
+.inside .ph{overflow:hidden;border-radius:2px;aspect-ratio:16/10}
+.inside .ph img{width:100%;height:100%;object-fit:cover}
+.inside figcaption{font-size:.88rem;color:var(--mute-d);padding-top:10px;max-width:34em}
+@media (min-width:900px){
+  .inside__grid{grid-template-columns:repeat(12,1fr);align-items:end}
+  .inside figure:nth-child(1){grid-column:1/8}
+  .inside figure:nth-child(2){grid-column:8/13}
+  .inside figure:nth-child(1) .ph{aspect-ratio:4/3}
+  .inside figure:nth-child(2) .ph{aspect-ratio:4/5}
+}
+
+/* ---------- book band ---------- */
+.book{background:var(--brass);color:var(--night);padding:clamp(70px,10vw,140px) var(--pad)}
+.book__in{max-width:1500px;margin:0 auto;display:grid;gap:30px}
+.book h2{font:400 clamp(2.8rem,7.5vw,6.6rem)/.92 var(--k-display);letter-spacing:-.04em;max-width:11em}
+.book p{max-width:30em;font-size:1.08rem}
+.book__acts{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.book__acts .telink{font-size:1.1rem}
+.book__acts a.k-link{font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+@media (min-width:900px){.book__in{grid-template-columns:1.3fr 1fr;align-items:end}}
+
+/* ---------- visit ---------- */
+.visit .k-visit{max-width:1500px;margin:0 auto;border-top:0}
+.visit .k-visit__info{padding-inline:var(--pad)}
+.visit .k-visit h2{font-weight:400;letter-spacing:-.04em}
+.visit .k-visit__go{background:var(--night);color:#f3ece0;min-height:48px}
+.visit .k-visit__go:hover{background:#3a2f26}
+.visit .k-visit__call{min-height:48px}
+.visit .k-visit__map{background:var(--stone-2);min-height:420px}
+.visit .k-visit tr.is-today td{color:var(--brass-ink)}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--night);color:#d9cfbf;padding:clamp(60px,8vw,110px) var(--pad) 30px;font-size:.95rem}
+.ftr__in{max-width:1500px;margin:0 auto;display:grid;gap:36px}
+.ftr__name{font:400 clamp(3.6rem,12vw,10rem)/.8 var(--k-display);letter-spacing:-.045em;color:var(--brass-pale)}
+.ftr__name span{display:block;font:500 clamp(1.1rem,2vw,1.5rem)/1.4 "Reem Kufi",sans-serif;letter-spacing:0;color:var(--brass);margin-top:14px}
+.ftr__cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.ftr h3{font:600 .82rem/1 var(--k-body);color:var(--mute-d);margin-bottom:12px}
+.ftr ul{list-style:none;padding:0}
+.ftr li a,.ftr li span{display:inline-flex;align-items:center;min-height:44px;padding-block:4px;text-decoration:none}
+.ftr li a:hover{color:var(--brass)}
+.ftr__note{border-top:1px solid var(--line-d);padding-top:20px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;color:var(--mute-d);font-size:.85rem}
+
+/* ---------- services page ---------- */
+.pghead{background:var(--night);color:#f3ece0;padding:calc(var(--hdr) + clamp(40px,7vw,100px)) var(--pad) clamp(40px,6vw,80px)}
+.pghead__in{max-width:1500px;margin:0 auto;display:grid;gap:24px;align-items:end}
+.pghead h1{font:400 clamp(3.6rem,11vw,10rem)/.86 var(--k-display);letter-spacing:-.045em;color:var(--brass-pale)}
+.pghead p{max-width:30em;color:var(--mute-d);font-size:1.05rem}
+.pghead p b{color:#f3ece0;font-weight:600}
+@media (min-width:900px){.pghead__in{grid-template-columns:1.4fr 1fr}}
+.price{max-width:1500px;margin:0 auto;padding:clamp(40px,6vw,90px) var(--pad) clamp(60px,8vw,120px);display:grid;gap:40px}
+.price__idx{position:sticky;top:var(--hdr);z-index:5;background:var(--stone);margin-inline:calc(var(--pad) * -1);padding:8px var(--pad);border-bottom:1px solid var(--line);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.price__idx::-webkit-scrollbar{display:none}
+.price__idx a{flex:none;text-decoration:none;font-size:.95rem;padding:10px 12px;min-height:44px;display:inline-flex;align-items:center;color:var(--mute);border-radius:2px;transition:color .25s,background .25s}
+.price__idx a.is-on{color:var(--ink);background:var(--stone-2)}
+@media (min-width:1000px){
+  .price{grid-template-columns:240px 1fr;gap:clamp(40px,6vw,100px)}
+  .price__idx{position:sticky;top:calc(var(--hdr) + 30px);align-self:start;flex-direction:column;margin:0;padding:0;border:0;background:none;overflow:visible}
+  .price__idx a{padding:8px 0;min-height:40px;border-radius:0;background:none!important;border-inline-start:2px solid transparent;padding-inline-start:14px}
+  .price__idx a.is-on{border-color:var(--brass)}
+}
+.grp{padding-bottom:clamp(40px,6vw,80px);margin-bottom:clamp(40px,6vw,80px);border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--hdr) + 70px)}
+.grp:last-child{border-bottom:0;margin-bottom:0}
+.grp__h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 20px;margin-bottom:10px}
+.grp h2{font:400 clamp(2.2rem,5vw,4rem)/.95 var(--k-display);letter-spacing:-.035em}
+.grp h2 span{display:block;font:500 1.15rem/1.6 "Reem Kufi",sans-serif;color:var(--brass-ink);letter-spacing:0;margin-top:6px}
+.grp__lead{color:var(--mute);max-width:36em;margin-bottom:12px}
+.grp .k-menu__items{margin-top:8px}
+.grp .k-menu__item{opacity:1!important;transform:none!important}
+.grp .k-menu__name{font:500 1.06rem/1.3 var(--k-body)}
+.grp .k-menu__name i{display:block;font:400 .92rem/1.5 "Readex Pro",sans-serif;font-style:normal;color:var(--mute);margin-top:1px}
+.grp .k-menu__price{font-size:1.02rem}
+.grp .k-menu__price small{color:var(--mute)}
+.grp .k-menu__dots{border-bottom-color:#cfc5b6}
+.grp__wa{display:inline-flex;align-items:center;gap:.5em;margin-top:22px;font-weight:600;color:var(--brass-ink);text-decoration:none;min-height:44px}
+.grp__ph{margin:26px 0 6px;overflow:hidden;border-radius:2px;aspect-ratio:21/9}
+.grp__ph img{width:100%;height:100%;object-fit:cover}
+.grp__cols{display:grid;gap:0 48px}
+@media (min-width:1200px){.grp__cols{grid-template-columns:1fr 1fr}}
+
+/* ---------- Arabic pages ---------- */
+[lang=ar] body{font:400 17.5px/1.85 "Readex Pro",system-ui,sans-serif}
+[lang=ar] .hero__lead,[lang=ar] .intro__say,[lang=ar] .rev__txt b,[lang=ar] .book h2,[lang=ar] .grp h2,[lang=ar] .svc__head h2,[lang=ar] .inside h2,[lang=ar] .k-acc__t,[lang=ar] .k-team__head h2,[lang=ar] .k-visit h2,[lang=ar] .pghead h1,[lang=ar] .team .k-team__card h3{font-family:"Reem Kufi","Readex Pro",sans-serif;letter-spacing:0;font-weight:600}
+[lang=ar] .hero__lead{font-size:clamp(1.55rem,2.6vw,2.2rem);line-height:1.5;font-weight:500}
+[lang=ar] .intro__say{line-height:1.45;font-size:clamp(1.8rem,3.6vw,3rem);font-weight:500}
+[lang=ar] .book h2,[lang=ar] .svc__head h2,[lang=ar] .inside h2,[lang=ar] .pghead h1{line-height:1.2}
+[lang=ar] .k-acc__t{line-height:1.3}
+[lang=ar] .k-acc__t small,[lang=ar] .k-team__head p{font-family:"Readex Pro",sans-serif}
+[lang=ar] .grp h2{line-height:1.3}
+[lang=ar] .grp h2 span{font:500 .95rem/1.6 var(--k-body);color:var(--brass-ink)}
+[lang=ar] .grp .k-menu__name{font-family:"Readex Pro",sans-serif}
+[lang=ar] .grp .k-menu__name i{font-family:var(--k-body)}
+[lang=ar] .hero__ar{direction:ltr;text-align:start;font:400 clamp(1rem,1.6vw,1.25rem)/1.3 var(--k-body);color:var(--brass);letter-spacing:.02em}
+[lang=ar] .rev .k-quotes__slide blockquote::before{content:"“"}
+[lang=ar] .ftr__name span{font:500 1rem/1.4 var(--k-body)}
+[lang=ar] .hdr__brand b{font-family:"Reem Kufi",sans-serif;font-weight:600;font-size:1.2rem}
+[dir=rtl] .hero__cap{inset:auto 0 0 auto}
+[dir=rtl] .k-arrow{display:inline-block}
+[dir=rtl] .hero__word{margin-inline-start:0}
+
+/* print/no-js safety */
+@media (prefers-reduced-motion:reduce){.hdr{transition:none}}
+
+/* Arabic display: Reem Kufi for the big Arabic name and anything set in Gloock */
+[lang=ar] .hero__word{font-family:"Reem Kufi",sans-serif;font-weight:700!important;font-size:clamp(6rem,22vw,18rem);line-height:1.05!important;letter-spacing:0!important}
+[lang=ar] .hero__word .v-mask{padding-bottom:.12em}
+[lang=ar] .mq .k-mq-word,[lang=ar] .ftr__name,[lang=ar] .k-acc__from{font-family:"Reem Kufi",sans-serif}
+[lang=ar] .ftr__name{font-weight:700;letter-spacing:0;line-height:1.1}
+[lang=ar] .team .k-team__card.is-mono .k-team__ph::before{font-family:"Reem Kufi",sans-serif;font-weight:600}
+[lang=ar] .rev__txt b{font-weight:600}
+[lang=ar] .hero__today,[lang=ar] .facts li{font-size:1rem}
+
+.vh:focus{position:fixed!important;z-index:100;inset-inline-start:12px;top:12px;width:auto;height:auto;clip:auto;padding:12px 16px;background:var(--brass);color:var(--night);font-weight:600}
+
+/* team: compact on phones, lighter on desktop (Fannan r1) */
+@media (max-width:699px){
+  .team .k-team__card{display:grid;grid-template-columns:76px 1fr;column-gap:16px;align-items:center;padding-block:14px;border-top:1px solid var(--line)}
+  .team .k-team__card.is-mono .k-team__ph{grid-row:1/4;aspect-ratio:1;margin:0;width:76px}
+  .team .k-team__card.is-mono .k-team__ph::before{font-size:2.6rem}
+  .team .k-team__card h3,.team .k-team__card p.role,.team .k-team__card .bk{grid-column:2;margin:0}
+  .team .k-team__card .bk{min-height:40px}
+  .team .k-team__grid{gap:0}
+}
+@media (min-width:700px){.team .k-team__card.is-mono .k-team__ph{aspect-ratio:16/9}.team .k-team__card.is-mono .k-team__ph::before{font-size:clamp(3.4rem,6vw,5rem)}}
+.k-quotes__dots button[aria-current=true]{background-clip:content-box}
+:root:lang(ar){--k-display:"Reem Kufi","Readex Pro",sans-serif;--k-body:"Readex Pro",system-ui,sans-serif}
+[lang=ar] .rev__num{font-family:"Gloock",Georgia,serif;direction:ltr;unicode-bidi:isolate;text-align:start}
+[lang=ar] .rev__num small{font-family:"Gloock",Georgia,serif}
+
+/* ---- Fannan (independent) round 1 fixes ---- */
+/* 7 intro: short statement + body */
+.intro__body{font-size:1.15rem;max-width:34em;color:var(--mute);margin-top:22px}
+/* 3 map panel: their shopfront behind the button */
+.visit .k-visit__map{background:linear-gradient(rgba(17,14,12,.45),rgba(17,14,12,.45)),url(img/velvet-sign.webp) center/cover;align-content:center;gap:16px}
+[lang=ar] .visit .k-visit__map{background:linear-gradient(rgba(17,14,12,.45),rgba(17,14,12,.45)),url(img/velvet-sign.webp) center/cover}
+.map__lbl{position:relative;z-index:1;color:#fff;font:400 1.6rem/1.2 var(--k-display);text-shadow:0 2px 18px rgba(0,0,0,.5);text-align:center;margin:0}
+[lang=ar] .map__lbl{font-family:"Reem Kufi",sans-serif;font-weight:600}
+@media (max-width:899px){.visit .k-visit__map{min-height:260px;max-height:260px}}
+/* 6 mobile hero */
+@media (max-width:600px){
+  .hero__word{font-size:clamp(6.4rem,36vw,21rem)}
+  [lang=ar] .hero__word{font-size:clamp(6.4rem,34vw,21rem)}
+  .hero__photo{margin-inline:calc(var(--pad) * -1);border-radius:0}
+  .hero__today{column-gap:16px}
+  .hero__today>span:nth-child(2){order:3;width:100%}
+}
+/* 10 AR mobile hero: Latin line aligned with the Arabic line */
+@media (max-width:899px){[lang=ar] .hero__ar{text-align:start}[lang=ar] .hero__ar>span{display:block;text-align:right}}
+/* 1 Arabic: Reem Kufi only for wordmark, h1/h2, .hero__ar, footer name; Readex Pro for reading text */
+:lang(ar) .hero__lead,[lang=ar] .hero__lead{font:500 clamp(1.4rem,2.4vw,2rem)/1.6 "Readex Pro",sans-serif;letter-spacing:0}
+[lang=ar] .intro__say{font:500 clamp(1.5rem,3vw,2.4rem)/1.5 "Readex Pro",sans-serif;letter-spacing:0}
+.rev .k-quotes__slide blockquote,[lang=ar] .rev .k-quotes__slide blockquote{font:400 clamp(1.25rem,2.2vw,1.9rem)/1.7 "Readex Pro",sans-serif;letter-spacing:0}
+.team .k-team__card h3 span[lang=ar]{font-family:"Readex Pro",sans-serif}
+[lang=ar] .team .k-team__card h3{font-family:"Readex Pro",sans-serif;font-weight:600}
+.hdr__lang[lang=ar]{font:500 1rem/1 "Readex Pro",sans-serif}
+[lang=ar] .k-acc__t small,[lang=ar] .k-acc__from,[lang=ar] .rev__txt b,[lang=ar] .grp .k-menu__name,[lang=ar] .k-team__head p{font-family:"Readex Pro",sans-serif}
+[lang=ar] .k-acc__t{font-family:"Readex Pro",sans-serif;font-weight:500}
+[lang=ar] .mq .k-mq-word{font-family:"Readex Pro",sans-serif;font-weight:500}
+[lang=ar] .team .k-team__card.is-mono .k-team__ph::before{font-family:"Gloock",Georgia,serif;font-weight:400}
+.visit .k-visit__map iframe{z-index:2}
+
+/* ---- Fannan round 2 fixes ---- */
+.intro__sign{max-width:34em;aspect-ratio:16/10;margin-top:48px}
+@media (min-width:900px){.intro{align-items:start}}
+.rev .k-quotes__slide blockquote,[lang=ar] .rev .k-quotes__slide blockquote{font-size:clamp(1.5rem,2.4vw,2.1rem);max-width:24em}
+.rev .k-quotes__en{max-width:40em}
+@media (min-width:1100px){
+  .rev .k-quotes{display:grid;grid-template-columns:minmax(0,1fr) 300px;column-gap:40px;align-items:start}
+  .rev .k-quotes__track{grid-column:1;grid-row:1}
+  .rev .k-quotes__head{grid-column:2;grid-row:1;flex-direction:column;align-items:flex-start;padding-inline:0 var(--pad);margin:0;padding-top:20px;border-top:1px solid var(--line)}
+  .rev .k-quotes__dots{grid-column:1;grid-row:2}
+}
+/* map: solid plate over a letters-only crop of the sign */
+.visit .k-visit__map,[lang=ar] .visit .k-visit__map{background:linear-gradient(rgba(17,14,12,.55),rgba(17,14,12,.55)),url(img/velvet-sign-letters.webp) 30% 40%/cover;display:block;place-items:initial}
+@media (min-width:900px){.visit .k-visit__map{min-height:420px;max-height:640px;align-self:stretch}}
+.map__plate{position:absolute;inset-inline-start:24px;bottom:24px;z-index:1;background:rgba(17,14,12,.85);padding:18px 22px;display:grid;gap:12px;justify-items:start;max-width:calc(100% - 48px)}
+.map__plate .map__lbl{text-align:start;text-shadow:none;font-size:1.6rem}
+.map__plate button{box-shadow:none}
+/* open/closed badge: neutral, no red */
+.k-visit__badge.is-shut,.visit .k-visit__badge.is-shut{background:var(--stone-2);color:var(--brass-ink)}
+.k-visit__badge.is-open{background:var(--stone-2);color:var(--brass-ink)}
+/* AR header brand: no underline, Readex Pro */
+.hdr__brand,.hdr__brand b{text-decoration:none}
+[lang=ar] .hdr__brand b{font-family:"Readex Pro",sans-serif;font-weight:600;font-size:1.15rem}
+.k-visit__badge.is-later i{background:var(--brass)}
+.visit .k-visit__badge{background:var(--stone-2);color:var(--brass-ink)}
+.k-js .rev .k-quotes__slide .k-w{opacity:1}
+
+/* ---- Fannan round 3 polish ---- */
+[lang=ar] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
+.ftr li a{gap:.35em}
+[lang=ar] footer bdi{margin-inline-start:.1em}
+@media (min-width:900px){.intro__side{align-self:start;position:sticky;top:120px}}
+@media (min-width:900px){.visit .k-visit__map{align-self:stretch;min-height:100%;max-height:none}}
+.intro__sign img{object-position:30% 40%}
+@media (max-width:600px){
+  .visit .k-visit__map,[lang=ar] .visit .k-visit__map{background-position:20% 45%}
+  .map__plate{padding:14px 16px;inset-inline-start:16px;bottom:16px;gap:10px}
+  .map__plate .map__lbl{font-size:1.25rem}
+}
+@media (min-width:700px){.team .k-team__card.is-mono .k-team__ph{aspect-ratio:21/9}.team .k-team__card.is-mono .k-team__ph::before{font-size:clamp(3rem,5vw,4.5rem)}}
+@media (min-width:900px){
+  [lang=ar] .hero__top{flex-direction:column;align-items:flex-start;gap:0}
+  [lang=ar] .hero__ar{text-align:right;padding-bottom:0;margin-top:-.1em}
+  [lang=ar] .hero__ar>span{display:block;text-align:right}
+}
+.intro__sign img{object-position:40% 78%}
