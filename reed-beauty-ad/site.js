@@ -511,3 +511,22 @@
     Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s)});
   }
 })();
+/* the hero photo opens with a clip-path animation; drop it once finished so no capture/compositor can replay it */
+(function(){
+  document.querySelectorAll('.hero__photo,.sv-hero__photo').forEach(function(el){
+    function done(e){if(e.target!==el)return;el.classList.add('is-open')}
+    el.addEventListener('animationend',done);
+    setTimeout(function(){el.classList.add('is-open')},2600);
+  });
+})();
+(function(){var h=document.querySelectorAll('.hero,.sv-hero');setTimeout(function(){h.forEach(function(x){x.classList.add('is-done')})},2800)})();
+(function(){var f=document.querySelector('.map-desk');if(f&&matchMedia('(min-width:900px)').matches){addEventListener('load',function(){f.loading='eager';if(!f.src)f.src=f.getAttribute('src')})}})();
+/* reviews: track takes the height of the slide in view, so short reviews don't leave an empty block */
+(function(){
+  var tr=document.querySelector('.reviews .k-quotes__track');if(!tr)return;
+  var slides=[].slice.call(tr.querySelectorAll('.k-quotes__slide'));
+  function fit(s){tr.style.height=s.offsetHeight+'px'}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)fit(e.target)})},{root:tr,threshold:.6});
+  slides.forEach(function(s){io.observe(s)});
+  addEventListener('resize',function(){var r=tr.getBoundingClientRect();slides.forEach(function(s){var b=s.getBoundingClientRect();if(Math.abs(b.left-r.left)<r.width/2)fit(s)})});
+})();

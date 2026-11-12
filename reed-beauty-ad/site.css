@@ -907,3 +907,81 @@ h1,h2,h3,.k-acc__t{text-wrap:balance}
 .reviews .k-quotes__dots button{width:44px}
 .reviews .k-quotes__dots button[aria-current=true]{width:64px}
 .ft__list li a{min-width:44px}
+
+/* ===== Fannan round 1 ===== */
+.reviews{grid-template-columns:minmax(0,1fr)}
+.reviews>*{min-width:0}
+@media (min-width:980px){.reviews{grid-template-columns:minmax(0,.62fr) minmax(0,2fr)}}
+.reviews .k-quotes__dots button[aria-current=true]{background-color:var(--k-ink);background-clip:content-box}
+/* hero meta row: call + rating on one line */
+.hero__meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:.95rem}
+.hero__rate{display:inline-flex;align-items:center;gap:6px;min-height:44px;text-decoration:none;color:var(--k-ink);font-weight:500}
+@media (max-width:700px){
+  .rate-long{display:none}
+  .hero__second:not(.lat){display:none}
+  .hero__top{gap:12px}
+  .hero__name{font-size:clamp(6.4rem,27vw,9rem)}
+  html:lang(ar) .hero__name{font-size:clamp(5.6rem,26vw,8rem);line-height:1.05}
+  .hero__lead{font-size:1.04rem;margin-bottom:16px}
+  .hero__acts{margin-bottom:6px}
+  .hero__meta{gap:4px 18px;flex-wrap:nowrap}
+  .hero__photo{margin-top:18px}
+  .hero__photo img{object-position:62% 50%}
+  .hd{padding-block:8px}
+}
+/* inside reed */
+@media (min-width:860px){.in-b{align-self:start!important}.in-d{margin-top:0!important}}
+.in-c img{object-position:30% 85%!important}
+@media (max-width:859px){
+  .in-a{grid-column:1/-1!important;margin-inline:calc(var(--pad)*-1)}
+  .in-a .k-zoom{border-radius:0}
+  .in-a img{aspect-ratio:4/5}
+  .in-a figcaption{padding-inline:var(--pad)}
+  .in-b,.in-c{grid-column:span 6!important}
+  .in-b img,.in-c img{aspect-ratio:1}
+  .in-d{grid-column:1/-1!important}
+}
+/* small type */
+.pr small{font-size:max(.74em,12.5px)}
+html:lang(ar) .sec-head p,html:lang(ar) .bath__escape p,html:lang(ar) .bl__d,html:lang(ar) .cat__note{font-size:1.05rem;line-height:1.8}
+html:lang(ar) .bath__lead{line-height:1.8}
+/* find us */
+.visit .k-visit__badge{margin-top:14px}
+.map-wrap{position:relative;display:grid}
+.map-desk{display:none;width:100%;height:100%;border:0}
+@media (min-width:900px){
+  .map-wrap{margin:clamp(30px,4vw,56px);margin-inline-start:0;border-radius:999px 999px 18px 18px;overflow:hidden;min-height:560px;background:var(--sand-2)}
+  .map-desk{display:block;min-height:560px}
+  .map-wrap .k-visit__map{display:none}
+}
+@media (max-width:899px){.visit .k-visit__map{margin:0;border-radius:0}}
+@media (max-width:700px){.hero__photo{aspect-ratio:8/7}.hero__photo img{object-position:65% 60%}}
+.k-js .hero__photo.is-open,.k-js .sv-hero__photo.is-open{animation:none!important;clip-path:none!important}
+.k-js .is-done .hero__name,.k-js .is-done .hero__second,.k-js .is-done .hero__fade{animation:none!important;opacity:1!important;transform:none!important}
+.k-js .is-done .hero__photo img{animation:none!important;transform:scale(1.02)}
+.map-fallback{display:none}
+@media (min-width:900px){
+  .map-fallback{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:6px;color:var(--k-accent)}
+  .map-fallback .lat{font-size:clamp(2.4rem,4vw,3.6rem);color:var(--k-ink)}
+  .map-desk{position:relative;z-index:1}
+}
+
+/* ===== Fannan round 2 ===== */
+@media (max-width:600px){
+  [dir=rtl] .bath__escape{border-radius:18px}
+  .visit .k-visit__acts{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
+  .visit .k-visit__acts a{width:100%;justify-content:center}
+}
+@media (min-width:860px){.in-d{align-self:end}}
+@media (min-width:860px){.in-c img{aspect-ratio:1!important}.in-d img{aspect-ratio:6/5}.in-c .k-zoom{border-radius:999px 999px 8px 8px}}
+
+/* ===== Fannan round 3 polish ===== */
+.cat__fig img[src$="pedicure.webp"]{object-position:0% 70%}
+.reviews__score a,.acc-links a,.sec-head p a{gap:.3em}
+.sec-head p a{display:inline-flex;align-items:center}
+.reviews .k-quotes__track{align-items:flex-start;transition:height .5s var(--k-ease)}
+@media (prefers-reduced-motion:reduce){.reviews .k-quotes__track{transition:none}}
+/* Marcellus 1 and 0 read as I and O: digits inside display type are set in Albert Sans */
+:is(.k-acc__n,.it__n,.bl__n,.bd__n,.k-drag__meta h3,.bath__esc-t,.cat__head h2,.cat__g,.sec-head h2,.k-team__card h3,.hero__name,.ft__big,.ft__name) .d{font-family:"Albert Sans",system-ui,sans-serif;font-variant-numeric:lining-nums tabular-nums;font-size:.9em;letter-spacing:0}
+html:lang(ar) .bath__esc-t{font-size:1.6rem;line-height:1.3}
+html:lang(ar) .bath__escape p.bath__esc-t{font-size:1.6rem;line-height:1.3}

@@ -12,7 +12,7 @@
   if(!RM){
     var masks=[].slice.call(document.querySelectorAll('[data-k-mask]'));
     if(masks.length){var tk=false;
-      var upd=function(){tk=false;masks.forEach(function(el){var r=el.getBoundingClientRect(),d=el.offsetHeight-innerHeight;var p=d>0?Math.min(1,Math.max(0,-r.top/d)):0;el.style.setProperty('--p',p.toFixed(4))})};
+      var upd=function(){tk=false;masks.forEach(function(el){var r=el.getBoundingClientRect(),d=el.offsetHeight-innerHeight;var p=d>0?Math.min(1,Math.max(0,-r.top/d)):0;el.style.setProperty('--p',p.toFixed(4));el.classList.toggle('is-open',p>.7)})};
       addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd();}
   }
 
@@ -72,5 +72,8 @@
     var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var a=map[e.target.id];if(a&&a!==cur){if(cur)cur.classList.remove('is-on');a.classList.add('is-on');cur=a;
       var ol=a.closest('ol');if(ol&&ol.scrollWidth>ol.clientWidth){var l=a.offsetLeft-ol.clientWidth/2+a.offsetWidth/2;ol.scrollTo({left:l,behavior:RM?'auto':'smooth'})}}}})},{rootMargin:'-30% 0px -60% 0px'});
     Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+    var first=links[0],firstSec=first&&document.getElementById(first.getAttribute('href').slice(1));
+    var top0=function(){if(firstSec&&firstSec.getBoundingClientRect().top>innerHeight*.3){if(cur)cur.classList.remove('is-on');first.classList.add('is-on');cur=first}};
+    addEventListener('scroll',top0,{passive:true});top0();
   }
 })();

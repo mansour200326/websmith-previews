@@ -7,3 +7,13 @@
     {rootMargin:'-40% 0px -55% 0px'});
   links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
 })();
+/* Reviews: the track follows the height of the review in view, so short reviews don't leave an empty band. */
+(function(){
+  document.querySelectorAll('.k-quotes__track').forEach(function(t){
+    var sl=[].slice.call(t.querySelectorAll('.k-quotes__slide'));if(!sl.length)return;
+    function fit(){var on=t.querySelector('.k-quotes__slide.is-on')||sl[0];t.style.height=on.offsetHeight+'px'}
+    t.style.transition='height .5s cubic-bezier(.16,1,.3,1)';
+    var mo=new MutationObserver(fit);sl.forEach(function(s){mo.observe(s,{attributes:true,attributeFilter:['class']})});
+    addEventListener('resize',fit);addEventListener('load',fit);fit();
+  });
+})();
