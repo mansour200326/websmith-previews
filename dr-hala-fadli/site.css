@@ -511,3 +511,18 @@ html:lang(ar) .k-rv-line{padding-bottom:.25em;margin-bottom:-.25em}
   .pi__photo .doc__photo,.pi__photo .doc__cap{max-width:300px;margin-inline-start:auto}
   .doc__grid--solo .doc__text{grid-column:2}
 }
+
+/* ---------- R4 (Fannan round-3 fixes) ---------- */
+/* 1. AR mobile: the dots of ي must clear the Latin line below */
+@media (max-width:720px){
+  html:lang(ar) .lockup__ar,[dir=rtl] .lockup__ar{margin-bottom:.12em;line-height:1.35}
+}
+/* 2. the villa line now sits under "Your first visit" */
+.k-story__head .villa{color:var(--k-mute);max-width:34em;margin-top:14px;font-size:1rem}
+/* 3. desktop story: no blank runs between or after the steps */
+@media (min-width:900px){
+  .k-story__steps{padding:8vh 0 12vh}
+  .k-story__step{min-height:36vh}
+  .k-story__media{height:70vh;max-height:none}
+}
+@media (min-width:900px){.k-story__head .villa{grid-column:2;margin-top:0}}

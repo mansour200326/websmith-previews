@@ -505,3 +505,12 @@ img[src*="room-"],img[src*="steam-box"],img[src*="opening-"],img[src*="dr-tinu"]
 .gal figcaption{font-size:.88rem;color:var(--k-mute);margin-top:8px}
 @media (min-width:860px){.gal{grid-template-columns:1.4fr 1fr 1fr}.gal figure:first-child .ph{aspect-ratio:4/3}}
 
+
+/* ===== round 3 (Fannan) fixes ===== */
+/* 1. hero photo regraded (neutral sheet, plant at ~40% saturation); plant corner pushed out of the arch */
+@media (min-width:900px){.hero__arch img{object-position:62% 35%}}
+/* 2. fade edge: no straight line or corner showing at the arch's foot */
+.hero__arch .frame::after{height:36%;bottom:-1px;background:linear-gradient(to top,#faf8f4 0%,#faf8f4 8%,rgba(250,248,244,0) 100%)}
+/* 3. steam-box photo recropped to the box + dhara pot; caption on a stronger scrim */
+.k-menu__feat figcaption{background:linear-gradient(transparent,rgba(0,0,0,.72) 45%);text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.k-menu__feat img[src$="room-steam.webp"]{object-position:0% 30%}

@@ -576,3 +576,12 @@ a{color:inherit}
 @media (max-width:899px){.hero__sep{display:none}.hero__where a{display:flex;width:max-content}}
 @media (min-width:1100px){.hero .k-split__photo img{object-position:78% 30%}}
 @media (max-width:899px){.hero{min-height:0}.hero .k-split__type{padding-bottom:48px}}
+
+/* ================= round 3 (Fannan) fixes ================= */
+/* 1. map poster: shorthand on line 355 wiped the image */
+.k-visit__map{background:linear-gradient(rgba(20,21,23,.35),rgba(20,21,23,.35)),url(img/railway-street.webp) center/cover #24262a}
+/* 2. mobile Mégane: crop away the brushed-metal backdrop */
+@media (max-width:899px){.warr__img{aspect-ratio:16/10}.warr__img img{object-position:50% 85%}}
+/* 3. keep the price together */
+.k-split__lead{text-wrap:pretty}
+.nw{white-space:nowrap}

@@ -21,3 +21,12 @@
   // close the phone menu after choosing a link
   document.querySelectorAll('.hd__menu a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open')})});
 })();
+
+// "What we do": the sticky photo follows the hovered/focused/scrolled service row (desktop)
+(function(){
+  var fig=document.querySelector('.svx__fig'); if(!fig) return;
+  var imgs=fig.querySelectorAll('img'),rows=document.querySelectorAll('.svx__row');
+  function on(i){rows.forEach(function(r){r.classList.toggle('is-on',r.dataset.i==i)});imgs.forEach(function(m){m.classList.toggle('is-on',m.dataset.i==i)})}
+  rows.forEach(function(r){r.addEventListener('mouseenter',function(){on(r.dataset.i)});r.addEventListener('focusin',function(){on(r.dataset.i)})});
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)on(e.target.dataset.i)})},{rootMargin:'-45% 0px -45% 0px'});rows.forEach(function(r){io.observe(r)})}
+})();
