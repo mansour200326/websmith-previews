@@ -1,0 +1,336 @@
+/* Oak Spa concept · Websmith. Palette from their walnut reception wall, brass logo and white nail lounge. */
+:root{
+  --walnut:#2a1e17;--walnut-2:#382820;--paper:#f8f6f2;--white:#fff;--ink:#241a14;--mute:#66574b;
+  --brass:#cfa862;--brass-dk:#7a5a1f;--line:#e4dcd2;--line-dk:rgba(207,168,98,.28);
+  --k-bg:var(--paper);--k-ink:var(--ink);--k-mute:var(--mute);--k-line:var(--line);--k-accent:var(--brass-dk);--k-on-accent:#fff;
+  --k-display:"Italiana","Times New Roman",serif;--k-body:"Jost",system-ui,sans-serif;
+  --k-ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,4.4vw,64px);--head:72px
+}
+:root:lang(ar){--k-display:"El Messiri",serif;--k-body:"Tajawal",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--head) + 10px)}
+body{font:400 17px/1.65 var(--k-body);color:var(--ink);background:var(--paper);overflow-x:hidden}
+:lang(ar) body{font-size:18px;line-height:1.85}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-weight:400;font-family:var(--k-display)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--brass-dk);outline-offset:3px}
+
+/* ---------- header: ruled cells ---------- */
+.hd{position:sticky;top:0;z-index:40;height:var(--head);display:flex;background:var(--paper);border-bottom:1px solid var(--line)}
+.hd>*{display:flex;align-items:center;border-inline-end:1px solid var(--line);padding:0 clamp(14px,2vw,28px);text-decoration:none;font-size:.95rem;min-width:44px}
+.hd__brand{font:400 1.9rem/1 "Italiana",serif;letter-spacing:.06em;gap:.35em;margin-inline-end:auto;border-inline-end:0}
+.hd__brand small{font:500 .62rem/1 "Jost",sans-serif;letter-spacing:.32em;color:var(--brass-dk);transform:translateY(.25em)}
+.hd__nav{display:none}
+.hd__nav a{text-decoration:none;padding:0 clamp(14px,1.8vw,26px);height:100%;display:flex;align-items:center;border-inline-start:1px solid var(--line)}
+.hd__nav a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--brass-dk)}
+.hd__nav a:hover{background:#fff}
+.hd__lang{border-inline-start:1px solid var(--line)}
+.hd__call{display:none;font-variant-numeric:tabular-nums}
+.hd__wa{background:var(--walnut);color:#fff;gap:10px;border:0;font-weight:500;transition:background .3s}
+.hd__wa:hover{background:var(--walnut-2)}
+.hd__wa svg{width:20px;height:20px;fill:var(--brass);flex:none}
+.hd__wa b{font-weight:500}
+@media (max-width:520px){.hd__wa b{display:none}.hd>*{padding:0 13px}.hd__brand{font-size:1.6rem}}
+@media (min-width:900px){.hd__nav{display:flex}.hd__call{display:flex}}
+
+/* ---------- hero: walnut panel + their rooms as a reel ---------- */
+.hero{display:grid;grid-template-columns:1fr;background:var(--walnut);color:#efe7dc}
+.hero__panel{padding:clamp(34px,6vw,80px) var(--pad) clamp(30px,5vw,56px);display:flex;flex-direction:column;gap:22px;position:relative}
+.hero h1{font:400 clamp(6.2rem,22vw,13.5rem)/.78 var(--k-display);color:var(--brass);letter-spacing:.01em;margin-inline-start:-.04em}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .l>span{display:block}
+.hero h1 .sub{font-size:.36em;letter-spacing:.04em;color:#efe7dc;margin-top:.12em}
+:lang(ar) .hero h1{font-family:"Italiana",serif}
+:lang(ar) .hero h1 .sub{font-family:"El Messiri",serif;font-size:.3em;letter-spacing:0;line-height:1.3}
+.hero__lead{font-size:clamp(1.08rem,1.5vw,1.25rem);max-width:27em;color:#e9e0d3}
+.hero__rate{display:flex;gap:14px;align-items:baseline;border-top:1px solid var(--line-dk);padding-top:16px;color:#d9cdbd;font-size:.95rem}
+.hero__rate strong{font:400 2.6rem/1 "Italiana",serif;color:#fff}
+.hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.btn{position:relative;display:inline-flex;align-items:center;gap:.7em;min-height:54px;padding:0 26px;font:500 1.02rem/1 var(--k-body);text-decoration:none;color:var(--walnut);background:var(--brass);border-radius:0;overflow:hidden;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:#fff;transform:translateY(101%);transition:transform .55s var(--k-ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.btn--dark{background:var(--walnut);color:#fff}.btn--dark::before{background:var(--brass-dk)}
+.tel{font-variant-numeric:tabular-nums;text-decoration:none;color:#fff;display:inline-flex;min-height:44px;align-items:center}
+.hero__foot{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;color:#cbbfae}
+.badge{display:inline-flex;align-items:center;gap:8px;font-weight:500}
+.badge i{width:8px;height:8px;border-radius:50%;background:#8fd19e}
+.badge.is-shut i{background:#d9a17a}
+.hero .k-seq{height:62svh;min-height:380px}
+.hero .k-seq::after{background:linear-gradient(180deg,transparent 55%,rgba(20,13,9,.7))}
+.hero .k-seq__ui{padding:0 clamp(16px,3vw,36px) 22px}
+.hero .k-seq__cap{color:#fff}
+@media (min-width:900px){
+  .hero{grid-template-columns:minmax(380px,5fr) 7fr;min-height:calc(100svh - var(--head))}
+  .hero .k-seq{height:auto;min-height:100%}
+  .hero__panel{order:-1;justify-content:flex-start;padding-top:clamp(40px,7vh,90px)}
+}
+.k-js .hero h1 .l>span{transform:translateY(105%);animation:rise 1.2s var(--k-ease) forwards;animation-delay:calc(.15s + var(--i,0)*.14s)}
+.k-js .hero__fade{opacity:0;transform:translateY(14px);animation:rise .9s var(--k-ease) forwards;animation-delay:calc(.55s + var(--i,0)*.09s)}
+.k-js .hero .k-seq{clip-path:inset(0 0 100% 0);animation:wipe 1.4s var(--k-ease) .1s forwards}
+@keyframes rise{to{transform:none;opacity:1}}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(70px,10vw,150px) var(--pad)}
+.wrap{max-width:1320px;margin:0 auto}
+.h2{font:400 clamp(2.8rem,7vw,6rem)/.95 var(--k-display);letter-spacing:-.005em}
+:lang(ar) .h2{font-weight:500;line-height:1.25;font-size:clamp(2.2rem,5.4vw,4.4rem)}
+.kicker{font-size:.95rem;color:var(--brass-dk);font-weight:500}
+
+/* intro: the rating set large, next to the logo wall */
+.intro{display:grid;gap:clamp(30px,5vw,80px);align-items:end}
+.intro__fig{overflow:hidden;aspect-ratio:4/3}
+.intro__fig img{width:100%;height:100%;object-fit:cover}
+.intro__num{font:400 clamp(7rem,20vw,16rem)/.8 "Italiana",serif;color:var(--ink);letter-spacing:-.02em}
+.intro__num small{font-size:.28em;color:var(--brass-dk);margin-inline-start:.15em}
+.intro__txt{font-size:clamp(1.1rem,1.7vw,1.35rem);max-width:30em;margin-top:24px}
+.intro__src{margin-top:14px;color:var(--mute);font-size:.95rem}
+@media (min-width:900px){.intro{grid-template-columns:6fr 5fr}.intro__fig{aspect-ratio:auto;height:min(78vh,720px)}}
+
+/* treatments index */
+.svc .k-acc{padding:0;max-width:none}
+.svc__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px;margin-bottom:clamp(26px,4vw,50px)}
+.svc .k-acc__list{border-top:1px solid var(--ink)}
+.svc .k-acc__t{font-weight:400;letter-spacing:0;font-size:clamp(2rem,4.6vw,3.8rem)}
+:lang(ar) .svc .k-acc__t{font-weight:500;font-size:clamp(1.7rem,3.8vw,3rem);line-height:1.2}
+.svc .k-acc__t small{font-size:1rem}
+.svc .k-acc__from{font-variant-numeric:tabular-nums;color:var(--brass-dk);font-weight:500;white-space:nowrap;font-size:1rem;align-self:center}
+.svc .k-acc__row summary{grid-template-columns:2.6em 1fr auto 28px}
+.svc .k-acc__row summary:hover{color:var(--brass-dk)}
+.svc .k-acc__body li{display:flex;justify-content:space-between;gap:14px}
+.svc .k-acc__body li span:last-child{font-variant-numeric:tabular-nums;color:var(--mute);white-space:nowrap}
+.svc .k-acc__body a{color:var(--brass-dk)}
+
+/* house treatments: the one walnut-flooded band */
+.house{background:var(--walnut);color:#efe7dc}
+.house .h2{color:var(--brass)}
+.house__grid{display:grid;gap:0;margin-top:clamp(30px,5vw,60px);border-top:1px solid var(--line-dk)}
+.house__item{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:26px 0;border-bottom:1px solid var(--line-dk)}
+.house__item h3{font:400 clamp(1.7rem,3vw,2.5rem)/1.05 var(--k-display);color:#fff}
+:lang(ar) .house__item h3{font-weight:500;line-height:1.35}
+.house__item p{grid-column:1/-1;color:#cdbfad;max-width:34em}
+.house__price{font:400 clamp(1.7rem,3vw,2.5rem)/1 "Italiana",serif;color:var(--brass);white-space:nowrap}
+.house__price small{font:500 .8rem var(--k-body);margin-inline-end:6px;color:#cdbfad}
+.house__intro{max-width:34em;color:#d9cdbd;margin-top:18px}
+.house__cols{display:grid;gap:clamp(30px,6vw,90px)}
+.house h3.house__sub{font:500 .98rem var(--k-body);color:var(--brass);margin:clamp(30px,4vw,50px) 0 0}
+@media (min-width:900px){.house__cols{grid-template-columns:1fr 1fr}}
+
+/* rooms strip */
+.rooms .k-drag{padding:0}
+.rooms .k-drag__head{padding:0;margin-bottom:28px}
+.rooms .k-drag__track{padding-inline:var(--pad);margin-inline:calc(var(--pad) * -1)}
+.rooms .k-drag__card{flex-basis:min(82vw,560px);cursor:grab}
+.rooms .k-drag__fig{aspect-ratio:16/11;border-radius:0}
+.rooms .k-drag__meta h3{font:400 1.5rem/1.1 var(--k-display)}
+:lang(ar) .rooms .k-drag__meta h3{font-weight:500}
+.rooms .k-drag__meta span{color:var(--mute);font-size:.92rem}
+.rooms .k-drag__bar{margin-inline:0}
+.k-drag__btns button,.k-quotes__btns button{width:48px;height:48px;border:1px solid var(--ink);background:none;color:var(--ink);font-size:1.1rem;cursor:pointer}
+.k-drag__btns button:hover,.k-quotes__btns button:hover{background:var(--ink);color:#fff}
+
+/* reviews */
+.revs{background:#fff;border-block:1px solid var(--line)}
+.revs .k-quotes{padding:0}
+.revs .k-quotes__head,.revs .k-quotes__slide,.revs .k-quotes__dots{padding-inline:0}
+.revs blockquote{font:400 clamp(1.9rem,4.4vw,3.6rem)/1.15 var(--k-display);max-width:20em}
+:lang(ar) .revs blockquote,.revs blockquote:lang(ar){font-family:"El Messiri",serif;line-height:1.5}
+.revs .k-quotes__who b{color:var(--ink);font-weight:500}
+.revs .k-quotes__stars{color:var(--brass-dk)}
+.revs__src a{color:var(--brass-dk)}
+
+/* visit */
+.visit .k-visit{border:0}
+.visit .k-visit__info{padding:clamp(60px,9vw,130px) var(--pad)}
+.visit h2{margin-bottom:22px}
+.visit .k-visit__addr{font-size:clamp(1.25rem,2.2vw,1.6rem)}
+.visit table{border-collapse:collapse;margin:18px 0 28px;width:min(100%,420px)}
+.visit td{padding:8px 0;border-bottom:1px solid var(--line)}
+.visit td:last-child{text-align:end;font-variant-numeric:tabular-nums}
+.visit tr.is-today td{font-weight:600}
+.visit .k-visit__acts a{min-height:52px;display:inline-flex;align-items:center;padding:0 22px;text-decoration:none;border-radius:0}
+.visit .k-visit__map{min-height:420px;background:var(--walnut) url(img/shopfront.webp) center/cover}
+.visit .k-visit__map button{background:var(--paper);color:var(--ink);border:0;padding:16px 24px;font:500 1rem var(--k-body);cursor:pointer;min-height:48px}
+@media (min-width:900px){.visit .k-visit{grid-template-columns:5fr 6fr}}
+
+/* footer */
+.ft{background:var(--walnut);color:#d9cdbd;padding:clamp(60px,8vw,110px) var(--pad) 30px}
+.ft__big{font:400 clamp(5rem,17vw,15rem)/.8 "Italiana",serif;color:var(--brass);letter-spacing:.01em}
+.ft__grid{display:grid;gap:28px;margin-top:clamp(40px,6vw,70px);padding-top:30px;border-top:1px solid var(--line-dk)}
+.ft h2{font:500 .9rem var(--k-body);color:var(--brass);margin-bottom:10px}
+.ft a{color:#fff;text-decoration:none;display:inline-block;padding-block:6px}
+.ft a:hover{text-decoration:underline;text-underline-offset:4px}
+.ft ul{list-style:none;padding:0}
+.ft__note{margin-top:50px;font-size:.82rem;color:#b9ab98;border-top:1px solid var(--line-dk);padding-top:20px}
+@media (min-width:760px){.ft__grid{grid-template-columns:repeat(4,1fr)}}
+
+/* services page */
+.ph{padding:clamp(50px,8vw,110px) var(--pad) clamp(30px,4vw,50px);display:grid;gap:30px;align-items:end;border-bottom:1px solid var(--line)}
+.ph h1{font:400 clamp(4rem,12vw,10rem)/.85 var(--k-display)}
+:lang(ar) .ph h1{font-weight:500;line-height:1.15;font-size:clamp(3rem,9vw,7rem)}
+.ph p{max-width:32em;font-size:1.1rem}
+.ph__acts{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:16px}
+.ph__acts a.k-link{min-height:44px;display:inline-flex;align-items:center}
+@media (min-width:900px){.ph{grid-template-columns:7fr 5fr}}
+.menu .k-menu{max-width:1320px;padding:clamp(30px,5vw,70px) var(--pad) clamp(70px,9vw,120px)}
+.menu .k-menu__tabs{top:var(--head);gap:0}
+.menu .k-menu__tabs button{min-height:52px;padding:0 18px;background:none;border:0;font:500 1rem var(--k-body);color:var(--mute);cursor:pointer;white-space:nowrap}
+.menu .k-menu__tabs button[aria-selected=true]{color:var(--ink)}
+.menu .k-menu__name{font:400 1.45rem/1.2 var(--k-display)}
+:lang(ar) .menu .k-menu__name{font-weight:500;font-size:1.3rem;line-height:1.5}
+.menu .k-menu__price{font-weight:500}
+.menu .k-menu__price small{font-size:.75em;margin-inline-end:4px;color:var(--mute)}
+.menu .k-menu__desc{font-size:.95rem}
+.menu .k-menu__feat{border-radius:0;align-self:start;position:sticky;top:calc(var(--head) + 70px)}
+.menu .k-menu__feat img{width:100%;height:100%;object-fit:cover}
+.menu .k-menu__feat figcaption{position:absolute;inset:auto 0 0 0;padding:40px 16px 14px;color:#fff;font-size:.9rem;background:linear-gradient(transparent,rgba(20,13,9,.7))}
+.menu__ask{margin-top:22px}
+.menu__ask a{color:var(--brass-dk);font-weight:500;min-height:44px;display:inline-flex;align-items:center}
+@media (min-width:900px){.menu .k-menu__panel{grid-template-columns:7fr 4fr;gap:60px}}
+.cta{background:var(--brass);color:var(--walnut);padding:clamp(60px,9vw,120px) var(--pad)}
+.cta h2{font:400 clamp(2.6rem,7vw,6rem)/.95 var(--k-display);max-width:14em}
+:lang(ar) .cta h2{font-weight:500;line-height:1.3}
+.cta p{margin:18px 0 28px;max-width:34em;font-size:1.1rem}
+.cta .tel{color:var(--walnut)}
+
+@media (prefers-reduced-motion:reduce){
+  .k-js .hero h1 .l>span,.k-js .hero__fade,.k-js .hero .k-seq{animation:none;transform:none;opacity:1;clip-path:none}
+  .btn::before{transition:none}
+}
+
+/* round-0 self-check fixes */
+.hero h1 .sub{font-size:.2em;line-height:1.15;letter-spacing:.02em;margin-top:.35em}
+.hero h1 .l.sub{padding-bottom:0}
+.revs .k-quotes__slide blockquote::before{font-family:Georgia,serif;font-size:1.6em;line-height:.8}
+.revs .k-quotes__dots button{box-sizing:border-box;height:24px;padding:10.5px 0;margin:0;width:28px;background:var(--line);background-clip:content-box}
+.revs .k-quotes__dots button[aria-current=true]{background:var(--ink);background-clip:content-box;width:56px}
+.revs .k-quotes__btns button{border-radius:50%}
+/* (kit 20 in-page swap rule removed from local kit.css: this concept uses separate EN/AR pages) */
+html:lang(ar) h1,html:lang(ar) h2,html:lang(ar) h3{font-weight:500}
+html:lang(ar) .hero h1{font-weight:400;line-height:.78!important}
+html:lang(ar) .hero h1 .sub{font-weight:500;line-height:1.5}
+html:lang(ar) .ft__big{font-family:"Italiana",serif}
+@media (max-width:899px){
+  .hero .k-seq{order:-1;height:44svh;min-height:300px}
+  .hero__panel{padding-top:30px}
+  .hero h1{font-size:clamp(5.4rem,26vw,8rem)}
+}
+.skip{left:8px;top:-80px}
+.skip:focus{top:8px;left:8px}
+.menu .k-menu__feat{aspect-ratio:4/3}
+html:lang(ar) .hero h1 .sub{font-size:.24em}
+.revs .k-quotes__dots button{height:44px;padding:20.5px 0}
+.revs .k-quotes__dots{gap:10px;margin-top:10px}
+@media (max-width:899px){.ft a{padding-block:12px}.ft ul{display:grid;gap:2px}}
+html:lang(ar) .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
+.ft__note span{display:block}
+.revs blockquote[lang=en]{font-family:"Italiana",serif;line-height:1.15}
+.hd__lang[lang=ar],.ft a[lang=ar]{font-family:"El Messiri",serif}
+.revs .k-quotes__dots button{width:44px}
+.revs .k-quotes__dots button[aria-current=true]{width:72px}
+.ft a{min-width:44px}
+
+/* ===== Fannan round 1 fixes ===== */
+/* 3. hero: 42/58 split, foot pinned, slow scale on the active frame */
+@media (min-width:900px){.hero{grid-template-columns:42fr 58fr}.hero__panel{min-width:0}}
+.hero__foot{margin-top:auto}
+.hero h1 .sub{font-size:.2em}
+.hero .k-seq__frame img{transform:scale(1);transition:none}
+.hero .k-seq__frame.is-on img{transform:scale(1.06);transition:transform 4.6s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.hero .k-seq__frame img,.hero .k-seq__frame.is-on img{transform:none;transition:none}}
+/* 11. whole "or call" anchor underlined */
+.hero__call{color:#fff;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px;text-decoration-color:rgba(255,255,255,.55);transition:text-decoration-color .3s}
+.hero__call:hover{text-decoration-color:var(--brass)}
+.hero__call bdi{font-variant-numeric:tabular-nums}
+/* 8. mobile hero fits the first screen */
+@media (max-width:899px){
+  .hero .k-seq{height:48svh;min-height:0}
+  .hero__panel{padding-top:20px;padding-bottom:30px;gap:14px}
+  .hero h1{font-size:clamp(4.4rem,21vw,6.5rem)}
+  .hero__acts{gap:6px 22px}
+}
+/* 4. intro: reception 4:5 on the walnut wall, text from the top */
+.intro{align-items:start}
+.intro__fig{aspect-ratio:4/5}
+.intro__fig img{object-position:22% 35%}
+@media (min-width:900px){.intro{grid-template-columns:5fr 6fr}.intro__fig{height:auto;aspect-ratio:4/5;max-height:760px}.intro__body{padding-top:8vw}}
+/* 5. gallery: equal 4:3 cards, small door tile */
+.rooms .k-drag__card,.rooms .k-drag__card:nth-child(3n+2){flex-basis:min(82vw,560px)}
+.rooms .k-drag__fig,.rooms .k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/3}
+.rooms .k-drag__card.k-drag__card--sm{flex-basis:min(70vw,420px)}
+@media (max-width:600px){.rooms .k-drag__meta{flex-direction:column;gap:2px}.rooms .k-drag__meta h3{white-space:nowrap}}
+/* 6. treatments accordion on phones: price under the description */
+@media (max-width:600px){
+  .svc .k-acc__row summary{grid-template-columns:2em 1fr 28px;gap:4px 10px}
+  .svc .k-acc__n{grid-column:1;grid-row:1}
+  .svc .k-acc__t{grid-column:2;grid-row:1;font-size:clamp(2rem,9vw,2.6rem)}
+  :lang(ar) .svc .k-acc__t{font-size:clamp(1.8rem,8vw,2.3rem)}
+  .svc .k-acc__from{grid-column:2;grid-row:2;align-self:start;margin-top:6px}
+  .svc .k-acc__plus{grid-column:3;grid-row:1}
+  .svc .k-acc__body{padding-inline-start:0}
+}
+/* 7. package meta on its own line */
+.house__item p .meta{display:block;margin-top:4px;color:#b9ab98;font-size:.92rem}
+/* 2. map cover: walnut panel, no photo */
+.visit .k-visit__map{background:var(--walnut);color:#efe7dc;min-height:420px}
+.map__card{position:relative;z-index:1;text-align:center;padding:40px 24px;display:grid;justify-items:center;gap:10px}
+.map__place{font:400 clamp(2.4rem,4vw,3.6rem)/1.05 "Italiana",serif;color:var(--brass)}
+:lang(ar) .map__place{font-family:"El Messiri",serif;font-weight:500;line-height:1.4}
+.map__coord{font:400 .9rem "Jost",sans-serif;color:#cdbfad;letter-spacing:.02em}
+.visit .k-visit__map .map__card button{margin-top:16px;background:var(--brass);color:var(--walnut);box-shadow:none;border-radius:0}
+.visit .k-visit__map .map__card button:hover{background:#fff}
+/* 9. services: one sticky photo, swaps per tab */
+.menu .k-menu__panel{display:block}
+.menu__grid{display:grid;gap:24px}
+.menu__feat{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;background:var(--walnut);order:-1}
+.menu__ph{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.menu__ph.is-on{opacity:1}
+.menu__ph img{width:100%;height:100%;object-fit:cover}
+.menu__ph span{position:absolute;inset:auto 0 0 0;padding:40px 16px 14px;color:#fff;font-size:.9rem;background:linear-gradient(transparent,rgba(20,13,9,.72))}
+@media (min-width:900px){.menu__grid{grid-template-columns:7fr 4fr;gap:60px;align-items:start}.menu__feat{order:0;position:sticky;top:96px;aspect-ratio:4/5}}
+@media (prefers-reduced-motion:reduce){.menu__ph{transition:none}}
+/* 10. mobile footer: 2 columns, 44px rows */
+@media (max-width:600px){
+  .ft__grid{grid-template-columns:1fr 1fr;gap:26px 18px}
+  .ft a{min-height:44px;display:flex;align-items:center;padding-block:0}
+  .ft ul{gap:0}
+  .ft__big{font-size:clamp(4rem,22vw,6rem)}
+}
+.visit .k-visit__map iframe{z-index:2}
+.hero .hero__call{display:inline-block;min-height:44px;padding:10px 0;line-height:1.4}
+.menu .k-menu__panel[hidden]{display:none}
+
+/* ===== Fannan round 2 fixes ===== */
+/* 1. intro photo: fern + vase on the counter against the walnut wall */
+.intro__fig img{object-position:100% 55%}
+@media (min-width:900px){.intro__fig{max-height:640px}}
+/* 2. map panel content centred */
+.visit .k-visit__map{display:grid;place-content:center;text-align:center}
+.map__brand{font:500 .85rem "Jost",sans-serif;letter-spacing:.08em;color:#a8927a}
+@media (max-width:600px){.visit .k-visit__map{min-height:360px}}
+/* 3. desktop hero: bigger name, content group centred in the leftover space, foot pinned */
+.hero__main{display:flex;flex-direction:column;gap:22px}
+@media (min-width:900px){
+  .hero__main{margin-block:auto}
+  .hero h1 .l:first-child{font-size:clamp(9rem,14vw,15rem)}
+  .hero h1{font-size:clamp(9rem,14vw,15rem)}
+  .hero h1 .sub{font-size:max(.17em,1.9rem)}
+}
+.hero__foot{margin-top:0}
+/* 4. phones: "Open now · 10am–10pm" on one line */
+.foot__short{display:none}
+@media (max-width:600px){.foot__area,.foot__hours{display:none}.foot__short{display:inline}.hero__foot{flex-wrap:nowrap;gap:6px}}
+@media (max-width:899px){.hero__main{gap:14px}}
+/* 5. arrow spacing in flex links */
+.ph__acts a.k-link,.cta .hero__acts a.k-link{gap:6px}
+
+/* ===== round 3 polish (PASS 8.0) ===== */
+.hero .k-seq__frame:nth-child(2) img{object-position:40% 45%}
+.hero .k-seq__frame:nth-child(2).is-on img{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){.hero .k-seq__frame:nth-child(2).is-on img{transform:none}}
+.map__brand{color:var(--brass);font-size:1rem}
