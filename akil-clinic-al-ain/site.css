@@ -591,3 +591,25 @@ html:lang(ar) h3{font-weight:600}
 .belief__cols{display:grid;gap:24px}
 .k-visit__ins a{white-space:nowrap}
 @media (max-width:700px){.belief__ph{max-width:300px}}
+
+/* ---------- round 3 ---------- */
+/* hero: re-upscaled from the 1280px Google Maps original (top rows trimmed); mobile crop kept clear of the top edge */
+.hero__photo img{object-position:34% 56%}
+@media (min-width:980px){.hero__photo img{object-position:50% 46%}}
+/* doctor panel: no label above the name, ~40% less air above the heading */
+.doc{padding-top:clamp(48px,6.6vw,100px)}
+/* about: lounge photo beside the title in the first screen, mission text below */
+.pg-hero--ab{display:grid;gap:28px;padding-block:clamp(28px,4vw,56px) clamp(50px,6vw,90px)}
+.ab-ph--hero{margin:0;aspect-ratio:4/5;max-height:72svh;width:100%}
+.ab-ph--hero img{object-position:50% 78%}
+@media (min-width:980px){
+  .pg-hero--ab{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);align-items:end}
+  .pg-hero__txt{grid-column:1 / 8;align-self:center}
+  .ab-ph--hero{grid-column:8 / -1;max-height:calc(100svh - 150px);justify-self:end}
+}
+@media (max-width:979px){.ab-ph--hero{aspect-ratio:4/3}}
+.ab-split--solo{grid-template-columns:none}
+@media (min-width:980px){.ab-split--solo .ab-text{max-width:none;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px)}
+  .ab-split--solo .ab-text p{grid-column:5 / 12;max-width:40em}
+  .ab-split--solo .ab-text p.big{grid-column:1 / 9;max-width:none}}
+@media (min-width:980px){.hero__photo{max-width:1000px;justify-self:end;width:100%}}
