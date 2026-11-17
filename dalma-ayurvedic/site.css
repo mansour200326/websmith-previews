@@ -514,3 +514,23 @@ img[src*="room-"],img[src*="steam-box"],img[src*="opening-"],img[src*="dr-tinu"]
 /* 3. steam-box photo recropped to the box + dhara pot; caption on a stronger scrim */
 .k-menu__feat figcaption{background:linear-gradient(transparent,rgba(0,0,0,.72) 45%);text-shadow:0 1px 3px rgba(0,0,0,.5)}
 .k-menu__feat img[src$="room-steam.webp"]{object-position:0% 30%}
+
+/* ===== round 4 (Fannan) fixes ===== */
+/* 1+5. narrower arch (no upscale smear), bigger name, body closes the empty band; straight foot on the arch */
+.hero__arch .frame{border-radius:50% 50% 0 0/34% 34% 0 0}
+@media (min-width:980px){
+  .hero{--name:clamp(6rem,15vw,14rem)}
+  .hero__arch{grid-column:8/-1;margin-top:-36px}
+  .hero__body{grid-column:1/7;align-self:start;padding-top:clamp(40px,5vw,72px)}
+  /* bigger name: start it below the insurers line instead of rising into it */
+  html:not([dir=rtl]) .hero h1{margin-top:calc(var(--name)*-.3)}
+}
+/* 2. treatment-room photo in the Treatments tab */
+.k-menu__feat img[src$="room-empty.webp"]{object-position:50% 60%}
+/* 3. spices toned down to the shared grade; no empty tail after step 04 */
+img[src*="amb-spices"]{filter:saturate(.58) sepia(.14) contrast(1.02) brightness(.96)}
+@media (min-width:900px){
+  .k-story__steps{padding-bottom:6vh}
+  .k-story__step:last-child{min-height:auto}
+}
+.k-story{padding-bottom:clamp(80px,8vw,120px)}
