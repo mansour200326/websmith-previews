@@ -133,26 +133,23 @@ a{color:inherit}
   .room__where{grid-column:2}
 }
 
-/* photo strip */
-.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.strip figure{position:relative}
-.strip .ph{overflow:hidden;background:var(--plum-soft);height:100%}
-.strip img{width:100%;height:100%;object-fit:cover}
-.strip figcaption{font-size:.84rem;color:var(--mute);padding-top:8px}
-.s1{grid-column:span 6;aspect-ratio:4/3}
-.s2,.s3{grid-column:span 3;aspect-ratio:3/4}
-.s4{grid-column:span 6;aspect-ratio:16/10}
-.s5,.s6{grid-column:span 3;aspect-ratio:1}
-.strip figure{display:flex;flex-direction:column}
-.strip figure .ph{flex:1}
+/* photo strip (r3): phones = one swipe row; desktop = explicit 12-col grid, no holes */
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);scroll-padding-inline:var(--pad);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 82vw;scroll-snap-align:start;display:flex;flex-direction:column;min-width:0}
+.strip .ph{position:relative;overflow:hidden;background:var(--plum-soft);aspect-ratio:4/3}
+.strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.strip figcaption{font-size:.84rem;color:var(--mute);padding-top:10px}
+.strip:focus-visible{outline-offset:-3px}
 @media (min-width:900px){
-  .strip{grid-template-columns:repeat(12,1fr);gap:16px;align-items:start}
-  .s1{grid-column:1 / span 7;aspect-ratio:4/3}
-  .s2{grid-column:8 / span 5;aspect-ratio:1/1.05;margin-top:120px}
-  .s3{grid-column:1 / span 5;aspect-ratio:4/5}
-  .s4{grid-column:6 / span 7;aspect-ratio:16/10;margin-top:60px}
-  .s5{grid-column:1 / span 5;aspect-ratio:4/3}
-  .s6{grid-column:7 / span 5;aspect-ratio:4/3;margin-top:40px}
+  .strip{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:56px 16px;overflow:visible;margin:0;padding:0;align-items:start}
+  .strip figure{flex:none}
+  .s1{grid-column:1 / 8;grid-row:1}.s1 .ph{aspect-ratio:5/3}
+  .s2{grid-column:8 / 13;grid-row:1;margin-top:120px}.s2 .ph{aspect-ratio:8/5}
+  .s3{grid-column:1 / 5;grid-row:2;max-width:420px;align-self:stretch}.s3 .ph{aspect-ratio:auto;flex:1;min-height:320px}
+  .s4{grid-column:5 / 13;grid-row:2}.s4 .ph{aspect-ratio:8/5}
+  .s5{grid-column:1 / 7;grid-row:3;align-self:end}.s5 .ph{aspect-ratio:4/3}
+  .s6{grid-column:7 / 13;grid-row:3}.s6 .ph{aspect-ratio:1/1}
 }
 
 /* classes, flooded plum */
@@ -342,3 +339,57 @@ a{color:inherit}
 .pintro__meta a{display:inline-flex;align-items:center;min-height:46px;text-decoration:none}
 .nav a{min-width:44px;justify-content:center}
 .ft ul li a{min-width:44px}
+
+/* ===== r3 (Fannan round 2) ===== */
+/* hero: photo bleeds right and up to the header line; hairline frame only round the text */
+@media (min-width:900px){
+  .hero{padding:0;--fi:clamp(10px,1.6vw,22px)}
+  .hero__frame{border:0}
+  .hero__frame::before{content:"";position:absolute;top:var(--fi);bottom:var(--fi);inset-inline-start:var(--fi);inset-inline-end:45.05%;border:1px solid #d9cfe6;border-inline-end:0;pointer-events:none;z-index:2}
+  .hero .k-split{min-height:calc(100svh - 69px)}
+  .hero .k-split__type,[dir=rtl] .hero .k-split__type{padding:calc(var(--fi) + clamp(40px,5vw,72px)) 0 0;padding-inline-start:calc(var(--fi) + clamp(28px,4vw,56px))}
+  .hero__lead{padding-inline:calc(var(--fi) + clamp(28px,4vw,56px)) 40px}
+  .hero__acts{padding:0 40px calc(var(--fi) + clamp(32px,4vw,56px));padding-inline-start:calc(var(--fi) + clamp(28px,4vw,56px))}
+  .hero figcaption{z-index:2}
+}
+.hero .k-split__photo img{filter:saturate(.92)}
+.k-js .hero .k-split__photo img{transform:scale(1.08);animation:lt-kb 1.2s cubic-bezier(.16,1,.3,1) .35s forwards}
+@keyframes lt-kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+
+/* visit: type-led poster in place of the empty map block (tap still loads the map) */
+.k-visit__map{place-items:stretch}
+.mapster{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(28px,5vw,72px)}
+.mapster__num{font:800 clamp(5rem,10vw,9rem)/.86 var(--k-display);letter-spacing:-.05em;color:var(--plum);font-variation-settings:"opsz" 96}
+.mapster__line{font-size:1.1rem;font-weight:500;color:var(--ink);margin-top:18px;max-width:22em}
+.mapster button{margin-top:34px;box-shadow:none;border:1px solid var(--plum);color:var(--plum);background:#fff;transition:background .3s,color .3s}
+.mapster button:hover,.mapster button:focus-visible{background:var(--plum);color:#fff}
+[dir=rtl] .mapster__num{letter-spacing:-.05em;direction:ltr}
+@media (max-width:899px){.k-visit__map{min-height:0;aspect-ratio:4/3}.mapster{padding:24px var(--pad)}}
+
+/* a day: sticky photo */
+@media (min-width:900px){.day__photo{position:sticky;top:96px}}
+
+/* about: "Our third teacher" split */
+.third{display:grid;gap:32px}
+.third__ph .ph{aspect-ratio:5/4;overflow:hidden;background:var(--plum-soft)}
+.third__ph img{width:100%;height:100%;object-fit:cover}
+.third__list{border-top:1px solid #dccfe9}
+.third__list li{padding:24px 0;border-bottom:1px solid #dccfe9}
+.third__list h3{font:700 clamp(1.35rem,2vw,1.65rem)/1.15 var(--k-display);letter-spacing:-.02em;margin-bottom:8px}
+.third__list p{color:var(--mute)}
+[dir=rtl] .third__list h3{letter-spacing:0}
+@media (min-width:900px){
+  .third{grid-template-columns:repeat(12,minmax(0,1fr));gap:0 16px;align-items:center}
+  .third__ph{grid-column:1 / 7}
+  .third__list{grid-column:8 / 13}
+}
+
+/* timetable on phones: each time on one line */
+@media (max-width:719px){.ctable td{white-space:nowrap;font-size:.95rem}}
+
+@media (prefers-reduced-motion:reduce){.k-js .hero .k-split__photo img{animation:none;transform:none}.mapster button{transition:none}}
+/* phones: tiles off to the side of the swipe row open together with the first one */
+@media (max-width:899px){
+  .k-js .strip:has(.is-in) [data-reveal=clip]{clip-path:inset(0 0 0 0)}
+  .k-js .strip:has(.is-in) [data-reveal=clip]>img{transform:none}
+}
