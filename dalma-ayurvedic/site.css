@@ -543,7 +543,16 @@ img[src*="amb-spices"]{filter:saturate(.58) sepia(.14) contrast(1.02) brightness
   .hero__arch .frame{aspect-ratio:auto;height:100%;min-height:520px}
   .hero__arch .frame::after{display:none}
   .hero__arch img{object-position:35% 50%}
+  /* r7: taller crop pushes the dark cabinets out of the arch */
+  .hero__arch img{height:130%;object-position:34% 0;transform-origin:50% 15%}
   .hero h1,html:not([dir=rtl]) .hero h1{grid-column:1/8;grid-row:1;margin-top:0;align-self:start}
   .hero__name{text-align:start}
   .hero__body{grid-column:1/7;grid-row:2;align-self:end;padding-top:0}
 }
+
+/* ===== round 6 (Fannan) fixes ===== */
+@media (min-width:980px){
+  .hero{--name:clamp(6rem,18.5vw,17rem);min-height:min(calc(100svh - 72px),860px)}
+}
+.hd__nav{gap:clamp(14px,1.6vw,34px)}
+.hd__nav a{white-space:nowrap}
