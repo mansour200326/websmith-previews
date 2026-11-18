@@ -211,5 +211,5 @@ html,body{overflow-x:clip}
 .hero__lede span{display:block;text-wrap:balance}
 @media (max-width:600px){.hero__svc{gap:0 14px}.hero__svc a{font-size:1rem}}
 @media (min-width:980px){.hero{padding-bottom:22px}}
-.hero__svc a{min-width:44px}
+.hero__svc a{padding-inline:6px;margin-inline:-6px}
 @media (max-width:600px){.hero__svc{justify-content:space-between;gap:0 8px}}
