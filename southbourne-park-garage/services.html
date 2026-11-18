@@ -61,10 +61,11 @@
     <div class="k-fx" data-k-fx="dither" data-k-fx-ink="#b3161c" data-k-fx-paper="#ffffff" data-k-fx-cell="2" data-k-fx-peek>
       <img src="img/garage.webp" crossorigin="anonymous" alt="The front of Southbourne Park Garage on Tuckton Road, with the red sign and doors" loading="lazy" style="object-position:50% 48%">
     </div>
+    <img class="band__plain" src="img/garage.webp" alt="The front of Southbourne Park Garage on Tuckton Road, with the red sign and doors" loading="lazy">
     <figcaption>78 Tuckton Road, Southbourne. <span class="k-fx-tap">Tap for the photo.</span></figcaption>
   </figure>
-  <script>/* phones: cell 3 (the kit scales it by width/700) with the 4:3 crop so the sign reads */
-  (function(){var f=document.querySelector('.band .k-fx');if(f&&innerWidth<700)f.setAttribute('data-k-fx-cell','3')})();</script>
+  <script>/* phones: skip the dither entirely (CSS shows the plain photo); kit.js is deferred so this runs first */
+  (function(){var f=document.querySelector('.band .k-fx');if(f&&innerWidth<700){f.removeAttribute('data-k-fx');f.setAttribute('aria-hidden','true');var i=f.querySelector('img');if(i){i.alt='';i.loading='lazy'}}})();</script>
 
   <div class="items">
     <article class="item" id="mot-testing">
