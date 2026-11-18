@@ -229,7 +229,7 @@ bdi,.num{font-variant-numeric:tabular-nums}
 .docs__top .lede{max-width:26em}
 .docs__grid{display:grid;gap:40px}
 .docs__lead{display:grid;gap:22px;align-content:start}
-.docs__ph{overflow:hidden;border-radius:4px;aspect-ratio:4/5;max-width:460px;background:#2a1f33}
+.docs__ph{overflow:hidden;border-radius:4px;aspect-ratio:4/5;max-width:460px;background:#d9ddd9}
 .docs__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 .docs__lead h3{font:400 clamp(1.8rem,3vw,2.6rem)/1.05 var(--display);letter-spacing:-.02em}
 .docs__lead .role{color:var(--green);font-weight:600;margin-top:6px}
@@ -252,7 +252,7 @@ bdi,.num{font-variant-numeric:tabular-nums}
 .case h3{font:400 clamp(1.6rem,2.6vw,2.2rem)/1.08 var(--display);letter-spacing:-.02em}
 .case__t + p{color:var(--mute);max-width:24em;margin-top:8px}
 .case__pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.case__pair figure{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:4/3;background:#3a2222}
+.case__pair figure{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:4/3;background:#e4e8e4}
 .case__pair img{width:100%;height:100%;object-fit:cover}
 .case__pair figcaption{position:absolute;inset-inline-start:10px;bottom:10px;background:rgba(18,26,21,.82);color:#fff;font-size:.8rem;font-weight:600;padding:5px 10px;border-radius:2px}
 .case__pair figure:last-child figcaption{background:var(--leaf);color:var(--ink)}
@@ -309,7 +309,7 @@ bdi,.num{font-variant-numeric:tabular-nums}
 .ft p,.ft li{font-size:.96rem;line-height:1.55}
 .ft a{color:#fff;text-decoration:none;display:inline-block;padding-block:6px}
 .ft a:hover{text-decoration:underline}
-.ft .ft__word{font:300 clamp(5rem,25vw,23rem)/.78 var(--display);letter-spacing:-.06em;color:var(--leaf);margin-top:clamp(40px,6vw,80px);white-space:nowrap;transform:translateY(.08em)}
+.ft .ft__word{font:300 clamp(5rem,25vw,23rem)/.78 var(--display);letter-spacing:-.06em;color:var(--leaf);margin-top:clamp(40px,6vw,80px);white-space:nowrap;padding-bottom:.06em}
 .ft__note{border-top:1px solid #2c3a31;padding-block:18px 26px;font-size:.84rem;color:#aab6ad;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
 @media (min-width:700px){.ft__grid{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1000px){.ft__grid{grid-template-columns:1.3fr 1fr 1fr 1fr}}
@@ -378,7 +378,7 @@ html[lang=ar] .hd nav a[lang=en]{font-family:var(--body)}
   .hero__txt{display:contents}
   .hero h1{order:1}
   .hero__ph{order:2;margin-top:26px;max-width:440px}
-  .hero__arch{aspect-ratio:5/5.4}
+  .hero__arch{aspect-ratio:1/1}
   .hero__badge{inset-inline-start:auto;inset-inline-end:-6px;bottom:auto;top:-14px;width:108px;font-size:.82rem;padding:8px}
   .hero__badge b{white-space:nowrap}
   .hero__cap{text-align:start}
@@ -387,3 +387,32 @@ html[lang=ar] .hd nav a[lang=en]{font-family:var(--body)}
 }
 /* tap targets */
 .ft a,.hero__mail,.flood__more a,.grp__act a{min-height:44px;display:inline-flex;align-items:center}
+
+/* r2 revisions (Fannan r1) */
+.doc{grid-template-columns:1fr}
+.doc .role,.doc .ask{grid-column:1}
+.docs__book{margin-top:22px;font-size:1.02rem;color:#2c3831}
+.docs__book a{color:var(--green);font-weight:600;display:inline-flex;align-items:center;min-height:44px}
+.case__t{gap:0}
+.k-visit__map::before{color:rgba(255,255,255,.35)}
+.ft__word{position:relative;z-index:0}
+.ft__note{position:relative;z-index:1;background:var(--ink);margin-top:0}
+@media (max-width:899px){
+  .hd nav ul{gap:0 14px}
+  .hd nav a{font-size:.9rem}
+  .hd nav a[lang=ar]{font-size:.98rem}
+  html[lang=ar] .hd nav a{font-size:.98rem}
+  html[lang=ar] .hd nav a[lang=en]{font-size:.88rem}
+  .k-visit__map{min-height:220px;height:220px}
+  .k-visit__map::before{font-size:2.2rem;bottom:14px}
+}
+@media (max-width:899px){
+  .hero{padding-top:14px}
+  .hero__ph{margin-top:18px}
+  .hero__cap{position:absolute;inset-inline-start:12px;bottom:10px;margin:0;background:rgba(18,26,21,.72);color:#fff;font-size:.78rem;padding:4px 9px;border-radius:2px}
+  .hero__lead{margin-top:16px;line-height:1.45}
+  .hero__acts{margin-top:16px}
+  html[lang=ar] .hero h1{font-size:2.75rem;line-height:1.08}
+  html[lang=ar] .hero__lead{line-height:1.6}
+}
+@media (min-width:900px){.docs__list{grid-column:2;grid-row:1}.docs__book{grid-column:2;grid-row:2;margin-top:0}.docs__lead{grid-row:1/3}}

@@ -514,3 +514,68 @@ img{height:auto}
 .phband img{width:100%;height:100%;object-fit:cover}
 .ph{border-bottom:0}
 @media (max-width:620px){.k-kb__media::after{background:linear-gradient(180deg,rgba(10,12,14,.72) 0,rgba(10,12,14,.15) 22%,rgba(10,12,14,.2) 45%,rgba(10,12,14,.9) 100%)}}
+
+/* ---- r3: Fannan round-2 fixes ---- */
+/* statement: counter photo under the year, no dead area */
+.say{padding-bottom:96px}
+.say__fig{margin:40px 0 0;max-width:360px;width:100%;overflow:hidden}
+.say__fig img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.say__fig figcaption{font-size:.85rem;color:#a5a9ae;margin-top:10px}
+.say__more{display:block;margin-top:44px}
+@media (min-width:980px){.say__more{grid-template-columns:none}}
+/* balanced headings */
+.check h3,.band h2,.item h2,.mini h2,.tyres h2{text-wrap:balance}
+/* hero: mobile top shade behind the brand */
+.k-kb__body{position:relative;z-index:1}
+@media (max-width:620px){
+  .k-kb::before{content:"";position:absolute;inset:0 0 auto 0;height:190px;z-index:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(10,12,14,.82) 0,rgba(10,12,14,.5) 50%,rgba(10,12,14,0) 100%)}
+}
+/* mobile photo strip: one ratio, tops aligned */
+@media (max-width:760px){
+  .k-drag{padding-bottom:48px}
+  .k-drag__track{align-items:flex-start}
+  .k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:78vw}
+  .k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/5}
+  .k-drag__bar{margin-top:24px}
+}
+/* about: tighter rhythm between stories (was ~280-300px) */
+.story{padding:60px 0}
+.story:first-child{padding-top:clamp(70px,8vw,110px)}
+.story:last-child{padding-bottom:clamp(70px,8vw,110px)}
+/* services: link to the one checklist */
+.item__more{margin-top:18px}
+.item__more .k-link{color:var(--k-accent);font-weight:600;padding:10px 0;display:inline-block}
+/* services 05 + 06 as one two-column row */
+.pair{display:grid;grid-template-columns:1fr;gap:56px 40px;padding:clamp(60px,8vw,110px) 0}
+.mini figure{margin:0 0 22px;overflow:hidden;background:#ddd}
+.mini figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mini h2{font:900 clamp(2.4rem,4.4vw,3.8rem)/.88 var(--k-display);text-transform:uppercase;margin:8px 0 16px}
+.mini p{max-width:30em;margin-bottom:10px}
+.mini__act{color:var(--k-accent);font-weight:600;padding:10px 0;display:inline-block}
+@media (min-width:760px){.pair{grid-template-columns:1fr 1fr}}
+/* services 07 tyres: full-bleed own photo */
+.tyres{position:relative;isolation:isolate;color:#fff;background:var(--night);min-height:min(92svh,820px);display:flex;align-items:flex-end;overflow:hidden}
+.tyres__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 66%;z-index:-2}
+.tyres::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,12,14,.15) 0,rgba(10,12,14,.35) 40%,rgba(10,12,14,.92) 100%)}
+.tyres__in{padding-block:clamp(80px,10vw,130px) clamp(56px,7vw,96px);width:100%}
+.tyres .item__n{color:#fff;opacity:.85}
+.tyres h2{font:900 clamp(4rem,12vw,10rem)/.8 var(--k-display);text-transform:uppercase;margin:8px 0 22px}
+.tyres p{max-width:32em;font-size:1.08rem;margin-bottom:6px}
+.tyres ul{list-style:none;padding:0;margin:18px 0 28px;max-width:32em}
+.tyres li{padding:10px 0 10px 26px;border-top:1px solid rgba(255,255,255,.3);position:relative}
+.tyres li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:10px;background:#fff;transform:rotate(45deg)}
+.tyres .k-btn{background:#fff;color:var(--k-ink)}
+.tyres .k-btn:hover{color:#fff}
+.tyres .item__acts .k-link{color:#fff}
+@media (min-width:980px){
+  .tyres::after{background:linear-gradient(90deg,rgba(10,12,14,.9) 0,rgba(10,12,14,.7) 34%,rgba(10,12,14,.1) 62%,rgba(10,12,14,0) 100%)}
+  .tyres{align-items:center}
+}
+.say__fig img{aspect-ratio:4/3;object-position:50% 40%}
+@media (min-width:980px){
+  .say__grid{align-items:stretch}
+  .say__grid>div:last-child{display:flex;flex-direction:column}
+  .say blockquote{font-size:clamp(2.6rem,4.5vw,4.3rem);line-height:1.04;letter-spacing:-.03em}
+  .say__more{margin-top:auto;padding-top:56px}
+}

@@ -41,17 +41,30 @@
 
 <main id="main">
   <section class="pg">
-    <h1 class="pg__h" data-reveal="lines">Services</h1>
-    <p class="pg__lede" data-reveal data-reveal-delay="300">MOTs, servicing, diagnostics, air conditioning and repairs, for all makes of car. Everything is booked by phone on 01202 428787.</p>
+    <div class="pg__type">
+      <h1 class="pg__h" data-reveal="lines">Services</h1>
+      <p class="pg__lede" data-reveal data-reveal-delay="300">MOTs, servicing, diagnostics, air conditioning and repairs, for all makes of car. Everything is booked by phone on 01202 428787.</p>
+    </div>
+    <nav class="pg__idx" aria-label="The five services">
+      <ol data-reveal-stagger>
+        <li data-reveal><a href="#mot-testing"><b>01</b><span>MOT testing</span><i class="k-arrow" aria-hidden="true">→</i></a></li>
+        <li data-reveal><a href="#servicing"><b>02</b><span>Servicing</span><i class="k-arrow" aria-hidden="true">→</i></a></li>
+        <li data-reveal><a href="#diagnostics"><b>03</b><span>Diagnostic tuning</span><i class="k-arrow" aria-hidden="true">→</i></a></li>
+        <li data-reveal><a href="#air-con"><b>04</b><span>Air conditioning</span><i class="k-arrow" aria-hidden="true">→</i></a></li>
+        <li data-reveal><a href="#repairs"><b>05</b><span>Repairs</span><i class="k-arrow" aria-hidden="true">→</i></a></li>
+      </ol>
+    </nav>
   </section>
 
   <!-- Signature effect (kit 25 dither, workshop trade): their own garage photo printed in sign red; tap/hover shows the real photo -->
   <figure class="k-fx-wrap band" data-reveal="fade">
-    <div class="k-fx" data-k-fx="dither" data-k-fx-ink="#b3161c" data-k-fx-paper="#ffffff" data-k-fx-cell="2" data-k-fx-peek style="aspect-ratio:21/8">
+    <div class="k-fx" data-k-fx="dither" data-k-fx-ink="#b3161c" data-k-fx-paper="#ffffff" data-k-fx-cell="2" data-k-fx-peek>
       <img src="img/garage.webp" crossorigin="anonymous" alt="The front of Southbourne Park Garage on Tuckton Road, with the red sign and doors" loading="lazy" style="object-position:50% 48%">
     </div>
     <figcaption>78 Tuckton Road, Southbourne. <span class="k-fx-tap">Tap for the photo.</span></figcaption>
   </figure>
+  <script>/* phones: cell 3 (the kit scales it by width/700) with the 4:3 crop so the sign reads */
+  (function(){var f=document.querySelector('.band .k-fx');if(f&&innerWidth<700)f.setAttribute('data-k-fx-cell','3')})();</script>
 
   <div class="items">
     <article class="item" id="mot-testing">
@@ -90,7 +103,6 @@
       <h2 data-reveal="lines">Air conditioning servicing</h2>
       <div class="item__body" data-reveal data-reveal-delay="150">
         <p>A car's air conditioning should be serviced at least every two years. Leave it longer and the system won't work as efficiently as it should.</p>
-        <ul><li>Air con service at least every two years</li></ul>
         <p class="item__act"><a class="btn" data-k-magnetic="0.25" href="tel:+441202428787">Book an air con service <span class="k-arrow" aria-hidden="true">→</span></a></p>
       </div>
     </article>

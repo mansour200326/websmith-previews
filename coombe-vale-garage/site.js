@@ -434,7 +434,9 @@
     var k=+fig.getAttribute('data-k-fx-contrast')||(dith?1.4:1.25),ink=fig.getAttribute('data-k-fx-ink')||'#1b1b1b',paper=fig.getAttribute('data-k-fx-paper')||'#f1ebde';
     var cols=Math.ceil(W/cell),rows=Math.ceil(H/cell),s=document.createElement('canvas');s.width=cols;s.height=rows;
     var sx=s.getContext('2d',{willReadFrequently:true});sx.imageSmoothingQuality='high';
-    var sc=Math.max(cols/img.naturalWidth,rows/img.naturalHeight),dw=img.naturalWidth*sc,dh=img.naturalHeight*sc;sx.drawImage(img,(cols-dw)/2,(rows-dh)/2,dw,dh);
+    var sc=Math.max(cols/img.naturalWidth,rows/img.naturalHeight),dw=img.naturalWidth*sc,dh=img.naturalHeight*sc;
+    var op=(getComputedStyle(img).objectPosition||'50% 50%').split(' '),ox=parseFloat(op[0]),oy=parseFloat(op[1]);ox=isNaN(ox)?.5:ox/100;oy=isNaN(oy)?.5:oy/100;
+    sx.drawImage(img,(cols-dw)*ox,(rows-dh)*oy,dw,dh);
     var d;try{d=sx.getImageData(0,0,cols,rows).data}catch(e){return}
     var inv=lum(paper)<lum(ink),L=new Float32Array(cols*rows);
     for(var i=0;i<L.length;i++){var l=(.2126*d[i*4]+.7152*d[i*4+1]+.0722*d[i*4+2])/255;l=Math.min(1,Math.max(0,(l-.5)*k+.5));L[i]=inv?1-l:l;}
