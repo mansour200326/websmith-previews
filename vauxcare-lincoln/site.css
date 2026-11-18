@@ -297,3 +297,31 @@ a:hover .roll>span{transform:translateY(-50%)}
 .ab-ph__facts dt{font:500 .85rem var(--mono);color:var(--mute)}
 .ab-ph__facts dd{margin:4px 0 0;font:800 clamp(1.6rem,2.6vw,2.3rem)/1 var(--display)}
 @media (min-width:900px){.ab-ph{grid-template-columns:1.15fr 1fr;align-items:center}}
+
+/* r3: hero photo capped at its real resolution, pulled up over the blue rule; slim info column */
+.door{max-width:320px}
+.hero__photo{max-width:320px}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:minmax(0,1.15fr) 380px minmax(0,.7fr)}
+  .hero__photo{max-width:380px;margin-top:calc(-1 * clamp(26px,4vw,52px) - 48px);position:relative;z-index:2}
+  .door{max-width:380px;box-shadow:0 0 0 8px var(--paper)}
+}
+/* r3: one shared navy duotone on every stock photo */
+.duo{position:relative}
+.duo img{filter:grayscale(1) contrast(1.05)}
+.duo::after{content:"";position:absolute;inset:0;background:#1f3fbf;mix-blend-mode:multiply;opacity:.35;pointer-events:none}
+.split__img.duo .stockcap--on{z-index:2}
+/* r3: Find us location card (tap still loads the map) */
+.k-visit__map{background:#0e1626;color:#fff;place-items:stretch}
+.loc{display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:14px;padding:clamp(28px,4vw,64px)}
+.loc__pc{font:900 italic clamp(4.2rem,11vw,10.5rem)/.82 var(--display);letter-spacing:-.025em;color:#fff;text-decoration:underline;text-decoration-color:var(--blue);text-decoration-thickness:.06em;text-underline-offset:.12em}
+.loc__land{font-size:clamp(1rem,1.4vw,1.2rem);color:#c3cad8;max-width:24em;margin-bottom:8px}
+.k-visit__map .loc button.btn{border:0;min-height:52px;padding:0 22px;font:700 1.02rem/1 var(--body);border-radius:2px}
+@media (max-width:899px){.k-visit__map{min-height:220px}.loc{padding:24px var(--pad)}.loc__pc{font-size:clamp(3.6rem,18vw,5.2rem)}.loc{gap:10px}}
+@media (max-width:600px){.k-visit__map{min-height:220px}}
+/* r3: about photo capped, statement column gets the width; intro columns top-aligned */
+.ab-ph .wide-ph .ph{max-width:440px}
+@media (min-width:900px){.ab-ph{grid-template-columns:minmax(0,440px) 1fr;gap:clamp(40px,6vw,96px)}.ab-ph__q{font-size:clamp(3rem,6.4vw,6.6rem)}.pi__row--top{align-items:start}}
+.loc__land{max-width:30em;text-wrap:balance}
+@media (max-width:899px){.loc{padding:20px var(--pad);gap:8px}.loc__land{font-size:.98rem;margin-bottom:6px}}
+.k-visit__addr{margin-bottom:20px}
