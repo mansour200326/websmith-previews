@@ -507,3 +507,10 @@ a{color:inherit}
 .hd__tel{min-width:46px;justify-content:center}
 .ft li a,.ft address a{padding-block:10px;min-height:44px}
 .k-visit__land a,.ggs a{display:inline-block;padding-block:6px}
+img{height:auto}
+.story figure{max-width:540px;width:100%;justify-self:center}
+@media (min-width:980px){.story>figure{justify-self:end}.story--flip>figure{justify-self:start}}
+.phband{margin:0;overflow:hidden;height:clamp(240px,46vw,560px);background:#ddd}
+.phband img{width:100%;height:100%;object-fit:cover}
+.ph{border-bottom:0}
+@media (max-width:620px){.k-kb__media::after{background:linear-gradient(180deg,rgba(10,12,14,.72) 0,rgba(10,12,14,.15) 22%,rgba(10,12,14,.2) 45%,rgba(10,12,14,.9) 100%)}}
