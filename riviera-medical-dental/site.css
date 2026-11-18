@@ -217,7 +217,7 @@ bdi,.num{font-variant-numeric:tabular-nums}
 .say{border-top:1px solid var(--line)}
 .say .wrap{display:grid;gap:32px}
 .say__q{font:300 clamp(2.3rem,5.6vw,5rem)/1.04 var(--display);letter-spacing:-.035em;max-width:15em}
-.say__q em{font-style:normal;color:var(--green)}
+.say__q em{font-style:normal}
 .say__by{font-size:.95rem;color:var(--mute);margin-top:20px}
 .say__side{align-self:end;max-width:28em}
 .say__side p+p{margin-top:14px}
@@ -379,8 +379,11 @@ html[lang=ar] .hd nav a[lang=en]{font-family:var(--body)}
   .hero h1{order:1}
   .hero__ph{order:2;margin-top:26px;max-width:440px}
   .hero__arch{aspect-ratio:5/5.4}
-  .hero__badge{inset-inline-start:auto;inset-inline-end:-6px;bottom:-18px;width:112px;font-size:.9rem}
+  .hero__badge{inset-inline-start:auto;inset-inline-end:-6px;bottom:auto;top:-14px;width:108px;font-size:.82rem;padding:8px}
+  .hero__badge b{white-space:nowrap}
   .hero__cap{text-align:start}
   .hero__lead{order:3}
   .hero__acts{order:4}
 }
+/* tap targets */
+.ft a,.hero__mail,.flood__more a,.grp__act a{min-height:44px;display:inline-flex;align-items:center}
