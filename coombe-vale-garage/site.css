@@ -579,3 +579,4 @@ img{height:auto}
   .say blockquote{font-size:clamp(2.6rem,4.5vw,4.3rem);line-height:1.04;letter-spacing:-.03em}
   .say__more{margin-top:auto;padding-top:56px}
 }
+@media (max-width:979px){.tyres::after{background:linear-gradient(180deg,rgba(10,12,14,.2) 0,rgba(10,12,14,.78) 30%,rgba(10,12,14,.93) 60%,rgba(10,12,14,.96) 100%)}}
