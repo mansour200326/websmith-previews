@@ -212,3 +212,4 @@ html,body{overflow-x:clip}
 @media (max-width:600px){.hero__svc{gap:0 14px}.hero__svc a{font-size:1rem}}
 @media (min-width:980px){.hero{padding-bottom:22px}}
 .hero__svc a{min-width:44px}
+@media (max-width:600px){.hero__svc{justify-content:space-between;gap:0 8px}}
