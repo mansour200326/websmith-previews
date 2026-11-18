@@ -325,3 +325,40 @@ a:hover .roll>span{transform:translateY(-50%)}
 .loc__land{max-width:30em;text-wrap:balance}
 @media (max-width:899px){.loc{padding:20px var(--pad);gap:8px}.loc__land{font-size:.98rem;margin-bottom:6px}}
 .k-visit__addr{margin-bottom:20px}
+
+/* r4: four-people crop (1235x540), capped 380 desktop / 300 mobile */
+.door{aspect-ratio:1235/540}
+.door img{object-position:50% 40%}
+.d-only{display:inline}
+@media (max-width:899px){
+  .d-only{display:none}
+  .hero__word{font-size:clamp(4.2rem,21vw,6rem);margin-inline-start:calc(-.04em - 2px)}
+  .hero__grid{gap:22px;padding-top:22px}
+  .hero__big{font-size:clamp(1.55rem,6.6vw,1.9rem);margin-bottom:12px}
+  .acts{margin-top:18px}
+  /* faces band under the CTA: 390x170 */
+  .hero__photo{max-width:none;margin-inline:calc(-1 * var(--pad))}
+  .door{max-width:none;aspect-ratio:390/170}
+  .hero__photo figcaption{padding-inline:var(--pad)}
+  /* about: statement first, photo below, 300px */
+  .ab-ph>div{order:-1}
+  .ab-ph .wide-ph .ph{max-width:300px}
+}
+.ab-ph .wide-ph .ph{aspect-ratio:1235/540}
+@media (min-width:900px){.ab-ph{grid-template-columns:minmax(0,380px) 1fr}.ab-ph .wide-ph .ph{max-width:380px}}
+
+/* r4: Tyres split, oversize the parallax image so no gap opens */
+.split__img{background:#0e1626}
+.split__img img{inset:-14% 0;height:128%}
+
+/* r4: Find us card, landmark top-left, postcode + map button at the bottom */
+.loc__land{margin-bottom:auto}
+@media (min-width:900px){.k-visit__map{min-height:620px}.loc{gap:18px}}
+@media (max-width:899px){
+  .k-visit__map{border-top:1px solid #2a3550;margin-bottom:24px}
+  .loc__pc{font-size:clamp(3.4rem,16vw,4.5rem)}
+  .loc__land{margin-bottom:auto;padding-bottom:18px}
+}
+/* r4: desktop first screen ends on white; the blue band starts below the fold */
+@media (min-width:900px) and (min-height:600px){.hero{min-height:calc(100vh - 69px);min-height:calc(100svh - 69px)}}
+@media (min-width:900px) and (min-height:600px){.hero{display:flex;flex-direction:column;justify-content:center}.hero>.wrap{width:100%}.hero__grid{padding-bottom:44px}}
