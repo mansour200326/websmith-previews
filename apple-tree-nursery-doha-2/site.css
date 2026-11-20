@@ -819,3 +819,6 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 .aims{counter-reset:a;list-style:none;padding:0!important}
 .aims li{counter-increment:a;display:grid;grid-template-columns:2.4em 1fr;padding:10px 0;border-bottom:1px solid var(--line);margin:0!important}
 .aims li::before{content:counter(a,decimal-leading-zero);font-weight:800;color:var(--red-ink);font-family:var(--k-display)}
+.k-quotes__dots button[aria-current=true]{background-clip:content-box}
+.parents .k-quotes__slide blockquote::before{font-size:1.9em;line-height:.5;margin-bottom:.05em;padding-top:.3em}
+.foot .foot__name{letter-spacing:-.04em;font-weight:750}
