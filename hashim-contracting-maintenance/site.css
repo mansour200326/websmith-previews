@@ -397,4 +397,4 @@ html[lang=ar] .k-visit__map::before{content:"© OpenStreetMap contributors";font
 /* services band caption */
 .band{position:relative}
 .band__cap{position:absolute;inset:auto var(--pad) 16px;color:#fff;font-size:.86rem;text-shadow:0 1px 14px rgba(0,0,0,.7)}
-html[lang=ar] .hero__name{line-height:.8}
+html[lang=ar] h1.hero__name{line-height:.8!important;letter-spacing:-.045em!important}
