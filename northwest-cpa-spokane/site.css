@@ -887,3 +887,13 @@ a{color:inherit}
 }
 
 .ab-hero .ph h1{font-size:clamp(3rem,7vw,6.6rem)}
+
+/* ---- a11y fixes ---- */
+.nav a{min-width:44px;text-align:center}
+.hd__tel{display:inline-flex;align-items:center;min-height:44px}
+.tlink{display:inline-flex;align-items:center;gap:.4em;min-height:44px;background:none;padding-bottom:0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;transition:text-underline-offset .4s var(--ease),color .3s}
+.tlink:hover{text-underline-offset:9px}
+.ft li a{padding-block:10px}
+.ft .ft__h{font:600 .82rem var(--f-b);color:var(--mute-dk);margin-bottom:8px;letter-spacing:.02em}
+.revs .k-quotes__dots button{padding:20.5px 8px;margin-inline:-8px}
+.k-js .revs .k-quotes__slide:not(.is-on) .k-w{opacity:1}

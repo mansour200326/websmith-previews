@@ -337,7 +337,7 @@ main{position:relative;z-index:1;background:var(--paper)}
 .ft address{font-style:normal;line-height:1.6}
 .ft__note{border-top:1px solid #262624;margin-top:48px;padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.82rem;color:var(--mute-d)}
 @media(min-width:760px){.ft__top{grid-template-columns:1.4fr 1fr 1fr 1fr}}
-@media(min-width:960px) and (min-height:760px){.ft{position:sticky;bottom:0;z-index:0}}
+
 
 /* ---------- inner pages ---------- */
 .intro{background:var(--ink);color:var(--white);padding:clamp(130px,18vw,210px) var(--pad) clamp(50px,7vw,90px)}
