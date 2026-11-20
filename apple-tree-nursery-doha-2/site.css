@@ -827,3 +827,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 .safe .btn--light{color:var(--ink)}
 .ribbons{gap:12px}
 @media (min-width:900px){.pgrid .span2{grid-column:span 2}.pgrid .span2 .k-zoom{aspect-ratio:auto;height:calc(100% - 30px)}}
+.skip:not(:focus){clip-path:inset(50%)}
+.rooms .k-drag__meta{display:block}
+.rooms .k-drag__meta span{display:block;margin-top:4px}
+@media (min-width:641px){.hero__photo img{object-position:50% 42%;transform-origin:50% 42%}}
