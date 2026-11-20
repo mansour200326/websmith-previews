@@ -60,7 +60,7 @@
       <div class="item__ph" data-reveal="clip"><img src="img/shop.webp" alt="The Auto Surgeon shop on Collishaw Street" loading="lazy"></div>
     </article>
 
-    <article class="item" id="maintenance">
+    <article class="item item--flip" id="maintenance">
       <div>
         <span class="item__n">02</span>
         <h2 data-reveal="lines">Oil and fluid service</h2>
@@ -78,8 +78,9 @@
       <div class="item__ph" data-reveal="clip"><img src="img/timing-engine.webp" alt="Clean engine bay with the front cover off during service" loading="lazy"></div>
     </article>
 
-    <article class="item" id="electrical">
-      <div>
+    <article class="item item--band" id="electrical">
+      <div class="item__ph item__ph--bleed" data-reveal="clip"><img src="img/diagnostics.webp" alt="Diagnostic laptop connected to a car in the bay" loading="lazy"></div>
+      <div class="item__body">
         <span class="item__n">03</span>
         <h2 data-reveal="lines">Electrical and diagnostics</h2>
         <p>Electrical fault diagnosis is Jeff's speciality: he worked as the electrical specialist at Chrysler, AMC, Jeep and Renault dealers, and has specialized training in electrical faults, emissions, fuel systems and drive trains.</p>
@@ -92,9 +93,8 @@
           <li>Tire pressure monitor systems (TPMS)</li>
         </ul>
         <p><b>At the end of your rope? Jeff can help. If he can't fix it, you pay nothing.</b></p>
-        <div class="item__acts"><a class="k-btn" data-k-magnetic="0.25" href="tel:+15068591213">Describe the problem <span class="k-arrow">→</span></a><a class="k-link" href="mailto:jefftech@autosurgeon.ca">Email Jeff</a></div>
+        <div class="item__acts"><a class="k-btn k-btn--light" data-k-magnetic="0.25" href="tel:+15068591213">Describe the problem <span class="k-arrow">→</span></a><a class="k-link" href="mailto:jefftech@autosurgeon.ca">Email Jeff</a></div>
       </div>
-      <div class="item__ph" data-reveal="clip"><img src="img/diagnostics.webp" alt="Diagnostic laptop connected to a car in the bay" loading="lazy"></div>
     </article>
 
     <article class="item" id="battery">
@@ -113,30 +113,37 @@
       <div class="item__ph" data-reveal="clip"><img src="img/meter.webp" alt="Charging tester reading 14.4 volts" loading="lazy"></div>
     </article>
 
-    <article class="item" id="brakes">
+    <article class="item item--wide" id="brakes">
       <div>
         <span class="item__n">05</span>
         <h2 data-reveal="lines">Brakes</h2>
-        <p>Brakes are one of the most important safety systems on your vehicle. Winter and the salt on Maritime roads rot unprotected rotors, sometimes in under a year. The coated rotors we supply are EPA approved and carry up to three years warranty.</p>
+        <div class="item__top">
+          <div><p>Brakes are one of the most important safety systems on your vehicle. Winter and the salt on Maritime roads rot unprotected rotors, sometimes in under a year. The coated rotors we supply are EPA approved and carry up to three years warranty.</p>
+          <p>Also: ABS and ETS diagnostics, disc and drum brakes. Which pad goes on depends on how you drive:</p></div>
+          <figure class="item__inset"><img src="img/brake-coated.webp" alt="Coated brake rotor on a car, still clean after two years" loading="lazy"><figcaption>Coated rotor, two years on</figcaption></figure>
+        </div>
         <div class="pads">
           <div><b>Ceramic</b><span>Best for cars, crossovers, SUVs and light trucks. Quiet, almost no dust, last longer and easy on rotors.</span></div>
           <div><b>Semi-metallic</b><span>A bit cheaper, noisier and dustier. Right for extreme cold, constant braking or loaded work trucks.</span></div>
           <div><b>Organic</b><span>Cheap and easy on rotors, but they fade with heat and wear out quick. Jeff doesn't recommend them.</span></div>
         </div>
-        <p>Also: ABS and ETS diagnostics, disc and drum brakes.</p>
+        <div class="item__acts"><a class="k-link" href="tel:+15068591213">Ask about pads and rotors <span class="k-arrow">→</span></a></div>
       </div>
-      <div class="item__ph" data-reveal="clip"><img src="img/brake-coated.webp" alt="Coated brake rotor on a car, still clean after two years" loading="lazy"></div>
     </article>
 
-    <article class="item" id="timing">
+    <article class="item item--flip" id="timing">
+      <div class="item__fig" aria-hidden="true"><b>100,000</b><span>km</span><small>When most manufacturers say the belt is due</small></div>
       <div>
         <span class="item__n">06</span>
         <h2 data-reveal="lines">Timing belts</h2>
         <p>Timing belt replacement is a must to avoid engine damage. Most engines today are belt driven, overhead cam, interference fit: if the belt fails, the valves can hit the pistons. In Jeff's experience 80% do, and the repair costs three to four times more, plus the belt.</p>
         <p>Most manufacturers recommend a new belt at 100,000 km; some are good to 160,000 km. If your vehicle is close to 100,000 km, call and Jeff will check the recommended interval at no cost.</p>
+        <div class="pair" data-reveal-stagger="120">
+          <figure data-reveal><div class="pair__ph"><img src="img/timing-piston.webp" alt="Piston with a hole punched in it by a valve after a timing belt failure" loading="lazy"></div><figcaption>The valve met the piston</figcaption></figure>
+          <figure data-reveal><div class="pair__ph"><img src="img/timing-valves.webp" alt="Cylinder head with bent valves after a timing belt failure" loading="lazy"></div><figcaption>Bent valves</figcaption></figure>
+        </div>
         <div class="item__acts"><a class="k-btn" data-k-magnetic="0.25" href="tel:+15068591213">Check my interval <span class="k-arrow">→</span></a></div>
       </div>
-      <div class="item__ph" data-reveal="clip"><img src="img/timing-piston.webp" alt="Piston damaged by a valve after a timing belt failure" loading="lazy"></div>
     </article>
 
     <article class="item item--plain" id="exhaust">
@@ -165,7 +172,7 @@
         <p>Every repair carries a minimum 12 months parts and labour warranty, and many parts are lifetime. Within 10 miles of the shop, we'll give you a ride to work or home.</p>
         <div class="item__acts"><a class="k-btn" data-k-magnetic="0.25" href="tel:+15068591213">Call 506 859 1213 <span class="k-arrow">→</span></a><a class="k-link" href="mailto:jefftech@autosurgeon.ca">jefftech@autosurgeon.ca</a></div>
       </div>
-      <div class="item__ph" data-reveal="clip"><img src="img/timing-valves.webp" alt="Cylinder head with damaged valves on the bench" loading="lazy"></div>
+      <div class="item__ph" data-reveal="clip"><img src="img/dodge-440.webp" alt="Orange 1970 Dodge 440 V8 on an engine stand in the shop" loading="lazy"></div>
     </article>
   </div>
 </div>
