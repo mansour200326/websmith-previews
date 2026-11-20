@@ -169,6 +169,7 @@
   var svg=w.querySelector('svg'),t=svg&&svg.querySelector('text');
   function ready(){w.classList.add('is-ready')}
   if(!t||!t.getStartPositionOfChar||matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){ready();return}
+  var split_ok=0;
   function split(){
     try{
       var NS='http://www.w3.org/2000/svg',n=t.getNumberOfChars(),xs=[],i;
@@ -184,11 +185,11 @@
         var g=document.createElementNS(NS,'g');g.setAttribute('class','hw-l');g.setAttribute('clip-path','url(#hw-c'+i+')');
         g.style.transitionDelay=(i*55)+'ms';g.appendChild(t.cloneNode(true));svg.appendChild(g);
       }
-      t.parentNode.removeChild(t);
+      t.style.display='none';split_ok=1;
     }catch(e){}
     ready();
     requestAnimationFrame(function(){
-      new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();w.classList.add('is-up')}},{threshold:.35}).observe(w);
+      new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();w.classList.add('is-up');if(split_ok)setTimeout(function(){t.style.display='';[].forEach.call(svg.querySelectorAll('.hw-l'),function(g){g.parentNode.removeChild(g)})},1500)}},{threshold:.35}).observe(w);
     });
   }
   (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(split,split);
