@@ -286,3 +286,4 @@ p{margin:0}
 .k-drag__meta span{display:block;margin-top:2px}
 .svc:has(.svc__type){padding-block:clamp(36px,4vw,60px)}
 .svc__type{align-self:end}
+@media (max-width:700px){.k-kb__img{object-position:22% 40%}}
