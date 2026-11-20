@@ -968,3 +968,47 @@ a{color:inherit}
 .step a[href^="tel:"]{white-space:nowrap}
 @media (max-width:959px){.hero__acts{gap:12px}.hero__acts .k-btn{flex-shrink:0;gap:.45em;font-size:.97rem}.hero__acts .tlink{font-size:.92rem;min-width:0}}
 @media (max-width:389px){.hero__acts .tlink{font-size:.84rem}.hero__acts .k-btn{padding:13px 13px;font-size:.92rem}}
+
+/* ---- independent review r2 fixes ---- */
+/* 1a: index founder panel, stats column holds while the text scrolls */
+@media (min-width:960px){.sec.dark .yrs{position:sticky;top:120px;align-self:start}}
+.yrs b.num{font-size:clamp(5rem,10vw,10rem);min-width:1.8em}
+/* 1b: about CFO panel, one wide column */
+.cfo__h{font:400 clamp(3rem,7vw,6.5rem)/.98 var(--f-d);letter-spacing:-.035em;font-variation-settings:"opsz" 72;max-width:none;margin:0 0 clamp(26px,3vw,40px)}
+.cfo__p{color:#c9cacc;font-size:1.12rem;max-width:38em}
+.creds--row{display:grid;grid-template-columns:1fr;margin:clamp(36px,5vw,64px) 0 clamp(30px,4vw,44px);border-top:1px solid #3a3e45}
+.creds--row li{display:block;padding:20px 0;border-bottom:1px solid #3a3e45}
+.creds--row li b{display:block;font:400 1.6rem/1.15 var(--f-d);color:#fff;letter-spacing:-.01em}
+.creds--row li span{display:block;margin-top:6px;text-align:start;color:var(--mute-dk);font-size:.92rem}
+@media (min-width:760px){
+  .creds--row{grid-template-columns:repeat(3,1fr);column-gap:clamp(24px,3vw,48px)}
+  .creds--row li{padding:24px 0 26px}
+}
+/* 2: about first screen fills the desktop viewport */
+@media (min-width:960px){
+  .ab-hero,.ab-hero__grid{min-height:calc(100svh - 72px)}
+  .ab-hero__grid{align-items:end}
+  .ab-hero__ph{align-self:stretch;display:flex}
+  .ab-hero__ph .k-split__photo{flex:1;height:auto;min-height:100%}
+  .ab-hero__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+}
+/* 3: no empty map block on phones, the Directions button covers it */
+@media (max-width:899px){.k-visit__map{display:none}}
+/* 4: portrait fades out before the gold name; no lighter edge on phones */
+@media (min-width:960px){
+  .hero__photo .k-split__photo img{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent)}
+}
+@media (max-width:959px){
+  .hero__photo .k-split__photo{background:#17191d}
+  .hero__photo .k-split__photo img{-webkit-mask-image:linear-gradient(to left,transparent 0,#000 12%);mask-image:linear-gradient(to left,transparent 0,#000 12%)}
+}
+/* 5: phone accordions, narrower numeral column */
+@media (max-width:599px){.k-acc__row summary,.svc .k-acc__row summary{grid-template-columns:2.2em 1fr auto}}
+/* 6: services phone intro */
+.ph__lead .lead-sm{display:none}
+@media (max-width:599px){
+  .ph__lead{font-size:1.05rem;line-height:1.55}
+  .ph__lead .lead-lg{display:none}.ph__lead .lead-sm{display:inline}
+  .ph__tel{line-height:1.5}
+  .ph__tel a{display:inline;min-height:0;padding-block:12px;white-space:nowrap}
+}

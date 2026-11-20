@@ -641,7 +641,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 .hero{padding-top:clamp(22px,3.5vw,48px)}
 .hero h1{font-size:clamp(4rem,13.4vw,12.4rem);line-height:.86;letter-spacing:-.035em;color:var(--red);font-weight:750;font-variation-settings:"opsz" 96}
 html:lang(ar) .hero h1{font-size:clamp(3.4rem,11vw,9.5rem);line-height:.95!important;letter-spacing:0}
-:lang(ar) .hero h1 .k-line-mask{padding-bottom:.14em}
+:lang(ar) .hero h1 .k-line-mask{padding-top:.25em;margin-top:-.25em;padding-bottom:.14em}
 .hero__row{display:grid;grid-template-columns:1fr;gap:18px 40px;align-items:end}
 .hero__intro{max-width:31em;font-size:clamp(1.05rem,1.35vw,1.2rem);padding-bottom:.6em}
 .hero__intro p{margin-bottom:18px}
@@ -771,7 +771,7 @@ html:lang(ar) .hero h1{font-size:clamp(3.4rem,11vw,9.5rem);line-height:.95!impor
 .visit .k-visit tr.is-today td{color:var(--red-ink)}
 .visit .k-visit__map{background:var(--sand-2) url(img/garden-corner.webp) center 40%/cover}
 .visit .k-visit__map button{min-height:48px}
-.visit__pobox{font-size:.95rem;color:var(--mute);margin-top:-14px;margin-bottom:22px}
+.visit__pobox{font-size:.95rem;color:var(--mute);margin-top:-8px;margin-bottom:22px}
 
 /* ---- footer ---- */
 .foot{background:var(--ink);color:#F4EADB;padding-top:clamp(60px,8vw,110px)}
@@ -831,6 +831,11 @@ html:lang(ar) .hero h1{font-size:clamp(3.4rem,11vw,9.5rem);line-height:.95!impor
 .skip:not(:focus){clip-path:inset(50%)}
 .rooms .k-drag__meta{display:block}
 .rooms .k-drag__meta span{display:block;margin-top:4px}
-@media (min-width:641px){.hero__photo{aspect-ratio:1920/866;height:auto;max-height:72vh}.hero__photo img{object-position:50% 60%;transform-origin:50% 60%}}
+@media (min-width:641px){.hero__photo{aspect-ratio:auto;max-height:none;height:max(420px,calc(100svh - 420px))}.hero__photo img{object-position:50% 85%;transform-origin:50% 85%}}
 @media (max-width:640px){.hero{padding-top:10px}.hero__row{gap:12px 40px}.hero h1{margin-bottom:0}.hero__intro{padding-bottom:0}.hero__intro p{font-size:1.05rem;line-height:1.5;margin-bottom:14px}.hero__acts{row-gap:8px}.hero__photo{margin-top:14px}}
 #aw-h{max-width:12ch}
+
+/* r2 review fixes */
+@media (min-width:900px){.hero{padding-top:clamp(14px,1.6vw,24px)}.hero h1{font-size:clamp(4rem,9.5vw,8.5rem)}.hero__photo{margin-top:clamp(16px,2vw,28px)}}
+.visit .k-visit__map{min-height:0;aspect-ratio:3/2;height:auto;align-self:start;background-position:center 55%}
+@media (min-width:900px){.visit .k-visit__map{min-height:0}}
