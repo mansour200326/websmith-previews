@@ -70,7 +70,7 @@ p{margin:0}
 .k-kb__img{object-position:50% 40%}
 .k-kb__body{max-width:1600px;padding-inline:var(--pad)}
 .k-kb h1{font:800 clamp(2.9rem,8.6vw,9rem)/.9 var(--k-display);font-stretch:118%;letter-spacing:-.035em;margin-bottom:.32em;max-width:13ch}
-:lang(ar) .k-kb h1{font:700 clamp(2.4rem,6.4vw,6.2rem)/1.25 var(--k-display);letter-spacing:0;max-width:none}
+:lang(ar) .k-kb h1{font:700 clamp(2.2rem,9.2vw,5.6rem)/1.25 var(--k-display);letter-spacing:0;max-width:none}
 .hero__foot{display:grid;gap:22px;align-items:end;border-top:1px solid rgba(255,255,255,.4);padding-top:20px}
 .k-kb__sub{margin:0;max-width:36em;opacity:1;font-size:clamp(1.02rem,1.4vw,1.22rem)}
 .hero__acts{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
@@ -286,4 +286,40 @@ p{margin:0}
 .k-drag__meta span{display:block;margin-top:2px}
 .svc:has(.svc__type){padding-block:clamp(36px,4vw,60px)}
 .svc__type{align-self:end}
-@media (max-width:700px){.k-kb__img{object-position:22% 40%}}
+@media (max-width:700px){.k-kb__img{object-position:58% 60%}}
+
+/* ---- Round 2 (Fannan r1 fixes) ---- */
+.k-kb__media picture{display:contents}
+.sec__h .h-line{display:block}
+.sec__h .k-line-mask{padding-bottom:.08em}
+:lang(ar) .k-kb h1 .k-kb__line{white-space:nowrap}
+/* night band: inside the content grid, capped height */
+.night__ph{aspect-ratio:auto;max-height:none;max-width:1440px;margin-inline:auto;padding-top:clamp(28px,5vw,72px)}
+.night__frame{overflow:hidden;aspect-ratio:16/8;max-height:72vh;width:100%}
+.night__frame picture{display:block;width:100%;height:100%}
+.night__frame img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+@media (max-width:700px){.night__frame{aspect-ratio:16/10}.night__frame img{object-position:50% 50%}}
+/* less air after the project list */
+#projects{padding-bottom:clamp(36px,4vw,64px)}
+#projects + .k-drag{padding-top:clamp(56px,6vw,96px)}
+/* services list: expanded display titles + own photo */
+.k-acc__row summary{grid-template-columns:3.2em 1fr auto}
+.k-acc__t{font:800 clamp(1.9rem,3.7vw,3rem)/.98 var(--k-display);font-stretch:125%;letter-spacing:-.03em}
+.acc__tt{display:block;max-width:16ch;text-wrap:balance}
+:lang(ar) .k-acc__t{font:700 clamp(1.6rem,3vw,2.6rem)/1.35 var(--k-display);letter-spacing:0}
+:lang(ar) .acc__tt{max-width:14em}
+.k-acc__t small{margin-top:12px}
+.k-acc__body{display:grid;grid-template-columns:1fr;gap:18px 40px;padding-inline-start:calc(3.2em + 10px)}
+.acc__ph{margin:0}
+.k-acc__body .acc__ph img{display:block;width:100%;max-width:none;aspect-ratio:3/2;object-fit:cover;border-radius:0}
+.acc__ph figcaption{font-size:.82rem;color:var(--k-mute);margin-top:8px}
+@media (max-width:700px){.k-acc__body{padding-inline-start:0}}
+@media (min-width:900px){
+  .k-acc__body{grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto 1fr;align-items:start}
+  .k-acc__body>ul{grid-column:1;grid-row:1;columns:1}.k-acc__body>p{grid-column:1;grid-row:2}
+  .k-acc__body .acc__ph{grid-column:2;grid-row:1/span 3}
+}
+.cap-m{display:none}
+@media (max-width:700px){.cap-d{display:none}.cap-m{display:inline}}
+.night__cap{font-size:.84rem;color:#bdb6ae;margin-top:10px}
+.ph picture{display:block;width:100%;height:100%}

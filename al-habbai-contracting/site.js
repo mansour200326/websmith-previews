@@ -22,6 +22,7 @@
     bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v'),n=0;
       bs.forEach(function(o){o.setAttribute('aria-pressed',o===b)});
       cs.forEach(function(c){var on=v==='all'||c.getAttribute('data-st')===v;c.hidden=!on;if(on)n++});
+      var sp=document.querySelector('[data-strip]');if(sp){var so=v==='all'||sp.getAttribute('data-st')===v;sp.hidden=!so;if(so)n+=sp.querySelectorAll('li').length}
       if(out)out.textContent=n;
     })});
   }

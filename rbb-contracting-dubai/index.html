@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600&text=%D8%B9%D8%B1%D8%A8%D9%8A&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/villa-white-stone.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/villa-white-stone.webp" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/al-warqa-night.webp" media="(max-width:700px)" fetchpriority="high">
 <link rel="stylesheet" href="kit.css">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
@@ -50,7 +51,7 @@
 <main id="main">
 <section class="k-kb" aria-label="Introduction">
   <div class="k-kb__media">
-    <img class="k-kb__img" src="img/villa-white-stone.webp" width="2400" height="1121" alt="A finished two-storey villa in white stone cladding with tall dark windows, seen from the roof over the pool court" fetchpriority="high">
+    <picture><source media="(max-width:700px)" srcset="img/al-warqa-night.webp" width="2400" height="1121"><img class="k-kb__img" src="img/villa-white-stone.webp" width="2400" height="1121" alt="A finished two-storey villa in white stone cladding with tall dark windows, seen from the roof over the pool court" fetchpriority="high"></picture>
   </div>
   <div class="k-kb__body">
     <h1><span class="k-line-mask"><span class="k-kb__line" style="--i:0">Rashid Bin</span></span><span class="k-line-mask"><span class="k-kb__line" style="--i:1">Bishr Contracting</span></span></h1>
@@ -62,13 +63,13 @@
           <a class="hero__more k-link" href="#projects">See the project list</a>
         </div>
       </div>
-      <p class="hero__cap k-kb__fade" style="--i:4">Villa in white stone, Dubai. Photo from RBB's own files.</p>
+      <p class="hero__cap k-kb__fade" style="--i:4"><span class="cap-d">Villa in white stone, Dubai.</span><span class="cap-m">Our Al Warqa villa at night, handed over 2023.</span> Photo from RBB's own files.</p>
     </div>
   </div>
 </section>
 
 <section class="sec wrap" aria-labelledby="intro-h">
-  <h2 id="intro-h" class="sec__h" data-reveal="lines" style="margin-bottom:clamp(28px,4vw,56px)">A family name<br>on Dubai villas</h2>
+  <h2 id="intro-h" class="sec__h" style="margin-bottom:clamp(28px,4vw,56px)"><span class="k-line-mask"><span class="h-line" data-reveal>A family name</span></span><span class="k-line-mask"><span class="h-line" data-reveal data-reveal-delay="100">on Dubai villas</span></span></h2>
   <div class="intro">
     <p class="intro__big" data-reveal>His Excellency Rashid Bin Butti Bin Humaid Bin Bishr started the company in 1991. Since then we have built villas for families across Dubai, from Al Khawaneej and Al Mizher to Jumeirah and Al Warqa, and we take on renovation and refurbishment as well as new houses.</p>
     <div class="intro__side" data-reveal data-reveal-delay="150">
@@ -103,12 +104,12 @@
     <figure class="ph c2"><img data-reveal="clip" src="img/villa-timber-slats.webp" width="2000" height="1000" alt="Villa facade with a band of vertical timber-look slats over a white colonnade" loading="lazy"><figcaption>Slatted upper floor over a colonnade</figcaption></figure>
     <figure class="ph c3"><img data-reveal="clip" src="img/stair-lit-treads.webp" width="747" height="1600" alt="Stone staircase with a light strip under every tread and a glass balustrade" loading="lazy"><figcaption>Lit stair treads</figcaption></figure>
     <figure class="ph c6"><img data-reveal="clip" src="img/ns-house.webp" width="1350" height="1800" alt="NS House: a villa with a tall pointed-arch window framed in grey stone" loading="lazy"><figcaption>NS House</figcaption></figure>
-    <figure class="ph c4"><img data-reveal="clip" src="img/villa-stone-palms.webp" width="2000" height="1487" alt="Villa with split-face stone walls, black-framed windows and date palms at the entrance" loading="lazy"><figcaption>Stone cladding and palms at the gate</figcaption></figure>
+    <figure class="ph c4"><picture><source media="(max-width:700px)" srcset="img/villa-white-stone.webp" width="2400" height="1121"><img data-reveal="clip" src="img/villa-stone-palms.webp" width="2000" height="1487" alt="Villa with stone-clad walls, black-framed windows and date palms at the entrance" loading="lazy"></picture><figcaption><span class="cap-d">Stone cladding and palms at the gate</span><span class="cap-m">White stone villa, seen from the roof</span></figcaption></figure>
   </div>
 </section>
 
 <section class="night" aria-labelledby="night-h">
-  <figure class="night__ph" style="overflow:hidden"><img data-reveal="clip" src="img/al-warqa-night.webp" width="2400" height="1121" alt="Villa in Al Warqa at night, its facade and compound wall outlined by warm strip lighting" loading="lazy"></figure>
+  <figure class="night__ph wrap"><div class="night__frame"><picture><source media="(max-width:700px)" srcset="img/villa-stone-palms.webp" width="2000" height="1487"><img data-reveal="clip" src="img/al-warqa-night.webp" width="2400" height="1121" alt="Villa in Al Warqa at night, its facade and compound wall outlined by warm strip lighting" loading="lazy"></picture></div><figcaption class="night__cap cap-m">Stone cladding and palms at the gate of another RBB villa. The Al Warqa villa is the night photo at the top of this page.</figcaption></figure>
   <div class="wrap night__txt">
     <h2 id="night-h" data-reveal="lines">Al Warqa,<br>after dark</h2>
     <p data-reveal>Our villa in Al Warqa with the facade lighting on. In Al Warqa we built a G+1+roof villa and its service block with Render Engineering Consultant, handed over in October 2023.</p>
@@ -162,7 +163,7 @@
     <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous photos">←</button><button type="button" data-k-drag-next aria-label="Next photos">→</button></div>
   </div>
   <div class="k-drag__track" tabindex="0" role="region" aria-label="Interior photos, scroll sideways">
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/hall-stair.webp" alt="Upper hall with marble floor and a stair with glass balustrade" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Upper hall and stair</h3><span>Marble floor, glass balustrade</span></div></div>
+    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/stair-glass.webp" alt="Steel stair with lit stone treads and a glass balustrade" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Open stair</h3><span>Lit treads, glass balustrade</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/vanity-marble.webp" alt="Floating marble vanity with a lit underside against dark stone wall" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Washroom</h3><span>Floating vanity, lit from below</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/living-view.webp" alt="Bright living room with floor-to-ceiling windows and polished floor" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Living room</h3><span>Full-height glazing</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/majlis-ceiling.webp" alt="Sitting room with gypsum ceiling detail, cove lighting and curtains" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Sitting room</h3><span>Gypsum ceiling, cove lighting</span></div></div>
@@ -170,7 +171,7 @@
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/dining-pendant.webp" alt="Dining area with a cluster pendant light over a marble table" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Dining</h3><span>Pendant cluster, sheer curtains</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/shower-niche.webp" alt="Walk-in shower with a lit niche in large-format tiles" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Walk-in shower</h3><span>Lit niche, large-format tile</span></div></div>
     <div class="k-drag__card"><div class="k-drag__fig"><img src="img/entrance-door.webp" alt="Tall grey entrance door in a white stone lobby" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Entrance</h3><span>Full-height door</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/stair-glass.webp" alt="Steel stair with lit stone treads and a glass balustrade" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Open stair</h3><span>Lit treads, glass balustrade</span></div></div>
+    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/hall-open.webp" alt="Open double-height hall with marble floor" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Hall</h3><span>Marble floor, double height</span></div></div>
   </div>
   <div class="k-drag__bar" aria-hidden="true"><i></i></div>
 </section>
@@ -180,28 +181,28 @@
   <p class="sec__lead" data-reveal style="margin:18px 0 clamp(28px,4vw,52px)">Villas are most of our work. We also take on the buildings and trades below.</p>
   <div class="k-acc__list">
     <details class="k-acc__row" data-img="img/villa-grey-garden.webp">
-      <summary><span class="k-acc__n">01</span><span class="k-acc__t">Villas and palaces<small>Private homes, from a single G+1 villa to a group of three</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Main house, roof floor and service block</li><li>Majlis, driver room and compound wall</li><li>Built to your consultant's drawings</li><li>Commercial and residential buildings too</li></ul><p><a href="services.html#villas">Villas in detail →</a></p></div>
+      <summary><span class="k-acc__n">01</span><span class="k-acc__t"><span class="acc__tt">Villas and palaces</span><small>Private homes, from a single G+1 villa to a group of three</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Main house, roof floor and service block</li><li>Majlis, driver room and compound wall</li><li>Built to your consultant's drawings</li><li>Commercial and residential buildings too</li></ul><p><a href="services.html#villas">Villas in detail →</a></p><figure class="acc__ph"><img src="img/villa-grey-garden.webp" alt="Grey villa with full-height glazing and a lawn" loading="lazy"><figcaption>A finished villa, garden and pool</figcaption></figure></div>
     </details>
-    <details class="k-acc__row">
-      <summary><span class="k-acc__n">02</span><span class="k-acc__t">Mosques, hospitals and warehouses<small>Buildings with a specific use</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Each one planned for what it has to do</li><li>Built to the client's requirements</li></ul><p><a href="services.html#buildings">More on this →</a></p></div>
+    <details class="k-acc__row" data-img="img/villa-timber-slats.webp">
+      <summary><span class="k-acc__n">02</span><span class="k-acc__t"><span class="acc__tt">Mosques, hospitals and warehouses</span><small>Buildings with a specific use</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Each one planned for what it has to do</li><li>Built to the client's requirements</li></ul><p><a href="services.html#buildings">More on this →</a></p><figure class="acc__ph"><img src="img/villa-timber-slats.webp" alt="Villa facade with vertical slats over a white colonnade" loading="lazy"><figcaption>Facade work on one of our villas</figcaption></figure></div>
     </details>
-    <details class="k-acc__row">
-      <summary><span class="k-acc__n">03</span><span class="k-acc__t">Civil works<small>Roads, bridges and utilities</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Roads, bridges and utilities</li><li>Work that serves whole communities</li></ul><p><a href="services.html#civil">More on this →</a></p></div>
+    <details class="k-acc__row" data-img="img/site-pool-works.webp">
+      <summary><span class="k-acc__n">03</span><span class="k-acc__t"><span class="acc__tt">Civil works</span><small>Roads, bridges and utilities</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Roads, bridges and utilities</li><li>Work that serves whole communities</li></ul><p><a href="services.html#civil">More on this →</a></p><figure class="acc__ph"><img src="img/site-pool-works.webp" alt="Villa courtyard during works: new paving, pool shell, compound wall and a steel canopy" loading="lazy"><figcaption>External works on a villa plot: paving, pool shell, compound wall</figcaption></figure></div>
     </details>
     <details class="k-acc__row" data-img="img/lit-niche.webp">
-      <summary><span class="k-acc__n">04</span><span class="k-acc__t">MEP<small>Our Electro Mechanical Works division</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Mechanical, electrical and plumbing works</li><li>Run by our own MEP division</li></ul><p><a href="services.html#mep">More on MEP →</a></p></div>
+      <summary><span class="k-acc__n">04</span><span class="k-acc__t"><span class="acc__tt">MEP</span><small>Our Electro Mechanical Works division</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Mechanical, electrical and plumbing works</li><li>Run by our own MEP division</li></ul><p><a href="services.html#mep">More on MEP →</a></p><figure class="acc__ph"><img src="img/lit-niche.webp" alt="Marble washroom with a concealed light strip and wall-hung fittings" loading="lazy"><figcaption>Concealed lighting and plumbing in a villa washroom</figcaption></figure></div>
     </details>
-    <details class="k-acc__row">
-      <summary><span class="k-acc__n">05</span><span class="k-acc__t">Aluminium<small>Design, shaping and fitting</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Aluminium facades</li><li>Detailed fittings, shaped and fitted by us</li></ul><p><a href="services.html#aluminium">More on aluminium →</a></p></div>
+    <details class="k-acc__row" data-img="img/room-windows.webp">
+      <summary><span class="k-acc__n">05</span><span class="k-acc__t"><span class="acc__tt">Aluminium</span><small>Design, shaping and fitting</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Aluminium facades</li><li>Detailed fittings, shaped and fitted by us</li></ul><p><a href="services.html#aluminium">More on aluminium →</a></p><figure class="acc__ph"><img src="img/room-windows.webp" alt="Empty room with two walls of black-framed full-height windows" loading="lazy"><figcaption>Full-height glazing in black frames</figcaption></figure></div>
     </details>
     <details class="k-acc__row" data-img="img/hall-open.webp">
-      <summary><span class="k-acc__n">06</span><span class="k-acc__t">Renovation and maintenance<small>Refurbishing the house you already have</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
-      <div class="k-acc__body"><ul><li>Renovation and refurbishment works</li><li>Maintenance</li></ul><p><a href="services.html#renovation">More on renovation →</a></p></div>
+      <summary><span class="k-acc__n">06</span><span class="k-acc__t"><span class="acc__tt">Renovation and maintenance</span><small>Refurbishing the house you already have</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
+      <div class="k-acc__body"><ul><li>Renovation and refurbishment works</li><li>Maintenance</li></ul><p><a href="services.html#renovation">More on renovation →</a></p><figure class="acc__ph"><img src="img/hall-open.webp" alt="Open hall with marble floor and grey panelled walls" loading="lazy"><figcaption>Hall with marble floor and panelled walls</figcaption></figure></div>
     </details>
   </div>
   <p class="acc__more"><a class="btn btn--line" data-k-magnetic href="services.html">All services <span class="k-arrow" aria-hidden="true">→</span></a></p>

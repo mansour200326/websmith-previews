@@ -288,3 +288,36 @@ html:lang(ar) .hero__name{text-align:right}
 .revs .k-quotes__dots button,.revs .k-quotes__dots button[aria-current=true]{background-clip:content-box}
 @media (max-width:899px){.k-visit__map{min-height:180px;background:var(--cyan)}.k-visit__map button{box-shadow:none}}
 .pi h1 .mk--one{white-space:nowrap}
+
+/* ---------- Fannan r1 fixes (round 2) ---------- */
+/* 1. mobile hero: name > lead + CTA > framed photo > facts */
+@media (max-width:899px){
+  .hero{display:flex;flex-direction:column;gap:20px}
+  .hero__type{display:contents}
+  .hero__name{order:-1}
+  .hero__type > div{order:0}
+  .hero__frame{order:1;margin-top:4px}
+  .hero__facts{order:2}
+  .hero__photo{aspect-ratio:16/10}
+  .hero__lead{font-size:clamp(1.08rem,4.6vw,1.2rem)}
+  html:lang(ar) .hero__lead{font-size:clamp(1.08rem,4.6vw,1.2rem);line-height:1.65}
+  .hero__acts{margin-top:18px;gap:6px 22px}
+}
+@media (max-width:599px){
+  .is-home .hd__logo{min-width:44px}
+  .is-home .hd__logo b{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
+/* 3. mobile nav strip: no Home, tighter, end-edge fade while more links are off-screen */
+@media (max-width:899px){
+  .mnav{gap:4px 16px}
+  .mnav.is-more{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 56px),transparent)}
+  [dir=rtl] .mnav.is-more{-webkit-mask-image:linear-gradient(to left,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(to left,#000 calc(100% - 56px),transparent)}
+}
+/* 4. who we help: no empty screen after the last step */
+@media (min-width:900px){
+  .k-story__steps{padding-bottom:0}
+  .k-story__step:last-child{min-height:auto;padding-bottom:clamp(40px,6vw,80px)}
+}
+/* 5. map panel: muted poster of their own office (roll-up banner) until the map loads */
+.k-visit__map{background:linear-gradient(rgba(214,232,235,.5),rgba(214,232,235,.5)),url(img/map-poster.webp) center 30%/cover #dfe9eb;background-blend-mode:normal,luminosity}
+@media (max-width:899px){.k-visit__map{min-height:220px;background-color:#cfe6e9}}
