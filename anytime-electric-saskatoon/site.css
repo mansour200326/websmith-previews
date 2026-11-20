@@ -447,3 +447,4 @@ main{position:relative;z-index:1;background:var(--paper)}
   .intro__txt .btn{margin-top:0}
   .intro__split{gap:24px}
 }
+.ft ul li a{min-width:44px}
