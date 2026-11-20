@@ -361,3 +361,4 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 @media (prefers-reduced-motion:reduce){.k-js .ph-hero>img{animation:none;transform:none}}
 .ph--after{padding-top:clamp(30px,5vw,70px)}
 .ph__fig--first{margin-top:clamp(14px,2vw,24px);margin-bottom:0}
+@media (max-width:700px){.ph-hero{height:min(66vh,560px);min-height:380px}.ph-hero>img{object-position:58% 80%}.ph-hero .ph__t{font-size:15.5vw}}
