@@ -905,3 +905,41 @@ a{color:inherit}
 @media (min-width:900px){.home__quote .home__draw{margin-top:-24px}}
 .ph-head .hero__acts{margin-top:26px}
 @media (max-width:899px){.hero__line .hl:first-child{flex-basis:100%}.hero__line .hl:nth-child(2)::before{content:none}.hero__line{row-gap:0}}
+
+/* r3: services classes in three bands */
+.cls{border-top:0}
+.cls-a{margin-top:0}
+.cls-a h2{font:700 clamp(1.6rem,2.6vw,2.2rem)/1.06 var(--k-display);letter-spacing:-.02em;margin-bottom:10px}
+.cls-b{margin-top:clamp(70px,9vw,130px);border-top:2px solid var(--ink)}
+.cls-b__row{display:grid;gap:6px 40px;padding:clamp(26px,3.6vw,44px) 0;border-bottom:1px solid var(--k-line);align-items:baseline}
+.cls-b__n{font:700 1rem var(--k-body);color:var(--red);display:block}
+.cls-b__row h2,.cls-c__cols h2{font:700 clamp(1.7rem,3.2vw,2.6rem)/1.02 var(--k-display);letter-spacing:-.025em}
+.cls-b__row p{max-width:36em;font-size:1.07rem;color:#3e5660}
+@media (min-width:900px){.cls-b__row{grid-template-columns:70px minmax(0,1.1fr) minmax(0,1fr)}}
+.cls-c{margin-top:clamp(70px,9vw,130px)}
+.cls-c__fig{margin:0;border-radius:6px;overflow:hidden;aspect-ratio:21/9}
+.cls-c__fig img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.cls-c__cols{display:grid;gap:34px;margin-top:clamp(26px,3.5vw,44px)}
+.cls-c__cols article{border-top:2px solid var(--ink);padding-top:16px}
+.cls-c__cols h2{font-size:clamp(1.5rem,2.3vw,2rem);margin:8px 0 10px}
+.cls-c__cols p{color:#3e5660;max-width:30em}
+.abt{font:700 1.2em/1 "Noto Kufi Arabic",sans-serif;color:var(--teal);letter-spacing:0;display:inline-block;margin-inline-end:.2em;vertical-align:-.05em}
+@media (min-width:900px){.cls-c__cols{grid-template-columns:repeat(3,1fr);column-gap:clamp(28px,3.5vw,54px)}}
+@media (max-width:899px){.cls-c__fig{aspect-ratio:16/9}}
+
+/* r3: Arabic "today" label */
+[dir=rtl] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
+
+/* r3: about drawing, trim the hard left edge */
+.ab-hero img.ab-hero__draw{clip-path:inset(0 0 0 2.2%)}
+@media (max-width:899px){.ab-hero__draw{width:56%;max-width:none;margin-inline-start:auto;margin-top:-40px;justify-self:end}}
+
+/* r3: sticky story clears the header */
+@media (min-width:900px){.k-story__media{top:calc(96px + 3vh);height:calc(100vh - 96px - 8vh)}}
+
+/* r3: services hero photo smaller on desktop, wide on mobile */
+@media (min-width:900px){.ph-head__img{max-width:360px;justify-self:end}}
+@media (max-width:899px){.ph-head__img{aspect-ratio:16/10;width:100%;max-height:none}.ph-head__img .ph{aspect-ratio:16/10!important}.ph-head__img img{object-position:60% 40%!important}}
+
+/* r3: orphans */
+.hero__lead,.ft__big{text-wrap:balance}

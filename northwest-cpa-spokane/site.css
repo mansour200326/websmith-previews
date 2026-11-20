@@ -904,3 +904,65 @@ a{color:inherit}
 @media (max-width:860px){.nav__m{display:inline-block;color:var(--gold-hi)!important}.nav{gap:22px}}
 @media (max-width:959px){.hero__meta{display:none}.hero__photo{margin-top:34px}}
 @media (max-width:999px){.svp__idx ol{columns:2;column-gap:18px}.svp__idx a{font-size:.88rem;grid-template-columns:1.9em 1fr}}
+
+/* ---- Fannan r1 fixes ---- */
+/* 2: tops of capitals clipped by the line masks */
+.hero h1 .ln,.ph h1 .ln{padding-top:.14em;margin-top:-.14em}
+/* 3: opening quote mark sits inside its own line box, nothing above the track's clip edge */
+.revs .k-quotes__slide{padding-top:.6em}
+.revs .k-quotes__slide blockquote::before{line-height:1;height:.5em;margin-bottom:.15em}
+/* 7: one quiet line instead of the meta strip */
+.hero__lead .lead-sm{display:none}
+.hero__line{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-top:26px;font-size:.92rem;color:var(--mute-dk)}
+.hero__line a{color:#d7d8da;text-decoration:underline;text-decoration-color:#4a4e56;text-underline-offset:5px;display:inline-flex;align-items:center;min-height:44px;transition:color .3s,text-decoration-color .3s}
+.hero__line a:hover{color:var(--gold-hi);text-decoration-color:currentColor}
+.hero__line span[aria-hidden]{color:#4a4e56}
+/* 4: desktop portrait */
+@media (min-width:960px){
+  .hero__photo .k-split__photo{max-height:68svh;-webkit-mask-image:linear-gradient(to left,transparent 0,#000 8%);mask-image:linear-gradient(to left,transparent 0,#000 8%)}
+  .hero__photo .k-split__photo img{object-position:50% 0}
+  .hero__photo figcaption{bottom:calc(clamp(40px,7vw,120px) + 16px);left:18px;z-index:2;color:#d7d8da;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+}
+/* 1: phone first screen = headline, CTA, Curtis's face and the gold name */
+@media (max-width:959px){
+  .hero__line{display:none}
+  .hero h1{font-size:clamp(2.3rem,10.5vw,2.9rem)}
+  .hero__lead{margin-top:16px;font-size:1.05rem;line-height:1.5}
+  .hero__acts{flex-wrap:nowrap;gap:16px;margin-top:20px}
+  .hero__acts .k-btn{padding:14px 18px;white-space:nowrap}
+  .hero__acts .tlink{white-space:nowrap}
+  .hero__photo{display:block;max-width:none;margin-top:20px}
+  .hero__photo .k-split__photo{aspect-ratio:auto;height:44svh}
+  .hero__photo .k-split__photo img{object-fit:cover;object-position:50% 12%}
+  .hero__photo figcaption{position:absolute;left:12px;bottom:calc(min(19.6vw,20.5rem) * .35 + 12px);margin:0;z-index:2;color:#d7d8da;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+  .hero__name{margin-top:-.35em}
+}
+@media (max-width:599px){.hero__lead .lead-lg{display:none}.hero__lead .lead-sm{display:inline}}
+@media (max-width:370px){.hero__acts .tlink{font-size:.9rem}.hero__acts .k-btn{padding:13px 14px}}
+/* 5: section headers without the side paragraph */
+.who__h{font-size:clamp(3rem,7vw,6.5rem);line-height:.98;letter-spacing:-.035em;max-width:none;margin-bottom:clamp(40px,6vw,80px)}
+.how__h{margin-bottom:clamp(30px,5vw,56px)}
+.step__cap{grid-column:2;margin-top:10px;font:italic 400 1.08rem/1.35 var(--f-d);color:var(--gold-dk)!important}
+@media (min-width:900px){.step__cap{grid-column:auto}}
+/* 6: services: two featured panels */
+.ph__tel{margin-top:18px;font-size:1.05rem;color:#c9cacc}
+.ph__tel a{color:var(--gold-hi);font-weight:600;text-underline-offset:4px;display:inline-flex;align-items:center;min-height:44px}
+.sv--feat{padding:clamp(34px,4.4vw,64px) clamp(22px,3.6vw,56px);border-bottom:0;margin:clamp(20px,3vw,40px) 0}
+.sv--feat.sv:first-child{padding-top:clamp(34px,4.4vw,64px);margin-top:0}
+.sv--feat ul{columns:2 200px;column-gap:clamp(24px,3vw,48px);max-width:none;margin-top:30px}
+.sv--feat li{font:400 clamp(1.15rem,1.6vw,1.4rem)/1.3 var(--f-d);padding:14px 0}
+.sv--feat h2{font-size:clamp(2.3rem,4.4vw,3.9rem)}
+.sv--gold{background:var(--gold);color:var(--ink)}
+.sv--gold .sv__n{color:var(--ink)}
+.sv--gold p{color:var(--ink)}
+.sv--gold ul{border-top-color:var(--ink)}
+.sv--gold li{border-bottom-color:rgba(23,25,29,.3)}
+.sv--ink{background:var(--ink);color:#fff}
+.sv--ink .sv__n{color:var(--gold-hi)}
+.sv--ink p{color:#c9cacc}
+.sv--ink ul{border-top-color:var(--gold-hi)}
+.sv--ink li{border-bottom-color:#3a3e45}
+.sv--ink .sv__acts .tlink{color:#fff}
+.hero__photo figcaption{background:rgba(23,25,29,.88);padding:6px 10px;text-shadow:none!important;color:#c9cacc!important}
+.step{align-content:start}
+.step a[href^="tel:"]{white-space:nowrap}
