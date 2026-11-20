@@ -342,3 +342,6 @@ html[lang=ar] .pidx a::before{transform-origin:bottom}
 .contact__rows a{display:inline-flex;align-items:center;min-height:44px}
 .ft li a,.ft p a{padding-block:11px}
 .svc__nav a{padding:10px 0}
+.ft li a{min-width:44px}
+@media (max-width:899px){.hero__ar{align-items:flex-start}}
+@media (min-width:900px){.firm__fig img{aspect-ratio:3/4}.firm{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
