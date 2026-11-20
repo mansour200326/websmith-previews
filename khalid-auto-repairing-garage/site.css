@@ -420,3 +420,17 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .route .ar-svg .big{font:700 30px "IBM Plex Sans Arabic",sans-serif}
 
 @media (max-width:999px){.hero h1{font-size:clamp(4.4rem,23vw,8rem)}}
+.dir a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
+.dir li span{display:inline-flex;align-items:center}
+.nav a{min-width:44px;justify-content:center}
+.ft__links a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
+/* round 1 fixes */
+.hd__lbl{display:none;font:600 .95rem var(--k-body)}
+@media (max-width:860px){.hd__lbl{display:inline}}
+@media (max-width:699px){
+  .hero .k-kb__img{object-position:14% 50%;transform-origin:14% 50%}
+  .hero__more{display:none}
+  .hero .k-kb__cap span:nth-child(3){display:none}
+  .ft .ft__name{font-size:clamp(2rem,9.6vw,3rem)}
+}
+@media (max-width:699px){html[lang=ar] .hero h1{font-size:clamp(4rem,21vw,6rem);line-height:1.1!important}}

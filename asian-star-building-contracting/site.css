@@ -299,7 +299,7 @@ html:lang(ar) .ft .ft__name{font-family:"Big Shoulders Display",sans-serif}
 @media (max-width:600px){.hero h1{font-size:19.5vw}}
 @media (max-width:600px){.ft .ft__name{font-size:19vw}}
 /* Latin brand name on Arabic pages */
-.latin{font-family:"Big Shoulders Display","Arial Narrow",sans-serif!important;text-transform:uppercase;letter-spacing:-.02em!important;direction:ltr;unicode-bidi:isolate}
+.latin{font-family:"Big Shoulders Display","Arial Narrow",sans-serif!important;text-transform:uppercase!important;letter-spacing:-.02em!important;direction:ltr;unicode-bidi:isolate}
 html:lang(ar) .hero h1{line-height:.8!important;font-weight:900}
 html:lang(ar) .brand b.latin{font-size:1.32rem;line-height:.95}
 html:lang(ar) .hero__tuck span{font-family:"Readex Pro",sans-serif;text-transform:none;letter-spacing:0;font-weight:600}
@@ -309,3 +309,21 @@ html:lang(ar) .svc__n{font-family:"Big Shoulders Display",sans-serif}
 .svc-idx a{min-height:44px}
 .k-visit__more a,.said__rate a{display:inline-flex;align-items:center;min-height:44px}
 .ft li a{padding-block:10px}
+/* r1 fixes: photo band on inner pages, service row rhythm, framed tiles */
+.band{margin:clamp(28px,4vw,48px) 0 0}
+.band .ph{overflow:hidden;aspect-ratio:4/3;background:var(--tint)}
+.band .ph img{width:100%;height:100%;object-fit:cover}
+.band figcaption{font-size:.88rem;color:var(--k-mute);padding-top:10px}
+@media (min-width:700px){.band .ph{aspect-ratio:21/8}}
+.phd{padding-top:clamp(36px,7vw,110px)}
+@media (min-width:960px){
+  .svc:nth-of-type(even):not(.svc--np){grid-template-columns:1.2fr 5fr 5fr}
+  .svc:nth-of-type(even):not(.svc--np)>figure{order:1}
+  .svc:nth-of-type(even):not(.svc--np)>div{order:2}
+  .svc--np>div{display:grid;grid-template-columns:5fr 5fr;column-gap:clamp(20px,3vw,50px);align-items:start}
+  .svc--np h2{grid-column:1/-1}
+  .svc--np p{font-size:1.3rem;line-height:1.45;font-weight:500}
+  .svc--np ul{margin-top:0}
+  .svc--np .svc__act{grid-column:1/-1}
+}
+.tile .ph{outline:1px solid var(--k-line);outline-offset:-1px}

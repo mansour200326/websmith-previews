@@ -13,8 +13,8 @@ img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--navy);outline-offset:3px}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:100}
-.skip:focus{left:8px}
+.skip{position:fixed;inset-inline-start:8px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:100;transform:translateY(-200%)}
+.skip:focus{transform:none}
 .mono{font-family:var(--mono);font-size:.82rem;letter-spacing:0}
 .wrap{max-width:1440px;margin:0 auto;padding-inline:var(--pad)}
 
@@ -166,13 +166,12 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .reg__place{grid-column:2/3;font-size:.9rem}
   .reg__type{display:none}
   .reg__val{grid-column:2/3;text-align:start}
-  .reg__st{grid-row:1;grid-column:3;display:none}
-  .reg__st.is-live{display:block}
+  .reg__st{grid-column:2/4;display:none;text-align:start}
+  .reg__st.is-live{display:block;font-size:.85rem}
   .reg__row summary .reg__n{grid-row:1/4}
   .reg__body{grid-template-columns:1fr;padding-inline:4.2em 0}
   .reg__body img,.reg__body>div{grid-column:1}
 }
-@media (max-width:900px){.reg__row summary:has(.is-live) .reg__name{grid-column:2/3}}
 .k-acc__float{position:fixed;left:0;top:0;width:clamp(240px,22vw,340px);aspect-ratio:4/5;pointer-events:none;z-index:30;overflow:hidden;
   opacity:0;transform:translate3d(var(--fx,0),var(--fy,0),0) scale(.85) rotate(-2deg);transition:opacity .35s ease,transform .5s var(--ease);box-shadow:0 30px 60px -20px rgba(0,0,0,.35)}
 .k-acc__float.is-on{opacity:1;transform:translate3d(var(--fx,0),var(--fy,0),0) scale(1) rotate(0)}
@@ -288,7 +287,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 
 /* ---------- inner pages ---------- */
 .ph{display:grid;grid-template-columns:repeat(12,1fr);gap:28px var(--pad);padding-block:clamp(60px,8vw,120px) clamp(40px,6vw,90px);align-items:end}
-.ph h1{grid-column:1/8;font:500 clamp(3.4rem,10vw,10rem)/.86 var(--display);letter-spacing:-.06em}
+.ph h1{grid-column:1/8;font:500 clamp(3rem,6.8vw,7.4rem)/.9 var(--display);letter-spacing:-.05em;overflow-wrap:anywhere}
 .ph__txt{grid-column:1/7;font-size:1.12rem;color:var(--mute);max-width:36em}
 .ph__img{grid-column:8/13;grid-row:1/3;overflow:hidden;aspect-ratio:4/5}
 .ph__img img{width:100%;height:100%;object-fit:cover}
