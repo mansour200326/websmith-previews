@@ -307,3 +307,8 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .ppl--dark .p .role{color:#9fc3ea}
 .ppl--dark .p p{color:#cfd6ee}
 .ppl--dark .p__ph{background:#232c6e}
+@media (pointer:coarse),(max-width:800px){
+  .contacts a,.ft address a,.ft ul li a{min-height:44px;display:inline-flex;align-items:center;padding:0}
+  .contacts dt{line-height:44px}
+}
+.ft ul li a{min-width:44px}
