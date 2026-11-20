@@ -612,9 +612,8 @@ img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:100}
-.skip:focus{left:8px}
-[dir=rtl] .skip:focus{left:auto;right:8px}
+.skip{position:fixed;top:8px;inset-inline-start:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:100;transform:translateY(-300%)}
+.skip:focus{transform:none}
 h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line-height:.95}
 :lang(ar) h1,:lang(ar) h2,:lang(ar) h3{letter-spacing:0;line-height:1.2}
 .wrap{padding-inline:var(--pad);max-width:1480px;margin-inline:auto}
@@ -822,3 +821,9 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 .k-quotes__dots button[aria-current=true]{background-clip:content-box}
 .parents .k-quotes__slide blockquote::before{font-size:1.9em;line-height:.5;margin-bottom:.05em;padding-top:.3em}
 .foot .foot__name{letter-spacing:-.04em;font-weight:750}
+.tlink{display:inline-flex;align-items:center;gap:.4em;min-height:44px}
+.foot ul a,.foot p a{min-height:44px;display:inline-flex;align-items:center;padding-block:4px}
+.pnav a{min-height:44px;display:inline-flex;align-items:center}
+.safe .btn--light{color:var(--ink)}
+.ribbons{gap:12px}
+@media (min-width:900px){.pgrid .span2{grid-column:span 2}.pgrid .span2 .k-zoom{aspect-ratio:auto;height:calc(100% - 30px)}}

@@ -112,3 +112,15 @@
       r.addEventListener('pointerleave',function(){fl.classList.remove('is-on');run=false})});
   });
 })();
+
+/* fit the hero wordmark to the column width (edge to edge) */
+(function(){
+  var w=document.querySelector('.hero__word');if(!w||document.documentElement.lang==='ar')return;
+  var line=w.querySelector('.l>span');
+  function fit(){w.style.fontSize='';var cs=parseFloat(getComputedStyle(w).fontSize);var avail=w.parentElement.clientWidth-parseFloat(getComputedStyle(w.parentElement).paddingLeft)-parseFloat(getComputedStyle(w.parentElement).paddingRight);
+    var r=document.createRange();var widest=0;var spans=innerWidth<=700?[line.firstChild,line.querySelector('.w2')]:[line];
+    spans.forEach(function(n){if(!n)return;r.selectNodeContents(n);var b=r.getBoundingClientRect().width;if(b>widest)widest=b});
+    if(widest>0)w.style.fontSize=(cs*avail/widest*0.995)+'px'}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);else fit();
+  var rw=innerWidth;addEventListener('resize',function(){if(Math.abs(innerWidth-rw)>20){rw=innerWidth;fit()}});
+})();

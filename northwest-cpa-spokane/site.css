@@ -897,3 +897,10 @@ a{color:inherit}
 .ft .ft__h{font:600 .82rem var(--f-b);color:var(--mute-dk);margin-bottom:8px;letter-spacing:.02em}
 .revs .k-quotes__dots button{padding:20.5px 8px;margin-inline:-8px}
 .k-js .revs .k-quotes__slide:not(.is-on) .k-w{opacity:1}
+.contact-list li{align-items:center;padding-block:4px}.contact-list a{display:inline-flex;align-items:center;min-height:44px}
+
+/* ---- self-review r1: mobile ---- */
+.nav__m{display:none}
+@media (max-width:860px){.nav__m{display:inline-block;color:var(--gold-hi)!important}.nav{gap:22px}}
+@media (max-width:959px){.hero__meta{display:none}.hero__photo{margin-top:34px}}
+@media (max-width:999px){.svp__idx ol{columns:2;column-gap:18px}.svp__idx a{font-size:.88rem;grid-template-columns:1.9em 1fr}}
