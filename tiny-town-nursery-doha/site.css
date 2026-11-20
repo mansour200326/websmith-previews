@@ -903,3 +903,5 @@ a{color:inherit}
 .ab-hero h1 .mk{white-space:nowrap}
 @media (min-width:900px){.ab-hero .ph-head__grid{align-items:center}.ab-hero__draw{max-width:360px}}
 @media (min-width:900px){.home__quote .home__draw{margin-top:-24px}}
+.ph-head .hero__acts{margin-top:26px}
+@media (max-width:899px){.hero__line .hl:first-child{flex-basis:100%}.hero__line .hl:nth-child(2)::before{content:none}.hero__line{row-gap:0}}

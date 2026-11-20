@@ -99,7 +99,7 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 @media (prefers-reduced-motion:reduce){.k-fx>canvas{transition:none}.k-js .k-fx>canvas{clip-path:none}}
 
 
-/* Anytime Electric — concept by Websmith. Own styles + kit 16/18/19/25 layers (appended below). */
+/* Anytime Electric — concept by Websmith. Own styles (kit 16/18/19/25 layers above). */
 :root{
   --ink:#0f0f0e;--ink-2:#1a1a18;--paper:#f4f4f1;--white:#fff;
   --tan:#bca36d;--tan-dk:#6b5627;--mute:#585752;--mute-d:#a9a69d;--line:#d6d5ce;--line-d:#2c2c29;
@@ -152,14 +152,16 @@ ul{list-style:none}
 
 /* ---------- hero ---------- */
 .hero{background:var(--ink);color:var(--white);padding:84px var(--pad) 0;position:relative;overflow:hidden}
-.hero__mark{order:-1;font:900 clamp(4.6rem,24.5vw,9rem)/.8 var(--display);text-transform:uppercase;letter-spacing:-.005em;color:var(--white);margin:18px 0 22px}
+.hero__mark{order:-1;font:900 clamp(4.6rem,27vw,10rem)/.8 var(--display);text-transform:uppercase;letter-spacing:-.005em;color:var(--white);margin:18px 0 22px}
 .hero__mark .w{display:block}
 .hero__mark .w2{color:var(--tan)}
 .hero__grid{display:flex;flex-direction:column}
 .hero__photo{position:relative;overflow:hidden;aspect-ratio:4/5;margin:0 calc(var(--pad)*-1)}
 .hero__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
 .hero__photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(15,15,14,.82);color:#e9e7e1;font-size:.82rem;padding:5px 10px}
-.hero__copy{padding:28px 0 36px}
+.hero__copy{padding:28px 0 36px;order:2}
+.hero__photo{order:1}.hero__facts{order:3}
+@media(max-width:959px){.hero__photo{aspect-ratio:5/4}.hd__name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 .hero__lede{font-size:clamp(1.12rem,1.6vw,1.32rem);line-height:1.5;max-width:30em;color:#e9e7e1;margin-bottom:24px}
 .hero__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 .hero__acts .tlink{color:var(--white)}
@@ -194,7 +196,7 @@ ul{list-style:none}
   .hero__facts{grid-column:1;grid-row:2;align-self:end;border-top:1px solid var(--line-d);padding:22px 0 28px}
   .hero__photo{grid-column:2;grid-row:1/3;aspect-ratio:auto;min-height:min(56vh,560px);margin:0}
   .hero__photo img{position:absolute;inset:0;object-position:50% 46%}
-  .hero__mark{order:0;font-size:11.8vw;line-height:.78;margin:26px 0 0;white-space:nowrap;display:flex;justify-content:space-between}
+  .hero__mark{order:0;font-size:13.8vw;line-height:.78;margin:22px 0 0;white-space:nowrap;display:flex;gap:.16em}
   .hero__mark .w{display:inline-block}
   .hero__wire{margin:0 calc(var(--pad)*-1)}
 }

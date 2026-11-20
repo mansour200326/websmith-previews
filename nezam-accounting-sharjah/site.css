@@ -74,7 +74,7 @@ ul,ol{padding:0;list-style:none}
   /* photo runs from under the header to the right viewport edge; meta row stays inside the first 900px */
   .hero__photo{aspect-ratio:auto;max-height:none;align-self:start;margin-top:-32px;height:clamp(460px,calc(100vh - 247px),780px);margin-inline-end:calc(-1 * (max(0px,(100vw - var(--max)) / 2) + var(--pad)));width:auto}
   .meta{grid-template-columns:repeat(4,1fr);margin-top:40px}
-  .meta div{grid-template-columns:1fr;gap:6px;padding-inline-end:20px}
+  .meta div{grid-template-columns:1fr;gap:6px;padding-inline-end:20px;align-content:start}
 }
 
 /* buttons */
@@ -144,7 +144,7 @@ ul,ol{padding:0;list-style:none}
 .p__ph{overflow:hidden;background:#e9ecf4;aspect-ratio:4/5;margin-bottom:20px;isolation:isolate}
 /* white cut-out backgrounds multiply into one even tile; per-photo scale/shift puts the eyes ~32% down at one head size */
 .p__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.06) brightness(1.02);transform-origin:50% 0;transform:translate(var(--tx,0),var(--ty,0)) scale(var(--s,1));transition:filter .8s var(--ease),transform 1.2s var(--ease)}
-.p__ph--1{--s:1.17;--tx:-.9%;--ty:-8.7%}
+.p__ph--1{--s:1.08;--tx:-.8%;--ty:-5.5%}
 .p__ph--2{--s:1.07;--tx:8.4%;--ty:-6.1%}
 .p__ph--3{--s:1.07;--tx:-4.7%;--ty:-6.5%}
 .p:hover .p__ph img{filter:grayscale(.2) contrast(1.04);transform:translate(var(--tx,0),var(--ty,0)) scale(calc(var(--s,1) * 1.03))}
@@ -368,3 +368,4 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .brand .brand__s small{display:block;font:500 .8rem/1.25 var(--f-b);color:var(--mute);margin-top:2px}
   .lang,.menu-btn{padding:0 10px}
 }
+@media (max-width:979px){.k-visit__osm{bottom:auto;top:0}.k-visit__pin{top:auto;bottom:calc(50% + 24px)}.k-visit__map button{bottom:16px;inset-inline-start:16px}}
