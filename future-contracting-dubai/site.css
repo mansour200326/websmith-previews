@@ -339,3 +339,4 @@ a{color:inherit}
 @media (max-width:620px){.photoband img{aspect-ratio:4/3}}
 .ft li a{min-width:44px}
 [dir=rtl] .lat{text-align:right}
+.nav a{white-space:nowrap}

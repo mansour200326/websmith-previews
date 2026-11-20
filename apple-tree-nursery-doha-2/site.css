@@ -478,7 +478,6 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 html:lang(ar) body{font-size:17px;line-height:1.8}
 html:lang(ar) h1,html:lang(ar) h2,html:lang(ar) h3{letter-spacing:0!important;line-height:1.25!important;font-weight:700}
 /* B) in-page swap */
-html:lang(en) [lang=ar]:not(html):not(.k-lang *),html:lang(ar) [lang=en]:not(html):not(.k-lang *){display:none!important}
 .k-swap-fade body{animation:k-langfade .45s ease}
 @keyframes k-langfade{from{opacity:.2}}
 /* toggle */
@@ -641,7 +640,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 
 /* ---- hero: type-led, photo below ---- */
 .hero{padding-top:clamp(22px,3.5vw,48px)}
-.hero h1{font-size:clamp(4.1rem,14.2vw,13.2rem);line-height:.84;letter-spacing:-.055em;color:var(--red);font-weight:800}
+.hero h1{font-size:clamp(4rem,13.4vw,12.4rem);line-height:.86;letter-spacing:-.035em;color:var(--red);font-weight:750;font-variation-settings:"opsz" 96}
 :lang(ar) .hero h1{font-size:clamp(3.4rem,11vw,9.5rem);line-height:1.05;letter-spacing:0}
 .hero__row{display:grid;grid-template-columns:1fr;gap:18px 40px;align-items:end}
 .hero__intro{max-width:31em;font-size:clamp(1.05rem,1.35vw,1.2rem);padding-bottom:.6em}
@@ -776,7 +775,7 @@ h1,h2,h3{font-family:var(--k-display);font-weight:700;letter-spacing:-.03em;line
 
 /* ---- footer ---- */
 .foot{background:var(--ink);color:#F4EADB;padding-top:clamp(60px,8vw,110px)}
-.foot__name{font:800 clamp(4rem,15vw,14rem)/.8 var(--k-display);letter-spacing:-.06em;color:var(--sand);margin-bottom:clamp(40px,6vw,80px)}
+.foot .foot__name{font:800 clamp(4rem,15vw,14rem)/.8 var(--k-display);letter-spacing:-.06em;color:var(--sand);margin-bottom:clamp(40px,6vw,80px)}
 :lang(ar) .foot__name{letter-spacing:0;line-height:1.1}
 .foot__cols{display:grid;gap:30px 40px;grid-template-columns:1fr}
 @media (min-width:700px){.foot__cols{grid-template-columns:repeat(2,1fr)}}
