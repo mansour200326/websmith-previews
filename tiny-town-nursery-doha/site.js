@@ -498,7 +498,7 @@
 
 /* Tiny Town: live open/closed line in Doha time (Sun–Thu 6:30–15:30) */
 (function(){
-  var els=document.querySelectorAll('[data-tt-open]');if(!els.length)return;
+  var els=document.querySelectorAll('[data-tt-open],[data-tt-dot]');if(!els.length)return;
   var ar=document.documentElement.lang==='ar';
   try{
     var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Qatar',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
@@ -507,6 +507,7 @@
     var open=day>=0&&day<=4&&m>=390&&m<930;
     els.forEach(function(e){
       e.classList.toggle('is-closed',!open);
+      if(e.hasAttribute('data-tt-dot')){e.title=open?(ar?'مفتوح الآن':'Open now'):(ar?'مغلق الآن':'Closed now');return}
       var s=e.querySelector('span');
       if(s)s.textContent=open?(ar?'مفتوح الآن، حتى 3:30 عصراً':'Open now, until 3.30pm'):(ar?'مغلق الآن · نفتح الأحد إلى الخميس 6:30 صباحاً':'Closed now · Sun–Thu from 6.30am');
     });

@@ -46,14 +46,20 @@
     var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),now=(+g('hour')%24)+(+g('minute'))/60;
     var row=root.querySelector('tr[data-day="'+day+'"]');if(row)row.classList.add('is-today');
     var span=h[day]||[],open=span.length===2&&now>=span[0]&&now<span[1];
-    var b=root.querySelector('[data-k-badge]');if(b){b.hidden=false;b.classList.add(open?'is-open':'is-shut');b.querySelector('span').textContent=open?(root.getAttribute('data-k-open')||'Open now'):(root.getAttribute('data-k-shut')||'Closed now')}
+    // plain text: "Open now · until 5:30pm" or "Closed now · opens Mon 8:30am"
+    var fmt=function(x){var hh=Math.floor(x),mm=Math.round((x-hh)*60),ap=hh>=12?'pm':'am',h12=hh%12||12;return h12+(mm?':'+(mm<10?'0':'')+mm:'')+ap};
+    var DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],txt;
+    if(open)txt=(root.getAttribute('data-k-open')||'Open now')+' · until '+fmt(span[1]);
+    else{var nd=null,nt;if(span.length===2&&now<span[0]){nd='today';nt=span[0]}else for(var k=1;k<=7;k++){var dd=(day+k)%7;if(h[dd]&&h[dd].length===2){nd=k===1?'tomorrow':DN[dd];nt=h[dd][0];break}}
+      txt=(root.getAttribute('data-k-shut')||'Closed now')+(nd?' · opens '+nd+' '+fmt(nt):'')}
+    var b=root.querySelector('[data-k-badge]');if(b){b.hidden=false;b.classList.add(open?'is-open':'is-shut');b.querySelector('span').textContent=txt}
   });
   document.querySelectorAll('[data-k-map]').forEach(function(m){
     var btn=m.querySelector('button');
     function load(){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.getAttribute('data-src');f.title='Map';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.onload=function(){f.classList.add('is-on');if(btn)btn.remove()};m.appendChild(f)}
     if(btn)btn.addEventListener('click',load);
-    // desktop: load automatically when near; phones: wait for tap (data + scroll-trap)
-    if(!m.hasAttribute('data-k-map-tap')&&matchMedia('(min-width:900px)').matches)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();load()}},{rootMargin:'200px'}).observe(m);
+    // desktop (>=900px): load automatically when near; phones: data-k-map-tap waits for a tap (data + scroll-trap)
+    if(matchMedia('(min-width:900px)').matches)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();load()}},{rootMargin:'200px'}).observe(m);
   });
 })();
 (function(){
