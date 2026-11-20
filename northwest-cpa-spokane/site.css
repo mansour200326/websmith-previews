@@ -938,7 +938,7 @@ a{color:inherit}
   .hero__name{margin-top:-.35em}
 }
 @media (max-width:599px){.hero__lead .lead-lg{display:none}.hero__lead .lead-sm{display:inline}}
-@media (max-width:370px){.hero__acts .tlink{font-size:.9rem}.hero__acts .k-btn{padding:13px 14px}}
+
 /* 5: section headers without the side paragraph */
 .who__h{font-size:clamp(3rem,7vw,6.5rem);line-height:.98;letter-spacing:-.035em;max-width:none;margin-bottom:clamp(40px,6vw,80px)}
 .how__h{margin-bottom:clamp(30px,5vw,56px)}
@@ -966,3 +966,5 @@ a{color:inherit}
 .hero__photo figcaption{background:rgba(23,25,29,.88);padding:6px 10px;text-shadow:none!important;color:#c9cacc!important}
 .step{align-content:start}
 .step a[href^="tel:"]{white-space:nowrap}
+@media (max-width:959px){.hero__acts{gap:12px}.hero__acts .k-btn{flex-shrink:0;gap:.45em;font-size:.97rem}.hero__acts .tlink{font-size:.92rem;min-width:0}}
+@media (max-width:389px){.hero__acts .tlink{font-size:.84rem}.hero__acts .k-btn{padding:13px 13px;font-size:.92rem}}
