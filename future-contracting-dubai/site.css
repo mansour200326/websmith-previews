@@ -259,3 +259,13 @@ a{color:inherit}
 .brand{min-height:44px}
 .ft li a{padding-block:10px}
 @media (max-width:860px){.hd__tel{padding-inline:10px;min-width:44px;justify-content:center}}
+@media (max-width:420px){[dir=rtl] .hd__tel::before{content:"اتصل"}}
+@media (max-width:620px){
+  .hero{padding-top:20px}
+  .hero__type{gap:18px}
+  .hero__meta{display:none}
+  .hero__photo{margin-top:26px;margin-inline:calc(var(--pad) * -1);height:58vh}
+  .hero__cap{padding-inline-start:var(--pad)}
+  [dir=rtl] .hero__cap{padding-inline-start:0;padding-inline-end:20px;padding-right:var(--pad)}
+}
+.hero h1 .l{padding-bottom:.14em;margin-bottom:-.1em}
