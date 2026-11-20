@@ -398,3 +398,8 @@ html[lang=ar] .k-visit__map::before{content:"© OpenStreetMap contributors";font
 .band{position:relative}
 .band__cap{position:absolute;inset:auto var(--pad) 16px;color:#fff;font-size:.86rem;text-shadow:0 1px 14px rgba(0,0,0,.7)}
 html[lang=ar] h1.hero__name{line-height:.8!important;letter-spacing:-.045em!important}
+/* RTL: keep the text block over the empty sky (left), the tower stays clear */
+@media (min-width:1100px){
+  [dir=rtl] .hero__row{justify-self:end;margin-inline-start:0;margin-inline-end:calc(var(--pad)*-1);padding:6px 44px 34px var(--pad);padding-inline-start:44px;padding-inline-end:var(--pad)}
+  [dir=rtl] .hero__cap{inset-inline-end:auto;inset-inline-start:var(--pad);align-items:flex-start}
+}
