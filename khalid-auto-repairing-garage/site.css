@@ -434,3 +434,6 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
   .ft .ft__name{font-size:clamp(2rem,9.6vw,3rem)}
 }
 @media (max-width:699px){html[lang=ar] .hero h1{font-size:clamp(4rem,21vw,6rem);line-height:1.1!important}}
+html[lang=ar] .k-kb__cap,html[lang=ar] .sec__no,html[lang=ar] .shop__tag,html[lang=ar] .rest__list .n,html[lang=ar] .quote figcaption,html[lang=ar] .yard .k-fx-wrap figcaption,html[lang=ar] .rec__cap,html[lang=ar] .chips li,html[lang=ar] .ft h2,html[lang=ar] .pghead nav,html[lang=ar] .svc li span,html[lang=ar] .sv__list li span{font-family:"IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+html[lang=ar] .k-kb__cap{font-size:.9rem}
+html[lang=ar] .find .k-visit__badge{font-family:"IBM Plex Sans Arabic",sans-serif}
