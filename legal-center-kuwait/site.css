@@ -331,3 +331,14 @@ html[lang=ar] .pidx a::before{transform-origin:bottom}
   .hero__ar{position:relative}
   .hero__say{font-size:clamp(1.25rem,1.75vw,1.6rem)}
 }
+@media (min-width:900px){
+  html[lang=ar] .hero h1{font-size:min(12.4vw,14rem);line-height:1.02}
+  html[lang=ar] .hero__photo{height:max(300px,calc(100svh - 77px - 15.6vw - 100px))}
+}
+/* a11y round */
+.hd__tel{min-width:44px;justify-content:center}
+@media (max-width:979px){.hd__tel .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+.k-story__step:not(.is-on) :is(h3,.k-story__n){color:#5f6676}
+.contact__rows a{display:inline-flex;align-items:center;min-height:44px}
+.ft li a,.ft p a{padding-block:11px}
+.svc__nav a{padding:10px 0}
