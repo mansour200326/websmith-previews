@@ -52,7 +52,7 @@ h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.01em;line-h
 .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transform:translateY(101%);transition:transform .55s var(--ease)}
 .btn:hover{color:#fff}.btn:hover::before,.btn:focus-visible::before{transform:none}
 .btn--dark{background:var(--ink);color:#fff}.btn--dark::before{background:var(--or)}.btn--dark:hover{color:var(--ink)}
-.tlink{font:600 1.15rem/1 var(--display);letter-spacing:.02em;text-decoration:none;padding:12px 0;display:inline-flex;gap:8px;align-items:center}
+.tlink{font:600 1.15rem/1 var(--display);letter-spacing:.02em;text-decoration:none;padding:12px 0;display:inline-flex;gap:8px;align-items:center;min-height:44px}
 .tlink .k-link{padding-bottom:3px}
 /* sequence frame */
 .seq{position:relative;overflow:hidden;background:#cfd4d8;aspect-ratio:16/10;color:#fff}
