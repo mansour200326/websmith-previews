@@ -160,8 +160,39 @@
 })();
 
 
-/* hero word rise */
+/* hero class (kept for other hero styles) */
 (function(){var h=document.querySelector('.hero');if(!h)return;requestAnimationFrame(function(){setTimeout(function(){h.classList.add('is-in')},120)})})();
+
+/* giant DISCOVERY: split into clipped letters that rise from a mask once, on scroll */
+(function(){
+  var w=document.querySelector('.hero__word');if(!w)return;
+  var svg=w.querySelector('svg'),t=svg&&svg.querySelector('text');
+  function ready(){w.classList.add('is-ready')}
+  if(!t||!t.getStartPositionOfChar||matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){ready();return}
+  function split(){
+    try{
+      var NS='http://www.w3.org/2000/svg',n=t.getNumberOfChars(),xs=[],i;
+      for(i=0;i<n;i++)xs.push(t.getStartPositionOfChar(i).x);
+      xs.push(t.getEndPositionOfChar(n-1).x);
+      var defs=document.createElementNS(NS,'defs');svg.insertBefore(defs,svg.firstChild);
+      for(i=0;i<n;i++){
+        var cp=document.createElementNS(NS,'clipPath');cp.id='hw-c'+i;
+        var r=document.createElementNS(NS,'rect');
+        r.setAttribute('x',i?(xs[i]):-50);r.setAttribute('y',-100);
+        r.setAttribute('width',(i==n-1?xs[i+1]+50:xs[i+1])-(i?xs[i]:-50));r.setAttribute('height',400);
+        cp.appendChild(r);defs.appendChild(cp);
+        var g=document.createElementNS(NS,'g');g.setAttribute('class','hw-l');g.setAttribute('clip-path','url(#hw-c'+i+')');
+        g.style.transitionDelay=(i*55)+'ms';g.appendChild(t.cloneNode(true));svg.appendChild(g);
+      }
+      t.parentNode.removeChild(t);
+    }catch(e){}
+    ready();
+    requestAnimationFrame(function(){
+      new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();w.classList.add('is-up')}},{threshold:.35}).observe(w);
+    });
+  }
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(split,split);
+})();
 
 /* project register: filters + floating photo */
 (function(){

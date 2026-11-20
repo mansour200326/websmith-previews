@@ -392,3 +392,24 @@ a{color:inherit}
 .hd__nav .en{font:600 .62rem/1 var(--k-body);letter-spacing:.08em;border:1px solid currentColor;padding:2px 4px;margin-inline-start:6px;border-radius:2px;opacity:.7}
 [dir=rtl] .hero h1,[dir=rtl] .pi h1{padding-bottom:.3em}
 .ct__info{padding-inline-start:max(var(--pad),(100vw - var(--max)) / 2 + var(--pad))}
+
+/* ---- Fannan round 3 fixes (r4) ---- */
+.nw{white-space:nowrap}
+/* 1. hotels scroller on phones: every card 82vw, wide first card desktop only */
+@media (max-width:599px){
+  .inside .k-drag__card,.inside .k-drag__card:nth-child(3n+1),.inside .k-drag__card:nth-child(3n+2){--h:62vw;flex-basis:82vw}
+}
+/* 2. Find us: deep teal panel instead of a grey slab */
+.ct .k-visit__map{background:var(--teal);color:#fff;min-height:400px;gap:26px;padding:40px var(--pad)}
+.ct .k-visit__map .map__where{font:800 clamp(2.4rem,4vw,3.6rem)/.95 var(--k-display);color:#fff;text-transform:uppercase;letter-spacing:-.005em}
+.ct .k-visit__map .map__where small{font:400 16px/1.45 var(--k-body);color:rgba(255,255,255,.88);margin-top:14px;text-transform:none;letter-spacing:0}
+[dir=rtl] .ct .k-visit__map .map__where{font-weight:700;text-transform:none;letter-spacing:0;line-height:1.2}
+.ct .k-visit__map button{background:#fff;color:var(--ink);font:600 1.02rem/1 var(--k-body);min-height:54px;padding:0 24px;border-radius:2px;box-shadow:none;transition:background .4s var(--k-ease),color .4s var(--k-ease)}
+.ct .k-visit__map button:hover{background:var(--ink);color:#fff}
+@media (min-width:900px){.ct .k-visit__map{height:400px;min-height:0}}
+/* 1b. the card's reveal transform shifted the snap point (track opened at scrollLeft 40): slide the contents, not the snap box */
+.k-js .inside .k-drag__card,[dir=rtl].k-js .inside .k-drag__card{transform:none}
+.k-js .inside .k-drag__card > *{transform:translateX(40px);transition:transform 1.1s var(--k-ease)}
+[dir=rtl].k-js .inside .k-drag__card > *{transform:translateX(-40px)}
+.k-js .inside .k-drag.is-in .k-drag__card > *{transform:none}
+@media (prefers-reduced-motion:reduce){.k-js .inside .k-drag__card > *{transform:none;transition:none}}
