@@ -23,12 +23,19 @@
     <nav class="hd__nav" aria-label="القائمة الرئيسية">
       <a href="./">الرئيسية</a>
       <a href="services.html" aria-current="page">خدماتنا</a>
-      <a href="../about.html" lang="en">About</a>
+      <a href="about.html">من نحن</a>
       <a href="./#projects">المشاريع</a>
       <a href="#contact">تواصل معنا</a>
     </nav>
-    <a class="hd__tel" href="tel:+966133631381"><span class="k-roll ltr"><span data-text="+966 13 363 1381">+966 13 363 1381</span></span></a>
+    <a class="hd__tel" href="tel:+966133631381"><span class="k-roll ltr"><span data-text="+966 13 363 1381">+966 13 363 1381</span></span><span class="hd__tel-s">اتصل</span></a>
     <a class="hd__ar" href="../services.html" lang="en" hreflang="en">English</a>
+    <details class="hd__menu"><summary>القائمة</summary><nav aria-label="القائمة">
+      <a href="./">الرئيسية</a>
+      <a href="services.html" aria-current="page">خدماتنا</a>
+      <a href="about.html">من نحن</a>
+      <a href="./#projects">المشاريع</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav></details>
   </div>
 </header>
 
@@ -40,14 +47,14 @@
     <h1 data-reveal="lines">أعمال مدنية وميكانيكية <b>وكهرباء وأنابيب</b> للمواقع الصناعية.</h1>
     <p class="lede" data-reveal data-reveal-delay="150">قسم الهندسة والإنشاء عندنا يعمل في النفط والغاز والمصافي والبتروكيماويات والأسمدة والإسمنت والطاقة والتحلية والحديد. أرسل نطاق العمل إلى <a class="k-link k-link--under ltr" href="mailto:sales@mrbme.com">sales@mrbme.com</a> أو اتصل بالمبيعات والمشاريع على <a class="k-link k-link--under ltr" href="tel:+966558769835">055 876 9835</a>.</p>
     <nav class="jump" aria-label="في هذه الصفحة">
-      <a href="#piping">الأنابيب غير المعدنية</a><a href="#civil">المدني والحديد</a><a href="#mechanical">الميكانيكا</a><a href="#ei">الكهرباء والأجهزة</a><a href="#scaffolding">السقالات</a><a href="#shutdowns">الإيقافات</a><a href="#manpower">القوى العاملة</a><a href="#hrsg">Doosan HRSG</a>
+      <a href="#piping">الأنابيب غير المعدنية</a><a href="#civil">المدني والحديد</a><a href="#mechanical">الميكانيكا</a><a href="#shutdowns">الإيقافات</a><a href="#ei">الكهرباء والأجهزة</a><a href="#scaffolding">السقالات</a><a href="#manpower">القوى العاملة</a><a href="#hrsg">Doosan HRSG</a>
     </nav>
   </div>
 </section>
 
 <div class="wrap">
 
-  <article class="svc" id="piping">
+  <article class="svc svc--lead" id="piping">
     <figure>
       <div class="svc__ph" data-reveal="clip"><img src="../img/grp-trench.webp" width="1200" height="1600" alt="أربعة فنيين بخوذات يوصلون خط GRP أصفر داخل خندق في الصحراء" loading="lazy"></div>
       <figcaption>خط GRP داخل الخندق.</figcaption>
@@ -67,83 +74,53 @@
     </div>
   </article>
 
-  <article class="svc svc--flip" id="civil">
-    <figure>
-      <div class="svc__ph" data-reveal="clip"><img src="../img/steel-frame.webp" width="1800" height="1350" alt="أعمدة وجسور حديد مجلفن قيد التركيب داخل مصنع وخلفها رافعة متحركة" loading="lazy"></div>
-      <figcaption>تركيب حديد إنشائي داخل مصنع.</figcaption>
-    </figure>
-    <div>
-      <span class="idx">02</span>
-      <h2 data-reveal="lines">الأعمال المدنية والهياكل الحديدية</h2>
-      <p class="lede" style="margin-top:18px">أساسات وأعمال مدنية ومعمارية وهياكل حديدية ومبانٍ، حسب مواصفات مالك المصنع ومع الفحص أثناء العمل.</p>
-      <ul>
-        <li>الأساسات (مشروع أساسات NATCO)</li>
-        <li>أعمال مدنية ومعمارية (مشروع بوابة JWAP)</li>
-        <li>تصنيع وتركيب الهياكل الحديدية</li>
-        <li>المباني داخل المواقع الصناعية</li>
-      </ul>
-      <a class="cta cta--ink" data-k-magnetic="0.2" href="mailto:sales@mrbme.com"><span class="cta__t">أرسل نطاق العمل</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
-    </div>
-  </article>
+  <div class="svc-pair">
+    <article class="svc svc--card" id="civil">
+      <figure>
+        <div class="svc__ph" data-reveal="clip"><img src="../img/steel-frame.webp" width="1800" height="1350" alt="أعمدة وجسور حديد مجلفن قيد التركيب داخل مصنع وخلفها رافعة متحركة" loading="lazy"></div>
+        <figcaption>تركيب حديد إنشائي داخل مصنع.</figcaption>
+      </figure>
+      <div>
+        <span class="idx">02</span>
+        <h2 data-reveal="lines">الأعمال المدنية والهياكل الحديدية</h2>
+        <p class="lede" style="margin-top:18px">أساسات وأعمال مدنية ومعمارية وهياكل حديدية ومبانٍ، حسب مواصفات مالك المصنع ومع الفحص أثناء العمل.</p>
+        <ul>
+          <li>الأساسات (مشروع أساسات NATCO)</li>
+          <li>أعمال مدنية ومعمارية (مشروع بوابة JWAP)</li>
+          <li>تصنيع وتركيب الهياكل الحديدية</li>
+          <li>المباني داخل المواقع الصناعية</li>
+        </ul>
+        <a class="cta cta--ink" data-k-magnetic="0.2" href="mailto:sales@mrbme.com"><span class="cta__t">أرسل نطاق العمل</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
+      </div>
+    </article>
 
-  <article class="svc" id="mechanical">
-    <figure>
-      <div class="svc__ph" data-reveal="clip"><img src="../img/grp-joint.webp" width="1350" height="1800" alt="فريق يربط وصلة أنبوب بمفتاح جنزير والأنبوب على حوامل حمراء" loading="lazy"></div>
-      <figcaption>ربط وصلة على حوامل الأنابيب.</figcaption>
-    </figure>
-    <div>
-      <span class="idx">03</span>
-      <h2 data-reveal="lines">الأعمال الميكانيكية</h2>
-      <p class="lede" style="margin-top:18px">تركيب المعدات والتصنيع والأنابيب، وأعمال الإصلاح التي تبقي المصنع شغّالاً.</p>
-      <ul>
-        <li>تركيب المعدات</li>
-        <li>التصنيع</li>
-        <li>قسم الأنابيب: معدنية وغير معدنية</li>
-        <li>إصلاح المضخات والمحركات</li>
-      </ul>
-      <a class="cta" data-k-magnetic="0.2" href="tel:+966558769835"><span class="cta__t">اتصل بالمبيعات والمشاريع</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
-    </div>
-  </article>
+    <article class="svc svc--card" id="mechanical">
+      <figure>
+        <div class="svc__ph" data-reveal="clip"><img src="../img/grp-joint.webp" width="1350" height="1800" alt="فريق يربط وصلة أنبوب بمفتاح جنزير والأنبوب على حوامل حمراء" loading="lazy"></div>
+        <figcaption>ربط وصلة على حوامل الأنابيب.</figcaption>
+      </figure>
+      <div>
+        <span class="idx">03</span>
+        <h2 data-reveal="lines">الأعمال الميكانيكية</h2>
+        <p class="lede" style="margin-top:18px">تركيب المعدات والتصنيع والأنابيب، وأعمال الإصلاح التي تبقي المصنع شغّالاً.</p>
+        <ul>
+          <li>تركيب المعدات</li>
+          <li>التصنيع</li>
+          <li>قسم الأنابيب: معدنية وغير معدنية</li>
+          <li>إصلاح المضخات والمحركات</li>
+        </ul>
+        <a class="cta" data-k-magnetic="0.2" href="tel:+966558769835"><span class="cta__t">اتصل بالمبيعات والمشاريع</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
+      </div>
+    </article>
+  </div>
 
-  <article class="svc svc--flip" id="ei">
-    <div class="svc__type" aria-hidden="true">E&amp;I<span>.</span></div>
-    <div>
-      <span class="idx">04</span>
-      <h2 data-reveal="lines">الكهرباء والأجهزة</h2>
-      <p class="lede" style="margin-top:18px">أعمال E&amp;I للمشاريع الجديدة وأثناء الإيقافات، بكهربائيين ومهندسي كهرباء وأجهزة من فريقنا.</p>
-      <ul>
-        <li>التمديدات الكهربائية</li>
-        <li>الأجهزة والتحكم</li>
-        <li>اللوحات والكابلات</li>
-        <li>دعم E&amp;I أثناء الإيقافات</li>
-      </ul>
-      <a class="cta cta--ink" data-k-magnetic="0.2" href="mailto:sales@mrbme.com"><span class="cta__t">أرسل نطاق العمل</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
-    </div>
-  </article>
-
-  <article class="svc" id="scaffolding">
-    <div class="svc__type" aria-hidden="true">سقالات<span>.</span></div>
-    <div>
-      <span class="idx">05</span>
-      <h2 data-reveal="lines">السقالات</h2>
-      <p class="lede" style="margin-top:18px">سقالات للإنشاء والصيانة والإيقافات، منها مشاريع الشركة السعودية للكهرباء في المنطقة الشرقية.</p>
-      <ul>
-        <li>سقالات الإنشاء والصيانة</li>
-        <li>سقالات الإيقافات والصيانة الشاملة</li>
-        <li>مشاريع سقالات SEC في المنطقة الشرقية</li>
-        <li>فنيو رفع مستوى 1 و3</li>
-      </ul>
-      <a class="cta" data-k-magnetic="0.2" href="tel:+966558769835"><span class="cta__t">اتصل بالمبيعات والمشاريع</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
-    </div>
-  </article>
-
-  <article class="svc svc--flip" id="shutdowns">
+  <article class="svc svc--wide" id="shutdowns">
     <figure>
       <div class="svc__ph" data-reveal="clip" style="aspect-ratio:940/344"><img src="../img/crane-lift.webp" width="940" height="344" alt="رافعتان متحركتان ترفعان مقطع أنبوب إلى حامل الأنابيب في مصنع" loading="lazy"></div>
       <figcaption>رفع مزدوج إلى حامل الأنابيب.</figcaption>
     </figure>
     <div>
-      <span class="idx">06</span>
+      <span class="idx">04</span>
       <h2 data-reveal="lines">الإيقافات وصيانة المصانع</h2>
       <p class="lede" style="margin-top:18px">نستلم أعمال الإيقاف والصيانة الشاملة وعقود صيانة المصانع، قصيرة أو طويلة المدى، ونلتزم بمواعيد المصنع.</p>
       <ul>
@@ -156,23 +133,60 @@
     </div>
   </article>
 
-  <article class="svc" id="manpower">
-    <div class="svc__type" aria-hidden="true">قوى عاملة<span>.</span></div>
-    <div>
-      <span class="idx">07</span>
-      <h2 data-reveal="lines">القوى العاملة والنقل والدعم</h2>
-      <p class="lede" style="margin-top:18px">قسم للعمالة الماهرة والعادية للأعمال القصيرة والطويلة، ونقل وتجارة داخل المملكة وخارجها، وإدارة إعاشة.</p>
-      <ul>
-        <li>مهندسو أنابيب وجودة وتخطيط وسلامة وكهرباء</li>
-        <li>فنيون ومفتشون وعمالة ماهرة</li>
-        <li>النقل والتجارة</li>
-        <li>إدارة الإعاشة</li>
-      </ul>
-      <a class="cta" data-k-magnetic="0.2" href="tel:+966558769835"><span class="cta__t">اتصل بالمبيعات والمشاريع</span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
-    </div>
-  </article>
-
 </div>
+
+<section class="sec sec--ink svc-trio-sec" aria-labelledby="trio-h">
+  <div class="wrap">
+    <span class="idx">05–07 / خدمات الموقع</span>
+    <h2 id="trio-h" class="h2" data-reveal="lines">على كل موقع، مع كل فريق</h2>
+    <div class="svc-trio">
+      <article class="svc svc--col" id="ei">
+        <div>
+          <span class="idx">05</span>
+          <h3>الكهرباء والأجهزة</h3>
+          <p class="lede" style="margin-top:18px">أعمال E&amp;I للمشاريع الجديدة وأثناء الإيقافات، بكهربائيين ومهندسي كهرباء وأجهزة من فريقنا.</p>
+          <ul>
+            <li>التمديدات الكهربائية</li>
+            <li>الأجهزة والتحكم</li>
+            <li>اللوحات والكابلات</li>
+            <li>دعم E&amp;I أثناء الإيقافات</li>
+          </ul>
+          <a class="k-link svc__go" href="mailto:sales@mrbme.com">أرسل نطاق العمل <span class="k-arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc svc--col" id="scaffolding">
+        <div>
+          <span class="idx">06</span>
+          <h3>السقالات</h3>
+          <p class="lede" style="margin-top:18px">سقالات للإنشاء والصيانة والإيقافات، منها مشاريع الشركة السعودية للكهرباء في المنطقة الشرقية.</p>
+          <ul>
+            <li>سقالات الإنشاء والصيانة</li>
+            <li>سقالات الإيقافات والصيانة الشاملة</li>
+            <li>مشاريع سقالات SEC في المنطقة الشرقية</li>
+            <li>فنيو رفع مستوى 1 و3</li>
+          </ul>
+          <a class="k-link svc__go" href="tel:+966558769835">اتصل بالمبيعات والمشاريع <span class="k-arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc svc--col" id="manpower">
+        <div>
+          <span class="idx">07</span>
+          <h3>القوى العاملة والنقل والدعم</h3>
+          <p class="lede" style="margin-top:18px">قسم للعمالة الماهرة والعادية للأعمال القصيرة والطويلة، ونقل وتجارة داخل المملكة وخارجها، وإدارة إعاشة.</p>
+          <ul>
+            <li>مهندسو أنابيب وجودة وتخطيط وسلامة وكهرباء</li>
+            <li>فنيون ومفتشون وعمالة ماهرة</li>
+            <li>النقل والتجارة</li>
+            <li>إدارة الإعاشة</li>
+          </ul>
+          <a class="k-link svc__go" href="tel:+966558769835">اتصل بالمبيعات والمشاريع <span class="k-arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section class="sec sec--red" id="hrsg" aria-labelledby="hrsg-h" style="scroll-margin-top:70px">
   <div class="wrap hrsg">
@@ -196,7 +210,7 @@
     </div>
     <figure>
       <div class="hrsg__ph" data-reveal="clip"><img src="../img/hrsg-stacks.webp" width="2400" height="1800" alt="ثلاث مداخن HRSG بمنصات صيانة في محطة دورة مركبة" loading="lazy"></div>
-      <figcaption>وحدات Doosan: القرية (15)، مرافق IWPP (12)، العزل في البحرين (4)، الجبيل للتوليد المشترك (2)، APPC (1).</figcaption>
+      <figcaption>وحدات <bdi>Doosan</bdi>: القرية (15)، مرافق (12)، العزل في البحرين (4)، الجبيل للتوليد المشترك (2)، المتقدمة للبولي بروبيلين (1).</figcaption>
     </figure>
   </div>
 </section>
@@ -209,9 +223,9 @@
       <p class="lede" style="margin-top:20px">المخططات أو جدول الكميات أو وصف مختصر يكفي للبدء. الدوام من السبت إلى الخميس 8:00–18:00 بتوقيت السعودية.</p>
     </div>
     <div style="display:grid;gap:12px;align-content:start">
-      <a class="cta" data-k-magnetic="0.2" href="tel:+966558769835"><span class="cta__t">المبيعات والمشاريع: <span class="ltr">055 876 9835</span></span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
+      <a class="cta" data-k-magnetic="0.2" href="tel:+966558769835"><span class="cta__t"><span>المبيعات والمشاريع:&nbsp;<bdi>055 876 9835</bdi></span></span><span class="cta__a" aria-hidden="true"><span class="k-arrow">→</span></span></a>
       <a class="cta cta--line" href="mailto:sales@mrbme.com"><span class="cta__t ltr">sales@mrbme.com</span></a>
-      <a class="cta cta--line" href="tel:+966133631381"><span class="cta__t">المكتب: <span class="ltr">+966 13 363 1381</span></span></a>
+      <a class="cta cta--line" href="tel:+966133631381"><span class="cta__t"><span>المكتب:&nbsp;<bdi>+966 13 363 1381</bdi></span></span></a>
     </div>
   </div>
 </section>
@@ -236,7 +250,7 @@
       </div>
       <div>
         <h3>الصفحات</h3>
-        <ul><li><a class="k-link" href="./">الرئيسية</a></li><li><a class="k-link" href="../about.html" lang="en">About MRB</a></li><li><a class="k-link" href="../services.html" lang="en">English</a></li></ul>
+        <ul><li><a class="k-link" href="./">الرئيسية</a></li><li><a class="k-link" href="about.html">من نحن</a></li><li><a class="k-link" href="../services.html" lang="en">English</a></li></ul>
       </div>
     </div>
     <p class="ft__name" aria-hidden="true">MRB<span>.</span></p>

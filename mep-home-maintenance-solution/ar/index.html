@@ -11,7 +11,6 @@
 <link rel="icon" href="../img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../img/bathroom.webp" fetchpriority="high">
 <link rel="stylesheet" href="../site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -23,7 +22,7 @@
     <a class="hdr__logo" href="./"><img src="../img/logo.webp" width="740" height="376" alt="MEP Home Solution، الصفحة الرئيسية"></a>
     <nav class="hdr__nav" aria-label="القائمة">
       <a href="./" aria-current="page">الرئيسية</a>
-      <a href="../services.html" lang="en">Services</a>
+      <a href="#mep-h">الخدمات</a>
       <a href="#amc">العقود السنوية</a>
       <a href="#areas">المناطق</a>
       <a href="#contact">تواصل معنا</a>
@@ -35,7 +34,7 @@
       <summary>القائمة</summary>
       <nav aria-label="القائمة، الجوال">
         <a href="./" aria-current="page">الرئيسية</a>
-        <a href="../services.html">الخدمات (بالإنجليزية)</a>
+        <a href="#mep-h">الخدمات</a>
         <a href="#amc">العقود السنوية</a>
         <a href="#areas">المناطق</a>
         <a href="#contact">تواصل معنا</a>
@@ -47,48 +46,45 @@
 
 <main id="main">
 <section class="wrap hero" aria-labelledby="hero-h">
-  <div class="hero__type">
+  <div class="hero__mep" dir="ltr">
+    <a class="hero__l" href="#mep-m" style="--i:0"><span class="hero__glyph" aria-hidden="true"><span>M</span></span><span class="hero__w" dir="rtl" lang="ar"><b>ميكانيك</b> مكيفات، تشيلر، مضخات ماي</span></a>
+    <a class="hero__l" href="#mep-e" style="--i:1"><span class="hero__glyph" aria-hidden="true"><span>E</span></span><span class="hero__w" dir="rtl" lang="ar"><b>كهرباء</b> فيوزات، طبلون، إنارة، أفياش</span></a>
+    <a class="hero__l" href="#mep-p" style="--i:2"><span class="hero__glyph" aria-hidden="true"><span>P</span></span><span class="hero__w" dir="rtl" lang="ar"><b>سباكة</b> تسريب، انسداد، خزانات ماي</span></a>
+  </div>
+  <div class="hero__row">
     <h1 id="hero-h">
-      <span class="ln" style="--i:0"><span>صيانة وتصليح</span></span>
-      <span class="ln" style="--i:1"><span>الفلل والشقق</span></span>
-      <span class="ln" style="--i:2"><span>في دبي.</span></span>
+      <span class="ln" style="--i:3"><span>صيانة وتصليح الفلل</span></span>
+      <span class="ln" style="--i:4"><span>والشقق في دبي.</span></span>
     </h1>
-    <p class="hero__lead hero__fade" style="--i:0">تكييف، كهرباء، سباكة، نجارة ودهان، يشتغل عليها فنيونا من مكتبنا في القوز. نرد على التلفون ليل نهار، وفي الحالات الطارئة نحاول نوصل لبابك خلال 45 دقيقة.</p>
-    <div class="hero__acts hero__fade" style="--i:1">
-      <a class="k-btn btn" data-k-magnetic="0.25" href="tel:+971566486239"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>اتصل <bdi dir="ltr">056 648 6239</bdi></a>
-      <a class="tlink" href="https://wa.me/971566486239?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">أرسل لنا صورة المشكلة على واتساب</span> <span class="k-arrow" aria-hidden="true">→</span></a>
+    <div class="hero__side">
+      <p class="hero__lead hero__fade" style="--i:0">وكمان نجارة ودهان وبلاط، يشتغل عليها فنيونا من مكتبنا في القوز. نرد على التلفون ليل نهار، وفي الحالات الطارئة نحاول نوصل لبابك خلال 45 دقيقة.</p>
+      <div class="hero__acts hero__fade" style="--i:1">
+        <a class="k-btn btn" data-k-magnetic="0.25" href="tel:+971566486239"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>اتصل <bdi dir="ltr">056 648 6239</bdi></a>
+        <a class="tlink" href="https://wa.me/971566486239?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">أرسل لنا صورة المشكلة على واتساب</span> <span class="k-arrow" aria-hidden="true">→</span></a>
+      </div>
     </div>
   </div>
-  <figure class="hero__photo">
-    <img src="../img/bathroom.webp" width="2300" height="1220" alt="حمام بمغسلة خشبية وحاجز من بلوك زجاجي وبانيو" fetchpriority="high">
-    <figcaption class="oncall"><i aria-hidden="true"></i><span>الساعة الآن <b data-dubai-time dir="ltr">--:--</b> في دبي.<br>الفنيون جاهزون.</span></figcaption>
-  </figure>
-  <dl class="facts hero__fade" style="--i:2">
-    <div><dt>الدوام</dt><dd>24 ساعة، 7 أيام</dd></div>
-    <div><dt>المكتب</dt><dd>القوز الصناعية 1</dd></div>
-    <div><dt>منذ</dt><dd>يوليو 2012</dd></div>
-    <div><dt>هاتف المكتب</dt><dd><a href="tel:+97143384391" dir="ltr">04 338 4391</a></dd></div>
-  </dl>
+  <p class="oncall hero__fade" style="--i:2"><i aria-hidden="true"></i><span>الساعة الآن <b data-dubai-time dir="ltr">--:--</b> في دبي، والفنيون جاهزون. مفتوحين 24 ساعة، 7 أيام، من مكتبنا في القوز الصناعية 1.</span></p>
 </section>
 
 <section class="mep sec" aria-labelledby="mep-h">
   <div class="wrap">
     <div class="sec__head sec__head--split">
-      <h2 class="h2" id="mep-h" data-reveal="lines">ميكانيك، كهرباء، سباكة.</h2>
-      <p class="intro" data-reveal data-reveal-delay="120">هذا معنى الحروف الثلاثة في اسمنا <bdi>MEP</bdi>، وهي أغلب الأعطال اللي تصير في بيوت دبي. اتصال واحد يغطي الثلاثة.</p>
+      <h2 class="h2" id="mep-h" data-reveal="lines">شو يغطي كل حرف.</h2>
+      <p class="intro" data-reveal data-reveal-delay="120">الحروف الثلاثة في اسمنا <bdi>MEP</bdi> هي أغلب الأعطال اللي تصير في بيوت دبي. اتصال واحد يغطي الثلاثة.</p>
     </div>
     <div class="mep__grid">
-      <div class="mep__col" data-reveal>
+      <div class="mep__col" id="mep-m" data-reveal>
         <div class="mep__letter" aria-hidden="true" dir="ltr"><span>M</span></div>
         <h3 class="mep__word">الميكانيك والتكييف</h3>
         <ul><li>المكيف ما يبرد، يطلع هوا حار أو يقطّر ماي</li><li>صيانة المكيفات وتنظيف الكويل والدكت</li><li>التشيلر وأنظمة التكييف المركزي</li><li>مضخات الماي والمواتير</li><li>تركيب ثرموستات <bdi>Nest</bdi></li></ul>
       </div>
-      <div class="mep__col" data-reveal data-reveal-delay="120" style="--d:120ms">
+      <div class="mep__col" id="mep-e" data-reveal data-reveal-delay="120" style="--d:120ms">
         <div class="mep__letter" aria-hidden="true" dir="ltr"><span>E</span></div>
         <h3 class="mep__word">الكهرباء</h3>
         <ul><li>الفيوزات والشورت والطبلون</li><li>الإنارة واللمبات والبلاست</li><li>الأفياش والسويتشات والدِمَر</li><li>شفاطات الهوا</li><li>كشف الأعطال لما الكهربا تفصل كل شوي</li></ul>
       </div>
-      <div class="mep__col" data-reveal data-reveal-delay="240" style="--d:240ms">
+      <div class="mep__col" id="mep-p" data-reveal data-reveal-delay="240" style="--d:240ms">
         <div class="mep__letter" aria-hidden="true" dir="ltr"><span>P</span></div>
         <h3 class="mep__word">السباكة</h3>
         <ul><li>انسداد الحمامات والمغاسل والسنك</li><li>تسريب الحنفيات والمواسير والمحابس</li><li>ضعف ضغط الماي أو انقطاعه</li><li>تنظيف خزانات الماي</li><li>توصيل الغسالات ونقلها</li></ul>
@@ -96,6 +92,7 @@
     </div>
     <div class="mep__rest" data-reveal>
       <p>وباقي البيت: <span>نجارة وجبس، دهان وورق جدران، بلاط وأعمال بناء، أقفال وأبواب، مكافحة حشرات، تنظيف، وصيانة المسابح.</span></p>
+      <a class="tlink" href="../services.html" hreflang="en"><span class="k-link k-link--under">كل الخدمات بالتفصيل (بالإنجليزي)</span> <span class="k-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>

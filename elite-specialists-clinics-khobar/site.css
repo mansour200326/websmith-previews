@@ -440,3 +440,48 @@ html:lang(ar) .dr__alt,html:lang(ar) .ft__alt,html:lang(ar) .hd__name small{text
 html:lang(ar) .hero__h{font-size:clamp(2.1rem,4.3vw,4.4rem)}
 html:lang(ar) .hero__in1,html:lang(ar) .hero__in2,html:lang(ar) .hero__in3{padding-inline-start:0}
 @media (min-width:980px){html:lang(ar) .hero__ln{white-space:nowrap}}
+
+/* ---- Fannan round 3 fixes ---- */
+/* hero: photo graded (purple cast out), cropped onto the sign wall, bled to the page edge on desktop */
+.hero__photo img{object-position:33% 15%;filter:saturate(.78) sepia(.14) contrast(1.07) brightness(1.04)}
+@media (min-width:980px){
+  .hero,html:lang(ar) .hero{grid-template-columns:minmax(0,.92fr) minmax(0,1.1fr);min-height:calc(min(100svh,900px) - 72px);
+    padding-block:clamp(8px,1.4vw,20px) clamp(20px,2.6vw,36px);padding-inline-end:0;gap:clamp(30px,3.3vw,48px);align-items:center}
+  .hero__h{font-size:clamp(3rem,5.8vw,6.4rem)}
+  .hero__photo{height:min(80vh,700px);aspect-ratio:auto;border-radius:0;border-start-start-radius:30px;border-end-start-radius:46% 38%}
+  .hero__badge{inset-inline-start:-58px;bottom:9%}
+}
+/* home clinics: two columns on wide screens */
+@media (min-width:980px){
+  .clinics .k-acc__list{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(40px,5vw,88px);align-items:start;border-top:0}
+  .clinics .k-acc__row:nth-child(-n+2){border-top:1px solid var(--k-ink)}
+  .clinics .k-acc__t,html:lang(ar) .clinics .k-acc__t{font-size:1.6rem;line-height:1.1}
+  .clinics .k-acc__t small{font-size:.94rem;margin-top:6px}
+  .clinics .k-acc__row summary{padding:18px 0;grid-template-columns:2.6em 1fr auto}
+  .clinics .k-acc__body{padding-inline-start:calc(2.6em + 10px)}
+  .clinics .k-acc__body ul{columns:1}
+}
+/* services + doctors intros: real photo in the right half */
+.pg-intro__txt{display:grid;gap:26px;align-content:center}
+.pg-intro__photo{overflow:hidden;border-radius:22px;aspect-ratio:16/10;background:var(--wash)}
+.pg-intro__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+@media (min-width:980px){
+  .pg-intro--photo{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:clamp(30px,4vw,64px);padding-inline-end:0;padding-block:clamp(24px,3vw,44px)}
+  .pg-intro__photo{height:min(66vh,560px);aspect-ratio:auto;border-radius:0;border-start-start-radius:30px;border-end-start-radius:46% 38%}
+}
+.k-js .pg-intro__photo{clip-path:inset(0 0 100% 0);animation:k-clipr 1.3s var(--k-ease) .25s forwards}
+.k-js .pg-intro__photo img{transform:scale(1.1);animation:k-settle 2.2s var(--k-ease) .25s forwards}
+@media (prefers-reduced-motion:reduce){.k-js .pg-intro__photo,.k-js .pg-intro__photo img{animation:none;clip-path:none;transform:none}}
+/* reviews: proper cards, stars on top, name at the foot, score as a teal card */
+@media (min-width:980px){.revs__grid{grid-template-columns:1fr 1fr minmax(240px,.72fr);align-items:stretch}}
+.rev{display:flex;flex-direction:column;gap:22px;border:1px solid #d3e2e8;box-shadow:0 1px 0 rgba(14,36,48,.04)}
+.rev blockquote{margin:0}
+.rev p{font-size:clamp(1.35rem,1.9vw,1.7rem);line-height:1.28}
+.rev .rev__who{margin-top:auto}
+.rev__s{font-size:1.05rem;margin:0;line-height:1}
+.rev__who{margin-top:auto;padding-top:18px;border-top:1px solid var(--k-line);font-size:.92rem;color:var(--k-mute)}
+.rev__who b{display:block;color:var(--k-ink);font-weight:600;font-size:1rem}
+.revs__score{background:var(--teal-ink);color:#fff;border-radius:28px;padding:clamp(24px,3vw,40px);justify-content:flex-end}
+.revs__score b{color:#fff}
+.revs__score span{color:#e3f0f5}
+.revs__score a{color:#fff}

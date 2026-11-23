@@ -11,7 +11,6 @@
 <link rel="icon" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/bathroom.webp" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -46,42 +45,38 @@
 </header>
 
 <main id="main">
-<!-- HERO: photo from mep-solution.com (slider), 4x upscaled -->
+<!-- HERO: type-led. The name is the idea: M / E / P = Mechanical, Electrical, Plumbing -->
 <section class="wrap hero" aria-labelledby="hero-h">
-  <div class="hero__type">
+  <div class="hero__mep">
+    <a class="hero__l" href="#mep-m" style="--i:0"><span class="hero__glyph" aria-hidden="true"><span>M</span></span><span class="hero__w"><b>Mechanical</b> AC, chillers, water pumps</span></a>
+    <a class="hero__l" href="#mep-e" style="--i:1"><span class="hero__glyph" aria-hidden="true"><span>E</span></span><span class="hero__w"><b>Electrical</b> Fuses, boards, lights, sockets</span></a>
+    <a class="hero__l" href="#mep-p" style="--i:2"><span class="hero__glyph" aria-hidden="true"><span>P</span></span><span class="hero__w"><b>Plumbing</b> Leaks, blockages, water tanks</span></a>
+  </div>
+  <div class="hero__row">
     <h1 id="hero-h">
-      <span class="ln" style="--i:0"><span>Maintenance</span></span>
-      <span class="ln" style="--i:1"><span>and repairs for</span></span>
-      <span class="ln" style="--i:2"><span>Dubai villas and</span></span>
-      <span class="ln" style="--i:3"><span>apartments.</span></span>
+      <span class="ln" style="--i:3"><span>Maintenance and repairs</span></span>
+      <span class="ln" style="--i:4"><span>for Dubai villas and apartments.</span></span>
     </h1>
-    <p class="hero__lead hero__fade" style="--i:0">AC, electrical, plumbing, carpentry and painting, done by our own technicians from Al Quoz. We answer the phone day and night, and for an emergency we aim to be at your door within 45 minutes.</p>
-    <div class="hero__acts hero__fade" style="--i:1">
-      <a class="k-btn btn" data-k-magnetic="0.25" href="tel:+971566486239"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call 056 648 6239</a>
-      <a class="tlink" href="https://wa.me/971566486239?text=Hi%20MEP%2C%20I%20have%20a%20problem%20at%20home%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">WhatsApp us a photo of the problem</span> <span class="k-arrow" aria-hidden="true">→</span></a>
+    <div class="hero__side">
+      <p class="hero__lead hero__fade" style="--i:0">Plus carpentry, painting and tiling, done by our own technicians from Al Quoz. We answer the phone day and night, and for an emergency we aim to be at your door within 45 minutes.</p>
+      <div class="hero__acts hero__fade" style="--i:1">
+        <a class="k-btn btn" data-k-magnetic="0.25" href="tel:+971566486239"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call 056 648 6239</a>
+        <a class="tlink" href="https://wa.me/971566486239?text=Hi%20MEP%2C%20I%20have%20a%20problem%20at%20home%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">WhatsApp us a photo of the problem</span> <span class="k-arrow" aria-hidden="true">→</span></a>
+      </div>
     </div>
   </div>
-  <figure class="hero__photo">
-    <img src="img/bathroom.webp" width="2300" height="1220" alt="A bathroom with a timber vanity, glass-block screen and a built-in tub" fetchpriority="high">
-    <figcaption class="oncall"><i aria-hidden="true"></i><span>It's <b data-dubai-time>now</b> in Dubai.<br>Technicians on call.</span></figcaption>
-  </figure>
-  <dl class="facts hero__fade" style="--i:2">
-    <div><dt>Hours</dt><dd>Open 24 hours, 7 days</dd></div>
-    <div><dt>Office</dt><dd>Al Quoz Industrial Area 1</dd></div>
-    <div><dt>Working since</dt><dd>July 2012</dd></div>
-    <div><dt>Office line</dt><dd><a href="tel:+97143384391">04 338 4391</a></dd></div>
-  </dl>
+  <p class="oncall hero__fade" style="--i:2"><i aria-hidden="true"></i><span>It's <b data-dubai-time>now</b> in Dubai and our technicians are on call. Open 24 hours, 7 days, from our office in Al Quoz Industrial Area 1.</span></p>
 </section>
 
 <!-- M / E / P -->
 <section class="mep sec" aria-labelledby="mep-h">
   <div class="wrap">
     <div class="sec__head sec__head--split">
-      <h2 class="h2" id="mep-h" data-reveal="lines">Mechanical, Electrical, Plumbing.</h2>
-      <p class="intro" data-reveal data-reveal-delay="120">That's what the letters in our name stand for, and it's most of what goes wrong in a Dubai home. One call covers all three.</p>
+      <h2 class="h2" id="mep-h" data-reveal="lines">What each letter covers.</h2>
+      <p class="intro" data-reveal data-reveal-delay="120">The three letters in our name are most of what goes wrong in a Dubai home. One call covers all three.</p>
     </div>
     <div class="mep__grid">
-      <div class="mep__col" data-reveal>
+      <div class="mep__col" id="mep-m" data-reveal>
         <div class="mep__letter" aria-hidden="true"><span>M</span></div>
         <h3 class="mep__word">Mechanical and AC</h3>
         <ul>
@@ -92,7 +87,7 @@
           <li>Nest thermostat installation</li>
         </ul>
       </div>
-      <div class="mep__col" data-reveal data-reveal-delay="120" style="--d:120ms">
+      <div class="mep__col" id="mep-e" data-reveal data-reveal-delay="120" style="--d:120ms">
         <div class="mep__letter" aria-hidden="true"><span>E</span></div>
         <h3 class="mep__word">Electrical</h3>
         <ul>
@@ -103,7 +98,7 @@
           <li>Fault finding when the power keeps tripping</li>
         </ul>
       </div>
-      <div class="mep__col" data-reveal data-reveal-delay="240" style="--d:240ms">
+      <div class="mep__col" id="mep-p" data-reveal data-reveal-delay="240" style="--d:240ms">
         <div class="mep__letter" aria-hidden="true"><span>P</span></div>
         <h3 class="mep__word">Plumbing</h3>
         <ul>
@@ -141,7 +136,7 @@
   </div>
 </section>
 
-<!-- ROOMS: photos from mep-solution.com (slider) upscaled; copper pipes is an Unsplash ambience photo -->
+<!-- ROOMS: photos from mep-solution.com (slider) upscaled and colour-graded; copper pipes is an Unsplash ambience photo -->
 <section class="sec rooms" aria-labelledby="rooms-h">
   <div class="wrap">
     <div class="sec__head sec__head--split">
@@ -158,6 +153,11 @@
         <figure><img src="img/living.webp" width="2300" height="1220" alt="A bright living room with tall windows" loading="lazy" style="object-position:30% 50%"></figure>
         <h3 class="h3">Living rooms and bedrooms</h3>
         <p>AC service, lights and dimmers, sockets, blinds and curtains, shelves, paint touch-ups.</p>
+      </article>
+      <article class="room">
+        <figure><img src="img/bathroom.webp" width="2300" height="1220" alt="A bathroom with a timber vanity, glass-block screen and a built-in tub" loading="lazy" style="object-position:62% 50%"></figure>
+        <h3 class="h3">Bathrooms</h3>
+        <p>Flushes, blocked basins, broken tiles, re-grouting and fresh silicone around the bath.</p>
       </article>
       <article class="room">
         <!-- Ambience photo: "A pair of copper pipes sitting on top of a wall" by Kelsey Todd on Unsplash, https://unsplash.com/photos/a-pair-of-copper-pipes-sitting-on-top-of-a-wall-c5aW5Xy-O7c, Unsplash License. Not the business's own. -->
