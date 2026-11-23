@@ -213,7 +213,7 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .k-visit__map{background-color:#ddd9ea;background-position:62% 55%}
 .k-visit__map button{border-radius:12px;min-height:48px}
 .phones{list-style:none;margin:26px 0;display:grid;gap:2px;font-variant-numeric:tabular-nums}
-.phones a{text-decoration:none;font-weight:500;display:inline-block;padding-block:6px}
+.phones a{text-decoration:none;font-weight:500;display:inline-flex;align-items:center;min-height:44px;min-width:44px}
 .phones span{color:var(--mute);font-size:.9rem;margin-inline-start:8px}
 
 /* ---------- page intro (inner pages) ---------- */
@@ -281,7 +281,7 @@ html:lang(ar) .person b{letter-spacing:0;line-height:1.25}
 .ftr .ftr__name span{display:block;font-size:.55em;color:#9fdbe6;letter-spacing:0;margin-top:10px;font-weight:400}
 .ftr h3{font:600 .95rem/1.4 var(--k-body);color:#fff;margin-bottom:10px}
 .ftr ul{list-style:none}
-.ftr li a,.ftr p a{text-decoration:none;display:inline-block;padding-block:10px;color:#e9e6f3}
+.ftr li a,.ftr p a{text-decoration:none;display:inline-block;padding-block:10px;min-width:44px;color:#e9e6f3}
 .ftr li a:hover,.ftr p a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
 .ftr p{font-size:.95rem;line-height:1.7}
 .ftr__bot{margin-top:50px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;font-size:.86rem;color:#b9b3cf}
