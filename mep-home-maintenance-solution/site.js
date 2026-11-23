@@ -299,7 +299,7 @@
   els.forEach(function(e){var t=e.getAttribute('data-reveal')==='clip'&&e.parentElement?e.parentElement:e;(t.__kRv=t.__kRv||[]).push(e);io.observe(t)});
   // parallax
   var px=[].slice.call(document.querySelectorAll('[data-speed]'));
-  if(DESK&&px.length){var tk=false;function upd(){tk=false;var vh=innerHeight;px.forEach(function(e){var r=e.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;var c=(r.top+r.height/2-vh/2);e.style.transform='translate3d(0,'+(c*(+e.getAttribute('data-speed'))).toFixed(1)+'px,0)'})}
+  if(DESK&&px.length){var tk=false;function upd(){tk=false;var vh=innerHeight;px.forEach(function(e){var r=e.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;var c=(r.top+r.height/2-vh/2);var mx=+(e.getAttribute('data-max')||9999),v=Math.max(-mx,Math.min(mx,c*(+e.getAttribute('data-speed'))));e.style.transform='translate3d(0,'+v.toFixed(1)+'px,0)'})}
     addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();}
   // Lenis (opt-in)
   if(DESK&&d.hasAttribute('data-lenis')){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js';s.async=true;
@@ -503,4 +503,16 @@
     els.forEach(function(el){el.textContent=t});
   }
   tick();setInterval(tick,20000);
+})();
+
+/* r4: open an accordion row when linked by hash (services M/E/P/+ index); hero letter photo fill after load */
+(function(){
+  function openHash(){var h=location.hash.slice(1);if(!h)return;var el=document.getElementById(h);if(el&&el.tagName==='DETAILS'){el.open=true}}
+  addEventListener('hashchange',openHash);openHash();
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var el=document.getElementById(a.getAttribute('href').slice(1));if(el&&el.tagName==='DETAILS')el.open=true});
+  var m=document.querySelector('.hero__mep');
+  if(m&&matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var go=function(){setTimeout(function(){m.classList.add('is-fill')},400)};
+    if(document.readyState==='complete')go();else addEventListener('load',go);
+  }
 })();

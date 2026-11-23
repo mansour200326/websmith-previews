@@ -443,7 +443,7 @@ html:lang(ar) .hero__in1,html:lang(ar) .hero__in2,html:lang(ar) .hero__in3{paddi
 
 /* ---- Fannan round 3 fixes ---- */
 /* hero: photo graded (purple cast out), cropped onto the sign wall, bled to the page edge on desktop */
-.hero__photo img{object-position:35% 15%;filter:saturate(.78) sepia(.14) contrast(1.07) brightness(1.04)}
+.hero__photo img{object-position:35% 4%;filter:saturate(.78) sepia(.14) contrast(1.07) brightness(1.04)}
 @media (min-width:980px){
   .hero,html:lang(ar) .hero{grid-template-columns:minmax(0,.92fr) minmax(0,1.1fr);min-height:calc(min(100svh,900px) - 72px);
     padding-block:clamp(8px,1.4vw,20px) clamp(20px,2.6vw,36px);padding-inline-end:0;gap:clamp(30px,3.3vw,48px);align-items:center}
@@ -485,3 +485,6 @@ html:lang(ar) .hero__in1,html:lang(ar) .hero__in2,html:lang(ar) .hero__in3{paddi
 .revs__score b{color:#fff}
 .revs__score span{color:#e3f0f5}
 .revs__score a{color:#fff}
+
+/* ---- Fannan round 4 polish ---- */
+.pg-intro__txt .hero__acts{margin-top:0}
