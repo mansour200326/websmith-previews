@@ -681,7 +681,7 @@ a{color:inherit}
 .oncall i{width:10px;height:10px;border-radius:50%;background:#1f9d55;flex:none;box-shadow:0 0 0 0 rgba(31,157,85,.5);animation:pulse 2.4s ease-out infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,85,.45)}70%{box-shadow:0 0 0 10px rgba(31,157,85,0)}100%{box-shadow:0 0 0 0 rgba(31,157,85,0)}}
 .oncall b{font-family:var(--mono);font-weight:600;color:var(--ink)}
-@media (max-width:599px){.hero__w{font-size:.84rem}.hero__w b{font-size:1rem}.hero h1 .ln,.hero h1 .ln>span{display:inline}.k-js .hero h1 .ln>span{animation:none;transform:none}.k-js .hero h1{animation:hero-in .9s ease .45s backwards}.oncall{align-items:flex-start}.oncall i{margin-top:7px}}
+@media (max-width:599px){.hero__w{font-size:.84rem}.hero__w b{font-size:1rem}.hero h1 .ln,.hero h1 .ln>span{display:inline}.oncall{align-items:flex-start}.oncall i{margin-top:7px}}
 @media (min-width:980px){
   .hero__row{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:clamp(40px,5vw,90px);align-items:end}
 }
@@ -860,7 +860,7 @@ a{color:inherit}
 @media (min-width:980px){.strip__in{grid-template-columns:1.3fr 1fr}.strip__acts{justify-content:flex-end}}
 
 @media (prefers-reduced-motion:reduce){
-  .k-js .hero h1 .ln>span,.k-js .hero__fade,.k-js .hero__glyph>span,.k-js .hero__w,.k-js .hero__mep::after,.k-js .hero h1,.k-js .mep__letter span{animation:none!important;transform:none!important;opacity:1!important;clip-path:none!important;transition:none!important}
+  .k-js .hero h1 .ln>span,.k-js .hero__fade,.k-js .hero__glyph>span,.k-js .hero__w,.k-js .hero__mep::after,.k-js .mep__letter span{animation:none!important;transform:none!important;opacity:1!important;clip-path:none!important;transition:none!important}
   .oncall i{animation:none}
   .room img{transition:none}
 }
@@ -871,7 +871,7 @@ html:lang(ar) .hero h1,html:lang(ar) .h2,html:lang(ar) .h3,html:lang(ar) .sos h2
 html:lang(ar) .hero h1{font-size:clamp(2rem,4.2vw,4rem);line-height:1.2}
 html:lang(ar) .hero__w b{font-family:"IBM Plex Sans Arabic",sans-serif;font-stretch:100%;letter-spacing:0;font-weight:700}
 html:lang(ar) .hero__w{text-align:left}
-html:lang(ar) .hero__glyph{font-family:var(--k-display)}
+html:lang(ar) .hero__glyph,html:lang(ar) .mep__letter{font-family:"Archivo",system-ui,sans-serif}
 html:lang(ar) .hero h1 .ln{padding-bottom:.12em}
 html:lang(ar) .hdr__lang{font-family:var(--k-body)}
 html:lang(ar) .mep__letter,html:lang(ar) .sos__num,html:lang(ar) .nums b,html:lang(ar) .hdr__tel b{font-family:var(--k-display)}
