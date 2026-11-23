@@ -10,7 +10,7 @@
 <link rel="icon" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..600;1,400..600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/office-1367.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/office-hero.webp" fetchpriority="high">
 <script>document.documentElement.classList.add('k-js')</script>
 <link rel="stylesheet" href="site.css">
 </head>
@@ -25,21 +25,27 @@
     <a href="about.html">Dr. Kris &amp; team</a>
     <a href="#find">Visit</a>
   </nav>
-  <a class="hd__tel" href="tel:+15852278290" aria-label="Call 585-227-8290"><span class="k-roll"><span data-text="585-227-8290">585-227-8290</span></span></a>
+  <a class="hd__tel" href="tel:+15852278290" aria-label="Call 585-227-8290"><span class="k-roll"><span data-text="585-227-8290"><span class="nw">585-227-8290</span></span></span></a>
   <a class="btn hd__book" data-k-magnetic="0.25" href="tel:+15852278290">Book a visit <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
+  <button type="button" class="hd__menu" aria-expanded="false" aria-controls="menu"><span>Menu</span><b aria-hidden="true"></b></button>
 </header>
+<div class="sheet" id="menu" hidden>
+  <nav aria-label="Menu"><a href="index.html" aria-current="page">Home</a><a href="services.html">Services</a><a href="about.html">Dr. Kris &amp; team</a><a href="#find">Visit us</a></nav>
+  <a class="btn" href="tel:+15852278290">Call <span class="nw"><span class="nw">585-227-8290</span></span> <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
+  <p>1367 Ridge Road West, Rochester, NY 14615<br>Mon&ndash;Wed 8&ndash;12:30 &amp; 2:30&ndash;6 &middot; Thu 3&ndash;7 &middot; Sat 9&ndash;11</p>
+</div>
 
 <main id="main">
 
-<!-- HERO: their own Google Maps photo of the office, 1367 Ridge Road West (uploaded by the practice) -->
+<!-- HERO: their own Google Maps photo of the office, 1367 Ridge Road West (uploaded by the practice), cropped to the left 1290px so a neighbour business's porch banner is out of frame -->
 <section class="hero" aria-label="Van Zeilen Family Chiropractic">
-  <div class="hero__img"><img src="img/office-1367.webp" alt="The practice at 1367 Ridge Road West: a white Victorian house with a red awning, the Van Zeilen Family Chiropractic sign out front and a ramp to the porch" width="2400" height="1350" fetchpriority="high"></div>
+  <div class="hero__img"><img src="img/office-hero.webp" alt="The Van Zeilen Family Chiropractic &amp; Wellness Center sign in the front yard of 1367 Ridge Road West, with the white Victorian house, red awning and porch steps behind it" width="1290" height="1350" fetchpriority="high"></div>
   <div class="hero__body">
     <div>
       <h1><span class="ln"><span style="--i:0">Van Zeilen</span></span><span class="ln ln--sm"><span style="--i:1"><i>Family Chiropractic</i></span></span></h1>
       <p class="hero__lead fade" style="--i:1">Dr. Kris Van Zeilen's practice in the white house on Ridge Road West, Rochester. We see newborns, athletes, grandparents and everyone in between, and we explain everything before care starts.</p>
       <div class="hero__acts fade" style="--i:2">
-        <a class="btn btn--light" data-k-magnetic="0.3" href="tel:+15852278290">Call 585-227-8290 <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn--light" data-k-magnetic="0.3" href="tel:+15852278290">Call <span class="nw">585-227-8290</span> <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
         <a class="k-link" href="#first-visit">What happens on your first visit</a>
       </div>
     </div>
@@ -55,16 +61,16 @@
 <section class="sec" aria-labelledby="intro-h">
   <div class="wrap intro">
     <div class="intro__pic">
-      <figure data-reveal="clip"><img src="img/dr-kris.webp" alt="Dr. Kris Van Zeilen, smiling" width="584" height="568" loading="lazy"></figure>
+      <figure data-reveal="clip"><img src="img/dr-kris.webp" alt="Dr. Kris Van Zeilen, smiling" width="500" height="500" loading="lazy"></figure>
       <p class="intro__pic-cap" data-reveal style="margin-top:12px;font-size:.95rem;color:var(--mute)"><b style="color:var(--ink);display:block;font-size:1.05rem">Dr. Kris Van Zeilen</b>Doctor of Chiropractic, owner</p>
     </div>
     <div class="intro__txt">
       <h2 id="intro-h" class="sr">How we work</h2>
-      <p class="say" data-reveal="lines">There's no <em>one size fits all</em> here. Every new patient starts with a full history, an exam by hand and, when it's right for you, x-rays taken in our office. We explain what we found before we adjust anything.</p>
+      <p class="say" data-reveal="lines">There's no one size fits all here. Every new patient starts with a full history, an exam by hand and, when it's right for you, <span class="nw">x-rays</span> taken in our office. We explain what we found before we adjust anything.</p>
       <dl class="intro__facts" data-reveal-stagger>
-        <div data-reveal><dt>Who we see</dt><dd>Families: newborns and kids, athletes, expecting mothers and seniors. A newborn needs a very different technique from a 20-year-old athlete, from light-force work to more traditional adjusting.</dd></div>
-        <div data-reveal><dt>In the office</dt><dd>Spinal x-rays and analysis, surface EMG and thermal scans, and a detailed Report of Findings.</dd></div>
-        <div data-reveal><dt>Dr. Kris</dt><dd>Rochester native, graduate of Life University in Marietta, GA. Team chiropractor for the Rochester Edge Tier 1 Girls Hockey organization.</dd></div>
+        <div data-reveal><dt>Who we see</dt><dd>Families: newborns and kids, athletes, expecting mothers and seniors. A newborn needs a very different technique from a <span class="nw">20-year-old</span> athlete, from <span class="nw">light-force</span> work to more traditional adjusting.</dd></div>
+        <div data-reveal><dt>In the office</dt><dd>Spinal <span class="nw">x-rays</span> and analysis, surface EMG and thermal scans, and a detailed Report of Findings.</dd></div>
+        <div data-reveal><dt>Dr. Kris</dt><dd>Rochester native, graduate of Life University in Marietta, GA. Team chiropractor for the Rochester Edge <span class="nw">Tier 1</span> Girls Hockey organization.</dd></div>
         <div data-reveal><dt>Programs</dt><dd>Preferred Chiropractic Doctor (PCD) Program participant, provider #7872.</dd></div>
       </dl>
     </div>
@@ -75,7 +81,7 @@
 <section class="sec visit1" id="first-visit" aria-labelledby="fv-h" data-story>
   <div class="wrap">
     <div class="visit1__head">
-      <h2 class="h2" id="fv-h" data-reveal="lines">Your first visit, <i>step by step</i></h2>
+      <h2 class="h2" id="fv-h" data-reveal="lines">Your first visit, step by step</h2>
       <p class="lede" data-reveal data-reveal-delay="150">Four parts, spread over two visits. Nothing is rushed, and nothing starts before you understand it.</p>
     </div>
     <div class="story">
@@ -97,13 +103,13 @@
         </article>
         <article class="step" data-step>
           <span class="step__n">3</span>
-          <h3>Spinal x-rays, taken here</h3>
-          <p>Depending on your age and situation. Most patients get three spinal x-rays at the start of care. We don't take them during pregnancy, on most children, or if you already have recent usable ones.</p>
+          <h3>Spinal <span class="nw">x-rays</span>, taken here</h3>
+          <p>Depending on your age and situation. Most patients get three spinal <span class="nw">x-rays</span> at the start of care. We don't take them during pregnancy, on most children, or if you already have recent usable ones.</p>
         </article>
         <article class="step" data-step>
           <span class="step__n">4</span>
           <h3>Your Report of Findings</h3>
-          <p>A few days later, a visit of up to an hour, set apart from regular patient hours. We go through your x-rays and scans, give you a care plan, and answer every question before your first adjustment.</p>
+          <p>A few days later, a visit of up to an hour, set apart from regular patient hours. We go through your <span class="nw">x-rays</span> and scans, give you a care plan, and answer every question before your first adjustment.</p>
         </article>
       </div>
     </div>
@@ -113,7 +119,7 @@
 <!-- CONDITIONS: their own list from the old home page -->
 <section class="sec cond" aria-labelledby="cond-h">
   <div class="wrap">
-    <h2 class="h2" id="cond-h" data-reveal="lines">Back and neck pain bring most people in. <i>We also see:</i></h2>
+    <h2 class="h2" id="cond-h" data-reveal="lines">Back and neck pain bring most people in. We also see:</h2>
     <ul class="cond__list" data-reveal-stagger="60">
       <li data-reveal>migraine headaches</li><li data-reveal>sciatica</li><li data-reveal>chronic pain</li><li data-reveal>shoulder and arm pain</li><li data-reveal>numbness</li><li data-reveal>dizziness and vertigo</li><li data-reveal>scoliosis</li><li data-reveal>fibromyalgia</li><li data-reveal>chronic allergies</li><li data-reveal>insomnia</li><li data-reveal>ear infections</li><li data-reveal>breech presentations</li>
     </ul>
@@ -127,11 +133,11 @@
 <!-- TEAM: real people, photos from their Doctors & Staff page -->
 <section class="sec" aria-labelledby="team-h">
   <div class="wrap">
-    <h2 class="h2" id="team-h" data-reveal="lines">Who you'll <i>see</i></h2>
+    <h2 class="h2" id="team-h" data-reveal="lines">Who you'll see</h2>
     <div class="team__grid" data-reveal-stagger="120">
       <article class="tm" data-reveal>
-        <figure><img src="img/dr-kris.webp" alt="Dr. Kris Van Zeilen" width="584" height="568" loading="lazy" style="object-position:50% 15%"></figure>
-        <h3>Dr. Kris Van Zeilen</h3><p class="role">Doctor of Chiropractic</p>
+        <div class="tm--type"><p class="big">Dr.<br>Kris</p><p>Your chiropractor. Every exam, <span class="nw">x-ray</span> read and adjustment is his.</p></div>
+        <div class="tm__mini"><img src="img/dr-kris.webp" alt="" width="500" height="500" loading="lazy"><div><h3>Dr. Kris Van Zeilen</h3><p class="role">Doctor of Chiropractic</p></div></div>
         <p>Rochester native, Life University graduate. Has treated professional, college and amateur athletes from the US, Canada, Europe, New Zealand, Australia and South Africa.</p>
       </article>
       <article class="tm" data-reveal>
@@ -153,7 +159,7 @@
 <section class="k-quotes" data-k-quotes data-k-quotes-auto="9000" aria-roledescription="carousel" aria-labelledby="rv-h">
   <div class="k-quotes__head">
     <div>
-      <h2 class="h2" id="rv-h" data-reveal="lines">What patients <i>say</i></h2>
+      <h2 class="h2" id="rv-h" data-reveal="lines">What patients say</h2>
       <p><b>5.0</b> from 46 reviews on <a href="https://maps.google.com/?cid=18379030516429645562" target="_blank" rel="noopener">Google</a></p>
     </div>
     <div class="k-quotes__btns"><button type="button" data-k-quotes-prev aria-label="Previous review">&larr;</button><button type="button" data-k-quotes-next aria-label="Next review">&rarr;</button></div>
@@ -171,25 +177,25 @@
 <section class="sec" style="background:var(--panel)" aria-labelledby="faq-h">
   <div class="wrap k-faq">
     <div class="k-faq__head">
-      <h2 class="h2" id="faq-h" data-reveal="lines">Before you <i>come in</i></h2>
-      <p data-reveal>Anything else, call us on <a href="tel:+15852278290">585-227-8290</a> during office hours.</p>
+      <h2 class="h2" id="faq-h" data-reveal="lines">Before you come in</h2>
+      <p data-reveal>Anything else, call us on <a href="tel:+15852278290"><span class="nw">585-227-8290</span></a> during office hours.</p>
     </div>
     <div class="k-faq__list" data-k-faq data-k-faq-single>
       <details class="k-faq__q">
         <summary>How do I book an appointment?<span class="k-faq__plus" aria-hidden="true"></span></summary>
-        <div class="k-faq__a"><p>Call 585-227-8290 during office hours, or email info@vzfchiro.com and tell us whether you'd like a call or an email back. Please don't put medical details in an email.</p></div>
+        <div class="k-faq__a"><p>Call <span class="nw">585-227-8290</span> during office hours, or email info@vzfchiro.com and tell us whether you'd like a call or an email back. Please don't put medical details in an email.</p></div>
       </details>
       <details class="k-faq__q">
         <summary>Can I fill in the forms before I come?<span class="k-faq__plus" aria-hidden="true"></span></summary>
         <div class="k-faq__a"><p>Yes. The New Patient Form, Informed Consent and Notice of Privacy are on our <a href="https://vzfchiro.com/page/npf.html" target="_blank" rel="noopener">forms page</a>. There's a separate pediatric form for children 13 and younger.</p></div>
       </details>
       <details class="k-faq__q">
-        <summary>Will I need x-rays?<span class="k-faq__plus" aria-hidden="true"></span></summary>
-        <div class="k-faq__a"><p>It depends on your age and situation. Most patients have three spinal x-rays at the start of care, taken here in the office. We don't take them during pregnancy, on most children, or if you have recent usable spinal x-rays.</p></div>
+        <summary>Will I need <span class="nw">x-rays</span>?<span class="k-faq__plus" aria-hidden="true"></span></summary>
+        <div class="k-faq__a"><p>It depends on your age and situation. Most patients have three spinal <span class="nw">x-rays</span> at the start of care, taken here in the office. We don't take them during pregnancy, on most children, or if you have recent usable spinal <span class="nw">x-rays</span>.</p></div>
       </details>
       <details class="k-faq__q">
         <summary>Do you see babies and children?<span class="k-faq__plus" aria-hidden="true"></span></summary>
-        <div class="k-faq__a"><p>Yes, from newborns up. Children get gentle, light-force techniques suited to their age. A newborn is treated very differently from a 20-year-old athlete.</p></div>
+        <div class="k-faq__a"><p>Yes, from newborns up. Children get gentle, <span class="nw">light-force</span> techniques suited to their age. A newborn is treated very differently from a <span class="nw">20-year-old</span> athlete.</p></div>
       </details>
       <details class="k-faq__q">
         <summary>How long is the Report of Findings visit?<span class="k-faq__plus" aria-hidden="true"></span></summary>
@@ -203,7 +209,7 @@
 <!-- VISIT: hours from their site, live badge in Rochester time -->
 <section class="find" id="find" aria-labelledby="find-h" data-hours='{"1":[[8,12.5],[14.5,18]],"2":[[8,12.5],[14.5,18]],"3":[[8,12.5],[14.5,18]],"4":[[15,19]],"6":[[9,11]]}'>
   <div class="find__info">
-    <h2 class="h2" id="find-h" data-reveal="lines">Find <i>us</i></h2>
+    <h2 class="h2" id="find-h" data-reveal="lines">Find us</h2>
     <span class="badge" data-badge hidden><i></i><span>Open now</span></span>
     <p class="find__addr">1367 Ridge Road West, Rochester, NY 14615</p>
     <p class="find__land">The white Victorian house with the red awning and our green sign out front. A ramp runs up to the porch on the right.</p>
@@ -219,10 +225,12 @@
     </table>
     <div class="find__acts">
       <a class="btn" data-k-magnetic="0.25" href="https://www.google.com/maps/dir/?api=1&amp;destination=1367+Ridge+Road+West+Rochester+NY+14615" target="_blank" rel="noopener">Directions <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
-      <a class="btn btn--line" href="tel:+15852278290">Call 585-227-8290</a>
+      <a class="btn btn--line" href="tel:+15852278290">Call <span class="nw">585-227-8290</span></a>
     </div>
   </div>
   <div class="find__map" data-map data-src="https://www.google.com/maps?q=1367+Ridge+Road+West,+Rochester,+NY+14615&amp;z=15&amp;output=embed">
+    <p class="num" aria-hidden="true">1367</p>
+    <p class="st">Ridge Road West &middot; between Greece and Rochester</p>
     <button type="button">Show the map</button>
   </div>
 </section>
@@ -230,7 +238,7 @@
 </main>
 
 <footer class="ft">
-  <p class="ft__big"><a href="tel:+15852278290">585-227-8290</a><br><i>Be well. Live well.</i></p>
+  <p class="ft__big"><a href="tel:+15852278290"><span class="nw">585-227-8290</span></a><br><i>Be well. Live well.</i></p>
   <div class="ft__grid">
     <div>
       <h3>Van Zeilen Family Chiropractic &amp; Wellness Center</h3>

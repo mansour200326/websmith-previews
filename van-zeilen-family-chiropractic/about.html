@@ -24,61 +24,72 @@
     <a href="about.html" aria-current="page">Dr. Kris &amp; team</a>
     <a href="index.html#find">Visit</a>
   </nav>
-  <a class="hd__tel" href="tel:+15852278290" aria-label="Call 585-227-8290"><span class="k-roll"><span data-text="585-227-8290">585-227-8290</span></span></a>
+  <a class="hd__tel" href="tel:+15852278290" aria-label="Call 585-227-8290"><span class="k-roll"><span data-text="585-227-8290"><span class="nw">585-227-8290</span></span></span></a>
   <a class="btn hd__book" data-k-magnetic="0.25" href="tel:+15852278290">Book a visit <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
+  <button type="button" class="hd__menu" aria-expanded="false" aria-controls="menu"><span>Menu</span><b aria-hidden="true"></b></button>
 </header>
+<div class="sheet" id="menu" hidden>
+  <nav aria-label="Menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html" aria-current="page">Dr. Kris &amp; team</a><a href="index.html#find">Visit us</a></nav>
+  <a class="btn" href="tel:+15852278290">Call <span class="nw"><span class="nw">585-227-8290</span></span> <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
+  <p>1367 Ridge Road West, Rochester, NY 14615<br>Mon&ndash;Wed 8&ndash;12:30 &amp; 2:30&ndash;6 &middot; Thu 3&ndash;7 &middot; Sat 9&ndash;11</p>
+</div>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <div class="wrap">
-    <h1 id="ph-h"><span class="ln"><span style="--i:0">Dr. Kris</span></span><span class="ln"><span style="--i:1"><i>&amp; the team</i></span></span></h1>
+<section class="ph ph--about" aria-labelledby="ph-h">
+  <div class="wrap ph__grid">
+    <div>
+    <h1 id="ph-h"><span class="ln"><span style="--i:0">Dr. Kris</span></span><span class="ln"><span style="--i:1">&amp; the team</span></span></h1>
     <p class="lede" data-reveal data-reveal-delay="300">Our staff has been helping people live pain free since this clinic opened in Greece, NY. Three people, one house on Ridge Road West.</p>
+    </div>
+    <nav class="ph__idx" aria-label="People on this page" data-reveal data-reveal-delay="400">
+      <a href="#kris"><span>01</span>Dr. Kris Van Zeilen<small>Chiropractor</small></a><a href="#kara"><span>02</span>Kara<small>Office manager</small></a><a href="#kaycee"><span>03</span>Kaycee<small>Chiropractic assistant</small></a>
+    </nav>
   </div>
 </section>
 
 <section class="sec" style="padding-top:0" aria-label="Our team">
   <div class="wrap">
-    <article class="bio">
-      <figure data-reveal="clip"><img src="img/dr-kris.webp" alt="Dr. Kris Van Zeilen" width="584" height="568" style="object-position:50% 15%"></figure>
+    <article class="bio bio--kris" id="kris">
+      <figure data-reveal="clip"><img src="img/dr-kris.webp" alt="Dr. Kris Van Zeilen" width="500" height="500"></figure>
       <div>
         <h2 data-reveal="lines">Dr. Kris Van Zeilen</h2>
         <p class="role">Doctor of Chiropractic, owner</p>
         <p data-reveal>Dr. Kris is a Rochester native and a graduate of Life University in Marietta, GA. His treatment plans begin with a correct diagnosis and treat the underlying problem, not just the pain, so the person can get back to their best health.</p>
-        <p data-reveal>He takes the time to learn as much as possible about each patient through a complete history, a thorough exam and x-rays, and honest education about the condition. A newborn needs a different technique from a 20-year-old athlete, and moving between light-force and more traditional adjusting is a skill built over years of continuing education.</p>
+        <p data-reveal>He takes the time to learn as much as possible about each patient through a complete history, a thorough exam and <span class="nw">x-rays</span>, and honest education about the condition. A newborn needs a different technique from a <span class="nw">20-year-old</span> athlete, and moving between <span class="nw">light-force</span> and more traditional adjusting is a skill built over years of continuing education.</p>
         <dl data-reveal>
-          <div><dt>Sports</dt><dd>Team chiropractor for the Rochester Edge Tier 1 Girls Hockey organization. Has treated professional, college and amateur athletes from the US, Canada, Europe, New Zealand, Australia and South Africa.</dd></div>
+          <div><dt>Sports</dt><dd>Team chiropractor for the Rochester Edge <span class="nw">Tier 1</span> Girls Hockey organization. Has treated professional, college and amateur athletes from the US, Canada, Europe, New Zealand, Australia and South Africa.</dd></div>
           <div><dt>Rugby</dt><dd>Member of the 2000 USA Rugby Super League Champions, the Life University Running Eagles. Also played for the All Army Rugby Team and the Combined Services All Star Team. Now on a long break; his wife calls it "retirement".</dd></div>
           <div><dt>Family</dt><dd>Married to Robyn, with four children.</dd></div>
         </dl>
       </div>
     </article>
-    <article class="bio">
+    <article class="bio" id="kara">
       <figure data-reveal="clip"><img src="img/kara.webp" alt="Kara, office manager" width="820" height="1600" loading="lazy" style="object-position:50% 20%"></figure>
       <div>
         <h2 data-reveal="lines">Kara</h2>
         <p class="role">Office Manager</p>
         <p data-reveal>Kara earned her bachelor's degree in athletic training and kinesiology from the College at Brockport in 2014, then her physical therapist assistant degree from Genesee Community College in 2016, working as a certified athletic trainer along the way.</p>
-        <p data-reveal>She has worked in outpatient, sub-acute and long-term care, and brings case management and billing experience to the front office. Outside work: running, weightlifting, her husband, son and two dogs.</p>
+        <p data-reveal>She has worked in outpatient, <span class="nw">sub-acute</span> and <span class="nw">long-term</span> care, and brings case management and billing experience to the front office. Outside work: running, weightlifting, her husband, son and two dogs.</p>
       </div>
     </article>
-    <article class="bio">
+    <article class="bio" id="kaycee">
       <figure data-reveal="clip"><img src="img/kaycee.webp" alt="Kaycee, chiropractic assistant, in the office" width="1200" height="1600" loading="lazy" style="object-position:50% 25%"></figure>
       <div>
         <h2 data-reveal="lines">Kaycee</h2>
         <p class="role">Chiropractic Assistant</p>
-        <p data-reveal>Kaycee is an expert at first impressions. Over 8 years of medical front-desk experience and 3 years as a Licensed Massage Therapist, and she goes out of her way to build a relationship with everyone who walks in.</p>
+        <p data-reveal>Kaycee is an expert at first impressions. Over 8 years of medical <span class="nw">front-desk</span> experience and 3 years as a Licensed Massage Therapist, and she goes out of her way to build a relationship with everyone who walks in.</p>
         <p data-reveal>In her free time: road trips with her husband, her golden retriever, the garden, and something good in the kitchen.</p>
       </div>
     </article>
   </div>
 </section>
 
-<section class="sec cond" aria-labelledby="cta-h">
+<section class="sec band-pale" aria-labelledby="cta-h">
   <div class="wrap">
-    <h2 class="h2" id="cta-h" data-reveal="lines">Come and <i>meet us</i></h2>
+    <h2 class="h2" id="cta-h" data-reveal="lines">Come and meet us</h2>
     <div class="cond__foot" data-reveal>
       <p>1367 Ridge Road West, Rochester, NY 14615. Mon&ndash;Wed 8&ndash;12:30 and 2:30&ndash;6, Thu 3&ndash;7, Sat 9&ndash;11.</p>
-      <a class="btn btn--light" data-k-magnetic="0.3" href="tel:+15852278290">Call 585-227-8290 <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn--light" data-k-magnetic="0.3" href="tel:+15852278290">Call <span class="nw">585-227-8290</span> <span class="k-arrow" aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -86,7 +97,7 @@
 
 
 <footer class="ft">
-  <p class="ft__big"><a href="tel:+15852278290">585-227-8290</a><br><i>Be well. Live well.</i></p>
+  <p class="ft__big"><a href="tel:+15852278290"><span class="nw">585-227-8290</span></a><br><i>Be well. Live well.</i></p>
   <div class="ft__grid">
     <div>
       <h3>Van Zeilen Family Chiropractic &amp; Wellness Center</h3>
