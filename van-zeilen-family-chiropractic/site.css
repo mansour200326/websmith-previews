@@ -50,7 +50,7 @@ a{color:inherit}
 @media (max-width:600px){.hd__logo span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 
 /* buttons: square, solid, arrow (no pills) */
-.btn{position:relative;display:inline-flex;align-items:center;gap:.8em;padding:16px 22px;min-height:48px;font:700 1rem/1 var(--sans);text-decoration:none;color:#fff;background:var(--green);border:0;border-radius:2px;overflow:hidden;isolation:isolate;cursor:pointer}
+.btn{position:relative;display:inline-flex;white-space:nowrap;align-items:center;gap:.8em;padding:16px 22px;min-height:48px;font:700 1rem/1 var(--sans);text-decoration:none;color:#fff;background:var(--green);border:0;border-radius:2px;overflow:hidden;isolation:isolate;cursor:pointer}
 .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transform:translateY(101%);transition:transform .55s var(--ease)}
 .btn:hover::before,.btn:focus-visible::before{transform:none}
 .btn--light{background:#fff;color:var(--ink)}
@@ -65,7 +65,7 @@ a{color:inherit}
 .hero__img{position:absolute;inset:0}
 .hero__img{overflow:hidden}
 .hero__img img{width:100%;height:100%;object-fit:cover;object-position:100% 30%;filter:brightness(1.06) contrast(1.06) saturate(1.12)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,15,.38) 0%,rgba(12,24,15,0) 16%,rgba(12,24,15,0) 34%,rgba(12,24,15,.55) 52%,rgba(12,24,15,.8) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,15,.62) 0%,rgba(12,24,15,.18) 11%,rgba(12,24,15,0) 18%,rgba(12,24,15,0) 34%,rgba(12,24,15,.55) 52%,rgba(12,24,15,.8) 100%)}
 .hero__body{position:relative;z-index:2;width:100%;padding:0 var(--pad) clamp(28px,5vw,64px);display:grid;gap:28px}
 .hero h1{font:500 clamp(3.4rem,12.5vw,11.5rem)/.86 var(--serif);letter-spacing:-.035em}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
@@ -82,13 +82,16 @@ a{color:inherit}
 .hero__card .stars{color:var(--green);letter-spacing:2px}
 .hero__card a{font-weight:700;color:var(--green);text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px;margin:-12px 0}
 @media (max-width:899px){.hero__card{display:none}}
+.hero__where{display:none;font-size:1rem;line-height:1.55;color:var(--mute);border-left:2px solid var(--green);padding-left:16px}
+.hero__where b{color:var(--ink);font-weight:800}
 @media (min-width:900px){
   /* desktop: type on white left, the house on the right (no overlay, nothing over the photo but the review card) */
   .hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:stretch;background:var(--bg);color:var(--ink);padding-top:76px}
   .hero::after{display:none}
   .hero__img{position:relative;inset:auto;grid-column:2;grid-row:1;min-height:calc(100svh - 76px)}
   .hero__img img{position:absolute;inset:0;object-position:40% 70%}
-  .hero__body{position:static;grid-column:1;grid-row:1;align-self:end;padding:0 clamp(32px,4vw,64px) clamp(40px,6vh,72px) var(--pad);display:block}
+  .hero__body{position:static;grid-column:1;grid-row:1;align-self:stretch;padding:clamp(36px,6vh,64px) clamp(32px,4vw,64px) clamp(40px,6vh,72px) var(--pad);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+  .hero__where{display:block!important}
   .hero h1{font-size:clamp(3.4rem,7.4vw,9.5rem)}
   .hero h1,.hero__lead{text-shadow:none}
   .hero__lead{color:var(--mute)}
@@ -97,8 +100,8 @@ a{color:inherit}
   .hero__card{position:absolute;z-index:3;right:var(--pad);bottom:clamp(28px,5vh,56px)}
   .hd{background:rgba(255,255,255,.97);color:var(--ink);box-shadow:0 1px 0 var(--line)}
   .hd:not(.is-solid):not(.hd--light) .btn{background:var(--green);color:#fff}
-  .k-js .hero__img{animation:wipe 1.4s var(--ease) both .15s}
 }
+.k-js .hero__img{animation:wipe 1.4s var(--ease) both .15s}
 @keyframes wipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
 .k-js .hero__img img{animation:kb 18s ease-out forwards}
 @keyframes kb{from{transform:scale(1.14) translate3d(-1.5%,1%,0)}to{transform:scale(1.02)}}
@@ -365,8 +368,8 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 
 /* team: Dr. Kris as a type card (his photo is small, shown once in the intro) */
 .tm--type{background:var(--green);color:#fff;padding:clamp(26px,3vw,36px);display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:4/5;border-radius:2px}
-.tm--type .big{font:500 clamp(3rem,5.4vw,4.8rem)/.9 var(--serif);letter-spacing:-.03em}
-.tm--type .big+p{margin-top:16px;color:#e3ebe2;font-size:1rem}
+.tm .tm--type .big{font:500 clamp(3rem,5.4vw,4.8rem)/.9 var(--serif);letter-spacing:-.03em;color:#fff;margin:0}
+.tm .tm--type .big+p{margin-top:16px;color:#e3ebe2;font-size:1.05rem;max-width:20em}
 .tm__mini{display:flex;align-items:center;gap:14px;margin-top:18px}
 .tm__mini img{width:64px;height:64px;border-radius:50%;object-fit:cover}
 .tm__mini h3{margin-top:0}
@@ -400,3 +403,4 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .sheet nav a:nth-child(2){animation-delay:.05s}.sheet nav a:nth-child(3){animation-delay:.1s}.sheet nav a:nth-child(4){animation-delay:.15s}
 @media (min-width:980px){.k-js .hd__menu,.sheet{display:none!important}}
 html.is-locked{overflow:hidden}
+@media (max-width:899px){.ph--about+.sec .bio:first-child{border-top:0;padding-top:12px}}
