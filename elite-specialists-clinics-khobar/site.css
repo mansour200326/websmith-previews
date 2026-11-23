@@ -426,3 +426,17 @@ html:lang(ar) .hero__h{font-size:clamp(2.3rem,5.2vw,5rem)}
 html:lang(en) .dr__alt,html:lang(en) .ft__alt,html:lang(en) .hd__name small{text-align:left}
 html:lang(ar) .dr__alt,html:lang(ar) .ft__alt,html:lang(ar) .hd__name small{text-align:right}
 .ft a,.svc__drs a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
+/* r2 fixes */
+.hero__photo img{filter:saturate(.9) contrast(1.05) brightness(1.03)}
+@media (max-width:979px){
+  .hero{gap:22px;padding-top:14px}
+  .hero__media{order:-1}
+  .hero__photo{aspect-ratio:4/2.9}
+  .hero__badge{width:112px;inset-inline-start:auto;inset-inline-end:10px;bottom:-14px;box-shadow:0 0 0 5px #fff;padding:8px}
+  .hero__badge b{font-size:1.25rem}.hero__badge small{display:none}
+  .hero__lead{margin-top:18px;font-size:1.02rem}
+  .hero__acts{margin-top:20px;gap:10px 20px}
+}
+html:lang(ar) .hero__h{font-size:clamp(2.1rem,4.3vw,4.4rem)}
+html:lang(ar) .hero__in1,html:lang(ar) .hero__in2,html:lang(ar) .hero__in3{padding-inline-start:0}
+@media (min-width:980px){html:lang(ar) .hero__ln{white-space:nowrap}}
