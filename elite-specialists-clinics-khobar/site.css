@@ -224,7 +224,7 @@ html:lang(ar) .hd__name small{unicode-bidi:isolate;font:500 .78rem/1.3 "Albert S
 .hero{display:grid;grid-template-columns:1fr;gap:36px;padding:clamp(28px,5vw,72px) var(--pad) clamp(56px,8vw,110px);align-items:center}
 .hero__h{font:400 clamp(3rem,6.3vw,7rem)/.92 var(--k-display);letter-spacing:-.02em}
 .hero__ln{white-space:nowrap}
-.hero__h em{font-style:italic;color:var(--teal-ink)}
+.hero__h em{font-style:italic}
 .hero__in1{padding-inline-start:.9em}.hero__in2{padding-inline-start:.35em}.hero__in3{padding-inline-start:1.6em}
 html:lang(ar) .hero__h{font-size:clamp(2.5rem,6vw,5.6rem);font-weight:600;line-height:1.3!important}
 html:lang(ar) .hero__h em{font-style:normal}
@@ -425,3 +425,4 @@ html:lang(ar) .hero__h{font-size:clamp(2.3rem,5.2vw,5rem)}
 @media (max-width:420px){.hero__h{font-size:clamp(2.6rem,12.4vw,3.4rem)}}
 html:lang(en) .dr__alt,html:lang(en) .ft__alt,html:lang(en) .hd__name small{text-align:left}
 html:lang(ar) .dr__alt,html:lang(ar) .ft__alt,html:lang(ar) .hd__name small{text-align:right}
+.ft a,.svc__drs a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}

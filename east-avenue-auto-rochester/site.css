@@ -468,3 +468,12 @@ a{color:inherit}
 
 .cap{font-family:var(--mono);font-size:.8rem;color:var(--k-mute);padding:10px 0 24px}
 @media (max-width:899px){.k-kb__media::after{background:linear-gradient(180deg,rgba(6,12,34,.05) 0,rgba(6,12,34,0) 25%,rgba(6,12,34,.55) 50%,rgba(6,12,34,.92) 72%)}}
+/* r2: fleet cards stay landscape and within the photos' honest size */
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex-basis:min(80vw,400px)}
+.k-drag__card:nth-child(3n+2) .k-drag__fig{aspect-ratio:3/2}
+/* r2: photo-less services use the full width: lead left, detail right */
+@media (min-width:1100px){
+  .item__body:not(.has-fig)>div{display:grid;grid-template-columns:1fr 1.15fr;column-gap:56px;align-items:start}
+  .item__body:not(.has-fig)>div>*{grid-column:2}
+  .item__body:not(.has-fig)>div>.big{grid-column:1;grid-row:1/span 4;font-size:clamp(1.3rem,1.9vw,1.7rem);line-height:1.3}
+}

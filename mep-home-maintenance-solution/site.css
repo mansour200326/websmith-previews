@@ -874,3 +874,4 @@ html:lang(ar) a.hdr__lang[lang=en]{display:grid!important}
 html:lang(ar) .ftr a[lang=en]{display:inline-block!important}
 @media (max-width:979px){.hero__photo{aspect-ratio:5/4}.hero__photo img{object-position:70% 60%}}
 @media (max-width:860px){.ftr ul li a{padding-block:11px;min-height:44px}}
+@media (max-width:600px){.areas__list{columns:2;column-gap:18px}.areas__list li{grid-template-columns:2.2em 1fr;font-size:.95rem}}
