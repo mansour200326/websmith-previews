@@ -51,8 +51,16 @@
       <h1 data-reveal="lines">Services</h1>
       <p class="intro" data-reveal data-reveal-delay="120">Everything a home or small office needs to keep running, from a dripping tap to a full repaint. Tap a service for what's included, then call or send us a WhatsApp. No charge for the inspection.</p>
     </div>
-    <!-- Photo from mep-solution.com (slider), 4x upscaled -->
-    <figure class="phead__img" data-reveal="clip"><img src="img/kitchen.webp" width="2300" height="1220" alt="A white kitchen with butcher-block counters and glass-front cabinets" style="object-position:50% 55%"></figure>
+    <div class="phead__split">
+      <!-- Photo from mep-solution.com (slider), 4x upscaled; shown at 7/12 columns, 4:3, near its native size -->
+      <figure class="phead__img" data-reveal="clip"><img src="img/kitchen.webp" width="2300" height="1220" alt="A white kitchen with butcher-block counters and glass-front cabinets" style="object-position:42% 55%"></figure>
+      <nav class="pidx" aria-label="Jump to a trade" data-reveal-stagger>
+        <a href="#svc-ac" data-reveal><span aria-hidden="true">M</span><span><b>Mechanical</b><small>AC, chillers, ducts, thermostats</small></span><span class="k-arrow" aria-hidden="true">↓</span></a>
+        <a href="#svc-el" data-reveal><span aria-hidden="true">E</span><span><b>Electrical</b><small>Fuses, boards, lights, sockets</small></span><span class="k-arrow" aria-hidden="true">↓</span></a>
+        <a href="#svc-pl" data-reveal><span aria-hidden="true">P</span><span><b>Plumbing</b><small>Leaks, blockages, pumps, water tanks</small></span><span class="k-arrow" aria-hidden="true">↓</span></a>
+        <a href="#svc-plus" data-reveal><span aria-hidden="true">+</span><span><b>Everything else</b><small>Carpentry, paint, tiles, villa extras</small></span><span class="k-arrow" aria-hidden="true">↓</span></a>
+      </nav>
+    </div>
   </div>
 </section>
 
@@ -60,19 +68,19 @@
 <section class="k-acc" data-k-acc aria-labelledby="svc-h">
   <h2 id="svc-h" class="sr">All services</h2>
   <div class="k-acc__list">
-    <details class="k-acc__row" data-img="img/amb-ac.webp" open>
+    <details id="svc-ac" class="k-acc__row" data-img="img/amb-ac.webp" open>
       <summary><span class="k-acc__n">01</span><span class="k-acc__t">AC service and repair<small>Split, window, ducted and packaged units, chillers</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
       <div class="k-acc__body"><div><p>AC not cooling, blowing hot air, the outdoor unit not running, water dripping from the indoor unit: we find the fault and fix it. Servicing every year stops most of these before summer.</p><ul><li>AC service and gas top-up</li><li>Cooling coil cleaning</li><li>Duct cleaning</li><li>Filters replaced</li><li>Nest thermostat installation</li><li>HVAC and chiller maintenance</li></ul><p style="margin-top:16px"><a class="tlink" href="https://wa.me/971566486239?text=Hi%20MEP%2C%20my%20AC%20" target="_blank" rel="noopener"><span class="k-link k-link--under">WhatsApp us about your AC</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div><img src="img/amb-ac.webp" alt="Close-up of a wall-mounted split AC unit" loading="lazy"></div>
     </details>
-    <details class="k-acc__row" data-img="img/living.webp">
+    <details id="svc-el" class="k-acc__row" data-img="img/living.webp">
       <summary><span class="k-acc__n">02</span><span class="k-acc__t">Electrical<small>Faults, fittings and distribution boards</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
       <div class="k-acc__body"><div><p>From a bulb that won't come on to a board that keeps tripping. We start with simple fault finding.</p><ul><li>Fuses and short circuits</li><li>Distribution board problems</li><li>Light fittings, bulbs and ballasts</li><li>Sockets, switches and dimmers</li><li>Extractor fans</li><li>Fixtures moved or added</li></ul><p style="margin-top:16px"><a class="tlink" href="https://wa.me/971566486239?text=Hi%20MEP%2C%20I%20have%20an%20electrical%20problem%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">WhatsApp an electrician</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div><img src="img/living.webp" alt="A bright living room with tall windows" loading="lazy"></div>
     </details>
-    <details class="k-acc__row" data-img="img/amb-copper.webp">
+    <details id="svc-pl" class="k-acc__row" data-img="img/amb-copper.webp">
       <summary><span class="k-acc__n">03</span><span class="k-acc__t">Plumbing and sanitary<small>Leaks, blockages, pressure, water tanks</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
       <div class="k-acc__body"><div><p>Leaks in kitchens and bathrooms, blocked toilets, low or no water pressure, and the pumps and tanks that feed the house.</p><ul><li>Blocked toilets, basins and sinks</li><li>Dripping taps and tap washers</li><li>Leaking pipes and isolation valves</li><li>Toilet flush mechanisms</li><li>Water pump maintenance</li><li>Water tank cleaning</li></ul><p style="margin-top:16px"><a class="tlink" href="https://wa.me/971566486239?text=Hi%20MEP%2C%20I%20need%20a%20plumber%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">WhatsApp a plumber</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div><img src="img/amb-copper.webp" alt="Copper water pipes inside an opened wall" loading="lazy"></div>
     </details>
-    <details class="k-acc__row" data-img="img/kitchen.webp">
+    <details id="svc-plus" class="k-acc__row" data-img="img/kitchen.webp">
       <summary><span class="k-acc__n">04</span><span class="k-acc__t">Carpentry and gypsum<small>Doors, cabinets, partitions, ceilings</small></span><span class="k-acc__plus" aria-hidden="true"></span></summary>
       <div class="k-acc__body"><div><p>Woodwork and gypsum around the house, from a sticking door to a new gypsum ceiling.</p><ul><li>Hang, trim and adjust doors</li><li>Handles, hinges and locks</li><li>Kitchen units and cabinets</li><li>Shelves, blinds and shutters</li><li>Gypsum ceilings and partition walls</li><li>Laminate flooring</li></ul><p style="margin-top:16px"><a class="tlink" href="https://wa.me/971566486239?text=Hi%20MEP%2C%20I%20need%20a%20carpenter%3A%20" target="_blank" rel="noopener"><span class="k-link k-link--under">WhatsApp us about woodwork</span> <span class="k-arrow" aria-hidden="true">→</span></a></p></div><img src="img/kitchen.webp" alt="Kitchen cabinets with glass-front doors" loading="lazy"></div>
     </details>
