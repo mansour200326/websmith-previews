@@ -75,8 +75,8 @@ bdi{unicode-bidi:isolate}
 .btn svg{width:20px;height:20px;flex:none}
 .tlink{color:#fff;text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:.3em;min-height:44px}
 /* r5: tall 4:5 office card from the h1 top down into the name (the name sits over its lower edge) */
-.hero__card{grid-column:3 / span 2;justify-self:end;align-self:start;position:relative;z-index:1;display:flex;flex-direction:column-reverse;padding-inline-start:clamp(14px,1.6vw,24px);margin-bottom:calc(-.42 * min(13.6vw,13rem))}
-.hero__ph{overflow:hidden;aspect-ratio:4/5;background:var(--navy-2);height:clamp(420px,calc(100svh - 76px - 13.5rem),700px);width:auto;max-width:100%}
+.hero__card{grid-column:3 / span 2;justify-self:end;align-self:start;position:relative;z-index:1;display:flex;flex-direction:column-reverse;padding-inline-start:clamp(14px,1.6vw,24px);margin-bottom:calc(-.6 * min(13.6vw,13rem))}
+.hero__ph{overflow:hidden;aspect-ratio:4/5;background:var(--navy-2);height:clamp(420px,calc(100svh - 76px - 12rem),820px);width:auto;max-width:100%}
 .hero__ph img{width:100%;height:100%;object-fit:cover;object-position:30% 50%;filter:contrast(1.06) saturate(.9)}
 .hero__cap{font-size:.9rem;color:var(--on-navy);margin:0 0 12px;line-height:1.45;max-width:30em}
 .hero__cap a{color:#fff}

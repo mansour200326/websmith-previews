@@ -920,3 +920,7 @@ html:lang(ar) .ftr a[lang=en]{display:inline-block!important}
 .k-js .ahead__yr>span{animation:hero-up 1.2s var(--k-ease) .1s backwards}
 @media (prefers-reduced-motion:reduce){.k-js .ahead__yr>span{animation:none!important;transform:none!important}.hero__mep.is-fill .hero__glyph>span{transition:none}}
 .k-acc__row[id]{scroll-margin-top:96px}
+.hero__w i{font-style:normal}
+.hero__w i+i::before{content:", "}
+html:lang(ar) .hero__w i+i::before{content:"، "}
+@media (max-width:599px){.hero__w i{display:block}.hero__w i+i::before,html:lang(ar) .hero__w i+i::before{content:none}}
