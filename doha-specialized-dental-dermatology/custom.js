@@ -16,3 +16,10 @@
   });
   list.addEventListener('pointerleave',function(){peek.classList.remove('is-on')});
 })();
+/* lazy images inside fully clipped reveals don't always start loading in Chrome: load them when near */
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('[data-reveal=clip] img[loading=lazy]'));if(!imgs.length)return;
+  if(!('IntersectionObserver' in window)){imgs.forEach(function(i){i.loading='eager'});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=e.target.__img;i.loading='eager';if(!i.complete){var s=i.src;i.src='';i.src=s}io.unobserve(e.target)}})},{rootMargin:'900px 0px'});
+  imgs.forEach(function(i){var w=i.closest('[data-reveal=clip]').parentElement;w.__img=i;io.observe(w)});
+})();

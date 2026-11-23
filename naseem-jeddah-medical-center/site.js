@@ -35,7 +35,8 @@
     document.querySelectorAll('[data-sort-duty]').forEach(function(track){
       var cards=[].slice.call(track.children);
       cards.sort(function(a,b){return (a.dataset.rank||2)-(b.dataset.rank||2)||(a.dataset.order-b.dataset.order)});
-      cards.forEach(function(c){track.appendChild(c)});
+      var cur=[].slice.call(track.children);
+      if(cards.some(function(c,i){return c!==cur[i]})){track.style.scrollSnapType='none';cards.forEach(function(c){track.appendChild(c)});track.scrollLeft=0;requestAnimationFrame(function(){track.scrollLeft=0;track.style.scrollSnapType=''})}
       var on=cards.filter(function(c){return c.dataset.rank==='0'}).length,out=document.querySelector('[data-duty-count]');
       if(out)out.textContent=AR?(on+' من أطبائنا في العيادة الآن'):(on+(on===1?' doctor':' doctors')+' in clinic right now');
     });

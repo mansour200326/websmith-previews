@@ -84,8 +84,8 @@ bdi,.num{font-variant-numeric:tabular-nums}
 
 .lineup{display:flex;margin-top:clamp(18px,3vw,36px);padding-inline:calc(var(--pad) - 1.5%);gap:0;scrollbar-width:none}
 .lineup::-webkit-scrollbar{display:none}
-.lineup li{flex:1 1 0;min-width:0;margin-inline:-1.2%;position:relative}
-.lineup li:nth-child(odd){z-index:1}
+.lineup>div{flex:1 1 0;min-width:0;margin-inline:-1.2%;position:relative}
+.lineup>div:nth-child(odd){z-index:1}
 .lineup figure{display:block}
 .lineup .ph{aspect-ratio:3/3.9;overflow:hidden;position:relative}
 .lineup img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;mix-blend-mode:multiply;transform:scale(1.12);transform-origin:50% 30%}
@@ -102,7 +102,7 @@ bdi,.num{font-variant-numeric:tabular-nums}
 .stars{color:#c88a00;letter-spacing:1px}
 @media (max-width:899px){
   .lineup{overflow-x:auto;scroll-snap-type:x mandatory;padding-inline:var(--pad);gap:0}
-  .lineup li{flex:0 0 40%;margin-inline:0 -3%;scroll-snap-align:start}
+  .lineup>div{flex:0 0 40%;margin-inline:0 -3%;scroll-snap-align:start}
   .lineup figcaption{font-size:.8rem}
 }
 
@@ -251,8 +251,8 @@ bdi,.num{font-variant-numeric:tabular-nums}
 @media (min-width:900px){.ft__grid{grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr))}}
 .ft__logo img{width:260px}
 .ft__ar{font:500 1rem "IBM Plex Sans Arabic",sans-serif;color:var(--k-mute);margin-top:14px}
-.ft h4{font:700 .95rem var(--k-body);margin-bottom:12px}
-.ft li a,.ft li span{display:inline-block;padding-block:6px;text-decoration:none;color:#3a4555;font-size:.95rem}
+.ft .ft__h{font:700 .95rem var(--k-body);margin-bottom:12px}
+.ft li a,.ft li span{display:inline-block;padding-block:10px;text-decoration:none;color:#3a4555;font-size:.95rem}
 .ft li a:hover{color:var(--navy)}
 .ft__base{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;margin-top:56px;padding-top:20px;border-top:1px solid var(--k-line);font-size:.84rem;color:var(--k-mute)}
 
@@ -341,3 +341,7 @@ html:lang(ar) .hero__lede,html:lang(ar) .lead{line-height:1.85}
   .hero__lede{font-size:1rem}
   .hd__nav .lg{display:none}
 }
+.hd__tel .k-roll,.k-stats__num,.pr{direction:ltr;unicode-bidi:isolate}
+
+.sr:focus{position:fixed;top:8px;left:8px;width:auto;height:auto;clip:auto;z-index:100;background:#fff;padding:10px 14px;outline:2px solid var(--navy)}
+.hero__foot a,.docs__foot a{min-height:44px;display:inline-flex;align-items:center}

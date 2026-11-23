@@ -242,7 +242,6 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 html:lang(ar) body{font-size:17px;line-height:1.8}
 html:lang(ar) h1,html:lang(ar) h2,html:lang(ar) h3{letter-spacing:0!important;line-height:1.25!important;font-weight:700}
 /* B) in-page swap */
-html:lang(en) [lang=ar]:not(html):not(.k-lang *),html:lang(ar) [lang=en]:not(html):not(.k-lang *){display:none!important}
 .k-swap-fade body{animation:k-langfade .45s ease}
 @keyframes k-langfade{from{opacity:.2}}
 /* toggle */
@@ -339,6 +338,7 @@ a{color:inherit}
 }
 @media (max-width:899px){
   .hero .k-split__photo{aspect-ratio:4/4.4}
+  .hero .k-split__photo img{object-position:50% 62%}
   .hero .k-split__meta{grid-template-columns:1fr 1fr;column-gap:20px}
 }
 
@@ -348,20 +348,20 @@ a{color:inherit}
 .disc small{font:500 .78rem var(--k-body);color:var(--k-accent);font-variant-numeric:tabular-nums}
 
 /* ---------- 1976 band ---------- */
-.since{max-width:var(--max);margin:0 auto;padding:clamp(80px,11vw,160px) var(--pad) clamp(60px,8vw,110px)}
-.since__year{font:800 clamp(7rem,27vw,25rem)/.78 var(--k-display);letter-spacing:-.065em;color:var(--k-accent);margin-inline-start:-.04em;font-variant-numeric:tabular-nums}
+.since{max-width:var(--max);margin:0 auto;padding:clamp(80px,11vw,160px) var(--pad) clamp(20px,3vw,40px)}
+.since__year{font:800 clamp(6rem,36vw,25rem)/.78 var(--k-display);letter-spacing:-.065em;color:var(--k-accent);margin-inline-start:-.04em;font-variant-numeric:tabular-nums}
 .since__grid{display:grid;gap:34px;margin-top:clamp(30px,4vw,56px)}
 .since__txt h2{font:700 clamp(1.8rem,3.4vw,3rem)/1.05 var(--k-display);letter-spacing:-.03em;margin-bottom:18px;max-width:15em}
 .since__txt p{color:var(--k-mute);max-width:34em;margin-bottom:14px}
 .since__txt p b{color:var(--k-ink);font-weight:600}
 .since__quote{margin-top:26px;padding-top:20px;border-top:1px solid var(--k-line)}
 .since__quote p{color:var(--k-ink);font-size:1.15rem;font-weight:500;margin:0}
-.since__quote p[lang=ar]{font:700 1.7rem/1.5 "Tajawal",sans-serif;color:var(--k-accent);margin-bottom:6px}
+.since__quote p[lang=ar],.since__quote p.big{font:700 1.7rem/1.5 "Tajawal",sans-serif;color:var(--k-accent);margin-bottom:6px}
 .since__quote small{color:var(--k-mute);font-size:.85rem}
 .since__fig{position:relative;overflow:hidden;margin:0}
 .since__fig img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .since__fig figcaption{font-size:.84rem;color:var(--k-mute);padding-top:10px}
-@media (min-width:900px){.since__grid{grid-template-columns:.8fr 1.2fr;align-items:start;gap:clamp(40px,6vw,100px)}.since__fig{margin-top:-11vw}}
+@media (min-width:900px){.since__grid{grid-template-columns:.8fr 1.2fr;align-items:start;gap:clamp(40px,6vw,100px)}.since__fig{margin-top:-5vw}}
 
 /* ---------- treatments accordion ---------- */
 .k-acc.treat{max-width:var(--max);padding-top:clamp(40px,6vw,80px)}
@@ -438,7 +438,7 @@ a{color:inherit}
 .visit dd a{text-decoration:none}
 .visit .k-visit__go{background:var(--k-accent);color:#fff}
 .visit .k-visit__go:hover{background:var(--k-ink)}
-.visit .k-visit__map{--k-map-poster:url(img/glass-wall.webp);background-color:#cfe1dc}
+.visit .k-visit__map{--k-map-poster:url(img/reception-40.webp);background-color:#cfe1dc}
 .visit .k-visit__map::before{content:"";position:absolute;inset:0;background:rgba(11,58,51,.45)}
 .visit .k-visit__acts a{min-height:50px}
 
@@ -511,3 +511,14 @@ html:lang(ar) .since__year{font-family:"Figtree",sans-serif}
 html:lang(ar) .treat__head h2,html:lang(ar) .docs .k-team__head h2,html:lang(ar) .kids h2,html:lang(ar) .pg-intro h1{line-height:1.2!important}
 html:lang(ar) .k-acc__t{line-height:1.3}
 html:lang(ar) .ft__name{line-height:1.3}
+
+/* tap targets */
+.hd__menu,.hd__call,.hd__lang{flex:none}
+@media (max-width:900px){.hd__logo img{height:44px}}
+.disc a,.tx__act a,.treat .k-acc__body .act a,.kids .k-link,.hero__acts .k-link{display:inline-block;padding-block:11px;background-origin:content-box;background-clip:content-box}
+.ft li a{padding-block:9px;background-origin:content-box;background-clip:content-box}
+.disc a{display:inline-flex;align-items:baseline}
+.hd__logo{min-height:44px;display:flex;align-items:center}
+html:lang(ar) .hero .k-split__type h1{font-size:clamp(2.5rem,5.2vw,5.2rem)}
+
+.tx p.tx__ar{font:700 clamp(1.05rem,1.6vw,1.3rem)/1.5 "Tajawal",sans-serif;color:var(--k-accent);margin-top:6px}
