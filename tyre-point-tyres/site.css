@@ -783,7 +783,7 @@ html:lang(ar) .find .k-visit h2{text-transform:none;line-height:1.15;font-size:c
 .find .k-visit tr.is-today td{color:var(--red-dk)}
 .find__photo{border-radius:6px;overflow:hidden;margin-bottom:26px;aspect-ratio:16/9;max-width:560px}
 .find__photo img{width:100%;height:100%;object-fit:cover}
-.find .k-visit__map{border-radius:6px;overflow:hidden;margin:0 var(--pad) var(--pad);min-height:420px;background:#dcdcd8 url(img/front-day.webp) center/cover}
+.find .k-visit__map{border-radius:6px;overflow:hidden;margin:0 var(--pad) var(--pad);min-height:420px;background:#dcdcd8 url(img/sign-night.webp) center/cover}
 .find .k-visit__map::before{content:"";position:absolute;inset:0;background:rgba(18,19,21,.35)}
 @media (min-width:900px){.find .k-visit__map{margin:var(--pad) var(--pad) var(--pad) 0}}
 @media (min-width:900px){html[dir=rtl] .find .k-visit__map{margin:var(--pad) 0 var(--pad) var(--pad)}}
