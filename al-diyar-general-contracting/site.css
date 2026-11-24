@@ -964,3 +964,8 @@ a{color:inherit}
 .ft__brand+.ft__cols{margin-top:clamp(36px,5vw,64px)}
 @media (max-width:600px){.ft__arname{font-size:1.5rem}}
 @media (prefers-reduced-motion:reduce){.wd__list b{transition:none}}
+
+/* r6 (Fannan r5): tighter "What we do" bottom, header logo blend, smaller footer Arabic name on phones */
+.wd__panel{padding-bottom:clamp(40px,5vw,80px)}
+@media (max-width:760px){.wd__panel{padding-bottom:40px}}
+@media (max-width:600px){.ft__arname{font-size:1.25rem}}

@@ -338,3 +338,41 @@ html[lang=ar] .visit ul li::before{left:auto;right:2px}
 @media (max-width:599px){.hdr__tel{display:none}.brand small{white-space:nowrap}.hdr__in{gap:10px}.lang{padding-inline-start:10px}}
 @media (max-width:979px){.visit__map{min-height:340px}}
 @media (max-width:599px){.visit__map .mapui p{display:none}.visit__map .mapui{inset-inline-start:16px;bottom:16px}}
+
+/* ---------- round 3 (Fannan r2 fixes) ---------- */
+/* Inside the clinic: 990px source, keep the band inside the content width */
+.inside__band{max-width:1312px;margin-inline:auto}
+@media (min-width:980px){.inside__band>.ph{max-height:620px}.inside__band>figcaption{inset-inline-start:20px}}
+@media (min-width:1400px){.inside__inset{inset-inline-end:-40px}}
+
+/* services: doctor faces before the doctor line */
+.svc__who--faces{display:flex;align-items:center;gap:14px;color:var(--ink);font-size:.95rem}
+.svc__who--faces>span:last-child{color:var(--mute)}
+.faces{display:flex;flex:none}
+.faces img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:3px solid #fff;box-shadow:0 0 0 1px var(--line);background:var(--tint)}
+.faces img+img{margin-inline-start:-16px}
+/* services: red text link with a drawn underline, instead of nine black buttons */
+.svc__call{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--red-dk);font-weight:600;font-size:1.02rem;text-decoration:none}
+.svc__call .u{background:linear-gradient(currentColor,currentColor) no-repeat 0 100%/100% 1px;padding-bottom:3px;transition:background-size .7s var(--ease) .25s}
+[dir=rtl] .svc__call .u{background-position:100% 100%}
+.k-js .svc__call[data-reveal]:not(.is-in) .u{background-size:0 1px}
+.svc__call:hover .u,.svc__call:focus-visible .u{background-size:100% 2px;transition-delay:0s}
+.svc__call:hover{color:var(--ink)}
+/* split page intros: hours panel (services), lede (about) */
+.pintro__side{margin-top:30px}
+.pintro__side .status{margin-bottom:6px}
+.pintro__side .shifts{margin-top:10px}
+.pintro__side .svc__call{margin-top:8px}
+@media (min-width:980px){
+  .pintro--split{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,100px);align-items:end}
+  .pintro--split .pintro__side{margin-top:0}
+  .pintro--split .shifts{max-width:none}
+  .pintro--about{padding-block:clamp(40px,5vw,72px) clamp(28px,3.5vw,48px)}
+  .pintro--about .lede{margin:0}
+  .pintro--about+.story{padding-top:clamp(36px,4vw,56px)}
+}
+@media (max-width:599px){.pintro__side .status{display:none}}
+/* index mobile: the sticky bar carries the open/closed status */
+@media (max-width:599px){.hero__acts .status{display:none}}
+/* Arabic mobile hero: three lines at 390px */
+@media (max-width:599px){html[lang=ar] .hero h1{font-size:clamp(2.1rem,9.2vw,2.6rem)}html[lang=ar] .hero h1 .hl>span{text-wrap:balance}}

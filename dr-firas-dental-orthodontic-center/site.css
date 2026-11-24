@@ -398,3 +398,50 @@ html[dir=rtl] .calls a:hover b{transform:translateX(-8px)}
 html:lang(ar) .num,html:lang(ar) .panel dd a[href^="tel:"]{font-family:"Albert Sans",system-ui,sans-serif}
 html:lang(ar) .hero h1{font-size:clamp(2.4rem,4.4vw,4.6rem)}
 @media (max-width:900px){html:lang(ar) .hero h1{font-size:clamp(2rem,8.4vw,2.8rem)}}
+
+/* ---------- round 3 (Fannan r2 fixes) ---------- */
+/* 1. hero: narrower text column, three set lines */
+.hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.hero h1{font-size:clamp(2.8rem,4.6vw,5.2rem);max-width:11em}
+@media (min-width:901px){.hero h1 .hl{display:block}}
+/* 2. hero mobile: shorter photo, call button straight under the h1, one-line open strip */
+@media (max-width:900px){
+  .hero__media img{height:34svh;min-height:220px}
+  .hero__text>div:first-child{display:contents}
+  .hero h1{order:0}
+  .hero__act{order:1}
+  .hero__lead{order:2;margin-top:0}
+  .hero__card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px}
+  .hero__card>p:first-of-type{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hero__card>p:last-of-type{grid-column:1/-1;font-size:.85rem}
+  .hero__card .k-visit__badge[hidden]+p{grid-column:1/-1}
+}
+/* 3. visit: real map on desktop, type-led navy block on phones */
+.k-visit__map{background:#dfe5ec}
+.k-visit__pin{display:none}
+@media (max-width:899px){
+  .k-visit__map{display:none}
+  .k-visit__pin{display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:var(--navy);color:#fff;padding:44px var(--pad) 48px}
+  .k-visit__pin b{font:600 clamp(2rem,8.6vw,2.8rem)/1.04 var(--k-display);letter-spacing:-.03em;max-width:11em}
+  .k-visit__pin span{color:var(--navy-soft)}
+  .k-visit__pin .k-btn{background:#fff;color:var(--k-ink);margin-top:10px}
+  .k-visit__pin .k-btn::before{background:var(--lime)}
+  html:lang(ar) .k-visit__pin b{line-height:1.4}
+}
+/* 4. the clinic on phones */
+@media (max-width:600px){.place__wide{grid-template-columns:1fr}}
+.facts h3{align-items:flex-start}
+.facts h3::before{margin-top:.6em}
+/* 5. waiting hall: re-exported without the ceiling, portrait */
+.place__big .ph{aspect-ratio:4/5}
+.place__big .ph img{object-position:62% 50%}
+/* 6. about: mission as plain paragraphs */
+.mission{max-width:44em}
+.mission .intro{max-width:none}
+.mission .intro+.intro{margin-top:16px}
+/* 7. services: photo breaks between treatments */
+.svc__break{margin:0 0 clamp(50px,6vw,80px)}
+.svc__break .ph{aspect-ratio:16/9}
+.svc__break--narrow{max-width:760px}
+.svc__break figcaption{font-size:.86rem;color:var(--k-mute);margin-top:10px}
+.svc__where{font-size:1.02rem;line-height:1.5}

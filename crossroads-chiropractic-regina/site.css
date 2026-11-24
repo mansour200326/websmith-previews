@@ -121,7 +121,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
 .status.is-shut i{background:var(--shut)}
 @keyframes ping{to{transform:scale(2.6);opacity:0}}
 .hero__disc{position:relative}
-.shopcard{position:absolute;left:-16%;bottom:-5%;z-index:2;width:clamp(180px,15.3vw,220px);background:#fff;padding:7px 7px 0;text-decoration:none;color:var(--ink);box-shadow:0 18px 40px -18px rgba(10,20,50,.55);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.shopcard{position:absolute;left:-22%;bottom:-5%;z-index:2;width:clamp(200px,18vw,260px);background:#fff;padding:7px 7px 0;text-decoration:none;color:var(--ink);box-shadow:0 18px 40px -18px rgba(10,20,50,.55);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
 .shopcard__img{display:block;aspect-ratio:4/3;overflow:hidden;background:#dfe5f0}
 .shopcard__img img{width:100%;height:100%;object-fit:cover;object-position:50% 16%;transition:transform 1s var(--ease)}
 .shopcard__cap{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:44px;font:600 .95rem/1.2 var(--disp)}
@@ -134,14 +134,18 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
   .hero__mark{grid-column:2;grid-row:1/3;align-self:start;margin-top:calc(clamp(3.4rem,10vw,11rem)*.42)}
   .hero__text{grid-column:1;grid-row:2}
 }
+@media (min-width:1000px){.status--m,.shopcard--m{display:none!important}}
 @media (max-width:999px){
   .hero__mark{float:right;width:140px;margin:22px 0 8px 16px;shape-outside:circle(50%);display:flex;flex-direction:column;align-items:center}
-  .hero__mark .shopcard{display:none}
-  .hero__mark .status{position:static;order:2;margin-top:10px;text-align:start;align-self:stretch;font-size:.78rem;padding:6px 9px;gap:7px;white-space:normal;line-height:1.2;box-shadow:none;background:var(--ice)}
+  .hero__mark .shopcard,.hero__mark .status{display:none!important}
+  .status--m{display:flex;width:100%;margin-top:14px;padding:0;gap:7px;font-size:.72rem;white-space:nowrap;background:none;box-shadow:none}
+  .status--m[hidden]{display:none}
+  .shopcard--m{position:static;display:block;width:100%;margin-top:18px;padding:6px 6px 0}
+  .shopcard--m .shopcard__img{aspect-ratio:16/9}
   .hero__lede{margin-top:22px}
 }
 @media (max-width:420px){.hero__mark{width:128px}}
-@media (max-width:479px){.hero__lede{font-size:1.05rem;line-height:1.45}.hero__mark{width:120px;margin-left:14px}.hero__mark .status{font-size:.74rem;padding:6px 7px}}
+@media (max-width:479px){.hero__lede{font-size:1.05rem;line-height:1.45}.hero__mark{width:120px;margin-left:14px}}
 
 /* ---------- section heads ---------- */
 .sec{padding-block:clamp(70px,10vw,150px)}
@@ -170,7 +174,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
 .paths__grid{display:grid;gap:clamp(50px,6vw,90px)}
 @media (min-width:900px){.paths__grid{grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,64px)}.path--m{margin-top:clamp(60px,8vw,120px)}}
 .path__img{overflow:hidden;aspect-ratio:4/3;background:#dfe5f0;max-width:460px}
-.path--c .path__img{border-start-end-radius:clamp(60px,8vw,130px)}
+.path--c .path__img{max-width:380px;aspect-ratio:4/3;border-start-end-radius:clamp(60px,8vw,130px)}
 .path--m .path__img{border-end-start-radius:clamp(60px,8vw,130px)}
 .path__img img{width:100%;height:100%;object-fit:cover}
 .path--m .path__img{aspect-ratio:4/5}
@@ -345,7 +349,7 @@ p,li{text-wrap:pretty}
 .bio__meta .tag{color:var(--ok);font-weight:600}
 .bio__txt p+p{margin-top:12px}
 .bio__txt p{max-width:40em}
-.mono{width:64px;height:64px;border-radius:50%;background:var(--ice);color:var(--navy);display:grid;place-items:center;font:700 1.25rem var(--disp);margin-bottom:14px}
+.bio__n{display:block;font:600 .82rem var(--disp);color:var(--navy);letter-spacing:.02em;margin-bottom:6px;font-variant-numeric:tabular-nums}
 
 .cta{background:var(--navy);color:#fff}
 .cta__in{display:grid;gap:24px;padding-block:clamp(60px,8vw,110px)}
@@ -365,3 +369,4 @@ a[href^="tel:"]{white-space:nowrap}
   .sheet,.btn::before,.book a,.book a .arr,.who li,.shopcard,.shopcard__img img,.heads__n{transition:none}
   .k-js .shopcard{animation:none}
 }
+@media (max-width:699px){.path--c .path__img,.svc__img:not(.svc__img--desk){max-width:300px}}

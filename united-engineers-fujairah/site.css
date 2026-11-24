@@ -361,8 +361,8 @@ img[src$="asphalt-road.webp"]{max-width:700px}
 [lang=ar] .hero h1.h1-en{font:700 clamp(4.4rem,15.5vw,13.5rem)/.8 "Barlow Condensed","Arial Narrow",sans-serif;letter-spacing:-.02em;text-transform:uppercase;text-align:right}
 /* AR desktop hero: headline sits on the right, over the tanks; darken that side so it reads on dark */
 @media (min-width:701px){
-  [dir=rtl] .hero .k-kb__media::after{background:linear-gradient(270deg,rgba(10,12,14,.55) 0,rgba(10,12,14,.3) 28%,rgba(10,12,14,0) 55%),linear-gradient(180deg,rgba(10,12,14,.45) 0,rgba(10,12,14,0) 22%,rgba(10,12,14,0) 55%,rgba(10,12,14,.8) 100%)}
-  [dir=rtl] .hero .k-kb__img{object-position:70% 50%}
+  [dir=rtl] .hero .k-kb__media::after{background:linear-gradient(270deg,rgba(10,12,14,.82) 0,rgba(10,12,14,.6) 34%,rgba(10,12,14,.12) 62%,rgba(10,12,14,0) 80%),linear-gradient(180deg,rgba(10,12,14,.5) 0,rgba(10,12,14,0) 24%,rgba(10,12,14,.1) 50%,rgba(10,12,14,.88) 100%)}
+  [dir=rtl] .hero .k-kb__img{object-position:20% center}
 }
 @media (min-width:960px){
   .sv__figs{padding-bottom:30px}
@@ -387,7 +387,7 @@ img[src$="asphalt-road.webp"]{max-width:700px}
   .pi--split .wrap{display:grid;grid-template-columns:1fr 1.9fr;grid-template-rows:auto 1fr;gap:0 clamp(40px,5vw,80px)}
   .pi--split .pi__grid{display:contents}
   .pi--split h1{grid-column:1;grid-row:1;align-self:start}
-  .pi--split p{grid-column:1;grid-row:2;align-self:end;margin-bottom:4px}
+  .pi--split p{grid-column:1;grid-row:2;align-self:start;margin-top:40px}
   .pi--split .pi__fig{grid-column:2;grid-row:1 / span 2;aspect-ratio:3/2;margin-top:0}
 }
 /* about "How we work": photo under the heading */
@@ -398,7 +398,11 @@ img[src$="asphalt-road.webp"]{max-width:700px}
 @media (max-width:700px){
   .strip .k-drag__card,.strip .k-drag__card:nth-child(3n+2){flex-basis:calc(100vw - 56px)}
   .strip .k-drag__meta{transition:opacity .3s}
-  .strip .k-drag__card.is-peek .k-drag__meta{opacity:0}
+  .strip .k-drag__card.is-peek .k-drag__meta{opacity:.35}
 }
 /* Arabic header on phones: a gap and a hairline between "English" and the menu button */
 @media (max-width:980px){[dir=rtl] .hd__menu{border-inline-start:1px solid rgba(127,127,127,.45);padding-inline-start:12px;margin-inline-start:4px}}
+
+/* ---------- revision 6 ---------- */
+/* services pages: the road-crossing photo already shows in the Roads tile, so the map cover uses the Ajman bridge */
+.k-visit--svc .k-visit__map{background-image:url(img/bridge-ajman.webp)}
