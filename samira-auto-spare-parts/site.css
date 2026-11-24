@@ -305,7 +305,7 @@ html:lang(ar) .label,html:lang(ar) .svc__no{font-family:"IBM Plex Sans Arabic",v
 @media (min-width:980px){
   .hero{padding-top:0}
   .hero__grid{grid-template-columns:minmax(0,5fr) minmax(0,6.6fr)}
-  .hero__photo{margin-inline-end:calc((100vw - min(100vw,var(--max)))/-2 - var(--pad))}
+  .hero__photo{margin-inline-end:calc((100vw - min(100vw,var(--max)))/-2 - var(--pad))!important}
   .hero__frame{height:calc(100svh - 76px - 64px);min-height:520px;max-height:860px}
   .hero__cap{padding-inline-end:var(--pad)}
   .hero__type{padding-bottom:64px}
@@ -316,3 +316,6 @@ html:lang(ar) .label,html:lang(ar) .svc__no{font-family:"IBM Plex Sans Arabic",v
 .pg__idx .n{font-family:var(--mono);font-size:.85rem;color:var(--red-d)}
 @media (min-width:980px){.pg__grid{align-items:center}}
 .mk a{padding:22px 4px}
+
+.hero h1{text-wrap:balance}
+@media (min-width:980px){.hero h1{font-size:clamp(2.3rem,4vw,3.8rem)}}
