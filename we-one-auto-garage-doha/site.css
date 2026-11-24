@@ -481,3 +481,4 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
   .jump{row-gap:4px;margin:0 0 24px}
   .intro__wa{order:2}
 }
+[lang=ar] .hours td{font-family:"IBM Plex Mono","IBM Plex Sans Arabic",monospace}
