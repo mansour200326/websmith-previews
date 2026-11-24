@@ -285,3 +285,7 @@ a{color:inherit}
   .hero h1{font-size:clamp(2rem,8.4vw,3rem)}
   .hero__offices{display:none}
 }
+/* 44px tap targets on phones */
+.ft a,.others a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
+.toc a{min-height:44px;display:inline-flex;align-items:center}
+.brands__note a{display:inline-block;padding-block:10px}
