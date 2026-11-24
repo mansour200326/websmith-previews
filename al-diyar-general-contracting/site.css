@@ -823,12 +823,12 @@ a{color:inherit}
 .about-cols .txt{grid-column:1/8;font-size:1.12rem}
 .about-cols .txt p+p{margin-top:1.1em}
 .about-cols aside{grid-column:9/13}
-.about-cols aside h2,.certs h2,.people h2{font:600 1.5rem var(--k-display);margin-bottom:14px}
+.about-cols aside h2{font:600 1.5rem var(--k-display);margin-bottom:14px}
 .about-cols aside ul{list-style:none;padding:0;border-top:1px solid var(--line)}
 .about-cols aside li{padding:11px 0;border-bottom:1px solid var(--line)}
 @media (max-width:860px){.about-cols .txt,.about-cols aside{grid-column:1/-1}}
 .people{padding:clamp(40px,6vw,90px) var(--pad);background:var(--stone)}
-.people ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border-top:2px solid var(--ink)}
+.people h2{margin-bottom:28px}.certs .lede{margin-top:16px}.people ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border-top:2px solid var(--ink)}
 .people li{padding:22px 0;border-bottom:1px solid var(--line);font:500 1.3rem/1.2 var(--k-display);padding-inline-end:20px}
 .people li small{display:block;font:400 .92rem var(--k-body);color:var(--mute);margin-top:6px}
 .certs{padding:clamp(50px,7vw,100px) var(--pad)}
@@ -844,7 +844,7 @@ a{color:inherit}
   .btn::before{transition:none}
 }
 /* ---- Arabic ---- */
-.hero__word--ar{font:700 clamp(3rem,30vw,38rem)/1.05 "Readex Pro",sans-serif;letter-spacing:0;padding-inline:var(--pad)}
+.hero__word--ar{font:700 clamp(3rem,34vw,42rem)/1.05 "Readex Pro",sans-serif;letter-spacing:0;padding-inline:var(--pad)}
 .hero__word--ar .m{padding:0 0 .04em}
 .hero__en{display:block;font:500 1rem "Onest",sans-serif;color:var(--char)}
 :lang(ar) .intro__h{letter-spacing:0;line-height:1.6;font-size:clamp(1.5rem,2.6vw,2.4rem)}
@@ -852,3 +852,7 @@ a{color:inherit}
 :lang(ar) .k-acc__t{line-height:1.35}
 .ft__name--ar{font-family:"Readex Pro",sans-serif;line-height:1.1}
 :lang(ar) .hours tr.is-today td:first-child::after{content:" · اليوم"}
+.hd__logo{min-height:44px;display:flex;align-items:center}
+@media (max-width:960px){.hd__logo img{height:44px}}
+.ft__cols a{padding-block:10px;min-height:44px}
+.cta-link{display:inline-block;padding:12px 0}

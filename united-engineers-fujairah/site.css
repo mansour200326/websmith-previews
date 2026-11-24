@@ -41,9 +41,9 @@ h2{font-size:clamp(3rem,8vw,7.2rem);text-transform:uppercase}
 .hd__menu{display:none;background:none;border:0;color:inherit;font:600 1rem var(--body);min-height:44px;min-width:44px;cursor:pointer;padding:0 4px}
 @media (max-width:980px){
   .hd__nav{position:fixed;inset:0;z-index:-1;background:var(--asphalt);color:#fff;flex-direction:column;justify-content:center;padding:90px var(--pad) 40px;gap:4px;
-    font:700 clamp(2.6rem,11vw,4rem)/1 var(--display);text-transform:uppercase;visibility:hidden;opacity:0;transition:opacity .35s,visibility 0s .35s}
+    font:700 clamp(2.6rem,11vw,4rem)/1 var(--display);text-transform:uppercase;visibility:hidden;transform:translateY(-100%);transition:transform .5s var(--k-ease),visibility 0s .5s}
   .hd__nav a{padding-block:8px}
-  .hd.is-open .hd__nav{visibility:visible;opacity:1;transition:opacity .35s}
+  .hd.is-open .hd__nav{visibility:visible;transform:none;transition:transform .5s var(--k-ease)}
   .hd.is-open{color:#fff;background:transparent;box-shadow:none}
   .hd__menu{display:inline-block}
   .hd__tel span.k-roll{display:none}
@@ -314,3 +314,7 @@ h2{font-size:clamp(3rem,8vw,7.2rem);text-transform:uppercase}
   .k-visit__lines a,.ft a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
   .hd__tel{min-width:44px;height:44px}
 }
+
+.hero__cap-m{display:none}
+@media (max-width:700px){.hero__cap-d{display:none}.hero__cap-m{display:inline}.hero .k-kb__img{object-position:50% 30%}}
+.k-kb__media picture{display:block;width:100%;height:100%}

@@ -159,6 +159,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
 .path--c .path__img{border-start-end-radius:clamp(60px,8vw,130px)}
 .path--m .path__img{border-end-start-radius:clamp(60px,8vw,130px)}
 .path__img img{width:100%;height:100%;object-fit:cover}
+.path--m .path__img{max-width:560px;aspect-ratio:1/1}
+.path--m .path__img img{object-position:62% 60%}
+p,li{text-wrap:pretty}
 .path figcaption{font:400 .9rem var(--disp);color:var(--mute);margin-top:10px}
 .path h3{font-size:clamp(2.6rem,5.2vw,4.4rem);letter-spacing:-.045em;margin-top:34px;color:var(--navy)}
 .path>p{margin-top:16px;max-width:32em}
@@ -303,6 +306,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
 
 .bios{padding-block:clamp(50px,7vw,100px)}
 .bios__grid{display:grid;gap:40px}
+@media (max-width:999px){.bios__idx{display:none}}
 @media (min-width:1000px){.bios__grid{grid-template-columns:260px minmax(0,1fr);gap:clamp(40px,6vw,100px)}.bios__idx{position:sticky;top:110px;align-self:start;max-height:calc(100vh - 130px);overflow:auto}}
 .bios__idx h2{font-size:1rem;letter-spacing:0;margin:22px 0 6px;color:var(--mute);font-weight:600}
 .bios__idx h2:first-child{margin-top:0}
