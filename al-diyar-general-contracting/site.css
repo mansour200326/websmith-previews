@@ -862,3 +862,4 @@ a{color:inherit}
 @media (max-width:520px){.hd__call{display:inline-flex}.hd__lang{display:none}.hd__logo img{height:38px}}
 @media (max-width:760px){.intro__h{font-size:1.4rem;line-height:1.3}:lang(ar) .intro__h{font-size:1.3rem}}
 .sky img,.villas__grid img,.k-gal__item img,.svcd__ph img,.k-acc__body img,.k-acc__float img{filter:saturate(.88) contrast(1.04)}
+@media (max-width:520px){.hd__call{margin-inline-start:auto}.hd__call+.hd__menu{margin-inline-start:0}}

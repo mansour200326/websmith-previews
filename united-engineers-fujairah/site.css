@@ -318,3 +318,4 @@ h2{font-size:clamp(3rem,8vw,7.2rem);text-transform:uppercase}
 .hero__cap-m{display:none}
 @media (max-width:700px){.hero__cap-d{display:none}.hero__cap-m{display:inline}.hero .k-kb__img{object-position:50% 30%}}
 .k-kb__media picture{display:block;width:100%;height:100%}
+@media (max-width:700px){.hero .k-kb__media{top:-22%}.hero .k-kb__img{object-position:38% 0}}
