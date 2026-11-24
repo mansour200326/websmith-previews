@@ -430,3 +430,54 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .day li{display:block;position:relative;padding-inline-start:15px}
 .day li::before{position:absolute;inset-inline-start:0;top:.62em}
 .group h2{margin-bottom:22px;text-wrap:balance}
+
+/* ---------- Fannan r2 (independent) fixes ---------- */
+/* home hero: H1 + foot grouped at the bottom, no dead gap */
+@media (min-width:861px){
+  .hero__panel{justify-content:flex-end;gap:48px}
+  .hero__media img{object-position:50% 20%}
+  .hero h1{font-size:clamp(3.6rem,6vw,7rem);max-width:none}
+}
+[lang=ar] .hero h1{text-wrap:balance}
+@media (min-width:861px){[lang=ar] .hero h1{font-size:clamp(2.4rem,3.6vw,4.4rem)}}
+
+/* on the floor: Civic (4 cols) over the Land Cruiser tile (4 cols), masked 4x4 8 cols full height */
+.shot--a{grid-column:1/5;grid-row:1;display:block}
+.shot--a .shot__img{aspect-ratio:4/5;flex:none;position:relative}
+.shot--a .shot__img img{position:static}
+.shot--c{grid-column:1/5;grid-row:2}
+.shot--c .shot__img{aspect-ratio:5/4}
+.shot--c .shot__img img{object-position:50% 50%}
+.shot--b{grid-column:5/13;grid-row:1/3;display:flex;flex-direction:column}
+.shot--b .shot__img{flex:1;aspect-ratio:auto;position:relative;min-height:0}
+.shot--b .shot__img img{position:absolute;inset:0;object-position:45% 50%}
+@media (max-width:760px){
+  .shot--a,.shot--b,.shot--c{grid-column:1/-1;grid-row:auto}
+  .shot--a .shot__img{aspect-ratio:4/5}
+  .shot--b .shot__img{flex:none;aspect-ratio:7/5}
+  .shot--b .shot__img img{position:static}
+  .shot--c .shot__img{aspect-ratio:5/4}
+}
+
+/* services breaks: lift 16:7 (posts + shed), brake 21:9 max 70vh */
+.break__img{aspect-ratio:21/9;max-height:70vh}
+.break--lift .break__img{aspect-ratio:16/7}
+.break--lift .break__img img{object-position:50% 50%}
+@media (max-width:760px){.break__img{aspect-ratio:16/9}.break--lift .break__img{aspect-ratio:16/9}.break--lift .break__img img{object-position:50% 60%}}
+
+/* services specialised: alternate bands, two with a real photo */
+.svc--alt{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+.svc--alt .svc__no{order:2}
+.svc__pic{margin:22px 0 0;max-width:360px}
+.svc__pic .shot__img{aspect-ratio:4/3;overflow:hidden}
+.svc__pic img{width:100%;height:100%;object-fit:cover}
+.svc__pic--civic img{object-position:50% 30%}
+.svc__pic figcaption{font:500 .76rem/1.4 var(--mono);color:var(--mute-d);padding-top:8px}
+[lang=ar] .svc__pic figcaption{font-family:"IBM Plex Sans Arabic",var(--body)}
+@media (max-width:900px){.svc--alt{grid-template-columns:1fr}.svc--alt .svc__no{order:0}.svc__pic{max-width:none}}
+
+/* services mobile: tighter jump list, WhatsApp button below it */
+@media (max-width:860px){
+  .jump{row-gap:4px;margin:0 0 24px}
+  .intro__wa{order:2}
+}

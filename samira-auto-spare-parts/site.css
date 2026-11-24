@@ -362,3 +362,25 @@ html:lang(ar) .rows__n{font-family:var(--mono)}
   .rows .rows__tip{margin-top:22px;padding-inline-start:calc(4.2em + clamp(24px,3vw,48px))}
 }
 .ft__bot nav a{min-width:44px;justify-content:center}
+
+/* ---------- r5 fixes (Fannan round 4) ---------- */
+/* 1: services hero, counter panels square crop */
+.pg__pic{aspect-ratio:1/1}
+/* 2: index hero, wider text column, calmer h1 */
+@media (min-width:980px){
+  .hero__grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+  .hero h1{font-size:clamp(2.6rem,4.4vw,4.6rem);max-width:none;text-wrap:balance}
+  .hero__type{min-width:min(100%,640px)}
+}
+/* 3: branches, the phone is the loudest thing in every row */
+.br__tel{display:flex;flex-direction:column}
+.br__tel a{display:inline-flex;align-items:center;min-height:44px;width:max-content;max-width:100%;font-weight:500;font-size:clamp(1.5rem,2.3vw,1.9rem);line-height:1.15;letter-spacing:-.01em}
+.br .br__sm{margin-top:10px;font-size:.9rem}
+.br__item>div:nth-child(2) .br__acts{margin-top:6px}
+@media (min-width:980px){.br__item--nopic{align-items:start}}
+/* 4: services oils, tin and stone counter only */
+.svc__pic--atf{aspect-ratio:1/1}
+.svc__pic--atf img{object-position:50% 50%}
+/* 6: Sharjah HQ sign, tighter so it doesn't echo the hero */
+.br__pic--sign{aspect-ratio:4/3}
+.br__pic--sign img{object-position:30% 50%}
