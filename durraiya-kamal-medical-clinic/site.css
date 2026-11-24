@@ -130,7 +130,7 @@ a{color:inherit}
 .depts__side .h2{margin-bottom:18px}
 .depts__side .note{margin-bottom:28px}
 .depts__side figure{overflow:hidden;display:none}
-.depts__side figure img{aspect-ratio:4/5;object-fit:cover;object-position:15% 50%;width:100%;max-height:calc(100svh - 420px);min-height:280px}
+.depts__side figure img{aspect-ratio:4/5;object-fit:cover;object-position:15% 50%;width:100%;max-height:calc(100svh - 470px);min-height:260px}
 .depts__side figcaption{font-size:.84rem;color:var(--mute);margin-top:8px}
 .k-acc__list{border-top:1px solid var(--ink)}
 .k-acc__row{border-bottom:1px solid var(--line)}
@@ -160,17 +160,17 @@ a{color:inherit}
 .inside__top{display:grid;gap:14px;margin-bottom:clamp(30px,4vw,56px)}
 @media (min-width:980px){.inside__top{grid-template-columns:5fr 7fr;align-items:end;gap:60px}}
 .inside__band{position:relative;margin:0}
-.inside__band .ph{overflow:hidden;height:70vh;min-height:420px;max-height:820px;background:var(--tint)}
-.inside__band .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
-.inside__band figcaption{position:absolute;inset-inline-start:var(--pad);bottom:22px;color:#fff;font-size:.9rem;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.inside__band>.ph{overflow:hidden;height:70vh;min-height:420px;max-height:820px;background:var(--tint)}
+.inside__band>.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.inside__band>figcaption{position:absolute;inset-inline-start:var(--pad);bottom:22px;color:#fff;font-size:.9rem;text-shadow:0 1px 8px rgba(0,0,0,.6)}
 .inside__inset{position:absolute;inset-inline-end:var(--pad);bottom:calc(clamp(60px,9vw,110px)*-1);width:min(28vw,400px);margin:0;z-index:2;background:#fff;padding:10px 10px 12px}
 .inside__inset .ph{overflow:hidden;aspect-ratio:16/10}
 .inside__inset img{width:100%;height:100%;object-fit:cover;object-position:18% 40%}
 .inside__inset figcaption{font-size:.84rem;color:var(--mute);margin-top:8px}
 .inside-sec{padding-bottom:clamp(110px,14vw,210px)}
 @media (max-width:979px){
-  .inside__band .ph{height:auto;min-height:0;aspect-ratio:4/3}
-  .inside__band figcaption{bottom:14px}
+  .inside__band>.ph{height:auto;min-height:0;aspect-ratio:4/3}
+  .inside__band>figcaption{bottom:14px}
   .inside__inset{position:relative;inset:auto;width:72%;margin:-48px 0 0 auto;bottom:auto;padding:8px}
   [dir=rtl] .inside__inset{margin:-48px auto 0 0}
   .inside-sec{padding-bottom:clamp(60px,9vw,100px)}
@@ -213,6 +213,7 @@ html[lang=ar] .visit tr.is-today th::after{content:" · اليوم"}
 .visit__map iframe{position:absolute;z-index:2;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .8s}
 .visit__map iframe.is-on{opacity:1}
 .visit__map svg text{font-family:var(--body)}
+.visit__map .pin{transform-box:fill-box;transform-origin:50% 100%}
 .visit__map.is-in .pin{animation:drop .9s var(--ease) both}
 @keyframes drop{from{transform:translateY(-40px);opacity:0}to{transform:none;opacity:1}}
 @media (min-width:980px){.visit__grid{grid-template-columns:6fr 6fr;gap:60px}.visit__map{margin:0;margin-inline-end:calc(var(--pad)*-1);min-height:100%}}
