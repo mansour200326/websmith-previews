@@ -205,7 +205,7 @@ html[lang=ar] .visit tr.is-today th::after{content:" · اليوم"}
 .ftr__tag{color:var(--mute);margin-top:10px}
 .ftr h3{font:600 .8rem/1 var(--body);color:var(--mute);margin-bottom:12px}
 .ftr ul{list-style:none;padding:0}
-.ftr li a,.ftr li span{display:inline-block;padding-block:6px;text-decoration:none}
+.ftr li a,.ftr li span{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
 .ftr address{font-style:normal;line-height:1.55}
 .ftr__legal{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);font-size:.82rem;color:var(--mute);display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between}
 @media (min-width:980px){.ftr__grid{grid-template-columns:5fr 3fr 3fr 3fr}}

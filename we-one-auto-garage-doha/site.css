@@ -50,14 +50,14 @@ p{margin:0 0 1em}
 .hd__lang:hover{text-decoration:underline}
 .menu-btn{display:none}
 @media (max-width:860px){
-  .hd__in{gap:6px;min-height:62px}
-  .nav{position:fixed;inset:0 0 auto 0;top:var(--hd-top,96px);background:var(--paper);flex-direction:column;padding:10px var(--pad) 24px;border-bottom:1px solid var(--line);display:none}
-  .nav.is-open{display:flex}
-  .nav a{font-size:1.3rem;padding:14px 0;border-bottom:1px solid var(--line)}
-  .nav a[aria-current=page]::after{inset-inline:auto;inset-inline-start:-14px;top:22px;bottom:auto;width:6px;height:16px}
-  .menu-btn{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid var(--ink);background:none;font:600 .8rem var(--mono);color:var(--ink);cursor:pointer}
+  .hd__in{gap:6px;min-height:62px;flex-wrap:wrap}
+  .nav{order:5;width:100%;flex-wrap:wrap}
+  .k-js .nav{position:fixed;inset:0 0 auto 0;top:var(--hd-top,96px);background:var(--paper);flex-direction:column;padding:10px var(--pad) 24px;border-bottom:1px solid var(--line);display:none;width:auto}
+  .k-js .nav.is-open{display:flex}
+  .k-js .nav a{font-size:1.3rem;padding:14px 0;border-bottom:1px solid var(--line)}
+  .k-js .nav a[aria-current=page]::after{inset-inline:auto;inset-inline-start:-14px;top:22px;bottom:auto;width:6px;height:16px}
+  .k-js .menu-btn{display:inline-grid;place-items:center;min-width:56px;height:44px;border:1px solid var(--ink);background:none;font:600 .8rem var(--mono);color:var(--ink);cursor:pointer}
   .hd__tel{display:none}
-  .no-js .nav{display:flex;position:static;flex-direction:row;padding:0;border:0}
 }
 
 /* ---------- buttons, links ---------- */
@@ -315,4 +315,16 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .k-js [data-reveal],.k-js [data-reveal] img,.k-rv-line>span,.k-js .hero__fade{opacity:1!important;transform:none!important;clip-path:none!important}
   [data-k-magnetic]{transform:none!important}.k-roll>span::after{display:none}
+}
+
+/* round-0 tweaks */
+.brand b span{font-weight:700}
+.brand__we{background:var(--ink);color:var(--sign);padding:4px 7px 3px;margin-inline-end:4px;display:inline-block}
+.job__ask{grid-row:1;grid-column:3}
+@media (max-width:860px){
+  .k-js .hd__in{flex-wrap:nowrap}
+  .brand b{font-size:1.05rem}
+  .brand i{font-size:.74rem}
+  .hd__acts{gap:4px}
+  .job__ask{grid-row:auto;grid-column:2}
 }

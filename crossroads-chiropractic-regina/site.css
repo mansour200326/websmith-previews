@@ -32,7 +32,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
 .hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid transparent;transition:border-color .3s}
 .hd.is-scrolled{border-bottom-color:var(--line)}
 .hd__in{display:flex;align-items:center;gap:clamp(12px,2vw,24px);min-height:76px}
-.hd__logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--disp);line-height:1.05;margin-inline-end:auto}
+.hd__logo{min-height:44px;display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--disp);line-height:1.05;margin-inline-end:auto}
 .hd__logo b{display:block;font-size:1.06rem;font-weight:700;letter-spacing:-.01em;color:var(--navy)}
 .hd__logo span{display:block;font-size:.84rem;color:var(--mute)}
 .hd__nav{display:none;gap:4px;font-family:var(--disp);font-size:.98rem}
