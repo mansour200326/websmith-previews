@@ -911,3 +911,7 @@ html:lang(ar) .ct__addr p{font-family:var(--k-display);letter-spacing:0;line-hei
 .k-drag__card,.k-drag__card:nth-child(3n+2){flex:0 0 min(80vw,480px)}
 @media (max-width:899px){.k-story__step:last-child{padding-bottom:8px}}
 .ft li a{min-width:44px}
+/* r5 polish (Fannan) */
+.k-story__head .k-line-mask{padding-bottom:.14em}
+html:lang(ar) .qa__big bdi,html:lang(ar) figcaption bdi,html:lang(ar) .k-drag__meta bdi{white-space:nowrap}
+@media (min-width:900px){.pi{padding-block:clamp(40px,5vw,80px) 10px}.pi + .wrap > .svc:first-child{padding-top:clamp(40px,4vw,60px)}}
