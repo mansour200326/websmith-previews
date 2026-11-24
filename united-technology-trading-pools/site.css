@@ -293,3 +293,12 @@ a{color:inherit}
 [dir=rtl] :is(.mono,.hero__offices dt,.reg .k-acc__n,.reg .k-acc__t small,.reg .r-client,.reg .r-city,.reg__head,.facts dt,.notes .k-story__n,.notes figcaption,.hero .k-seq__cap,.svc__n,.svc__media figcaption,.others h3,.ft h2,.trouble__tip strong,.do__since,.toc a){font-family:"IBM Plex Sans Arabic",var(--k-body);letter-spacing:0}
 [dir=rtl] .k-visit tr.is-today td:first-child::after{content:" · اليوم"}
 [dir=rtl] .visit .k-visit__map::before{content:"باي سكوير، الخليج التجاري";left:auto;right:24px;font-family:"IBM Plex Sans Arabic",sans-serif}
+.k-seq__count{white-space:nowrap}
+@media (max-width:979px){
+  .hero .k-seq{height:min(42svh,440px)}
+  .hero .k-seq__cap{font-size:.74rem}
+  .hero__lead{font-size:1rem;margin-top:14px}
+  .hero__acts{margin-top:20px}
+  .hero__acts .tlink{display:none}
+}
+@media (max-width:979px){.hero__more{display:none}.hero h1{font-size:clamp(1.9rem,7.8vw,3rem)}}
