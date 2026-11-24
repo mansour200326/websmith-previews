@@ -448,3 +448,5 @@ html:lang(ar) .hero h1{font-size:clamp(2.4rem,4.4vw,4.6rem)}
 .svc__break--narrow{max-width:760px}
 .svc__break figcaption{font-size:.86rem;color:var(--k-mute);margin-top:10px}
 .svc__where{font-size:1.02rem;line-height:1.5}
+@media (min-width:901px){html:lang(ar) .hero h1{font-size:clamp(2.2rem,3.5vw,4.2rem)}}
+.k-visit__pin b .ltr{color:inherit}
