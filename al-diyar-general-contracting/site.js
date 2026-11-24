@@ -516,3 +516,13 @@
     b.hidden=false;b.classList.add(open?'is-open':'is-shut');b.querySelector('span').textContent=txt;
   }
 })();
+
+/* services index: switch the sticky photo as each service crosses the middle of the screen */
+(function(){
+  var items=document.querySelectorAll('.sx__item[data-sx]'),fr=document.querySelectorAll('.sx__f');
+  if(!items.length||!('IntersectionObserver' in window))return;
+  function on(i){items.forEach(function(it){it.classList.toggle('is-active',it.dataset.sx===i)});fr.forEach(function(f){f.classList.toggle('is-on',f.dataset.f===i)})}
+  on('0');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)on(e.target.dataset.sx)})},{rootMargin:'-45% 0px -45% 0px'});
+  items.forEach(function(it){io.observe(it)});
+})();

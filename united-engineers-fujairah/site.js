@@ -209,6 +209,10 @@
         r.addEventListener('pointermove',function(e){tx=Math.min(e.clientX+28,innerWidth-360);ty=e.clientY-130});
         r.addEventListener('pointerleave',function(){on=false;peek.classList.remove('is-on')});
       });
+    } else {
+      // touch: tap a project with a photo to open it full width under the name
+      rows.forEach(function(r){if(!r.getAttribute('data-img'))return;r.classList.add('is-tap');
+        r.addEventListener('click',function(){r.classList.toggle('is-open')})});
     }
   }
 })();

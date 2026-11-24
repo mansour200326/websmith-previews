@@ -908,3 +908,6 @@ html:lang(ar) .ct__addr p{font-family:var(--k-display);letter-spacing:0;line-hei
 .pi__call{margin-top:26px}
 .ct__map .pin{display:none}
 @media (min-width:900px){.pi__call{grid-column:-2;margin-top:0}}
+.k-drag__card,.k-drag__card:nth-child(3n+2){flex:0 0 min(80vw,480px)}
+@media (max-width:899px){.k-story__step:last-child{padding-bottom:8px}}
+.ft li a{min-width:44px}
