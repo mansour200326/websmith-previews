@@ -856,3 +856,9 @@ a{color:inherit}
 @media (max-width:960px){.hd__logo img{height:44px}}
 .ft__cols a{padding-block:10px;min-height:44px}
 .cta-link{display:inline-block;padding:12px 0}
+
+.hd__call{display:none;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;background:var(--orange);color:#1c1c1e;font:600 .98rem var(--k-body);text-decoration:none}
+.hero__tel{color:var(--ink);font-weight:600;font-size:1.05rem;text-decoration:none;border-bottom:2px solid var(--orange);padding:8px 0;display:inline-block}
+@media (max-width:520px){.hd__call{display:inline-flex}.hd__lang{display:none}.hd__logo img{height:38px}}
+@media (max-width:760px){.intro__h{font-size:1.4rem;line-height:1.3}:lang(ar) .intro__h{font-size:1.3rem}}
+.sky img,.villas__grid img,.k-gal__item img,.svcd__ph img,.k-acc__body img,.k-acc__float img{filter:saturate(.88) contrast(1.04)}
