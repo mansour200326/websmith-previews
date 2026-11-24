@@ -162,7 +162,7 @@ a{color:inherit}
 .inside__band{position:relative;margin:0}
 .inside__band>.ph{overflow:hidden;height:70vh;min-height:420px;max-height:820px;background:var(--tint)}
 .inside__band>.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
-.inside__band>figcaption{position:absolute;inset-inline-start:var(--pad);bottom:22px;color:#fff;font-size:.9rem;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.inside__band>figcaption{position:absolute;inset-inline-start:var(--pad);bottom:22px;color:#fff;font-size:.9rem;background:rgba(20,18,20,.72);padding:6px 12px}
 .inside__inset{position:absolute;inset-inline-end:var(--pad);bottom:calc(clamp(60px,9vw,110px)*-1);width:min(28vw,400px);margin:0;z-index:2;background:#fff;padding:10px 10px 12px}
 .inside__inset .ph{overflow:hidden;aspect-ratio:16/10}
 .inside__inset img{width:100%;height:100%;object-fit:cover;object-position:18% 40%}
@@ -225,7 +225,7 @@ html[lang=ar] .visit tr.is-today th::after{content:" · اليوم"}
 .ftr__tag{color:var(--mute);margin-top:10px}
 .ftr h3{font:600 .8rem/1 var(--body);color:var(--mute);margin-bottom:12px}
 .ftr ul{list-style:none;padding:0}
-.ftr li a,.ftr li span{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.ftr li a,.ftr li span{display:inline-flex;align-items:center;min-height:44px;min-width:44px;text-decoration:none}
 .ftr address{font-style:normal;line-height:1.55}
 .ftr__legal{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);font-size:.82rem;color:var(--mute);display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between}
 @media (min-width:980px){.ftr__grid{grid-template-columns:5fr 3fr 3fr 3fr}}

@@ -380,3 +380,4 @@ a{color:inherit}
 .tr-show b{display:block;font:600 .8rem/1.4 var(--mono);color:#cfe3f8;margin-bottom:6px}
 [dir=rtl] .tr-show b{font-family:"IBM Plex Sans Arabic",sans-serif}
 [dir=rtl] .tr-brands{text-align:right}
+@media (max-width:600px){.svc-idx a{grid-template-columns:2.2em minmax(0,1fr) auto;gap:10px}.svc-hd{min-height:0}}
