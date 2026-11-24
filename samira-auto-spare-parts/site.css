@@ -377,7 +377,7 @@ html:lang(ar) .rows__n{font-family:var(--mono)}
 .br__tel a{display:inline-flex;align-items:center;min-height:44px;width:max-content;max-width:100%;font-weight:500;font-size:clamp(1.5rem,2.3vw,1.9rem);line-height:1.15;letter-spacing:-.01em}
 .br .br__sm{margin-top:10px;font-size:.9rem}
 .br__item>div:nth-child(2) .br__acts{margin-top:6px}
-@media (min-width:980px){.br__item--nopic{align-items:start}}
+@media (min-width:980px){.br__item--nopic{grid-template-columns:minmax(0,4fr) minmax(0,3.4fr) minmax(0,3.6fr);align-items:start}}
 /* 4: services oils, tin and stone counter only */
 .svc__pic--atf{aspect-ratio:1/1}
 .svc__pic--atf img{object-position:50% 50%}

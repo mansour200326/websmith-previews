@@ -401,9 +401,12 @@ html:lang(ar) .hero h1{font-size:clamp(2.4rem,4.4vw,4.6rem)}
 
 /* ---------- round 3 (Fannan r2 fixes) ---------- */
 /* 1. hero: narrower text column, three set lines */
-.hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
-.hero h1{font-size:clamp(2.8rem,4.6vw,5.2rem);max-width:11em}
-@media (min-width:901px){.hero h1 .hl{display:block}}
+@media (min-width:901px){
+  .hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  .hero__text{padding-inline-end:clamp(24px,2.4vw,40px)}
+  .hero h1{font-size:clamp(2.4rem,4.2vw,5.2rem);max-width:11em}
+  .hero h1 .hl{display:block}
+}
 /* 2. hero mobile: shorter photo, call button straight under the h1, one-line open strip */
 @media (max-width:900px){
   .hero__media img{height:34svh;min-height:220px}
