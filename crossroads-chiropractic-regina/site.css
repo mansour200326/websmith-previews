@@ -126,13 +126,13 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-h
 @media (min-width:1000px){
   .hero__grid{display:grid;grid-template-columns:minmax(0,1fr) min(36vw,480px);column-gap:clamp(30px,4vw,64px)}
   .hero h1{grid-column:1/-1;grid-row:1}
-  .hero__mark{grid-column:2;grid-row:1/3;align-self:start;margin-top:calc(clamp(3.4rem,9vw,9.5rem)*1.62)}
+  .hero__mark{grid-column:2;grid-row:1/3;align-self:start;margin-top:calc(clamp(3.4rem,9vw,9.5rem)*.42)}
   .hero__text{grid-column:1;grid-row:2}
 }
 @media (max-width:999px){
   .hero__mark{float:right;width:140px;margin:22px 0 8px 16px;shape-outside:circle(50%);display:flex;flex-direction:column;align-items:center}
   .hero__mark .badge{display:none}
-  .hero__mark .status{position:static;order:2;margin-top:10px;font-size:.78rem;padding:6px 9px;gap:7px;white-space:normal;line-height:1.2;box-shadow:none;background:var(--ice)}
+  .hero__mark .status{position:static;order:2;margin-top:10px;text-align:start;align-self:stretch;font-size:.78rem;padding:6px 9px;gap:7px;white-space:normal;line-height:1.2;box-shadow:none;background:var(--ice)}
   .hero__lede{margin-top:22px}
 }
 @media (max-width:420px){.hero__mark{width:128px}}
