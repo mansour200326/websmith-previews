@@ -386,7 +386,7 @@ a{color:inherit}
 /* ---------- r3 (Fannan r2 fixes) ---------- */
 @media (max-width:979px){
   .hero .k-seq{max-height:125vw} /* never taller than 4:5 on phones */
-  .notes .k-story__inline--night{aspect-ratio:4/3;max-height:240px}
+  .notes .k-story__inline--night{aspect-ratio:auto;width:100%;height:min(75vw,240px)} /* ~4:3, never over 240px */
 }
 .h2,.notes .k-story__step h3,.svc h2,.page-hd h1,.reg .k-acc__t{text-wrap:balance}
 /* hotel PR frames: one shared grade so they sit with the phone-shot work photos (rights flag in NOTES) */
@@ -396,7 +396,7 @@ img[src$="s-spa-pool.webp"],img[src$="s-landscape.webp"],img[src$="p-zabeel-sara
   .reg__pin{background:var(--navy);margin:36px 0 0}
   .reg__pin>img.reg__pin-def{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .4s ease}
   .reg__pin>figcaption{position:absolute;left:14px;bottom:14px;z-index:3;font:500 .78rem/1.4 var(--mono);color:#fff;background:rgba(8,18,28,.78);padding:7px 11px;border-inline-start:2px solid var(--sky);transition:opacity .3s ease}
-  [dir=rtl] .reg__pin>figcaption{left:auto;right:14px}
+  [dir=rtl] .reg__pin>figcaption{left:auto;right:14px;font-family:"IBM Plex Sans Arabic",var(--k-body);letter-spacing:0}
   .reg__pin .k-acc__float--pin{z-index:2}
   .reg__pin.is-hidden{opacity:0;transition:opacity .3s ease}
   .reg__pin{transition:opacity .3s ease}
