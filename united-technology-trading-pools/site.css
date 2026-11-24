@@ -9,7 +9,7 @@
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:90px}
 body{margin:0;background:var(--k-bg);color:var(--k-ink);font:400 1.0625rem/1.6 var(--k-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 h1,h2,h3,h4,p,ul,ol,figure,dl,dd{margin:0}
 ul,ol{padding:0}
 a{color:inherit}
@@ -275,3 +275,13 @@ a{color:inherit}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 
 @media (prefers-reduced-motion:reduce){.btn::before{transition:none}}
+
+/* phone: photo first so the work shows in the first screen */
+@media (max-width:979px){
+  .hero{padding-top:0}
+  .hero__grid{gap:24px}
+  .hero__media{order:-1;margin-inline:calc(var(--pad) * -1)}
+  .hero .k-seq{height:min(52svh,520px);border-radius:0}
+  .hero h1{font-size:clamp(2rem,8.4vw,3rem)}
+  .hero__offices{display:none}
+}
