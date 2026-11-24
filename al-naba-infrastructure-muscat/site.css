@@ -635,7 +635,8 @@ a{color:inherit}
 .mnav a{display:block;padding:12px 0;font:600 1.4rem/1.2 var(--k-display);text-decoration:none;border-bottom:1px solid var(--k-line)}
 .mnav a[aria-current=page]{color:var(--k-accent)}
 @media (min-width:980px){.nav{display:flex}.hd__menu,.mnav{display:none!important}}
-@media (max-width:560px){.hd__tel{display:none}.hd__logo small{display:none}}
+.hd__short{display:none}
+@media (max-width:560px){.hd__logo small{display:none}.hd__in{gap:10px}.hd__tel{min-width:44px;justify-content:center;padding-inline:6px}.hd__tel .k-roll{display:none}.hd__short{display:inline;font-weight:600}.hd__lang{padding-inline-start:10px}}
 
 /* hero: wordmark + wide photo */
 .hero{padding-top:clamp(28px,5vw,64px)}
@@ -747,7 +748,8 @@ a{color:inherit}
 .qa__cert img{width:100%;height:auto}
 .qa__cert figcaption{font-size:.85rem;color:var(--k-mute);padding-top:12px}
 .qa__big{font:600 clamp(1.6rem,3vw,2.5rem)/1.15 var(--k-display);letter-spacing:-.02em;max-width:22em;margin-bottom:28px}
-.qa__big span{color:var(--k-accent)}
+.qa__big span{color:inherit}
+.qa__big b{font-weight:700}
 .rules{list-style:none;counter-reset:r;columns:1;column-gap:48px}
 .rules li{counter-increment:r;break-inside:avoid;padding:14px 0;border-top:1px solid var(--k-line);display:grid;grid-template-columns:2.4rem 1fr}
 .rules li::before{content:counter(r,decimal-leading-zero);font:500 .9rem/1.7 var(--k-display);color:var(--k-accent)}
@@ -784,6 +786,7 @@ a{color:inherit}
 /* footer */
 .ft{background:var(--k-ink);color:#d5dfdb;padding-block:clamp(60px,8vw,100px) 28px}
 .ft a{color:#fff;text-decoration:none;display:inline-block;padding-block:6px}
+.ft__logo{width:min(520px,100%);height:auto;margin-bottom:clamp(36px,5vw,64px)}
 .ft__name{font:700 clamp(3rem,11vw,10rem)/.85 var(--k-display);letter-spacing:-.05em;color:#fff;margin-bottom:clamp(36px,5vw,64px)}
 .ft__name span{color:#5fc2a4}
 .ft__grid{display:grid;grid-template-columns:1fr;gap:34px;padding-bottom:40px;border-bottom:1px solid #2c3c37}
@@ -884,3 +887,24 @@ html:lang(ar) .k-mq-word{letter-spacing:0}
 @media (min-width:900px){.k-story__steps{padding:8vh 0 16vh}.k-story__step{min-height:52vh}}
 .k-drag__head{flex-wrap:wrap}
 @media (max-width:600px){.k-drag__head h3{font-size:1.3rem}}
+
+/* r4: Fannan independent review fixes */
+@media (min-width:900px){
+  .k-story__media{height:auto;aspect-ratio:16/10;top:18vh}
+  .k-story__steps{padding-bottom:0}
+  .k-story__step:last-child{min-height:0;padding-block:16vh 0;justify-content:flex-start}
+}
+.k-story{padding-bottom:0}
+.k-story+.k-stats{padding-top:clamp(48px,6vw,80px)}
+.k-drag__fig,.k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:4/3}
+.hero__photo img,.k-drag__fig img,.k-story__media img,.k-story__inline img,.svc__ph img,.types img,.prow__th img,.pfloat img{filter:saturate(.92) contrast(1.04)}
+html:lang(ar) .word .k-line-mask{padding-bottom:.35em;margin-bottom:-.3em}
+.ct__map{max-height:440px;align-self:start;min-height:380px;height:clamp(380px,34vw,440px);align-content:center;gap:22px;padding:28px;margin-bottom:clamp(60px,8vw,100px)}
+.ct__addr{position:relative;z-index:1;text-align:center}
+.ct__addr p{font:600 clamp(1.6rem,3vw,2.4rem)/1.1 "Space Grotesk",var(--k-display);letter-spacing:-.02em;color:var(--k-ink)}
+.ct__addr span{display:block;margin-top:8px;color:var(--k-mute)}
+html:lang(ar) .ct__addr p{font-family:var(--k-display);letter-spacing:0;line-height:1.3}
+@media (min-width:980px){.ct__map{margin-top:clamp(70px,9vw,130px)}}
+.pi__call{margin-top:26px}
+.ct__map .pin{display:none}
+@media (min-width:900px){.pi__call{grid-column:-2;margin-top:0}}

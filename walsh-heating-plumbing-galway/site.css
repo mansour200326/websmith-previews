@@ -448,7 +448,7 @@ a{color:inherit}
 .k-js .hd--home.is-scrolled .hd__logo b{opacity:1;max-width:220px;transform:none}
 .k-js .hd--home:not(.is-scrolled) .hd__logo{gap:0}
 .hd__nav a{white-space:nowrap}
-@media (min-width:900px){.k-story__step{min-height:44vh}.k-story__steps{padding:10vh 0 16vh}}
+@media (min-width:900px){.k-story__step{min-height:34vh}.k-story__steps{padding:10vh 0 16vh}}
 .pg__shot{margin:clamp(18px,2.6vw,30px) 0 0}
 .pg__shot .ph{overflow:hidden;aspect-ratio:16/9;background:#ccc}
 @media (min-width:700px){.pg__shot .ph{aspect-ratio:16/5}}
@@ -456,3 +456,12 @@ a{color:inherit}
 .pg__shot figcaption{font-size:.85rem;color:var(--mute);padding-top:8px}
 .pg__row{border-bottom:0}
 @media (prefers-reduced-motion:reduce){.k-js .hd--home .hd__logo b{transition:none}}
+
+/* round 3 (independent AD polish) */
+.hero__say em{color:inherit}
+.hero__say2{display:block;color:var(--mute);font-weight:500}
+@media (max-width:760px){.hd--home .hd__nav{margin-inline-start:0}.hd--home .hd__tel{margin-inline-start:auto}}
+@media (min-width:761px){.hd--home:not(.is-scrolled) .hd__logo span{white-space:nowrap;max-width:none}}
+.k-visit__map{background:#dfe1e3;overflow:hidden}
+.k-visit__map::before{content:"";position:absolute;inset:0;background:url(img/shop-road.webp) 50% 70%/cover;filter:saturate(.8) contrast(1.02)}
+.k-story__step .k-story__inline--photo img,.k-story__media .photo img{object-fit:cover}
