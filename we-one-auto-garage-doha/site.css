@@ -346,8 +346,8 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 
 /* ---------- Fannan r1 fixes ---------- */
 /* hero: wider panel, H1 in the top third, trades + action at the foot */
-.hero{grid-template-columns:minmax(0,45fr) minmax(0,55fr);min-height:min(calc(100svh - 108px),720px)}
-.hero__media img{object-position:52% 50%}
+@media (min-width:861px){.hero{grid-template-columns:minmax(0,45fr) minmax(0,55fr);min-height:min(calc(100svh - 108px),720px)}}
+.hero__media img{object-position:49% 50%}
 .k-js .hero__media img{animation:kb2 16s ease-out both}
 @keyframes kb2{from{transform:scale(1.05)}to{transform:scale(1)}}
 .hero__panel{justify-content:space-between;padding:min(14vh,128px) clamp(24px,3.4vw,56px) clamp(32px,4vw,56px);gap:40px}
@@ -427,3 +427,5 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 [lang=ar] .hero h1{font-size:clamp(2.6rem,4.3vw,5.2rem);line-height:1.2;max-width:none}
 @media (max-width:860px){[lang=ar] .hero h1{font-size:clamp(2.1rem,8.6vw,2.8rem)}}
 .rev--small .rev__tr{font-size:clamp(1.1rem,1.6vw,1.35rem)}
+.day li{display:block;position:relative;padding-inline-start:15px}
+.day li::before{position:absolute;inset-inline-start:0;top:.62em}

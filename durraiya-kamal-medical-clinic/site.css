@@ -80,7 +80,7 @@ a{color:inherit}
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.06) translateX(-1%)}}
 @media (min-width:980px){
   .hero{display:grid;grid-template-columns:minmax(0,37fr) minmax(0,63fr);grid-template-rows:auto 1fr;padding-top:0;padding-bottom:0;min-height:calc(100svh - 72px)}
-  .hero__photo{grid-column:2;grid-row:1/span 2;margin:0 calc(var(--pad)*-1) 0 0;aspect-ratio:auto;height:calc(100svh - 72px);min-height:560px;max-height:1000px}
+  .hero__photo{grid-column:2;grid-row:1/span 2;margin-block:0;margin-inline:0 calc(var(--pad)*-1);aspect-ratio:auto;height:calc(100svh - 72px);min-height:560px;max-height:1000px}
   .hero__photo img{object-position:57% 50%}
   .hero__txt{grid-column:1;grid-row:1;margin:0;padding:clamp(28px,5vh,56px) clamp(24px,3vw,48px) 0 0}
   .hero__txt p{font-size:1.04rem}
@@ -337,3 +337,4 @@ html[lang=ar] .visit ul li::before{left:auto;right:2px}
 
 @media (max-width:599px){.hdr__tel{display:none}.brand small{white-space:nowrap}.hdr__in{gap:10px}.lang{padding-inline-start:10px}}
 @media (max-width:979px){.visit__map{min-height:340px}}
+@media (max-width:599px){.visit__map .mapui p{display:none}.visit__map .mapui{inset-inline-start:16px;bottom:16px}}
