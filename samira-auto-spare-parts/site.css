@@ -287,3 +287,4 @@ html:lang(ar) .label,html:lang(ar) .svc__no{font-family:"IBM Plex Sans Arabic",v
   .mk a::before,.mk a::after,.k-zoom img{transition:none}
 }
 @media (hover:none){.k-roll>span::after{display:none}}
+@media (max-width:980px){.br dd a,.ft__cols li a{min-height:44px}.br dl{gap:0 18px;align-items:center}}

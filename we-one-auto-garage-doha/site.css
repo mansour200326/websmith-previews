@@ -328,3 +328,11 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
   .hd__acts{gap:4px}
   .job__ask{grid-row:auto;grid-column:2}
 }
+.svc__no h2{display:block;font:600 clamp(1.6rem,2.8vw,2.4rem)/1.05 var(--display);color:var(--ink);letter-spacing:-.02em;margin-top:10px}
+.svc--dark .svc__no h2{color:#fff}
+[lang=ar] .svc__no h2{font-family:"IBM Plex Sans Arabic",var(--body);letter-spacing:0;line-height:1.3}
+[lang=ar] .brand b{font-family:"IBM Plex Sans Arabic",var(--body);font-size:1.25rem}
+[lang=ar] .brand i{font-family:var(--display);font-weight:600}
+.bar a,.jump a,.hero__call,.svc__acts .lnk,.work__head .lnk,.fleet__acts .lnk{display:inline-flex;align-items:center;min-height:44px}
+.bar{padding-block:2px}
+@media (max-width:860px){.ft li a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}}

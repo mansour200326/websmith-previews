@@ -98,7 +98,7 @@
   var g=function(t){return(p.find(function(x){return x.type===t})||{}).value};
   var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),now=(+g('hour')%24)+(+g('minute'))/60;
   function fmt(h){var hh=Math.floor(h),mm=Math.round((h-hh)*60),s=(hh>12?hh-12:hh)+(mm?':'+(mm<10?'0':'')+mm:'');
-    return ar?s+(hh<12?' صباحاً':' مساءً'):s+(hh<12?'am':'pm')}
+    return ar?s+(hh<12?' صباحاً':hh<15?' ظهراً':' مساءً'):s+(hh<12?'am':'pm')}
   var open=null,next=null,nextDay=0;
   (H[day]||[]).forEach(function(s){if(now>=s[0]&&now<s[1])open=s;else if(!next&&now<s[0])next=s});
   if(!open&&!next){nextDay=1;next=H[(day+1)%7][0]}
