@@ -381,3 +381,4 @@ a{color:inherit}
 [dir=rtl] .tr-show b{font-family:"IBM Plex Sans Arabic",sans-serif}
 [dir=rtl] .tr-brands{text-align:right}
 @media (max-width:600px){.svc-idx a{grid-template-columns:2.2em minmax(0,1fr) auto;gap:10px}.svc-hd{min-height:0}}
+.ft ul a{min-width:44px}
