@@ -343,3 +343,87 @@ bdi,.ltr{direction:ltr;unicode-bidi:isolate}
 .hd__tel{direction:ltr;unicode-bidi:isolate}
 [lang=ar] .hero h1{font-size:clamp(2.1rem,3.7vw,3.8rem)}
 @media (max-width:860px){.intro__media{order:-1;aspect-ratio:16/11}.intro__text{padding-block:36px 44px}.intro h1{font-size:clamp(2.6rem,12vw,3.6rem)}}
+
+/* ---------- Fannan r1 fixes ---------- */
+/* hero: wider panel, H1 in the top third, trades + action at the foot */
+.hero{grid-template-columns:minmax(0,45fr) minmax(0,55fr);min-height:min(calc(100svh - 108px),720px)}
+.hero__media img{object-position:52% 50%}
+.k-js .hero__media img{animation:kb2 16s ease-out both}
+@keyframes kb2{from{transform:scale(1.05)}to{transform:scale(1)}}
+.hero__panel{justify-content:space-between;padding:min(14vh,128px) clamp(24px,3.4vw,56px) clamp(32px,4vw,56px);gap:40px}
+.hero h1{font-size:clamp(3.2rem,5.2vw,6.4rem);line-height:.98;max-width:9.4em}
+.hero__foot{display:flex;flex-direction:column;gap:26px}
+@media (max-width:860px){
+  .hero__media{aspect-ratio:16/10}
+  .hero__panel{padding:34px var(--pad) 40px;gap:32px}
+  .hero h1{font-size:clamp(2.5rem,10.5vw,3.4rem);max-width:none}
+}
+.work__head h2{text-wrap:balance}
+.hours__note{font-size:.86rem;color:var(--mute);margin:-14px 0 26px;max-width:32em}
+
+/* on the floor: tall left (4 cols) + wide right (8 cols), full-width strip below */
+.floor__grid{align-items:stretch;row-gap:clamp(20px,2.4vw,36px)}
+.shot--a{grid-column:1/5;grid-row:auto;display:flex;flex-direction:column}
+.shot--a .shot__img{aspect-ratio:auto;flex:1;position:relative;min-height:0}
+.shot--a .shot__img img{position:absolute;inset:0;object-position:40% 35%}
+.shot--b{grid-column:5/13}
+.shot--b .shot__img{aspect-ratio:7/5}
+.shot--c{grid-column:1/-1}
+.shot--c .shot__img{aspect-ratio:7/2}
+@media (max-width:760px){
+  .shot--a,.shot--b,.shot--c{grid-column:1/-1}
+  .shot--a .shot__img{flex:none;aspect-ratio:4/5}
+  .shot--c .shot__img{aspect-ratio:2/1}
+  .shot--c .shot__img img{object-position:45% 50%}
+}
+
+/* services: type-led intro */
+.intro--type{grid-template-columns:1fr}
+.intro--type .intro__text{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px clamp(30px,5vw,90px);align-items:end;padding-block:clamp(56px,7vw,110px) clamp(48px,6vw,90px)}
+.intro--type h1{font-size:clamp(3.4rem,9vw,8.4rem);margin:0}
+.intro--type .lede{margin-bottom:22px}
+.intro__wa{align-self:flex-start}
+.intro__side{display:flex;flex-direction:column;align-items:flex-start}
+.jump{row-gap:12px}
+@media (max-width:860px){.intro--type .intro__text{grid-template-columns:1fr}.intro--type h1{font-size:clamp(3rem,15vw,4.4rem)}}
+
+/* services: everyday repairs, one compact white list */
+.everyday__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 40px;margin-bottom:clamp(28px,4vw,50px)}
+.everyday__head p{margin:0;color:var(--mute);max-width:28em}
+.everyday__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(30px,5vw,80px)}
+.day{border-top:2px solid var(--ink);padding:22px 0 30px}
+.day h3{font-size:clamp(1.5rem,2.4vw,2.1rem);margin-bottom:10px}
+.day p{color:#2c3036;margin-bottom:12px;max-width:34em}
+.day ul{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.95rem;color:var(--mute)}
+.day li{display:inline-flex;align-items:center;gap:9px}
+.day li::before{content:"";width:6px;height:6px;background:var(--sign);outline:1px solid var(--ink);flex:none}
+.day__acts{display:flex;flex-wrap:wrap;gap:4px 24px}
+.day__acts .lnk{font-weight:600;display:inline-flex;align-items:center;min-height:44px;gap:.3em}
+@media (max-width:760px){.everyday__grid{grid-template-columns:1fr}}
+
+/* services: wide photo breaks */
+.break{margin:0;position:relative}
+.break__img{overflow:hidden;aspect-ratio:21/8;background:#d5d8dc}
+.break__img img{width:100%;height:100%;object-fit:cover}
+.break--lift .break__img img{object-position:50% 88%}
+.break figcaption{position:absolute;bottom:0;inset-inline-start:0;background:var(--ink);color:#d7dade;font:500 .74rem/1.3 var(--mono);padding:10px 14px}
+@media (max-width:760px){.break__img{aspect-ratio:4/3}.break--lift .break__img img{object-position:50% 100%}.break figcaption{position:static;background:none;color:var(--mute);padding:10px var(--pad) 0}}
+
+/* services: the four specialised trades as dark bands */
+.spec-head{background:var(--ink);color:#fff;padding:clamp(60px,8vw,110px) var(--pad) clamp(10px,2vw,20px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 40px}
+.spec-head h2{font-size:clamp(2.2rem,4.6vw,4rem);letter-spacing:-.03em;line-height:1}
+.spec-head p{margin:0;color:var(--mute-d);max-width:28em}
+.svc--dark{grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-top:1px solid #33363d}
+.svc--dark .svc__no{padding-top:6px}
+.svc__no .tag{display:inline-block;background:var(--sign);color:var(--ink);font:500 .74rem/1 var(--mono);padding:6px 8px}
+.svc--dark .svc__body ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:30px}
+@media (max-width:900px){.svc--dark{grid-template-columns:1fr}.svc--dark .svc__body ul{grid-template-columns:1fr}}
+[lang=ar] .svc__no .tag,[lang=ar] .break figcaption{font-family:"IBM Plex Sans Arabic",var(--body)}
+
+/* AR reviews: Arabic translation first, English original smaller */
+.rev__tr{margin:0 0 14px;font:500 clamp(1.25rem,2vw,1.7rem)/1.6 "IBM Plex Sans Arabic",var(--body)}
+.rev__tr small{display:block;font-size:.8rem;color:var(--mute);margin-top:4px}
+[lang=ar] .rev .rev__en{font:400 .98rem/1.55 var(--body);color:var(--mute);letter-spacing:0;margin:0 0 14px;text-align:left}
+[lang=ar] .hero h1{font-size:clamp(2.6rem,4.3vw,5.2rem);line-height:1.2;max-width:none}
+@media (max-width:860px){[lang=ar] .hero h1{font-size:clamp(2.1rem,8.6vw,2.8rem)}}
+.rev--small .rev__tr{font-size:clamp(1.1rem,1.6vw,1.35rem)}

@@ -10,7 +10,6 @@
 <link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/we-one-auto-garage-doha/ar/services.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/lift-bay.webp" fetchpriority="high">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -18,7 +17,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="bar" data-live>
-  <span class="bar__state"><span class="bar__dot" aria-hidden="true"></span><span data-live-text>Sat–Thu 7:00–12:00 and 15:00–20:30 · Friday closed</span></span>
+  <span class="bar__state"><span class="bar__dot" aria-hidden="true"></span><span data-live-text>Sat–Thu: mornings until 12:00, then 15:00–20:30 · Friday closed</span></span>
   <span class="bar__addr">Gate 92, Street 13, Industrial Area, Doha</span>
   <a href="tel:+97470469956">Call <bdi>7046 9956</bdi></a>
 </div>
@@ -42,58 +41,69 @@
 </header>
 
 <main id="main">
-<!-- Photo: Google Maps contributor Sulekha Sarfaras (lift bay), plate blurred, upscaled 4x. -->
-<section class="intro" aria-labelledby="h1">
+<!-- Services intro: type-led. Photos below are wide breaks (Google Maps contributors, cropped clear of plates, one grade). -->
+<section class="intro intro--type" aria-labelledby="h1">
   <div class="intro__text">
     <h1 id="h1" data-reveal="lines">Services</h1>
-    <p class="lede" data-reveal data-reveal-delay="150">Everything on our sign: mechanic, painting, denting, electrical, welding and A/C. We repair cars, SUVs, trucks and fleet vehicles. Not sure which one you need? WhatsApp a photo and ask.</p>
-    <ul class="jump" aria-label="Jump to a service">
+    <div class="intro__side">
+      <p class="lede" data-reveal data-reveal-delay="150">Everything on our sign: mechanic, painting, denting, electrical, welding and A/C. We repair cars, SUVs, trucks and fleet vehicles. Not sure which one you need? WhatsApp a photo and ask.</p>
+      <a class="btn intro__wa" data-k-magnetic href="https://wa.me/97470469956?text=Hello%20We%20One%20Auto%20Garage%2C%20here%20is%20a%20photo%20of%20the%20problem%20with%20my%20car%3A">WhatsApp a photo <span class="k-arrow" aria-hidden="true">→</span></a>
+      <ul class="jump" aria-label="Jump to a service">
       <li><a href="#mechanical">Mechanical</a></li><li><a href="#engine">Engine overhaul</a></li><li><a href="#denting">Denting</a></li><li><a href="#painting">Painting</a></li><li><a href="#electrical">Electrical</a></li><li><a href="#ac">A/C</a></li><li><a href="#chassis">Chassis &amp; welding</a></li><li><a href="#maintenance">Maintenance</a></li>
     </ul>
+    </div>
   </div>
-  <figure class="intro__media"><img src="img/lift-bay.webp" width="1500" height="2000" alt="A white Toyota Corolla raised on a blue two-post lift in the garage yard at night" fetchpriority="high"><figcaption>The two-post lift in the yard</figcaption></figure>
 </section>
-<section class="svc" id="mechanical" aria-labelledby="mechanical-h">
-  <div class="svc__no">01<h2 id="mechanical-h">Mechanical works</h2></div>
-  <div class="svc__body"><p class="lede" data-reveal>Everything under the bonnet and under the car that keeps it driving right.</p><ul data-reveal data-reveal-delay="100"><li>Strange noises, knocks and vibrations</li><li>Oil and coolant leaks</li><li>Brakes and suspension</li><li>Faults found at the yearly inspection</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20mechanical%20work%20on%20my%20car.">Ask about mechanical work on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><p>Bring it in, or send a short video of the noise first.</p></div>
+<section class="sec everyday" aria-labelledby="every-h">
+  <div class="everyday__head"><h2 id="every-h" data-reveal="lines">Everyday repairs</h2><p data-reveal data-reveal-delay="120">Bring the car in, or send a photo first and ask.</p></div>
+  <div class="everyday__grid" data-reveal-stagger="80">
+  <article class="day" id="mechanical" aria-labelledby="mechanical-h" data-reveal>
+    <h3 id="mechanical-h">Mechanical works</h3>
+    <p>Everything under the bonnet and under the car that keeps it driving right.</p>
+    <ul><li>Strange noises, knocks and vibrations</li><li>Oil and coolant leaks</li><li>Brakes and suspension</li><li>Faults found at the yearly inspection</li></ul>
+    <div class="day__acts"><a class="lnk" href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20mechanical%20work%20on%20my%20car.">Ask on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div>
+  </article>
+  <article class="day" id="denting" aria-labelledby="denting-h" data-reveal>
+    <h3 id="denting-h">Denting &amp; body works</h3>
+    <p>Dents, scrapes and accident damage, straightened and made ready for paint.</p>
+    <ul><li>Door, wing and bumper dents</li><li>Accident repairs</li><li>Body work on SUVs, vans and pickups</li></ul>
+    <div class="day__acts"><a class="lnk" href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20denting%20and%20body%20work.%20Here%20is%20a%20photo%3A">Ask on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div>
+  </article>
+  <article class="day" id="ac" aria-labelledby="ac-h" data-reveal>
+    <h3 id="ac-h">Air-conditioning works</h3>
+    <p>For when the A/C blows warm, smells, or makes a noise. In a Doha summer it can’t wait.</p>
+    <ul><li>A/C not cooling</li><li>Noise when the A/C is on</li><li>A/C checks before summer</li></ul>
+    <div class="day__acts"><a class="lnk" href="https://wa.me/97470469956?text=Hello%2C%20my%20car%20A/C%20needs%20checking.">Ask on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div>
+  </article>
+  <article class="day" id="maintenance" aria-labelledby="maintenance-h" data-reveal>
+    <h3 id="maintenance-h">Complete maintenance</h3>
+    <p>Preventive and predictive maintenance, so small problems are caught early. For one car or a whole fleet.</p>
+    <ul><li>Regular servicing</li><li>Brakes, discs and pads</li><li>Checks before a long trip or the inspection</li><li>Company vehicles: call <bdi>4498 3283</bdi>, ext. 106</li></ul>
+    <div class="day__acts"><a class="lnk" href="https://wa.me/97470469956?text=Hello%2C%20I%20would%20like%20to%20book%20maintenance%20for%20my%20car.">Ask on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div>
+  </article>
+  </div>
 </section>
+<!-- Photo: Google Maps contributor Rahul Raju (brake work), graded. -->
+<figure class="break"><div class="break__img" data-reveal="clip"><img src="img/brake-disc.webp" width="2000" height="1500" loading="lazy" alt="A front wheel off, showing the brake disc and hub, a spanner on the workshop floor" style="object-position:50% 55%"></div><figcaption>A wheel off for brake work. Photo: Rahul Raju on Google Maps.</figcaption></figure>
+<div class="spec-head"><h2 data-reveal="lines">What we specialise in</h2><p data-reveal data-reveal-delay="120">Four trades our garage page names as its specialities.</p></div>
 <section class="svc svc--dark" id="engine" aria-labelledby="engine-h">
-  <div class="svc__no">02<h2 id="engine-h">Engine overhaul</h2></div>
+  <div class="svc__no"><span class="tag">Specialised</span><h2 id="engine-h">Engine overhaul</h2></div>
   <div class="svc__body"><p class="lede" data-reveal>When an engine needs opening up and rebuilding, not just a service. One of the jobs we are specialised in.</p><ul data-reveal data-reveal-delay="100"><li>Engines that burn oil or lose power</li><li>Overheating and head gasket problems</li><li>Rebuilds for cars, SUVs and trucks</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20an%20engine%20overhaul.%20My%20car%20is%20a%20...">Ask about an engine overhaul on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><span class="tag">Specialised</span></div>
-</section>
-<section class="svc" id="denting" aria-labelledby="denting-h">
-  <div class="svc__no">03<h2 id="denting-h">Denting &amp; body works</h2></div>
-  <div class="svc__body"><p class="lede" data-reveal>Dents, scrapes and accident damage, straightened and made ready for paint.</p><ul data-reveal data-reveal-delay="100"><li>Door, wing and bumper dents</li><li>Accident repairs</li><li>Body work on SUVs, vans and pickups</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20denting%20and%20body%20work.%20Here%20is%20a%20photo%3A">Ask about denting and body work on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><p>Send a photo of the damage from two sides.</p></div>
 </section>
 <section class="svc svc--dark" id="painting" aria-labelledby="painting-h">
-  <div class="svc__no">04<h2 id="painting-h">Painting &amp; polishing</h2></div>
+  <div class="svc__no"><span class="tag">Specialised</span><h2 id="painting-h">Painting &amp; polishing</h2></div>
   <div class="svc__body"><p class="lede" data-reveal>From one panel to the whole car, then polished. Painting is one of the jobs we are specialised in.</p><ul data-reveal data-reveal-delay="100"><li>Single panels after denting</li><li>Bumpers and scratches</li><li>Full repaints</li><li>Polishing</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20painting%20work%20on%20my%20car.%20Here%20is%20a%20photo%3A">Ask about painting on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><span class="tag">Specialised</span></div>
 </section>
-<section class="svc" id="electrical" aria-labelledby="electrical-h">
-  <div class="svc__no">05<h2 id="electrical-h">Electrical works</h2></div>
+<section class="svc svc--dark" id="electrical" aria-labelledby="electrical-h">
+  <div class="svc__no"><span class="tag">Specialised</span><h2 id="electrical-h">Electrical works</h2></div>
   <div class="svc__body"><p class="lede" data-reveal>The faults that are hard to find. Electrical work is one of the jobs we are specialised in, and we use diagnostic equipment to find the cause.</p><ul data-reveal data-reveal-delay="100"><li>Warning lights on the dashboard</li><li>Car will not start, battery keeps going flat</li><li>Lights, windows, mirrors and wiring</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20have%20an%20electrical%20problem%20with%20my%20car.%20The%20warning%20light%20is%3A">Ask about electrical work on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><span class="tag">Specialised</span></div>
-</section>
-<section class="svc" id="ac" aria-labelledby="ac-h">
-  <div class="svc__no">06<h2 id="ac-h">Air-conditioning works</h2></div>
-  <div class="svc__body"><p class="lede" data-reveal>For when the A/C blows warm, smells, or makes a noise. In a Doha summer it can’t wait.</p><ul data-reveal data-reveal-delay="100"><li>A/C not cooling</li><li>Noise when the A/C is on</li><li>A/C checks before summer</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20my%20car%20A/C%20needs%20checking.">Ask about the A/C on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><p>A/C mechanic is on our sign.</p></div>
 </section>
 <section class="svc svc--dark" id="chassis" aria-labelledby="chassis-h">
-  <div class="svc__no">07<h2 id="chassis-h">Chassis alignment &amp; welding</h2></div>
+  <div class="svc__no"><span class="tag">Specialised</span><h2 id="chassis-h">Chassis alignment &amp; welding</h2></div>
   <div class="svc__body"><p class="lede" data-reveal>Straightening after an accident, and welding repairs. Chassis alignment is one of the jobs we are specialised in.</p><ul data-reveal data-reveal-delay="100"><li>Chassis alignment after an accident</li><li>Welding repairs on body and frame</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20need%20chassis%20alignment%20or%20welding.">Ask about chassis alignment or welding on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><span class="tag">Specialised</span></div>
 </section>
-<section class="svc" id="maintenance" aria-labelledby="maintenance-h">
-  <div class="svc__no">08<h2 id="maintenance-h">Complete maintenance</h2></div>
-  <div class="svc__body"><p class="lede" data-reveal>Preventive and predictive maintenance, so small problems are caught early. For one car or a whole fleet.</p><ul data-reveal data-reveal-delay="100"><li>Regular servicing</li><li>Brakes, discs and pads</li><li>Checks before a long trip or the inspection</li><li>Fleet vehicles: call the call centre on 4498 3283, ext. 106</li></ul><div class="svc__acts"><a class="btn" data-k-magnetic href="https://wa.me/97470469956?text=Hello%2C%20I%20would%20like%20to%20book%20maintenance%20for%20my%20car.">Ask about maintenance on WhatsApp <span class="k-arrow" aria-hidden="true">→</span></a><a class="lnk" href="tel:+97470469956">Call <bdi>7046 9956</bdi></a></div></div>
-  <div class="svc__side" data-reveal data-reveal-delay="200"><p>For fleets, ask for extension 106.</p><!-- Photo: Google Maps contributor Rahul Raju. -->
-<figure class="shot svc__fig"><div class="shot__img" data-reveal="clip"><img src="img/brake-disc.webp" width="2000" height="1500" loading="lazy" alt="A front wheel off, showing the brake disc and hub, a spanner on the workshop floor"></div><figcaption>A wheel off for brake work. Photo: Rahul Raju on Google Maps.</figcaption></figure></div>
-</section>
+<!-- Photo: Google Maps contributor Sulekha Sarfaras (lift bay), cropped above the car's plate, graded, upscaled 4x. -->
+<figure class="break break--lift"><div class="break__img" data-reveal="clip"><img src="img/lift-bay.webp" width="2400" height="1520" loading="lazy" alt="A white Toyota Corolla on the blue BendPak two-post lift in the garage yard at night"></div><figcaption>The two-post lift in the yard. Photo: Sulekha Sarfaras on Google Maps.</figcaption></figure>
 <section class="sec fleet" aria-labelledby="fleet-h">
   <h2 id="fleet-h" data-reveal="lines">Not sure what it is? Send us a photo.</h2>
   <div data-reveal data-reveal-delay="150">
@@ -127,8 +137,9 @@
     </div>
     <div>
       <h3>Hours</h3>
-      <p>Sat–Thu 7:00–12:00 and 15:00–20:30</p>
-      <p>Sat and Sun mornings until 12:30</p>
+      <p>Sat–Thu mornings until 12:00 (Sat and Sun 12:30)</p>
+      <p>Afternoons 15:00–20:30</p>
+      <p>Mornings from 7:00; Wednesday start unconfirmed</p>
       <p>Friday closed</p>
     </div>
     <div>

@@ -14,7 +14,10 @@
   if(!open){
     var nxt=null;for(var j=0;j<spans.length;j++){if(now<spans[j][0]){nxt=spans[j][0];break}}
     if(nxt!==null)msg=(spans.length&&now>=spans[0][1])?(AR?'استراحة الظهر، نعود الساعة '+fmt(nxt):'On the midday break, back at '+fmt(nxt)):(AR?'مغلق الآن، نفتح الساعة '+fmt(nxt):'Closed now, opens at '+fmt(nxt));
-    else{var d=(day+1)%7;while(!(H[d]||[]).length)d=(d+1)%7;msg=AR?'مغلق الآن، نفتح '+DN[d]+' الساعة '+fmt(H[d][0][0]):'Closed now, opens '+DN[d]+' at '+fmt(H[d][0][0])}
+    else{var d=(day+1)%7;while(!(H[d]||[]).length)d=(d+1)%7;msg=AR?'مغلق الآن، نفتح '+DN[d]+' الساعة '+fmt(H[d][0][0]):'Closed now, opens '+DN[d]+' at '+fmt(H[d][0][0]);
+      if(d===3)msg=AR?'مغلق الآن، نفتح الأربعاء (اتصل للتأكد من وقت الصباح)':'Closed now, opens Wednesday (call to confirm the morning time)'}
+    /* Google lists Wednesday from 12:00 AM: we don't present a start time as fact */
+    if(day===3&&now<7)msg=AR?'وقت فتح الأربعاء الصباحي غير مؤكد، اتصل قبل':'Wednesday morning start unconfirmed, call first';
   }
   document.querySelectorAll('[data-live]').forEach(function(el){
     var t=el.querySelector('[data-live-text]');if(t)t.textContent=msg;

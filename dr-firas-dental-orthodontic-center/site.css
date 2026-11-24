@@ -58,15 +58,15 @@ a{color:inherit}
 .btn-line:hover{background:var(--k-ink);color:#fff}
 
 /* ---------- hero (split, LAVA-style anchoring + OrthoFX inset card) ---------- */
-.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:calc(100svh - var(--hdr));max-height:960px}
-.hero__text{display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(40px,7vh,88px) clamp(28px,4vw,64px) clamp(36px,6vh,64px) var(--pad)}
-.hero h1{font:600 clamp(2.5rem,4.3vw,4.4rem)/1.02 var(--k-display);letter-spacing:-.032em;max-width:11.5em}
+.hero{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);min-height:calc(100svh - var(--hdr));max-height:960px}
+.hero__text{display:flex;flex-direction:column;justify-content:center;gap:40px;padding:clamp(40px,7vh,88px) clamp(28px,4vw,64px) clamp(36px,6vh,64px) var(--pad)}
+.hero h1{font:600 clamp(2.8rem,5.6vw,6rem)/.98 var(--k-display);letter-spacing:-.038em;max-width:9.6em}
 .hero__lead{font-size:clamp(1.05rem,1.25vw,1.2rem);color:var(--k-mute);max-width:30em;margin-top:26px}
 .hero__act{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
 .hero__alt{font-size:.98rem;color:var(--k-mute)}
 .hero__alt a{color:var(--k-ink);font-weight:600;text-decoration:none;display:inline-block;padding-block:10px}
 .hero__media{position:relative;overflow:hidden;background:#cfd8e2}
-.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
 .k-js .hero__media{clip-path:inset(0 0 0 100%);animation:hero-wipe 1.5s var(--k-ease) .25s forwards}
 .k-js .hero__media img{transform:scale(1.14);animation:hero-kb 16s cubic-bezier(.25,.1,.25,1) .25s forwards}
 @keyframes hero-wipe{to{clip-path:inset(0 0 0 0)}}
@@ -82,15 +82,16 @@ a{color:inherit}
 .hero__cap{position:absolute;right:16px;top:14px;font-size:.78rem;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5);z-index:2}
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;min-height:0;max-height:none}
-  .hero__text{padding:26px var(--pad) 24px;gap:20px}
-  .hero h1{font-size:clamp(2rem,8.2vw,2.8rem);line-height:1.05}
+  .hero__text{padding:22px var(--pad) 28px;gap:22px}
+  .hero h1{font-size:clamp(2.3rem,10vw,3.2rem);line-height:1}
   .hero__lead{margin-top:14px;font-size:1rem}
   .hero__lead .more{display:none}
   .hero__act{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 16px}
   .hero .k-btn{padding:16px 20px}
   .hero__alt{font-size:.92rem}
-  .hero__media{aspect-ratio:4/4.2;margin-inline:0}
-  .hero__card{left:12px;right:12px;bottom:12px;min-width:0;padding:12px 14px;font-size:.86rem;display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
+  .hero__media{order:-1;background:none;margin-inline:0}
+  .hero__media img{height:42svh;min-height:250px}
+  .hero__card{position:static;border-radius:0;box-shadow:none;border-bottom:1px solid var(--k-line);min-width:0;padding:12px var(--pad);font-size:.9rem;display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
   .hero__card .k-visit__badge{margin:0}
   .hero__card hr{display:none}
 }
@@ -232,7 +233,7 @@ a{color:inherit}
 .k-visit__go{background:var(--navy)}
 .k-visit__go:hover{background:var(--k-ink)}
 .k-visit__acts a{border-radius:4px;min-height:48px}
-.k-visit__map{background:#dfe6ee;min-height:420px}
+.k-visit__map{background:linear-gradient(rgba(9,20,45,.35),rgba(9,20,45,.35)),url(img/marina-day.webp) 50% 55%/cover #3a4a66;min-height:420px}
 .k-visit__map button{border-radius:4px;min-height:48px}
 .k-visit__more{margin-top:30px;padding-top:22px;border-top:1px solid var(--k-line);font-size:.96rem;color:var(--k-mute);display:grid;gap:6px}
 .k-visit__more a{color:var(--k-ink);font-weight:600;text-decoration:none;display:inline-block;padding-block:6px}
@@ -363,3 +364,37 @@ html[dir=ltr] .ftr__ar{text-align:left}
 .k-visit__more a{padding-block:10px}
 @media (max-width:900px){.svc__act a.k-link,.drag__foot a,.story__note a,.intro a{display:inline-block;padding-block:10px}}
 .ftr ul a{min-width:44px}
+
+/* ---------- round 2 (Fannan r1 fixes) ---------- */
+/* numbers as a design element: tabular, heavier, larger */
+.num,.panel dd a[href^="tel:"],.hero__alt a,.k-visit__call,.k-visit table td+td,.hero__card [data-today]{font-variant-numeric:tabular-nums lining-nums}
+.panel dd a[href^="tel:"]{font:700 1.45rem/1.15 var(--k-display);letter-spacing:-.01em}
+.hero__alt a{font-weight:700;font-size:1.12rem}
+.k-visit table td+td{font-weight:600;font-size:1.12rem;letter-spacing:-.005em}
+.k-visit__call{font-weight:700}
+.ftr .num{font-weight:700;font-size:1.06rem;letter-spacing:-.005em;margin-inline-end:4px}
+.hero__card [data-today]{font-weight:600;color:var(--k-ink)}
+/* services: type-only hero with the three call lines */
+.pintro:has(.calls) h1{font-size:clamp(3.4rem,10vw,9rem);line-height:.9}
+.calls{list-style:none;margin:0;padding:0;border-top:1px solid var(--k-line)}
+.calls a{display:flex;flex-direction:column;gap:2px;padding:18px 0;border-bottom:1px solid var(--k-line);text-decoration:none}
+.calls span{font-size:.95rem;color:var(--k-mute)}
+.calls b{font:700 clamp(2rem,3.6vw,3.3rem)/1.05 var(--k-display);letter-spacing:-.025em;transition:color .3s,transform .5s var(--k-ease)}
+.calls a:hover b{color:var(--navy);transform:translateX(8px)}
+html[dir=rtl] .calls a:hover b{transform:translateX(-8px)}
+/* the clinic: skyline tile stays small (4x upscale) */
+.place__side{max-width:500px}
+.place__wide{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;border-top:1px solid var(--k-line);padding-top:clamp(24px,3vw,40px)}
+/* founder story: cap the sticky photo at 520px, tighter steps */
+@media (min-width:900px){
+  .k-story__grid{grid-template-columns:minmax(0,520px) minmax(0,1fr);justify-content:start}
+  .k-story__media{height:min(76vh,700px);top:calc(var(--hdr) + 5vh)}
+  .k-story__steps{padding:8vh 0 14vh}
+  .k-story__step{min-height:55vh}
+}
+@media (max-width:900px){.k-visit__map{min-height:200px;height:200px}}
+@media (prefers-reduced-motion:reduce){.calls b{transition:none}.calls a:hover b{transform:none}}
+.k-drag__meta .lat{display:block;font:500 .8rem/1.3 "Albert Sans",system-ui,sans-serif;color:var(--k-mute);margin-top:2px}
+html:lang(ar) .num,html:lang(ar) .panel dd a[href^="tel:"]{font-family:"Albert Sans",system-ui,sans-serif}
+html:lang(ar) .hero h1{font-size:clamp(2.4rem,4.4vw,4.6rem)}
+@media (max-width:900px){html:lang(ar) .hero h1{font-size:clamp(2rem,8.4vw,2.8rem)}}

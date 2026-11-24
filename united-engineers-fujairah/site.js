@@ -216,3 +216,5 @@
     }
   }
 })();
+/* r5: hide the caption of a card that only peeks into the carousel */
+(function(){if(!('IntersectionObserver' in window))return;document.querySelectorAll('.strip .k-drag__track').forEach(function(tr){var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('is-peek',e.intersectionRatio<.6)})},{root:tr,threshold:[0,.3,.6,.9,1]});tr.querySelectorAll('.k-drag__card').forEach(function(c){io.observe(c)})})})();
