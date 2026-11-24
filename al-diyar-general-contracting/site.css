@@ -914,3 +914,4 @@ a{color:inherit}
 }
 .villas+.k-stats{padding-top:clamp(24px,3vw,48px)}
 [dir=rtl] .ft__ar[dir=ltr],[dir=rtl] .hero__ar--en{text-align:right}
+.hero__tel{padding:10px 0 8px}.ft__cols a{min-width:44px}

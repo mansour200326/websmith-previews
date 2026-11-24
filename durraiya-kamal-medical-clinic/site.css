@@ -26,7 +26,7 @@ a{color:inherit}
 .hdr__in{display:flex;align-items:center;gap:20px;min-height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-inline-end:auto;min-height:44px}
 .brand img{width:34px;height:auto}
-.brand b{font:500 1.08rem/1.1 var(--display);letter-spacing:-.005em;display:block}
+.brand b{font:500 1.08rem/1.1 var(--display);letter-spacing:-.005em;display:block;white-space:nowrap}
 .brand small{display:block;font-size:.74rem;color:var(--mute);letter-spacing:.01em}
 .nav{display:none;gap:26px;font-size:.95rem}
 .nav a{text-decoration:none;padding-block:12px}
@@ -306,3 +306,6 @@ html[lang=ar] .k-acc__t,html[lang=ar] .dlist h3,html[lang=ar] .lede,html[lang=ar
 html[lang=ar] .visit ul li{padding:8px 22px 8px 0}
 html[lang=ar] .visit ul li::before{left:auto;right:2px}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+@media (max-width:599px){.hdr__tel{display:none}.brand small{white-space:nowrap}.hdr__in{gap:10px}.lang{padding-inline-start:10px}}
+@media (max-width:979px){.hero__photo{order:-1;aspect-ratio:16/10;margin-inline:calc(var(--pad)*-1)}.hero__photo img{object-position:55% 50%}.visit__map{min-height:240px}}
