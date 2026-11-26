@@ -1,14 +1,14 @@
 /* iSmile Dental Center concept · Websmith
    Palette from the logo: navy #0e3256 (wordmark) and the smile-curve blue #3183aa.
-   Type: Figtree (EN), Readex Pro (AR). */
+   Type: Nunito Sans (EN, 900 display / 400 body), Readex Pro (AR). */
 :root{
   --navy:#0e3256;--navy-2:#0a2540;--blue:#3183aa;--blue-ink:#1d5f83;--sky:#cfe4ef;
   --paper:#fff;--mist:#f2f6f9;--line:#d9e3ea;--ink:#0e1f2e;--mute:#4a5b6a;
-  --display:"Figtree",system-ui,sans-serif;--body:"Figtree",system-ui,sans-serif;
+  --display:"Nunito Sans",system-ui,sans-serif;--body:"Nunito Sans",system-ui,sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);--k-accent:var(--blue-ink);--k-ink:var(--navy);--k-on-accent:#fff;--k-bg:#fff;
   --pad:clamp(20px,5vw,72px);--max:1360px
 }
-[lang=ar]{--display:"IBM Plex Sans Arabic",system-ui,sans-serif;--body:"IBM Plex Sans Arabic",system-ui,sans-serif}
+[lang=ar]{--display:"Readex Pro","Nunito Sans",system-ui,sans-serif;--body:"Readex Pro","Nunito Sans",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
 body{font:400 17px/1.65 var(--body);color:var(--ink);background:var(--paper);overflow-x:hidden}
@@ -55,7 +55,7 @@ a{color:inherit}
 .hero__media{position:relative;height:clamp(300px,46svh,520px);overflow:hidden;background:#cfd8de}
 .hero__img{width:100%;height:100%;object-fit:cover;object-position:72% 50%;transform-origin:70% 50%}
 .hero__panel{position:relative;padding:26px var(--pad) 30px}
-.hero h1{font:800 clamp(2.7rem,11vw,8.4rem)/.9 var(--display);letter-spacing:-.04em}
+.hero h1{font:900 clamp(4.2rem,19vw,8.4rem)/.88 var(--display);letter-spacing:-.045em}
 [lang=ar] .hero h1{letter-spacing:0;line-height:1.15;font-weight:700}
 .hero__sub{font-size:clamp(1.02rem,1.5vw,1.22rem);line-height:1.55;max-width:34em;margin:14px 0 20px;color:#dfeaf2}
 .hero__act{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
@@ -88,7 +88,7 @@ a{color:inherit}
 
 /* ---------- generic section ---------- */
 .sec{padding-block:clamp(64px,10vw,140px)}
-.h2{font:800 clamp(2.3rem,6vw,5rem)/.95 var(--display);letter-spacing:-.035em;color:var(--navy)}
+.h2{font:900 clamp(2.3rem,6vw,5rem)/.95 var(--display);letter-spacing:-.035em;color:var(--navy)}
 [lang=ar] .h2{letter-spacing:0;line-height:1.2;font-weight:700}
 .lede{font-size:clamp(1.08rem,1.5vw,1.28rem);line-height:1.6;color:var(--mute);max-width:36em}
 .smile{display:block;width:110px;height:auto;color:var(--blue);margin-bottom:22px}
@@ -208,12 +208,12 @@ a:hover .k-arrow{transform:translateX(5px)}
 
 /* ---------- find us ---------- */
 .find__grid{display:grid;gap:30px}
-.floor{font:800 clamp(9rem,30vw,24rem)/.78 var(--display);letter-spacing:-.06em;color:var(--navy);position:relative}
+.floor{font:900 clamp(9rem,30vw,24rem)/.78 var(--display);letter-spacing:-.06em;color:var(--navy);position:relative}
 .floor small{display:block;font:600 clamp(1rem,1.6vw,1.25rem)/1.3 var(--body);letter-spacing:0;color:var(--blue-ink);margin-top:16px}
 .addr{font-size:1.18rem;line-height:1.5;color:var(--navy);font-weight:600;margin:16px 0 24px;max-width:24em}
 .contact{list-style:none;padding:0;border-top:1px solid var(--navy)}
 .contact li{display:grid;grid-template-columns:8em 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.contact span{color:var(--mute);font-size:.92rem}
+.contact li>span{color:var(--mute);font-size:.92rem}
 .contact a{font-weight:700;color:var(--navy);text-decoration:none;font-variant-numeric:tabular-nums;padding-block:4px;display:inline-block}
 .contact a:hover{color:var(--blue-ink)}
 .map{position:relative;aspect-ratio:4/3;background:var(--mist);border:1px solid var(--line);margin-top:28px;overflow:hidden}
@@ -237,7 +237,7 @@ a:hover .k-arrow{transform:translateX(5px)}
 /* ---------- services page ---------- */
 .s-open{display:grid;border-bottom:1px solid var(--line)}
 .s-open__txt{padding:clamp(40px,7vw,96px) var(--pad) 36px}
-.s-open h1{font:800 clamp(3.2rem,9vw,8rem)/.88 var(--display);letter-spacing:-.045em;color:var(--navy)}
+.s-open h1{font:900 clamp(3.2rem,9vw,8rem)/.88 var(--display);letter-spacing:-.045em;color:var(--navy)}
 [lang=ar] .s-open h1{letter-spacing:0;line-height:1.15;font-weight:700}
 .s-open .lede{margin:20px 0 26px}
 .toc{list-style:none;padding:0;counter-reset:t;columns:2 220px;column-gap:28px;max-width:40em}
@@ -252,7 +252,7 @@ a:hover .k-arrow{transform:translateX(5px)}
 .tr{display:grid;gap:18px 40px;padding-block:clamp(48px,6vw,84px);border-bottom:1px solid var(--line)}
 .tr__head{align-self:start}
 .tr__n{font:600 1rem var(--display);color:var(--blue-ink);font-variant-numeric:tabular-nums}
-.tr h2{font:800 clamp(2rem,4.4vw,3.6rem)/1 var(--display);letter-spacing:-.035em;color:var(--navy);margin-top:6px}
+.tr h2{font:900 clamp(2rem,4.4vw,3.6rem)/1 var(--display);letter-spacing:-.035em;color:var(--navy);margin-top:6px}
 [lang=ar] .tr h2{letter-spacing:0;line-height:1.3;font-weight:700}
 .tr__who{margin-top:12px;color:var(--mute);font-size:.95rem}
 .tr__body p{color:var(--ink);margin-bottom:1em;max-width:38em}
@@ -270,7 +270,7 @@ a:hover .k-arrow{transform:translateX(5px)}
 /* ---------- about page ---------- */
 .a-open{padding-block:clamp(44px,7vw,100px) 0}
 .a-open__grid{display:grid;gap:30px;align-items:end}
-.a-open h1{font:800 clamp(3rem,8vw,7.2rem)/.9 var(--display);letter-spacing:-.045em;color:var(--navy)}
+.a-open h1{font:900 clamp(3rem,8vw,7.2rem)/.9 var(--display);letter-spacing:-.045em;color:var(--navy)}
 .a-open h1 .yr{display:block;color:var(--blue-ink)}
 .a-open .vid{max-width:640px}
 @media (min-width:900px){.a-open__grid{grid-template-columns:1fr 1fr}}
@@ -305,8 +305,8 @@ a:hover .k-roll>span{transform:translateY(-50%)}
   .k-acc__row summary,.k-acc__plus::before,.k-acc__plus::after,.btn::before,.doc__ph img,.vid__ph img{transition:none}
 }
 /* r0 tweaks */
-.hero h1 .hero__h1b{font-size:.46em;letter-spacing:-.02em;line-height:1.05;margin-top:.12em}
-[lang=ar] .hero h1 .hero__h1b{font-size:.5em;letter-spacing:0}
+.hero h1 .hero__h1b{font-size:max(1.7rem,.46em);letter-spacing:-.02em;line-height:1.05;margin-top:.12em}
+[lang=ar] .hero h1 .hero__h1b{font-size:max(1.8rem,.5em);letter-spacing:0}
 .docs__side{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .docs__btns{display:flex;gap:8px}
 .docs__btns button{width:48px;height:48px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:50%;font-size:1.1rem;cursor:pointer;transition:background .3s,color .3s}
@@ -327,9 +327,63 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 .ftr li a{min-width:44px}
 @media (min-width:900px){
   /* AR: keep the sea view (right side of the photo) clear, so the panel sits on the left */
-  [dir=rtl] .hero__panel{inset-inline-start:auto;inset-inline-end:var(--pad)}
+  [dir=rtl] .hero__panel{inset-inline-start:auto;inset-inline-end:0}
   [dir=rtl] .hero__cap{inset-inline-end:auto;inset-inline-start:var(--pad)}
 }
 /* Arabic dots sit below the baseline: give the masks room so they aren't clipped */
 [lang=ar] .k-line-mask{padding-block:.12em .32em;margin-block:-.12em -.22em}
 [lang=ar] .k-rv-line{padding-block:.1em .3em;margin-block:-.1em -.3em}
+
+/* ---------- r1: art-direction fixes (Fannan round 1) ---------- */
+/* 1 hero: mobile panel overlaps the photo; desktop panel flush to the bottom-start corner */
+@media (max-width:899px){
+  .hero{background:#fff}
+  .hero__media{height:52svh;min-height:300px}
+  .hero__panel{z-index:2;margin:-64px 16px 0;padding:22px 22px 24px;background:var(--navy)}
+  .hero__panel::before{content:"";position:absolute;inset-inline-start:0;top:0;height:4px;width:72px;background:var(--blue)}
+  .hero__sub{font-size:1rem;margin:12px 0 16px}
+  .hero__act{gap:4px 18px}
+}
+@media (min-width:900px){
+  .hero h1{font-size:clamp(5rem,9.5vw,9.5rem)}
+  .hero__panel{inset-inline-start:0;bottom:0;width:min(600px,44vw);padding:clamp(32px,3.4vw,52px) clamp(30px,3.4vw,52px) clamp(30px,3.2vw,48px) var(--pad)}
+  [dir=rtl] .hero__panel{padding-inline:clamp(30px,3.4vw,52px) var(--pad)}
+  .hero__panel::before{inset-inline-start:var(--pad)}
+}
+/* 4 find us: one flooded smile-blue moment, bottom-aligned with the contact list */
+@media (min-width:900px){.find__grid{align-items:end}.map{height:auto;min-height:360px;aspect-ratio:auto}}
+.map{min-height:360px;aspect-ratio:auto;border:0;background:#3183aa}
+.map button{background:#3183aa;color:#fff;font:800 clamp(1.4rem,2.2vw,1.9rem)/1.2 var(--display)}
+.map button:hover{background:var(--blue-ink)}
+.map button .smile{color:#fff;width:140px}
+.map button span{color:#fff;font:700 1.2rem/1.4 var(--body)}
+[lang=ar] .map button span{font-size:1.2rem}
+/* 5 intro: photo moves up into the first row and takes ~7 of 12 columns */
+.intro__say{font-size:clamp(1.7rem,3vw,2.7rem)}
+@media (min-width:900px){
+  .intro__grid{grid-template-columns:5fr 7fr;column-gap:clamp(40px,5vw,90px)}
+  .intro__say{grid-column:1;grid-row:1;margin-bottom:0}
+  .intro__body{grid-column:1;grid-row:2}
+  .intro__ph{grid-column:2;grid-row:1/span 2;margin-top:0;align-self:start}
+  .intro__ph img{aspect-ratio:4/3.4!important}
+}
+@media (max-width:899px){
+  .kit li{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;align-items:baseline}
+}
+/* 6 doctors: track lines up with the page grid; arrows share a line with the note on phones */
+.docs__track{--g:max(var(--pad),calc((100% - var(--max))/2 + var(--pad)));padding-inline:var(--g);scroll-padding-inline:var(--g)}
+@media (max-width:899px){
+  .docs__head{display:block}
+  .docs__side{flex-wrap:nowrap;justify-content:space-between;margin-top:16px;gap:14px}
+  .docs__note{flex:1;min-width:0}
+  .docs__btns button{width:44px;height:44px}
+}
+/* 7 about: one full-bleed photo */
+.bleed{margin:0}
+.bleed>div{overflow:hidden}
+.bleed img{width:100%;height:clamp(320px,72svh,760px);object-fit:cover;object-position:78% 60%}
+.bleed figcaption{font-size:.88rem;color:var(--mute);padding-top:12px}
+/* 8 services implants: tight crop, not the home intro scene */
+.tr__tight{width:100%;max-width:560px;aspect-ratio:840/740;object-fit:cover}
+@media (min-width:900px){.intro__ph{position:sticky;top:96px}.intro__ph img{aspect-ratio:1/1.02!important;object-position:58% 50%}}
+@media (max-width:899px){[lang=ar] .hero h1{font-size:clamp(3.2rem,15vw,8.4rem)}[lang=ar] .hero h1>.k-line-mask:first-child{white-space:nowrap}}

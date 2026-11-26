@@ -453,3 +453,42 @@ html[lang=ar] .bleed h2{line-height:1.15;letter-spacing:0}
   html[lang=ar] .hero h1{max-width:12em;font-size:clamp(2.4rem,4.9vw,5rem)}
 }
 @media (max-width:700px){.sec{padding-block:54px}}
+
+/* ---------- round 3 (Fannan r2 fixes) ---------- */
+@keyframes kb{from{transform:scale(1.14)}to{transform:scale(1.08)}}
+.hero h1{letter-spacing:-.035em;word-spacing:.06em}
+.h2{letter-spacing:-.035em;word-spacing:.06em}
+html[lang=ar] .hero h1,html[lang=ar] .h2{word-spacing:0}
+.hero__media img{object-position:80% 40%;transform-origin:72% 40%}
+@media (min-width:641px){
+  .hero__media img{object-position:80% 35%}
+  /* scrim only behind the text column (0–55%), plus a thin top strip for the nav */
+  .hero__media::after,html[lang=ar] .hero__media::after{background:linear-gradient(180deg,rgba(8,20,14,.4) 0,rgba(8,20,14,0) 16%),linear-gradient(90deg,rgba(8,20,14,.8) 0%,rgba(8,20,14,.55) 32%,rgba(8,20,14,.18) 48%,transparent 55%)}
+}
+/* paragraph links: no tap-target padding inside running text */
+p .tlink.tlink{display:inline;padding-block:0}
+/* story / band figures */
+.story__fig{max-width:520px;align-self:end}
+@media (max-width:899px){
+  .story__fig,.band__fig{max-width:100%!important;width:100%;justify-self:stretch}
+  .story__fig .fig45,.band__fig .fig45{aspect-ratio:4/5}
+}
+/* visit map: smaller, with a visible address fallback until the map has loaded */
+.k-visit__map{height:320px;min-height:0;max-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
+.k-visit__map .map-addr{position:relative;z-index:0;font-weight:600;font-size:1.06rem;line-height:1.4;color:var(--ink);max-width:22em}
+.k-visit__map .map-addr small{display:block;font-weight:400;font-size:.92rem;color:var(--mute);margin-top:4px}
+/* about: full name as the headline */
+.ph h1.about-name{font-size:clamp(2.6rem,6vw,5.6rem);line-height:.95;letter-spacing:-.035em;word-spacing:.06em;max-width:11em}
+.lede b.lede-lead{font-weight:600;color:var(--ink)}
+/* services: type-led development block */
+.svc__type{font:800 clamp(2.2rem,4.8vw,4.4rem)/1 var(--f);letter-spacing:-.035em;word-spacing:.06em;color:var(--green);border-top:6px solid var(--sun);padding-top:24px}
+.svc__type span{color:var(--sun-d);padding-inline:.18em}
+html[lang=ar] .svc__type{line-height:1.3;letter-spacing:0;word-spacing:0}
+/* r3: keep the headline inside the left 0–52% so the enlarged sign stays clear */
+@media (min-width:641px){
+  .hero h1{font-size:clamp(2.7rem,5.5vw,5.6rem);max-width:9.4em}
+  [dir=rtl] .hero__in>div:first-child{max-width:min(40rem,48vw)}
+  html[lang=ar] .hero h1{font-size:clamp(2.2rem,3.6vw,3.9rem);max-width:none}
+  .hero__lede{max-width:min(33em,46vw)}
+}
+@media (max-width:640px){.hero__media{min-height:max(72svh,600px)}}
