@@ -19,12 +19,12 @@
   }
   var lineEls=[].slice.call(document.querySelectorAll('[data-reveal=lines]'));
   if(!RM){
-    var ready=function(){lineEls.forEach(split)};
+    var ready=function(){lineEls.forEach(split);document.querySelectorAll('[data-hero]').forEach(function(e){requestAnimationFrame(function(){e.classList.add('is-in')})})};
     if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ready);else ready();
     var rw=innerWidth;addEventListener('resize',function(){if(Math.abs(innerWidth-rw)>40){rw=innerWidth;lineEls.forEach(function(e){var on=e.classList.contains('is-in');split(e);if(on)e.classList.add('is-in')})}});
   }
   // observe
-  var els=document.querySelectorAll('[data-reveal]');
+  var els=document.querySelectorAll('[data-reveal]:not([data-hero])');
   if(RM||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-in')});return}
   // clip reveals are fully clipped (zero visible area), which IntersectionObserver never reports, so watch their parent
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){(e.target.__kRv||[e.target]).forEach(function(x){x.classList.add('is-in')});io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px',threshold:0});
@@ -85,4 +85,18 @@
       r.addEventListener('pointerleave',function(){fl.classList.remove('is-on')});
     });
   }
+})();
+/* services: sticky-index highlight + phones open one entry at a time */
+(function(){
+  var ds=[].slice.call(document.querySelectorAll('.svc__d'));if(!ds.length)return;
+  var mq=matchMedia('(max-width:900px)');
+  function target(){var h=location.hash&&document.getElementById(location.hash.slice(1));return h&&h.querySelector('.svc__d')}
+  function setup(){var t=target();ds.forEach(function(d,i){d.open=!mq.matches||(t?d===t:i===0)})}
+  setup();mq.addEventListener&&mq.addEventListener('change',setup);
+  addEventListener('hashchange',function(){var t=target();if(t)t.open=true});
+  document.addEventListener('click',function(e){var s=e.target.closest('.svc__d>summary');if(s&&!mq.matches)e.preventDefault()});
+  var links={};document.querySelectorAll('.grp__side ol a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){a.closest('ol').querySelectorAll('a').forEach(function(x){x.classList.remove('is-on')});a.classList.add('is-on')}})},{rootMargin:'-35% 0px -55% 0px'});
+  document.querySelectorAll('article.svc[id]').forEach(function(s){io.observe(s)});
 })();
