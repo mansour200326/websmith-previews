@@ -524,3 +524,9 @@ html[lang=ar] .items li::before{content:counter(it,arabic-indic);font-style:norm
 @media (min-width:980px){.person>div{display:flex;flex-direction:column}.person>div img.tone{order:3;margin:14px 0 0}.person .r{margin-bottom:0}}
 .dir-label{border-top:1px solid var(--ink);padding:56px 0 6px;margin-top:28px;font:italic 400 1.45rem/1.2 var(--serif);color:var(--blue)}
 .dir-label+.person{border-top:0}
+
+/* Fannan r3 polish */
+@media (min-width:900px){
+html[lang=ar] .hero h1 .big{font-size:clamp(3.4rem,min(11vw,16svh),9.5rem);line-height:1.15;padding-bottom:.08em}
+html:not([lang=ar]) .hero h1 .big{font-size:clamp(4.6rem,min(19.5vw,30svh),17.5rem)}
+}
