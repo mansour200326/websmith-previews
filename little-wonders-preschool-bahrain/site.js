@@ -15,6 +15,12 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}})},{threshold:.25});
     rulers.forEach(function(r){io.observe(r)});
   }else rulers.forEach(function(r){r.classList.add('is-in')});
+  // once the hero wipe has played, drop it so a resize or media-query change can't replay it (photo stays visible)
+  var hp=document.querySelector('.hero__photo');
+  if(hp){hp.addEventListener('animationend',function(e){if(e.target===hp)hp.classList.add('is-done')});setTimeout(function(){hp.classList.add('is-done')},2200);}
   // very tall viewports (full-page captures): show everything at once
   if(innerHeight>1800){document.querySelectorAll('[data-reveal],.day__ruler,.k-drag').forEach(function(el){el.classList.add('is-in')});}
 })();
+// the hero stamp turns slowly with the scroll (not under reduced motion)
+(function(){var st=document.querySelector('.stamp');if(!st||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var tk=false;addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){st.style.setProperty('--rot',(scrollY*.12)+'deg');tk=false})},{passive:true});})();

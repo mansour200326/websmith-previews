@@ -493,3 +493,84 @@ h2{font:400 clamp(2.2rem,5.6vw,4.6rem)/1.02 var(--k-display);letter-spacing:-.02
 .collage .ph .clip{position:relative}
 .collage .ph img{position:absolute;inset:0}
 .collage{align-self:start;align-content:start}
+
+/* ================= Fannan round 2 ================= */
+h2{text-wrap:balance}
+/* 5 hero: the overlap cuts cleanly over the posters; the orange band peeks into the first screen */
+.hero h1 .ln--o{-webkit-text-stroke:.07em #fff;paint-order:stroke fill}
+@media (min-width:1000px){.hero{padding-bottom:32px}}
+.hero__photo.is-done,.k-js .hero__photo.is-done{animation:none!important;clip-path:none!important}
+
+/* 1 campus: portrait photos match the facts column, no stacked dead space */
+.campus{padding-bottom:clamp(40px,5vw,72px)}
+.learn{padding-top:clamp(40px,5vw,72px)}
+@media (min-width:1000px){.collage .ph .clip{aspect-ratio:1/1!important}}
+/* 8 campus captions under the photo on phones */
+@media (max-width:639px){
+  .collage{row-gap:14px}
+  .collage .ph figcaption{position:static;margin-top:6px;color:var(--k-mute);font-size:12px;line-height:1.35;text-shadow:none}
+}
+
+/* 2 quotes: whole opening mark, less air below */
+.k-quotes{padding-bottom:clamp(48px,6vw,80px)}
+.k-quotes__slide{padding-top:.4em}
+.k-quotes__slide blockquote::before{line-height:1;height:.55em;overflow:visible;font-family:var(--k-display)}
+
+/* 6 curriculum: editorial ruled grid, not cards */
+.areas{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 clamp(18px,2.4vw,36px)}
+.areas li{position:relative;background:none;border-radius:0;border-top:1px solid var(--k-ink);padding:16px 0 22px;gap:12px;justify-content:flex-start!important;min-height:0!important;transform:none}
+.areas li::after{content:"";position:absolute;top:-2px;inset-inline-start:0;height:3px;width:0;background:var(--orange);transition:width .7s var(--k-ease)}
+.areas li:hover{background:none;color:inherit;transform:none}
+.areas li:hover span{color:var(--k-mute)}
+.areas li:hover::after{width:100%}
+@media (max-width:639px){.areas b{font-size:1.14rem}.areas span{font-size:.88rem;line-height:1.45}.areas li{padding:14px 0 18px;gap:6px}}
+@media (min-width:1000px){.areas{grid-template-columns:repeat(4,minmax(0,1fr))!important}.areas li{padding:20px 0 30px}}
+/* 9 */
+.learn__staff{max-width:30ch;text-wrap:balance}
+[lang=ar] .learn__staff{max-width:36ch}
+/* 7 curriculum photos on phones: a swipe row at 80vw */
+@media (max-width:639px){
+  .hands{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-inline:calc(-1 * var(--pad));padding-inline:var(--pad);scroll-padding-inline:var(--pad);scrollbar-width:none;overscroll-behavior-x:contain}
+  .hands::-webkit-scrollbar{display:none}
+  .hands .ph{flex:0 0 80vw;scroll-snap-align:start}
+  .hands .ph .clip,.hands .h1 .clip{aspect-ratio:4/3!important}
+  .hands figcaption{font-size:12px}
+}
+
+/* 3 visit: the sign as a small tile in the info column, the map takes the big space */
+.visit__photo{max-width:520px}
+.visit__photo .clip{aspect-ratio:12/5!important;height:auto!important;min-height:0!important;max-height:380px}
+.visit__photo img{object-position:50% 35%;transform:scale(1.25);transform-origin:45% 50%}
+@media (min-width:1000px){
+  .visit__grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:stretch}
+  .k-visit__map{grid-column:auto;min-height:620px;height:100%}
+}
+
+/* 4 Arabic descenders inside line masks */
+[lang=ar] .po h1 .k-line-mask,[lang=ar] .hero h1 .k-line-mask,[lang=ar] .ab-open h1 .k-line-mask{padding-bottom:.25em;margin-bottom:-.25em}
+[lang=ar] .k-rv-line{padding-bottom:.2em;margin-bottom:-.2em}
+/* 10 AR marquee keeps the Young Serif class names */
+.k-marquee[lang=en]{--k-display:"Young Serif",Georgia,serif}
+[lang=ar] .rooms .k-marquee[lang=en] .k-mq-word{font-family:"Young Serif",Georgia,serif;font-weight:400;letter-spacing:-.02em}
+
+/* hero stamp: the crest with the real admission facts, hanging off the photo edge; turns as you scroll */
+.hero{position:relative}
+.stamp{grid-area:photo;align-self:end;justify-self:end;position:relative;z-index:3;width:clamp(104px,26vw,150px);aspect-ratio:1;margin:0 14px 14px 0;border-radius:50%;background:var(--orange);color:var(--k-ink);display:grid;place-items:center;box-shadow:0 18px 40px -18px rgba(19,32,63,.55);pointer-events:none}
+.stamp svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(var(--rot,0deg));transition:transform .2s linear}
+.stamp text{font:700 15.5px var(--k-body);fill:currentColor}
+[lang=ar] .stamp text{font:400 15px "Young Serif",Georgia,serif}
+.stamp img{width:40%;height:auto;background:#fff;border-radius:50%;padding:3px}
+[dir=rtl] .stamp{margin:0 0 14px 14px}
+.k-js .stamp{opacity:0;transform:scale(.6) rotate(-40deg);animation:lw-rise 1.2s var(--k-ease) 1.1s forwards}
+@media (max-width:999px){.hero__photo figcaption{inset-inline-end:auto;inset-inline-start:14px}}
+@media (min-width:1000px){
+  .stamp{justify-self:start;margin:0;translate:-50% 38%}
+  [dir=rtl] .stamp{translate:50% 38%;margin:0}
+  .day{position:relative;z-index:1}
+  .hero{z-index:2}
+}
+@media (prefers-reduced-motion:reduce){.k-js .stamp{animation:none;opacity:1;transform:none}.stamp svg{transform:none;transition:none}}
+/* swipe row: off-screen cards never cross the reveal observer, so show them as-is */
+@media (max-width:639px){.k-js .hands [data-reveal],.k-js .hands [data-reveal]>img{clip-path:none!important;opacity:1!important;transform:none!important}}
+@media (min-width:1000px){.learn__staff{margin-inline-start:calc(50% + 18px);border-top:3px solid var(--orange);padding-top:20px}}
+.hands:focus-visible{outline:3px solid var(--orange);outline-offset:4px}

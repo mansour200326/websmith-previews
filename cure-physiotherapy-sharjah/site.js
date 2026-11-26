@@ -62,6 +62,14 @@
       var vel=v*16;(function glide(){tr.scrollLeft-=vel;vel*=.93;if(Math.abs(vel)>.5)raf=requestAnimationFrame(glide);else tr.classList.remove('is-drag')})()});
   });
 
+  /* count-up for real numbers (once, ease-out, off under reduced motion) */
+  document.querySelectorAll('[data-k-count]').forEach(function(el){
+    if(RM||!('IntersectionObserver' in window))return;
+    var to=parseFloat(el.getAttribute('data-k-count')),from=parseFloat(el.getAttribute('data-k-from'))||0,d=(el.getAttribute('data-k-count').split('.')[1]||'').length;
+    new IntersectionObserver(function(es,o){if(!es[0].isIntersecting)return;o.disconnect();var t0=performance.now();
+      (function tick(t){var p=Math.min(1,(t-t0)/900),e=1-Math.pow(1-p,4);el.textContent=(from+(to-from)*e).toFixed(d);if(p<1)requestAnimationFrame(tick)})(t0)},{threshold:.4}).observe(el);
+  });
+
   /* kit 16: open-now badge (Dubai time) + tap-to-load map */
   document.querySelectorAll('[data-k-hours]').forEach(function(root){
     var h={};try{h=JSON.parse(root.getAttribute('data-k-hours'))}catch(e){}

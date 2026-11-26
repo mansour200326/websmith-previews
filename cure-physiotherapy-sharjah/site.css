@@ -57,7 +57,7 @@ bdi,.ltr{unicode-bidi:isolate}
 @media (min-width:900px){.hero>.wrap{max-width:none}.hero h1{font-size:clamp(2.6rem,4.85vw,7rem)}.hero h1 .l>span{white-space:nowrap}}
 .hero h1 .l{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
 .hero h1 .l>span{display:inline-block;text-wrap:balance}
-@media (min-width:700px){.hero h1 .l2{padding-inline-start:6%}}
+@media (min-width:700px){.hero h1 .l2{padding-inline-start:38%}}
 html:lang(ar) .hero h1{font-size:clamp(2rem,9vw,7.6rem);font-weight:600}
 @media (min-width:700px){html:lang(ar) .hero h1{font-size:clamp(2.4rem,5vw,6.4rem)}}
 html:lang(ar) .hero h1 .w{white-space:nowrap}
@@ -67,7 +67,9 @@ html:lang(ar) .hero h1 .w{white-space:nowrap}
 @keyframes rise{to{transform:none}}
 .hero__ph{position:relative;margin-top:clamp(18px,2.6vw,40px);width:100%;height:min(78vh,760px);overflow:hidden;background:var(--mist)}
 .hero__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
-@media (max-width:699px){.hero__ph{height:min(50svh,440px)}.hero__ph img{object-position:42% 55%}}
+.hero__ph picture{display:block;width:100%;height:100%}
+@media (min-width:900px){.hero__ph{height:clamp(340px,32vw,560px)}.hero__ph img{object-position:50% 100%}}
+@media (max-width:699px){.hero__ph{height:auto;aspect-ratio:3/2}.hero__ph img{object-position:50% 40%}}
 .k-js .hero__ph{clip-path:inset(0 0 100% 0);animation:wipe 1.3s .2s var(--ease) forwards}
 .k-js .hero__ph img{transform:scale(1.08);animation:settle 1.8s .2s var(--ease) forwards}
 @keyframes wipe{to{clip-path:inset(0 0 0 0)}}
@@ -194,6 +196,8 @@ details[open] .cond__pm::after{transform:rotate(0)}
 .k-js .k-drag .pt{opacity:0;transform:translateX(40px);transition:opacity .9s ease,transform 1.1s var(--ease)}
 [dir=rtl].k-js .k-drag .pt{transform:translateX(-40px)}
 .k-js .k-drag.is-in .pt{opacity:1;transform:none}
+.k-js .k-drag .pt__fig{clip-path:inset(100% 0 0 0 round 14px);transition:clip-path 1.1s var(--ease);transition-delay:calc(var(--i,0)*70ms)}
+.k-js .k-drag.is-in .pt__fig{clip-path:inset(0 0 0 0 round 14px)}
 
 /* ---------- insurance (brand flood) ---------- */
 .ins{background:var(--blue-ink);color:#fff}
@@ -206,13 +210,17 @@ details[open] .cond__pm::after{transform:rotate(0)}
 .ins a.tl{color:#fff}
 
 /* ---------- reviews ---------- */
-.rv{display:grid;gap:40px}
-@media (min-width:980px){.rv{grid-template-columns:.8fr 1.4fr;gap:clamp(40px,6vw,110px)}}
-.rv__score{font:600 clamp(6rem,15vw,13rem)/.8 var(--display);letter-spacing:-.04em;color:var(--ink)}
+.rv{display:grid;gap:clamp(36px,5vw,70px)}
+.rv__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px clamp(18px,3vw,44px)}
+.rv__score{font:600 clamp(7rem,18vw,15rem)/.8 var(--display);letter-spacing:-.04em;color:var(--ink)}
 .rv__score small{font-size:.32em;letter-spacing:-.02em;color:var(--ink);margin-inline-start:.1em}
-.rv__meta{margin-top:16px;color:var(--mute)}
-.rv__list{list-style:none;border-top:1px solid var(--ink)}
-.rv__list li{padding:28px 0;border-bottom:1px solid var(--line)}
+.rv__meta{color:var(--mute);max-width:24em;font-size:clamp(1rem,1.3vw,1.15rem)}
+.rv__score [data-k-count]{font-variant-numeric:tabular-nums}
+.rv__list{list-style:none;display:grid;gap:0 clamp(28px,3.5vw,56px)}
+@media (min-width:900px){.rv__list{grid-template-columns:repeat(3,1fr)}}
+.rv__list li{padding:24px 0 30px;border-top:1px solid var(--ink)}
+.rv__list blockquote{display:flex;flex-direction:column;height:100%}
+.rv__list footer{margin-top:auto!important;padding-top:14px}
 .rv__list blockquote p{font:italic 500 clamp(1.2rem,2vw,1.55rem)/1.42 var(--display)}
 .rv__list footer{margin-top:12px;font-size:.92rem;color:var(--mute)}
 .rv__list footer b{color:var(--ink)}
@@ -334,7 +342,7 @@ a:hover .k-roll>span{transform:translateY(-50%)}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .k-js [data-reveal],.k-js [data-reveal]>img,.k-rv-line>span,.k-js .hero h1 .l>span,.k-js .hero__ph,.k-js .hero__ph img,.k-js .tx__ph>img,.k-js .svh h1 span,.k-js .k-drag .pt{opacity:1!important;transform:none!important;clip-path:none!important}
+  .k-js [data-reveal],.k-js [data-reveal]>img,.k-rv-line>span,.k-js .hero h1 .l>span,.k-js .hero__ph,.k-js .hero__ph img,.k-js .tx__ph>img,.k-js .svh h1 span,.k-js .k-drag .pt,.k-js .k-drag .pt__fig{opacity:1!important;transform:none!important;clip-path:none!important}
   .k-roll>span::after{display:none}
   .k-story__media figure{transform:none}
 }
