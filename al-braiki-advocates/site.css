@@ -425,5 +425,37 @@ a:hover .k-roll>span,.k-roll:hover>span{transform:translateY(-50%)}
 
 @media (max-width:600px){.hero__svc{display:none}}
 @media (max-width:600px){.hero__acts{gap:4px 20px}.hero__acts .k-link{font-size:.95rem}.hero__rate{margin-top:6px}.hero h1{margin-bottom:10px}.hero__lede{margin-bottom:16px}}
-@media (min-width:901px){.ab-open{align-items:start}.ab-open__ph{position:sticky;top:var(--hd);height:calc(100svh - var(--hd));max-height:980px}}
 .sv-open__ar--ar::before{content:attr(data-w)}
+
+/* ---------- round 3 (Fannan r2 fixes) ---------- */
+.hero h1{font-size:clamp(3.4rem,7.5vw,8rem);line-height:.92}
+.hero__ph img{filter:saturate(.75) contrast(1.1) brightness(.95)}
+.hero__ph::after{opacity:.18}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1)}}
+[dir=rtl] .hero__en.hero__en--ar{font:700 clamp(1.05rem,1.55vw,1.5rem)/1.6 "Amiri",serif;direction:rtl;color:#ead3a0}
+[lang=ar] .hero h1{font-family:"Amiri",serif;font-weight:700;font-size:clamp(3.4rem,7.5vw,8rem);line-height:1.15}
+@media (max-width:900px){.hero h1,[lang=ar] .hero h1{font-size:3.4rem}[lang=ar] .hero h1{line-height:1.2}[dir=rtl] .hero__en.hero__en--ar{font-size:1.02rem}}
+.sv-open__ar:not(.sv-open__ar--ar){top:clamp(56px,8vw,120px);bottom:auto;left:auto;right:var(--gut);inset-inline-end:auto;font-size:clamp(3rem,4.4vw,4.2rem);color:#7a1b26;opacity:.05}
+@media (max-width:1200px){.sv-open__ar{display:none}}
+.sv-open__ar:not(.sv-open__ar--ar){right:var(--gut)}
+@media (max-width:900px){.sv-open__ar{display:none}}
+/* about opening: small grayscale founder portrait on its own paper panel */
+.ab-open{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:end;min-height:0}
+.ab-open__ph{height:auto;align-self:end;justify-self:center;padding:48px 40px 0;margin:clamp(48px,7vw,110px) 0;background:#efe7dc}
+.ab-open__ph img{max-width:360px;filter:grayscale(1) contrast(1.05)}
+.ceo__ph img{filter:grayscale(1) contrast(1.05)}
+@media (max-width:900px){
+  .ab-open{grid-template-columns:1fr}
+  .ab-open__ph{height:42svh;justify-self:stretch;margin:0;padding:24px var(--gut) 0;display:flex;justify-content:center}
+  .ab-open__ph img{width:min(300px,100%);height:100%;max-width:300px;object-fit:cover;object-position:50% 20%}
+  .ab-open__txt{padding-top:28px}
+}
+.people__call{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.people__call p{margin:0;font:400 clamp(1.35rem,2.2vw,2rem)/1.3 var(--display);max-width:28em}
+.nw{white-space:nowrap}
+@media (max-width:600px){.people__call .btn{width:100%;justify-content:center}}
+
+@media (max-width:600px){.hero__led{display:none}}
+.hero__panel{z-index:2}
+@media (min-width:901px){.ab-open__ph{justify-self:start;margin-inline-start:var(--gut)}}
+@media (min-width:901px){.ab-open{align-items:start}.ab-open__ph{align-self:start;margin-top:clamp(48px,7vw,110px);margin-bottom:0}}
