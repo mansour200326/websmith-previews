@@ -311,3 +311,8 @@ html:lang(ar) .k-visit__map::before{content:"السيب";font-family:"Readex Pro
 .k-visit__map:has(iframe)::before,.k-visit__map:has(iframe)::after{display:none}
 .k-visit__map iframe{z-index:2}
 .k-visit__map button{margin-top:90px}
+@media (min-width:760px){
+  .panel--side{flex-direction:row}
+  .panel--side .panel__img{flex:0 0 52%;aspect-ratio:auto;min-height:440px}
+  .panel--side .panel__body{justify-content:flex-end;padding:30px}
+}

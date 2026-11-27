@@ -358,3 +358,7 @@ a:hover .roll>span{transform:translateY(-50%)}
 @media (max-width:429px){[lang=ar] .hd__wa{display:none}}
 .visit dd{overflow-wrap:anywhere;min-width:0}
 @media (max-width:479px){.visit dl{grid-template-columns:1fr}.visit dt{border-bottom:0;padding-bottom:0;font-size:.9rem}.visit dd{padding-top:2px}}
+.hd__call,.hd__wa{min-width:44px;justify-content:center}
+.urgent__num{padding-block:8px}
+.visit dd a,.ft li a{min-height:32px}
+[lang=en] .intro__ar{text-align:left}
