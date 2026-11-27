@@ -850,6 +850,12 @@ html:lang(ar) .sessband h2,html:lang(ar) .feenotes h3{line-height:1.25!important
 .rooms .k-drag__card:nth-child(3){flex-basis:min(64vw,330px)}
 .rooms .k-drag__card:nth-child(3) .k-drag__fig{aspect-ratio:auto;height:calc(min(84vw,620px) * .625)}
 @media (min-width:900px){.hero .k-split__photo{aspect-ratio:4/5}}
+/* r5 (Fannan round 4) */
+html{overflow-x:clip}
+[data-reveal=clip]{overflow:hidden}
+main:has(> .cta:last-child) + .ft{margin-top:0}
+@media (max-width:600px){.wide img,.wide img[src]{aspect-ratio:16/9;object-position:50% 40%}}
+html:lang(ar) .times b{font-family:"Baloo Bhaijaan 2",var(--k-display);letter-spacing:0;line-height:1.15}
 /* r4 (Fannan independent): villa band, address panel, quotes, teach, about */
 .villa{padding:clamp(70px,10vw,140px) 0 clamp(50px,7vw,100px)}
 .villa__head{display:grid;gap:16px;margin-bottom:clamp(26px,4vw,48px)}
