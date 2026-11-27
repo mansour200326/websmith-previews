@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/grandma-nursery-doha/ar/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700;800&family=Almarai:wght@400;700;800&family=Gabarito:wght@700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../img/water-park.webp" imagesrcset="../img/water-park-m.webp 1100w, ../img/water-park.webp 2200w" imagesizes="(min-width:1080px) 70vw, 100vw">
+<link rel="preload" as="image" href="../img/water-park-tall.webp" media="(max-width:759px)"><link rel="preload" as="image" href="../img/water-park.webp" imagesrcset="../img/water-park-m.webp 1100w, ../img/water-park.webp 2200w" imagesizes="(min-width:1080px) 70vw, 100vw" media="(min-width:760px)">
 <link rel="stylesheet" href="../site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -37,8 +37,8 @@
 <section class="hero" aria-label="حضانة جراندما">
   <h1 class="hero__h"><span class="ln"><span style="--i:0">نضحك، نتعلّم،</span></span><span class="ln"><span style="--i:1">ونكبر.</span></span></h1>
   <div class="hero__photo">
-    <img src="../img/water-park.webp" srcset="../img/water-park-m.webp 1100w, ../img/water-park.webp 2200w" sizes="(min-width:1080px) 70vw, 100vw" width="2200" height="1650" fetchpriority="high" alt="الحديقة المائية في حضانة جراندما: مسابح صغيرة وزحليقة وسياج أبيض تحت مظلة حمراء">
-    <span class="hero__cap">حديقتنا المائية تحت المظلة</span>
+    <picture><source media="(max-width:759px)" srcset="../img/water-park-tall.webp" width="1006" height="1500"><img src="../img/water-park.webp" srcset="../img/water-park-m.webp 1100w, ../img/water-park.webp 2200w" sizes="(min-width:1080px) 70vw, 100vw" width="2200" height="1650" fetchpriority="high" alt="الحديقة المائية في حضانة جراندما: مسابح صغيرة وزحليقة وسياج أبيض تحت مظلة حمراء"></picture>
+    <span class="hero__cap">حديقتنا المائية تحت المظلة</span><a class="hero__wa" href="#branches"><svg class="wa" aria-hidden="true"><use href="#wa"/></svg><span>واتساب فرعكم</span><span class="k-arrow" aria-hidden="true">→</span></a>
   </div>
   <div class="hero__side">
     <p class="hero__lead" style="--i:0">حضانة في الدوحة منذ 2012، وبيت ثانٍ لأطفالكم من عمر شهرين إلى 4 سنوات. نفتح من 6:30 صباحاً حتى 6:30 مساءً، ويتعلم الأطفال الفرنسية والعربية كل يوم دون رسوم إضافية.</p>
@@ -115,6 +115,18 @@
       <li class="day__row day__row--meal" data-reveal><time>13:10</time><span>الغداء</span></li>
       <li class="day__row" data-reveal><time>13:50</time><span>منطقة اللعب الناعم</span></li>
     </ol>
+  </div>
+</section>
+
+<section class="sec lang2" aria-labelledby="lang-h">
+  <div class="wrap lang2__grid">
+    <div class="lang2__type">
+      <h2 class="lang2__h" id="lang-h" data-reveal><span class="lang2__ar">مرحبا.</span> <span lang="fr">Bonjour.</span></h2>
+      <p class="lead" data-reveal>الفرنسية والعربية، 40 دقيقة لكل لغة، كل يوم، دون رسوم إضافية. في غرفة الفرنسية والعربية حروف على الجدار ولوح أوتاد ولغز للحروف العربية، وبرج إيفل مرسوم باليد.</p>
+      <a class="k-link k-link--under" href="services.html#langs" data-reveal style="font-weight:700">مركز الفرنسية والعربية <span class="k-arrow" aria-hidden="true">→</span></a>
+    </div>
+    <figure class="lang2__a" data-reveal><div class="k-zoom"><img src="../img/french-arabic-room.webp" width="1100" height="1411" loading="lazy" alt="غرفة الفرنسية والعربية: لافتة Français ولوح أوتاد ولغز الحروف العربية على حامل صغير"></div><figcaption>غرفة الفرنسية والعربية</figcaption></figure>
+    <figure class="lang2__b" data-reveal data-reveal-delay="150"><div class="k-zoom"><img src="../img/french-mural.webp" width="1094" height="841" loading="lazy" alt="برج إيفل مرسوم باليد مع مناطيد ولافتة Bonjour"></div><figcaption>مرسوم على جدار الصف</figcaption></figure>
   </div>
 </section>
 
