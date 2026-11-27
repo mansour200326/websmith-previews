@@ -439,3 +439,5 @@ a:hover .roll>span{transform:translateY(-50%)}
 .appband p{color:var(--mute-d);margin:8px 0 0;max-width:32rem}
 .appband .apps{margin:0}
 [lang=ar] .appband h2{font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.2}
+@media (max-width:379px){[lang=ar] .hd{gap:6px}[lang=ar] .hd__brand{gap:8px;min-width:0}[lang=ar] .hd__name{font-size:.84rem}[lang=ar] .hd__lang{padding:0 8px}}
+@media (max-width:339px){[lang=ar] .hd__name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
