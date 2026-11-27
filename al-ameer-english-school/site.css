@@ -452,3 +452,4 @@ p{margin:0 0 1em;text-wrap:pretty}
 .ph__ph figcaption{font-size:.88rem;color:var(--mute);padding-top:10px}
 @media (max-width:699px){.ph__ph .k-zoom{aspect-ratio:4/3}}
 .ph:has(.ph__ph){border-bottom:0;padding-bottom:0}
+.ftr li a{min-width:44px}
