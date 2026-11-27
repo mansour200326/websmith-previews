@@ -283,25 +283,30 @@ a{color:inherit}
 .rooms__head p{margin-top:-6px}
 .rooms{order:1;display:grid;gap:22px;grid-template-columns:1fr 1fr}
 .rooms__head .facil{order:2}
-.room{margin:0;max-width:300px}
+.room{margin:0}
 .room .k-zoom{border-radius:18px}
 .room img{width:100%;aspect-ratio:6/5;object-fit:cover}
 .room figcaption{font-size:.92rem;margin-top:8px;font-weight:600}
 .room figcaption small{display:block;font-weight:400;color:var(--k-mute);font-size:.88rem}
-@media (min-width:640px) and (max-width:999px){.rooms{grid-template-columns:repeat(3,1fr)}}
+/* BooBoo tall across two rows, no holes: 2 columns on phones, 3 from 640px */
+.room--a{grid-column:1;grid-row:1}
+.room--b{grid-column:2;grid-row:1/3;display:flex;flex-direction:column}
+.room--b .k-zoom{position:relative;flex:1 1 auto;min-height:0}
+.room--b img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+.room--c{grid-column:1;grid-row:2}
+.room--d{grid-column:1;grid-row:3}
+.room--e{grid-column:2;grid-row:3}
+@media (min-width:640px){
+  .rooms{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .room--c{grid-column:3;grid-row:1}
+  .room--d{grid-column:1;grid-row:2}
+  .room--e{grid-column:3;grid-row:2}
+}
 @media (min-width:1000px){
   .rooms__grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:26px;align-items:start}
   .rooms__head{display:block;grid-column:1/6;grid-row:1}
   .rooms__head p{margin-top:16px}
-  .rooms{grid-column:6/13;grid-row:1;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;gap:26px 22px;margin-top:.5rem}
-  .room{max-width:none}
-  .room--a{grid-column:1;grid-row:1}
-  .room--b{grid-column:2;grid-row:1/3;display:flex;flex-direction:column}
-  .room--b .k-zoom{position:relative;flex:1 1 auto;min-height:0}
-  .room--b img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
-  .room--c{grid-column:3;grid-row:1}
-  .room--d{grid-column:1;grid-row:2}
-  .room--e{grid-column:3;grid-row:2}
+  .rooms{grid-column:6/13;grid-row:1;gap:26px 22px;margin-top:.5rem}
 }
 .facil{margin-top:clamp(40px,6vw,70px);border-top:2px solid var(--k-ink);padding-top:22px;display:grid;gap:14px}
 .facil h3{font:800 1.5rem var(--k-display)}
