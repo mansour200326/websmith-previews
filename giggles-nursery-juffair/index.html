@@ -95,19 +95,15 @@
   </div>
 </section>
 
-<section class="k-drag rooms" data-k-drag aria-labelledby="rooms-h">
-  <div class="k-drag__head">
-    <div><h2 id="rooms-h" data-reveal="lines">Inside the villa</h2><p data-reveal>Bright classrooms, indoor and outdoor play areas, and interactive tools. Drag or swipe to look around.</p></div>
-    <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="Previous photo">←</button><button type="button" data-k-drag-next aria-label="Next photo">→</button></div>
+<section class="villa" aria-labelledby="rooms-h">
+  <div class="wrap villa__head">
+    <h2 id="rooms-h" data-reveal="lines">Inside the villa</h2>
+    <p data-reveal>Bright, comfortable classrooms, large indoor and outdoor play areas, and interactive tools for learning through play.</p>
   </div>
-  <div class="k-drag__track" tabindex="0" role="region" aria-label="Photos of the nursery, scroll sideways">
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/room-arches.webp" width="2400" height="615" alt="Classroom with two arched windows, the alphabet on the wall and a Magical Words board" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Classroom</h3><span>Arched windows, the alphabet wall</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/floor.webp" width="2400" height="815" alt="Children's feet on a colourful interactive play floor with stars and hearts" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Interactive floor</h3><span>Interactive tools for fun learning</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/slide.webp" width="1658" height="1800" alt="Wooden playhouse with a green slide in the outdoor play area" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Outdoor play area</h3><span>Grass, slide and swings</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/fruit-hands.webp" width="2400" height="896" alt="Toy fruit basket, a toy till and paper fruit on the play shop table" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Fruit shop corner</h3><span>Role play with a till and a basket</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="img/room-abc.webp" width="2400" height="600" alt="Classroom window with alphabet letters, bunting and children's purple paintings" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>Classroom</h3><span>The ABC window</span></div></div>
-  </div>
-  <div class="k-drag__bar" aria-hidden="true"><i></i></div>
+  <figure class="wide k-zoom" data-reveal="clip"><img src="img/room-arches.webp" width="2400" height="615" alt="Classroom with two arched windows, the alphabet on the wall and a Magical Words board" loading="lazy"><figcaption>A classroom: arched windows and the alphabet wall</figcaption></figure>
+  <ul class="wrap villa__list" data-reveal-stagger>
+    <li data-reveal>Bright classrooms</li><li data-reveal>Indoor play area</li><li data-reveal>Outdoor play area</li><li data-reveal>Play shop corner</li><li data-reveal>Interactive tools</li>
+  </ul>
 </section>
 
 <section class="here" aria-labelledby="here-h">
@@ -161,7 +157,8 @@
       <a class="k-visit__call" href="https://maps.google.com/?cid=4378900065222013661" target="_blank" rel="noopener">Directions <span class="k-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Giggles+Nursery+%26+Daycare,+Road+2428,+Block+324,+Juffair,+Bahrain&amp;z=16&amp;output=embed">
+  <div class="k-visit__map addrpanel" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Giggles+Nursery+%26+Daycare,+Road+2428,+Block+324,+Juffair,+Bahrain&amp;z=16&amp;output=embed">
+    <p class="addrpanel__big" aria-hidden="true"><span>Villa 1822</span><span>Road 2428</span><span>Block 324</span><span class="j">Juffair</span></p>
     <button type="button">Show the map</button>
   </div>
 </section>

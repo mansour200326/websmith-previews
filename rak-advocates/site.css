@@ -362,3 +362,80 @@ a:hover .roll>span{transform:translateY(-50%)}
 .urgent__num{padding-block:8px}
 .visit dd a,.ft li a{min-height:32px}
 [lang=en] .intro__ar{text-align:left}
+
+/* ---------- round 3 (Fannan independent r2 fixes) ---------- */
+/* hero: founder photo bleeds to the viewport edge and the full hero height on desktop */
+@media (min-width:900px){
+  .hero{padding-inline-end:0}
+  .hero__fig{margin-block:calc(-1*clamp(28px,4vw,56px)) calc(-1*clamp(32px,4vw,56px))}
+  .hero__ph{min-height:0}
+  .hero__ph img{object-position:50% 20%}
+  .hero__cap{position:absolute;inset-inline-start:0;bottom:0;z-index:2;margin:0;border:0;padding:16px 22px;background:var(--ink);flex-direction:column;gap:2px;justify-content:flex-start}
+}
+@media (max-width:899px){
+  .hero__ph img{object-position:50% 0}
+  .k-js .hero__ph img{transform-origin:50% 0}
+}
+
+/* case file: heading sits in the card column, over the file */
+.file__col{min-width:0}
+.file__h{font-size:clamp(2.6rem,5.4vw,5.6rem);font-stretch:75%;text-transform:uppercase}
+.file__lede{color:var(--mute-d);max-width:30rem;margin:18px 0 clamp(26px,3vw,40px)}
+[lang=ar] .file__h{font-size:clamp(2.2rem,4.6vw,4.6rem);line-height:1.15}
+
+/* people: ruled one-line head with the link on its baseline */
+.hd-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:14px 40px;border-top:2px solid var(--ink);padding-top:clamp(18px,2vw,28px);margin-bottom:clamp(28px,4vw,56px)}
+.hd-row h2{font-size:clamp(2.4rem,5.4vw,5.6rem);font-stretch:72%;text-transform:uppercase}
+.hd-row .lnk{font-weight:500;min-height:44px;display:inline-flex;align-items:center;gap:8px}
+[lang=ar] .hd-row h2{font-size:clamp(2.2rem,4.8vw,4.8rem);line-height:1.15}
+
+/* office: head + one wide event shot, then two office shots on shared edges */
+.office{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.office figure{margin:0}
+.office .zoom{background:var(--ink-3);height:100%}
+.office img{width:100%;height:100%;object-fit:cover}
+.office figcaption{padding-top:10px;color:var(--mute-d)}
+.office__hd{grid-column:1/6;align-self:start;padding-inline-end:clamp(0px,2vw,32px)}
+.office__hd h2{font-size:clamp(2.6rem,6vw,6.4rem);font-stretch:72%;text-transform:uppercase}
+.office__hd p{color:var(--mute-d);max-width:28rem;margin:20px 0 0}
+.office__c{grid-column:6/13}.office__c .zoom{aspect-ratio:3/2;height:auto}
+.office__a,.office__b{grid-row:2;display:flex;flex-direction:column;margin-top:clamp(8px,2vw,28px)!important}
+.office__a{grid-column:1/9}.office__b{grid-column:9/13}
+.office__a .zoom,.office__b .zoom{height:clamp(260px,34vw,520px);flex:none}
+.office__b img{object-position:30% 50%}
+[lang=ar] .office__hd h2{font-size:clamp(2.3rem,5.2vw,5.2rem);line-height:1.15}
+@media (max-width:899px){
+  .office{grid-template-columns:1fr 1fr}
+  .office__hd,.office__c,.office__a{grid-column:1/3;grid-row:auto}
+  .office__b{grid-column:1/3;grid-row:auto}
+  .office__a,.office__b{margin-top:0!important}
+  .office__a .zoom{height:auto;aspect-ratio:16/10}
+  .office__b .zoom{height:auto;aspect-ratio:16/10}
+  .office__hd h2{font-size:clamp(2.4rem,12.5vw,4.6rem)}
+  .office__hd p{margin:14px 0 8px}
+}
+
+/* about, drafted: sticky side head + the list in two columns */
+.drafted{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,88px);align-items:start}
+.drafted__side{position:sticky;top:calc(var(--hd) + 32px)}
+.drafted__side h2{font-size:clamp(2.4rem,4.6vw,4.8rem);font-stretch:72%;text-transform:uppercase}
+.drafted__side p{color:var(--mute-d);margin:20px 0 0;max-width:26rem}
+.drafted__side .drafted__count{color:var(--gold);margin-top:22px}
+.drafted .drafts{columns:2;border-top:1px solid var(--line-d)}
+[lang=ar] .drafted__side h2{font-size:clamp(2.1rem,4vw,4rem);line-height:1.15}
+@media (max-width:899px){.drafted{grid-template-columns:1fr}.drafted__side{position:static}.drafted__side h2{font-size:clamp(2.4rem,12.5vw,4.6rem)}}
+@media (max-width:599px){.drafted .drafts{columns:1}}
+
+/* about, everyone: stacked head, text right under the title */
+.hd-stack{max-width:52rem;margin-bottom:clamp(28px,4vw,52px)}
+.hd-stack h2{font-size:clamp(2.4rem,5vw,5.2rem);font-stretch:72%;text-transform:uppercase}
+.hd-stack p{color:var(--mute);margin:16px 0 0;max-width:36rem}
+[lang=ar] .hd-stack h2{font-size:clamp(2.1rem,4.4vw,4.4rem);line-height:1.15}
+@media (max-width:899px){.hd-stack h2{font-size:clamp(2.4rem,12.5vw,4.6rem)}}
+
+/* about, app: one short band */
+.appband{background:var(--ink-2);color:#fff;border-top:1px solid var(--line-d);padding:clamp(36px,4vw,56px) var(--gut);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 48px}
+.appband h2{font-size:clamp(1.8rem,3vw,2.8rem);font-stretch:80%;text-transform:uppercase}
+.appband p{color:var(--mute-d);margin:8px 0 0;max-width:32rem}
+.appband .apps{margin:0}
+[lang=ar] .appband h2{font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.2}

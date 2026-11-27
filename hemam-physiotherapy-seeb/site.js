@@ -6,4 +6,8 @@
   if(m){m.addEventListener('click',function(e){if(e.target.closest('.menu__panel a'))m.removeAttribute('open')});
     document.addEventListener('click',function(e){if(m.open&&!m.contains(e.target))m.removeAttribute('open')});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.open){m.removeAttribute('open');m.querySelector('summary').focus()}})}
+  // open the accordion row named in the URL hash (services.html#speech etc.)
+  var openHash=function(){var id=location.hash.slice(1);if(!id)return;var d=document.getElementById(id);
+    if(d&&d.tagName==='DETAILS'){d.open=true;setTimeout(function(){d.scrollIntoView({block:'start'})},60)}};
+  openHash();addEventListener('hashchange',openHash);
 })();

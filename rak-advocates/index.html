@@ -33,7 +33,7 @@
 </header>
 
 <main id="main">
-<!-- HERO: name set huge (Ario, Awwwards HM) + the founder at his desk under the firm's eagle -->
+<!-- HERO: name set huge (Ario, Awwwards HM) + the founder at his desk under the firm's eagle, photo bleeding to the edge -->
 <section class="hero" aria-labelledby="h1">
   <div class="hero__text">
     <div class="hero__top">
@@ -98,12 +98,11 @@
 
 <!-- THE CASE FILE: their own "how we work" (Cathey & Miles, Awwwards HM: the case file as the design object) -->
 <section class="sec sec--dark" aria-labelledby="cf">
-  <div class="sec__hd">
-    <h2 id="cf" data-reveal="lines">Your case file</h2>
-    <p data-reveal data-reveal-delay="120">What happens once you sign with the office, in the order it happens.</p>
-  </div>
   <div class="file">
     <figure class="file__ph" data-reveal="clip"><img src="img/signing-desk.webp" alt="A client and an advocate signing papers at the office desk" width="2400" height="1350" loading="lazy"><figcaption class="mono">Signing at the office</figcaption></figure>
+    <div class="file__col">
+    <h2 id="cf" class="file__h" data-reveal="lines">Your case file</h2>
+    <p class="file__lede" data-reveal data-reveal-delay="120">What happens once you sign with the office, in the order it happens.</p>
     <div class="file__card" data-reveal data-reveal-delay="100">
       <div class="file__tab mono"><b>RAK ADVOCATES</b><span>File no. ____</span></div>
       <ol>
@@ -114,14 +113,15 @@
       </ol>
       <p class="file__note">Clients in the UAE and abroad can also send their questions by email to <a class="lnk" href="mailto:info@rakadvocates.com">info@rakadvocates.com</a>.</p>
     </div>
+    </div>
   </div>
 </section>
 
 <!-- PEOPLE -->
 <section class="sec" aria-labelledby="pp">
-  <div class="sec__hd">
+  <div class="hd-row">
     <h2 id="pp" data-reveal="lines">The people on your case</h2>
-    <p data-reveal data-reveal-delay="120">The firm grew around Advocate Salem Al Kait into a full team of lawyers, consultants and staff.</p>
+    <a class="lnk" href="about.html" data-reveal data-reveal-delay="150">Everyone at the office <span class="arr" aria-hidden="true">&rarr;</span></a>
   </div>
   <div class="ppl">
     <div class="ppl__lead ppl__card" data-reveal>
@@ -135,22 +135,20 @@
       <li data-reveal><div class="ppl__av" aria-hidden="true">MH</div><div><h3>Mahmoud Hanafi</h3><p>Advocate at the Court of Appeal and Court of Cassation, Ras Al Khaimah courts.</p></div></li>
       <li data-reveal><div class="ppl__av" aria-hidden="true">OO</div><div><h3>Obaida Omar</h3><p>Legal consultant.</p></div></li>
       <li data-reveal><div class="ppl__av"><img src="img/sultan.webp" alt="" width="1800" height="2400" loading="lazy"></div><div><h3>Sultan Al Suwaidi</h3><p>Public relations manager.</p></div></li>
-      <li class="ppl__more" data-reveal><a class="lnk" href="about.html" style="font-weight:500">Everyone at the office <span class="arr" aria-hidden="true">&rarr;</span></a></li>
     </ul>
   </div>
 </section>
 
 <!-- OFFICE STRIP: their own gallery photos -->
 <section class="sec sec--dark" aria-labelledby="of" style="padding-top:clamp(56px,7vw,110px)">
-  <div class="sec__hd">
-    <h2 id="of" data-reveal="lines">At the office</h2>
-    <p data-reveal data-reveal-delay="120">Photos from the firm's own gallery.</p>
-  </div>
-  <div class="strip">
-    <figure class="a"><div class="zoom" data-reveal="clip"><img src="img/office-eagle.webp" alt="Two members of the office standing by the desk under the eagle emblem" width="2400" height="1395" loading="lazy"></div></figure>
-    <figure class="b"><div class="zoom" data-reveal="clip" data-reveal-delay="120"><img src="img/handover.webp" alt="Papers handed across the desk at the office" width="2400" height="1350" loading="lazy"></div></figure>
-    <figure class="c"><div class="zoom" data-reveal="clip"><img src="img/plaque.webp" alt="A plaque presented at the office" width="2400" height="1438" loading="lazy"></div></figure>
-    <figure class="d"><div class="zoom" data-reveal="clip" data-reveal-delay="120"><img src="img/office-gift.webp" alt="A visitor received at the office desk" width="2400" height="1412" loading="lazy"></div></figure>
+  <div class="office">
+    <div class="office__hd">
+      <h2 id="of" data-reveal="lines">At the office</h2>
+      <p data-reveal data-reveal-delay="120">Photos from the firm's own gallery: the desk under the eagle, papers changing hands, and a handshake at a signing table under the firm's banner.</p>
+    </div>
+    <figure class="office__c"><div class="zoom" data-reveal="clip"><img src="img/sme-shake.webp" alt="Two men shaking hands at a signing table, the firm's banner behind them" width="2400" height="1599" loading="lazy"></div><figcaption class="mono">At a signing table</figcaption></figure>
+    <figure class="office__a"><div class="zoom" data-reveal="clip"><img src="img/office-eagle.webp" alt="Two members of the office standing by the desk under the eagle emblem" width="2400" height="1395" loading="lazy"></div><figcaption class="mono">Under the eagle</figcaption></figure>
+    <figure class="office__b"><div class="zoom" data-reveal="clip" data-reveal-delay="120"><img src="img/handover.webp" alt="Papers handed across the desk at the office" width="2400" height="1350" loading="lazy"></div><figcaption class="mono">Papers across the desk</figcaption></figure>
   </div>
 </section>
 

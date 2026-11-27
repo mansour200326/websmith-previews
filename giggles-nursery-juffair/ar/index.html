@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="en" href="https://preview.websmith.ae/giggles-nursery-juffair/">
 <link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/giggles-nursery-juffair/ar/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&amp;family=Tajawal:wght@400;500;700&amp;family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&amp;family=Tajawal:wght@400;500;700&amp;family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
 <link rel="stylesheet" href="../site.css">
 <link rel="icon" href="../img/star.png">
 <script>document.documentElement.classList.add('k-js')</script>
@@ -85,19 +85,15 @@
   </div>
 </section>
 
-<section class="k-drag rooms" data-k-drag aria-labelledby="rooms-h">
-  <div class="k-drag__head">
-    <div><h2 id="rooms-h" data-reveal="lines">داخل الحضانة</h2><p data-reveal>فصول مشرقة، ومساحات لعب داخلية وخارجية، وأدوات تفاعلية. اسحب لتتفرّج على المكان.</p></div>
-    <div class="k-drag__btns"><button type="button" data-k-drag-prev aria-label="الصورة السابقة">←</button><button type="button" data-k-drag-next aria-label="الصورة التالية">→</button></div>
+<section class="villa" aria-labelledby="rooms-h">
+  <div class="wrap villa__head">
+    <h2 id="rooms-h" data-reveal="lines">داخل الحضانة</h2>
+    <p data-reveal>فصول مشرقة ومريحة، ومساحات لعب داخلية وخارجية كبيرة، وأدوات تفاعلية للتعلّم من خلال اللعب.</p>
   </div>
-  <div class="k-drag__track" tabindex="0" role="region" aria-label="صور الحضانة، مرّر جانبياً">
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/room-arches.webp" width="2400" height="615" alt="فصل بنافذتين مقوّستين وجدار الحروف" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>فصل دراسي</h3><span>نوافذ مقوّسة وجدار الحروف</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/floor.webp" width="2400" height="815" alt="أقدام أطفال على أرضية لعب تفاعلية ملوّنة" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>الأرضية التفاعلية</h3><span>أدوات تفاعلية للتعلّم بمرح</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/slide.webp" width="1658" height="1800" alt="بيت لعب خشبي مع زحليقة خضراء في الساحة الخارجية" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>ساحة اللعب الخارجية</h3><span>عشب وزحليقة ومراجيح</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/fruit-hands.webp" width="2400" height="896" alt="سلة فواكه بلاستيكية وصندوق محاسبة لعبة على طاولة محل اللعب" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>ركن محل الفواكه</h3><span>لعب أدوار مع صندوق وسلة</span></div></div>
-    <div class="k-drag__card"><div class="k-drag__fig"><img src="../img/room-abc.webp" width="2400" height="600" alt="نافذة فصل عليها الحروف ورسومات الأطفال" loading="lazy" draggable="false"></div><div class="k-drag__meta"><h3>فصل دراسي</h3><span>نافذة الحروف</span></div></div>
-  </div>
-  <div class="k-drag__bar" aria-hidden="true"><i></i></div>
+  <figure class="wide k-zoom" data-reveal="clip"><img src="../img/room-arches.webp" width="2400" height="615" alt="فصل بنافذتين مقوّستين وجدار الحروف" loading="lazy"><figcaption>أحد الفصول: نوافذ مقوّسة وجدار الحروف</figcaption></figure>
+  <ul class="wrap villa__list" data-reveal-stagger>
+    <li data-reveal>فصول مشرقة</li><li data-reveal>ساحة لعب داخلية</li><li data-reveal>ساحة لعب خارجية</li><li data-reveal>ركن محل اللعب</li><li data-reveal>أدوات تفاعلية</li>
+  </ul>
 </section>
 
 <section class="here" aria-labelledby="here-h">
@@ -151,7 +147,8 @@
       <a class="k-visit__call" href="https://maps.google.com/?cid=4378900065222013661" target="_blank" rel="noopener">الاتجاهات <span class="k-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
-  <div class="k-visit__map" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Giggles+Nursery+%26+Daycare,+Road+2428,+Block+324,+Juffair,+Bahrain&amp;z=16&amp;output=embed&amp;hl=ar">
+  <div class="k-visit__map addrpanel" data-k-map data-k-map-tap data-src="https://www.google.com/maps?q=Giggles+Nursery+%26+Daycare,+Road+2428,+Block+324,+Juffair,+Bahrain&amp;z=16&amp;output=embed&amp;hl=ar">
+    <p class="addrpanel__big" aria-hidden="true"><span>فيلا 1822</span><span>طريق 2428</span><span>مجمع 324</span><span class="j">الجفير</span></p>
     <button type="button">اعرض الخريطة</button>
   </div>
 </section>
