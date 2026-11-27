@@ -453,3 +453,46 @@ p{margin:0 0 1em;text-wrap:pretty}
 @media (max-width:699px){.ph__ph .k-zoom{aspect-ratio:4/3}}
 .ph:has(.ph__ph){border-bottom:0;padding-bottom:0}
 .ftr li a{min-width:44px}
+
+/* ---------- round 3 ---------- */
+/* desktop hero: type-led split, ink type panel (7 cols) + tall photo (5 cols). Mobile hero unchanged. */
+.hero__alt{display:none}
+@media (min-width:900px){
+  .hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);background:var(--ink);min-height:max(640px,100svh);max-height:none}
+  .hero::after{display:none}
+  .hero__ph{position:relative;inset:auto;grid-column:2;grid-row:1;overflow:hidden}
+  .hero__ph picture,.hero__ph img{position:absolute;inset:0;width:100%;height:100%}
+  .hero__ph img{object-position:50% 25%}
+  .hero__ph::after{content:"";position:absolute;inset:0 0 auto;height:170px;background:linear-gradient(180deg,rgba(10,10,18,.72) 0,rgba(10,10,18,.45) 45%,rgba(10,10,18,0));pointer-events:none}
+  .hero__in{grid-column:1;grid-row:1;align-self:end;max-width:none;margin:0;padding:130px clamp(32px,4.5vw,72px) clamp(32px,4vw,56px)}
+  .hero h1{font-size:clamp(6rem,11.6vw,11.2rem)}
+  .hero__alt{display:block;font:400 clamp(1.6rem,2.2vw,2rem)/1.5 "Noto Kufi Arabic",sans-serif;color:#d8d3e6;margin:clamp(12px,1.4vw,20px) 0 0;text-align:left}
+  .hero__row{align-items:flex-end}
+  .hero__facts{max-width:26em}
+}
+[dir=rtl] .hero__alt{font-family:"Literata",Georgia,serif;letter-spacing:-.01em;text-align:right}
+@media (min-width:900px){[dir=rtl] .hero h1{font-size:clamp(4.2rem,8vw,7.6rem)}}
+
+/* inner-page first-screen photo: upscaled photos shown at most ~800px, caption beside */
+@media (min-width:900px){
+  .ph__ph{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:22px;align-items:end}
+  .ph__ph .k-zoom{grid-column:1/span 8;max-width:800px;max-height:none;aspect-ratio:3/2}
+  .ph__ph figcaption{grid-column:9/span 4;padding:0 0 4px;font-size:.98rem;line-height:1.55;max-width:22em;border-top:1px solid var(--ink);padding-top:14px}
+}
+
+/* map panel: details straight after the text, crest watermark fills the rest */
+.mapcard{justify-content:flex-start;overflow:hidden}
+.mapcard>div{position:relative;z-index:1}
+.mapcard__co{margin-top:6px}
+.mapcard::after{content:"";position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(16px,3vw,40px);width:280px;aspect-ratio:89/100;background:#fff;opacity:.1;
+  -webkit-mask:url(img/crest.svg) center/contain no-repeat;mask:url(img/crest.svg) center/contain no-repeat;pointer-events:none}
+[dir=rtl] .mapcard::after{right:auto;left:clamp(16px,3vw,40px)}
+@media (max-width:899px){.mapcard::after{width:180px}}
+
+/* 360px header: keep the right gutter at 20px */
+@media (max-width:380px){
+  .hdr{gap:10px}
+  .hdr__logo{gap:10px}
+  .hdr__m{gap:4px}
+  .hdr__m a,.hdr__m button{padding:0 10px}
+}
