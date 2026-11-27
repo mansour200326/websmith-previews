@@ -823,3 +823,8 @@ html:lang(ar) .idx li{font-weight:600}
   .k-js .hero__star{animation:none;opacity:1;transform:rotate(-8deg)}
   .k-js .squig path{transition:none;stroke-dashoffset:0}
 }
+/* tap targets */
+.ft a{padding-block:10px}
+.hero .k-split__meta a,.visit dd a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
+.hero__more,.say__txt .k-link{min-height:44px}
+.say__txt p.small .k-link{display:inline-flex;align-items:center;min-height:44px}

@@ -300,3 +300,5 @@ html:lang(ar) .sec-head h2,html:lang(ar) .pool h2,html:lang(ar) .book h2,html:la
 html:lang(ar) .ftr__name{line-height:1.2}
 html:lang(ar) .steps h3,html:lang(ar) .panel h3{line-height:1.35}
 html:lang(ar) .k-rv-line{padding-bottom:.2em;margin-bottom:-.2em}
+.ftr li a,.ftr p a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}
+.steps .big-tel{padding-block:8px}

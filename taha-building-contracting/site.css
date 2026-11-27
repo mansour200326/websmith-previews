@@ -474,3 +474,8 @@ html[lang=ar] .hero .k-seq__cap{font-size:.92rem}
 html[lang=ar] .proj .cap i{font-size:.85rem}
 html[dir=rtl] .lines a.ltr{justify-content:flex-end}
 .sv__ph img,.story figure img{height:auto}
+.phead .crumb{font:500 .8rem var(--mono);letter-spacing:0;grid-column:1/-1;color:var(--steel)}
+html[lang=ar] .phead .crumb{font-family:var(--k-body);font-size:.9rem}
+@media (max-width:600px){.hero h1{letter-spacing:-.012em}.mega{letter-spacing:-.015em}.svc .k-acc__t{letter-spacing:-.005em}}
+.sv--text{padding-block:clamp(32px,4.5vw,56px)}
+.sv--text .sv__n{font-size:clamp(2.4rem,5vw,4.5rem)}

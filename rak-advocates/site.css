@@ -349,3 +349,10 @@ a:hover .roll>span{transform:translateY(-50%)}
 [lang=ar] .ppl__big{font-family:"Readex Pro",sans-serif;text-transform:none;font-stretch:100%;line-height:1.15;font-weight:700}
 .file__ph{margin:0}
 [lang=en] .svc h2 .ar{text-align:left}
+.hd__short{display:none}
+@media (max-width:899px){
+  [lang=ar] .hd__long{display:none}
+  [lang=ar] .hd__short{display:inline}
+  [lang=ar] .hd__name{white-space:nowrap;font-size:.98rem}
+}
+@media (max-width:429px){[lang=ar] .hd__wa{display:none}}
