@@ -89,8 +89,8 @@ html:lang(ar) .hero__lead .hero__big{letter-spacing:0;line-height:1.6}
 .hero__trade span{display:block}
 html:lang(ar) .hero h1{font-size:clamp(4rem,min(12vw,18svh),11.5rem);line-height:1.3;text-transform:none;letter-spacing:0;white-space:normal}
 html:lang(ar) .hero h1 .k-line-mask{padding-top:.18em;padding-bottom:.22em;margin-bottom:-.2em}
-html:lang(ar) .hero__trade{font-size:clamp(1rem,1.7vw,1.45rem);line-height:1.6;padding-bottom:.9em;max-width:17em}
-@media (min-width:821px){html:lang(ar) .hero__in{padding-top:clamp(28px,3.5vw,52px)}html:lang(ar) .hero__name{margin-top:clamp(14px,2vw,28px)}}
+html:lang(ar) .hero__trade{font-size:clamp(1rem,1.7vw,1.45rem);line-height:1.6;padding-bottom:.9em}
+@media (min-width:821px){html:lang(ar) .hero__trade{max-width:17em}html:lang(ar) .hero__in{padding-top:clamp(28px,3.5vw,52px)}html:lang(ar) .hero__name{margin-top:clamp(14px,2vw,28px)}}
 .strip{max-width:1224px}
 /* hero motion */
 .k-js .hero .rise{display:block;transform:translateY(105%);animation:k-rise 1.15s var(--k-ease) forwards;animation-delay:calc(.2s + var(--i,0)*.12s)}
