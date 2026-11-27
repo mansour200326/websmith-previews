@@ -19,7 +19,7 @@
   function sel(t){
     tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
       var p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.hidden=!on});
-    var k=t.dataset.ph;document.querySelectorAll('.proj__ph img').forEach(function(im){im.classList.toggle('on',im.dataset.ph===k)});
+    var k=t.dataset.ph;document.querySelectorAll('.proj__ph img').forEach(function(im){var on=im.dataset.ph===k;im.classList.toggle('on',on);if(on)im.removeAttribute('aria-hidden');else im.setAttribute('aria-hidden','true')});
   }
   document.querySelectorAll('.morebtn').forEach(function(b){
     b.addEventListener('click',function(){var l=document.getElementById(b.getAttribute('aria-controls'));var o=l.classList.toggle('is-all');b.setAttribute('aria-expanded',o);b.textContent=o?b.dataset.less:b.dataset.more});
