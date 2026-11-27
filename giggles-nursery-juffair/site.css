@@ -828,3 +828,25 @@ html:lang(ar) .idx li{font-weight:600}
 .hero .k-split__meta a,.visit dd a{display:inline-flex;align-items:center;min-height:44px;padding-block:0}
 .hero__more,.say__txt .k-link{min-height:44px}
 .say__txt p.small .k-link{display:inline-flex;align-items:center;min-height:44px}
+/* r1: sessions band, strip cards, hero photo */
+.sessband{background:var(--yel);color:var(--plum);padding:clamp(64px,9vw,130px) 0}
+.sessband__grid{display:grid;gap:40px}
+.sessband h2{font:800 clamp(2.4rem,7vw,5rem)/.95 var(--k-display);letter-spacing:-.035em;margin-bottom:28px}
+.sessband .n{display:block;font:700 .95rem/1 var(--k-body);margin-bottom:14px}
+.times p{display:flex;flex-direction:column;gap:6px;padding:18px 0;border-top:2px solid var(--plum)}
+.times p:last-child{border-bottom:2px solid var(--plum)}
+.times b{font:800 clamp(2.1rem,8.5vw,4.8rem)/1 var(--k-display);letter-spacing:-.03em}
+.times span{font-weight:600}
+.sessband__more{margin-top:24px;max-width:34em;font-size:1.05rem}
+.sessband .note{color:var(--plum)}
+.feenotes{background:#fff;border-radius:26px;padding:clamp(24px,3vw,40px);align-self:start}
+.feenotes .n{color:var(--k-accent)}
+.feenotes h3{font:800 clamp(1.6rem,2.6vw,2.2rem)/1.05 var(--k-display);letter-spacing:-.02em}
+.feenotes .k-btn{margin-top:24px}
+html:lang(ar) .sessband h2,html:lang(ar) .feenotes h3{line-height:1.25!important}
+@media (min-width:900px){.sessband__grid{grid-template-columns:1.25fr .75fr;gap:clamp(40px,7vw,110px)}}
+.rooms .k-drag__card,.rooms .k-drag__card:nth-child(3n+2){flex-basis:min(84vw,620px)}
+.rooms .k-drag__fig,.rooms .k-drag__card:nth-child(3n+1) .k-drag__fig{aspect-ratio:16/10}
+.rooms .k-drag__card:nth-child(3){flex-basis:min(64vw,330px)}
+.rooms .k-drag__card:nth-child(3) .k-drag__fig{aspect-ratio:auto;height:calc(min(84vw,620px) * .625)}
+@media (min-width:900px){.hero .k-split__photo{aspect-ratio:4/5}}
