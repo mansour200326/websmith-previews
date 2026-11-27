@@ -916,3 +916,4 @@ html:lang(ar) .early h2{line-height:1.2}
 .parents .k-quotes__slide{max-width:none}
 @media (min-width:1500px){.parents .k-quotes__slide{padding-inline:calc((100vw - 1440px)/2 + 90px)}}
 .visit dl{row-gap:0}
+.parents .k-quotes__dots{gap:0}.parents .k-quotes__dots button{width:44px;padding:20.5px 8px}.parents .k-quotes__dots button[aria-current=true]{width:72px}
