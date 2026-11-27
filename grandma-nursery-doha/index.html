@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="ar" href="https://preview.websmith.ae/grandma-nursery-doha/ar/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=Alexandria:wght@600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/water-park-tall.webp" media="(max-width:759px)"><link rel="preload" as="image" href="img/water-park.webp" imagesrcset="img/water-park-m.webp 1100w, img/water-park.webp 2200w" imagesizes="(min-width:1080px) 70vw, 100vw" media="(min-width:760px)">
+<link rel="preload" as="image" href="img/water-park-tall.webp" media="(max-width:759px)"><link rel="preload" as="image" href="img/water-park.webp" imagesrcset="img/water-park-m.webp 1100w, img/water-park.webp 2200w" imagesizes="100vw" media="(min-width:760px) and (max-width:899px)"><link rel="preload" as="image" href="img/water-park-d.webp" imagesrcset="img/water-park-d-m.webp 1100w, img/water-park-d.webp 2000w" imagesizes="(min-width:1080px) 70vw, 100vw" media="(min-width:900px)">
 <link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('k-js')</script>
 </head>
@@ -39,8 +39,7 @@
 <section class="hero" aria-label="Grandma Nursery">
   <h1 class="hero__h"><span class="ln"><span style="--i:0">Laugh, learn</span></span><span class="ln"><span style="--i:1">and grow.</span></span></h1>
   <div class="hero__photo">
-    <picture><source media="(max-width:759px)" srcset="img/water-park-tall.webp" width="1006" height="1500"><img src="img/water-park.webp" srcset="img/water-park-m.webp 1100w, img/water-park.webp 2200w" sizes="(min-width:1080px) 70vw, 100vw" width="2200" height="1650" fetchpriority="high" alt="The water park at Grandma Nursery: paddling pools, a slide and a white picket fence under a red shade sail"></picture>
-    <span class="hero__cap">Our water park, under the shade sail</span><a class="hero__wa" href="#branches"><svg class="wa" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp your branch</span><span class="k-arrow" aria-hidden="true">→</span></a>
+    <picture><source media="(max-width:759px)" srcset="img/water-park-tall.webp" width="1006" height="1500"><source media="(min-width:900px)" srcset="img/water-park-d-m.webp 1100w, img/water-park-d.webp 2000w" sizes="(min-width:1080px) 70vw, 100vw" width="2000" height="1625"><img src="img/water-park.webp" srcset="img/water-park-m.webp 1100w, img/water-park.webp 2200w" sizes="(min-width:1080px) 70vw, 100vw" width="2200" height="1650" fetchpriority="high" alt="The water park at Grandma Nursery: a slide, climbing frame and white picket fence under a red shade sail"></picture><a class="hero__wa" href="#branches"><svg class="wa" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp your branch</span><span class="k-arrow" aria-hidden="true">→</span></a>
   </div>
   <div class="hero__side">
     <p class="hero__lead" style="--i:0">A nursery in Doha since 2012, and a home away from home for children from 2 months to 4 years. We are open 6:30am to 6:30pm, and children learn French and Arabic every day at no extra cost.</p>
@@ -138,20 +137,22 @@
       <div class="rooms__head">
         <h2 class="h2" id="rooms-h" data-reveal="lines">Inside the nursery</h2>
         <p class="lead" data-reveal>Rooms set up for small children: a quiet room with cots for the babies, soft play inside, a sand area and water park outside, a cafeteria, and a clinic with a visiting doctor.</p>
-      </div>
-      <figure class="room room--a" data-reveal><div class="k-zoom"><img src="img/indoor-play.webp" width="1200" height="1000" loading="lazy" alt="Indoor playground with soft blocks, a tunnel and a small slide on green and orange mats"></div><figcaption>Indoor playground<small>Soft play: climb, crawl, jump and roll</small></figcaption></figure>
-      <figure class="room room--b" data-reveal data-reveal-delay="120"><div class="k-zoom"><img src="img/booboo-room.webp" width="1200" height="1000" loading="lazy" alt="The BooBoo Room: white cots under a painted tree and hot-air-balloon numbers"></div><figcaption>BooBoo Room<small>For babies from 2 months</small></figcaption></figure>
-      <figure class="room room--c" data-reveal><div class="k-zoom"><img src="img/cafeteria.webp" width="1200" height="1000" loading="lazy" alt="Cafeteria with small yellow, red and blue tables and chairs"></div><figcaption>Cafeteria</figcaption></figure>
-      <figure class="room room--d" data-reveal data-reveal-delay="100"><div class="k-zoom"><img src="img/mud-kitchen.webp" width="1188" height="992" loading="lazy" alt="The sand area with a wooden mud kitchen under a shade"></div><figcaption>Sand area<small>With the mud kitchen</small></figcaption></figure>
-      <figure class="room room--e" data-reveal data-reveal-delay="200"><div class="k-zoom"><img src="img/clinic.webp" width="1200" height="1000" loading="lazy" alt="The nursery clinic: a desk and a small bed by the window"></div><figcaption>Clinic</figcaption></figure>
-    </div>
-    <div class="facil" data-reveal>
+        <div class="facil facil--side" data-reveal>
       <h3>Everything at Grandma</h3>
       <ul>
         <li>Parent camera access</li><li>Parent access control</li><li>Visiting doctor</li><li>Clinic</li><li>Cafeteria</li>
         <li>BooBoo Room</li><li>Fitness room</li><li>Indoor playground</li><li>Outdoor playground</li><li>Sand area</li>
         <li>Garden</li><li>Water park</li><li>Family application</li><li>Weekly and monthly newsletters</li><li><b>French &amp; Arabic classes at no extra cost</b></li>
       </ul>
+    </div>
+      </div>
+      <div class="rooms">
+        <figure class="room room--a" data-reveal><div class="k-zoom"><img src="img/indoor-play.webp" width="1200" height="1000" loading="lazy" alt="Indoor playground with soft blocks, a tunnel and a small slide on green and orange mats"></div><figcaption>Indoor playground<small>Soft play: climb, crawl and roll</small></figcaption></figure>
+        <figure class="room room--b" data-reveal data-reveal-delay="120"><div class="k-zoom"><img src="img/booboo-room.webp" width="1200" height="1000" loading="lazy" alt="The BooBoo Room: white cots under a painted tree and hot-air-balloon numbers"></div><figcaption>BooBoo Room<small>For babies from 2 months</small></figcaption></figure>
+        <figure class="room room--c" data-reveal><div class="k-zoom"><img src="img/cafeteria.webp" width="1200" height="1000" loading="lazy" alt="Cafeteria with small yellow, red and blue tables and chairs"></div><figcaption>Cafeteria<small>Breakfast, snack and lunch</small></figcaption></figure>
+        <figure class="room room--d" data-reveal data-reveal-delay="100"><div class="k-zoom"><img src="img/mud-kitchen.webp" width="1188" height="992" loading="lazy" alt="The sand area with a wooden mud kitchen under a shade"></div><figcaption>Sand area<small>With the mud kitchen</small></figcaption></figure>
+        <figure class="room room--e" data-reveal data-reveal-delay="200"><div class="k-zoom"><img src="img/clinic.webp" width="1200" height="1000" loading="lazy" alt="The nursery clinic: a desk and a small bed by the window"></div><figcaption>Clinic<small>With a visiting doctor</small></figcaption></figure>
+      </div>
     </div>
   </div>
 </section>
